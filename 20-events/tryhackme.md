@@ -14,12 +14,12 @@
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [Crypto-Cat/CTF](https://github.com/Crypto-Cat/CTF) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
+| 1 | [Crypto-Cat/CTF (local mirror)](../repos/Crypto-Cat/CTF) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
 | 2 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 3 | [tim-barc/ctf_writeups](https://github.com/tim-barc/ctf_writeups) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
-| 4 | [ShubhamJagtap2000/TryHackMe-THM](https://github.com/ShubhamJagtap2000/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs o… |
-| 5 | [The-Debarghya/TryHackMe-Writeups](https://github.com/The-Debarghya/TryHackMe-Writeups) | 11 ⭐ | — | n/a | A repository contains writeups for TryHackMe PwnBoxes and Rooms that have been solved. PS- Please t… |
-| 6 | [mbiesiad/ctf-writeups](https://github.com/mbiesiad/ctf-writeups) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
+| 3 | [tim-barc/ctf_writeups (local mirror)](../repos/tim-barc/ctf_writeups) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
+| 4 | [ShubhamJagtap2000/TryHackMe-THM (local mirror)](../repos/ShubhamJagtap2000/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs o… |
+| 5 | [The-Debarghya/TryHackMe-Writeups (local mirror)](../repos/The-Debarghya/TryHackMe-Writeups) | 11 ⭐ | — | n/a | A repository contains writeups for TryHackMe PwnBoxes and Rooms that have been solved. PS- Please t… |
+| 6 | [mbiesiad/ctf-writeups (local mirror)](../repos/mbiesiad/ctf-writeups) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
 
 
 ### Articles, Videos & Blog Posts (17)

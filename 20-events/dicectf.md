@@ -15,13 +15,13 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [r3kapig/writeup](https://github.com/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
-| 3 | [minaminao/ctf-blockchain](https://github.com/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 4 | [tl2cents/CTF-Writeups](https://github.com/tl2cents/CTF-Writeups) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
+| 2 | [r3kapig/writeup (local mirror)](../repos/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
+| 3 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 4 | [tl2cents/CTF-Writeups (local mirror)](../repos/tl2cents/CTF-Writeups) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
 | 5 | [dicegang/dicectf-quals-2024-challenges](https://github.com/dicegang/dicectf-quals-2024-challenges) | 30 ⭐ | Crypto, Reverse Engineering, Pwn | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges develo… |
-| 6 | [D4mianWayne/PwnLand](https://github.com/D4mianWayne/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
+| 6 | [D4mianWayne/PwnLand (local mirror)](../repos/D4mianWayne/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
 | 7 | [dicegang/dicectf-quals-2025-challenges](https://github.com/dicegang/dicectf-quals-2025-challenges) | 9 ⭐ | Crypto, Reverse Engineering, Pwn | 2025–2025 | All challenges from DiceCTF Quals 2025. Contribute to dicegang/dicectf-quals-2025-challenges develo… |
-| 8 | [Nambers/ctf-writeups](https://github.com/Nambers/ctf-writeups) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
+| 8 | [Nambers/ctf-writeups (local mirror)](../repos/Nambers/ctf-writeups) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
 
 
 ### Articles, Videos & Blog Posts (4)

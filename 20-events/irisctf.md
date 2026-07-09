@@ -15,7 +15,7 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [juliancasaburi/irisctf-2025](https://github.com/juliancasaburi/irisctf-2025) | 0  | — | 2024–2025 | The writeups in this repository correspond to the Iris CTF 2025 event, organized by IrisSec, held f… |
+| 2 | [juliancasaburi/irisctf-2025 (local mirror)](../repos/juliancasaburi/irisctf-2025) | 0  | — | 2024–2025 | The writeups in this repository correspond to the Iris CTF 2025 event, organized by IrisSec, held f… |
 
 
 ### Articles, Videos & Blog Posts (2)

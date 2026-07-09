@@ -15,14 +15,14 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [minaminao/ctf-blockchain](https://github.com/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 2 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 3 | [DownUnderCTF/Challenges_2025_Public](https://github.com/DownUnderCTF/Challenges_2025_Public) | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - GitHub - DownUnderCTF/Challenges_2025_Public: … |
-| 4 | [tl2cents/CTF-Writeups](https://github.com/tl2cents/CTF-Writeups) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
+| 4 | [tl2cents/CTF-Writeups (local mirror)](../repos/tl2cents/CTF-Writeups) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
 | 5 | [DownUnderCTF/Challenges_2022_Public](https://github.com/DownUnderCTF/Challenges_2022_Public) | 248 ⭐⭐ | — | 2022–2022 | medium, round 1. Uni of Straya - Part 1, ghostccamm, medium, round 2. Uni of Straya - Part 2, ghost… |
 | 6 | [DownUnderCTF/Challenges_2021_public](https://github.com/DownUnderCTF/Challenges_2021_public) | 181 ⭐⭐ | — | 2021–2021 | Writeups for the challenges from DownUnderCTF 2021 - DownUnderCTF/Challenges_2021_Public. |
-| 7 | [D4mianWayne/PwnLand](https://github.com/D4mianWayne/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
-| 8 | [mbiesiad/ctf-writeups](https://github.com/mbiesiad/ctf-writeups) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
-| 9 | [nh4ttruong/ctf-write-up](https://github.com/nh4ttruong/ctf-write-up) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
+| 7 | [D4mianWayne/PwnLand (local mirror)](../repos/D4mianWayne/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
+| 8 | [mbiesiad/ctf-writeups (local mirror)](../repos/mbiesiad/ctf-writeups) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
+| 9 | [nh4ttruong/ctf-write-up (local mirror)](../repos/nh4ttruong/ctf-write-up) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
 
 
 ### Articles, Videos & Blog Posts (9)

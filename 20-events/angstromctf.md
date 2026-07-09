@@ -15,8 +15,8 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [Sudoite/ctf-writeups](https://github.com/Sudoite/ctf-writeups) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
-| 3 | [Ayoub-2/CTF-Writeup](https://github.com/Ayoub-2/CTF-Writeup) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
+| 2 | [Sudoite/ctf-writeups (local mirror)](../repos/Sudoite/ctf-writeups) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
+| 3 | [Ayoub-2/CTF-Writeup (local mirror)](../repos/Ayoub-2/CTF-Writeup) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
 
 
 ### Articles, Videos & Blog Posts (0)

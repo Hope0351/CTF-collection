@@ -12,11 +12,11 @@ These are the gold standard for studying CTF challenges because they reveal the 
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [r3kapig/writeup](https://github.com/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
+| 1 | [r3kapig/writeup (local mirror)](../repos/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
 | 2 | [dicegang/dicectf-quals-2024-challenges](https://github.com/dicegang/dicectf-quals-2024-challenges) | 30 ⭐ | Crypto, Reverse Engineering, Pwn | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges development by creating an… |
 | 3 | [Nautilus-Institute/quals-2024](https://github.com/Nautilus-Institute/quals-2024) | 76 ⭐⭐ | — | 2024–2024 | This repository contains the open source release for Nautilus Institute's 2024 DEF CON CTF qualifier. We are releasing … |
-| 4 | [nautilus-institute/finals-2025](https://github.com/nautilus-institute/finals-2025) | 32 ⭐ | — | 2025–2025 | This repository contains the open source release for Nautilus Institute's 2025 DEF CON Final. We are releasing all of t… |
-| 5 | [Live-CTF/LiveCTF-DEFCON32](https://github.com/Live-CTF/LiveCTF-DEFCON32) | 23 ⭐ | — | 2024–2024 | This repository contains infrastructure, challenges and solutions for the DEFCON32 LiveCTF. Qualifier Streams Finals Re… |
+| 4 | [nautilus-institute/finals-2025 (local mirror)](../repos/nautilus-institute/finals-2025) | 32 ⭐ | — | 2025–2025 | This repository contains the open source release for Nautilus Institute's 2025 DEF CON Final. We are releasing all of t… |
+| 5 | [Live-CTF/LiveCTF-DEFCON32 (local mirror)](../repos/Live-CTF/LiveCTF-DEFCON32) | 23 ⭐ | — | 2024–2024 | This repository contains infrastructure, challenges and solutions for the DEFCON32 LiveCTF. Qualifier Streams Finals Re… |
 | 6 | [dicegang/dicectf-quals-2025-challenges](https://github.com/dicegang/dicectf-quals-2025-challenges) | 9 ⭐ | Crypto, Reverse Engineering, Pwn | 2025–2025 | All challenges from DiceCTF Quals 2025. Contribute to dicegang/dicectf-quals-2025-challenges development by creating an… |
 
 

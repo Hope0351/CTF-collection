@@ -1,0 +1,90 @@
+.intel_syntax noprefix
+.global _start
+
+.section .data
+response:
+        .ascii "HTTP/1.0 200 OK\r\n\r\n"
+buffer:
+        .zero 1024
+separator:
+        .ascii "\r\n\r\n"
+
+.section .text
+
+_start:
+mov rdi,2 
+mov rsi,1
+mov rdx,0 
+mov rax,41 
+syscall #socket
+#struct se almacena las variables en reversa
+mov DWORD PTR [rsp-0x4],0x0 #0.0.0.0 bind addr
+mov word PTR [rsp-0x6],0x5000 #puerto 80 es 50 en hexa y luego little endian
+mov word PTR [rsp-0x8],0x2 #AF_INET
+sub rsp,0x8 #el stack lo mando hasta la primera variable
+mov rdi,3
+mov rsi,rsp
+mov rdx,16
+mov rax,49
+syscall #bind
+mov rdi,3
+mov rsi,0
+mov rax,50
+syscall #listen
+_volver:
+mov rdi,3
+mov rsi,0
+mov rdx,0
+mov rax,43
+syscall #accept
+mov rax,57
+syscall #fork
+test rax,rax
+jz _child
+mov rdi,4
+mov rax,3
+syscall #close fd5
+jmp _volver
+_child:
+mov rdi,3
+mov rax,3
+syscall #close fd3
+mov rdi,4
+lea rsi,buffer
+mov rdx,512
+mov rax,0
+syscall #read fd4
+push rax
+lea rdi,[rsi+5] #rdi tiene la direcc del buffer
+mov byte PTR [rdi+16],0 #cortar end data
+mov rsi,0101 #O_WRONLY|O_CREAT
+mov rdx,0777
+mov rax,2
+syscall #open
+xor rcx,rcx
+mov ebx, separator
+_body:
+mov eax, [buffer+rcx]
+inc rcx
+cmp eax,ebx
+jne _body
+add rcx,3 #ignora \n\r\n
+mov rdi,3
+pop rax
+mov rdx,rax
+sub rdx,rcx #length
+lea rsi,[buffer+rcx]
+mov rax,1
+syscall #write fd3
+mov rdi,3
+mov rax,3
+syscall #close fd3
+mov rdi,4
+lea rsi,response
+mov rdx,19
+mov rax,1
+syscall #write del 200 OK
+mov rdi,0 #return del exit
+mov rax,60
+syscall #exit function
+jmp _volver

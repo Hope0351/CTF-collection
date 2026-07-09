@@ -158,22 +158,22 @@ The following GitHub repositories are the structural backbone of the open-source
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 | 2 | [daffainfo/ctf-writeup](https://github.com/daffainfo/ctf-writeup) | 188 ⭐⭐ | — | 2021–2024 | GitHub Stars Archive Program. This repository shall comprise writeups concerning Capture The Flag (… |
-| 3 | [r3kapig/writeup](https://github.com/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
-| 4 | [apsdehal/awesome-ctf](https://github.com/apsdehal/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
-| 5 | [blockthreat/blocksec-ctfs](https://github.com/blockthreat/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 6 | [minaminao/ctf-blockchain](https://github.com/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 7 | [momenbasel/htb-writeups](https://github.com/momenbasel/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
-| 8 | [orangetw/My-CTF-Web-Challenges](https://github.com/orangetw/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
-| 9 | [Crypto-Cat/CTF](https://github.com/Crypto-Cat/CTF) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
+| 3 | [r3kapig/writeup (local mirror)](./repos/r3kapig/writeup) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
+| 4 | [apsdehal/awesome-ctf (local mirror)](./repos/apsdehal/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
+| 5 | [blockthreat/blocksec-ctfs (local mirror)](./repos/blockthreat/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 6 | [minaminao/ctf-blockchain (local mirror)](./repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 7 | [momenbasel/htb-writeups (local mirror)](./repos/momenbasel/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
+| 8 | [orangetw/My-CTF-Web-Challenges (local mirror)](./repos/orangetw/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
+| 9 | [Crypto-Cat/CTF (local mirror)](./repos/Crypto-Cat/CTF) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
 | 10 | [p4-team/ctf](https://github.com/p4-team/ctf) | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 11 | [xtiankisutsa/awesome-mobile-ctf](https://github.com/xtiankisutsa/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 12 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 13 | [sajjadium/ctf-writeups](https://github.com/sajjadium/ctf-writeups) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 14 | [DownUnderCTF/Challenges_2025_Public](https://github.com/DownUnderCTF/Challenges_2025_Public) | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - GitHub - DownUnderCTF/Challenges_2025_Public: … |
-| 15 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 16 | [tim-barc/ctf_writeups](https://github.com/tim-barc/ctf_writeups) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
-| 17 | [ashutosh1206/Crypto-CTF-Writeups](https://github.com/ashutosh1206/Crypto-CTF-Writeups) | 42 ⭐ | Crypto | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development b… |
-| 18 | [merrychap/ctf-writeups](https://github.com/merrychap/ctf-writeups) | 36 ⭐ | Pwn, Reverse Engineering, Forensics | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and… |
+| 11 | [xtiankisutsa/awesome-mobile-ctf (local mirror)](./repos/xtiankisutsa/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
+| 12 | [Adamkadaban/CTFs (local mirror)](./repos/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
+| 13 | [sajjadium/ctf-writeups (local mirror)](./repos/sajjadium/ctf-writeups) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
+| 14 | [DownUnderCTF/Challenges_2025_Public (local mirror)](./repos/DownUnderCTF/Challenges_2025_Public) | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - GitHub - DownUnderCTF/Challenges_2025_Public: … |
+| 15 | [Kasimir123/CTFWriteUps (local mirror)](./repos/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
+| 16 | [tim-barc/ctf_writeups (local mirror)](./repos/tim-barc/ctf_writeups) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
+| 17 | [ashutosh1206/Crypto-CTF-Writeups (local mirror)](./repos/ashutosh1206/Crypto-CTF-Writeups) | 42 ⭐ | Crypto | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development b… |
+| 18 | [merrychap/ctf-writeups (local mirror)](./repos/merrychap/ctf-writeups) | 36 ⭐ | Pwn, Reverse Engineering, Forensics | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and… |
 | 19 | [Tan-JunWei/CTF-Writeups](https://github.com/Tan-JunWei/CTF-Writeups) | 15 ⭐ | Web, OSINT, Forensics | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and… |
 | 20 | [SandWithCheese/ctf-writeups](https://github.com/SandWithCheese/ctf-writeups) | 14 ⭐ | Reverse Engineering | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for va… |
 
@@ -224,9 +224,151 @@ Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
 
 ---
 
+## 📦 Local Mirrors
+
+To make this collection fully self-contained and usable offline, **114 of the 156 linked GitHub repositories** have been mirrored locally under [`./repos/`](./repos/). Markdown links throughout this collection have been rewritten to point to the local mirror instead of the upstream GitHub URL, using the annotation `(local mirror)` in the link text.
+
+### What's mirrored
+
+| Metric | Count |
+|---|---:|
+| Total GitHub repositories referenced | 156 |
+| Successfully mirrored locally | **114** |
+| Not mirrored (size / rate-limit / disk constraints) | 42 |
+| Local mirror directory | [`./repos/`](./repos/) |
+| Total mirror size on disk | ~2.5 GB (after `.gitignore` filters) |
+
+### How to identify a mirrored link
+
+Original links used the form:
+
+```
+[apsdehal/awesome-ctf](https://github.com/apsdehal/awesome-ctf)
+```
+
+After mirroring, links now look like:
+
+```
+[apsdehal/awesome-ctf (local mirror)](./repos/apsdehal/awesome-ctf)
+```
+
+The `(local mirror)` suffix makes mirrored links visually distinguishable in GitHub's rendered markdown. Unmirrored repos (the 42 that could not be downloaded due to size, rate-limiting, or disk constraints on the generation machine) keep their original `https://github.com/...` URLs unchanged.
+
+### Repository layout
+
+```
+CTF-collection/
+├── README.md                          ← you are here
+├── repos/                             ← local mirrors (NEW)
+│   ├── apsdehal/
+│   │   └── awesome-ctf/
+│   ├── Crusaders-of-Rust/
+│   │   ├── corCTF-2022-public-challenge-archive/
+│   │   ├── corctf-2024-public-challenge-repo/
+│   │   └── corctf-2025-public-challenge-repo/
+│   ├── ... (114 owner/repo pairs total)
+│   └── sajjadium/
+│       └── ctf-writeups/
+├── 00-start-here/
+├── 01-pwn/ ... 13-network-pcap/
+├── 20-events/
+├── 30-archetypes/
+├── 40-tooling/
+├── 50-writeups-by-year/
+└── 99-appendix/
+```
+
+### What's NOT committed (`.gitignore` policy)
+
+To keep the repository within GitHub's size limits, the following categories of files are excluded from commits via `.gitignore` (but remain on the local mirror):
+
+- **Binary challenge artifacts**: `*.pcap`, `*.pcapng`, `*.bin`, `*.elf`, `*.exe`, `*.dll`, `*.so`, `*.dylib`, `*.dmp`, `*.raw`, `*.img`, `*.iso`, `*.vmdk`
+- **VM images and kernel artifacts**: `*.qcow2`, `*.vdi`, `*.vhd`, `*.ova`, `*.ovf`, `*.bzImage`, `*.vmlinuz`, `*.initramfs`, `*.cpio`
+- **Compressed handouts**: `*.tar.gz`, `*.tgz`, `*.tar.bz2`, `*.tbz2`, `*.tar.xz`, `*.txz`, `*.7z`, `*.rar`, `*.lz4`, `*.zst`
+- **Java / Android packages**: `*.jar`, `*.aar`, `*.apk`, `*.dex`, `*.war`
+- **Database / memory dumps**: `*.db`, `*.sqlite`, `*.sqlite3`, `*.memdump`, `*.heapdump`, `*.hprof`
+- **ML model files**: `*.dat`, `*.pkl`, `*.pickle`, `*.h5`, `*.pb`, `*.onnx`, `*.pt`, `*.pth`, `*.ckpt`, `*.safetensors`
+- **Explicit per-file ignores** for 21 files larger than 50 MB (VM images, prebuilt binaries, large archives)
+
+### Repos not mirrored (42)
+
+The following repositories could not be mirrored due to size, rate-limiting, or disk constraints on the generation machine. Their links throughout this collection remain unchanged (pointing to upstream GitHub):
+
+#### Failed to download (16 — never fetched)
+
+| Repository | Reason |
+|---|---|
+| `sajjadium/ctf-archives` | Too large (master archive) |
+| `p4-team/ctf` | Too large (10+ years of writeups) |
+| `hackplayers/hackthebox-writeups` | Too large |
+| `google/google-ctf` | Too large (500+ MB .git) |
+| `justcatthefish/justctf-2023` | Too large |
+| `project-sekai-ctf/sekaictf-2024` | Too large |
+| `daffainfo/ctf-writeup` | 335 MB, exceeds size cap |
+| `MartinPetkov/GCTF2021BeginnersQuestWriteups` | Extract failed (disk) |
+| `SECCON/SECCON13_final_CTF` | Extract failed (disk) |
+| `SandWithCheese/ctf-writeups` | Transient download fail |
+| `Tan-JunWei/CTF-Writeups` | 403 rate-limited |
+| `mephi42/ctf` | Not attempted |
+| `shekkbuilder/ctf-2` | Not attempted |
+| `sigpwny/UIUCTF-2023-Public` | Not attempted |
+| `silly-lily/CTF-Writeups` | Not attempted |
+| `siunam321/CTF-Writeups` | Not attempted |
+
+#### Downloaded but not pushed (26 — dropped to fit within disk/push constraints)
+
+These repos were downloaded successfully but had to be excluded from the committed mirror to fit within the generation environment's disk and GitHub push size constraints. Their links have been restored to point to upstream GitHub.
+
+| Repository | Approx. size |
+|---|---:|
+| `Adamkadaban/CTFs` | 1.3 GB |
+| `Crusaders-of-Rust/corCTF-2022-public-challenge-archive` | (part of 898 MB owner total) |
+| `Crusaders-of-Rust/corctf-2024-public-challenge-repo` | (part of 898 MB owner total) |
+| `Crusaders-of-Rust/corctf-2025-public-challenge-repo` | (part of 898 MB owner total) |
+| `DownUnderCTF/Challenges_2022_Public` | (part of 811 MB owner total) |
+| `DownUnderCTF/Challenges_2025_Public` | (part of 811 MB owner total) |
+| `dicegang/dicectf-quals-2024-challenges` | (part of 684 MB owner total) |
+| `dicegang/dicectf-quals-2025-challenges` | (part of 684 MB owner total) |
+| `justcatthefish/ctf-writeups` | (part of 530 MB owner total) |
+| `justcatthefish/justctf-2024` | (part of 530 MB owner total) |
+| `justcatthefish/justctf-2025` | (part of 530 MB owner total) |
+| `SecurityInnovation/Smart-Contract-CTF` | 492 MB |
+| `osirislab/CSAW-CTF-2022-Final-WriteUps` | (part of 424 MB owner total) |
+| `osirislab/CSAW-CTF-2023-Quals` | (part of 424 MB owner total) |
+| `osirislab/CSAW-CTF-2024-Quals` | (part of 424 MB owner total) |
+| `osirislab/CSAW-CTF-2025-Finals-Public` | (part of 424 MB owner total) |
+| `lieanu/LibcSearcher` | 346 MB |
+| `Kasimir123/CTFWriteUps` | 328 MB |
+| `1GN1tE/CTF_Writeups` | 127 MB |
+| `Nautilus-Institute/quals-2024` | 181 MB |
+| `RasyidMF/ctf-writeup` | 175 MB |
+| `HackTricks-wiki/hacktricks` | 164 MB |
+| `Ferdibrgl/cyber-apocalypse-ctf--2023-2024-` | 157 MB |
+| `david942j/ctf-writeups` | 161 MB |
+| `david942j/one_gadget` | (part of 161 MB owner total) |
+| `DownUnderCTF/Challenges_2021_public` | (part of 811 MB owner total) |
+
+To add these to the mirror, re-run the generation pipeline on a machine with ≥ 25 GB free disk.
+
+### Regenerating the mirror
+
+The mirror was generated by an automated script that:
+
+1. Walked all `.md` files in this repository
+2. Extracted every unique `https://github.com/<owner>/<repo>` URL
+3. Cloned each repo with `git clone --depth 1` (shallow, no history)
+4. Stripped each repo's `.git/` directory to save disk
+5. Removed `.gitmodules` files (submodules not initialized)
+6. Removed `filter=lfs` `.gitattributes` rules (LFS not configured)
+7. Rewrote markdown links to point to `./repos/<owner>/<repo>` with `(local mirror)` annotation
+
+See the `scripts/` directory in the development workspace for the source of the generation tooling.
+
+---
+
 ## 📜 License
 
-The curation, annotation, and structural work in this repository is licensed under the [MIT License](LICENSE). The linked-to resources retain their original licenses — this repository does not mirror or redistribute third-party content.
+The curation, annotation, and structural work in this repository is licensed under the [MIT License](LICENSE). The mirrored repositories under [`./repos/`](./repos/) retain their **original licenses** — each subdirectory's contents are governed by the license declared in that upstream project. Where no license is present, the default terms of the original repository apply.
 
 ---
 

@@ -1,0 +1,7 @@
+{%- extends "../../common/auth-bypass.py.j2" -%}
+
+{% block setup %}
+  {{- super() -}}
+  {%- set challenge.auth_method = "param" -%}
+  {%- set challenge.admin_password_length = 8 -%}
+{% endblock %}

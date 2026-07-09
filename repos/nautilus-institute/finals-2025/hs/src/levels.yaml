@@ -1,0 +1,9 @@
+level1:
+  document: air-pollution
+  min_highlighted_words: 1
+level2:
+  document: water-pollution
+  min_highlighted_words: 2
+level3:
+  document: light-pollution
+  min_highlighted_words: 3

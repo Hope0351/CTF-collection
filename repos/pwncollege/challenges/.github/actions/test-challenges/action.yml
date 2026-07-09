@@ -1,0 +1,68 @@
+name: Test challenges
+description: Test challenges.
+inputs:
+  challenges:
+    description: Top-level challenge group.
+    required: true
+  modified_since_ref:
+    description: Base ref challenges have been modified since.
+    required: false
+    default: ""
+  gpg_private_key:
+    description: GPG private key used to unlock git-crypt.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v6
+      if: ${{ inputs.modified_since_ref != '' }}
+      with:
+        fetch-depth: 0
+
+    - name: Manage encrypted files
+      shell: 'nix develop -c bash -euo pipefail {0}'
+      env:
+        GPG_PRIVATE_KEY: ${{ inputs.gpg_private_key }}
+        CHALLENGES_DIR: challenges/${{ inputs.challenges }}
+      run: |
+        if [ -n "$GPG_PRIVATE_KEY" ]; then
+          printf '%s' "$GPG_PRIVATE_KEY" | gpg --batch --import
+          git crypt unlock
+        else
+          git crypt status -e \
+            | sed -n 's/^[[:space:]]*encrypted:[[:space:]]*//p' \
+            | sort -u \
+            | xargs -r rm -f
+        fi
+
+    - name: Validate dojo.yml
+      shell: 'nix develop -c bash -euo pipefail {0}'
+      env:
+        CHALLENGES_DIR: challenges/${{ inputs.challenges }}
+      run: |
+        if [ -f "$CHALLENGES_DIR/dojo.yml" ]; then
+          echo "::group::Validating dojo.yml"
+          ./tools/dojo/parse-dojo-yml "$CHALLENGES_DIR/dojo.yml"
+          echo "::endgroup::"
+        fi
+
+    - name: Test challenges
+      shell: 'nix develop -c bash -euo pipefail {0}'
+      env:
+        CHALLENGES_DIR: challenges/${{ inputs.challenges }}
+        MODIFIED_SINCE: ${{ inputs.modified_since_ref }}
+      run: |
+        echo "::group::Challenges to be tested"
+        pwnshop list "$CHALLENGES_DIR" --modified-since="$MODIFIED_SINCE"
+        echo "::endgroup::"
+
+        echo "::group::Testing challenges"
+        pwnshop test \
+          --modified-since="$MODIFIED_SINCE" \
+          --jobs "$(( $(nproc) * 2 ))" \
+          --attempts 5 \
+          --timeout 600 \
+          --silent-failures \
+          "$CHALLENGES_DIR"
+        echo "::endgroup::"

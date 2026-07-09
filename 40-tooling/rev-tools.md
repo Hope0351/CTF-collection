@@ -18,7 +18,7 @@ The RE tooling stack is dominated by Ghidra (free, NSA), IDA Pro (commercial, in
 | 6 | [Frida](https://frida.re/) | JavaScript | Dynamic instrumentation framework. Dominates mobile RE; also useful for desktop. |
 | 7 | [x64dbg](https://x64dbg.com) | C++ | Windows-native debugger. Alternative to OllyDbg (legacy). |
 | 8 | [Cutter](https://cutter.re/) | C++ | GUI frontend for radare2. Easier onboarding than raw r2. |
-| 9 | [binwalk](https://github.com/ReFirmLabs/binwalk) | Python | Firmware analysis tool. Identifies and extracts embedded files. |
+| 9 | [binwalk (local mirror)](../repos/ReFirmLabs/binwalk) | Python | Firmware analysis tool. Identifies and extracts embedded files. |
 
 
 ## Quick Installation

@@ -12,9 +12,9 @@ Burp Suite is the dominant web-proxy tool. sqlmap automates SQL injection. ffuf 
 |---:|---|---|---|
 | 1 | [Burp Suite](https://portswigger.net/burp) | Java | The dominant web proxy tool. Community edition is free; Professional adds scanner and intruder features. Repeater is the most-used feature for CTF. |
 | 2 | [sqlmap](https://sqlmap.org/) | Python | Automates SQL injection detection and exploitation. Handles UNION, blind, time-based, error-based. Can dump databases, write files, execute OS commands. |
-| 3 | [ffuf](https://github.com/ffuf/ffuf) | Go | Fast web fuzzer. Used for directory, vhost, and parameter enumeration. Filters by response size, status, words. |
-| 4 | [gobuster](https://github.com/OJ/gobuster) | Go | Alternative directory buster. Simpler than ffuf; good for quick enumeration. |
-| 5 | [nuclei](https://github.com/projectdiscovery/nuclei) | Go | Template-based vulnerability scanner. 5000+ community templates for known CVEs and misconfigurations. |
+| 3 | [ffuf (local mirror)](../repos/ffuf/ffuf) | Go | Fast web fuzzer. Used for directory, vhost, and parameter enumeration. Filters by response size, status, words. |
+| 4 | [gobuster (local mirror)](../repos/OJ/gobuster) | Go | Alternative directory buster. Simpler than ffuf; good for quick enumeration. |
+| 5 | [nuclei (local mirror)](../repos/projectdiscovery/nuclei) | Go | Template-based vulnerability scanner. 5000+ community templates for known CVEs and misconfigurations. |
 | 6 | [semgrep](https://semgrep.dev/) | OCaml/Python | Static analysis tool with custom rule support. Useful for source-code review challenges. |
 | 7 | [WSL2 + Kali](https://www.kali.org/docs/wsl/) | Linux | Kali Linux on WSL2 — the easiest way to get a CTF-ready environment on Windows. |
 | 8 | [Postman](https://www.postman.com/) | Electron | API testing tool. Useful for non-HTTP APIs (gRPC, GraphQL, WebSocket). |

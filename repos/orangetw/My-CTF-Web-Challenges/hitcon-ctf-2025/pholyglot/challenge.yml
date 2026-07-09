@@ -1,0 +1,11 @@
+challenge_name: "Pholyglot!"
+description: |
+  Hack the [Planet](http://orange.chal.hitconctf.com/)!
+flag: hitcon{PHP-1s-my-b0dy-4nd-SQL-1s-my-bl00d}
+author: Orange Tsai
+category: 🍊
+attachment: ./dist
+
+ports: # TCP ports to expose
+  - 80
+compose: ./src/docker-compose.yml 

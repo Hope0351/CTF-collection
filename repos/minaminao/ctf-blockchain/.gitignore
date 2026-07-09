@@ -1,0 +1,45 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*
+/broadcast/*/31337/
+
+# Secret
+export_api_key.sh
+src/MEVShareCTF/.env
+
+# Private challenges
+src/**/_*
+
+_*
+
+# Python
+__pycache__
+
+# Node
+node_modules
+
+# Rust
+debug
+target
+Cargo.lock
+
+# HackTM
+**/challenge/openzeppelin-contracts*
+
+# Move
+build
+storage
+
+# Paradigm CTF 2022
+*.zip
+*.gz
+
+attachments/
+
+.env
+
+.sage

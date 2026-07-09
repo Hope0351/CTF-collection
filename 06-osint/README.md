@@ -14,19 +14,19 @@ The following GitHub repositories are the highest-value resources for this categ
 
 | # | Repository | Stars | Difficulty | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [r3kapig/writeup](https://github.com/r3kapig/writeup) | 188 ⭐⭐ | Varied | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
-| 2 | [minaminao/ctf-blockchain](https://github.com/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
-| 3 | [momenbasel/htb-writeups](https://github.com/momenbasel/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 4 | [orangetw/My-CTF-Web-Challenges](https://github.com/orangetw/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Varied | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source code, write-up and ide… |
+| 1 | [r3kapig/writeup (local mirror)](../repos/r3kapig/writeup) | 188 ⭐⭐ | Varied | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
+| 2 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
+| 3 | [momenbasel/htb-writeups (local mirror)](../repos/momenbasel/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
+| 4 | [orangetw/My-CTF-Web-Challenges (local mirror)](../repos/orangetw/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Varied | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source code, write-up and ide… |
 | 5 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
 | 6 | [Tan-JunWei/CTF-Writeups](https://github.com/Tan-JunWei/CTF-Writeups) | 15 ⭐ | Varied | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and solutions to variou… |
-| 7 | [hackthebox/cyber-apocalypse-2025](https://github.com/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
+| 7 | [hackthebox/cyber-apocalypse-2025 (local mirror)](../repos/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
 | 8 | [hackplayers/hackthebox-writeups](https://github.com/hackplayers/hackthebox-writeups) | 2,044 ⭐⭐⭐⭐ | Intermediate | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups development by creating an … |
-| 9 | [devploit/awesome-ctf-resources](https://github.com/devploit/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
-| 10 | [cybar-party/cybar-osint-ctf-2020](https://github.com/cybar-party/cybar-osint-ctf-2020) | 24 ⭐ | Varied | 2020–2020 | Official challenge writeups · Community writeups · CTF Structure · Hosting Instructions · Credits · About · Releases · … |
-| 11 | [Nambers/ctf-writeups](https://github.com/Nambers/ctf-writeups) | 5 ⭐ | Advanced | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-2023 · WolvCTF-2023. |
-| 12 | [0xETX/CTF-Writeups](https://github.com/0xETX/CTF-Writeups) | 4  | Varied | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories such as Programming, … |
-| 13 | [C3n7ral051nt4g3ncy/Tiberian_Order_Writeup](https://github.com/C3n7ral051nt4g3ncy/Tiberian_Order_Writeup) | 1  | Varied | n/a | How I solved this in less than 10 minutes My Go To Tool for image analysis is Aperi'Solve, it's a gem of a tool, and al… |
+| 9 | [devploit/awesome-ctf-resources (local mirror)](../repos/devploit/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
+| 10 | [cybar-party/cybar-osint-ctf-2020 (local mirror)](../repos/cybar-party/cybar-osint-ctf-2020) | 24 ⭐ | Varied | 2020–2020 | Official challenge writeups · Community writeups · CTF Structure · Hosting Instructions · Credits · About · Releases · … |
+| 11 | [Nambers/ctf-writeups (local mirror)](../repos/Nambers/ctf-writeups) | 5 ⭐ | Advanced | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-2023 · WolvCTF-2023. |
+| 12 | [0xETX/CTF-Writeups (local mirror)](../repos/0xETX/CTF-Writeups) | 4  | Varied | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories such as Programming, … |
+| 13 | [C3n7ral051nt4g3ncy/Tiberian_Order_Writeup (local mirror)](../repos/C3n7ral051nt4g3ncy/Tiberian_Order_Writeup) | 1  | Varied | n/a | How I solved this in less than 10 minutes My Go To Tool for image analysis is Aperi'Solve, it's a gem of a tool, and al… |
 | 14 | [silly-lily/CTF-Writeups](https://github.com/silly-lily/CTF-Writeups) | 0  | Varied | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitHub. |
 
 
@@ -64,9 +64,9 @@ whatsmyname.app, haveibeenpwned, Sherlock.
 
 Top resources for this sub-topic:
 
-- [r3kapig/writeup: CTF challenges writeup - GitHub](https://github.com/r3kapig/writeup) — 🐙 GitHub Repo
-- [Hack The Box Writeups - The Ultimate HTB Resource - GitHub](https://github.com/momenbasel/htb-writeups) — 🐙 GitHub Repo
-- [orangetw/My-CTF-Web-Challenges - GitHub](https://github.com/orangetw/My-CTF-Web-Challenges) — 🐙 GitHub Repo
+- [r3kapig/writeup: CTF challenges writeup - GitHub (local mirror)](../repos/r3kapig/writeup) — 🐙 GitHub Repo
+- [Hack The Box Writeups - The Ultimate HTB Resource - GitHub (local mirror)](../repos/momenbasel/htb-writeups) — 🐙 GitHub Repo
+- [orangetw/My-CTF-Web-Challenges - GitHub (local mirror)](../repos/orangetw/My-CTF-Web-Challenges) — 🐙 GitHub Repo
 - [GitHub - Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for](https://github.com/Adamkadaban/CTFs) — 🐙 GitHub Repo
 - [Tan-JunWei/CTF-Writeups - GitHub](https://github.com/Tan-JunWei/CTF-Writeups) — 🐙 GitHub Repo
 
@@ -76,7 +76,7 @@ Wayback Machine, archive.today.
 
 Top resources for this sub-topic:
 
-- [orangetw/My-CTF-Web-Challenges - GitHub](https://github.com/orangetw/My-CTF-Web-Challenges) — 🐙 GitHub Repo
+- [orangetw/My-CTF-Web-Challenges - GitHub (local mirror)](../repos/orangetw/My-CTF-Web-Challenges) — 🐙 GitHub Repo
 
 ### Breached database search
 
@@ -89,7 +89,7 @@ Dehashed, Intelligence X, breach compilation torrents.
 
 If you're new to osint — open-source intelligence, work through the resources in this order:
 
-1. **Start with a structured learning platform.** Begin with [TryHackMe's OSINT rooms](https://tryhackme.com/), then read [`C3n7ral051nt4g3ncy/Tiberian_Order_Writeup`](https://github.com/C3n7ral051nt4g3ncy/Tiberian_Order_Writeup) for a walkthrough of a real OSINT challenge.
+1. **Start with a structured learning platform.** Begin with [TryHackMe's OSINT rooms](https://tryhackme.com/), then read [`C3n7ral051nt4g3ncy/Tiberian_Order_Writeup` (local mirror)](../repos/C3n7ral051nt4g3ncy/Tiberian_Order_Writeup) for a walkthrough of a real OSINT challenge.
 
 2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal GitHub repository — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.

