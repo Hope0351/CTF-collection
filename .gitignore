@@ -1,0 +1,41 @@
+# Binary challenge artifacts (not committed — fetch from source repos)
+*.pcap
+*.pcapng
+*.bin
+*.elf
+*.exe
+*.dll
+*.so
+*.dylib
+*.dmp
+*.raw
+*.img
+*.iso
+*.vmdk
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Tokens / secrets — NEVER commit
+*.token
+*.pat
+.env
+.github_token
+
+# Build artifacts
+node_modules/
+dist/
+build/
