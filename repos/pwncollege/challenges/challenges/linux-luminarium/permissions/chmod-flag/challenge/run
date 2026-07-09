@@ -1,3 +1,0 @@
-#!/bin/bash
-
-fold -s <<< "I have given you access to use the 'chmod' command. Use it to enable the flag to be read!"

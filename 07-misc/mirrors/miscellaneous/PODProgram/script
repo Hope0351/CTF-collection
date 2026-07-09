@@ -1,0 +1,10 @@
+cd /home/pi/PODProgram
+date
+echo "Downloading .xlsx docs..."
+rm "POD Evening Announcement (Responses).xlsx"
+wget -O "POD Evening Announcement (Responses).xlsx" https://docs.google.com/spreadsheets/d/1v55S9f65a4ovo58tGkV7vQUjKeuKtHJWfsFoZ8JDNPw/export?pref=2&pli=1#gid=444680994
+rm "Events.xlsx"
+wget -O "Events.xlsx" https://docs.google.com/spreadsheets/d/1-HSJvx-U0OgNLbROQh2NyUaLuREbgisdJQcDF1eP4nQ/export?usp=sharing
+sleep 60
+echo "Done"
+python pod.py

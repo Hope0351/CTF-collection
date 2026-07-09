@@ -1,0 +1,7 @@
+dsn: ""
+
+namespaces:
+  - name: districts
+    id: 0
+  - name: flags
+    id: 1

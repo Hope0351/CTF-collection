@@ -1,0 +1,6 @@
+{%- extends "../../common/pwnpost-full.py.j2" -%}
+
+{% block setup %}
+  {{- super() -}}
+  {%- set challenge.publish_method = "POST" -%}
+{% endblock %}

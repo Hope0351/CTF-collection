@@ -1,0 +1,68 @@
+set disassembly-flavor intel
+start -> b main
+starti -> b _start
+run -> no b
+attach <PID>
+core <PATH> -> analise coredump de un programa que ya esta corriendo
+start <argv1> <argv2> < <stdin_path> -> para darle argumentos
+info registers -> printea registros
+print $rdi -> printea un registro en particular
+p/x $rdi -> en hexa
+x/nuf <addr> -> 
+	n: numero de elementos a mostrar
+	u: unidad (b[1 byte], h [2], w [4], g[8])
+	f: formato (d[decimal],x[hexa],s[string],i[instrucccion])
+	ejemplo: x/8i $rip -> muestra las proximas 8 instrucciones desde el IP.
+	x/16gx $rsp -> muestra stack
+disas main -> printea todas las instrucciones de main
+stepi <n> / si <n> 
+nexti <n> / ni <n>
+finish -> finish the executing function
+break *<address>
+display/nuf -> para mostrar valores todo el tiempo
+layouts regs -> funcion de mostrar todo el tiempo todo
+set $rdi = 0
+set *((uint64_t *) $rsp) = 0x1234 -> setea el primer valor del stack
+set *((uint16_t *) 0x31337000) = 0x1337 -> setea 2 butes de la direccion 0x31337000 a 1337
+
+gdb -x <script>
+gdb -ex <command>
+~/.gdbinit -> siempre se ejecutarian al inicio
+
+script example:
+```
+start
+  break *main+42
+  commands
+    silent
+    set $local_variable = *(unsigned long long*)($rbp-0x32)
+    printf "Current value: %llx\n", $local_variable
+    continue
+  end
+  continue
+```
+
+script example 2:
+```
+start
+  catch syscall read
+  commands
+    silent
+    if ($rdi == 42)
+      set $rdi = 0
+    end
+    continue
+  end
+  continue
+```
+
+syscalls: https://x64.syscall.sh/
+para saber los valores de cada parametro posible de una funcion -> man page -> veo la libreria y los domains -> grep -R "#define AF_INET" /usr/include -> less libreria.h
+
+si el exe esta strip:
+> info file (para saber el offset del entry point)
+> set stop-on-solib-events 1 (para parar en la primera instruccion)
+> r
+> info proc map (la primera start addr es la que me interesa)
+> b *(entrypoint+start addr)
+> c (repetir hasta que llegue al breakpoint)

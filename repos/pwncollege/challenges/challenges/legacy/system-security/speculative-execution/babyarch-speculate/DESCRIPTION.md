@@ -1,1 +1,0 @@
-This binary never reads the flag bytes.. or does it?

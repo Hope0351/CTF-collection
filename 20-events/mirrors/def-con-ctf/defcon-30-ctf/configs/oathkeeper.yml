@@ -1,0 +1,60 @@
+log:
+  level: debug
+
+authenticators:
+  noop:
+    enabled: true
+  cookie_session:
+    enabled: true
+    config:
+      # TODO cluster-internal mTLS
+      check_session_url: http://kratos:4433/sessions/whoami
+      preserve_path: true
+      subject_from: identity.id
+      extra_from: identity.traits
+
+authorizers:
+  allow:
+    enabled: true
+
+mutators:
+  noop:
+    enabled: true
+  header:
+    enabled: true
+    config:
+      headers:
+        X-User: "{{ print .Subject }}"
+        X-Username: "{{ print .Extra.name }}"
+        X-Useremail: "{{ print .Extra.email }}"
+
+errors:
+  handlers:
+    redirect:
+      enabled: true
+      config:
+        to: /login
+
+serve:
+  proxy:
+    cors:
+      enabled: true
+      allowed_origins:
+        - http://localhost:5050
+        - https://defcon-ory-challenge.com
+      allowed_methods:
+        - GET
+        - POST
+      allowed_headers:
+        - Cookie
+        - Content-Type
+      exposed_headers:
+        - Content-Type
+        - Link
+      allow_credentials: true
+      max_age: 3600
+
+access_rules:
+  repositories:
+    - file:///home/ory/configs/oathkeeper_rules.json
+  matching_strategy: regexp

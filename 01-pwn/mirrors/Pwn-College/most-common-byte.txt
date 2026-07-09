@@ -1,0 +1,36 @@
+.global _start
+_start:
+xor rcx,rcx
+xor rbx,rbx
+push rbp
+mov rbp,rsp
+sub rsp,rsi
+_while1:
+cmp rcx,rsi
+jge _outwhile1
+movzx rbx,byte ptr [rdi+rcx]
+mov rax,rbp 
+sub rax,rbx
+inc dword ptr [rax] 
+inc rcx
+jmp _while1
+_outwhile1:
+xor rcx,rcx
+xor rbx,rbx
+xor rax,rax
+_while2:
+cmp rcx,0xff
+jg _ffin
+mov rsi,rbp  
+sub rsi,rcx
+cmp bl,byte ptr [rsi]
+jge _endwhile2
+mov rbx,[rsi]
+mov rax,rcx
+_endwhile2:
+inc rcx
+jmp _while2
+_ffin:
+mov rsp,rbp
+pop rbp
+ret

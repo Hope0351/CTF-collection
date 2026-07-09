@@ -1,1 +1,0 @@
-Make multiple requests in response to stateful HTTP responses using python

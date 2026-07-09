@@ -1,2 +1,0 @@
-forge-std/=lib/forge-std/src/
-forge-ctf/=lib/forge-ctf/src/

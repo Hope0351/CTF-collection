@@ -1,0 +1,18 @@
+.intel_syntax noprefix
+.global _start
+_start:
+xor rbx,rbx
+xor rcx,rcx
+xor rax,rax
+cmp rdi,0
+je _end2
+_loop:
+cmp byte ptr [rdi+rax],0
+je _end
+inc rax
+jmp _loop
+_end2:
+xor rax,rax
+_end:
+nop
+int3

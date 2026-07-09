@@ -1,1 +1,0 @@
-Enables you to read flags by making them execute other commands!

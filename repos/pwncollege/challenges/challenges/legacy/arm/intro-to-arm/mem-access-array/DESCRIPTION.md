@@ -1,1 +1,0 @@
-Compute a sum from an array.

@@ -1,1 +1,0 @@
-Reverse engineer this custom emulator and architecture, and write your own custom shellcode to get the flag.

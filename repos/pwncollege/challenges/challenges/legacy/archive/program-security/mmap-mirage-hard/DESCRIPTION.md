@@ -1,1 +1,0 @@
-Overflow a buffer and leak the flag. Be warned, this requires careful and clever payload construction!

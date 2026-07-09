@@ -1,1 +1,0 @@
-Perform ROP when the function has a canary!

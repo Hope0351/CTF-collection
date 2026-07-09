@@ -1,4 +1,0 @@
-.ds_store
-node_modules
-package-lock.json
-iot-light/light/include/config.h

@@ -14,11 +14,11 @@
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [blockthreat/blocksec-ctfs (local mirror)](../repos/blockthreat/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 2 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 1 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 3 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 4 | [AshiqAhamed17/web3-ctf-writeups (local mirror)](../repos/AshiqAhamed17/web3-ctf-writeups) | 11 ⭐ | Blockchain | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for va… |
-| 5 | [PumpkingWok/CTFGym (local mirror)](../repos/PumpkingWok/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
+| 4 | [AshiqAhamed17/web3-ctf-writeups](../08-blockchain-web3/mirrors/web3-ctf-writeups) | 11 ⭐ | Blockchain | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for va… |
+| 5 | [PumpkingWok/CTFGym](../30-archetypes/mirrors/practice-platforms/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
 
 
 ### Articles, Videos & Blog Posts (0)

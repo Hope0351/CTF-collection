@@ -1,1 +1,0 @@
-Escape a chroot sandbox with shellcode.

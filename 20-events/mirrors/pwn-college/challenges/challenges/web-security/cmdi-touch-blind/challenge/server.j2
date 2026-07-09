@@ -1,0 +1,12 @@
+{%- extends "../../common/cmdi.py.j2" -%}
+
+{%- block setup -%}
+  {{- super() -}}
+  {%- set challenge.input_parameter = challenge.parameter_filepath -%}
+  {%- set challenge.default_parameter_value = "/challenge/PWN" -%}
+  {%- set challenge.hide_output = True -%}
+{%- endblock -%}
+
+{%- block service_description -%}Welcome to the touch service! Please choose a file to touch:{%- endblock -%}
+
+{%- block command -%}f"touch {arg}"{%- endblock -%}

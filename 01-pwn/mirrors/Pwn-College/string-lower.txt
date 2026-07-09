@@ -1,0 +1,31 @@
+.intel_syntax noprefix
+.global _start
+_start:
+xor rcx,rcx
+xor rax,rax
+xor rbx,rbx
+cmp rdi,rbx
+je _end
+_while:
+xor rbx,rbx
+cmp byte ptr [rdi],bl
+je _end
+mov rbx,0x5a
+cmp byte ptr [rdi],bl
+jg _endwhile
+_if:
+mov rbx,rdi
+xor rdi,rdi
+mov dil,byte ptr [rbx]
+mov rax,0x403000
+call rax
+mov rdi,rbx
+mov [rdi],al
+inc rcx
+_endwhile:
+inc rdi
+jmp _while
+_end:
+int3
+mov rax,rcx
+ret

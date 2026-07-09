@@ -1,1 +1,0 @@
-Write and execute shellcode to read the flag, but your input has data inserted into it before being executed.

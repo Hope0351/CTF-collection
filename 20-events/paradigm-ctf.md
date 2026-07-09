@@ -14,12 +14,12 @@
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [blockthreat/blocksec-ctfs (local mirror)](../repos/blockthreat/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 2 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 3 | [AshiqAhamed17/web3-ctf-writeups (local mirror)](../repos/AshiqAhamed17/web3-ctf-writeups) | 11 ⭐ | Blockchain | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for va… |
-| 4 | [theori-io/ctf (local mirror)](../repos/theori-io/ctf) | 133 ⭐⭐ | — | 2020–2025 | LINE CTF 2024 Write Up. 2023. SSTF Hackers' playground (1st). SSTF CTF 2023 Write Up - The Duck.pdf… |
-| 5 | [PumpkingWok/CTFGym (local mirror)](../repos/PumpkingWok/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
-| 6 | [DanielVF/2020_paradigm_ctf_writeup (local mirror)](../repos/DanielVF/2020_paradigm_ctf_writeup) | 0  | Reverse Engineering, Blockchain | 2020–2020 | The Paradigm CTF was 48 hours of smart contract breaking fun. It makes smart contract development a… |
+| 1 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 3 | [AshiqAhamed17/web3-ctf-writeups](../08-blockchain-web3/mirrors/web3-ctf-writeups) | 11 ⭐ | Blockchain | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for va… |
+| 4 | [theori-io/ctf](../30-archetypes/mirrors/team-archives/ctf-theori-io) | 133 ⭐⭐ | — | 2020–2025 | LINE CTF 2024 Write Up. 2023. SSTF Hackers' playground (1st). SSTF CTF 2023 Write Up - The Duck.pdf… |
+| 5 | [PumpkingWok/CTFGym](../30-archetypes/mirrors/practice-platforms/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
+| 6 | [DanielVF/2020_paradigm_ctf_writeup](../08-blockchain-web3/mirrors/2020-paradigm-ctf-writeup) | 0  | Reverse Engineering, Blockchain | 2020–2020 | The Paradigm CTF was 48 hours of smart contract breaking fun. It makes smart contract development a… |
 
 
 ### Articles, Videos & Blog Posts (2)

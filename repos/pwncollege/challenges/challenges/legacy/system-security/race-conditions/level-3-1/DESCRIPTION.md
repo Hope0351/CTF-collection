@@ -1,1 +1,0 @@
-Exploit a race condtion to corrupt memory, affecting the behavior of the challenge.

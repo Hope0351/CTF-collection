@@ -1,7 +1,0 @@
-#!/bin/bash
-
-ZWSP="$(printf '\342\200\213')"
-TARGET="/challenge/pwncollege${ZWSP}"
-
-cp /flag "$TARGET"
-chmod 644 "$TARGET"

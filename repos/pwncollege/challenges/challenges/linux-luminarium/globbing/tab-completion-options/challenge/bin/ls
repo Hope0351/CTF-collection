@@ -1,3 +1,0 @@
-#!/bin/bash
-
-fold -s <<< "No ls for you in this level! Use tab-completion instead!"

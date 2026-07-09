@@ -15,19 +15,19 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [blockthreat/blocksec-ctfs (local mirror)](../repos/blockthreat/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 3 | [minaminao/ctf-blockchain (local mirror)](../repos/minaminao/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 4 | [xtiankisutsa/awesome-mobile-ctf (local mirror)](../repos/xtiankisutsa/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
+| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
 | 5 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
 | 6 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 7 | [devploit/awesome-ctf-resources (local mirror)](../repos/devploit/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
+| 7 | [devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
 | 8 | [david942j/ctf-writeups](https://github.com/david942j/ctf-writeups) | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an… |
 | 9 | [Nautilus-Institute/quals-2024](https://github.com/Nautilus-Institute/quals-2024) | 76 ⭐⭐ | — | 2024–2024 | This repository contains the open source release for Nautilus Institute's 2024 DEF CON CTF qualifie… |
-| 10 | [m3ssap0/CTF-Writeups (local mirror)](../repos/m3ssap0/CTF-Writeups) | 35 ⭐ | — | 2018–2021 | DCTF DEF CAMP Qualif 2018 · DCTF DEF CAMP Qualif 2018 · DEF CON CTF Qualifier 2020 · DEF CON CTF Qu… |
-| 11 | [Sudoite/ctf-writeups (local mirror)](../repos/Sudoite/ctf-writeups) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
-| 12 | [Live-CTF/LiveCTF-DEFCON32 (local mirror)](../repos/Live-CTF/LiveCTF-DEFCON32) | 23 ⭐ | — | 2024–2024 | This repository contains infrastructure, challenges and solutions for the DEFCON32 LiveCTF. Qualifi… |
-| 13 | [CUCTF/ctf-writeups (local mirror)](../repos/CUCTF/ctf-writeups) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
-| 14 | [tsids/picoCTF-Writeups (local mirror)](../repos/tsids/picoCTF-Writeups) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
+| 10 | [m3ssap0/CTF-Writeups](../30-archetypes/mirrors/personal-collections/CTF-Writeups-m3ssap0) | 35 ⭐ | — | 2018–2021 | DCTF DEF CAMP Qualif 2018 · DCTF DEF CAMP Qualif 2018 · DEF CON CTF Qualifier 2020 · DEF CON CTF Qu… |
+| 11 | [Sudoite/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
+| 12 | [Live-CTF/LiveCTF-DEFCON32](../20-events/mirrors/def-con-ctf/LiveCTF-DEFCON32) | 23 ⭐ | — | 2024–2024 | This repository contains infrastructure, challenges and solutions for the DEFCON32 LiveCTF. Qualifi… |
+| 13 | [CUCTF/ctf-writeups](../30-archetypes/mirrors/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
+| 14 | [tsids/picoCTF-Writeups](../20-events/mirrors/picoctf/picoCTF-Writeups-tsids) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
 
 
 ### Articles, Videos & Blog Posts (1)

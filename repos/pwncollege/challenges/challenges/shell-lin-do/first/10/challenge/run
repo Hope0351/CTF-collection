@@ -1,3 +1,0 @@
-#!/usr/bin/exec-suid --real --environ=all -- /bin/sh -p
-
-fortune

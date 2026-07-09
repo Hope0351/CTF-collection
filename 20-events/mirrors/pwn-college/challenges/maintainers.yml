@@ -1,0 +1,59 @@
+- name: root
+  email: root@pwn.college
+  github: pwncollege
+  groups: ["*"]
+  key: |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mDMEaQqZ6hYJKwYBBAHaRw8BAQdACmSEPdcnlygOENHH1D1eqOzWnhnqFyXcSPO1
+    tVY+DKG0I3B3bi5jb2xsZWdlIHJvb3QgPHJvb3RAcHduLmNvbGxlZ2U+iJMEExYK
+    ADsWIQSmwb2KoZvnzBsF3W4eGA8CndVGDwUCaQqZ6gIbIwULCQgHAgIiAgYVCgkI
+    CwIEFgIDAQIeBwIXgAAKCRAeGA8CndVGD+p4AQC5mvuvaY8cavWtsvlRpH9z+0Sy
+    TUebETdZwzS+vl2UFAD/cVBFiF/ZjQLgR5T8u6Ln9CrjtWfPYiVpi8hWYid7awC4
+    OARpCpnqEgorBgEEAZdVAQUBAQdABVEUYvJrVe/E96fTj6+RFnl3cQSo5g1ZxQ/4
+    VeraHHQDAQgHiHgEGBYKACAWIQSmwb2KoZvnzBsF3W4eGA8CndVGDwUCaQqZ6gIb
+    DAAKCRAeGA8CndVGD5EdAQCFQ4m8M0ex7JHGdFXesMmqSgR2svwImrElIV0Trku6
+    kgEAxWnuV4aC9KP5eyj3qwzFCP0FWMMoDYLfFnrz0PKBSQU=
+    =mvyK
+    -----END PGP PUBLIC KEY BLOCK-----
+
+
+- name: connor
+  email: connor@connornelson.com
+  github: connornelson
+  groups: ["*"]
+  key: |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mDMEaNM0IBYJKwYBBAHaRw8BAQdARZB5G+5n7Agin2ecURyZf9tj/SdDR3GsYFRD
+    50UdAZ60J0Nvbm5vciBOZWxzb24gPGNvbm5vckBjb25ub3JuZWxzb24uY29tPoiT
+    BBMWCgA7FiEE0RSHEpHp7nBHH4vP9C2y/xGRXn8FAmjTNCACGwMFCwkIBwICIgIG
+    FQoJCAsCBBYCAwECHgcCF4AACgkQ9C2y/xGRXn/wUAD+MIKfW7T4RcMYbIsAYtcF
+    7YfYdPpvjTfEv2e7TRppDtQA/ApShEbk5fF1BiRIEw4ocT/fNTzGu191plqZUb+Q
+    zCQAuDgEaNM0IBIKKwYBBAGXVQEFAQEHQKZBv3bHfJNjjnHwTd9ectgw0yahlwgs
+    2Tgs+frdG0xzAwEIB4h4BBgWCgAgFiEE0RSHEpHp7nBHH4vP9C2y/xGRXn8FAmjT
+    NCACGwwACgkQ9C2y/xGRXn/sJQD/TxtrBccnVJqEt89Jri1E8UiBY/DLUCYhQtEN
+    spm8LYwBAOA8FQ9wXepXIKVk6bMHSTTuW/Fcwr4wxv+IxMAdgOYF
+    =auuL
+    -----END PGP PUBLIC KEY BLOCK-----
+
+
+- name: yan
+  email: yans@pwn.college
+  github: zardus
+  groups: ["*"]
+  key: |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mDMEajGLKhYJKwYBBAHaRw8BAQdAeXJbDZHKxqUyDIpiHdkapf7W0ZAALkvWUU9d
+    5r2XKWW0JllhbiBTaG9zaGl0YWlzaHZpbGkgPHlhbnNAcHduLmNvbGxlZ2U+iJkE
+    ExYKAEEWIQQEAfk6X0rA8m69aaAJH7BoK1kVfAUCajGLKgIbAwUJBaOagAULCQgH
+    AgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRAJH7BoK1kVfNMGAQDvu7rMKt8+9OKG
+    /gpJJqefihuLwEu2SHhGiO3g7VaiswEA8ypvfQKG/f1uRmB56AsK9Ng7mXHDI+LK
+    sKdq1lit9AG4OARqMYsqEgorBgEEAZdVAQUBAQdA5a0GH00DbY4V9DsY/gloPFIK
+    lcvLrtufvvoU/XyIpWEDAQgHiH4EGBYKACYWIQQEAfk6X0rA8m69aaAJH7BoK1kV
+    fAUCajGLKgIbDAUJBaOagAAKCRAJH7BoK1kVfImZAQDx0e5X4nwzMJmd404zpsnB
+    Bey/z16ssa9sicPZ59K5DAD+ORB8uctuoi757PGQMbc5FSH2sNwaFHxwdsyE4X4r
+    oAE=
+    =JOas
+    -----END PGP PUBLIC KEY BLOCK-----

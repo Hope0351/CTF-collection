@@ -1,1 +1,0 @@
-Utilize multiple connections to the same program to trigger a race condition, affecting program behavior!

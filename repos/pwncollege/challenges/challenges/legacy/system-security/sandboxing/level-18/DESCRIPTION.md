@@ -1,1 +1,0 @@
-Learn the implications of a different way of sandboxing, using modern namespacing techniques! What could be the harm of mounting in a harmless directory?

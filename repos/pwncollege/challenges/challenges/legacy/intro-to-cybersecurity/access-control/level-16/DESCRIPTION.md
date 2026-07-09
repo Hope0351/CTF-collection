@@ -1,1 +1,0 @@
-Five Mandatory Access Control questions with categories

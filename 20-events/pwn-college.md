@@ -14,14 +14,14 @@
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [Crypto-Cat/CTF (local mirror)](../repos/Crypto-Cat/CTF) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
+| 1 | [Crypto-Cat/CTF](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
 | 2 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 3 | [devploit/awesome-ctf-resources (local mirror)](../repos/devploit/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
-| 4 | [pwncollege/linux-luminarium (local mirror)](../repos/pwncollege/linux-luminarium) | 52 ⭐⭐ | Pwn | n/a | This is a pwn.college dojo built around teaching basic Linux knowledge, through hands-on challenges… |
-| 5 | [pwncollege/challenges (local mirror)](../repos/pwncollege/challenges) | 33 ⭐ | Pwn, Web, Reverse Engineering | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challe… |
-| 6 | [kyndrawynne/pwnscripts (local mirror)](../repos/kyndrawynne/pwnscripts) | 4  | Pwn, Web, Reverse Engineering | n/a | This repository contains my solutions to the challenges I completed in the Pwn College program. Pwn… |
-| 7 | [ftiannisa/write-up (local mirror)](../repos/ftiannisa/write-up) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
-| 8 | [HerculesRD/Pwn.College (local mirror)](../repos/HerculesRD/Pwn.College) | 0  | Pwn | n/a | Small and medium teams · Startups ... |
+| 3 | [devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
+| 4 | [pwncollege/linux-luminarium](../20-events/mirrors/pwn-college/linux-luminarium) | 52 ⭐⭐ | Pwn | n/a | This is a pwn.college dojo built around teaching basic Linux knowledge, through hands-on challenges… |
+| 5 | [pwncollege/challenges](../20-events/mirrors/pwn-college/challenges) | 33 ⭐ | Pwn, Web, Reverse Engineering | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challe… |
+| 6 | [kyndrawynne/pwnscripts](../40-tooling/mirrors/pwn-tools/pwnscripts) | 4  | Pwn, Web, Reverse Engineering | n/a | This repository contains my solutions to the challenges I completed in the Pwn College program. Pwn… |
+| 7 | [ftiannisa/write-up](../30-archetypes/mirrors/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
+| 8 | [HerculesRD/Pwn.College](../01-pwn/mirrors/Pwn-College) | 0  | Pwn | n/a | Small and medium teams · Startups ... |
 
 
 ### Articles, Videos & Blog Posts (2)

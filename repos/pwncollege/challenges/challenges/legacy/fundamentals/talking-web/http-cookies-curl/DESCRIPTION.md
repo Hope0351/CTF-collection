@@ -1,1 +1,0 @@
-Include a cookie from HTTP response using curl

@@ -1,0 +1,9 @@
+start
+break *main+721
+continue
+commands
+        set $local = *(unsigned long long*)($rsp+40)
+        printf "random value: %llx\n", $local
+        continue
+end
+continue

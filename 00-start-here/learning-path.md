@@ -34,13 +34,13 @@ This is a structured, opinionated learning path. It assumes you have basic progr
 - **What it is:** Carnegie Mellon University's beginner-friendly CTF, always-on, with hundreds of challenges organized by category and difficulty.
 - **How to use it:** Work through picoCTF 2019, 2020, 2021, 2022, 2023, 2024, and 2025 editions. Aim to solve 30+ challenges per edition.
 - **Time:** 4 weeks of evenings.
-- **Companion writeups:** [`Cajac/picoCTF-Writeups` (local mirror)](../repos/Cajac/picoCTF-Writeups) (250+ writeups), [`noamgariani11/picoCTF-2024-Writeup` (local mirror)](../repos/noamgariani11/picoCTF-2024-Writeup).
+- **Companion writeups:** [`Cajac/picoCTF-Writeups`](../20-events/mirrors/picoctf/picoCTF-Writeups-Cajac) (250+ writeups), [`noamgariani11/picoCTF-2024-Writeup`](../20-events/mirrors/picoctf/picoCTF-2024-Writeup).
 
 ### 2.2 TryHackMe (beginner learning path)
 - **What it is:** A structured learning platform with rooms that walk you through specific topics with hands-on exercises.
 - **How to use it:** Complete the "Complete Beginner" and "Web Fundamentals" learning paths.
 - **Time:** 2–3 weeks.
-- **Companion writeups:** [`The-Debarghya/TryHackMe-Writeups` (local mirror)](../repos/The-Debarghya/TryHackMe-Writeups), [`ShubhamJagtap2000/TryHackMe-THM` (local mirror)](../repos/ShubhamJagtap2000/TryHackMe-THM).
+- **Companion writeups:** [`The-Debarghya/TryHackMe-Writeups`](../20-events/mirrors/tryhackme/TryHackMe-Writeups), [`ShubhamJagtap2000/TryHackMe-THM`](../20-events/mirrors/tryhackme/TryHackMe-THM).
 
 ## Phase 3: Pick a specialty (Weeks 9–16)
 
@@ -54,7 +54,7 @@ Pick **one** of the following tracks based on your background and interests:
   1. [pwn.college](https://pwn.college/) — the canonical structured pwn learning path, from absolute basics to kernel exploitation. Free, hosted by Arizona State University.
   2. [pwnable.kr](https://pwnable.kr/) — classic pwn challenges, well-documented.
   3. [pwnable.tw](https://pwnable.tw/) — harder pwn challenges, less hand-holding.
-- **Companion repos:** [`docfate111/binary_exploitation` (local mirror)](../repos/docfate111/binary_exploitation), [`merrychap/ctf-writeups` (local mirror)](../repos/merrychap/ctf-writeups).
+- **Companion repos:** [`docfate111/binary_exploitation`](../01-pwn/mirrors/binary_exploitation), [`merrychap/ctf-writeups`](../30-archetypes/mirrors/personal-collections/ctf-writeups-merrychap).
 - **Time:** 6–8 weeks.
 
 ### Track B: Web exploitation
@@ -63,16 +63,16 @@ Pick **one** of the following tracks based on your background and interests:
   1. [PortSwigger Web Security Academy](https://portswigger.net/web-security) — free, comprehensive, by the makers of Burp Suite. Work through all Apprentice and Practitioner labs.
   2. [OWASP Top 10](https://owasp.org/Top10/) — read all 10 entries.
   3. HackTheBox web challenges (medium tier).
-- **Companion repos:** [`orangetw/My-CTF-Web-Challenges` (local mirror)](../repos/orangetw/My-CTF-Web-Challenges).
+- **Companion repos:** [`orangetw/My-CTF-Web-Challenges`](../02-web/mirrors/My-CTF-Web-Challenges).
 - **Time:** 4–6 weeks.
 
 ### Track C: Crypto
 - **Prerequisites:** Discrete mathematics, modular arithmetic, basic number theory.
 - **Curriculum:**
   1. [CryptoHack](https://cryptohack.org/) — free, comprehensive crypto CTF learning platform.
-  2. [ashutosh1206/Crypto-CTF-Writeups (local mirror)](../repos/ashutosh1206/Crypto-CTF-Writeups) — read 10+ writeups.
+  2. [ashutosh1206/Crypto-CTF-Writeups](../03-crypto/mirrors/Crypto-CTF-Writeups) — read 10+ writeups.
   3. Solve RSA challenges using SageMath.
-- **Companion repos:** [`rkm0959/CTFWriteups` (local mirror)](../repos/rkm0959/CTFWriteups), [`ashutosh1206/Crypto-CTF-Writeups` (local mirror)](../repos/ashutosh1206/Crypto-CTF-Writeups).
+- **Companion repos:** [`rkm0959/CTFWriteups`](../30-archetypes/mirrors/personal-collections/CTFWriteups-rkm0959), [`ashutosh1206/Crypto-CTF-Writeups`](../03-crypto/mirrors/Crypto-CTF-Writeups).
 - **Time:** 6–8 weeks.
 
 ### Track D: Reverse Engineering
@@ -90,7 +90,7 @@ Pick **one** of the following tracks based on your background and interests:
   1. [Ethernaut](https://ethernaut.openzeppelin.com/) — OpenZeppelin's progressively harder smart-contract CTF.
   2. [Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/) — DeFi-specific challenges.
   3. [Capture The Ether](https://capturetheether.com/) — broader Ethereum challenges.
-- **Companion repos:** [`minaminao/ctf-blockchain` (local mirror)](../repos/minaminao/ctf-blockchain), [`AshiqAhamed17/web3-ctf-writeups` (local mirror)](../repos/AshiqAhamed17/web3-ctf-writeups).
+- **Companion repos:** [`minaminao/ctf-blockchain`](../08-blockchain-web3/mirrors/ctf-blockchain), [`AshiqAhamed17/web3-ctf-writeups`](../08-blockchain-web3/mirrors/web3-ctf-writeups).
 - **Time:** 4–6 weeks.
 
 ## Phase 4: Live competitions (Weeks 17+)
@@ -108,7 +108,7 @@ Pick **one** of the following tracks based on your background and interests:
 
 ### 4.3 Read elite writeups
 - After each major CTF (DEF CON, hxp, 0CTF, DiceCTF, corCTF), read the team writeups within 1 week.
-- Team writeup archives: [`p4-team/ctf`](https://github.com/p4-team/ctf), [`r3kapig/writeup` (local mirror)](../repos/r3kapig/writeup), [`theori-io/ctf` (local mirror)](../repos/theori-io/ctf).
+- Team writeup archives: [`p4-team/ctf`](https://github.com/p4-team/ctf), [`r3kapig/writeup`](../30-archetypes/mirrors/team-archives/writeup-r3kapig), [`theori-io/ctf`](../30-archetypes/mirrors/team-archives/ctf-theori-io).
 
 ## Phase 5: Elite tier (Months 6+)
 

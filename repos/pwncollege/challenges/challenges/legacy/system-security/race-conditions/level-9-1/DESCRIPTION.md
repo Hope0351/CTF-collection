@@ -1,1 +1,0 @@
-Utilize a race condition to leak information out of a program.

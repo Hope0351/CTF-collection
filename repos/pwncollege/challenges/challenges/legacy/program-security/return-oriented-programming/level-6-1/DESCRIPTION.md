@@ -1,1 +1,0 @@
-Craft a ROP chain to obtain the flag, now with no syscall gadget!

@@ -1,0 +1,127 @@
+# Insane Bolt
+Written by: 0xETX (0x03)
+
+## Resources Used
+1. Text Editors: Nano, Notepad++
+2. Connecting: Telnet, netcat
+3. Programming: Python
+
+Insane Bolt is a programming challenge that was available during the HackTheBox University CTF 2021. This challenge has the user play a robot that has to follow a path of screws until they reach a diamond. The player accomplishes this by sending a string consisting for 'D' (for down), 'R' (for right) and 'L' (for left). The order of the characters in the string is the order the player will move. If the user goes into the wrong direction (a skull or fire emoji), they will lose and are forced to restart.
+
+## Getting Started
+Before starting the challenge, the first thing we must do is understand how the challenge works. To start this off, the first thing I will do is connect to the challenge using Telnet as seen in Figure 1.0. 
+
+Once the connection is established, we can immediately notice that we have 2 options - 1 is for instructions, 2 is for play. To keep this write-up to the point, we'll just select 'Play'.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 1.0: Address and Port is crossed out as that information may not be currently relevant.*
+
+After selecting play, we'll immediately notice a grid is displayed to the user (Figure 1.1).
+
+There are several things to note with this grid, starting with the emojis.
+1. Fire Emoji - This emoji solely serves as a border to the grid.
+2. Skull Emoji - This emoji represents spaces that will immediately eliminate the player.
+3. Robot Emoji - This emoji represents the player.
+4. Screw Emoji - These serve as the 'path' the player must follow.
+5. Diamond Emoji - Collecting this emoji immediately ends the current map and generates the next one.
+
+After understanding how the emojis and game works, the next step is to start noticing patterns with the challenge.
+1. Some paths are dead-ends. These dead-ends will not have any steps to go 'Down'.
+2. The first move will always start with a 'D' move.
+3. If there is a single screw in a row, it is guarenteed to be a safe path.
+4. The maximum amount of screws that can be directly underneath another in a row is one.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 1.1: Understanding how the grid works, along with patterns.*
+
+Now that these important notes have been made, we can begin creating the script.
+
+## Creating the Script
+The first part of the script is going to be responsible for establishing the connection between the client (us) and the server along with some imports. The two main modules that I'll be importing is the **socket** module, and the sleep function from the **time** module. Following that, two variables will be created - addr and port. These variables will just store the address of the server and the port the script is running on.
+
+The next part creates the **clientsocket** object which will be responsible for sending and receiving connections. Once created, we connect to the server with the specified port and address. The first thing we'll do with **clientsocket** is receive the first message the server sends us with **clientsocket.recv**. As mentioned earlier, we only care about the "play" option, so we'll send a message to the server with **clientsocket.send** using the string "2\n", where 2 is our option and \\n tells the server that's the end of the message.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.0: Connecting to the server.*
+
+Following that, we'll create our method **receiveAndSolve** which will essentially being doing the rest of the work. To begin with receive and solve, we'll have it wait 0.25s to make sure the server has time to send a response when we start running the script multiple times. After that, we create the **combinedarray** variable which will be our 2D grid that we'll convert all the data into. As Python creates 2D arrays by just adding arrays into arrays, we'll set up **temparray** for that sole purpose. Both **counterx** and **countery** will be used for positioning while screwcount counts the number of screws in the next row. Finally, **returnstring** will be the string we'll craft that tells the server our movement response.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.1: Starting the primary method.*
+
+Once all the variables have been established, we'll then receive the data sent to us from the server and convert it into a string. Following that, we'll convert all emojis into a more basic single character system that'll make it easier to debug and reference.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.2: Altering the data we received into an easier-to-manage format.*
+
+The next thing we'll create is a simple loop that'll recreate the grid into a 2D array. Whenever it detects a newline, it'll create a new row. If there is no newline, it'll continue appending data to the current row.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.3: Re-creating the data into a 2D array.*
+
+Next, we'll begin the pathfinding by first locating the row the player is in, followed by the column.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.4: Locating the player through the user of loops.*
+
+After locating the player, we can now focus on the main challenge of this challenge - creating a functional and effective path-finding algorithm. We'll keep looping the pathfinding algorithm until the variable **a** is set to zero, acting like a sort of killswitch. We'll start our first condition to check if location is on-top of the diamond. If the player is currently on the diamond, it'll automatically turn the loop off.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.5: Beginning the pathfinding algorithm and checking player's current location.*
+
+If the player isn't currently on the diamond, the next step is to check the next place the diamond could be in - the row underneath. It begins by first checking if the diamond is directly underneath the player - if it is, move down and close the loop. If it's just a screw underneath the player, they are still free to move down as all down-moving conditions are safe and will not trap the player in a dead-end. However, if nothing is below the player, it's time to check the entire row below.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.6: Checking to see if anything is below the player. If nothing is below the player, start scanning the next row.*
+
+If the findings of the row scan come back to only one screw/diamond in the row below, this makes things simple as it's guarenteed that we just have to keep moving left or right until we're above the screw/diamond, then move 1 space down. If the screw is to the right, the positioning of the screw (**counterx**) is guarenteed to be bigger than our position (**currentx**), so we subtract **currentx** from **counterx** to find the distance between. However, if it's to the left, we run a similar operation but this time with **currentx** and **counterx** reversed.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.7: Movement algorithm if there is only one screw in the row below.*
+
+While the algorithm is nearly complete, it's not done just yet. Figure 2.8 will be important to explain the next problem, so be sure to reference it in the coming description!
+
+Case 1 currently describes how Figure 2.6 works. If it's below, just move down one. We know this works as a fact.
+
+Case 2 currently describes how Figure 2.7 works. If there's only one screw below, just keep moving horizontally then move down one.
+
+Case 3 is where things get interesting. In the case of Case 3a, Case 2's algorithm is being used. Unfortunately, it makes an error here by only detecting the right-most screw, setting it off into an invalid course. Case 3 describes a potential problem that may occur if there is more than 1 screw in a row. As a result, we need our algorithm to look like Case 3b, which will correctly make a decision when there is more than 1 screw in a row.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.8: A drawing representation of the algorithm up until this point.*
+
+The algorithm in Figure 2.9 takes advantage of the fact that there will only ever be one screw underneath another screw at a time. As a result, the algorithm looks for the only connecting screw and leads the player to the correct position, fulfilling Case 3's requirements.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.9: Solving the Case 3 issue.*
+
+Finally, once the string has been completed for the grid, the algorithm will send it to the server. We'll keep on looping the algorithm infinitley as we're just waiting for the end of the algorithm to arrive.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 2.10: Finalizing the algorithm.*
+
+## Testing & End
+Finally, an attempt to run the algorithm shows it's successful and working the way we intended.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 3.0: A successful test of the algorithm.*
+
+After allowing the algorithm to run, it eventually proved successful leading to the discovery of the flag.
+
+![alt-text](https://github.com/0xETX/CTF-Writeups)
+
+*Figure 3.1: The end of the challenge, with the flag displayed!*

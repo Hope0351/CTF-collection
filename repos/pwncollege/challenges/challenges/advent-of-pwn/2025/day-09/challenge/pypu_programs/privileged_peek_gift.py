@@ -1,2 +1,0 @@
-import gifts
-print(gifts)

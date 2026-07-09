@@ -1,1 +1,0 @@
-Automate answering 20 Mandatory Access Control questions with categories in one second

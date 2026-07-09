@@ -1,1 +1,0 @@
-Requires you to understand their output to derive the flag from it!

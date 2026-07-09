@@ -1,1 +1,0 @@
-Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what if the sandbox is really sloppy?

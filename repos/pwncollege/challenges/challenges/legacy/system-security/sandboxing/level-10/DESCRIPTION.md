@@ -1,1 +1,0 @@
-Escape a chroot sandbox using shellcode, but this time only using the following syscalls: ["read", "exit"]. Note that "write" is disabled! You will need a creative way of extracting the flag data from your process!

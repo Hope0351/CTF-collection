@@ -22,29 +22,29 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 1 | [GitHub - sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 🐙 GitHub Repo | 1509 | Crypto, Hardware | 2013–2026 | Elite |
 | 2 | [daffainfo/ctf-writeup - GitHub](https://github.com/daffainfo/ctf-writeup) | 🐙 GitHub Repo | 188 | — | 2021–2024 | Varied |
 | 3 | [CTFtime.org / Writeups](https://ctftime.org/writeups) | 🏆 CTFtime | — | Misc, Blockchain | 2026–2026 | Elite |
-| 4 | [r3kapig/writeup: CTF challenges writeup - GitHub (local mirror)](../repos/r3kapig/writeup) | 🐙 GitHub Repo | 188 | Forensics, Crypto, Pwn | 2018–2022 | Varied |
-| 5 | [apsdehal/awesome-ctf: A curated list of CTF frameworks - Gi… (local mirror)](../repos/apsdehal/awesome-ctf) | 🐙 GitHub Repo | 11656 | Forensics, Crypto, Mobile | 2016–2016 | Beginner |
-| 6 | [blockthreat/blocksec-ctfs - GitHub (local mirror)](../repos/blockthreat/blocksec-ctfs) | 🐙 GitHub Repo | 1632 | Programming, Reverse Engineering, Crypto | 2017–2023 | Varied |
-| 7 | [A summary and solutions for 200+ CTF blockchain challenges … (local mirror)](../repos/minaminao/ctf-blockchain) | 🐙 GitHub Repo | 1084 | Programming, Crypto, OSINT | 2018–2025 | Elite |
-| 8 | [Hack The Box Writeups - The Ultimate HTB Resource - GitHub (local mirror)](../repos/momenbasel/htb-writeups) | 🐙 GitHub Repo | 152 | Forensics, Crypto, Mobile | 2017–2026 | Varied |
-| 9 | [orangetw/My-CTF-Web-Challenges - GitHub (local mirror)](../repos/orangetw/My-CTF-Web-Challenges) | 🐙 GitHub Repo | 2853 | Crypto, Cloud, Pwn | 2013–2025 | Varied |
+| 4 | [r3kapig/writeup: CTF challenges writeup - GitHub](../30-archetypes/mirrors/team-archives/writeup-r3kapig) | 🐙 GitHub Repo | 188 | Forensics, Crypto, Pwn | 2018–2022 | Varied |
+| 5 | [apsdehal/awesome-ctf: A curated list of CTF frameworks - Gi…](../30-archetypes/mirrors/awesome-lists/awesome-ctf) | 🐙 GitHub Repo | 11656 | Forensics, Crypto, Mobile | 2016–2016 | Beginner |
+| 6 | [blockthreat/blocksec-ctfs - GitHub](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 🐙 GitHub Repo | 1632 | Programming, Reverse Engineering, Crypto | 2017–2023 | Varied |
+| 7 | [A summary and solutions for 200+ CTF blockchain challenges …](../08-blockchain-web3/mirrors/ctf-blockchain) | 🐙 GitHub Repo | 1084 | Programming, Crypto, OSINT | 2018–2025 | Elite |
+| 8 | [Hack The Box Writeups - The Ultimate HTB Resource - GitHub](../20-events/mirrors/hackthebox/htb-writeups) | 🐙 GitHub Repo | 152 | Forensics, Crypto, Mobile | 2017–2026 | Varied |
+| 9 | [orangetw/My-CTF-Web-Challenges - GitHub](../02-web/mirrors/My-CTF-Web-Challenges) | 🐙 GitHub Repo | 2853 | Crypto, Cloud, Pwn | 2013–2025 | Varied |
 | 10 | [Beginner Friendly CTF Walkthrough - YouTube](https://www.youtube.com/watch?v=t_jMl7afitA) | ▶️ YouTube | — | — | n/a | Beginner |
 | 11 | [DEFCON 29 Red Team Village CTF Writeup: Supply Chain Attack](https://pberba.github.io/security/2021/08/10/defcon-29-redteamvillage-ctf) | 📝 Blog | — | — | n/a | Elite |
 | 12 | [Writeups | siunam's Website](https://siunam321.github.io/ctf) | 📝 Blog | — | — | n/a | Varied |
-| 13 | [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts e… (local mirror)](../repos/Crypto-Cat/CTF) | 🐙 GitHub Repo | 2512 | Forensics, Crypto, Mobile | 2026–2026 | Varied |
+| 13 | [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts e…](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 🐙 GitHub Repo | 2512 | Forensics, Crypto, Mobile | 2026–2026 | Varied |
 | 14 | [CTF writeups from P4 Team - GitHub](https://github.com/p4-team/ctf) | 🐙 GitHub Repo | 1844 | — | 2015–2023 | Elite |
-| 15 | [GitHub - xtiankisutsa/awesome-mobile-CTF (local mirror)](../repos/xtiankisutsa/awesome-mobile-ctf) | 🐙 GitHub Repo | 1157 | Forensics, Crypto, Mobile | 2013–2022 | Varied |
+| 15 | [GitHub - xtiankisutsa/awesome-mobile-CTF](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 🐙 GitHub Repo | 1157 | Forensics, Crypto, Mobile | 2013–2022 | Varied |
 | 16 | [GitHub - Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Fil…](https://github.com/Adamkadaban/CTFs) | 🐙 GitHub Repo | 840 | Programming, Forensics, Crypto | 2018–2024 | Varied |
-| 17 | [GitHub - sajjadium/ctf-writeups (local mirror)](../repos/sajjadium/ctf-writeups) | 🐙 GitHub Repo | 227 | Web | 2017–2019 | Varied |
+| 17 | [GitHub - sajjadium/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-sajjadium) | 🐙 GitHub Repo | 227 | Web | 2017–2019 | Varied |
 | 18 | [Files + Solutions for DownUnderCTF 2025 Challenges - GitHub](https://github.com/DownUnderCTF/Challenges_2025_Public) | 🐙 GitHub Repo | 110 | — | 2025–2025 | Varied |
 | 19 | [Kasimir123/CTFWriteUps: Collection of CTF Writeups for - Gi…](https://github.com/Kasimir123/CTFWriteUps) | 🐙 GitHub Repo | 61 | Forensics, Crypto, Stego | 2021–2021 | Varied |
-| 20 | [CTF Writeups - GitHub (local mirror)](../repos/tim-barc/ctf_writeups) | 🐙 GitHub Repo | 43 | Forensics, Mobile, Reverse Engineering | 2019–2025 | Varied |
-| 21 | [ashutosh1206/Crypto-CTF-Writeups - GitHub (local mirror)](../repos/ashutosh1206/Crypto-CTF-Writeups) | 🐙 GitHub Repo | 42 | Crypto | n/a | Varied |
-| 22 | [Yet another CTF writeups repository. PWN and RE tasks - Git… (local mirror)](../repos/merrychap/ctf-writeups) | 🐙 GitHub Repo | 36 | Pwn, Reverse Engineering, Forensics | n/a | Varied |
+| 20 | [CTF Writeups - GitHub](../30-archetypes/mirrors/personal-collections/ctf_writeups-tim-barc) | 🐙 GitHub Repo | 43 | Forensics, Mobile, Reverse Engineering | 2019–2025 | Varied |
+| 21 | [ashutosh1206/Crypto-CTF-Writeups - GitHub](../03-crypto/mirrors/Crypto-CTF-Writeups) | 🐙 GitHub Repo | 42 | Crypto | n/a | Varied |
+| 22 | [Yet another CTF writeups repository. PWN and RE tasks - Git…](../30-archetypes/mirrors/personal-collections/ctf-writeups-merrychap) | 🐙 GitHub Repo | 36 | Pwn, Reverse Engineering, Forensics | n/a | Varied |
 | 23 | [Tan-JunWei/CTF-Writeups - GitHub](https://github.com/Tan-JunWei/CTF-Writeups) | 🐙 GitHub Repo | 15 | Web, OSINT, Forensics | n/a | Varied |
 | 24 | [SandWithCheese/ctf-writeups - GitHub](https://github.com/SandWithCheese/ctf-writeups) | 🐙 GitHub Repo | 14 | Reverse Engineering | n/a | Beginner |
-| 25 | [Web3 CTF Write-ups ‍☠️ - Smart Contract Security Challenges… (local mirror)](../repos/AshiqAhamed17/web3-ctf-writeups) | 🐙 GitHub Repo | 11 | Blockchain | n/a | Varied |
-| 26 | [tl2cents/CTF-Writeups - GitHub (local mirror)](../repos/tl2cents/CTF-Writeups) | 🐙 GitHub Repo | 5 | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Varied |
+| 25 | [Web3 CTF Write-ups ‍☠️ - Smart Contract Security Challenges…](../08-blockchain-web3/mirrors/web3-ctf-writeups) | 🐙 GitHub Repo | 11 | Blockchain | n/a | Varied |
+| 26 | [tl2cents/CTF-Writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTF-Writeups-tl2cents) | 🐙 GitHub Repo | 5 | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Varied |
 | 27 | [DownUnderCTF 2025 Write-up. My first write-up on a CTF chal…](https://kushagr17.medium.com/downunderctf-2025-write-up-a648335f5a58) | ✍️ Medium | — | Misc | 2025–2025 | Varied |
 | 28 | [0xdf hacks stuff | CTF solutions, malware analysis, home lab](https://0xdf.gitlab.io) | 📝 Blog | — | — | 2024–2024 | Intermediate |
 | 29 | [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Crac…](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) | ✍️ Medium | — | Crypto | n/a | Beginner |
@@ -64,110 +64,110 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 43 | [A Guide for Solving Beginner CTF Challenges [INTIGRITI - Yo…](https://www.youtube.com/watch?v=CsyQFzTJ09w) | ▶️ YouTube | — | — | 2023–2023 | Beginner |
 | 44 | [CTFtime.org / DiceCTF 2024 Quals / dicedicegoose / Writeup](https://ctftime.org/writeup/38611) | 🏆 CTFtime | — | — | 2024–2024 | Elite |
 | 45 | [Pwn Challenges CTF 2025 [binary Exploiation] | by livepwn -…](https://livepwn.medium.com/pwn-challenges-ctf-2025-binary-exploiation-c0ce691b9451) | ✍️ Medium | — | Pwn | 2025–2025 | Beginner |
-| 46 | [JohnHammond/ctf-katana: This repository aims to hold - GitH… (local mirror)](../repos/JohnHammond/ctf-katana) | 🐙 GitHub Repo | 2920 | Programming, Forensics, Crypto | 2015–2020 | Varied |
-| 47 | [hackthebox/cyber-apocalypse-2025: Official writeups for - G… (local mirror)](../repos/hackthebox/cyber-apocalypse-2025) | 🐙 GitHub Repo | 200 | Forensics, Crypto, Reverse Engineering | 2025–2025 | Intermediate |
+| 46 | [JohnHammond/ctf-katana: This repository aims to hold - GitH…](../30-archetypes/mirrors/awesome-lists/ctf-katana) | 🐙 GitHub Repo | 2920 | Programming, Forensics, Crypto | 2015–2020 | Varied |
+| 47 | [hackthebox/cyber-apocalypse-2025: Official writeups for - G…](../20-events/mirrors/hackthebox/cyber-apocalypse-2025) | 🐙 GitHub Repo | 200 | Forensics, Crypto, Reverse Engineering | 2025–2025 | Intermediate |
 | 48 | [Actions · dicegang/dicectf-quals-2024 - GitHub](https://github.com/dicegang/dicectf-quals-2024-challenges) | 🐙 GitHub Repo | 30 | Crypto, Reverse Engineering, Pwn | 2024–2024 | Elite |
 | 49 | [HackTricks - GitHub](https://github.com/HackTricks-wiki/hacktricks) | 🐙 GitHub Repo | 11783 | — | n/a | Varied |
 | 50 | [Google CTF - GitHub](https://github.com/google/google-ctf) | 🐙 GitHub Repo | 4976 | — | 2017–2017 | Elite |
-| 51 | [DominicBreuker/stego-toolkit: Collection of steganography t… (local mirror)](../repos/dominicbreuker/stego-toolkit) | 🐙 GitHub Repo | 2675 | Stego, Forensics, Hardware | n/a | Intermediate |
-| 52 | [fkie-cad/awesome-embedded-and-iot-security - GitHub (local mirror)](../repos/fkie-cad/awesome-embedded-and-iot-security) | 🐙 GitHub Repo | 2349 | Programming, Crypto, Reverse Engineering | 2013–2020 | Varied |
+| 51 | [DominicBreuker/stego-toolkit: Collection of steganography t…](../40-tooling/mirrors/forensics-tools/stego-toolkit) | 🐙 GitHub Repo | 2675 | Stego, Forensics, Hardware | n/a | Intermediate |
+| 52 | [fkie-cad/awesome-embedded-and-iot-security - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-embedded-and-iot-security) | 🐙 GitHub Repo | 2349 | Programming, Crypto, Reverse Engineering | 2013–2020 | Varied |
 | 53 | [Hackplayers/hackthebox-writeups - GitHub](https://github.com/hackplayers/hackthebox-writeups) | 🐙 GitHub Repo | 2044 | Forensics, Crypto, Mobile | 2017–2023 | Intermediate |
 | 54 | [CTF Resources - GitHub](https://github.com/ctfs/resources) | 🐙 GitHub Repo | 1819 | Reverse Engineering | n/a | Beginner |
-| 55 | [Katana - Automatic CTF Challenge Solver in Python3 - GitHub (local mirror)](../repos/JohnHammond/katana) | 🐙 GitHub Repo | 1359 | Crypto, Mobile, Stego | 2019–2019 | Varied |
-| 56 | [GitHub - pwning/public-writeup: CTF write-ups by Plaid Parl… (local mirror)](../repos/pwning/public-writeup) | 🐙 GitHub Repo | 808 | — | n/a | Varied |
-| 57 | [GitHub - devploit/awesome-ctf-resources (local mirror)](../repos/devploit/awesome-ctf-resources) | 🐙 GitHub Repo | 777 | Programming, Forensics, Crypto | 2015–2015 | Varied |
-| 58 | [ByteSnipers/awesome-pentest-cheat - GitHub (local mirror)](../repos/ByteSnipers/awesome-pentest-cheat-sheets) | 🐙 GitHub Repo | 660 | — | n/a | Varied |
-| 59 | [GitHub - j00ru/ctf-tasks: An archive of low-level CTF chall… (local mirror)](../repos/j00ru/ctf-tasks) | 🐙 GitHub Repo | 656 | Programming, Reverse Engineering, Crypto | 2013–2021 | Varied |
+| 55 | [Katana - Automatic CTF Challenge Solver in Python3 - GitHub](../40-tooling/mirrors/misc-tools/katana) | 🐙 GitHub Repo | 1359 | Crypto, Mobile, Stego | 2019–2019 | Varied |
+| 56 | [GitHub - pwning/public-writeup: CTF write-ups by Plaid Parl…](../30-archetypes/mirrors/team-archives/public-writeup-pwning) | 🐙 GitHub Repo | 808 | — | n/a | Varied |
+| 57 | [GitHub - devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 🐙 GitHub Repo | 777 | Programming, Forensics, Crypto | 2015–2015 | Varied |
+| 58 | [ByteSnipers/awesome-pentest-cheat - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-pentest-cheat-sheets) | 🐙 GitHub Repo | 660 | — | n/a | Varied |
+| 59 | [GitHub - j00ru/ctf-tasks: An archive of low-level CTF chall…](../30-archetypes/mirrors/personal-collections/ctf-tasks-j00ru) | 🐙 GitHub Repo | 656 | Programming, Reverse Engineering, Crypto | 2013–2021 | Varied |
 | 60 | [GitHub - david942j/ctf-writeups: Collection of scripts and …](https://github.com/david942j/ctf-writeups) | 🐙 GitHub Repo | 322 | Crypto, Mobile, Stego | 2016–2021 | Varied |
 | 61 | [Files + Writeups for DownUnderCTF 2022 Challenges - GitHub](https://github.com/DownUnderCTF/Challenges_2022_Public) | 🐙 GitHub Repo | 248 | — | 2022–2022 | Intermediate |
-| 62 | [LiveOverflow/pwn_docker_example: Example pwnable challenge … (local mirror)](../repos/LiveOverflow/pwn_docker_example) | 🐙 GitHub Repo | 230 | Pwn | n/a | Varied |
-| 63 | [LiveOverflow/ctf-screenshotter: a CTF web challenge about -… (local mirror)](../repos/LiveOverflow/ctf-screenshotter) | 🐙 GitHub Repo | 224 | Web | n/a | Varied |
-| 64 | [GitHub - neutrinoguy/awesome-ics-writeups (local mirror)](../repos/neutrinoguy/awesome-ics-writeups) | 🐙 GitHub Repo | 201 | Forensics, Crypto, ICS/SCADA | 2013–2025 | Varied |
+| 62 | [LiveOverflow/pwn_docker_example: Example pwnable challenge …](../01-pwn/mirrors/pwn_docker_example) | 🐙 GitHub Repo | 230 | Pwn | n/a | Varied |
+| 63 | [LiveOverflow/ctf-screenshotter: a CTF web challenge about -…](../40-tooling/mirrors/misc-tools/ctf-screenshotter) | 🐙 GitHub Repo | 224 | Web | n/a | Varied |
+| 64 | [GitHub - neutrinoguy/awesome-ics-writeups](../30-archetypes/mirrors/awesome-lists/awesome-ics-writeups) | 🐙 GitHub Repo | 201 | Forensics, Crypto, ICS/SCADA | 2013–2025 | Varied |
 | 65 | [Writeups for the challenges from DownUnderCTF 2021 - GitHub](https://github.com/DownUnderCTF/Challenges_2021_public) | 🐙 GitHub Repo | 181 | — | 2021–2021 | Varied |
-| 66 | [CryptoHack CTF Archive - GitHub (local mirror)](../repos/cryptohack/ctf_archive) | 🐙 GitHub Repo | 147 | Crypto | n/a | Varied |
-| 67 | [project-sekai-ctf/sekaictf-2025: Official source code and w… (local mirror)](../repos/project-sekai-ctf/sekaictf-2025) | 🐙 GitHub Repo | 135 | Crypto, Reverse Engineering, Pwn | 2024–2025 | Advanced |
-| 68 | [theori-io/ctf: writeup from some ctfs - GitHub (local mirror)](../repos/theori-io/ctf) | 🐙 GitHub Repo | 133 | — | 2020–2025 | Elite |
-| 69 | [GitHub - PumpkingWok/CTFGym: List of CTF related to Ethereu… (local mirror)](../repos/PumpkingWok/CTFGym) | 🐙 GitHub Repo | 121 | Blockchain | 2018–2022 | Varied |
-| 70 | [phith0n/realworldctf: My Real World CTF challenges - GitHub (local mirror)](../repos/phith0n/realworldctf) | 🐙 GitHub Repo | 115 | — | 2018–2019 | Elite |
-| 71 | [More than 250 writeups for picoCTF challenges - GitHub (local mirror)](../repos/Cajac/picoCTF-Writeups) | 🐙 GitHub Repo | 109 | Web | 2019–2026 | Beginner |
-| 72 | [ByteBandits/writeups: Wiki-like CTF write-ups repository by… (local mirror)](../repos/bytebandits/writeups) | 🐙 GitHub Repo | 104 | — | 2015–2015 | Varied |
-| 73 | [LazyTitan33/CTF-Writeups - GitHub (local mirror)](../repos/LazyTitan33/CTF-Writeups) | 🐙 GitHub Repo | 100 | — | 2022–2024 | Varied |
+| 66 | [CryptoHack CTF Archive - GitHub](../03-crypto/mirrors/cryptohack-archive) | 🐙 GitHub Repo | 147 | Crypto | n/a | Varied |
+| 67 | [project-sekai-ctf/sekaictf-2025: Official source code and w…](../20-events/mirrors/sekaictf/sekaictf-2025) | 🐙 GitHub Repo | 135 | Crypto, Reverse Engineering, Pwn | 2024–2025 | Advanced |
+| 68 | [theori-io/ctf: writeup from some ctfs - GitHub](../30-archetypes/mirrors/team-archives/ctf-theori-io) | 🐙 GitHub Repo | 133 | — | 2020–2025 | Elite |
+| 69 | [GitHub - PumpkingWok/CTFGym: List of CTF related to Ethereu…](../30-archetypes/mirrors/practice-platforms/CTFGym) | 🐙 GitHub Repo | 121 | Blockchain | 2018–2022 | Varied |
+| 70 | [phith0n/realworldctf: My Real World CTF challenges - GitHub](../20-events/mirrors/realworldctf/realworldctf-phith0n) | 🐙 GitHub Repo | 115 | — | 2018–2019 | Elite |
+| 71 | [More than 250 writeups for picoCTF challenges - GitHub](../20-events/mirrors/picoctf/picoCTF-Writeups-Cajac) | 🐙 GitHub Repo | 109 | Web | 2019–2026 | Beginner |
+| 72 | [ByteBandits/writeups: Wiki-like CTF write-ups repository by…](../30-archetypes/mirrors/team-archives/writeups-bytebandits) | 🐙 GitHub Repo | 104 | — | 2015–2015 | Varied |
+| 73 | [LazyTitan33/CTF-Writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTF-Writeups-LazyTitan33) | 🐙 GitHub Repo | 100 | — | 2022–2024 | Varied |
 | 74 | [justcatthefish/ctf-writeups: CTF write-ups - GitHub](https://github.com/justcatthefish/ctf-writeups) | 🐙 GitHub Repo | 100 | — | 2022–2022 | Advanced |
-| 75 | [GitHub - chaitin/Real-World-CTF-3rd (local mirror)](../repos/chaitin/Real-World-CTF-3rd-Challenge-Attachments) | 🐙 GitHub Repo | 90 | — | n/a | Elite |
-| 76 | [GitHub - JohnHammond/miscellaneous (local mirror)](../repos/JohnHammond/miscellaneous) | 🐙 GitHub Repo | 84 | Programming, Forensics, Crypto | 2013–2016 | Varied |
-| 77 | [arkark/my-ctf-challenges - GitHub (local mirror)](../repos/arkark/my-ctf-challenges) | 🐙 GitHub Repo | 84 | Web, Misc | 2021–2025 | Varied |
-| 78 | [rkm0959/CTFWriteups: Cryptography & CTF Writeups - GitHub (local mirror)](../repos/rkm0959/CTFWriteups) | 🐙 GitHub Repo | 83 | Crypto | n/a | Varied |
+| 75 | [GitHub - chaitin/Real-World-CTF-3rd](../20-events/mirrors/realworldctf/RWCTF-3rd-Challenges) | 🐙 GitHub Repo | 90 | — | n/a | Elite |
+| 76 | [GitHub - JohnHammond/miscellaneous](../07-misc/mirrors/miscellaneous) | 🐙 GitHub Repo | 84 | Programming, Forensics, Crypto | 2013–2016 | Varied |
+| 77 | [arkark/my-ctf-challenges - GitHub](../30-archetypes/mirrors/event-organizer-sources/my-ctf-challenges-arkark) | 🐙 GitHub Repo | 84 | Web, Misc | 2021–2025 | Varied |
+| 78 | [rkm0959/CTFWriteups: Cryptography & CTF Writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTFWriteups-rkm0959) | 🐙 GitHub Repo | 83 | Crypto | n/a | Varied |
 | 79 | [project-sekai-ctf/sekaictf-2024: Official source code and w…](https://github.com/project-sekai-ctf/sekaictf-2024) | 🐙 GitHub Repo | 83 | Crypto, Reverse Engineering, Pwn | 2024–2024 | Advanced |
-| 80 | [meta repository for ctftime.org issues, feature-requests et… (local mirror)](../repos/ctftime/ctftime.org) | 🐙 GitHub Repo | 78 | — | n/a | Varied |
+| 80 | [meta repository for ctftime.org issues, feature-requests et…](../30-archetypes/mirrors/practice-platforms/ctftime.org) | 🐙 GitHub Repo | 78 | — | n/a | Varied |
 | 81 | [Nautilus-Institute/quals-2024: Source code for the DEF CON …](https://github.com/Nautilus-Institute/quals-2024) | 🐙 GitHub Repo | 76 | — | 2024–2024 | Elite |
 | 82 | [mephi42/ctf: My solutions for CTF challenges - GitHub](https://github.com/mephi42/ctf) | 🐙 GitHub Repo | 76 | Pwn, Reverse Engineering, Misc | 2019–2024 | Varied |
-| 83 | [Official Writeups for HackTheBox Business CTF 2025 - GitHub (local mirror)](../repos/hackthebox/business-ctf-2025) | 🐙 GitHub Repo | 69 | Blockchain, ICS/SCADA | 2025–2025 | Intermediate |
-| 84 | [A curated list of hardware-oriented CTF challenges. · GitHub (local mirror)](../repos/iamABH/awesome-hardware-ctf) | 🐙 GitHub Repo | 65 | Web, Misc, Hardware | n/a | Varied |
-| 85 | [PwnLand - GitHub (local mirror)](../repos/D4mianWayne/PwnLand) | 🐙 GitHub Repo | 62 | Pwn, Reverse Engineering, Programming | 2020–2025 | Varied |
-| 86 | [GitHub - chaitin/Real-World-CTF-5th (local mirror)](../repos/chaitin/Real-World-CTF-5th-Challenges) | 🐙 GitHub Repo | 59 | — | n/a | Elite |
-| 87 | [picoCTF-2024-Writeup - GitHub (local mirror)](../repos/noamgariani11/picoCTF-2024-Writeup) | 🐙 GitHub Repo | 57 | Web, Reverse Engineering, Crypto | 2024–2024 | Beginner |
-| 88 | [pwncollege/linux-luminarium - GitHub (local mirror)](../repos/pwncollege/linux-luminarium) | 🐙 GitHub Repo | 52 | Pwn | n/a | Beginner |
-| 89 | [kayranfatih/awesome-iot-and-hardware-security - GitHub (local mirror)](../repos/kayranfatih/awesome-iot-and-hardware-security) | 🐙 GitHub Repo | 46 | Forensics, Crypto, ICS/SCADA | 2015–2026 | Varied |
+| 83 | [Official Writeups for HackTheBox Business CTF 2025 - GitHub](../20-events/mirrors/hackthebox/business-ctf-2025) | 🐙 GitHub Repo | 69 | Blockchain, ICS/SCADA | 2025–2025 | Intermediate |
+| 84 | [A curated list of hardware-oriented CTF challenges. · GitHub](../30-archetypes/mirrors/awesome-lists/awesome-hardware-ctf) | 🐙 GitHub Repo | 65 | Web, Misc, Hardware | n/a | Varied |
+| 85 | [PwnLand - GitHub](../01-pwn/mirrors/PwnLand) | 🐙 GitHub Repo | 62 | Pwn, Reverse Engineering, Programming | 2020–2025 | Varied |
+| 86 | [GitHub - chaitin/Real-World-CTF-5th](../20-events/mirrors/realworldctf/RWCTF-5th-Challenges) | 🐙 GitHub Repo | 59 | — | n/a | Elite |
+| 87 | [picoCTF-2024-Writeup - GitHub](../20-events/mirrors/picoctf/picoCTF-2024-Writeup) | 🐙 GitHub Repo | 57 | Web, Reverse Engineering, Crypto | 2024–2024 | Beginner |
+| 88 | [pwncollege/linux-luminarium - GitHub](../20-events/mirrors/pwn-college/linux-luminarium) | 🐙 GitHub Repo | 52 | Pwn | n/a | Beginner |
+| 89 | [kayranfatih/awesome-iot-and-hardware-security - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-iot-and-hardware-security) | 🐙 GitHub Repo | 46 | Forensics, Crypto, ICS/SCADA | 2015–2026 | Varied |
 | 90 | [GitHub - sigpwny/UIUCTF-2023-Public: Challenge source code](https://github.com/sigpwny/UIUCTF-2023-Public) | 🐙 GitHub Repo | 39 | Pwn, Web, Cloud | 2023–2023 | Varied |
 | 91 | [GitHub - Crusaders-of-Rust/corCTF-2022](https://github.com/Crusaders-of-Rust/corCTF-2022-public-challenge-archive) | 🐙 GitHub Repo | 37 | — | 2022–2022 | Advanced |
-| 92 | [m3ssap0/CTF-Writeups - GitHub (local mirror)](../repos/m3ssap0/CTF-Writeups) | 🐙 GitHub Repo | 35 | — | 2018–2021 | Elite |
+| 92 | [m3ssap0/CTF-Writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTF-Writeups-m3ssap0) | 🐙 GitHub Repo | 35 | — | 2018–2021 | Elite |
 | 93 | [1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering](https://github.com/1GN1tE/CTF_Writeups) | 🐙 GitHub Repo | 35 | Reverse Engineering, Crypto, Mobile | 2017–2021 | Varied |
-| 94 | [LiveOverflow/ctf-cryptowaf - GitHub (local mirror)](../repos/LiveOverflow/ctf-cryptowaf) | 🐙 GitHub Repo | 34 | Web | n/a | Varied |
-| 95 | [GitHub - JohnHammond/misfortune-ctf (local mirror)](../repos/JohnHammond/misfortune-ctf-challenge) | 🐙 GitHub Repo | 34 | Pwn | 2023–2023 | Varied |
-| 96 | [pwncollege/challenges: pwn.college challenges - GitHub (local mirror)](../repos/pwncollege/challenges) | 🐙 GitHub Repo | 33 | Pwn, Web, Reverse Engineering | n/a | Beginner |
-| 97 | [Nautilus-Institute/finals-2025: Source code for the DEF CON… (local mirror)](../repos/nautilus-institute/finals-2025) | 🐙 GitHub Repo | 32 | — | 2025–2025 | Elite |
+| 94 | [LiveOverflow/ctf-cryptowaf - GitHub](../02-web/mirrors/ctf-cryptowaf) | 🐙 GitHub Repo | 34 | Web | n/a | Varied |
+| 95 | [GitHub - JohnHammond/misfortune-ctf](../07-misc/mirrors/misfortune-ctf-challenge) | 🐙 GitHub Repo | 34 | Pwn | 2023–2023 | Varied |
+| 96 | [pwncollege/challenges: pwn.college challenges - GitHub](../20-events/mirrors/pwn-college/challenges) | 🐙 GitHub Repo | 33 | Pwn, Web, Reverse Engineering | n/a | Beginner |
+| 97 | [Nautilus-Institute/finals-2025: Source code for the DEF CON…](../20-events/mirrors/def-con-ctf/DEFCON-finals-2025) | 🐙 GitHub Repo | 32 | — | 2025–2025 | Elite |
 | 98 | [osirislab/CSAW-CTF-2023-Quals - GitHub](https://github.com/osirislab/CSAW-CTF-2023-Quals) | 🐙 GitHub Repo | 31 | — | 2023–2023 | Elite |
 | 99 | [siunam321/CTF-Writeups: All of my writeups will be here. - …](https://github.com/siunam321/CTF-Writeups) | 🐙 GitHub Repo | 28 | — | n/a | Varied |
-| 100 | [Sudoite/ctf-writeups: Writeups for various CTF challenges -… (local mirror)](../repos/Sudoite/ctf-writeups) | 🐙 GitHub Repo | 27 | Programming, Forensics, Crypto | 2016–2019 | Varied |
-| 101 | [CYBAR OSINT CTF 2020 - GitHub (local mirror)](../repos/cybar-party/cybar-osint-ctf-2020) | 🐙 GitHub Repo | 24 | OSINT | 2020–2020 | Varied |
-| 102 | [LiveCTF challenges and infrastructure at DEFCON 32 CTF - Gi… (local mirror)](../repos/Live-CTF/LiveCTF-DEFCON32) | 🐙 GitHub Repo | 23 | — | 2024–2024 | Elite |
+| 100 | [Sudoite/ctf-writeups: Writeups for various CTF challenges -…](../30-archetypes/mirrors/personal-collections/ctf-writeups-Sudoite) | 🐙 GitHub Repo | 27 | Programming, Forensics, Crypto | 2016–2019 | Varied |
+| 101 | [CYBAR OSINT CTF 2020 - GitHub](../06-osint/mirrors/cybar-osint-ctf-2020) | 🐙 GitHub Repo | 24 | OSINT | 2020–2020 | Varied |
+| 102 | [LiveCTF challenges and infrastructure at DEFCON 32 CTF - Gi…](../20-events/mirrors/def-con-ctf/LiveCTF-DEFCON32) | 🐙 GitHub Repo | 23 | — | 2024–2024 | Elite |
 | 103 | [justCTF 2023 challenges sources - GitHub](https://github.com/justcatthefish/justctf-2023) | 🐙 GitHub Repo | 21 | Crypto, Reverse Engineering, Cloud | 2023–2023 | Elite |
-| 104 | [ory/defcon-30-ctf - GitHub (local mirror)](../repos/ory/defcon-30-ctf) | 🐙 GitHub Repo | 19 | — | n/a | Elite |
-| 105 | [CyberNilsen/hacker101-CTF-Solutions - GitHub (local mirror)](../repos/CyberNilsen/hacker101-CTF-Solutions) | 🐙 GitHub Repo | 18 | Web | n/a | Varied |
+| 104 | [ory/defcon-30-ctf - GitHub](../20-events/mirrors/def-con-ctf/defcon-30-ctf) | 🐙 GitHub Repo | 19 | — | n/a | Elite |
+| 105 | [CyberNilsen/hacker101-CTF-Solutions - GitHub](../20-events/mirrors/hacker101/hacker101-CTF-Solutions) | 🐙 GitHub Repo | 18 | Web | n/a | Varied |
 | 106 | [Security Innovation Smart Contract CTF - GitHub](https://github.com/SecurityInnovation/Smart-Contract-CTF) | 🐙 GitHub Repo | 17 | Crypto, Blockchain | 2022–2022 | Varied |
-| 107 | [DeFiHackLabs/hitcon-ctf-2024-writeup - GitHub (local mirror)](../repos/DeFiHackLabs/hitcon-ctf-2024-writeup) | 🐙 GitHub Repo | 17 | Blockchain | 2024–2024 | Advanced |
+| 107 | [DeFiHackLabs/hitcon-ctf-2024-writeup - GitHub](../08-blockchain-web3/mirrors/hitcon-ctf-2024-writeup) | 🐙 GitHub Repo | 17 | Blockchain | 2024–2024 | Advanced |
 | 108 | [Crusaders-of-Rust/corctf-2024-public - GitHub](https://github.com/Crusaders-of-Rust/corctf-2024-public-challenge-repo) | 🐙 GitHub Repo | 16 | — | 2024–2024 | Advanced |
-| 109 | [TryHackMe Journey - Notes, Challenges & Writeups from the P… (local mirror)](../repos/ShubhamJagtap2000/TryHackMe-THM) | 🐙 GitHub Repo | 15 | Web | n/a | Beginner |
-| 110 | [gijsh/rhme2_writeups: Writeups for the RHME2 CTF - GitHub (local mirror)](../repos/gijsh/rhme2_writeups) | 🐙 GitHub Repo | 14 | Reverse Engineering, Misc, Crypto | 2016–2017 | Varied |
-| 111 | [SECCON/SECCON13_online_CTF - GitHub (local mirror)](../repos/SECCON/SECCON13_online_CTF) | 🐙 GitHub Repo | 12 | — | 2024–2024 | Advanced |
-| 112 | [The-Debarghya/TryHackMe-Writeups - GitHub (local mirror)](../repos/The-Debarghya/TryHackMe-Writeups) | 🐙 GitHub Repo | 11 | — | n/a | Beginner |
+| 109 | [TryHackMe Journey - Notes, Challenges & Writeups from the P…](../20-events/mirrors/tryhackme/TryHackMe-THM) | 🐙 GitHub Repo | 15 | Web | n/a | Beginner |
+| 110 | [gijsh/rhme2_writeups: Writeups for the RHME2 CTF - GitHub](../10-hardware-iot/mirrors/rhme2-writeups) | 🐙 GitHub Repo | 14 | Reverse Engineering, Misc, Crypto | 2016–2017 | Varied |
+| 111 | [SECCON/SECCON13_online_CTF - GitHub](../20-events/mirrors/seccon-ctf/SECCON13-online-CTF) | 🐙 GitHub Repo | 12 | — | 2024–2024 | Advanced |
+| 112 | [The-Debarghya/TryHackMe-Writeups - GitHub](../20-events/mirrors/tryhackme/TryHackMe-Writeups) | 🐙 GitHub Repo | 11 | — | n/a | Beginner |
 | 113 | [osirislab/CSAW-CTF-2024-Quals - GitHub](https://github.com/osirislab/CSAW-CTF-2024-Quals) | 🐙 GitHub Repo | 11 | — | 2024–2024 | Elite |
 | 114 | [RasyidMF/ctf-writeup - GitHub](https://github.com/RasyidMF/ctf-writeup) | 🐙 GitHub Repo | 10 | — | n/a | Varied |
-| 115 | [Ayoub-2/CTF-Writeup - GitHub (local mirror)](../repos/Ayoub-2/CTF-Writeup) | 🐙 GitHub Repo | 10 | Web, Misc | 2022–2022 | Varied |
-| 116 | [picoCTF_writeup (Webshell-Only) - GitHub (local mirror)](../repos/whiteSHADOW1234/picoCTF_writeup) | 🐙 GitHub Repo | 9 | Web, Reverse Engineering | n/a | Beginner |
+| 115 | [Ayoub-2/CTF-Writeup - GitHub](../30-archetypes/mirrors/personal-collections/CTF-Writeup-Ayoub) | 🐙 GitHub Repo | 10 | Web, Misc | 2022–2022 | Varied |
+| 116 | [picoCTF_writeup (Webshell-Only) - GitHub](../20-events/mirrors/picoctf/picoCTF_writeup) | 🐙 GitHub Repo | 9 | Web, Reverse Engineering | n/a | Beginner |
 | 117 | [DiceCTF Quals 2025 Challenges - GitHub](https://github.com/dicegang/dicectf-quals-2025-challenges) | 🐙 GitHub Repo | 9 | Crypto, Reverse Engineering, Pwn | 2025–2025 | Elite |
 | 118 | [justcatthefish/justctf-2025 - GitHub](https://github.com/justcatthefish/justctf-2025) | 🐙 GitHub Repo | 9 | Crypto, Reverse Engineering, Pwn | 2025–2025 | Elite |
-| 119 | [CUCTF/ctf-writeups: Collection of CTF challenge solutions a… (local mirror)](../repos/CUCTF/ctf-writeups) | 🐙 GitHub Repo | 8 | Pwn, Reverse Engineering, Crypto | 2022–2022 | Varied |
+| 119 | [CUCTF/ctf-writeups: Collection of CTF challenge solutions a…](../30-archetypes/mirrors/team-archives/ctf-writeups-CUCTF) | 🐙 GitHub Repo | 8 | Pwn, Reverse Engineering, Crypto | 2022–2022 | Varied |
 | 120 | [Crusaders-of-Rust/corctf-2025-public - GitHub](https://github.com/Crusaders-of-Rust/corctf-2025-public-challenge-repo) | 🐙 GitHub Repo | 7 | — | 2025–2025 | Advanced |
-| 121 | [docfate111/binary_exploitation: CTF/hacking challenge - Git… (local mirror)](../repos/docfate111/binary_exploitation) | 🐙 GitHub Repo | 7 | Pwn, Reverse Engineering, Hardware | n/a | Varied |
-| 122 | [SECCON/SECCON_Beginners_CTF_2024 - GitHub (local mirror)](../repos/SECCON/SECCON_Beginners_CTF_2024) | 🐙 GitHub Repo | 7 | — | 2024–2024 | Beginner |
-| 123 | [hagronnestad/ctf-htb-cyber-apocalypse-2024: CTF Writeups - … (local mirror)](../repos/hagronnestad/ctf-htb-cyber-apocalypse-2024) | 🐙 GitHub Repo | 6 | Forensics, Crypto, Reverse Engineering | 2024–2024 | Intermediate |
-| 124 | [mbiesiad/ctf-writeups - GitHub (local mirror)](../repos/mbiesiad/ctf-writeups) | 🐙 GitHub Repo | 6 | Forensics, Crypto, Mobile | 2021–2025 | Varied |
+| 121 | [docfate111/binary_exploitation: CTF/hacking challenge - Git…](../01-pwn/mirrors/binary_exploitation) | 🐙 GitHub Repo | 7 | Pwn, Reverse Engineering, Hardware | n/a | Varied |
+| 122 | [SECCON/SECCON_Beginners_CTF_2024 - GitHub](../20-events/mirrors/seccon-ctf/SECCON-Beginners-CTF-2024) | 🐙 GitHub Repo | 7 | — | 2024–2024 | Beginner |
+| 123 | [hagronnestad/ctf-htb-cyber-apocalypse-2024: CTF Writeups - …](../20-events/mirrors/hackthebox/cyber-apocalypse-2024) | 🐙 GitHub Repo | 6 | Forensics, Crypto, Reverse Engineering | 2024–2024 | Intermediate |
+| 124 | [mbiesiad/ctf-writeups - GitHub](../30-archetypes/mirrors/personal-collections/ctf-writeups-mbiesiad) | 🐙 GitHub Repo | 6 | Forensics, Crypto, Mobile | 2021–2025 | Varied |
 | 125 | [SECCON/SECCON13_final_CTF - GitHub](https://github.com/SECCON/SECCON13_final_CTF) | 🐙 GitHub Repo | 6 | — | n/a | Advanced |
 | 126 | [CSAW-CTF-2022-Final-WriteUps - GitHub](https://github.com/osirislab/CSAW-CTF-2022-Final-WriteUps) | 🐙 GitHub Repo | 6 | Pwn, Reverse Engineering | 2022–2022 | Advanced |
-| 127 | [cHo0s3N/JustCTF - GitHub (local mirror)](../repos/cHo0s3N/JustCTF) | 🐙 GitHub Repo | 6 | Stego, Forensics, Crypto | 2019–2019 | Elite |
+| 127 | [cHo0s3N/JustCTF - GitHub](../20-events/mirrors/justctf/JustCTF) | 🐙 GitHub Repo | 6 | Stego, Forensics, Crypto | 2019–2019 | Elite |
 | 128 | [Writeups from the Google CTF 2021 Beginners Quest · GitHub](https://github.com/MartinPetkov/GCTF2021BeginnersQuestWriteups) | 🐙 GitHub Repo | 5 | Programming, Stego, Reverse Engineering | 2021–2021 | Beginner |
-| 129 | [GitHub - FarhadAlimohammadi-dir/Google (local mirror)](../repos/FarhadAlimohammadi-dir/Google-CTF-2022-Writeups) | 🐙 GitHub Repo | 5 | Web | 2022–2022 | Elite |
+| 129 | [GitHub - FarhadAlimohammadi-dir/Google](../20-events/mirrors/google-ctf/Google-CTF-2022-Writeups) | 🐙 GitHub Repo | 5 | Web | 2022–2022 | Elite |
 | 130 | [osirislab/CSAW-CTF-2025-Finals](https://github.com/osirislab/CSAW-CTF-2025-Finals-Public) | 🐙 GitHub Repo | 5 | — | 2025–2025 | Advanced |
-| 131 | [Discussions - snwau picoCTF-2025-Writeup - GitHub (local mirror)](../repos/snwau/picoCTF-2025-Writeup) | 🐙 GitHub Repo | 5 | Forensics, Crypto, Reverse Engineering | 2025–2025 | Beginner |
-| 132 | [Nambers/ctf-writeups - GitHub (local mirror)](../repos/Nambers/ctf-writeups) | 🐙 GitHub Repo | 5 | Pwn, Reverse Engineering, OSINT | 2022–2025 | Advanced |
-| 133 | [CTF-Writeups - GitHub (local mirror)](../repos/0xETX/CTF-Writeups) | 🐙 GitHub Repo | 4 | Programming, OSINT, Forensics | 2021–2023 | Varied |
-| 134 | [kyndrawynne/pwnscripts - GitHub (local mirror)](../repos/kyndrawynne/pwnscripts) | 🐙 GitHub Repo | 4 | Pwn, Web, Reverse Engineering | n/a | Varied |
-| 135 | [MacacaHub/CTF-writeups - GitHub (local mirror)](../repos/MacacaHub/CTF-writeups) | 🐙 GitHub Repo | 4 | Forensics, Crypto, Stego | 2019–2021 | Varied |
-| 136 | [stefanman125/root-me-challenges - GitHub (local mirror)](../repos/stefanman125/root-me-challenges) | 🐙 GitHub Repo | 4 | Forensics, Programming | n/a | Varied |
-| 137 | [My solutions to pwnable.tw challenges. - GitHub (local mirror)](../repos/mcieno/pwnable.tw) | 🐙 GitHub Repo | 4 | Pwn | n/a | Varied |
-| 138 | [iash8090/Hack-The-Box: Writeups for retired HTB machines - … (local mirror)](../repos/iash8090/Hack-The-Box) | 🐙 GitHub Repo | 4 | — | n/a | Varied |
+| 131 | [Discussions - snwau picoCTF-2025-Writeup - GitHub](../20-events/mirrors/picoctf/picoCTF-2025-Writeup) | 🐙 GitHub Repo | 5 | Forensics, Crypto, Reverse Engineering | 2025–2025 | Beginner |
+| 132 | [Nambers/ctf-writeups - GitHub](../30-archetypes/mirrors/personal-collections/ctf-writeups-Nambers) | 🐙 GitHub Repo | 5 | Pwn, Reverse Engineering, OSINT | 2022–2025 | Advanced |
+| 133 | [CTF-Writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTF-Writeups-0xETX) | 🐙 GitHub Repo | 4 | Programming, OSINT, Forensics | 2021–2023 | Varied |
+| 134 | [kyndrawynne/pwnscripts - GitHub](../40-tooling/mirrors/pwn-tools/pwnscripts) | 🐙 GitHub Repo | 4 | Pwn, Web, Reverse Engineering | n/a | Varied |
+| 135 | [MacacaHub/CTF-writeups - GitHub](../30-archetypes/mirrors/personal-collections/CTF-writeups-MacacaHub) | 🐙 GitHub Repo | 4 | Forensics, Crypto, Stego | 2019–2021 | Varied |
+| 136 | [stefanman125/root-me-challenges - GitHub](../30-archetypes/mirrors/practice-platforms/root-me-challenges) | 🐙 GitHub Repo | 4 | Forensics, Programming | n/a | Varied |
+| 137 | [My solutions to pwnable.tw challenges. - GitHub](../30-archetypes/mirrors/practice-platforms/pwnable-tw) | 🐙 GitHub Repo | 4 | Pwn | n/a | Varied |
+| 138 | [iash8090/Hack-The-Box: Writeups for retired HTB machines - …](../20-events/mirrors/hackthebox/Hack-The-Box) | 🐙 GitHub Repo | 4 | — | n/a | Varied |
 | 139 | [justcatthefish/justctf-2024 - GitHub](https://github.com/justcatthefish/justctf-2024) | 🐙 GitHub Repo | 2 | — | 2024–2024 | Elite |
-| 140 | [shankmsd/CTF_Writeups: CTF Writeup Repository - GitHub (local mirror)](../repos/shankmsd/CTF_Writeups) | 🐙 GitHub Repo | 2 | — | n/a | Varied |
-| 141 | [ftiannisa/write-up: writeup for ctf challenges solved by me… (local mirror)](../repos/ftiannisa/write-up) | 🐙 GitHub Repo | 2 | Pwn, Web, Crypto | 2021–2023 | Beginner |
-| 142 | [A Collection of Writeups for Binary Exploitation CTF Proble… (local mirror)](../repos/shuban-789/Pwnbooks-BinaryExploitation) | 🐙 GitHub Repo | 2 | Pwn | 2025–2025 | Varied |
+| 140 | [shankmsd/CTF_Writeups: CTF Writeup Repository - GitHub](../30-archetypes/mirrors/personal-collections/CTF_Writeups-shankmsd) | 🐙 GitHub Repo | 2 | — | n/a | Varied |
+| 141 | [ftiannisa/write-up: writeup for ctf challenges solved by me…](../30-archetypes/mirrors/personal-collections/write-up-ftiannisa) | 🐙 GitHub Repo | 2 | Pwn, Web, Crypto | 2021–2023 | Beginner |
+| 142 | [A Collection of Writeups for Binary Exploitation CTF Proble…](../01-pwn/mirrors/Pwnbooks-BinaryExploitation) | 🐙 GitHub Repo | 2 | Pwn | 2025–2025 | Varied |
 | 143 | [2023-2024-: cyber apocalypse ctf 2024 Ferdi Birgül - GitHub](https://github.com/Ferdibrgl/cyber-apocalypse-ctf--2023-2024-) | 🐙 GitHub Repo | 1 | — | 2023–2024 | Intermediate |
-| 144 | [GitHub - tsids/picoCTF-Writeups: A repo containing solution… (local mirror)](../repos/tsids/picoCTF-Writeups) | 🐙 GitHub Repo | 1 | Programming, Forensics, Crypto | 2019–2026 | Beginner |
-| 145 | [allaboutapps/owasp-ctf-2025 - GitHub (local mirror)](../repos/allaboutapps/owasp-ctf-2025) | 🐙 GitHub Repo | 1 | Web | 2025–2025 | Varied |
-| 146 | [BarakBinyamin/ctf: Some embedded network attacks - GitHub (local mirror)](../repos/BarakBinyamin/ctf) | 🐙 GitHub Repo | 1 | Reverse Engineering, Blockchain, Network/Pcap | 2023–2023 | Varied |
-| 147 | [Writeup for the Tiberian Order - Contract: Road to Nowhere … (local mirror)](../repos/C3n7ral051nt4g3ncy/Tiberian_Order_Writeup) | 🐙 GitHub Repo | 1 | Stego, OSINT | n/a | Varied |
-| 148 | [PlaidCTF 2024 Phantom Processing Platform · GitHub (local mirror)](../repos/ybieri/phantom_processing_platform) | 🐙 GitHub Repo | 1 | Pwn, Blockchain | 2024–2024 | Elite |
-| 149 | [Portswigger Web Security Academy Writeup - GitHub (local mirror)](../repos/yehezkiel1086/portswigger-websec-writeups) | 🐙 GitHub Repo | 1 | Web | n/a | Varied |
+| 144 | [GitHub - tsids/picoCTF-Writeups: A repo containing solution…](../20-events/mirrors/picoctf/picoCTF-Writeups-tsids) | 🐙 GitHub Repo | 1 | Programming, Forensics, Crypto | 2019–2026 | Beginner |
+| 145 | [allaboutapps/owasp-ctf-2025 - GitHub](../02-web/mirrors/owasp-ctf-2025) | 🐙 GitHub Repo | 1 | Web | 2025–2025 | Varied |
+| 146 | [BarakBinyamin/ctf: Some embedded network attacks - GitHub](../30-archetypes/mirrors/personal-collections/ctf-BarakBinyamin) | 🐙 GitHub Repo | 1 | Reverse Engineering, Blockchain, Network/Pcap | 2023–2023 | Varied |
+| 147 | [Writeup for the Tiberian Order - Contract: Road to Nowhere …](../06-osint/mirrors/Tiberian_Order_Writeup) | 🐙 GitHub Repo | 1 | Stego, OSINT | n/a | Varied |
+| 148 | [PlaidCTF 2024 Phantom Processing Platform · GitHub](../40-tooling/mirrors/misc-tools/phantom_processing_platform) | 🐙 GitHub Repo | 1 | Pwn, Blockchain | 2024–2024 | Elite |
+| 149 | [Portswigger Web Security Academy Writeup - GitHub](../02-web/mirrors/portswigger-websec-writeups) | 🐙 GitHub Repo | 1 | Web | n/a | Varied |
 | 150 | [CTFtime.org / bi0sCTF](https://ctftime.org/ctf/31) | 🏆 CTFtime | — | — | n/a | Varied |
 | 151 | [Nahamcon CTF 2024 Reverse Engineering Challenges | by Mr Ro…](https://medium.com/@0xMr_Robot/nahamcon-ctf-2024-reverse-engineering-challenges-b397296721c1) | ✍️ Medium | — | Reverse Engineering | 2024–2024 | Varied |
 | 152 | [HTB: Writeup - 0xdf hacks stuff - GitLab](https://0xdf.gitlab.io/2019/10/12/htb-writeup.html) | 📝 Blog | — | — | n/a | Beginner |
@@ -192,7 +192,7 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 171 | [HTB: Ghost | 0xdf hacks stuff - GitLab](https://0xdf.gitlab.io/2025/04/05/htb-ghost.html) | 📝 Blog | — | — | n/a | Varied |
 | 172 | [SILO — HackTheBox WriteUp - Medium](https://medium.com/@v1per/silo-hackthebox-writeup-cec449e0a4bc) | ✍️ Medium | — | — | n/a | Intermediate |
 | 173 | [All labs | Web Security Academy - PortSwigger](https://portswigger.net/web-security/all-labs) | 📝 Blog | — | Web | n/a | Varied |
-| 174 | [juliancasaburi/irisctf-2025: Write-ups and solve scripts fo… (local mirror)](../repos/juliancasaburi/irisctf-2025) | 🐙 GitHub Repo | 0 | — | 2024–2025 | Varied |
+| 174 | [juliancasaburi/irisctf-2025: Write-ups and solve scripts fo…](../20-events/mirrors/irisctf/irisctf-2025) | 🐙 GitHub Repo | 0 | — | 2024–2025 | Varied |
 | 175 | [pwnable.kr - bof - 0xRick's Blog](https://0xrick.github.io/pwn/bof) | 📝 Blog | — | Pwn | n/a | Beginner |
 | 176 | [CTFtime.org / WeCTF 2021 / GitHub / Writeup](https://ctftime.org/writeup/29061) | 🏆 CTFtime | — | — | 2021–2021 | Varied |
 | 177 | [The most insightful stories about Ctf Writeup - Medium](https://medium.com/tag/ctf-writeup/archive) | ✍️ Medium | — | — | n/a | Intermediate |
@@ -212,13 +212,13 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 191 | [Portswigger Labs Writeups - Ethical hacker](https://ricardojoserf.github.io/portswiggerlabs) | 📝 Blog | — | — | n/a | Varied |
 | 192 | [CTF-Writeups - crypto](https://saurav3199.github.io/CTF-writeups/DragonSectorCTF) | 📝 Blog | — | Crypto | 2020–2020 | Varied |
 | 193 | [CTFtime.org / DEF CON CTF Qualifier 2024 / libprce3 / Write…](https://ctftime.org/writeup/39151) | 🏆 CTFtime | — | — | 2024–2024 | Elite |
-| 194 | [Writeups for the challenges I attempted at corCTF 2024. - G… (local mirror)](../repos/rstacks/corCTF2024-writeup) | 🐙 GitHub Repo | 0 | Web, Forensics, Misc | 2024–2024 | Advanced |
+| 194 | [Writeups for the challenges I attempted at corCTF 2024. - G…](../20-events/mirrors/corctf/corCTF2024-writeup) | 🐙 GitHub Repo | 0 | Web, Forensics, Misc | 2024–2024 | Advanced |
 | 195 | [CTFtime.org / SekaiCTF 2025 tasks and writeups](https://ctftime.org/event/2683/tasks) | 🏆 CTFtime | — | — | 2025–2025 | Advanced |
 | 196 | [HTB: OpenSource | 0xdf hacks stuff - GitLab](https://0xdf.gitlab.io/2022/10/08/htb-opensource.html) | 📝 Blog | — | Web | n/a | Varied |
 | 197 | [ITS TIME FOR CTFs WRITE-UPs - Medium](https://medium.com/@z.ishan_Ansari/its-time-for-ctfs-write-ups-aebab7004fe4) | ✍️ Medium | — | — | n/a | Intermediate |
 | 198 | [STEGO | CTF Writeups - noob-atbash](https://noob-atbash.github.io/CTF-writeups/nahamcon-20/stego/stego.html) | 📝 Blog | — | Stego | n/a | Beginner |
 | 199 | [CTFtime.org / CTFZone](https://ctftime.org/ctf/201) | 🏆 CTFtime | — | — | n/a | Varied |
-| 200 | [shellboxes/blockchain-ctf-challenges - GitHub (local mirror)](../repos/shellboxes/blockchain-ctf-challenges-writeups) | 🐙 GitHub Repo | 0 | Blockchain | n/a | Varied |
+| 200 | [shellboxes/blockchain-ctf-challenges - GitHub](../08-blockchain-web3/mirrors/blockchain-ctf-challenges-writeups) | 🐙 GitHub Repo | 0 | Blockchain | n/a | Varied |
 | 201 | [CTFtime.org / 0CTF](https://ctftime.org/ctf/99) | 🏆 CTFtime | — | — | 2021–2022 | Elite |
 | 202 | [CTFtime.org / SECCON CTF](https://ctftime.org/ctf/92) | 🏆 CTFtime | — | — | n/a | Advanced |
 | 203 | [DEF CON 29 Cloud Village CTF Writeups | by Muhammad Yuga N.](https://myugan.medium.com/def-con-29-cloud-village-ctf-writeups-4ebd2e2cd9c) | ✍️ Medium | — | Cloud | n/a | Elite |
@@ -271,10 +271,10 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 250 | [UIUCTF 2024 Writeup - Berlian Gabriel](https://berliangabriel.github.io/post/uiuctf-2024) | 📝 Blog | — | — | 2024–2024 | Varied |
 | 251 | [Recap: HITCON ctf 2024 Rank: 108/1699 | by hhhkb | Medium](https://medium.com/@harryfyx/recap-hitcon-ctf-2024-rank-108-1699-2e2af0b10f4f) | ✍️ Medium | — | Reverse Engineering | 2024–2024 | Advanced |
 | 252 | [TryHackMe: Magician writeup/walkthrough | by Phantom_95](https://phantom-95.medium.com/tryhackme-magician-writeup-walkthrough-a7bce33b986b) | ✍️ Medium | — | — | n/a | Beginner |
-| 253 | [GitHub - Irench1k/PicoCTF: PicoGym solutions for Medium and… (local mirror)](../repos/Irench1k/PicoCTF) | 🐙 GitHub Repo | 0 | — | n/a | Beginner |
+| 253 | [GitHub - Irench1k/PicoCTF: PicoGym solutions for Medium and…](../20-events/mirrors/picoctf/PicoCTF-Irench1k) | 🐙 GitHub Repo | 0 | — | n/a | Beginner |
 | 254 | [The Ethernaut - Medium](https://medium.com/@binnaryninjax/the-ethernaut-ecd7d1f7ee13) | ✍️ Medium | — | Blockchain | n/a | Intermediate |
 | 255 | [HackTheBox - Usage - YouTube](https://www.youtube.com/watch?v=cx9Da-PoXG4) | ▶️ YouTube | — | Web | n/a | Intermediate |
-| 256 | [DanielVF/2020_paradigm_ctf_writeup - GitHub (local mirror)](../repos/DanielVF/2020_paradigm_ctf_writeup) | 🐙 GitHub Repo | 0 | Reverse Engineering, Blockchain | 2020–2020 | Elite |
+| 256 | [DanielVF/2020_paradigm_ctf_writeup - GitHub](../08-blockchain-web3/mirrors/2020-paradigm-ctf-writeup) | 🐙 GitHub Repo | 0 | Reverse Engineering, Blockchain | 2020–2020 | Elite |
 | 257 | [idek CTF 2022* Forensics - HiddenGem Mixtape Writeup](https://crazymanarmy.github.io/2023/01/16/idek-CTF-2022-Forensics-HiddenGem-Mixtape-Writeup/index.html) | 📝 Blog | — | Forensics | 2022–2022 | Varied |
 | 258 | [Teaser Dragon CTF 2019 | nytr0gen's Writeups](https://nytr0gen.github.io/writeups/ctf/2019/09/22/teaser-dragon-ctf-2019.html) | 📝 Blog | — | — | 2019–2019 | Varied |
 | 259 | [CAT CTF 25 Web challenges writeups | by 0xNayel - Medium](https://medium.com/@0xNayelx/cat-ctf-25-web-challenges-writeups-2655e02b6485) | ✍️ Medium | — | Web | n/a | Intermediate |
@@ -364,7 +364,7 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 343 | [CTFtime.org / idek](https://ctftime.org/team/157039) | 🏆 CTFtime | — | — | n/a | Varied |
 | 344 | [Creating a CTF Writeup Video - YouTube](https://www.youtube.com/watch?v=Yr8KtFK1p7g) | ▶️ YouTube | — | Hardware | n/a | Varied |
 | 345 | [CSAW CTF 2023 Writeup - tripoloski blog](https://tripoloski1337.github.io/ctf/pwn/uaf/heap/2023/09/18/csawctf2023-writeup.html) | 📝 Blog | — | Pwn, Reverse Engineering | 2023–2023 | Advanced |
-| 346 | [DivyanshuProjects/CTF-Writeups-Hacker-101 - GitHub (local mirror)](../repos/DivyanshuProjects/CTF-Writeups-Hacker-101) | 🐙 GitHub Repo | 0 | — | n/a | Varied |
+| 346 | [DivyanshuProjects/CTF-Writeups-Hacker-101 - GitHub](../20-events/mirrors/hacker101/CTF-Writeups-Hacker-101) | 🐙 GitHub Repo | 0 | — | n/a | Varied |
 | 347 | [DownUnderCTF writeups - 0awawa0 - Medium](https://0awawa0.medium.com/downunderctf-writeups-8bd773f1d04c) | ✍️ Medium | — | — | n/a | Intermediate |
 | 348 | [HTB: Editorial Writeup / Walkthrough | by pk2212 - Medium](https://medium.com/@pk2212/htb-editorial-writeup-walkthrough-39781997dbff) | ✍️ Medium | — | — | n/a | Intermediate |
 | 349 | [CTFtime.org / Hack.lu CTF 2023 / Awesomenotes I / Writeup](https://ctftime.org/writeup/38028) | 🏆 CTFtime | — | Web | 2023–2023 | Varied |
@@ -381,7 +381,7 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 360 | [Shreyansh Singh | hxp 36C3 CTF Writeups](https://shreyansh26.github.io/post/2019-12-30_hxp-36c3-ctf) | 📝 Blog | — | — | n/a | Elite |
 | 361 | [silly-lily/CTF-Writeups - GitHub](https://github.com/silly-lily/CTF-Writeups) | 🐙 GitHub Repo | 0 | Forensics, Crypto, Mobile | 2022–2026 | Varied |
 | 362 | [CTFs are AWESOME! - YouTube](https://www.youtube.com/watch?v=L2C8rVO2lAg) | ▶️ YouTube | — | — | n/a | Varied |
-| 363 | [nh4ttruong/ctf-write-up - GitHub (local mirror)](../repos/nh4ttruong/ctf-write-up) | 🐙 GitHub Repo | 0 | — | 2021–2021 | Varied |
+| 363 | [nh4ttruong/ctf-write-up - GitHub](../30-archetypes/mirrors/personal-collections/ctf-write-up-nh4ttruong) | 🐙 GitHub Repo | 0 | — | 2021–2021 | Varied |
 | 364 | [List: HackTheBox (HTB) WriteUps | Curated by Eslam Akl | Me…](https://medium.com/@eslam3kl/list/653445957b08) | ✍️ Medium | — | — | n/a | Intermediate |
 | 365 | [SekaiCTF 2022 Writeups - Alan's Blog](https://lebr0nli.github.io/blog/security/SekaiCTF-2022) | 📝 Blog | — | — | 2022–2022 | Advanced |
 | 366 | [j.info Cybersecurity Blog - GitHub Pages](https://j-info.github.io/ctfsite) | 📝 Blog | — | — | n/a | Varied |
@@ -390,7 +390,7 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 369 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | ▶️ YouTube | — | Pwn, Web, Crypto | 2024–2024 | Advanced |
 | 370 | [CTFtime.org / WHY2025 CTF tasks and writeups](https://ctftime.org/event/2680/tasks) | 🏆 CTFtime | — | — | n/a | Varied |
 | 371 | [CTFtime.org / Remedy CTF 2025 tasks and writeups](https://ctftime.org/event/2618/tasks) | 🏆 CTFtime | — | — | 2025–2025 | Varied |
-| 372 | [Just some things that I did for pwn college challenges - Gi… (local mirror)](../repos/HerculesRD/Pwn.College) | 🐙 GitHub Repo | 0 | Pwn | n/a | Intermediate |
+| 372 | [Just some things that I did for pwn college challenges - Gi…](../01-pwn/mirrors/Pwn-College) | 🐙 GitHub Repo | 0 | Pwn | n/a | Intermediate |
 | 373 | [bamboofox official blog](https://bamboofox.github.io) | 📝 Blog | — | — | 2018–2018 | Varied |
 | 374 | [Writeups - STT](https://sectt.github.io/writeups) | 📝 Blog | — | — | n/a | Varied |
 | 375 | [CTFtime.org / Cyber Apocalypse 2021 / BlitzProp / Writeup](https://ctftime.org/writeup/27697) | 🏆 CTFtime | — | — | 2021–2021 | Intermediate |

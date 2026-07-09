@@ -4,21 +4,39 @@ All notable changes to this CTF-collection repository are documented in this fil
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [2026-07-10] — Local Mirror Import
+## [2026-07-10] — Mirror Restructure
+
+### Changed
+- **Restructured all 114 mirrored repos** from the flat `repos/<owner>/<repo>/` layout into a category-organized `<category>/mirrors/[<subtype>/]<repo-name>/` structure. The upstream owner prefix has been removed from directory paths; repos are now organized by their primary CTF category.
+- Removed `(local mirror)` annotation from all link text (812 annotations removed). Links now read naturally, e.g., `[apsdehal/awesome-ctf](30-archetypes/mirrors/awesome-lists/awesome-ctf)`.
+- Rewrote 809 markdown links across 72 curation files to point to new mirror locations with correct relative paths.
+- Updated README.md "Mirrored Repositories" section with the new structure diagram and layout details.
+- Updated License section to reference `mirrors/` subdirectories within each category instead of the old `repos/` directory.
+
+### New mirror structure
+- `01-pwn/mirrors/` — 5 pwn learning resources
+- `02-web/mirrors/` — 4 web challenge repos
+- `03-crypto/mirrors/` — 2 crypto writeup repos
+- `06-osint/mirrors/` — 2 OSINT challenge repos
+- `07-misc/mirrors/` — 2 misc challenge repos
+- `08-blockchain-web3/mirrors/` — 5 blockchain/Web3 repos
+- `10-hardware-iot/mirrors/` — 1 hardware repo
+- `20-events/mirrors/<event>/` — 30 event-specific repos across 13 events (picoCTF, HackTheBox, DEF CON, SECCON, etc.)
+- `30-archetypes/mirrors/<type>/` — 39 repos (awesome-lists, personal-collections, team-archives, practice-platforms, event-organizer-sources)
+- `40-tooling/mirrors/<tool-type>/` — 24 tool repos (pwn-tools, web-tools, forensics-tools, blockchain-tools, mobile-tools, crypto-tools, misc-tools)
+
+### Removed
+- Deleted the old `repos/` top-level directory (all content moved into category `mirrors/` subdirectories).
+
+## [2026-07-09] — Mirror Import (superseded by 2026-07-10 restructure)
 
 ### Added
 - `repos/` top-level directory containing **local mirrors of 114 GitHub repositories** referenced throughout the collection (~2.5 GB on disk after `.gitignore` filtering).
-- New `📦 Local Mirrors` section in `README.md` documenting the mirror structure, link-rewrite policy, `.gitignore` exclusions, and the 42 repos that could not be mirrored.
-- Expanded `.gitignore` with CTF-specific binary artifact patterns (VM images, compressed handouts, Java/Android packages, database dumps, ML model files) and explicit per-file ignores for 21 files >50 MB.
+- Expanded `.gitignore` with CTF-specific binary artifact patterns.
+- "Local Mirrors" section in README.md documenting the mirror structure (now superseded).
 
 ### Changed
-- Rewrote **~830 markdown links** across 72 curation files to point from `https://github.com/<owner>/<repo>` to `./repos/<owner>/<repo>` (or `../repos/...` from subdirectories), with `(local mirror)` annotation appended to link text.
-- Updated License section to acknowledge that mirrored repos retain their original licenses.
-
-### Not mirrored (42 repos)
-- **Failed to download (16)**: `sajjadium/ctf-archives`, `p4-team/ctf`, `hackplayers/hackthebox-writeups`, `google/google-ctf`, `justcatthefish/justctf-2023`, `project-sekai-ctf/sekaictf-2024`, `daffainfo/ctf-writeup`, `MartinPetkov/GCTF2021BeginnersQuestWriteups`, `SECCON/SECCON13_final_CTF`, `SandWithCheese/ctf-writeups`, `Tan-JunWei/CTF-Writeups`, `mephi42/ctf`, `shekkbuilder/ctf-2`, `sigpwny/UIUCTF-2023-Public`, `silly-lily/CTF-Writeups`, `siunam321/CTF-Writeups`.
-- **Downloaded but dropped (26)**: Largest repos (Adamkadaban/CTFs, Crusaders-of-Rust/*, DownUnderCTF/*, dicegang/*, justcatthefish/*, SecurityInnovation/Smart-Contract-CTF, osirislab/CSAW-*, lieanu/LibcSearcher, Kasimir123/CTFWriteUps, 1GN1tE/CTF_Writeups, Nautilus-Institute/quals-2024, RasyidMF/ctf-writeup, HackTricks-wiki/hacktricks, Ferdibrgl/cyber-apocalypse-ctf--2023-2024-, david942j/*) — excluded to fit within the 10 GB disk and GitHub push size constraints of the generation environment.
-- Links to all 42 repos remain unchanged (pointing to upstream GitHub).
+- Rewrote markdown links to point to `./repos/<owner>/<repo>` with `(local mirror)` annotation (superseded — links now point to category-organized `mirrors/` subdirectories without annotation).
 
 ## [2026-07-09] — Initial Curation
 

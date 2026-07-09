@@ -1,8 +1,0 @@
-Command: android hooking get
-
-Usage: android hooking get <subcommand>
-
-Contains subcommands to get various values from the Android application.
-
-Examples:
-   android hooking get current_activity
