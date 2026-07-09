@@ -6,26 +6,26 @@
 
 - **Tier:** A-tier
 - **Schedule:** Annual — November (quals), January (finals).
-- **Description:** Japan's premier CTF. Organizers publish per-year source at github.com/SECCON.
+- **Description:** Japan's premier CTF. Organizers publish per-year source at the SECCON organizers.
 
 ## Curated Resources for SECCON CTF
 
-### GitHub Repositories (12)
+### the collection Repositories (12)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 3 | [p4-team/ctf](https://github.com/p4-team/ctf) | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 5 | [sajjadium/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 6 | [tl2cents/CTF-Writeups](../30-archetypes/mirrors/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
-| 7 | [arkark/my-ctf-challenges](../30-archetypes/mirrors/event-organizer-sources/my-ctf-challenges-arkark) | 84 ⭐⭐ | Web, Misc | 2021–2025 | CTF challenges I created . Contribute to arkark/my-ctf-challenges development by creating an accoun… |
-| 8 | [mephi42/ctf](https://github.com/mephi42/ctf) | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |
-| 9 | [SECCON/SECCON13_online_CTF](../20-events/mirrors/seccon-ctf/SECCON13-online-CTF) | 12 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON13_online_CTF development by creating an account on GitHub. |
-| 10 | [SECCON/SECCON_Beginners_CTF_2024](../20-events/mirrors/seccon-ctf/SECCON-Beginners-CTF-2024) | 7 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON_Beginners_CTF_2024 development by creating an account on GitHub. |
-| 11 | [SECCON/SECCON13_final_CTF](https://github.com/SECCON/SECCON13_final_CTF) | 6 ⭐ | — | n/a | SECCON 13 Final CTF. Detail. DAY 1 (3/1). Registration: 10:00 ~ 10:30; Preparation: 10:30 ~ 11:00; … |
-| 12 | [shekkbuilder/ctf-2](https://github.com/shekkbuilder/ctf-2) | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 3 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
+| 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
+| 5 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
+| 6 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
+| 7 | [arkark/my-ctf-challenges](../30-archetypes/archives/event-organizer-sources/my-ctf-challenges-arkark) | 84 ⭐⭐ | Web, Misc | 2021–2025 | CTF challenges I created . Contribute to arkark/my-ctf-challenges development by creating an accoun… |
+| 8 | mephi42/ctf | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |
+| 9 | [SECCON/SECCON13_online_CTF](../20-events/archives/seccon-ctf/SECCON13-online-CTF) | 12 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON13_online_CTF development by creating an account. |
+| 10 | [SECCON/SECCON_Beginners_CTF_2024](../20-events/archives/seccon-ctf/SECCON-Beginners-CTF-2024) | 7 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON_Beginners_CTF_2024 development by creating an account. |
+| 11 | SECCON/SECCON13_final_CTF | 6 ⭐ | — | n/a | SECCON 13 Final CTF. Detail. DAY 1 (3/1). Registration: 10:00 ~ 10:30; Preparation: 10:30 ~ 11:00; … |
+| 12 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
 
 ### Articles, Videos & Blog Posts (1)
@@ -37,7 +37,7 @@
 
 ## About SECCON CTF
 
-Japan's premier CTF. Organizers publish per-year source at github.com/SECCON. This event is referenced **13 times** across the curated corpus, indicating the level of community attention it commands.
+Japan's premier CTF. Organizers publish per-year source at the SECCON organizers. This event is referenced **13 times** across the curated corpus, indicating the level of community attention it commands.
 
 ## Suggested Approach for Studying SECCON CTF
 

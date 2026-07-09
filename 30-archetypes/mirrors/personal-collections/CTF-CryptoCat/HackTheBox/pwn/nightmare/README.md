@@ -1,2 +1,0 @@
-# Nightmare: PIE/Lib-C leak + format string write exploit
-[![VIDEO](https://img.youtube.com/vi/U42Yz97gmQc/0.jpg)](https://youtu.be/U42Yz97gmQc "Nightmare [easy]: HackTheBox Pwn Challenge (PIE/Lib-C leak + format string write exploit)")

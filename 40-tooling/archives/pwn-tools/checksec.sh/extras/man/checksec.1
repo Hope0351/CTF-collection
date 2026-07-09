@@ -1,0 +1,134 @@
+.\" Process this file with
+.\" groff -mdoc -Tascii checksec.1
+.\"
+.Dd February 2026
+.Dt CHECKSEC 1
+.Os
+.Sh NAME
+.Nm checksec
+.Nd check executable and kernel security properties
+.Sh SYNOPSIS
+.Nm
+.Op Fl -help
+.Op Fl -version
+.Op Fl -output Ar table|xml|json|yaml
+.Op Fl -libc Ar path
+.Op Fl -no-banner
+.Op Fl -no-headers
+.Op Fl -no-warnings
+.Op Fl -color Ar auto|always|never
+.Ar command
+.Op Ar command-options
+.Sh DESCRIPTION
+.Nm
+is a Go implementation of the checksec utility. It inspects ELF binaries and
+the running kernel for common hardening features such as RELRO, NX, PIE, RPATH/RUNPATH,
+stack canaries, Clang CFI hints, and fortify-able libc usage. Results can be printed
+as a table or serialized for machine consumption.
+.Sh GLOBAL OPTIONS
+.Bl -tag -width Ds
+.It Fl h , Fl -help
+Display help and exit.
+.It Fl v , Fl -version
+Show version and exit.
+.It Fl o , Fl -output Ns = Ns Ar table|xml|json|yaml
+Set output format. Default is
+.Sy table .
+.It Fl l , Fl -libc Ns = Ns Ar path
+Set libc location (useful for
+.Sy fortify
+checks on offline/embedded filesystems).
+.It Fl -no-banner
+Disable the startup banner.
+.It Fl -no-headers
+Disable table headers.
+.It Fl -no-warnings
+Suppress warning messages (e.g., missing libc, unreadable symbol tables).
+.It Fl -color Ns = Ns Ar auto|always|never
+Control color output. Default is
+.Sy auto
+(color when writing to a terminal).
+Use
+.Sy always
+to preserve color through pipes.
+.El
+.Sh COMMANDS
+.Bl -tag -width Ds
+.It Cm file Ar path
+Inspect a single ELF file.
+.It Cm dir Ar directory
+Inspect all ELF files in a directory. Use
+.Fl r , Fl -recursive
+to recurse into subdirectories.
+.It Cm fortifyFile Ar path
+Report fortified/fortifiable libc calls in a file.
+.It Cm fortifyProc Ar pid
+Report fortified/fortifiable libc calls for a running process ID.
+.It Cm kernel Op Ar config
+Inspect kernel hardening via
+.Pa /proc/config.gz
+,
+.Pa /boot/config-<release>
+,
+or a supplied config path.
+.It Cm proc Ar pid
+Inspect the executable of a running process ID.
+.It Cm procAll
+Inspect all running processes. Kernel threads and processes without readable
+.Pa /proc/<pid>/exe
+are skipped.
+.El
+.Sh COMPATIBILITY NOTES
+.Bl -bullet
+.It
+The legacy v2/bash options such as
+.Sy --file ,
+.Sy --dir ,
+and
+.Sy --proc-all
+are not the primary v3 interface.
+.It
+Use v3 subcommands instead (for example,
+.Sy checksec file /path/to/bin
+or
+.Sy checksec procAll ) .
+.It
+If you want compact output similar to older invocations, use
+.Sy --no-banner
+(and optionally
+.Sy --no-headers ) .
+.El
+.Sh EXAMPLES
+.Bl -tag -width Ds
+.It
+.Sy checksec file /bin/ls
+.It
+.Sy checksec --no-banner --no-warnings file /bin/ls
+.It
+.Sy checksec --color=always file /bin/ls | grep RELRO
+.It
+.Sy checksec --output json dir /usr/bin
+.It
+.Sy checksec dir /usr/bin --recursive
+.It
+.Sy checksec proc 1
+.It
+.Sy checksec kernel
+.It
+.Sy checksec kernel /path/to/config
+.El
+.Sh DIAGNOSTICS
+Most commands exit non-zero on fatal errors (e.g., unreadable files). The
+.Cm procAll
+command skips processes it cannot read and continues.
+.Sh SEE ALSO
+.Xr hardening-check 1 ,
+.Xr feature_test_macros 7 ,
+.Xr gcc 1 ,
+.Xr ld 1
+.Sh HISTORY
+.Nm
+was originally written by
+.An Tobias Klein .
+The current project is maintained by
+.An Brian Davis Aq Mt slimm609@gmail.com .

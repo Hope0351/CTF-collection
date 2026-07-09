@@ -1,1 +1,0 @@
-Get started with interacting with processes via shared memory.

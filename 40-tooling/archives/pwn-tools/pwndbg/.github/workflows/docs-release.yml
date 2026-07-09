@@ -1,0 +1,44 @@
+name: Stable Release Docs
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy docs for stable release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only allow running on tag refs
+        if: ${{ github.ref_type != 'tag' }}
+        run: |
+          echo "You must run this workflow in the context of a tag."
+          exit 1
+
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+
+      - name: Install latest uv
+        uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+        with:
+          version: "latest"
+
+      - name: Install dependencies
+        run: uv sync --group docs
+
+      - name: Update docs/index.md with README.md
+        run: uv run ./scripts/generate-readme.py
+
+      - name: Deploy site
+        run: |
+          # mike pushes commits to the gh-pages branch
+          git config --global user.email "doc-bot@pwndbg.re"
+          git config --global user.name "DocBot"
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/gh-pages:refs/remotes/origin/gh-pages
+          uv run --group docs mike deploy \
+            --update-aliases \
+            --push \
+            --remote origin \
+            ${{ github.ref_name }} \
+            stable

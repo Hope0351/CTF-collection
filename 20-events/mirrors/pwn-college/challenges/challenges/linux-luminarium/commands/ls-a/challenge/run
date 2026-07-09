@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo "There's no flag here for you! I made the flag readable but hid it as a .-prepended file in the / directory. Go find it!"

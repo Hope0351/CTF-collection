@@ -1,1 +1,0 @@
-Utilize your hacker skillset to communicate with a kernel device and get the flag.

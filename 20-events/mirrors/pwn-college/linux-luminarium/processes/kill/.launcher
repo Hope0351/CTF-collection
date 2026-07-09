@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec -a /challenge/dont_run bash < /challenge/dont_run

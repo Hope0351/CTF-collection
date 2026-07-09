@@ -1,1 +1,0 @@
-Write and execute shellcode to read the flag, but all file descriptors (including stdin, stderr and stdout!) are closed.

@@ -12,14 +12,14 @@ Practice platforms are the primary on-ramp for new CTF players. picoCTF, pwn.col
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions and solution writeu… |
-| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
-| 3 | [Crypto-Cat/CTF](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
-| 4 | [ctfs/resources](https://github.com/ctfs/resources) | 1,819 ⭐⭐⭐⭐ | Reverse Engineering | n/a | This repository aims to be an archive of information, tools, and references regarding CTF competitions. CTFs, especiall… |
-| 5 | [pwncollege/linux-luminarium](../20-events/mirrors/pwn-college/linux-luminarium) | 52 ⭐⭐ | Pwn | n/a | This is a pwn.college dojo built around teaching basic Linux knowledge, through hands-on challenges, from absolutely no… |
-| 6 | [pwncollege/challenges](../20-events/mirrors/pwn-college/challenges) | 33 ⭐ | Pwn, Web, Reverse Engineering | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challenges are just direct… |
-| 7 | [ShubhamJagtap2000/TryHackMe-THM](../20-events/mirrors/tryhackme/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs on the browser! |
-| 8 | [ftiannisa/write-up](../30-archetypes/mirrors/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. This is for archival… |
+| 1 | [blockthreat/blocksec-ctfs](../30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions and solution writeu… |
+| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
+| 3 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
+| 4 | ctfs/resources | 1,819 ⭐⭐⭐⭐ | Reverse Engineering | n/a | This repository aims to be an archive of information, tools, and references regarding CTF competitions. CTFs, especiall… |
+| 5 | [pwncollege/linux-luminarium](../20-events/archives/pwn-college/linux-luminarium) | 52 ⭐⭐ | Pwn | n/a | This is a pwn.college dojo built around teaching basic Linux knowledge, through hands-on challenges, from absolutely no… |
+| 6 | [pwncollege/challenges](../20-events/archives/pwn-college/challenges) | 33 ⭐ | Pwn, Web, Reverse Engineering | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challenges are just direct… |
+| 7 | [ShubhamJagtap2000/TryHackMe-THM](../20-events/archives/tryhackme/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs on the browser! |
+| 8 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. This is for archival… |
 
 
 ## How to Use These Repositories

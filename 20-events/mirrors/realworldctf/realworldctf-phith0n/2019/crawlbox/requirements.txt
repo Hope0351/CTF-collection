@@ -1,9 +1,0 @@
-flask
-scrapy
-selenium
-scrapyd
-scrapyd-client
-gunicorn
-gevent
-validators
-redis

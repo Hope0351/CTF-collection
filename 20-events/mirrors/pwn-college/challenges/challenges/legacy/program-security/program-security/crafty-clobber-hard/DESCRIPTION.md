@@ -1,1 +1,0 @@
-Write a full exploit involving injecting shellcode, and a method of tricking the challenge into executing your payload.

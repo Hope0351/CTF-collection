@@ -1,1 +1,0 @@
-FLAG = "midnightctf{testing_the_flag_ok}"

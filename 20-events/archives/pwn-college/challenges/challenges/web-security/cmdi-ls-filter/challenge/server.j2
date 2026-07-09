@@ -1,0 +1,5 @@
+{%- extends "../../common/cmdi.py.j2" -%}
+
+{%- block filter -%}
+.replace(";", "").replace("&", "").replace("|", "").replace(">", "").replace("<", "").replace("(", "").replace(")", "").replace("`", "").replace("$", "")
+{%- endblock -%}

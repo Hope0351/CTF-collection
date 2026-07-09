@@ -1,4 +1,0 @@
-testLimit: 5000
-shrinkLimit: 1
-seqLen: 20
-testMode: assertion

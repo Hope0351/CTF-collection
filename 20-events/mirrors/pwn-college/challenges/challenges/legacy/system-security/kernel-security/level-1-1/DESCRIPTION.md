@@ -1,1 +1,0 @@
-Ease into kernel exploitation with this simple crackme level!

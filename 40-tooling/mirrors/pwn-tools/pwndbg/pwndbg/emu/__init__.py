@@ -1,3 +1,0 @@
-"""
-Emulation assistance from Unicorn.
-"""

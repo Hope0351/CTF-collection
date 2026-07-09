@@ -1,1 +1,0 @@
-Lets you get the flag by doing tricks with permissions!

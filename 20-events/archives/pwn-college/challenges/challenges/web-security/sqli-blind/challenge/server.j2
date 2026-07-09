@@ -1,0 +1,11 @@
+{%- extends "../../common/sqli-pw.py.j2" -%}
+
+{% block setup %}
+  {{- super() -}}
+  {%- set challenge.pw_name = "password" -%}
+  {%- set challenge.guest_pw = "password" -%}
+  {%- set challenge.quote_character = "'" -%}
+  {%- set challenge.admin_pw_code = 'open("/flag").read()' -%}
+  {%- set challenge.admin_print_flag = False -%}
+  {%- set challenge.password_parameter = challenge.parameter_password -%}
+{% endblock %}

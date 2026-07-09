@@ -1,1 +1,0 @@
-Use meltdown to read the flag from the kernel module's memory.  Note - This challenge must be executed inside the VM!

@@ -104,7 +104,7 @@ Yes — the MIT license permits this. We recommend forking the repository and tr
 
 ### Q: How was this collection compiled?
 
-See [`99-appendix/methodology.md`](methodology.md). The short version: 86 web-search queries across 8 thematic axes, de-duplicated and ranked by cross-search relevance, enriched with GitHub API metadata.
+See [`99-appendix/methodology.md`](methodology.md). The short version: 86 web-search queries across 8 thematic axes, de-duplicated and ranked by cross-search relevance, enriched with the collection API metadata.
 
 ### Q: How often is this collection updated?
 

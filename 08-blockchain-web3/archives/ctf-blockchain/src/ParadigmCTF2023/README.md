@@ -1,0 +1,33 @@
+# Paradigm CTF 2023
+
+Paradigm CTF: https://twitter.com/paradigm_ctf
+
+(Last year: [Paradigm CTF 2022 Writeup](../../../../../08-blockchain-web3/archives/ctf-blockchain))
+
+Result:
+
+![](solved_challenges.png)
+
+I spent the first several hours working on some jeopardy challenges and managed to solve Black Sheep, Grains of Sand, and Skill Based Game. After that, I dedicated the remainder of my time to King-of-the-Hill challenges.
+
+---
+
+## Jeopardy
+
+### Grains of Sand
+
+[Solver Code](GrainsOfSand)
+
+### Skill Based Game
+
+[Solver Code](SkillBasedGame)
+
+### Black Sheep
+
+[Solver Code](BlackSheep)
+
+## King of the Hill
+
+### Cosmic Radiation
+
+[Writeup & Solver Code](CosmicRadiation)

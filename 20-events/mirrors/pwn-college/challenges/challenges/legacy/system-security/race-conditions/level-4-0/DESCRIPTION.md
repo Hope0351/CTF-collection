@@ -1,1 +1,0 @@
-Exploit a race condition to corrupt memory and smash the stack!

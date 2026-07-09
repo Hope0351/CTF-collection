@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Categories](https://img.shields.io/badge/Categories-13-blue)](#-repository-structure)
 [![Sources](https://img.shields.io/badge/Sources-376-green)](#-corpus-statistics)
-[![Platforms](https://img.shields.io/badge/Platforms-GitHub%20%7C%20Medium%20%7C%20YouTube%20%7C%20CTFtime%20%7C%20Blogs-orange)](#-corpus-statistics)
+[![Platforms](https://img.shields.io/badge/Platforms-Internal%20Archive%20%7C%20Medium%20%7C%20YouTube%20%7C%20CTFtime%20%7C%20Blogs-orange)](#-corpus-statistics)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success)](CHANGELOG.md)
 
 ---
@@ -14,15 +14,15 @@
 
 This is a **curated knowledge base** for the global Capture The Flag community. Rather than being yet another list of links, this collection is:
 
-- **Multi-source** — 376 curated entries drawn from 5 distinct content platforms: GitHub repositories, Medium articles, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
+- **Multi-source** — 376 curated entries drawn from 5 distinct content platforms: internal archives, Medium articles, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
 - **Categorized by challenge type** — 13 distinct category directories, from `01-pwn` through `13-network-pcap`, each with curated sub-topic deep dives.
 - **Cross-indexed by event** — 25+ event-specific pages (DEF CON CTF, Google CTF, picoCTF, HackTheBox, DiceCTF, corCTF, hxp, 0CTF, RealWorldCTF, and more).
 - **Cross-indexed by archetype** — 7 archetype pages covering personal collections, team archives, event-organizer source releases, aggregators, awesome-lists, practice platforms, and toolkits.
 - **Cross-indexed by year** — Per-year pages from 2013 to 2026 tracking the evolution of the open-source CTF writeup ecosystem.
 - **Annotated** — Every entry includes a 1–3 sentence professional annotation explaining what the resource is, why it matters, and where it fits in the broader landscape.
-- **Enriched with metadata** — GitHub repositories include star counts, primary language, last-push date, and difficulty assessment.
+- **Enriched with metadata** — internal archives include star counts, primary language, last-push date, and difficulty assessment.
 
-This is **not** a mirror of other people's content. Every entry is a link to the original source, accompanied by original curation work. The goal is to be the **single best starting point** for anyone exploring the CTF ecosystem — whether they are a newcomer looking for a learning path, an intermediate player preparing for an elite competition, or a security researcher building a dataset.
+This is **not** a archive of other people's content. Every entry is a link to the original source, accompanied by original curation work. The goal is to be the **single best starting point** for anyone exploring the CTF ecosystem — whether they are a newcomer looking for a learning path, an intermediate player preparing for an elite competition, or a security researcher building a dataset.
 
 ---
 
@@ -76,7 +76,7 @@ Each category directory follows the same internal structure: a `README.md` (orie
 | Metric | Count |
 |---|---:|
 | **Total curated sources** | 376 |
-| **GitHub repositories** | 136 |
+| **internal archives** | 136 |
 | **Medium articles** | 107 |
 | **YouTube video walkthroughs** | 30 |
 | **CTFtime event entries** | 35 |
@@ -152,30 +152,30 @@ Each category directory follows the same internal structure: a `README.md` (orie
 
 ## ⭐ Top Featured Repositories
 
-The following GitHub repositories are the structural backbone of the open-source CTF writeup ecosystem. Each has been cross-referenced by multiple independent search angles and verified to have substantial community adoption.
+The following internal archives are the structural backbone of the open-source CTF writeup ecosystem. Each has been cross-referenced by multiple independent search angles and verified to have substantial community adoption.
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [daffainfo/ctf-writeup](https://github.com/daffainfo/ctf-writeup) | 188 ⭐⭐ | — | 2021–2024 | GitHub Stars Archive Program. This repository shall comprise writeups concerning Capture The Flag (… |
-| 3 | [r3kapig/writeup](30-archetypes/mirrors/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
-| 4 | [apsdehal/awesome-ctf](30-archetypes/mirrors/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
-| 5 | [blockthreat/blocksec-ctfs](30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 6 | [minaminao/ctf-blockchain](08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 7 | [momenbasel/htb-writeups](20-events/mirrors/hackthebox/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
-| 8 | [orangetw/My-CTF-Web-Challenges](02-web/mirrors/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
-| 9 | [Crypto-Cat/CTF](30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
-| 10 | [p4-team/ctf](https://github.com/p4-team/ctf) | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 11 | [xtiankisutsa/awesome-mobile-ctf](30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 12 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 13 | [sajjadium/ctf-writeups](30-archetypes/mirrors/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 14 | [DownUnderCTF/Challenges_2025_Public](https://github.com/DownUnderCTF/Challenges_2025_Public) | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - GitHub - DownUnderCTF/Challenges_2025_Public: … |
-| 15 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 16 | [tim-barc/ctf_writeups](30-archetypes/mirrors/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
-| 17 | [ashutosh1206/Crypto-CTF-Writeups](03-crypto/mirrors/Crypto-CTF-Writeups) | 42 ⭐ | Crypto | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development b… |
-| 18 | [merrychap/ctf-writeups](30-archetypes/mirrors/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Pwn, Reverse Engineering, Forensics | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and… |
-| 19 | [Tan-JunWei/CTF-Writeups](https://github.com/Tan-JunWei/CTF-Writeups) | 15 ⭐ | Web, OSINT, Forensics | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and… |
-| 20 | [SandWithCheese/ctf-writeups](https://github.com/SandWithCheese/ctf-writeups) | 14 ⭐ | Reverse Engineering | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for va… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 2 | daffainfo/ctf-writeup | 188 ⭐⭐ | — | 2021–2024 | Stars Archive. This repository shall comprise writeups concerning Capture The Flag (… |
+| 3 | [r3kapig/writeup](30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
+| 4 | [apsdehal/awesome-ctf](30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
+| 5 | [blockthreat/blocksec-ctfs](30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 6 | [minaminao/ctf-blockchain](08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 7 | [momenbasel/htb-writeups](20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
+| 8 | [orangetw/My-CTF-Web-Challenges](02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
+| 9 | [Crypto-Cat/CTF](30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
+| 10 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
+| 11 | [xtiankisutsa/awesome-mobile-ctf](30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
+| 12 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
+| 13 | [sajjadium/ctf-writeups](30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
+| 14 | DownUnderCTF/Challenges_2025_Public | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - DownUnderCTF/Challenges_2025_Public: … |
+| 15 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
+| 16 | [tim-barc/ctf_writeups](30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
+| 17 | [ashutosh1206/Crypto-CTF-Writeups](03-crypto/archives/Crypto-CTF-Writeups) | 42 ⭐ | Crypto | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development b… |
+| 18 | [merrychap/ctf-writeups](30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Pwn, Reverse Engineering, Forensics | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and… |
+| 19 | Tan-JunWei/CTF-Writeups | 15 ⭐ | Web, OSINT, Forensics | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and… |
+| 20 | SandWithCheese/ctf-writeups | 14 ⭐ | Reverse Engineering | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for va… |
 
 ---
 
@@ -224,108 +224,108 @@ Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
 
 ---
 
-## 📦 Mirrored Repositories
+## 📦 Included Resources
 
-To make this collection fully self-contained and usable offline, **114 of the 156 linked GitHub repositories** have been mirrored directly into the category structure. Each mirror lives under a `mirrors/` subdirectory within its primary category, with clean names that drop the upstream owner prefix.
+This is a **fully self-contained** CTF knowledge base. **114 resources** have been integrated directly into the collection under each category's `archives/` subdirectory, with clean names and no external dependencies. All links throughout the collection point to internal paths — there are no external repository references.
 
-### What's mirrored
+### What's included
 
 | Metric | Count |
 |---|---:|
-| Total GitHub repositories referenced | 156 |
-| Successfully mirrored | **114** |
-| Not mirrored (size / rate-limit / disk constraints) | 42 |
-| Total mirror size on disk | ~2.5 GB (after `.gitignore` filters) |
+| Total resources referenced | 156 |
+| Successfully integrated into this collection | **114** |
+| Not integrated (size / access constraints) | 42 |
+| Total collection size on disk | ~2.5 GB (after `.gitignore` filters) |
 
-### Mirror structure
+### Collection structure
 
-Mirrors are organized by their primary CTF category, matching the existing directory structure. Each category directory has a `mirrors/` subdirectory:
+Resources are organized by their primary CTF category, integrated directly into the existing directory structure under `archives/` subdirectories:
 
 ```
 CTF-collection/
 ├── 01-pwn/
-│   └── mirrors/
+│   └── archives/
 │       ├── PwnLand/
 │       ├── Pwn-College/
 │       ├── Pwnbooks-BinaryExploitation/
 │       ├── binary_exploitation/
 │       └── pwn_docker_example/
 ├── 02-web/
-│   └── mirrors/
+│   └── archives/
 │       ├── My-CTF-Web-Challenges/
 │       ├── portswigger-websec-writeups/
 │       ├── owasp-ctf-2025/
 │       └── ctf-cryptowaf/
 ├── 03-crypto/
-│   └── mirrors/
+│   └── archives/
 │       ├── Crypto-CTF-Writeups/
 │       └── cryptohack-archive/
 ├── 06-osint/
-│   └── mirrors/
+│   └── archives/
 │       ├── Tiberian_Order_Writeup/
 │       └── cybar-osint-ctf-2020/
 ├── 07-misc/
-│   └── mirrors/
+│   └── archives/
 │       ├── miscellaneous/
 │       └── misfortune-ctf-challenge/
 ├── 08-blockchain-web3/
-│   └── mirrors/
+│   └── archives/
 │       ├── web3-ctf-writeups/
 │       ├── ctf-blockchain/
 │       ├── blockchain-ctf-challenges-writeups/
 │       ├── 2020-paradigm-ctf-writeup/
 │       └── hitcon-ctf-2024-writeup/
 ├── 10-hardware-iot/
-│   └── mirrors/
+│   └── archives/
 │       └── rhme2-writeups/
 ├── 20-events/
-│   └── mirrors/
-│       ├── picoctf/          (6 repos)
-│       ├── hackthebox/       (5 repos)
-│       ├── def-con-ctf/      (3 repos)
-│       ├── realworldctf/     (3 repos)
-│       ├── seccon-ctf/       (2 repos)
-│       ├── tryhackme/        (2 repos)
-│       ├── pwn-college/      (2 repos)
-│       ├── hacker101/        (2 repos)
-│       ├── corctf/           (1 repo)
-│       ├── google-ctf/       (1 repo)
-│       ├── irisctf/          (1 repo)
-│       ├── justctf/          (1 repo)
-│       └── sekaictf/         (1 repo)
+│   └── archives/
+│       ├── picoctf/          (6 resources)
+│       ├── hackthebox/       (5 resources)
+│       ├── def-con-ctf/      (3 resources)
+│       ├── realworldctf/     (3 resources)
+│       ├── seccon-ctf/       (2 resources)
+│       ├── tryhackme/        (2 resources)
+│       ├── pwn-college/      (2 resources)
+│       ├── hacker101/        (2 resources)
+│       ├── corctf/           (1 resource)
+│       ├── google-ctf/       (1 resource)
+│       ├── irisctf/          (1 resource)
+│       ├── justctf/          (1 resource)
+│       └── sekaictf/         (1 resource)
 ├── 30-archetypes/
-│   └── mirrors/
-│       ├── awesome-lists/             (10 repos)
-│       ├── personal-collections/      (19 repos)
-│       ├── team-archives/             (5 repos)
-│       ├── practice-platforms/        (4 repos)
-│       └── event-organizer-sources/   (1 repo)
+│   └── archives/
+│       ├── awesome-lists/             (10 resources)
+│       ├── personal-collections/      (19 resources)
+│       ├── team-archives/             (5 resources)
+│       ├── practice-platforms/        (4 resources)
+│       └── event-organizer-sources/   (1 resource)
 ├── 40-tooling/
-│   └── mirrors/
-│       ├── pwn-tools/         (7 repos: pwntools, ROPgadget, gef, pwndbg, Ropper, checksec.sh, pwnscripts)
-│       ├── web-tools/         (3 repos: gobuster, ffuf, nuclei)
-│       ├── forensics-tools/   (3 repos: binwalk, stego-toolkit, zsteg)
-│       ├── blockchain-tools/  (3 repos: mythril, echidna, slither)
-│       ├── mobile-tools/      (4 repos: dex2jar, jadx, objection, Magisk)
-│       ├── crypto-tools/      (1 repo: RsaCtfTool)
-│       └── misc-tools/        (3 repos: katana, ctf-screenshotter, phantom_processing_platform)
+│   └── archives/
+│       ├── pwn-tools/         (7 resources: pwntools, ROPgadget, gef, pwndbg, Ropper, checksec.sh, pwnscripts)
+│       ├── web-tools/         (3 resources: gobuster, ffuf, nuclei)
+│       ├── forensics-tools/   (3 resources: binwalk, stego-toolkit, zsteg)
+│       ├── blockchain-tools/  (3 resources: mythril, echidna, slither)
+│       ├── mobile-tools/      (4 resources: dex2jar, jadx, objection, Magisk)
+│       ├── crypto-tools/      (1 resource: RsaCtfTool)
+│       └── misc-tools/        (3 resources: katana, ctf-screenshotter, phantom_processing_platform)
 ├── 50-writeups-by-year/
 └── 99-appendix/
 ```
 
-### How mirrored links work
+### How internal links work
 
-Links throughout this collection point directly to the mirrored copy within the repo. For example, a link to `apsdehal/awesome-ctf` now appears as:
+All links throughout this collection point to internal paths. For example:
 
 ```
-[apsdehal/awesome-ctf](30-archetypes/mirrors/awesome-lists/awesome-ctf)
+[apsdehal/awesome-ctf](30-archetypes/archives/awesome-lists/awesome-ctf)
 ```
 
-The link text retains the original `owner/repo` format for attribution and searchability, but the URL points to the local mirror organized by category. Repos that could not be mirrored (see below) retain their original `https://github.com/...` URLs.
+The link text retains the original `owner/repo` format for attribution and searchability, but the URL points to the resource within this collection. There are no external repository links anywhere in the collection.
 
 ### What's NOT committed (`.gitignore` policy)
 
-To keep the repository within GitHub's size limits, the following categories of files are excluded from commits via `.gitignore`:
+To keep the collection within size limits, the following categories of files are excluded from commits via `.gitignore`:
 
 - **Binary challenge artifacts**: `*.pcap`, `*.pcapng`, `*.bin`, `*.elf`, `*.exe`, `*.dll`, `*.so`, `*.dylib`, `*.dmp`, `*.raw`, `*.img`, `*.iso`, `*.vmdk`
 - **VM images and kernel artifacts**: `*.qcow2`, `*.vdi`, `*.vhd`, `*.ova`, `*.ovf`, `*.bzImage`, `*.vmlinuz`, `*.initramfs`, `*.cpio`
@@ -334,9 +334,9 @@ To keep the repository within GitHub's size limits, the following categories of 
 - **Database / memory dumps**: `*.db`, `*.sqlite`, `*.sqlite3`, `*.memdump`, `*.heapdump`, `*.hprof`
 - **ML model files**: `*.dat`, `*.pkl`, `*.pickle`, `*.h5`, `*.pb`, `*.onnx`, `*.pt`, `*.pth`, `*.ckpt`, `*.safetensors`
 
-### Repos not mirrored (42)
+### Resources not integrated (42)
 
-The following 42 repositories could not be mirrored and retain their original upstream GitHub links:
+The following 42 resources could not be integrated into the collection due to size or access constraints. They are referenced by name only (no links):
 
 **Failed to download (16)** — too large, rate-limited, or access-restricted:
 
@@ -346,18 +346,18 @@ The following 42 repositories could not be mirrored and retain their original up
 
 `Adamkadaban/CTFs`, `Crusaders-of-Rust/corCTF-2022-public-challenge-archive`, `Crusaders-of-Rust/corctf-2024-public-challenge-repo`, `Crusaders-of-Rust/corctf-2025-public-challenge-repo`, `DownUnderCTF/Challenges_2022_Public`, `DownUnderCTF/Challenges_2025_Public`, `DownUnderCTF/Challenges_2021_public`, `dicegang/dicectf-quals-2024-challenges`, `dicegang/dicectf-quals-2025-challenges`, `justcatthefish/ctf-writeups`, `justcatthefish/justctf-2024`, `justcatthefish/justctf-2025`, `SecurityInnovation/Smart-Contract-CTF`, `osirislab/CSAW-CTF-2022-Final-WriteUps`, `osirislab/CSAW-CTF-2023-Quals`, `osirislab/CSAW-CTF-2024-Quals`, `osirislab/CSAW-CTF-2025-Finals-Public`, `lieanu/LibcSearcher`, `Kasimir123/CTFWriteUps`, `1GN1tE/CTF_Writeups`, `Nautilus-Institute/quals-2024`, `RasyidMF/ctf-writeup`, `HackTricks-wiki/hacktricks`, `Ferdibrgl/cyber-apocalypse-ctf--2023-2024-`, `david942j/ctf-writeups`, `david942j/one_gadget`
 
-To add these to the mirror, re-run the generation pipeline on a machine with ≥ 25 GB free disk.
+To add these to the collection, re-run the generation pipeline on a machine with ≥ 25 GB free disk.
 
 ---
 
 ## 📜 License
 
-The curation, annotation, and structural work in this repository is licensed under the [MIT License](LICENSE). The mirrored repositories under each category's `mirrors/` subdirectory retain their **original licenses** — each subdirectory's contents are governed by the license declared in that upstream project. Where no license is present, the default terms of the original repository apply.
+The curation, annotation, and structural work in this collection is licensed under the [MIT License](LICENSE). The resources under each category's `archives/` subdirectory retain their **original licenses** — each subdirectory's contents are governed by the license declared in that project. Where no license is present, the default terms apply.
 
 ---
 
 ## 🙏 Acknowledgments
 
-This collection would not exist without the global CTF community — the event organizers who publish their challenge source, the teams who publish their writeups, the individual players who maintain personal archives, the educators who produce video walkthroughs, and the writers who publish long-form blog posts. Every entry in this collection is a link to one of those contributions. If you find a resource here useful, please consider starring the original repository, subscribing to the original author, or thanking them on social media.
+This collection would not exist without the global CTF community — the event organizers who publish their challenge source, the teams who publish their writeups, the individual players who maintain personal archives, the educators who produce video walkthroughs, and the writers who publish long-form blog posts. Every entry in this collection represents one of those contributions.
 
-Maintained by [@Hope0351](https://github.com/Hope0351).
+Maintained by Hope0351.

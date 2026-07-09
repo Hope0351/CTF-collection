@@ -1,1 +1,0 @@
-Ease into kernel exploitation with another crackme level and learn how kernel devices communicate.

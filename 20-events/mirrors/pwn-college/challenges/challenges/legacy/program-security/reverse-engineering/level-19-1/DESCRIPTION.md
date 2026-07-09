@@ -1,2 +1,0 @@
-This challenge is using VM-based obfuscation: reverse engineer the custom emulator and architecture to understand how to get the flag!
-This is a full end-to-end obfuscated challenge, like you might see in real-world obfuscated code!

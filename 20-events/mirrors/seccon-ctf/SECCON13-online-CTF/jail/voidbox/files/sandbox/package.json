@@ -1,7 +1,0 @@
-{
-  "name": "voidbox",
-  "private": true,
-  "dependencies": {
-    "fastify": "^5.1.0"
-  }
-}

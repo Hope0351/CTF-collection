@@ -1,1 +1,0 @@
-Leverage calling free() on a stack pointer to read secret data.

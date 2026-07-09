@@ -1,1 +1,0 @@
-Exploit a kernel device utilizing a userspace binary, with a twist!

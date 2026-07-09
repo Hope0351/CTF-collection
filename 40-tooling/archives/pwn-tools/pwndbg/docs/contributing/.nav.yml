@@ -1,0 +1,16 @@
+# https://lukasgeiter.github.io/mkdocs-awesome-nav/
+# Allows us to specify the order of these pages.
+nav:
+  - index.md
+  - setup-pwndbg-dev.md
+  - dev-notes.md
+  - writing-tests.md
+  - adding-a-command.md
+  - adding-a-parameter.md
+  - common-pitfalls.md
+  - improving-annotations.md
+  - making-a-gif.md
+  - testing-crossarch.md
+  - libc-provider.md
+  - allocator.md
+  - stacked-pr.md

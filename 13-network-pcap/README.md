@@ -6,32 +6,32 @@
 
 Packet-capture analysis for credential extraction, exfiltration detection, protocol-level attack reconstruction, and traffic-forensics. Wireshark and tshark are the dominant tools; writeups typically include reproducible display filters.
 
-This category contains **13 curated sources** from across the CTF ecosystem: 13 GitHub repositories, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
+This category contains **13 curated sources** from across the CTF ecosystem: 13 the collection repositories, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
-## 🏆 Recommended Repositories (GitHub)
+## 🏆 Recommended Repositories (the collection)
 
-The following GitHub repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
+The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
 
 | # | Repository | Stars | Difficulty | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [apsdehal/awesome-ctf](../30-archetypes/mirrors/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Beginner | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials. This list aims to h… |
-| 2 | [momenbasel/htb-writeups](../20-events/mirrors/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 3 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
-| 4 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Varied | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains all source files if th… |
-| 5 | [tim-barc/ctf_writeups](../30-archetypes/mirrors/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Varied | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to solve various Capture T… |
-| 6 | [JohnHammond/ctf-katana](../30-archetypes/mirrors/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
-| 7 | [devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
-| 8 | [JohnHammond/miscellaneous](../07-misc/mirrors/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
-| 9 | [Sudoite/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Varied | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussion about where I mad… |
-| 10 | [mbiesiad/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Varied | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity writeups - from CTF c… |
-| 11 | [MacacaHub/CTF-writeups](../30-archetypes/mirrors/personal-collections/CTF-writeups-MacacaHub) | 4  | Varied | 2019–2021 | 2021. BambooFox CTF 2021; HTCF Mid CTF 2021 (only for NSYSU course) · 2020. TCat CTF 2020; TJCTF 2020; HTCF Mid CTF 202… |
-| 12 | [tsids/picoCTF-Writeups](../20-events/mirrors/picoctf/picoCTF-Writeups-tsids) | 1  | Beginner | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Challenge Title>.md. Fee… |
-| 13 | [BarakBinyamin/ctf](../30-archetypes/mirrors/personal-collections/ctf-BarakBinyamin) | 1  | Varied | 2023–2023 | The IOT-light uses hardcoded credentials to connect to WiFi, check for updates and communications by connecting to a cu… |
+| 1 | [apsdehal/awesome-ctf](../30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Beginner | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials. This list aims to h… |
+| 2 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
+| 3 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
+| 4 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Varied | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains all source files if th… |
+| 5 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Varied | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to solve various Capture T… |
+| 6 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
+| 7 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
+| 8 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
+| 9 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Varied | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussion about where I mad… |
+| 10 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Varied | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity writeups - from CTF c… |
+| 11 | [MacacaHub/CTF-writeups](../30-archetypes/archives/personal-collections/CTF-writeups-MacacaHub) | 4  | Varied | 2019–2021 | 2021. BambooFox CTF 2021; HTCF Mid CTF 2021 (only for NSYSU course) · 2020. TCat CTF 2020; TJCTF 2020; HTCF Mid CTF 202… |
+| 12 | [tsids/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 1  | Beginner | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Challenge Title>.md. Fee… |
+| 13 | [BarakBinyamin/ctf](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) | 1  | Varied | 2023–2023 | The IOT-light uses hardcoded credentials to connect to WiFi, check for updates and communications by connecting to a cu… |
 
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond GitHub repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -58,11 +58,11 @@ plaintext credential extraction.
 
 Top resources for this sub-topic:
 
-- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-ctf) — 🐙 GitHub Repo
-- [Hack The Box Writeups - The Ultimate HTB Resource - GitHub](../20-events/mirrors/hackthebox/htb-writeups) — 🐙 GitHub Repo
-- [GitHub - Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for](https://github.com/Adamkadaban/CTFs) — 🐙 GitHub Repo
-- [Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - GitHub](https://github.com/Kasimir123/CTFWriteUps) — 🐙 GitHub Repo
-- [JohnHammond/ctf-katana: This repository aims to hold  - GitHub](../30-archetypes/mirrors/awesome-lists/ctf-katana) — 🐙 GitHub Repo
+- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
+- [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
+- Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
+- Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - the collection — 📚 Repository
+- [JohnHammond/ctf-katana: This repository aims to hold  - the collection](../30-archetypes/archives/awesome-lists/ctf-katana) — 📚 Repository
 
 ### Custom protocol analysis
 
@@ -70,7 +70,7 @@ Wireshark dissector writing.
 
 Top resources for this sub-topic:
 
-- [BarakBinyamin/ctf: Some embedded network attacks  - GitHub](../30-archetypes/mirrors/personal-collections/ctf-BarakBinyamin) — 🐙 GitHub Repo
+- [BarakBinyamin/ctf: Some embedded network attacks  - the collection](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) — 📚 Repository
 
 ### TLS decryption
 
@@ -85,7 +85,7 @@ If you're new to network & pcap analysis, work through the resources in this ord
 
 1. **Start with a structured learning platform.** Begin with the Wireshark sample captures, then work through Malware Traffic Analysis exercises.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal GitHub repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

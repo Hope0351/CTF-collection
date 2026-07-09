@@ -1,1 +1,0 @@
-How does SETUID and cp work?

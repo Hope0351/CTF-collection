@@ -1,5 +1,0 @@
-#!/bin/bash -p
-
-PATH=/usr/bin
-read FLAG < /flag
-[ "$1" != "$FLAG" ] && echo "Incorrect Guess. Goodbye!" || bash -i

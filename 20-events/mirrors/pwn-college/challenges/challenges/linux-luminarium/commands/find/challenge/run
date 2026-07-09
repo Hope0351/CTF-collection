@@ -1,3 +1,0 @@
-#!/bin/bash
-
-fold -s <<< "The flag is hidden (and readable) somewhere on the filesystem. Go find it!"

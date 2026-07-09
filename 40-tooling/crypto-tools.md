@@ -11,7 +11,7 @@ SageMath is the dominant computational algebra system for crypto CTFs — it pro
 | # | Tool | Language | Description |
 |---:|---|---|---|
 | 1 | [SageMath](https://www.sagemath.org/) | Python/Cython | The dominant computational algebra system for crypto CTFs. Provides Python syntax with full symbolic algebra, number theory, and cryptography primitives. Install via `sage` package or Docker. |
-| 2 | [RsaCtfTool](../40-tooling/mirrors/crypto-tools/RsaCtfTool) | Python | Automates common RSA attacks: Wiener, Hastad, common modulus, Fermat, etc. Good for quick wins. |
+| 2 | [RsaCtfTool](../40-tooling/archives/crypto-tools/RsaCtfTool) | Python | Automates common RSA attacks: Wiener, Hastad, common modulus, Fermat, etc. Good for quick wins. |
 | 3 | [yafu](https://sourceforge.net/projects/yafu/) | C | Advanced factorization tool. Uses SIQS and GNFS. Faster than SageMath's `factor()` for hard semiprimes. |
 | 4 | [PARI/GP](https://pari.math.u-bordeaux.fr/) | C | Number theory computation system. Older than SageMath but faster for some operations. |
 | 5 | [pycryptodome](https://www.pycryptodome.org/) | Python | Python crypto library. Standard for implementing AES, RSA, ECC, hashes in exploit scripts. |

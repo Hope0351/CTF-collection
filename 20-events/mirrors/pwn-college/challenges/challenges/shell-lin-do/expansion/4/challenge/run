@@ -1,5 +1,0 @@
-#!/usr/bin/exec-suid --real --environ=none -- /bin/sh -p
-
-PATH=/usr/bin
-cd /tmp
-cat /flag | tr -d [A-Za-z0-9]

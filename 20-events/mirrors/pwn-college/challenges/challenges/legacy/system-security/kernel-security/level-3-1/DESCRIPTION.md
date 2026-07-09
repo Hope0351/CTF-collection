@@ -1,1 +1,0 @@
-Ease into kernel exploitation with another crackme level, this time with some privilege escalation (whoami?).

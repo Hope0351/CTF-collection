@@ -1,6 +1,0 @@
-#!/usr/bin/exec-suid --real --environ=none -- /bin/bash -p
-
-PATH=/bin
-
-[[ "$1" = *flag ]] && exit 1
-cat /$(basename "$1")

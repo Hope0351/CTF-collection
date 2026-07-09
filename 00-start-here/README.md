@@ -27,7 +27,7 @@ The two main formats are **jeopardy-style** (solve standalone challenges in any 
 ## Why play CTFs?
 
 - **Learn real security skills** — CTF challenges are distilled, gamified versions of real-world vulnerabilities. The skills you build transfer directly to bug-bounty hunting, penetration testing, and security research.
-- **Build a portfolio** — a well-maintained writeup repository on GitHub is the single most credible credential for an aspiring offensive-security professional. Many CTF players have been hired on the strength of their writeup archives alone.
+- **Build a portfolio** — a well-maintained writeup repository is the single most credible credential for an aspiring offensive-security professional. Many CTF players have been hired on the strength of their writeup archives alone.
 - **Join a community** — the global CTF community is large, welcoming, and geographically distributed. Most major cities have a local CTF team or meetup.
 - **Compete at the highest level** — top CTF players are recruited by national-security agencies, intelligence services, and top-tier security firms. DEF CON CTF winners are essentially world-champion-level security researchers.
 

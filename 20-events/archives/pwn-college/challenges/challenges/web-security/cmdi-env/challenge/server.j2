@@ -1,0 +1,11 @@
+{%- extends "../../common/cmdi.py.j2" -%}
+
+{%- block setup -%}
+  {{- super() -}}
+  {%- set challenge.input_parameter = challenge.parameter_timezone -%}
+  {%- set challenge.default_parameter_value = "MST" -%}
+{%- endblock -%}
+
+{%- block service_description -%}Welcome to the timezone service! Please choose a timezone to get the time there.{%- endblock -%}
+
+{%- block command -%}f"TZ={arg} date"{%- endblock -%}

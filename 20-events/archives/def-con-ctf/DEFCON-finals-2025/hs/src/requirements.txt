@@ -1,0 +1,8 @@
+openai==1.101.0
+PyYAML==6.0.2
+pydantic==2.11.7
+RapidFuzz==3.13.0
+streamlit==1.48.1
+logfire==4.3.5
+docopt==0.6.2
+python-dotenv==1.1.1

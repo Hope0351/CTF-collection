@@ -10,11 +10,11 @@
 
 ## Curated Resources for idekCTF
 
-### GitHub Repositories (1)
+### the collection Repositories (1)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 
 
 ### Articles, Videos & Blog Posts (1)

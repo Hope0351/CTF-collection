@@ -1,1 +1,0 @@
-Leverage a stack leak while crafting a ROP chain to obtain the flag!

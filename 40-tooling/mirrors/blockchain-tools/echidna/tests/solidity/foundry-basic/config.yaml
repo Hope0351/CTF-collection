@@ -1,4 +1,0 @@
-testMode: foundry
-testLimit: 5000
-shrinkLimit: 100
-seqLen: 1

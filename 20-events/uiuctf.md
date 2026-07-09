@@ -10,16 +10,16 @@
 
 ## Curated Resources for UIUCTF
 
-### GitHub Repositories (6)
+### the collection Repositories (6)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [daffainfo/ctf-writeup](https://github.com/daffainfo/ctf-writeup) | 188 ⭐⭐ | — | 2021–2024 | GitHub Stars Archive Program. This repository shall comprise writeups concerning Capture The Flag (… |
-| 3 | [sajjadium/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 4 | [sigpwny/UIUCTF-2023-Public](https://github.com/sigpwny/UIUCTF-2023-Public) | 39 ⭐ | Pwn, Web, Cloud | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of … |
-| 5 | [mbiesiad/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
-| 6 | [silly-lily/CTF-Writeups](https://github.com/silly-lily/CTF-Writeups) | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 2 | daffainfo/ctf-writeup | 188 ⭐⭐ | — | 2021–2024 | Stars Archive. This repository shall comprise writeups concerning Capture The Flag (… |
+| 3 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
+| 4 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Pwn, Web, Cloud | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of … |
+| 5 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
+| 6 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
 
 
 ### Articles, Videos & Blog Posts (3)

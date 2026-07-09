@@ -1,0 +1,141 @@
+name: Publish Challenges
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      challenge_filter:
+        description: Challenge path glob to publish.
+        required: false
+        default: ""
+
+concurrency:
+  group: publish-challenges-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  determine-modified-challenges:
+    runs-on: ubuntu-latest
+    outputs:
+      challenges: ${{ steps.determine-modified-challenges.outputs.challenges }}
+      modified_since_ref: ${{ steps.determine-modified-challenges.outputs.modified_since_ref }}
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Determine modified challenges
+      id: determine-modified-challenges
+      uses: ./.github/actions/determine-modified-challenges
+      with:
+        challenge_filter: ${{ inputs.challenge_filter || vars.CHALLENGE_FILTER || '**' }}
+
+
+  publish:
+    needs: determine-modified-challenges
+    if: ${{ needs.determine-modified-challenges.outputs.challenges != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        challenges: ${{ fromJson(needs.determine-modified-challenges.outputs.challenges) }}
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ./.github/actions/setup-nix
+    - uses: ./.github/actions/setup-challenge-runtime
+
+    - name: Build challenge images
+      id: build-challenge-images
+      shell: 'nix develop -c bash -euo pipefail {0}'
+      env:
+        CHALLENGES_DIR: challenges/${{ matrix.challenges }}
+      run: |
+        challenge_images="$RUNNER_TEMP/challenge-images.txt"
+        pwnshop build "$CHALLENGES_DIR" | tee "$challenge_images"
+        echo "challenge_images=$challenge_images" >> "$GITHUB_OUTPUT"
+
+    - name: Test challenges
+      uses: ./.github/actions/test-challenges
+      with:
+        challenges: ${{ matrix.challenges }}
+        modified_since_ref: ""
+        gpg_private_key: ${{ secrets.GPG_ROOT_PRIVATE_KEY }}
+
+    - uses: ./.github/actions/read-registry-config
+      id: registry-config
+
+    - name: Prepare challenge registry artifacts
+      id: prepare-registry-artifacts
+      shell: 'nix develop -c bash -euo pipefail {0}'
+      env:
+        REGISTRY_SECRET: ${{ secrets.REGISTRY_SECRET }}
+      run: |
+        containerd_blobs_dir="/mnt/pwn.college/containerd/io.containerd.content.v1.content/blobs"
+        publish_blobs_dir="/mnt/publish/blobs"
+        publish_manifests_dir="/mnt/publish/manifests"
+        challenge_images="${{ steps.build-challenge-images.outputs.challenge_images }}"
+        sudo mkdir -p "$publish_blobs_dir" "$publish_manifests_dir"
+        while IFS= read -r image_id; do
+          challenge_slug="$(docker image inspect --format '{{index .Config.Labels "pwncollege.challenge"}}' "$image_id")"
+          if [ -n "$REGISTRY_SECRET" ]; then
+            challenge_slug="$REGISTRY_SECRET/$challenge_slug"
+          fi
+          stack=("$image_id")
+          while ((${#stack[@]})); do
+            digest="${stack[-1]}"
+            digest_path="${digest//:/\/}"
+            unset 'stack[-1]'
+            sudo mkdir -p "$publish_blobs_dir/${digest_path%%/*}"
+            sudo ln "$containerd_blobs_dir/$digest_path" "$publish_blobs_dir/$digest_path" 2>/dev/null || continue
+            mapfile -t -O "${#stack[@]}" stack < <(
+              sudo jq -r '.manifests[]?.digest,.config.digest?,.layers[]?.digest? | select(type=="string")' \
+                "$containerd_blobs_dir/$digest_path" 2>/dev/null
+            )
+          done
+          sudo mkdir -p "$publish_manifests_dir/$challenge_slug"
+          printf '%s\n' "$image_id" | sudo tee "$publish_manifests_dir/$challenge_slug/latest" >/dev/null
+        done < "$challenge_images"
+        {
+          echo "publish_blobs_dir=$publish_blobs_dir"
+          echo "publish_manifests_dir=$publish_manifests_dir"
+        } >> "$GITHUB_OUTPUT"
+
+    - name: Publish challenge registry artifacts
+      shell: 'nix shell nixpkgs#rclone --command bash --noprofile --norc -euo pipefail {0}'
+      env:
+        R2_BUCKET_NAME: ${{ steps.registry-config.outputs.bucket_name }}
+        RCLONE_CONFIG_R2_TYPE: s3
+        RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+        RCLONE_CONFIG_R2_ENDPOINT: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY }}
+        RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_KEY }}
+      run: |
+        publish_blobs_dir="${{ steps.prepare-registry-artifacts.outputs.publish_blobs_dir }}"
+        publish_manifests_dir="${{ steps.prepare-registry-artifacts.outputs.publish_manifests_dir }}"
+
+        echo "::group::rclone blobs"
+        rclone copy "$publish_blobs_dir" "r2:${R2_BUCKET_NAME}/blobs" --ignore-existing --config /dev/null --stats-one-line --stats-log-level NOTICE
+        echo "::endgroup::"
+
+        echo "::group::rclone manifests"
+        rclone copy "$publish_manifests_dir" "r2:${R2_BUCKET_NAME}/manifests" --config /dev/null --stats-one-line --stats-log-level NOTICE
+        echo "::endgroup::"
+
+    - name: Update dojo
+      if: ${{ vars.DOJO_URL != '' && hashFiles(format('challenges/{0}/dojo.yml', matrix.challenges)) != '' }}
+      shell: 'nix shell nixpkgs#uv --command bash --noprofile --norc -euo pipefail {0}'
+      env:
+        CHALLENGES_DIR: challenges/${{ matrix.challenges }}
+        DOJO_URL: ${{ vars.DOJO_URL }}
+        DOJO_TOKEN: ${{ secrets.DOJO_TOKEN }}
+        REGISTRY_HOST: ${{ steps.registry-config.outputs.registry_host }}
+        REGISTRY_SECRET: ${{ secrets.REGISTRY_SECRET }}
+      run: |
+        registry="$REGISTRY_HOST"
+        if [ -n "$REGISTRY_SECRET" ]; then
+          registry="$registry/$REGISTRY_SECRET"
+        fi
+        ./tools/dojo/update-dojo --registry "$registry" "$CHALLENGES_DIR/dojo.yml"
+
+    - name: Report runtime storage
+      if: always()
+      uses: ./.github/actions/report-runtime-storage

@@ -1,9 +1,0 @@
-name: Advent of Pwn
-type: public
-id: advent-of-pwn
-
-award:
-  emoji: 🎅
-
-modules:
-- id: "2025"

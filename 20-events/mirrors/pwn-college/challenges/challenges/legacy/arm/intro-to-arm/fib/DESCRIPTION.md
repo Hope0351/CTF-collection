@@ -1,1 +1,0 @@
-Write a fib function.

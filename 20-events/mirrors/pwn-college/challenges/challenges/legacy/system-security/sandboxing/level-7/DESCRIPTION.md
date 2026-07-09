@@ -1,1 +1,0 @@
-Escape a chroot sandbox using shellcode, but this time only using the following syscalls: ["chdir", "chroot", "mkdir", "open", "read", "write", "sendfile"]

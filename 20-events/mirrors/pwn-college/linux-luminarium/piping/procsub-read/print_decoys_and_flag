@@ -1,5 +1,0 @@
-#!/opt/pwn.college/bash
-
-source /challenge/.check_stdout
-check_stdout || exit 1
-cat /challenge/.decoys_and_real

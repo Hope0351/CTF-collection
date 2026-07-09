@@ -10,30 +10,30 @@
 
 ## Curated Resources for HackTheBox
 
-### GitHub Repositories (21)
+### the collection Repositories (21)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [apsdehal/awesome-ctf](../30-archetypes/mirrors/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
-| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 3 | [momenbasel/htb-writeups](../20-events/mirrors/hackthebox/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
-| 4 | [Crypto-Cat/CTF](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
-| 5 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 6 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 7 | [tim-barc/ctf_writeups](../30-archetypes/mirrors/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
-| 8 | [JohnHammond/ctf-katana](../30-archetypes/mirrors/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "p… |
-| 9 | [hackthebox/cyber-apocalypse-2025](../20-events/mirrors/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Forensics, Crypto, Reverse Engineering | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fie… |
-| 10 | [dominicbreuker/stego-toolkit](../40-tooling/mirrors/forensics-tools/stego-toolkit) | 2,675 ⭐⭐⭐⭐ | Stego, Forensics, Hardware | n/a | This project is a Docker image useful for solving Steganography challenges as those you can find at… |
-| 11 | [hackplayers/hackthebox-writeups](https://github.com/hackplayers/hackthebox-writeups) | 2,044 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups develop… |
-| 12 | [devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
-| 13 | [LazyTitan33/CTF-Writeups](../30-archetypes/mirrors/personal-collections/CTF-Writeups-LazyTitan33) | 100 ⭐⭐ | — | 2022–2024 | HTB - Business CTF 2022 ; HTB - Business CTF 2023 · HTB - Business CTF 2023 ; HTB - Business CTF 20… |
-| 14 | [hackthebox/business-ctf-2025](../20-events/mirrors/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Blockchain, ICS/SCADA | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Star… |
-| 15 | [D4mianWayne/PwnLand](../01-pwn/mirrors/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
-| 16 | [hagronnestad/ctf-htb-cyber-apocalypse-2024](../20-events/mirrors/hackthebox/cyber-apocalypse-2024) | 6 ⭐ | Forensics, Crypto, Reverse Engineering | 2024–2024 | HackTheBox CTF Cyber Apocalypse 2024: No fighting, no backstabbing, and no factions fighting Phreak… |
-| 17 | [mbiesiad/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
-| 18 | [0xETX/CTF-Writeups](../30-archetypes/mirrors/personal-collections/CTF-Writeups-0xETX) | 4  | Programming, OSINT, Forensics | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories s… |
-| 19 | [iash8090/Hack-The-Box](../20-events/mirrors/hackthebox/Hack-The-Box) | 4  | — | n/a | Great Writeups for HTB and some articals · All the HTB machines, challenges writeups with passwd pr… |
-| 20 | [Ferdibrgl/cyber-apocalypse-ctf--2023-2024-](https://github.com/Ferdibrgl/cyber-apocalypse-ctf--2023-2024-) | 1  | — | 2023–2024 | HTB-Cyber-Apocalypse-2023. My writeups for the 2023 Hackthebox Cyber Apocalypse CTF! logo. About. c… |
+| 1 | [apsdehal/awesome-ctf](../30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
+| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 3 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
+| 4 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
+| 5 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
+| 6 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
+| 7 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
+| 8 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "p… |
+| 9 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Forensics, Crypto, Reverse Engineering | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fie… |
+| 10 | [dominicbreuker/stego-toolkit](../40-tooling/archives/forensics-tools/stego-toolkit) | 2,675 ⭐⭐⭐⭐ | Stego, Forensics, Hardware | n/a | This project is a Docker image useful for solving Steganography challenges as those you can find at… |
+| 11 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups develop… |
+| 12 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
+| 13 | [LazyTitan33/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-LazyTitan33) | 100 ⭐⭐ | — | 2022–2024 | HTB - Business CTF 2022 ; HTB - Business CTF 2023 · HTB - Business CTF 2023 ; HTB - Business CTF 20… |
+| 14 | [hackthebox/business-ctf-2025](../20-events/archives/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Blockchain, ICS/SCADA | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Star… |
+| 15 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
+| 16 | [hagronnestad/ctf-htb-cyber-apocalypse-2024](../20-events/archives/hackthebox/cyber-apocalypse-2024) | 6 ⭐ | Forensics, Crypto, Reverse Engineering | 2024–2024 | HackTheBox CTF Cyber Apocalypse 2024: No fighting, no backstabbing, and no factions fighting Phreak… |
+| 17 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
+| 18 | [0xETX/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-0xETX) | 4  | Programming, OSINT, Forensics | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories s… |
+| 19 | [iash8090/Hack-The-Box](../20-events/archives/hackthebox/Hack-The-Box) | 4  | — | n/a | Great Writeups for HTB and some articals · All the HTB machines, challenges writeups with passwd pr… |
+| 20 | Ferdibrgl/cyber-apocalypse-ctf--2023-2024- | 1  | — | 2023–2024 | HTB-Cyber-Apocalypse-2023. My writeups for the 2023 Hackthebox Cyber Apocalypse CTF! logo. About. c… |
 
 
 ### Articles, Videos & Blog Posts (39)

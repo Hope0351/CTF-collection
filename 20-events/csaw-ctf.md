@@ -10,23 +10,23 @@
 
 ## Curated Resources for CSAW CTF
 
-### GitHub Repositories (13)
+### the collection Repositories (13)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [p4-team/ctf](https://github.com/p4-team/ctf) | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 3 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 4 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 5 | [sajjadium/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 6 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/mirrors/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Programming, Crypto, Reverse Engineering | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and… |
-| 7 | [osirislab/CSAW-CTF-2023-Quals](https://github.com/osirislab/CSAW-CTF-2023-Quals) | 31 ⭐ | — | 2023–2023 | Challenge repository for the 2023 CSAW CTF Qualifiers - osirislab/CSAW-CTF-2023-Quals. |
-| 8 | [Sudoite/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
-| 9 | [osirislab/CSAW-CTF-2024-Quals](https://github.com/osirislab/CSAW-CTF-2024-Quals) | 11 ⭐ | — | 2024–2024 | Public Archive for CSAW 2024 Quals. Contribute to osirislab/CSAW-CTF-2024-Quals development by crea… |
-| 10 | [osirislab/CSAW-CTF-2022-Final-WriteUps](https://github.com/osirislab/CSAW-CTF-2022-Final-WriteUps) | 6 ⭐ | Pwn, Reverse Engineering | 2022–2022 | All final teams can share their solutions. If you like, please open a "Pull Request" for your write… |
-| 11 | [osirislab/CSAW-CTF-2025-Finals-Public](https://github.com/osirislab/CSAW-CTF-2025-Finals-Public) | 5 ⭐ | — | 2025–2025 | Public version of CSAW'25 Finals Challenges. Contribute to osirislab/CSAW-CTF-2025-Finals-Public de… |
-| 12 | [Nambers/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-Nambers) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
-| 13 | [shekkbuilder/ctf-2](https://github.com/shekkbuilder/ctf-2) | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
+| 3 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
+| 4 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
+| 5 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
+| 6 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Programming, Crypto, Reverse Engineering | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and… |
+| 7 | osirislab/CSAW-CTF-2023-Quals | 31 ⭐ | — | 2023–2023 | Challenge repository for the 2023 CSAW CTF Qualifiers - osirislab/CSAW-CTF-2023-Quals. |
+| 8 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
+| 9 | osirislab/CSAW-CTF-2024-Quals | 11 ⭐ | — | 2024–2024 | Public Archive for CSAW 2024 Quals. Contribute to osirislab/CSAW-CTF-2024-Quals development by crea… |
+| 10 | osirislab/CSAW-CTF-2022-Final-WriteUps | 6 ⭐ | Pwn, Reverse Engineering | 2022–2022 | All final teams can share their solutions. If you like, please open a "Pull Request" for your write… |
+| 11 | osirislab/CSAW-CTF-2025-Finals-Public | 5 ⭐ | — | 2025–2025 | Public version of CSAW'25 Finals Challenges. Contribute to osirislab/CSAW-CTF-2025-Finals-Public de… |
+| 12 | [Nambers/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Nambers) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
+| 13 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
 
 ### Articles, Videos & Blog Posts (3)

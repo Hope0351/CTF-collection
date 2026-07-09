@@ -1,1 +1,0 @@
-One Mandatory Access Control question with categories

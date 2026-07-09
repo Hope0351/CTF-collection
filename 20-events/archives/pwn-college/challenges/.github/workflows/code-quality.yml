@@ -1,0 +1,28 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  nix-fmt:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ./.github/actions/setup-nix
+    - name: nix fmt (must be clean)
+      run: |
+        set -euo pipefail
+        nix fmt --no-write-lock-file
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "::error::nix fmt produced changes. Run 'nix fmt' locally and commit the result."
+          echo ""
+          echo "git status:"
+          git status --porcelain
+          echo ""
+          echo "git diff:"
+          git --no-pager diff
+          exit 1
+        fi

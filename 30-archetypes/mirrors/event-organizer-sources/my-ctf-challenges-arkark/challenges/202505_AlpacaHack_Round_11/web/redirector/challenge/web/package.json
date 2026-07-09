@@ -1,8 +1,0 @@
-{
-  "name": "web",
-  "type": "module",
-  "private": true,
-  "dependencies": {
-    "fastify": "^5.3.2"
-  }
-}

@@ -1,8 +1,0 @@
-Command: ios info
-
-Usage: ios info <subcommand>
-
-Contains subcommands to get iOS and application related information.
-
-Examples:
-   ios info binary

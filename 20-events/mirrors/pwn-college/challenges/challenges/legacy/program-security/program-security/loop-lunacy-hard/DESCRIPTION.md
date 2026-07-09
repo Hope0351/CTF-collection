@@ -1,1 +1,0 @@
-Overflow a buffer and smash the stack to obtain the flag, but this time in a PIE binary with a stack canary. Be warned, this requires careful and clever payload construction!

@@ -1,1 +1,0 @@
-Loading and storing values.

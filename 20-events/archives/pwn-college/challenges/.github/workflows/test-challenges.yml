@@ -1,0 +1,82 @@
+name: Test Challenges
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *'
+
+concurrency:
+  group: test-challenges-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  determine-modified-challenges:
+    runs-on: ubuntu-latest
+    outputs:
+      challenges: ${{ steps.determine-modified-challenges.outputs.challenges }}
+      modified_since_ref: ${{ steps.determine-modified-challenges.outputs.modified_since_ref }}
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Determine modified challenges
+      id: determine-modified-challenges
+      uses: ./.github/actions/determine-modified-challenges
+      with:
+        challenge_filter: ${{ vars.CHALLENGE_FILTER || '**' }}
+
+
+  test-challenges:
+    needs: determine-modified-challenges
+    if: ${{ needs.determine-modified-challenges.outputs.challenges != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        challenges: ${{ fromJson(needs.determine-modified-challenges.outputs.challenges) }}
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Determine trust
+      id: trust
+      uses: actions/github-script@v8
+      with:
+        script: |
+          // Trusted contexts:
+          // - Non-PR events (workflow_dispatch/schedule) are trusted.
+          // - PRs from the main repo (not a fork) are trusted; fork PRs are not.
+          let trusted = false;
+          if (context.eventName === "workflow_dispatch" || context.eventName === "schedule") {
+            trusted = true;
+          } else if (context.eventName === "pull_request") {
+            const pr = context.payload.pull_request;
+            const headRepo = pr?.head?.repo?.full_name;
+            const baseRepo = pr?.base?.repo?.full_name;
+            if (headRepo && baseRepo && headRepo === baseRepo) trusted = true;
+          }
+          core.setOutput("trusted", trusted ? "true" : "false");
+
+    - uses: ./.github/actions/setup-nix
+    - uses: ./.github/actions/setup-challenge-runtime
+
+    - name: Test challenges (trusted)
+      if: ${{ steps.trust.outputs.trusted == 'true' }}
+      uses: ./.github/actions/test-challenges
+      with:
+        challenges: ${{ matrix.challenges }}
+        modified_since_ref: ${{ needs.determine-modified-challenges.outputs.modified_since_ref }}
+        gpg_private_key: ${{ secrets.GPG_ROOT_PRIVATE_KEY }}
+
+    - name: Test challenges (untrusted)
+      if: ${{ steps.trust.outputs.trusted != 'true' }}
+      uses: ./.github/actions/test-challenges
+      with:
+        challenges: ${{ matrix.challenges }}
+        modified_since_ref: ${{ needs.determine-modified-challenges.outputs.modified_since_ref }}
+
+    - name: Report runtime storage
+      if: always()
+      uses: ./.github/actions/report-runtime-storage

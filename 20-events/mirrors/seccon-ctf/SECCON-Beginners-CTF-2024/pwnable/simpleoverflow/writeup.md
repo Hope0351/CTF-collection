@@ -1,3 +1,0 @@
-# writeup - simpleoverflow
-
-TODO

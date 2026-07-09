@@ -1,0 +1,11 @@
+challenge_name: "No Man's Echo"
+description: |
+  [http://no-mans-echo.chal.hitconctf.com/](http://no-mans-echo.chal.hitconctf.com/)
+flag: hitcon{it's a beautiful day outside. birds are singing, flowers are blooming... kids like you... should be burning in h3ll}
+author: Orange Tsai
+category: 🍊
+attachment: ./dist
+
+ports: # TCP ports to expose
+  - 80
+compose: ./src/docker-compose.yml 

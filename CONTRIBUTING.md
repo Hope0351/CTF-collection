@@ -18,7 +18,7 @@ Each entry in a list should follow this format:
 ```markdown
 | # | Resource | Type | Difficulty | Year | Why It Matters |
 |---|----------|------|-----------|------|----------------|
-| 1 | [Resource Name](url) | GitHub / Medium / YouTube / Blog | Beginner / Intermediate / Advanced / Elite / Varied | 2024 | 1–2 sentence reason |
+| 1 | [Resource Name](internal-path) | Internal / Medium / YouTube / Blog | Beginner / Intermediate / Advanced / Elite / Varied | 2024 | 1–2 sentence reason |
 ```
 
 For featured entries (top 3–5 in a category), add a dedicated subsection with:
@@ -46,7 +46,7 @@ Open an issue for:
 
 - **Tone:** Third-person, encyclopedic, portfolio-grade. Avoid first-person.
 - **Depth:** Every section should have at least 150 words of substantive content. No stub sections.
-- **Links:** Always link to the canonical source. Don't link to mirrors or aggregators.
+- **Links:** All links must point to internal paths within this collection. No external repository links.
 - **Attribution:** Cite the original author/team by name when known.
 - **Language:** English only at this time.
 
@@ -54,7 +54,7 @@ Open an issue for:
 
 1. Fork the repo and create your branch from `main`.
 2. Make your changes following the style guidelines above.
-3. Ensure the markdown renders correctly on GitHub.
+3. Ensure the markdown renders correctly.
 4. Update the `CHANGELOG.md` with a one-line entry describing your addition.
 5. Open a pull request with a clear description.
 

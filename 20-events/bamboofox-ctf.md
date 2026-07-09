@@ -10,15 +10,15 @@
 
 ## Curated Resources for BambooFox CTF
 
-### GitHub Repositories (5)
+### the collection Repositories (5)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [apsdehal/awesome-ctf](../30-archetypes/mirrors/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
-| 3 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 4 | [1GN1tE/CTF_Writeups](https://github.com/1GN1tE/CTF_Writeups) | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
-| 5 | [MacacaHub/CTF-writeups](../30-archetypes/mirrors/personal-collections/CTF-writeups-MacacaHub) | 4  | Forensics, Crypto, Stego | 2019–2021 | 2021. BambooFox CTF 2021; HTCF Mid CTF 2021 (only for NSYSU course) · 2020. TCat CTF 2020; TJCTF 20… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 2 | [apsdehal/awesome-ctf](../30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
+| 3 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
+| 4 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
+| 5 | [MacacaHub/CTF-writeups](../30-archetypes/archives/personal-collections/CTF-writeups-MacacaHub) | 4  | Forensics, Crypto, Stego | 2019–2021 | 2021. BambooFox CTF 2021; HTCF Mid CTF 2021 (only for NSYSU course) · 2020. TCat CTF 2020; TJCTF 20… |
 
 
 ### Articles, Videos & Blog Posts (2)

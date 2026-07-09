@@ -1,1 +1,0 @@
-A binary that side-channels itself, now using multiple pages.

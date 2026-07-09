@@ -1,9 +1,0 @@
-- name: restart zerotier
-  ansible.builtin.service:
-    name: zerotier-one
-    state: restarted
-
-- name: restart sshd
-  ansible.builtin.service:
-    name: sshd
-    state: restarted

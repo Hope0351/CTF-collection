@@ -10,17 +10,17 @@
 
 ## Curated Resources for RealWorldCTF
 
-### GitHub Repositories (7)
+### the collection Repositories (7)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [r3kapig/writeup](../30-archetypes/mirrors/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
-| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 4 | [p4-team/ctf](https://github.com/p4-team/ctf) | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 5 | [phith0n/realworldctf](../20-events/mirrors/realworldctf/realworldctf-phith0n) | 115 ⭐⭐ | — | 2018–2019 | This is my Real World CTF Challenges source code: Just walk into the directory and docker-compose u… |
-| 6 | [chaitin/Real-World-CTF-3rd-Challenge-Attachments](../20-events/mirrors/realworldctf/RWCTF-3rd-Challenges) | 90 ⭐⭐ | — | n/a | Challenge attachments for RWCTF 3rd. Contribute to chaitin/Real-World-CTF-3rd-Challenge-Attachments… |
-| 7 | [chaitin/Real-World-CTF-5th-Challenges](../20-events/mirrors/realworldctf/RWCTF-5th-Challenges) | 59 ⭐⭐ | — | n/a | attachments and (some) writeups/source code for RWCTF 5th - chaitin/Real-World-CTF-5th-Challenges. |
+| 1 | [r3kapig/writeup](../30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
+| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
+| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
+| 4 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
+| 5 | [phith0n/realworldctf](../20-events/archives/realworldctf/realworldctf-phith0n) | 115 ⭐⭐ | — | 2018–2019 | This is my Real World CTF Challenges source code: Just walk into the directory and docker-compose u… |
+| 6 | [chaitin/Real-World-CTF-3rd-Challenge-Attachments](../20-events/archives/realworldctf/RWCTF-3rd-Challenges) | 90 ⭐⭐ | — | n/a | Challenge attachments for RWCTF 3rd. Contribute to chaitin/Real-World-CTF-3rd-Challenge-Attachments… |
+| 7 | [chaitin/Real-World-CTF-5th-Challenges](../20-events/archives/realworldctf/RWCTF-5th-Challenges) | 59 ⭐⭐ | — | n/a | attachments and (some) writeups/source code for RWCTF 5th - chaitin/Real-World-CTF-5th-Challenges. |
 
 
 ### Articles, Videos & Blog Posts (0)

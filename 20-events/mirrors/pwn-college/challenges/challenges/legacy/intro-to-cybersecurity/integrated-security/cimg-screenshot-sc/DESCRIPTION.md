@@ -1,1 +1,0 @@
-Concepts used: Reverse Engineering + Binary Exploitation

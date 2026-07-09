@@ -1,7 +1,0 @@
-#!/bin/bash
-
-ZWSP=$'\u200b'
-TARGET="/challenge/pwncollege${ZWSP}"
-
-cp /flag "$TARGET"
-chmod 644 "$TARGET"

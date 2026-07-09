@@ -1,0 +1,8 @@
+start
+break *main+686
+commands
+        silent 
+        set $rdx = $rax  
+        continue
+continue
+continue

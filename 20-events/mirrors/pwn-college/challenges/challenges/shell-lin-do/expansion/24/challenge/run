@@ -1,3 +1,0 @@
-#!/usr/bin/exec-suid --real --environ=none -- /bin/bash -p
-
-[ -f $1 ] && echo "It exists!"

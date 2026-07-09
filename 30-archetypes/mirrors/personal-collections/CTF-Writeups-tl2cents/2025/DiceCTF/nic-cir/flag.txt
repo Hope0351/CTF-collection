@@ -1,1 +1,0 @@
-flag{this_is_a_local_test_flag_1234}

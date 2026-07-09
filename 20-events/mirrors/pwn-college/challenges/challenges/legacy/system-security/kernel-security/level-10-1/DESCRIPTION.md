@@ -1,1 +1,0 @@
-Exploit a buggy kernel device with KASLR enabled to get the flag!

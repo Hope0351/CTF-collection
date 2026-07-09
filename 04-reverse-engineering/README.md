@@ -6,49 +6,49 @@
 
 Static and dynamic analysis of native binaries, obfuscated scripts, custom virtual machines, and increasingly LLVM IR, WebAssembly, and exotic architectures. The tooling stack is dominated by Ghidra (free), IDA Pro (commercial), Binary Ninja, angr (symbolic execution), and gdb-gef.
 
-This category contains **64 curated sources** from across the CTF ecosystem: 52 GitHub repositories, 9 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 3 blog posts.
+This category contains **64 curated sources** from across the CTF ecosystem: 52 the collection repositories, 9 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 3 blog posts.
 
-## 🏆 Recommended Repositories (GitHub)
+## 🏆 Recommended Repositories (the collection)
 
-The following GitHub repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
+The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
 
 | # | Repository | Stars | Difficulty | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [apsdehal/awesome-ctf](../30-archetypes/mirrors/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Beginner | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials. This list aims to h… |
-| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Varied | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions and solution writeu… |
-| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/mirrors/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
-| 4 | [momenbasel/htb-writeups](../20-events/mirrors/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 5 | [Crypto-Cat/CTF](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Varied | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
-| 6 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Varied | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are android based due t… |
-| 7 | [Adamkadaban/CTFs](https://github.com/Adamkadaban/CTFs) | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
-| 8 | [Kasimir123/CTFWriteUps](https://github.com/Kasimir123/CTFWriteUps) | 61 ⭐⭐ | Varied | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains all source files if th… |
-| 9 | [tim-barc/ctf_writeups](../30-archetypes/mirrors/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Varied | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to solve various Capture T… |
-| 10 | [merrychap/ctf-writeups](../30-archetypes/mirrors/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Varied | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and others. I'm not spe… |
-| 11 | [SandWithCheese/ctf-writeups](https://github.com/SandWithCheese/ctf-writeups) | 14 ⭐ | Beginner | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for various CTF challenges… |
-| 12 | [tl2cents/CTF-Writeups](../30-archetypes/mirrors/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
-| 13 | [JohnHammond/ctf-katana](../30-archetypes/mirrors/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
-| 14 | [hackthebox/cyber-apocalypse-2025](../20-events/mirrors/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
-| 15 | [dicegang/dicectf-quals-2024-challenges](https://github.com/dicegang/dicectf-quals-2024-challenges) | 30 ⭐ | Elite | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges development by creating an… |
-| 16 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/mirrors/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Varied | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and hardware tools, boo… |
-| 17 | [hackplayers/hackthebox-writeups](https://github.com/hackplayers/hackthebox-writeups) | 2,044 ⭐⭐⭐⭐ | Intermediate | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups development by creating an … |
-| 18 | [ctfs/resources](https://github.com/ctfs/resources) | 1,819 ⭐⭐⭐⭐ | Beginner | n/a | This repository aims to be an archive of information, tools, and references regarding CTF competitions. CTFs, especiall… |
-| 19 | [JohnHammond/katana](../40-tooling/mirrors/misc-tools/katana) | 1,359 ⭐⭐⭐⭐ | Varied | 2019–2019 | This repository attempts to offer code and material to automate running through the check-list or hitting the low-hangi… |
-| 20 | [devploit/awesome-ctf-resources](../30-archetypes/mirrors/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
-| 21 | [j00ru/ctf-tasks](../30-archetypes/mirrors/personal-collections/ctf-tasks-j00ru) | 656 ⭐⭐⭐ | Varied | 2013–2021 | This repository contains an archive of CTF challenges I developed in the last few years for various CTFs organized by m… |
-| 22 | [david942j/ctf-writeups](https://github.com/david942j/ctf-writeups) | 322 ⭐⭐⭐ | Varied | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an account on GitHub. |
-| 23 | [neutrinoguy/awesome-ics-writeups](../30-archetypes/mirrors/awesome-lists/awesome-ics-writeups) | 201 ⭐⭐ | Varied | 2013–2025 | A collection of writeups related to ICS/SCADA hacking. This covers areas like OT, IoT and IIoT. It includes exploitatio… |
-| 24 | [project-sekai-ctf/sekaictf-2025](../20-events/mirrors/sekaictf/sekaictf-2025) | 135 ⭐⭐ | Advanced | 2024–2025 | This repository contains official source code and writeups for challenges from SekaiCTF 2025. CTFTime • Website • Disco… |
-| 25 | [JohnHammond/miscellaneous](../07-misc/mirrors/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
-| 26 | [project-sekai-ctf/sekaictf-2024](https://github.com/project-sekai-ctf/sekaictf-2024) | 83 ⭐⭐ | Advanced | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTime Event • Website •… |
-| 27 | [mephi42/ctf](https://github.com/mephi42/ctf) | 76 ⭐⭐ | Varied | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 2019. |
-| 28 | [D4mianWayne/PwnLand](../01-pwn/mirrors/PwnLand) | 62 ⭐⭐ | Varied | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development by creating an accou… |
-| 29 | [noamgariani11/picoCTF-2024-Writeup](../20-events/mirrors/picoctf/picoCTF-2024-Writeup) | 57 ⭐⭐ | Beginner | 2024–2024 | picoCTF 2024 solutions are all searchable and easy to explore step-by-step writeups and use the built-in tools develope… |
-| 30 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/mirrors/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
+| 1 | [apsdehal/awesome-ctf](../30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Beginner | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials. This list aims to h… |
+| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Varied | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions and solution writeu… |
+| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
+| 4 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
+| 5 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Varied | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
+| 6 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Varied | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are android based due t… |
+| 7 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
+| 8 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Varied | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains all source files if th… |
+| 9 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Varied | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to solve various Capture T… |
+| 10 | [merrychap/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Varied | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and others. I'm not spe… |
+| 11 | SandWithCheese/ctf-writeups | 14 ⭐ | Beginner | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for various CTF challenges… |
+| 12 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
+| 13 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
+| 14 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
+| 15 | dicegang/dicectf-quals-2024-challenges | 30 ⭐ | Elite | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges development by creating an… |
+| 16 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Varied | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and hardware tools, boo… |
+| 17 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Intermediate | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups development by creating an … |
+| 18 | ctfs/resources | 1,819 ⭐⭐⭐⭐ | Beginner | n/a | This repository aims to be an archive of information, tools, and references regarding CTF competitions. CTFs, especiall… |
+| 19 | [JohnHammond/katana](../40-tooling/archives/misc-tools/katana) | 1,359 ⭐⭐⭐⭐ | Varied | 2019–2019 | This repository attempts to offer code and material to automate running through the check-list or hitting the low-hangi… |
+| 20 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
+| 21 | [j00ru/ctf-tasks](../30-archetypes/archives/personal-collections/ctf-tasks-j00ru) | 656 ⭐⭐⭐ | Varied | 2013–2021 | This repository contains an archive of CTF challenges I developed in the last few years for various CTFs organized by m… |
+| 22 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Varied | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an account. |
+| 23 | [neutrinoguy/awesome-ics-writeups](../30-archetypes/archives/awesome-lists/awesome-ics-writeups) | 201 ⭐⭐ | Varied | 2013–2025 | A collection of writeups related to ICS/SCADA hacking. This covers areas like OT, IoT and IIoT. It includes exploitatio… |
+| 24 | [project-sekai-ctf/sekaictf-2025](../20-events/archives/sekaictf/sekaictf-2025) | 135 ⭐⭐ | Advanced | 2024–2025 | This repository contains official source code and writeups for challenges from SekaiCTF 2025. CTFTime • Website • Disco… |
+| 25 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
+| 26 | project-sekai-ctf/sekaictf-2024 | 83 ⭐⭐ | Advanced | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTime Event • Website •… |
+| 27 | mephi42/ctf | 76 ⭐⭐ | Varied | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 2019. |
+| 28 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Varied | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development by creating an accou… |
+| 29 | [noamgariani11/picoCTF-2024-Writeup](../20-events/archives/picoctf/picoCTF-2024-Writeup) | 57 ⭐⭐ | Beginner | 2024–2024 | picoCTF 2024 solutions are all searchable and easy to explore step-by-step writeups and use the built-in tools develope… |
+| 30 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
 
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond GitHub repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -81,11 +81,11 @@ cross-architecture RE; common in IoT.
 
 Top resources for this sub-topic:
 
-- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-ctf) — 🐙 GitHub Repo
-- [blockthreat/blocksec-ctfs - GitHub](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) — 🐙 GitHub Repo
-- [Hack The Box Writeups - The Ultimate HTB Resource - GitHub](../20-events/mirrors/hackthebox/htb-writeups) — 🐙 GitHub Repo
-- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - GitHub](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) — 🐙 GitHub Repo
-- [GitHub - xtiankisutsa/awesome-mobile-CTF](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) — 🐙 GitHub Repo
+- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
+- [blockthreat/blocksec-ctfs - the collection](../30-archetypes/archives/awesome-lists/blocksec-ctfs) — 📚 Repository
+- [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
+- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - the collection](../30-archetypes/archives/personal-collections/CTF-CryptoCat) — 📚 Repository
+- [xtiankisutsa/awesome-mobile-CTF](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) — 📚 Repository
 
 ### Custom VMs
 
@@ -93,8 +93,8 @@ bytecode-based challenge binaries with custom instruction sets.
 
 Top resources for this sub-topic:
 
-- [gijsh/rhme2_writeups: Writeups for the RHME2 CTF - GitHub](../10-hardware-iot/mirrors/rhme2-writeups) — 🐙 GitHub Repo
-- [BarakBinyamin/ctf: Some embedded network attacks  - GitHub](../30-archetypes/mirrors/personal-collections/ctf-BarakBinyamin) — 🐙 GitHub Repo
+- [gijsh/rhme2_writeups: Writeups for the RHME2 CTF - the collection](../10-hardware-iot/archives/rhme2-writeups) — 📚 Repository
+- [BarakBinyamin/ctf: Some embedded network attacks  - the collection](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) — 📚 Repository
 
 ### Obfuscated scripts
 
@@ -102,9 +102,9 @@ PyArmor, py2exe, Lua bytecode, JavaScript obfuscation.
 
 Top resources for this sub-topic:
 
-- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - GitHub](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) — 🐙 GitHub Repo
-- [GitHub - david942j/ctf-writeups: Collection of scripts and writeups](https://github.com/david942j/ctf-writeups) — 🐙 GitHub Repo
-- [kyndrawynne/pwnscripts - GitHub](../40-tooling/mirrors/pwn-tools/pwnscripts) — 🐙 GitHub Repo
+- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - the collection](../30-archetypes/archives/personal-collections/CTF-CryptoCat) — 📚 Repository
+- david942j/ctf-writeups: Collection of scripts and writeups — 📚 Repository
+- [kyndrawynne/pwnscripts - the collection](../40-tooling/archives/pwn-tools/pwnscripts) — 📚 Repository
 
 ### LLVM IR / WebAssembly
 
@@ -112,11 +112,11 @@ modern obfuscation targets.
 
 Top resources for this sub-topic:
 
-- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - GitHub](../30-archetypes/mirrors/awesome-lists/awesome-ctf) — 🐙 GitHub Repo
-- [blockthreat/blocksec-ctfs - GitHub](../30-archetypes/mirrors/awesome-lists/blocksec-ctfs) — 🐙 GitHub Repo
-- [Hack The Box Writeups - The Ultimate HTB Resource - GitHub](../20-events/mirrors/hackthebox/htb-writeups) — 🐙 GitHub Repo
-- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - GitHub](../30-archetypes/mirrors/personal-collections/CTF-CryptoCat) — 🐙 GitHub Repo
-- [GitHub - xtiankisutsa/awesome-mobile-CTF](../30-archetypes/mirrors/awesome-lists/awesome-mobile-ctf) — 🐙 GitHub Repo
+- [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
+- [blockthreat/blocksec-ctfs - the collection](../30-archetypes/archives/awesome-lists/blocksec-ctfs) — 📚 Repository
+- [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
+- [Crypto-Cat/CTF: CTF challenge (mostly pwn) files, scripts etc - the collection](../30-archetypes/archives/personal-collections/CTF-CryptoCat) — 📚 Repository
+- [xtiankisutsa/awesome-mobile-CTF](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) — 📚 Repository
 
 ### Anti-reverse engineering
 
@@ -124,10 +124,10 @@ anti-debug, anti-VM, anti-disassembly tricks.
 
 Top resources for this sub-topic:
 
-- [Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - GitHub](https://github.com/Kasimir123/CTFWriteUps) — 🐙 GitHub Repo
-- [Yet another CTF writeups repository. PWN and RE tasks - GitHub](../30-archetypes/mirrors/personal-collections/ctf-writeups-merrychap) — 🐙 GitHub Repo
-- [1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering](https://github.com/1GN1tE/CTF_Writeups) — 🐙 GitHub Repo
-- [docfate111/binary_exploitation: CTF/hacking challenge  - GitHub](../01-pwn/mirrors/binary_exploitation) — 🐙 GitHub Repo
+- Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - the collection — 📚 Repository
+- [Yet another CTF writeups repository. PWN and RE tasks - the collection](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) — 📚 Repository
+- 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering — 📚 Repository
+- [docfate111/binary_exploitation: CTF/hacking challenge  - the collection](../01-pwn/archives/binary_exploitation) — 📚 Repository
 
 
 ## 🎯 Suggested Learning Order
@@ -136,7 +136,7 @@ If you're new to reverse engineering, work through the resources in this order:
 
 1. **Start with a structured learning platform.** Begin with [pwn.college RE module](https://pwn.college/) — then reverse-engineer 5–10 [CrackMe challenges](https://crackmes.one/).
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal GitHub repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

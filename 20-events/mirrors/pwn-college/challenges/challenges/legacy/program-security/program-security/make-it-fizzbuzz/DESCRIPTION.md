@@ -1,1 +1,0 @@
-Exploit the binary to obtain the flag!
