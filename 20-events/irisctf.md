@@ -10,11 +10,11 @@
 
 ## Curated Resources for IRISCTF
 
-### the collection Repositories (2)
+### Internal Archives (2)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | [juliancasaburi/irisctf-2025](../20-events/archives/irisctf/irisctf-2025) | 0  | — | 2024–2025 | The writeups in this repository correspond to the Iris CTF 2025 event, organized by IrisSec, held f… |
 
 ### Articles, Videos & Blog Posts (2)

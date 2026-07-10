@@ -10,18 +10,18 @@
 
 ## Curated Resources for DEF CON CTF Quals
 
-### the collection Repositories (14)
+### Internal Archives (14)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | [blockthreat/blocksec-ctfs](../30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
 | 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
 | 5 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
 | 6 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
 | 7 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
-| 8 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an… |
+| 8 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups.…|
 | 9 | Nautilus-Institute/quals-2024 | 76 ⭐⭐ | — | 2024–2024 | This repository contains the open source release for Nautilus Institute's 2024 DEF CON CTF qualifie… |
 | 10 | [m3ssap0/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-m3ssap0) | 35 ⭐ | — | 2018–2021 | DCTF DEF CAMP Qualif 2018 · DCTF DEF CAMP Qualif 2018 · DEF CON CTF Qualifier 2020 · DEF CON CTF Qu… |
 | 11 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |

@@ -10,11 +10,11 @@
 
 ## Curated Resources for hxp CTF
 
-### the collection Repositories (3)
+### Internal Archives (3)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 
 ### Articles, Videos & Blog Posts (3)

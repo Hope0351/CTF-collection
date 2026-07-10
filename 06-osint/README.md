@@ -6,11 +6,11 @@
 
 Investigation of public sources (social media, geolocation, satellite imagery, breached databases, archived web content) to identify people, places, or events. The most screenshot-heavy category; writeups are essential because the underlying targets frequently disappear.
 
-This category contains **19 curated sources** from across the CTF ecosystem: 14 the collection repositories, 4 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 1 blog posts.
+This category contains **19 curated sources** from across the CTF ecosystem: 14 internal archives, 4 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 1 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -46,8 +46,7 @@ Top resources for this sub-topic:
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - [orangetw/My-CTF-Web-Challenges - the collection](../02-web/archives/My-CTF-Web-Challenges) — 📚 Repository
 - Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
-- Tan-JunWei/CTF-Writeups - the collection — 📚 Repository
-
+- Tan-JunWei/CTF-Writeups
 ### Archived web content
 
 Wayback Machine, archive.today.
@@ -68,7 +67,7 @@ If you're new to osint — open-source intelligence, work through the resources 
 
 1. **Start with a structured learning platform.** Begin with [TryHackMe's OSINT rooms](https://tryhackme.com/), then read [`C3n7ral051nt4g3ncy/Tiberian_Order_Writeup`](../06-osint/archives/Tiberian_Order_Writeup) for a walkthrough of a real OSINT challenge.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

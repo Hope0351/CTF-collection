@@ -10,11 +10,11 @@
 
 ## Curated Resources for picoCTF
 
-### the collection Repositories (19)
+### Internal Archives (19)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | [apsdehal/awesome-ctf](../30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
 | 3 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
 | 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
@@ -25,13 +25,13 @@
 | 9 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
 | 10 | [Cajac/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-Cajac) | 109 ⭐⭐ | Web | 2019–2026 | These writeups are mainly a documentation for myself but I hope others will benefit from them as we… |
 | 11 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 84 ⭐⭐ | Programming, Forensics, Crypto | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really… |
-| 13 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
-| 14 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
-| 15 | [whiteSHADOW1234/picoCTF_writeup](../20-events/archives/picoctf/picoCTF_writeup) | 9 ⭐ | Web, Reverse Engineering | n/a | An easy, VM-free guide to complete picoCTF challenges using only the picoCTF webshell! Perfect for … |
-| 16 | [snwau/picoCTF-2025-Writeup](../20-events/archives/picoctf/picoCTF-2025-Writeup) | 5 ⭐ | Forensics, Crypto, Reverse Engineering | 2025–2025 | Explore the the collection Discussions forum for snwau picoCTF-2025-Writeup. Discuss code, ask questions & … |
-| 17 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
-| 18 | [tsids/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
-| 19 | [Irench1k/PicoCTF](../20-events/archives/picoctf/PicoCTF-Irench1k) | 0  | — | n/a | Welcome to my collection of PicoCTF solutions! This repository contains detailed writeups and code … |
+| 12 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
+| 13 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
+| 14 | [whiteSHADOW1234/picoCTF_writeup](../20-events/archives/picoctf/picoCTF_writeup) | 9 ⭐ | Web, Reverse Engineering | n/a | An easy, VM-free guide to complete picoCTF challenges using only the picoCTF webshell! Perfect for … |
+| 15 | [snwau/picoCTF-2025-Writeup](../20-events/archives/picoctf/picoCTF-2025-Writeup) | 5 ⭐ | Forensics, Crypto, Reverse Engineering | 2025–2025 | Explore the the collection Discussions forum for snwau picoCTF-2025-Writeup. Discuss code, ask questions & … |
+| 16 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
+| 17 | [tsids/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
+| 18 | [Irench1k/PicoCTF](../20-events/archives/picoctf/PicoCTF-Irench1k) | 0  | — | n/a | Welcome to my collection of PicoCTF solutions! This repository contains detailed writeups and code … |
 
 ### Articles, Videos & Blog Posts (14)
 

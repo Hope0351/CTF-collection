@@ -6,11 +6,11 @@
 
 Server-side (SQLi, SSRF, SSTI, RCE, deserialization, file inclusion) and client-side (XSS, CSRF, prototype pollution) vulnerabilities, plus modern web3 integrations and bespoke web app exploitation. The broadest category, requiring fluency in HTTP, web frameworks, browser security model, and modern web tooling (Burp, semgrep, ffuf).
 
-This category contains **95 curated sources** from across the CTF ecosystem: 53 the collection repositories, 19 Medium articles, 7 YouTube video walkthroughs, 1 CTFtime event entries, and 15 blog posts.
+This category contains **95 curated sources** from across the CTF ecosystem: 53 internal archives, 19 Medium articles, 7 YouTube video walkthroughs, 1 CTFtime event entries, and 15 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -103,7 +103,7 @@ If you're new to web exploitation, work through the resources in this order:
 
 1. **Start with a structured learning platform.** Begin with [PortSwigger Web Security Academy](https://portswigger.net/web-security) — work through all Apprentice and Practitioner labs. Then read [`orangetw/My-CTF-Web-Challenges`](../02-web/archives/My-CTF-Web-Challenges) to see how top-tier web challenges are designed.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

@@ -6,11 +6,11 @@
 
 Disk-image forensics, memory-dump analysis (Volatility), packet-capture analysis (Wireshark/tshark), and steganography (Aperi'Solve, zsteg, stegsolve). The category with the highest variance in challenge design — challenges range from trivial 'find the hidden flag in metadata' to sophisticated memory-malware-investigation scenarios.
 
-This category contains **42 curated sources** from across the CTF ecosystem: 30 the collection repositories, 7 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 4 blog posts.
+This category contains **42 curated sources** from across the CTF ecosystem: 30 internal archives, 7 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 4 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -96,7 +96,7 @@ If you're new to forensics & steganography, work through the resources in this o
 
 1. **Start with a structured learning platform.** Begin with HackTheBox's forensics challenges (easy tier), then read the Volatility documentation and work through memory-dump challenges.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

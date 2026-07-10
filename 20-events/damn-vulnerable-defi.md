@@ -10,7 +10,7 @@
 
 ## Curated Resources for Damn Vulnerable DeFi
 
-### the collection Repositories (5)
+### Internal Archives (5)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|

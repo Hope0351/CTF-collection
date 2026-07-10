@@ -302,9 +302,9 @@ To keep the collection within size limits, the following categories of files are
 - **Database / memory dumps**: `*.db`, `*.sqlite`, `*.sqlite3`, `*.memdump`, `*.heapdump`, `*.hprof`
 - **ML model files**: `*.dat`, `*.pkl`, `*.pickle`, `*.h5`, `*.pb`, `*.onnx`, `*.pt`, `*.pth`, `*.ckpt`, `*.safetensors`
 
-### Resources not integrated (42)
+### Resources not integrated (54)
 
-The following 54 resources could not be integrated (42 due to size/access constraints, 12 due to being text-only writeups without screenshots or videos) into the collection due to size or access constraints. They are referenced by name only (no links):
+The following 54 resources could not be integrated due to size, access, or quality constraints. They are referenced by name only (no links):
 
 **Failed to download (16)** — too large, rate-limited, or access-restricted:
 

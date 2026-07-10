@@ -10,15 +10,15 @@
 
 ## Curated Resources for PlaidCTF
 
-### the collection Repositories (7)
+### Internal Archives (7)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 5 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an… |
-| 6 | [ybieri/phantom_processing_platform](../40-tooling/archives/misc-tools/phantom_processing_platform) | 1  | Pwn, Blockchain | 2024–2024 | PlaidCTF 2024 Phantom Processing Platform. Contribute to ybieri/phantom_processing_platform develop… |
-| 7 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
+| 3 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups.…|
+| 4 | [ybieri/phantom_processing_platform](../40-tooling/archives/misc-tools/phantom_processing_platform) | 1  | Pwn, Blockchain | 2024–2024 | PlaidCTF 2024 Phantom Processing Platform.…|
+| 5 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team.…|
 
 ### Articles, Videos & Blog Posts (3)
 

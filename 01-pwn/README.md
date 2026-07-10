@@ -6,11 +6,11 @@
 
 Memory corruption, control-flow hijacking, ROP, heap exploitation, kernel pwn, and exploitation of off-by-one / format-string / use-after-free bugs. The most technically dense category in CTF, requiring fluency in assembly, ABI details, and exploit-development tooling (pwntools, ROPgadget, one_gadget, gdb-gef/pwndbg).
 
-This category contains **73 curated sources** from across the CTF ecosystem: 47 the collection repositories, 13 Medium articles, 6 YouTube video walkthroughs, 0 CTFtime event entries, and 7 blog posts.
+This category contains **73 curated sources** from across the CTF ecosystem: 47 internal archives, 13 Medium articles, 6 YouTube video walkthroughs, 0 CTFtime event entries, and 7 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -115,7 +115,7 @@ If you're new to binary exploitation, work through the resources in this order:
 
 1. **Start with a structured learning platform.** Begin with [pwn.college](https://pwn.college/) — the canonical structured pwn learning path. Work through 'Program Misuse' → 'Shellcode Injection' → 'Sandboxing' → 'System Shell' → 'Shellcode Injection II' → 'Dynamic Allocator Misuse' → 'Heap Exploitation' → 'Kernel Exploitation'.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

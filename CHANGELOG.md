@@ -4,6 +4,28 @@ All notable changes to this CTF-collection repository are documented in this fil
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-07-10] — Markdown Cleanup and Polish
+
+### Changed
+- **Comprehensive cleanup of all 86 curation markdown files** — fixed prose, formatting, and consistency issues across the entire collection.
+- Replaced all "the collection repositories" → "internal archives" (107 replacements across 61 files) — leftover artifacts from earlier automated replacements.
+- Removed all "Contribute to X development by creating an account..." trailing descriptions from table cells (these were truncated GitHub page-scraped descriptions).
+- Fixed heading capitalization: "## internal archives" → "## Internal Archives" across all year and event pages.
+- Fixed "Resources not integrated (42)" heading → "(54)" to match the actual count.
+- Fixed duplicate "into the collection into the collection" phrasing in README.md.
+- Restored "GitHub" in methodology.md and full-repo-index.md where it refers to the platform (GitHub API, GitHub topics, GitHub Pages) rather than repos.
+- Renumbered table rows to be sequential (1,2,3,...) after previous row deletions.
+- Cleaned up excessive blank lines (3+ → 2) and trailing whitespace across all files.
+- Ensured all files end with a single newline.
+
+### Verified
+- Zero "the collection" artifacts remaining (except legitimate "this collection" uses in README.md).
+- Zero "Contribute to" descriptions remaining.
+- Zero broken markdown link syntax (`[X[Y` patterns).
+- Zero lowercase "## internal archives" headings.
+- All category READMEs have consistent section structure: Overview, Curated Articles, Sub-Topic Deep Dive, Suggested Learning Order, See Also.
+
+
 ## [2026-07-10] — Remove Recommended/Featured Repository Sections
 
 ### Removed
@@ -17,7 +39,6 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/
 - 64 files had references to `recommended-repos.md` cleaned up.
 - The collection's curation files now focus on curated articles, walkthroughs, sub-topic deep dives, and event/archetype indexes — no standalone repo recommendation tables remain.
 - All archived resources remain accessible via their `archives/` subdirectories within each category.
-
 
 ## [2026-07-10] — Quality Filter: Professional Writeups Only
 

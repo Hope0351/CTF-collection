@@ -10,7 +10,7 @@
 
 ## Curated Resources for Paradigm CTF
 
-### the collection Repositories (6)
+### Internal Archives (6)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|

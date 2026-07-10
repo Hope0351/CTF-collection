@@ -6,11 +6,11 @@
 
 Static and dynamic analysis of native binaries, obfuscated scripts, custom virtual machines, and increasingly LLVM IR, WebAssembly, and exotic architectures. The tooling stack is dominated by Ghidra (free), IDA Pro (commercial), Binary Ninja, angr (symbolic execution), and gdb-gef.
 
-This category contains **64 curated sources** from across the CTF ecosystem: 52 the collection repositories, 9 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 3 blog posts.
+This category contains **64 curated sources** from across the CTF ecosystem: 52 internal archives, 9 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 3 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -86,7 +86,7 @@ anti-debug, anti-VM, anti-disassembly tricks.
 
 Top resources for this sub-topic:
 
-- Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - the collection — 📚 Repository
+- Kasimir123/CTFWriteUps: Collection of CTF Writeups for
 - [Yet another CTF writeups repository. PWN and RE tasks - the collection](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) — 📚 Repository
 - 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering — 📚 Repository
 - [docfate111/binary_exploitation: CTF/hacking challenge  - the collection](../01-pwn/archives/binary_exploitation) — 📚 Repository
@@ -97,7 +97,7 @@ If you're new to reverse engineering, work through the resources in this order:
 
 1. **Start with a structured learning platform.** Begin with [pwn.college RE module](https://pwn.college/) — then reverse-engineer 5–10 [CrackMe challenges](https://crackmes.one/).
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

@@ -10,17 +10,17 @@
 
 ## Curated Resources for DownUnderCTF
 
-### the collection Repositories (9)
+### Internal Archives (9)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 3 | DownUnderCTF/Challenges_2025_Public | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - DownUnderCTF/Challenges_2025_Public: … |
-| 5 | DownUnderCTF/Challenges_2022_Public | 248 ⭐⭐ | — | 2022–2022 | medium, round 1. Uni of Straya - Part 1, ghostccamm, medium, round 2. Uni of Straya - Part 2, ghost… |
-| 6 | DownUnderCTF/Challenges_2021_public | 181 ⭐⭐ | — | 2021–2021 | Writeups for the challenges from DownUnderCTF 2021 - DownUnderCTF/Challenges_2021_Public. |
-| 7 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
-| 9 | [nh4ttruong/ctf-write-up](../30-archetypes/archives/personal-collections/ctf-write-up-nh4ttruong) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
+| 4 | DownUnderCTF/Challenges_2022_Public | 248 ⭐⭐ | — | 2022–2022 | medium, round 1. Uni of Straya - Part 1, ghostccamm, medium, round 2. Uni of Straya - Part 2, ghost… |
+| 5 | DownUnderCTF/Challenges_2021_public | 181 ⭐⭐ | — | 2021–2021 | Writeups for the challenges from DownUnderCTF 2021 - DownUnderCTF/Challenges_2021_Public. |
+| 6 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques.…|
+| 7 | [nh4ttruong/ctf-write-up](../30-archetypes/archives/personal-collections/ctf-write-up-nh4ttruong) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
 
 ### Articles, Videos & Blog Posts (9)
 

@@ -10,7 +10,7 @@
 
 ## Curated Resources for HackTheBox
 
-### the collection Repositories (21)
+### Internal Archives (21)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
@@ -24,15 +24,15 @@
 | 8 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "p… |
 | 9 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Forensics, Crypto, Reverse Engineering | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fie… |
 | 10 | [dominicbreuker/stego-toolkit](../40-tooling/archives/forensics-tools/stego-toolkit) | 2,675 ⭐⭐⭐⭐ | Stego, Forensics, Hardware | n/a | This project is a Docker image useful for solving Steganography challenges as those you can find at… |
-| 11 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups develop… |
+| 11 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2017–2023 | Writeups for HacktheBox 'boot2root' machines.…|
 | 12 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Programming, Forensics, Crypto | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experien… |
 | 13 | [LazyTitan33/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-LazyTitan33) | 100 ⭐⭐ | — | 2022–2024 | HTB - Business CTF 2022 ; HTB - Business CTF 2023 · HTB - Business CTF 2023 ; HTB - Business CTF 20… |
 | 14 | [hackthebox/business-ctf-2025](../20-events/archives/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Blockchain, ICS/SCADA | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Star… |
-| 15 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
+| 15 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques.…|
 | 16 | [hagronnestad/ctf-htb-cyber-apocalypse-2024](../20-events/archives/hackthebox/cyber-apocalypse-2024) | 6 ⭐ | Forensics, Crypto, Reverse Engineering | 2024–2024 | HackTheBox CTF Cyber Apocalypse 2024: No fighting, no backstabbing, and no factions fighting Phreak… |
-| 18 | [0xETX/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-0xETX) | 4  | Programming, OSINT, Forensics | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories s… |
-| 19 | [iash8090/Hack-The-Box](../20-events/archives/hackthebox/Hack-The-Box) | 4  | — | n/a | Great Writeups for HTB and some articals · All the HTB machines, challenges writeups with passwd pr… |
-| 20 | Ferdibrgl/cyber-apocalypse-ctf--2023-2024- | 1  | — | 2023–2024 | HTB-Cyber-Apocalypse-2023. My writeups for the 2023 Hackthebox Cyber Apocalypse CTF! logo. About. c… |
+| 17 | [0xETX/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-0xETX) | 4  | Programming, OSINT, Forensics | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories s… |
+| 18 | [iash8090/Hack-The-Box](../20-events/archives/hackthebox/Hack-The-Box) | 4  | — | n/a | Great Writeups for HTB and some articals · All the HTB machines, challenges writeups with passwd pr… |
+| 19 | Ferdibrgl/cyber-apocalypse-ctf--2023-2024- | 1  | — | 2023–2024 | HTB-Cyber-Apocalypse-2023. My writeups for the 2023 Hackthebox Cyber Apocalypse CTF! logo. About. c… |
 
 ### Articles, Videos & Blog Posts (39)
 

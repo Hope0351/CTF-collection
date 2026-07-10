@@ -10,14 +10,14 @@
 
 ## Curated Resources for UIUCTF
 
-### the collection Repositories (6)
+### Internal Archives (6)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | daffainfo/ctf-writeup | 188 ⭐⭐ | — | 2021–2024 | Stars Archive. This repository shall comprise writeups concerning Capture The Flag (… |
-| 4 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Pwn, Web, Cloud | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of … |
-| 6 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
+| 3 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Pwn, Web, Cloud | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of … |
+| 4 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs.…|
 
 ### Articles, Videos & Blog Posts (3)
 

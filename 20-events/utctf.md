@@ -10,16 +10,16 @@
 
 ## Curated Resources for UTCTF
 
-### the collection Repositories (7)
+### Internal Archives (7)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 3 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 4 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
-| 5 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
-| 6 | [CUCTF/ctf-writeups](../30-archetypes/archives/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
-| 7 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
+| 2 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
+| 3 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
+| 4 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc.…|
+| 5 | [CUCTF/ctf-writeups](../30-archetypes/archives/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
+| 6 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs.…|
 
 ### Articles, Videos & Blog Posts (0)
 

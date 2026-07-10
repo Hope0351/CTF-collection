@@ -6,11 +6,11 @@
 
 Firmware extraction, JTAG/SWD debugging, side-channel analysis (power, EM, timing), radio analysis (SDR, RTL-SDR), and hardware-CTF-specific challenges (e.g., the RHme series by Riscure). The most equipment-intensive category.
 
-This category contains **22 curated sources** from across the CTF ecosystem: 21 the collection repositories, 0 Medium articles, 1 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
+This category contains **22 curated sources** from across the CTF ecosystem: 21 internal archives, 0 Medium articles, 1 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -62,7 +62,7 @@ If you're new to hardware & iot, work through the resources in this order:
 
 1. **Start with a structured learning platform.** Begin with the [Hardware CTF list at `iamABH/awesome-hardware-ctf`](../30-archetypes/archives/awesome-lists/awesome-hardware-ctf), then work through the RHme series writeups.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

@@ -18,7 +18,7 @@ Binary exploitation requires a deep tooling stack. The dominant tools are pwntoo
 | 6 | [pwndbg](../40-tooling/archives/pwn-tools/pwndbg) | Python | Alternative GDB frontend. Similar feature set to gef; choice is largely aesthetic. |
 | 7 | [checksec](../40-tooling/archives/pwn-tools/checksec.sh) | Bash | Checks binary security mitigations: NX, PIE, RELRO, stack canary, FORTIFY. |
 | 8 | LibcSearcher | Python | Identifies libc version from leaked function addresses. Essential for ret2libc attacks. |
-| 9 | [Pwntools-README](../40-tooling/archives/pwn-tools/pwntools) | Python | Pwntools the collection repository — install via `pip install pwntools`. |
+| 9 | [Pwntools-README](../40-tooling/archives/pwn-tools/pwntools) | Python | Pwntools internal archive — install via `pip install pwntools`. |
 
 ## Quick Installation
 

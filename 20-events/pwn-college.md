@@ -10,7 +10,7 @@
 
 ## Curated Resources for pwn.college
 
-### the collection Repositories (8)
+### Internal Archives (8)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|

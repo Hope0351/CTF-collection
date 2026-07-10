@@ -20,7 +20,7 @@ The CTF-collection corpus was compiled via 86 web-search queries across 8 themat
 
 6. **Per-platform queries** — searches for writeups of the major practice platforms: pwn.college, HackTheBox, TryHackMe, picoCTF (which doubles as both an event and a practice platform), CryptoHack, pwnable.kr/tw, Root-Me, OverTheWire, HackThisSite.
 
-7. **the collection topic queries** — searches targeting the collection's own topic taxonomy (`ctf-writeup`, `ctf-challenges`, `awesome-ctf`), which surface repositories that authors have explicitly tagged.
+7. **GitHub topic queries** — searches targeting GitHub's own topic taxonomy (`ctf-writeup`, `ctf-challenges`, `awesome-ctf`), which surface repositories that authors have explicitly tagged.
 
 8. **Year-range queries** — searches filtered to 2023–2026 to capture the current state of the writeup ecosystem, complementing the all-time queries.
 
@@ -47,7 +47,7 @@ Each source was classified into one of five source types based on its URL:
 
 ## Metadata Enrichment
 
-For each the collection source, the the collection REST API was queried (authenticated via PAT, 5000 req/hour rate limit) to fetch:
+For each GitHub source, the GitHub REST API was queried (authenticated via PAT, 5000 req/hour rate limit) to fetch:
 
 - `stargazers_count` — star count
 - `forks_count` — fork count
@@ -61,7 +61,7 @@ For each the collection source, the the collection REST API was queried (authent
 - `default_branch` — default branch name
 - `archived`, `is_template`, `has_wiki`, `has_issues` — boolean flags
 
-For non-the collection sources, the search snippet and title were used for categorization.
+For non-GitHub sources, the search snippet and title were used for categorization.
 
 ## Categorization
 
@@ -83,12 +83,12 @@ Difficulty was assessed heuristically based on the presence of tier-indicating k
 
 ## Limitations
 
-1. **Search-result cap.** Each of the 86 queries returned at most 20 results, yielding a theoretical ceiling of 1,720 raw mentions. After de-duplication, 376 unique sources were identified. The long tail of smaller personal archives (likely numbering in the tens of thousands) is not enumerated here; a more exhaustive enumeration would require direct use of the the collection Search API.
+1. **Search-result cap.** Each of the 86 queries returned at most 20 results, yielding a theoretical ceiling of 1,720 raw mentions. After de-duplication, 376 unique sources were identified. The long tail of smaller personal archives (likely numbering in the tens of thousands) is not enumerated here; a more exhaustive enumeration would require direct use of the GitHub Search API.
 
-2. **the collection README fetch.** Initial attempts to use a generic page-reader CLI hit rate limits after ~3 successful fetches. The fallback approach — fetching raw README files via curl from `raw.githubusercontent.com` — succeeded for 114 of 120 the collection repos (95%).
+2. **GitHub README fetch.** Initial attempts to use a generic page-reader CLI hit rate limits after ~3 successful fetches. The fallback approach — fetching raw README files via curl from `raw.githubusercontent.com` — succeeded for 114 of 120 GitHub repos (95%).
 
 3. **Category detection heuristic.** Category assignment is based on keyword matching against the title and snippet. A small fraction of assignments may be false positives.
 
-4. **Star counts.** the collection star counts were fetched via the authenticated API at one point in time. They are accurate as of the fetch date but will drift over time.
+4. **Star counts.** GitHub star counts were fetched via the authenticated API at one point in time. They are accurate as of the fetch date but will drift over time.
 
 5. **Static analysis only.** All analysis is based on README content and search snippets. The actual writeup content within each resource was not fetched and analyzed at scale; per-resource quality assessments are inferred from README depth and category coverage rather than direct reading of individual writeup files.

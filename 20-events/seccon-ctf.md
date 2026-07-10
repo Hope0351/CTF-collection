@@ -10,19 +10,19 @@
 
 ## Curated Resources for SECCON CTF
 
-### the collection Repositories (12)
+### Internal Archives (12)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
+| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges.…|
 | 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 3 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 4 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 7 | [arkark/my-ctf-challenges](../30-archetypes/archives/event-organizer-sources/my-ctf-challenges-arkark) | 84 ⭐⭐ | Web, Misc | 2021–2025 | CTF challenges I created . Contribute to arkark/my-ctf-challenges development by creating an accoun… |
-| 8 | mephi42/ctf | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |
-| 10 | [SECCON/SECCON_Beginners_CTF_2024](../20-events/archives/seccon-ctf/SECCON-Beginners-CTF-2024) | 7 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON_Beginners_CTF_2024 development by creating an account. |
-| 11 | SECCON/SECCON13_final_CTF | 6 ⭐ | — | n/a | SECCON 13 Final CTF. Detail. DAY 1 (3/1). Registration: 10:00 ~ 10:30; Preparation: 10:30 ~ 11:00; … |
-| 12 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
+| 5 | [arkark/my-ctf-challenges](../30-archetypes/archives/event-organizer-sources/my-ctf-challenges-arkark) | 84 ⭐⭐ | Web, Misc | 2021–2025 | CTF challenges I created .…|
+| 6 | mephi42/ctf | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |
+| 7 | [SECCON/SECCON_Beginners_CTF_2024](../20-events/archives/seccon-ctf/SECCON-Beginners-CTF-2024) | 7 ⭐ | — | 2024–2024 |…|
+| 8 | SECCON/SECCON13_final_CTF | 6 ⭐ | — | n/a | SECCON 13 Final CTF. Detail. DAY 1 (3/1). Registration: 10:00 ~ 10:30; Preparation: 10:30 ~ 11:00; … |
+| 9 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team.…|
 
 ### Articles, Videos & Blog Posts (1)
 

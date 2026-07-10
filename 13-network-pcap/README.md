@@ -6,11 +6,11 @@
 
 Packet-capture analysis for credential extraction, exfiltration detection, protocol-level attack reconstruction, and traffic-forensics. Wireshark and tshark are the dominant tools; writeups typically include reproducible display filters.
 
-This category contains **13 curated sources** from across the CTF ecosystem: 13 the collection repositories, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
+This category contains **13 curated sources** from across the CTF ecosystem: 13 internal archives, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
-Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
+Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
@@ -40,7 +40,7 @@ Top resources for this sub-topic:
 - [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
-- Kasimir123/CTFWriteUps: Collection of CTF Writeups for  - the collection — 📚 Repository
+- Kasimir123/CTFWriteUps: Collection of CTF Writeups for
 - [JohnHammond/ctf-katana: This repository aims to hold  - the collection](../30-archetypes/archives/awesome-lists/ctf-katana) — 📚 Repository
 
 ### Custom protocol analysis
@@ -63,7 +63,7 @@ If you're new to network & pcap analysis, work through the resources in this ord
 
 1. **Start with a structured learning platform.** Begin with the Wireshark sample captures, then work through Malware Traffic Analysis exercises.
 
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal the collection repository — over time, this becomes your portfolio.
+2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
 3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
 4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
 

@@ -10,7 +10,7 @@
 
 ## Curated Resources for RealWorldCTF
 
-### the collection Repositories (7)
+### Internal Archives (7)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
@@ -19,7 +19,7 @@
 | 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 4 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 5 | [phith0n/realworldctf](../20-events/archives/realworldctf/realworldctf-phith0n) | 115 ⭐⭐ | — | 2018–2019 | This is my Real World CTF Challenges source code: Just walk into the directory and docker-compose u… |
-| 6 | [chaitin/Real-World-CTF-3rd-Challenge-Attachments](../20-events/archives/realworldctf/RWCTF-3rd-Challenges) | 90 ⭐⭐ | — | n/a | Challenge attachments for RWCTF 3rd. Contribute to chaitin/Real-World-CTF-3rd-Challenge-Attachments… |
+| 6 | [chaitin/Real-World-CTF-3rd-Challenge-Attachments](../20-events/archives/realworldctf/RWCTF-3rd-Challenges) | 90 ⭐⭐ | — | n/a | Challenge attachments for RWCTF 3rd.…|
 
 ### Articles, Videos & Blog Posts (0)
 
