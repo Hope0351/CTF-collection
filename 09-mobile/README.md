@@ -12,9 +12,9 @@ This category contains **18 curated sources** from across the CTF ecosystem: 17 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [corCTF 2025 - corphone - Blog](https://u1f383.github.io/android/2025/09/08/corCTF-2025-corphone.html) | 📝 Blog | 2025–2025 | This post is not only a write-up for the challenge but also includes some notes on Android exploitation. ... By the way… |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [corCTF 2025 - corphone](https://u1f383.github.io/android/2025/09/08/corCTF-2025-corphone.html) | Advanced |
 
 ## 🔬 Sub-Topic Deep Dive
 

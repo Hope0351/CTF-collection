@@ -12,11 +12,11 @@ This category contains **37 curated sources** from across the CTF ecosystem: 34 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [CTFtime.org / Writeups](https://ctftime.org/writeups) | 🏆 CTFtime | 2026–2026 | Open World, blockchain sekaictf2026 writeup sekaictf ctf, Abdelkader · Read ; V1T CTF 2026 · Duck, ctf misc v1t v1tctf … |
-| 2 | [DownUnderCTF 2025 Write-up. My first write-up on a CTF challenge! | by Kushagr …](https://kushagr17.medium.com/downunderctf-2025-write-up-a648335f5a58) | ✍️ Medium | 2025–2025 | Today we will be walking through a series of miscellaneous challenges, namely Horoscopes, Wiki and Trusted. These were … |
-| 3 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [CTFtime.org / Writeups](https://ctftime.org/writeups) | Elite |
+| 2 | [DownUnderCTF 2025 Write-up: My First CTF Challenge](https://kushagr17.medium.com/downunderctf-2025-write-up-a648335f5a58) | Beginner |
+| 3 | [PlaidCTF 2023 Writeups](https://siunam321.github.io/ctf/PlaidCTF-2023) | — |
 
 ## 🔬 Sub-Topic Deep Dive
 

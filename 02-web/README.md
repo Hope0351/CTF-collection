@@ -12,37 +12,37 @@ This category contains **82 curated sources** from across the CTF ecosystem: 53 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [CTF Day(47). picoCTF Web Exploitation | by Ahmed Sa3edo](https://medium.com/@ahmednarmer1/ctf-day-47-efe493fc5e12) | ✍️ Medium | n/a | picoCTF Web Exploitation: Client-side-again · Introduction · Challenge Walkthrough · Get Ahmed Sa3edo's stories in your… |
-| 2 | [Hack The Boo CTF: A Technical Writeup on Web, Pwn, and Forensics](https://medium.com/@purvansh95b/hack-the-boo-ctf-a-technical-writeup-on-web-pwn-and-forensics-bfb9a2aac997) | ✍️ Medium | n/a | This writeup documents the analysis, methodology, and technical findings for seven complex challenges completed during … |
-| 3 | [CTF@CIT Web Challenge Walkthroughs (2025) - YouTube](https://www.youtube.com/watch?v=ZBdApaw0r0M) | ▶️ YouTube | 2025–2025 | Video walkthrough for the 5 web challenges featured in the 2025 CIT@CTF competition ... writeups here: https://cryptoca… |
-| 4 | [ICMTC CTF 2023 Web Challenges Walkthrough Writeup | Medium](https://itsahmedatef.medium.com/icmtc-ctf-2023-web-challenges-walkthrough-writeup-d812346be71d) | ✍️ Medium | 2023–2023 | Today i will share with you the techniques i followed to solve most of the web challenges, the challenges were fun and … |
-| 5 | [HTB: Editorial - 0xdf hacks stuff - GitLab](https://0xdf.gitlab.io/2024/10/19/htb-editorial.html) | 📝 Blog | n/a | In Editorial, I'll exploit a simple publishing website. There's a server-side request forgery (SSRF) vulnerability in t… |
-| 6 | [Writeup - Root-Me CTF 10k - Perfect Notes](https://blog.root-me.org/posts/writeup_ctf10k_perfect_notes) | 📝 Blog | n/a | Difficulty: 500 points \| 1 solves. This challenge was the hardest web challenge of the CTF and also the only client sid… |
-| 7 | [Writeup - ComCyber Recrutement CTF - Root-Me Blog](https://blog.root-me.org/posts/writeup_comcyber) | 📝 Blog | n/a | Writeup - ComCyber Recrutement CTF · Step 1 - Network · Step 2 - Web · Step 3 - Forensic · Step 4 - Steganography · Ste… |
-| 8 | [NahamCon CTF 2025 Web challenges writeups | by Syed Dawood - Medium](https://medium.com/@syed_dawood/nahamcon-ctf-2025-web-challenges-writeups-aad86461ca30) | ✍️ Medium | 2025–2025 | The challenge simulates an online concert ticket queue where users must wait for their turn. It uses JWT tokens to mana… |
-| 9 | [OWASP Top Ten Web Application Security Risks](https://owasp.org/www-project-top-ten) | 📝 Blog | n/a | The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad co… |
-| 10 | [OWASP Top 10:2025](https://owasp.org/Top10/2025/en) | 📝 Blog | 2025–2025 | The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad co… |
-| 11 | [All labs | Web Security Academy - PortSwigger](https://portswigger.net/web-security/all-labs) | 📝 Blog | n/a | Register for free to track your learning progress. The benefits of working through PortSwigger's Web Security Academy. … |
-| 12 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
-| 13 | [HTB: OpenSource | 0xdf hacks stuff - GitLab](https://0xdf.gitlab.io/2022/10/08/htb-opensource.html) | 📝 Blog | n/a | OpenSource starts with a web application that has a downloadable source zip. That zip has a Git repo in it, and that le… |
-| 14 | [NahamCon CTF 2023: Web Challenge Walkthroughs - YouTube](https://www.youtube.com/watch?v=XHg_sBD0-es) | ▶️ YouTube | 2023–2023 | ... blog/ctf/2023/#nahamcon ↢NahamConCTF↣ https ... Web Challenges [Space Heroes CTF 2023]. CryptoCat•13K views · 25:35… |
-| 15 | [Web Security Research Papers - PortSwigger Research](https://portswigger.net/research) | 📝 Blog | n/a | Pioneering web security research and the latest research articles from the industry-leading team at PortSwigger Researc… |
-| 16 | [OWASP Top 10 - Essentials - Hack The Box CTF](https://ctf.hackthebox.com/pack/owasp-top-10-essentials) | 📝 Blog | n/a | This CTF pack offers players a wide spectrum of realistic vulnerabilities found in modern web applications and services… |
-| 17 | [CTF Day(26). picoCTF Web Exploitation: Secrets | by Ahmed Sa3edo](https://medium.com/@ahmednarmer1/ctf-day-26-4760e9b83079) | ✍️ Medium | n/a | Challenge Walkthrough · Analyzing the HTML and JavaScript for hardcoded paths or references. · Checking robots.txt, whi… |
-| 18 | [Web Security Academy: Free Online Training from PortSwigger](https://portswigger.net/web-security) | 📝 Blog | n/a | The Web Security Academy is a free online training center for web application security. It includes content from PortSw… |
-| 19 | [Ritsec CTF : WEB Challenges Writeup | by Devansh batham - Medium](https://medium.com/@Asm0d3us/ritsec-ctf-web-challenges-writeup-e46e4965495f) | ✍️ Medium | n/a | Ritsec CTF : WEB Challenges Writeup · Challenge 1 : Misdirection · Challenge 2 : Buckets of fun · Challenge 3 : Potat0 … |
-| 20 | [ICTF 2025 Writeup - Medium](https://medium.com/@erichdryn/ictf-2025-writeup-d732dc1393c5) | ✍️ Medium | 2025–2025 | It was an exciting competition with a diverse range of challenges spanning forensics, steganography, web exploitation, … |
-| 21 | [[Web] Report Google Wargames.my CTF 2023 - vicevirus' Blog](https://vicevirus.github.io/posts/report-google-wgmy-2023) | 📝 Blog | 2023–2023 | After the CTF has ended, I read the solution from omachi. He was going through the route of using usg= method. Image in… |
-| 22 | [LA CTF WriteUp - Medium](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | ✍️ Medium | n/a | LA CTF is an exciting cybersecurity competition that tests participants in various challenges, including web exploitati… |
-| 23 | [HackTheBox - Usage - YouTube](https://www.youtube.com/watch?v=cx9Da-PoXG4) | ▶️ YouTube | n/a | 00:00 - Introduction 00:50 - Start of nmap 02:00 - Discovering the page is Laravel based upon cookies 05:30 - Discoveri… |
-| 24 | [CAT CTF 25 Web challenges writeups | by 0xNayel - Medium](https://medium.com/@0xNayelx/cat-ctf-25-web-challenges-writeups-2655e02b6485) | ✍️ Medium | n/a | This CTF was packed with creative web challenges — from simple logic bugs to advanced attacks like JWT header injection… |
-| 26 | [Top 10 web hacking techniques of 2025 | PortSwigger Research](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) | 📝 Blog | 2025–2025 | In this writeup of a critical vulnerability in the heart of next.js, Rachid Allam shows how to use source-code analysis… |
-| 27 | [Web Security Blog - PortSwigger](https://portswigger.net/blog) | 📝 Blog | n/a | Articles and product insights from the PortSwigger team. Keep up to date with Burp Suite and the world of web security … |
-| 28 | [CTF Day(13). picoCTF Web Exploitation: GET aHEAD - Medium](https://medium.com/@ahmednarmer1/ctf-day-13-2ad289797f14) | ✍️ Medium | n/a | Introduction. What Are HTTP Request Methods? HTTP request methods define how a client (like a browser or tool) communic… |
-| 29 | [TryHackMe — Capture! - Medium](https://medium.com/@vitalysimx/tryhackme-capture-a5ec27a9e94) | ✍️ Medium | n/a | TryHackMe — Capture! In the TryHackMe room, the challenge is pretty simple: get access to the web application. You also… |
-| 30 | [RootMe (CTF Walkthrough). A TryHackMe Lab | by Marduk I Am](https://medium.com/@marduk.i.am/rootme-ctf-walkthrough-efe69ef73510) | ✍️ Medium | n/a | RootMe is a beginner-friendly Linux machine that focuses on fundamental web enumeration, file upload exploitation, and … |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [CTF Day(47). picoCTF Web Exploitation](https://medium.com/@ahmednarmer1/ctf-day-47-efe493fc5e12) | Beginner |
+| 2 | [Hack The Boo CTF: A Technical Writeup on Web, Pwn, and Forensics](https://medium.com/@purvansh95b/hack-the-boo-ctf-a-technical-writeup-on-web-pwn-and-forensics-bfb9a2aac997) | — |
+| 3 | [CTF@CIT Web Challenge Walkthroughs (2025)](https://www.youtube.com/watch?v=ZBdApaw0r0M) | — |
+| 4 | [ICMTC CTF 2023 Web Challenges Walkthrough Writeup](https://itsahmedatef.medium.com/icmtc-ctf-2023-web-challenges-walkthrough-writeup-d812346be71d) | — |
+| 5 | [HTB: Editorial](https://0xdf.gitlab.io/2024/10/19/htb-editorial.html) | Intermediate |
+| 6 | [Writeup - Root-Me CTF 10k - Perfect Notes](https://blog.root-me.org/posts/writeup_ctf10k_perfect_notes) | — |
+| 7 | [Writeup - ComCyber Recrutement CTF](https://blog.root-me.org/posts/writeup_comcyber) | — |
+| 8 | [NahamCon CTF 2025 Web Challenges Writeups](https://medium.com/@syed_dawood/nahamcon-ctf-2025-web-challenges-writeups-aad86461ca30) | — |
+| 9 | [OWASP Top Ten Web Application Security Risks](https://owasp.org/www-project-top-ten) | — |
+| 10 | [OWASP Top 10:2025](https://owasp.org/Top10/2025/en) | — |
+| 11 | [All Labs | Web Security Academy](https://portswigger.net/web-security/all-labs) | — |
+| 12 | [PlaidCTF 2023 Writeups](https://siunam321.github.io/ctf/PlaidCTF-2023) | — |
+| 13 | [HTB: OpenSource](https://0xdf.gitlab.io/2022/10/08/htb-opensource.html) | Intermediate |
+| 14 | [NahamCon CTF 2023: Web Challenge Walkthroughs](https://www.youtube.com/watch?v=XHg_sBD0-es) | — |
+| 15 | [Web Security Research Papers](https://portswigger.net/research) | — |
+| 16 | [OWASP Top 10 - Essentials](https://ctf.hackthebox.com/pack/owasp-top-10-essentials) | Intermediate |
+| 17 | [CTF Day(26). picoCTF Web Exploitation: Secrets](https://medium.com/@ahmednarmer1/ctf-day-26-4760e9b83079) | Beginner |
+| 18 | [Web Security Academy: Free Online Training from PortSwigger](https://portswigger.net/web-security) | — |
+| 19 | [Ritsec CTF: WEB Challenges Writeup](https://medium.com/@Asm0d3us/ritsec-ctf-web-challenges-writeup-e46e4965495f) | — |
+| 20 | [ICTF 2025 Writeup](https://medium.com/@erichdryn/ictf-2025-writeup-d732dc1393c5) | — |
+| 21 | [[Web] Report Google Wargames.my CTF 2023](https://vicevirus.github.io/posts/report-google-wgmy-2023) | — |
+| 22 | [LA CTF WriteUp](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | — |
+| 23 | [HackTheBox - Usage](https://www.youtube.com/watch?v=cx9Da-PoXG4) | Intermediate |
+| 24 | [CAT CTF 25 Web Challenges Writeups](https://medium.com/@0xNayelx/cat-ctf-25-web-challenges-writeups-2655e02b6485) | — |
+| 25 | [Top 10 Web Hacking Techniques of 2025](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) | — |
+| 26 | [Web Security Blog](https://portswigger.net/blog) | — |
+| 27 | [CTF Day(13). picoCTF Web Exploitation: GET aHEAD](https://medium.com/@ahmednarmer1/ctf-day-13-2ad289797f14) | Beginner |
+| 28 | [TryHackMe — Capture!](https://medium.com/@vitalysimx/tryhackme-capture-a5ec27a9e94) | Beginner |
+| 29 | [RootMe (CTF Walkthrough). A TryHackMe Lab](https://medium.com/@marduk.i.am/rootme-ctf-walkthrough-efe69ef73510) | Beginner |
 
 ## 🔬 Sub-Topic Deep Dive
 

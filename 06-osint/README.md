@@ -12,12 +12,12 @@ This category contains **19 curated sources** from across the CTF ecosystem: 14 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [0xL4ughCTF OSINT Writeups - Ahmed Elessaway - Medium](https://xelessaway.medium.com/0xl4ughctf-osint-writeups-44b1f7dcf6d4) | ✍️ Medium | n/a | In this challenge, all you have is an image that seems corrupted and we are looking for an NCIC number that ends with 5… |
-| 2 | [OSINT Challenge— Writeup - Medium](https://medium.com/@alwingt.edu/osint-challenge-writeup-0cc8690d6d73) | ✍️ Medium | n/a | Here's my first ever writeup for a bunch of OSINT challenges I tried from various CTF's, successfully completed all OSI… |
-| 3 | [OSINT | CTF Writeups - noob-atbash](https://noob-atbash.github.io/CTF-writeups/csictf-20/osint/osint.html) | 📝 Blog | n/a | We wish to provide good and detailed writeups for all challenges which we solve.Feel free to suggest some changes . Sta… |
-| 4 | [CTFZone Quals | OSINT | Hamsters are taking over the World](https://hamzaharooon.medium.com/ctfzone-quals-osint-hamsters-are-taking-over-the-world-709556d666fe) | ✍️ Medium | n/a | CTFZone Quals \| OSINT \| Hamsters are taking over the World This was the OSINT challenge with the least solves in CTFZon… |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [0xL4ughCTF OSINT Writeups](https://xelessaway.medium.com/0xl4ughctf-osint-writeups-44b1f7dcf6d4) | — |
+| 2 | [OSINT Challenge — Writeup](https://medium.com/@alwingt.edu/osint-challenge-writeup-0cc8690d6d73) | Beginner |
+| 3 | [OSINT | CTF Writeups](https://noob-atbash.github.io/CTF-writeups/csictf-20/osint/osint.html) | Beginner |
+| 4 | [CTFZone Quals | OSINT | Hamsters are Taking Over the World](https://hamzaharooon.medium.com/ctfzone-quals-osint-hamsters-are-taking-over-the-world-709556d666fe) | — |
 
 ## 🔬 Sub-Topic Deep Dive
 

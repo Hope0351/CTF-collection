@@ -12,9 +12,9 @@ This category contains **11 curated sources** from across the CTF ecosystem: 10 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [DEF CON 29 Cloud Village CTF Writeups | by Muhammad Yuga N.](https://myugan.medium.com/def-con-29-cloud-village-ctf-writeups-4ebd2e2cd9c) | ✍️ Medium | n/a | The CTF begins at 02.15 AM (Indonesia Time), we've started our first day by exploring some challenges by understanding … |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [DEF CON 29 Cloud Village CTF Writeups](https://myugan.medium.com/def-con-29-cloud-village-ctf-writeups-4ebd2e2cd9c) | Elite |
 
 ## 🔬 Sub-Topic Deep Dive
 

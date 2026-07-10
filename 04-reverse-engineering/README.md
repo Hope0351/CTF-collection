@@ -12,20 +12,20 @@ This category contains **64 curated sources** from across the CTF ecosystem: 52 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [Nahamcon CTF 2024 Reverse Engineering Challenges | by Mr Robot](https://medium.com/@0xMr_Robot/nahamcon-ctf-2024-reverse-engineering-challenges-b397296721c1) | ✍️ Medium | 2024–2024 | It pleases me to get into Nahamcon CTF 2024 and solve 6 of 10 reverse challenges in this competition and this is my wri… |
-| 2 | [Writeup - ComCyber Recrutement CTF - Root-Me Blog](https://blog.root-me.org/posts/writeup_comcyber) | 📝 Blog | n/a | Writeup - ComCyber Recrutement CTF · Step 1 - Network · Step 2 - Web · Step 3 - Forensic · Step 4 - Steganography · Ste… |
-| 3 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
-| 4 | [ICTF 2025 Writeup - Medium](https://medium.com/@erichdryn/ictf-2025-writeup-d732dc1393c5) | ✍️ Medium | 2025–2025 | It was an exciting competition with a diverse range of challenges spanning forensics, steganography, web exploitation, … |
-| 5 | [Recap: HITCON ctf 2024 Rank: 108/1699 | by hhhkb | Medium](https://medium.com/@harryfyx/recap-hitcon-ctf-2024-rank-108-1699-2e2af0b10f4f) | ✍️ Medium | 2024–2024 | Took me about 5 hours reading ClamAV documentations, reading another ClamAV CTF writeup and source code, and reading th… |
-| 6 | [CyberSpace CTF 2024 Reverse Engineering Challenges - Medium](https://medium.com/@ELJoOker/cyberspace-ctf-2024-reverse-engineering-challenges-4226b9055547) | ✍️ Medium | 2024–2024 | This write-up is for some of the Reverse Engineering and Forensics challenges that I've solved in the NahamCon CTF… A c… |
-| 7 | [Code X Sport Jung'23 CTF Reverse Engineering Write-up](https://sarimraza.medium.com/code-x-sport-jung23-ctf-reverse-engineering-write-up-d5997c9065a4) | ✍️ Medium | n/a | Hello everyone, I am back with another write-up covering solutions to all 4 Reverse Engineering challenges of Code X Sp… |
-| 8 | [CTF Writeup | RanDom BUG | Reverse Engineering | by Ankeet Saha](https://me-ankeet.medium.com/ctf-writeup-random-bug-reverse-engineering-f17ebba1c5b3) | ✍️ Medium | 2024–2024 | In this article, I will do a walk through of a CTF challenge which was a part of TyroCTF 2024 under the Reverse Enginee… |
-| 9 | [Reverse Engineering CTF writeup: My Favorite Fruit — DreamHack](https://medium.com/@talal.ak/reverse-engineering-ctf-writeup-my-favorite-fruit-dreamhack-5b2cc2a961d0) | ✍️ Medium | n/a | Recently I solved a challenge on DreamHack and the challenge name was My Favorite Fruit. The challenge was a sort of ch… |
-| 10 | [How I Became the “Reverse Guy” in My CTF Team | by Rusty - Medium](https://rustybladez.medium.com/how-i-became-the-reverse-guy-in-my-ctf-team-c6fc2cef1512) | ✍️ Medium | n/a | I thought I'd become an all-rounder. Binary Exploitation, Cryptography, Forensics, OSINT, Reverse Engineering, you call… |
-| 11 | [CSAW CTF 2023 Writeup - tripoloski blog](https://tripoloski1337.github.io/ctf/pwn/uaf/heap/2023/09/18/csawctf2023-writeup.html) | 📝 Blog | 2023–2023 | I competed on CSAW CTF 2023, and I solved multiple challenges e.g. from pwn, incident response and reverse engineering. |
-| 12 | [ICMTC CTF 2024 Reverse Engineering Challenges Write Up](https://medium.com/@ELJoOker/icmtc-ctf-reverse-engineering-and-forensics-challenges-write-up-b3c0167ef171) | ✍️ Medium | 2024–2024 | Hello everyone! Today I'll share my solutions for solved reverse engineering challenges in ICMTC quals competition. |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [Nahamcon CTF 2024 Reverse Engineering Challenges](https://medium.com/@0xMr_Robot/nahamcon-ctf-2024-reverse-engineering-challenges-b397296721c1) | — |
+| 2 | [Writeup - ComCyber Recrutement CTF](https://blog.root-me.org/posts/writeup_comcyber) | — |
+| 3 | [PlaidCTF 2023 Writeups](https://siunam321.github.io/ctf/PlaidCTF-2023) | — |
+| 4 | [ICTF 2025 Writeup](https://medium.com/@erichdryn/ictf-2025-writeup-d732dc1393c5) | — |
+| 5 | [Recap: HITCON CTF 2024 Rank: 108/1699](https://medium.com/@harryfyx/recap-hitcon-ctf-2024-rank-108-1699-2e2af0b10f4f) | — |
+| 6 | [CyberSpace CTF 2024 Reverse Engineering Challenges](https://medium.com/@ELJoOker/cyberspace-ctf-2024-reverse-engineering-challenges-4226b9055547) | — |
+| 7 | [Code X Sport Jung'23 CTF Reverse Engineering Write-up](https://sarimraza.medium.com/code-x-sport-jung23-ctf-reverse-engineering-write-up-d5997c9065a4) | — |
+| 8 | [CTF Writeup | RanDom BUG | Reverse Engineering](https://me-ankeet.medium.com/ctf-writeup-random-bug-reverse-engineering-f17ebba1c5b3) | — |
+| 9 | [Reverse Engineering CTF Writeup: My Favorite Fruit — DreamHack](https://medium.com/@talal.ak/reverse-engineering-ctf-writeup-my-favorite-fruit-dreamhack-5b2cc2a961d0) | — |
+| 10 | [How I Became the "Reverse Guy" in My CTF Team](https://rustybladez.medium.com/how-i-became-the-reverse-guy-in-my-ctf-team-c6fc2cef1512) | — |
+| 11 | [CSAW CTF 2023 Writeup](https://tripoloski1337.github.io/ctf/pwn/uaf/heap/2023/09/18/csawctf2023-writeup.html) | — |
+| 12 | [ICMTC CTF 2024 Reverse Engineering Challenges Write Up](https://medium.com/@ELJoOker/icmtc-ctf-reverse-engineering-and-forensics-challenges-write-up-b3c0167ef171) | — |
 
 ## 🔬 Sub-Topic Deep Dive
 

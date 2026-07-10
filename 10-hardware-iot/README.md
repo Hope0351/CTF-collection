@@ -12,8 +12,7 @@ This category contains **22 curated sources** from across the CTF ecosystem: 21 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
+*No curated external articles yet for this category.*
 
 ## 🔬 Sub-Topic Deep Dive
 

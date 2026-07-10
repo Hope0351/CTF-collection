@@ -12,22 +12,22 @@ This category contains **66 curated sources** from across the CTF ecosystem: 50 
 
 Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
 
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Cracked](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) | ✍️ Medium | n/a | Whether you're a fellow CTF participant or just curious about cryptographic puzzles, I hope these write-ups provide bot… |
-| 2 | [Crypto CTF 2020: Classic Writeup - CTFtime](https://ctftime.org/writeup/23014) | 🏆 CTFtime | 2020–2020 | This is my first time joining a CTF that is purely focused on cryptography. As I saw the challenges, I was discouraged … |
-| 3 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
-| 4 | [CTF-Writeups - crypto](https://saurav3199.github.io/CTF-writeups/DragonSectorCTF) | 📝 Blog | 2020–2020 | CTF-Writeups. Writeups for the past CTF challenges. View. Writeup for solved challenge in DragonSectorCTF 202… |
-| 6 | [CTF Challenges: Cryptography-101 - ROHIT CHOUHAN - Medium](https://rohit170590.medium.com/ctf-challenges-cryptography-101-cc56156662ca) | ✍️ Medium | n/a | The Caesar Cipher is a very simple and common encryption method which does not appear often in full-fledged CTFs but fo… |
-| 7 | [Midnight Flag CTF Writeups (Forensics, Web3, Crypto, Reverse)](https://medium.com/@shoaibbinrashid11/midnight-flag-ctf-writeups-forensics-web3-crypto-reverse-9e8e49e36153) | ✍️ Medium | n/a | The solver uses an Overbeck-style method to remove the “distortion” and decode. · The decoded message becomes an AES ke… |
-| 8 | [LA CTF WriteUp - Medium](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | ✍️ Medium | n/a | LA CTF is an exciting cybersecurity competition that tests participants in various challenges, including web exploitati… |
-| 9 | [squ1rrel CTF 2024 writeup for Cryptography Challenges - Medium](https://medium.com/@jooelsaka/squ1rrel-ctf-2024-writeup-for-cryptography-challenges-16d7cb77e8ce) | ✍️ Medium | 2024–2024 | Hello It's me youssef a Web/Cryptography CTF player from 0xL4ugh Team I'll be sharing my solutions for the crypto chall… |
-| 10 | [ICMTC CTF — Cryptography Challenge Writeup “Simple Cipher”](https://medium.com/@motarekk/icmtc-ctf-cryptography-challenge-writeup-simple-cipher-b3047b0837a3) | ✍️ Medium | n/a | ICMTC CTF — Cryptography Challenge Writeup “Simple Cipher” Introduction Challenge's name indicates that it should be a … |
-| 11 | [Houseplant CTF Write Up Part 2 - Medium](https://medium.com/zh3r0/houseplant-ctf-write-up-part-2-2abc1621510a) | ✍️ Medium | n/a | This part will covers some of the Cryptography challenges I did with our Team ZH3R0 for Houseplant CTF organized by Ric… |
-| 12 | [UrchinSec Aware CTF 2024 Cryptography — All Challs Writeups](https://medium.com/@shikhargupta435/urchinsec-aware-ctf-2024-cryptography-all-challs-writeups-bba9430e94d3) | ✍️ Medium | 2024–2024 | From this post onwards I will try to cover challenges of each category in each post. This post is about the Cryptograph… |
-| 14 | [ICMTC CTF Finals — Cryptography Challenge Writeup “Broken RSA”](https://medium.com/@motarekk/icmtc-ctf-finals-cryptography-challenge-writeup-broken-rsa-3d6c1715027a) | ✍️ Medium | n/a | Challenge's name indicates a weakly-implemented RSA encryption that will lead to a vulnerability that could be exploite… |
-| 15 | [CryptoHack Blog | Updates about the CryptoHack platform](https://blog.cryptohack.org) | 📝 Blog | n/a | Updates about the CryptoHack platform, cryptography news, and CTF writeups. |
-| 16 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | ▶️ YouTube | 2024–2024 | DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn) · Comments. |
+| # | Title | Difficulty |
+|---:|---|---|
+| 1 | [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Cracked](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) | Beginner |
+| 2 | [Crypto CTF 2020: Classic Writeup](https://ctftime.org/writeup/23014) | Elite |
+| 3 | [PlaidCTF 2023 Writeups](https://siunam321.github.io/ctf/PlaidCTF-2023) | — |
+| 4 | [CTF-Writeups - crypto](https://saurav3199.github.io/CTF-writeups/DragonSectorCTF) | — |
+| 5 | [CTF Challenges: Cryptography-101](https://rohit170590.medium.com/ctf-challenges-cryptography-101-cc56156662ca) | Beginner |
+| 6 | [Midnight Flag CTF Writeups (Forensics, Web3, Crypto, Reverse)](https://medium.com/@shoaibbinrashid11/midnight-flag-ctf-writeups-forensics-web3-crypto-reverse-9e8e49e36153) | — |
+| 7 | [LA CTF WriteUp](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | — |
+| 8 | [squ1rrel CTF 2024 Writeup for Cryptography Challenges](https://medium.com/@jooelsaka/squ1rrel-ctf-2024-writeup-for-cryptography-challenges-16d7cb77e8ce) | — |
+| 9 | [ICMTC CTF — Cryptography Challenge Writeup "Simple Cipher"](https://medium.com/@motarekk/icmtc-ctf-cryptography-challenge-writeup-simple-cipher-b3047b0837a3) | Beginner |
+| 10 | [Houseplant CTF Write Up Part 2](https://medium.com/zh3r0/houseplant-ctf-write-up-part-2-2abc1621510a) | — |
+| 11 | [UrchinSec Aware CTF 2024 Cryptography — All Challs Writeups](https://medium.com/@shikhargupta435/urchinsec-aware-ctf-2024-cryptography-all-challs-writeups-bba9430e94d3) | — |
+| 12 | [ICMTC CTF Finals — Cryptography Challenge Writeup "Broken RSA"](https://medium.com/@motarekk/icmtc-ctf-finals-cryptography-challenge-writeup-broken-rsa-3d6c1715027a) | — |
+| 13 | [CryptoHack Blog | Updates about the CryptoHack Platform](https://blog.cryptohack.org) | Beginner |
+| 14 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | Advanced |
 
 ## 🔬 Sub-Topic Deep Dive
 
