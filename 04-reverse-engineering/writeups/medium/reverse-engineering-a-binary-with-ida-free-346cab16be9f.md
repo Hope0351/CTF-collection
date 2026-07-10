@@ -1,21 +1,14 @@
 # :arrows_counterclockwise: Reverse Engineering A Binary With Ida Free 346Cab16Be9F
 
-> **Original Source:** [Reverse Engineering A Binary With Ida Free 346Cab16Be9F](https://infosecwriteups.com/reverse-engineering-a-binary-with-ida-free-346cab16be9f)
-> **Platform:** infosecwriteups.com | **Category:** `REVERSE ENGINEERING`
-
 ---
 
 ## Introduction
 
-
 Reverse Engineering of a binary is a process of analyzing and understanding the behavior of an executable file in order to obtain information about binary like it’s code, instructions, functionality and some hidden juicy information.
-
 
 The binary we are going to reverse engineer is made by me. You can download the binary and related source code from below given link.
 
-
 Here are some tools that I am going to showcase in this blogpost.
-
 
 - File
 
@@ -29,77 +22,57 @@ Here are some tools that I am going to showcase in this blogpost.
 
 ### File
 
-
 The file command is used in Linux and other Unix-like operating systems to determine the type of a file. When you run the file command followed by the name of a file, it will output information about the file’s format, contents, and other attributes.
 
 ### ltraceltrace is a command-line utility in Linux that allows you to trace and analyze the dynamic library calls made by a program. It is often used for debugging and troubleshooting purposes.
 
 ### strace
 
-
 strace is a command-line utility in Linux that allows you to trace and analyze the system calls made by a program. It is often used for debugging and troubleshooting purposes.
 
 ### objdump
 
-
 objdump is a command-line utility in Linux and other Unix-like operating systems that allows you to display information about object files, executable files, shared libraries, and core dumps. It is often used for analyzing binary files and debugging programs.
-
 
 objdump is a powerful tool for analyzing binary files, but it requires some knowledge of computer architecture and assembly language to interpret its output.
 
 ### IDA Freeware
 
-
 IDA Freeware is a disassembler and debugger software for Windows, Linux, and macOS that allows you to analyze binary files, executable files, and firmware. It is often used by reverse engineers, malware analysts, and security researchers.
-
 
 ## Get Jay Vadhaiya’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 IDA Freeware provides a comprehensive set of features for analyzing binary files, including advanced static analysis capabilities like graphing and cross-referencing. It also includes a dynamic analysis feature called the Debugger, which allows you to run a program inside IDA and pause execution at any point to inspect memory, registers, and call stack information.
 
 ## Analysis
 
-
 Now as you know little bit about tools being used, let’s start the analysis. At the first, we will run the program check what is asking for and how it behaves on user input. (See figure 1.1)
-
 
 *Figure 1.1*
 
-
 Anything we will give to it except it will say Better luck next time. :(
-
 
 Let’s first determine file type and see what kind of information we can get out of it.
 
-
 As you can see, it’s a ELF 64-bit binary and not stripped. Not stripped indicates that their may be some debug information can be found.
-
 
 Now let’s test the binary with ltrace and strace command and see we can found any value able information or not.
 
-
 *ltrace information*
-
 
 *strace information*
 
-
 As you can see there is no information related to password that can give us any hint. In short we got nothing from here. Now we have to go through the assembly representation to get the password. Here we can use both objdump and IDA Freeware but reading a large amount of assembly in terminal is very hard. Let’s take a glace at objdump and then move towards IDA Freeware.
-
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/C]
 └─$ objdump -d level1
 
 level1: file format elf64-x86-64
-
 
 Disassembly of section .init:
 
@@ -304,40 +277,28 @@ Disassembly of section .fini:
 1270: c3 ret
 ```
 
-
 And this is what we got from objdump but it is very hard to analyze the binary this way. Let’s how load the binary in IDA Freeware and take a look at binary. IDA Freeware provides a very popular and easy graphical representation of binary which makes analysis more easy.
-
 
 *IDA Freeware*
 
-
 Now let’s understand what it is doing and how can we get a password.
 
-
 *Main Function*
-
 
 As you can see it prints welcome message and asking for a secret to user. After that it scans the user input and stores it to [rbp+var_40] variable. If you see, it calls a function called checkPass and passes the user input to the function. Double click on checkPass function to see what this function is doing.
 
 *checkPass Function*
 
-
 As you can see, It seems like it is checking multiple conditions with user provided input to actual password. It’s understand it and get the actual password.
 
 *Condition Statement*
 
-
 As you can see, It is tacking one one byte from user input and compares it to certain character. If condition satisfies then moves to another block of code and compares another character. You can see IDA Freeware shows us the char representation in comment besides the hex value. This what we looking for.
-
 
 Now collect every character from each block and it will reveal the actual password. Woh, we got the password. Now let’s check if this password is right or not by entering in command line.
 
 *Final Password*
 
-
 Boom and we cracked our first binary. I haven’t revealed the password because I want you to repeat the process to try your own.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/reverse-engineering-a-binary-with-ida-free-346cab16be9f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of reverse engineering CTF writeups.*

@@ -1,30 +1,26 @@
 # 🔄 I solved EIGHT challenges — CTF Writeup 001 (Part 2)
 
-> **Original Source:** [I solved EIGHT challenges — CTF Writeup 001 (Part 2)](https://medium.com/@byharryzhu/i-solved-eight-challenges-ctf-writeup-001-part-2-d18dd1d6c774)
-> **Platform:** medium.com | **Category:** `REVERSE ENGINEERING`
-
 ---
 
 ## 📝 Full Writeup
 
-I solved EIGHT challenges — CTF Writeup 001 (Part 2)[![Harry Zhu](https://miro.medium.com/v2/resize:fill:64:64/1*TtjB2h_rML7anVF-IeAO7Q.jpeg)
+I solved EIGHT challenges — CTF Writeup 001 (Part 2)![Harry Zhu
 
-](/web/20251008203809/https://medium.com/@byharryzhu?source=post_page---byline--d18dd1d6c774---------------------------------------)
+](/web/20251008203809/)
 
-[Harry Zhu](/web/20251008203809/https://medium.com/@byharryzhu?source=post_page---byline--d18dd1d6c774---------------------------------------)
+[Harry Zhu](/web/20251008203809/)
 
 ·
 May 22, 2024
 
 [
 
-](/web/20251008203809/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2Fd18dd1d6c774&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40byharryzhu%2Fi-solved-eight-challenges-ctf-writeup-001-part-2-d18dd1d6c774&user=Harry+Zhu&userId=ead638620db2&source=---header_actions--d18dd1d6c774---------------------clap_footer------------------)
+](/web/20251008203809/)
 
 --
 
-
 IDA Pro and Ghildra
-Where were we? Let’s check back on the [first part](/web/20251008203809/https://medium.com/@byharryzhu/i-solved-eight-challenges-in-one-work-shift-ctf-writeup-001-part-1-94357898755f) before we move on.
+Where were we? Let’s check back on the [first part](/web/20251008203809/) before we move on.
 
 Right… the Packer’s Paradox. **thinkingprocessing thought**
 
@@ -136,7 +132,7 @@ C1{am@z1ng_wh@t_u_c@n_h1d3_1n_h3@d3rs}
 ```
 
 ### Challenge #7: Important Document
-This is all about code obfuscation! But we’ve gone way too long with this one. Feel free to [follow me](/web/20251008203809/https://medium.com/@byharryzhu) for Part 3 this week!
+This is all about code obfuscation! But we’ve gone way too long with this one. Feel free to [follow me](/web/20251008203809/) for Part 3 this week!
 
 Follow me for more content about tech, post-grad life, and security writeups. If you’re also in the world of helping others, connect with me on [LinkedIn](https://www.linkedin.com/in/harryjzhu/)!
 

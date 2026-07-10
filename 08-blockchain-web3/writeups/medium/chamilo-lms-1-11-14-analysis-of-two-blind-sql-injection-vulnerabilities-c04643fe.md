@@ -1,44 +1,30 @@
 # :link: Medium
 
-> **Original Source:** [Medium](https://infosecwriteups.com/chamilo-lms-1-11-14-analysis-of-two-blind-sql-injection-vulnerabilities-c04643fe637d)
-> **Platform:** infosecwriteups.com | **Category:** `BLOCKCHAIN`
-
 ---
 
 ### Let’s get to the point!
-
 
 >
 
 However, I would like to clarify that these vulnerabilities had already been discovered by other researchers; the only remaining task was to automate their exploitation.
 
-
 During a Red Team exercise, I encountered a system that required a thorough analysis to identify known vulnerabilities. My first step was to search for publicly available exploits, as this could save time during the exploitation phase. Fortunately, I found a YAML file indicating the presence of an SQL Injection vulnerability. However, the situation became more complex when I couldn’t find a publicly available exploit. This is a critical issue, as performing a Blind SQL Injection attack manually is neither efficient nor advisable, especially when time is a critical factor.
-
 
 I opted for the fastest and most direct approach: I downloaded the CMS in question to conduct a detailed analysis of the vulnerability. The goal was to understand how the SQL query is constructed, thereby facilitating the creation of an effective payload. I began by identifying the function that handles the vulnerable parameter, called `options`, within the file `/main/inc/ajax/extra_field.ajax.php`. Subsequently, I traced the execution flow until the query is executed in `/main/inc/lib/extra_field.ajax.php`.
 
-
 ## Get Miguel Angel Méndez Z.’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 At this point, I observed that the parameter was not being properly sanitized, in contrast to the later fix that added the `escape_string()` function to mitigate the vulnerability. This analysis allowed me to understand the sanitization failure and proceed with creating an effective exploit.
 
-
 *Knowing the Vulenrability (White Box)*
-
 
 In summary, I started developing a Python script aimed at automating the exploitation of the Blind SQL Injection vulnerability. This code not only allows for identifying whether a URL is vulnerable but also provides functionalities to determine the number of databases and tables present, retrieve the names of databases, tables, and columns, and ultimately extract records.
 
-
 *Check SQL Injection*
-
 
 *Getting names from databases*
 
@@ -46,9 +32,7 @@ In summary, I started developing a Python script aimed at automating the exploit
 
 [https://github.com/s1kr10s/Exploit-Scripts/blob/main/Chamilo-bSQLi.py](https://github.com/s1kr10s/Exploit-Scripts/blob/main/Chamilo-bSQLi.py)
 
-
 As an additional finding, I encountered another Blind SQL Injection vulnerability that was surprisingly simple yet somewhat overlooked. This vulnerability manifests through an XML request, where the `$WSKey` parameter is not properly sanitized, while the `$WSUser` parameter is. This clearly opens the door to an easy and predictable exploitation.
-
 
 ```
 $WSUser = $doc->getElementsByTagName('Username')->item(0)->nodeValue;
@@ -78,9 +62,7 @@ $result = Database::query($sql);
 }
 ```
 
-
 Here is an example of a simple request that validates the existence of time-based SQL injection:
-
 
 ```
 POST /plugin/sepe/ws/service.php HTTP/1.1
@@ -96,9 +78,7 @@ Content-Type: text/xml
 </root>
 ```
 
-
 For this vulnerability, there was no existing Nuclei template to identify it quickly. In light of this situation, I decided to create a custom template, which I share below:
-
 
 ```
 id: chamilo-sqli-webservices
@@ -174,24 +154,16 @@ matchers-condition: and
 # </root>'
 ```
 
-
 ### Some Google Dork
-
 
 >
 
 inurl:“/main/auth/lostPassword.php” site:*
 
-
 inurl:“index.php?language=spanish” site:*
 
-
 intext:“Powered by Chamilo” site:*
-
 
 Bye, see you soon…
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/chamilo-lms-1-11-14-analysis-of-two-blind-sql-injection-vulnerabilities-c04643fe637d). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of blockchain CTF writeups.*

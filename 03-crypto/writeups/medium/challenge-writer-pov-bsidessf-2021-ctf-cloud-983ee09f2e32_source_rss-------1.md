@@ -1,27 +1,19 @@
 # :locked_with_key: Challenge writer POV: BSidesSF 2021 CTF (Cloud)
 
-> **Original Source:** [Challenge writer POV: BSidesSF 2021 CTF (Cloud)](https://itsc0rg1.medium.com/challenge-writer-pov-bsidessf-2021-ctf-cloud-983ee09f2e32)
-> **Platform:** itsc0rg1.medium.com | **Category:** `CRYPTO` | **Year:** 2021
-
 ---
 
 ## Shout into the void
 
-
 This challenge explored what an attacker could do with a leaked GCP Service Account Key. Players were directed to visit a web application on App Engine which claimed to allow users to share their thoughts freely without trace.
 
-
 I hinted to the presence of a .git directory through robots.txt,
-
 
 ```
 User-agent: *
 Disallow: /.git/*
 ```
 
-
 There are a number of tools available to retrieve git repositories including the nmap script [http-git](https://nmap.org/nsedoc/scripts/http-git.html) and internetwache’s [GitDumper](https://github.com/internetwache/GitTools/tree/master/Dumper). Once the player retrieves the repository, they can run git log/ git show to examine the current state.
-
 
 ```
 > git log
@@ -45,17 +37,13 @@ index a440f42..0000000
 - "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG...
 ```
 
-
 The commit message “clean up complete” should indicate that there was a file that was removed. Viewing the previous commit, will reveal that a service account key was checked-in and deleted. Plugging this into gcloud shows that key is still active,
-
 
 ```
 gcloud auth activate-service-account --key-file=key.json --project=booming-cosine-304921
 ```
 
-
 The players needed to figure out what permissions the key had, given that it didn’t have the permission to list permissions the only way to go about this was to try [different commands](https://cloud.google.com/sdk/docs/cheatsheet). This would enable them to determine that the key had read access to logs, most notably the App Engine’s request logs.
-
 
 ```
 > gcloud logging logs list
@@ -73,13 +61,8 @@ projects/example-project/logs/varlog%2Fsystem> gcloud logging read request_log> 
 resource: /send?message=https%3A%2F%2Fstorage.googleapis.com%2Fshout-into-void%2F1574AB2CB00533975094D87814BCF8FA707FD608-flag.txt
 ```
 
-
 Looking through the logs, players will notice a repeated message being posted which linked to a *-flag.txt on a GCS bucket. This world-readable file contained the flag — CTF{Aud1t_th3_l0g5}. Unfortunately, some players were spamming messages in the flag format (CTF{}) requiring me to more aggressively spam the link to the flag using a cron job. Overall, this challenge was solved 27 times and received a lot of positive feedback over chat. Some players remarked that the bruteforcing aspect was cumbersome, but I want to reiterate that this is how you would enumerate permissions for Service Account keys in the real world when you cannot list their permissions through IAM. If you are interested in learning more about Service Account Keys, I highly recommend Dylan Ayrey and Allison Donovan’s Defcon talk on [Lateral Movement and Privilege Escalation in GCP](https://www.youtube.com/watch?v=Z-JFVJZ-HDA).
-
 
 A big shout-out to [Mandatory](https://twitter.com/iammandatory) for the brainstorming and challenge writing support.
 
 ---
-
-*Originally published on [Medium](https://itsc0rg1.medium.com/challenge-writer-pov-bsidessf-2021-ctf-cloud-983ee09f2e32). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

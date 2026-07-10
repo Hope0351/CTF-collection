@@ -1,23 +1,16 @@
 # :arrows_counterclockwise: Htb Cyber Apocalypse Ctf 2024 Reversing D9Eb85C59Ca9
 
-> **Original Source:** [Htb Cyber Apocalypse Ctf 2024 Reversing D9Eb85C59Ca9](https://infosecwriteups.com/htb-cyber-apocalypse-ctf-2024-reversing-d9eb85c59ca9)
-> **Platform:** infosecwriteups.com | **Category:** `REVERSE ENGINEERING` | **Year:** 2024
-
 ---
 
 ## BoxCutter
-
 
 >
 
 You’ve received a supply of valuable food and medicine from a generous sponsor. There’s just one problem — the box is made of solid steel! Luckily, there’s a dumb automated defense robot which you may be able to trick into opening the box for you — it’s programmed to only attack things with the correct label.
 
-
 ### 💡Solution
 
-
 Again, we kick off by extracting the ZIP archive provided by the challenge, which contains a file that resembles a binary. Let’s double-check its file type:
-
 
 ```
 $ file cutter
@@ -25,9 +18,7 @@ $ file cutter
 cutter: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f76eb244685ad0c3b817caa99093531754fc84c8, for GNU/Linux 3.2.0, not stripped
 ```
 
-
 We have indeed a 64-bit Unix binary. We proceed with running the basic checks such as `strings` and `hexdump`.
-
 
 ```
 $ strings cutter | grep -i htb
@@ -35,16 +26,13 @@ $ strings cutter | grep -i htb
 $ hexdump cutter| grep -i htb
 ```
 
-
 This yielded nothing. Right, before we roll up our sleeves and run a debugger, let’s re-read the challenge description for more clues.
-
 
 In the given challenge, words like “*automated defense robo*t” and “*correct label*” may hint at the need to analyze the program’s behavior, making `strace`a valuable tool for understanding its actions.
 
 >
 
 “strace” is a debugging tool used to monitor system calls and signals. In CTF challenges, it can help uncover hidden functionality or reveal clues by tracing the execution of a program.
-
 
 ```
 $ strace ./cutter
@@ -89,26 +77,20 @@ exit_group(0) = ?
 +++ exited with 0 +++
 ```
 
-
 We have found the flag in the line starting with “openat(AT_FDCWD”.
 `openat()`is a system call used to open files, similar to open(). In this case, the file was the flag string, which does not exist, hence the error “*No such file or directory*”.
 
-
 ## Get Abdul Issa’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 We’ve tried the system call monitoring route, what about any dynamic library calls? Another way of checking for the flag is by using `ltrace` tool to execute the binary and monitor library calls.
 
 >
 
 “ltrace” is a debugging tool used to intercept and record dynamic library calls made by a program during its execution. It helps in understanding how a program interacts with shared libraries, which can be useful in analyzing its behavior or identifying specific functions or system calls it makes.
-
 
 ```
 $ ltrace ./cutter
@@ -119,7 +101,6 @@ puts("[X] Error: Box Not Found"[X] Error: Box Not Found
 +++ exited (status 0) +++
 ```
 
-
 Bingo! The ltrace tool successfully intercepted a dynamic library call to `open()`a file named “HTB{tr4c1ng_th3_c4ll5},” which, as expected, does not exist. However, this interception revealed the location where the flag value was hidden within the application.
 
 >
@@ -127,6 +108,3 @@ Bingo! The ltrace tool successfully intercepted a dynamic library call to `open(
 Flag: HTB{tr4c1ng_th3_c4ll5}
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-ctf-2024-reversing-d9eb85c59ca9). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of reverse engineering CTF writeups.*

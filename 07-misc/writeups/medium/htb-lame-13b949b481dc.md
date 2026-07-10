@@ -1,21 +1,14 @@
 # :game_die: HTB - Lame. First box, first own! not so lame now…
 
-> **Original Source:** [HTB - Lame. First box, first own! not so lame now…](https://infosecwriteups.com/htb-lame-13b949b481dc)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB — Lame
 
-
 ## First box, first own! not so lame now huh?
-
 
 *Photo by [Thomas Park](https://unsplash.com/@thomascpark?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
-
 Starting with an Nmap scan we find a few open ports
-
 
 ```
 └──╼ [★]$ nmap -sT -sV -sC 10.129.7.39 -T 4 -p- -Pn
@@ -56,6 +49,3 @@ Host script results:
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-lame-13b949b481dc). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

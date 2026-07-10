@@ -6,18 +6,6 @@
 
 Packet-capture analysis for credential extraction, exfiltration detection, protocol-level attack reconstruction, and traffic-forensics. Wireshark and tshark are the dominant tools; writeups typically include reproducible display filters.
 
-This category contains **13 curated sources** from across the CTF ecosystem: 13 internal archives, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
-
-## ✍️ Curated Articles & Walkthroughs
-
-Beyond internal archives, the following **3 Medium articles** provide detailed CTF challenge walkthroughs for this category.
-
-| # | Title | Source | Year | Summary |
-|---:|---|---|---|---|
-| 1 | [DEADFACE CTF “Network Trafic Analysis : A Warning”](13-network-pcap/writeups/medium/ctf-writeup-deadface-ctf-network-trafic-analysis-a-warning-6a42f3eca7e7.md) | ✍️ Medium | — | CTF challenge writeup covering 13 topics. |
-| 2 | [GreHack 2024 CTF Writeup: network challenge.](13-network-pcap/writeups/medium/grehack-2024-ctf-writeup-network-challenge-17f15e6abb3b.md) | ✍️ Medium | — | CTF challenge writeup covering 13 topics. |
-| 3 | [Pragyan CTF 2023 — The Kingpin Write-up](13-network-pcap/writeups/medium/pragyan-ctf-2023-the-kingpin-write-up-70a306af1859.md) | ✍️ Medium | — | CTF challenge writeup covering 13 topics. |
-
 ## 🔬 Sub-Topic Deep Dive
 
 The Network & Pcap Analysis category decomposes into the following sub-topics. For each, we list the foundational concepts you should master and the kinds of challenges you'll encounter.

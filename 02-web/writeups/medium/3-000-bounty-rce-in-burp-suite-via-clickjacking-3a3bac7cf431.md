@@ -1,32 +1,22 @@
 # :globe_with_meridians: $3,000 Bounty: RCE in Burp Suite via Clickjacking
 
-> **Original Source:** [$3,000 Bounty: RCE in Burp Suite via Clickjacking](https://infosecwriteups.com/3-000-bounty-rce-in-burp-suite-via-clickjacking-3a3bac7cf431)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # $3,000 Bounty: RCE in Burp Suite via Clickjacking
 
-
 ## From Click to Command: $3,000 RCE in Burp Suite via Chrome Debug Port
-
 
 ### Summary
 
-
 In a brilliant attack chain combining Chrome internals Java behavior and UI tricks researcher mattaustin discovered a remote code execution (RCE) vulnerability in Burp Suite. The vulnerability exploits the way Burp Suite’s embedded headless Chrome scanner enables remote debugging allowing attackers to clickjack their way into executing arbitrary OS commands on the host machine. Yes including launching the Calculator app on a Mac.
-
 
 Let’s dive into how this was achieved and why it matters.
 
 ### Root Cause
 
-
 When Burp launches a Chrome instance for its scanner or crawler it does so in headless mode with the remote debugging port flag enabled. This allows automation and introspection of the browser via a WebSocket interface.
 
-
 However, Chrome’s remote debugging port is:
-
 
 - Randomized per instance
 
@@ -34,9 +24,7 @@ However, Chrome’s remote debugging port is:
 
 - Not protected by authentication
 
-
 The researcher combined this with:
-
 
 - A known JavaScript port scanning trick to discover which port Chrome is listening on
 
@@ -47,7 +35,6 @@ The researcher combined this with:
 - And finally: A way to overwrite JVM options in Burp to achieve RCE on restart.
 
 ### Exploit Flow
-
 
 - Host an HTML payload (burp.html) on a local server.
 
@@ -65,21 +52,15 @@ The researcher combined this with:
 
 ### POC Enhancement
 
-
 In a follow up mattaustin made the exploit quieter by replacing the memory exhaustion trick with a Java Agent.
-
 
 ## Get Monika sharma’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Instead of crashing the JVM to trigger a command they created a small agent.jar:
-
 
 ```
 public class Hax {
@@ -89,22 +70,17 @@ Runtime.getRuntime().exec("open -a Calculator");
 }
 ```
 
-
 By adding this to the user.vmoptions file using:
-
 
 ```
 -javaagent:agent.jar
 ```
 
-
 The agent runs immediately at JVM startup no crash required.
 
 ### Mitigation & Recommendations
 
-
 PortSwigger could have avoided this attack by:
-
 
 - Switching to remote-debugging-pipe which avoids exposing a network port.
 
@@ -112,9 +88,7 @@ PortSwigger could have avoided this attack by:
 
 - Preventing UI interactions with the scanning browser.
 
-
 For developers:
-
 
 - Avoid exposing debug interfaces without proper isolation.
 
@@ -124,12 +98,9 @@ For developers:
 
 ### Impact
 
-
 An attacker can gain control over the victim’s machine with the same permissions as the user running Burp.
 
-
 While this required the victim to:
-
 
 - Run Burp with scan/crawl enabled
 
@@ -137,11 +108,9 @@ While this required the victim to:
 
 - Restart the app
 
-
 …it’s a devastating local privilege escalation vector for shared workstations internal red team setups or even co-working environments.
 
 ### Credit
-
 
 - Hunter: mattaustin
 
@@ -151,19 +120,15 @@ While this required the victim to:
 
 ### Final Thoughts
 
-
 While this issue may seem niche it underscores how attack surfaces aren’t limited to the web app they include the tools we use to test them. The report also reminds us that sometimes the weakest link is not the app but the automation or debug tools surrounding it.
 
-
 Bug bounty hunters should keep an eye on:
-
 
 - Debug ports
 
 - Misused dev flags ( — headless, — inspect, etc.)
 
 - Unprotected localhost interfaces
-
 
 Every overlooked interface is a potential exploit.
 
@@ -172,6 +137,3 @@ Every overlooked interface is a potential exploit.
 Happy Hunting ✨Monika ☕✨
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/3-000-bounty-rce-in-burp-suite-via-clickjacking-3a3bac7cf431). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

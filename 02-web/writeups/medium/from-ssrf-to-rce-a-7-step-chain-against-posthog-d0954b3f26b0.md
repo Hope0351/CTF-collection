@@ -1,12 +1,8 @@
 # :globe_with_meridians: From SSRF to RCE: A 7-Step Chain Against PostHog
 
-> **Original Source:** [From SSRF to RCE: A 7-Step Chain Against PostHog](https://infosecwriteups.com/from-ssrf-to-rce-a-7-step-chain-against-posthog-d0954b3f26b0)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # From SSRF to RCE: A 7-Step Chain Against PostHog
-
 
 >
 
@@ -14,9 +10,7 @@
 
 ## Highlights
 
-
 ## Key points
-
 
 - PostHog’s webhook save endpoint bypassed SSRF validations applied during testing.
 
@@ -31,6 +25,3 @@
 - The chain culminated in a reverse shell via COPY FROM PROGRAM on the PostgreSQL…
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/from-ssrf-to-rce-a-7-step-chain-against-posthog-d0954b3f26b0). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

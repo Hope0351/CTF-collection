@@ -1,20 +1,14 @@
 # :game_die: Pre-compute total combinations for progress bar
 
-> **Original Source:** [Pre-compute total combinations for progress bar](https://infosecwriteups.com/vulncorp-ctf-by-ine-the-moment-i-wanted-to-quit-but-didnt-81772fe065c5)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## 2. From SQL Injection to Admin Access → Breaking Authentication Logic
-
 
 >
 
 After successfully exploiting the debug panel, I shifted focus to the next objective.
 
-
 *At this point, I already had:*
-
 
 - Valid session access (`guest`)
 
@@ -28,62 +22,45 @@ After successfully exploiting the debug panel, I shifted focus to the next objec
 
 Instead of guessing credentials, I targeted the application logic itself.
 
-
 ### Step 1: Testing for Injection Points
 
-
 *The endpoint:*
-
 
 ```
 /api/users/search?q=
 ```
 
-
 looked like a perfect candidate.
-
 
 ## Get The.Flying.Wolf’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 *Using the authenticated session:*
-
 
 ```
 curl -b cookies.txt "http://ctf.ine.local:8080/api/users/search?q=1"
 ```
 
-
 Normal queries returned empty results.
 
-
 *Then I tested input handling:*
-
 
 ```
 curl -b cookies.txt -G --data-urlencode "q=' OR 1=1-- -" "http://ctf.ine.local:8080/api/users/search"
 ```
 
-
 ### What Happened
 
-
 The application returned:
-
 
 - All users
 
 - Including the admin account
 
-
 This confirmed:
-
 
 - Input was not sanitized
 
@@ -95,34 +72,25 @@ This confirmed:
 
 This is a classic SQL Injection vulnerability.
 
-
 ### Step 2: Initial Database Enumeration Attempt (sqlmap)
-
 
 ### Step 3: Automating the Exploitation (sqlmap)
 
-
 *To fully extract the database, I used:*
-
 
 ```
 sqlmap -u "http://ctf.ine.local:8080/api/users/search?q=guest" --cookie="connect.sid=$(grep connect.sid cookies.txt | awk '{print $7}')" --batch --dbms=SQLite --dump-all
 ```
 
-
 ## What the Dump Revealed
 
-
 The database contained multiple tables:
-
 
 At this point, this was no longer just user data, this was internal infrastructure-level information.
 
 ## Sensitive Data Extracted
 
-
 ### 1. Internal Config
-
 
 - Internal API token
 
@@ -132,31 +100,23 @@ At this point, this was no longer just user data, this was internal infrastructu
 
 - Registry URL
 
-
 ### 2. Secrets
 
-
 While analyzing the `secrets` table, something stood out:
-
 
 ```
 FLAG{BR0K3N_ACC3SS_CTRL_SSRF_2025}
 ```
 
-
 This was clearly another flag.
-
 
 However, this raised an important point.
 
 ### 3. Projects Table
 
-
 This one was interesting.
 
-
 Inside `private_notes`, developers had left internal comments like:
-
 
 - Use of internal metadata service
 
@@ -166,12 +126,9 @@ Inside `private_notes`, developers had left internal comments like:
 
 - Suspicious package in internal registry
 
-
 This is exactly how real environments leak context — not through code, but through developer notes.
 
-
 ### 4. Users Table
-
 
 - Admin account identified
 
@@ -179,15 +136,11 @@ This is exactly how real environments leak context — not through code, but thr
 
 - Weak password hints exposed
 
-
 ## Cracking the Admin Hash → The Hardest 68 Hours
-
 
 After dumping the database, everything looked straight forward at first.
 
-
 I had:
-
 
 - Admin username
 
@@ -195,30 +148,23 @@ I had:
 
 - A very specific hint
 
-
 ```
 Company codename + weather event + year + special char (leet speak)
 ```
-
 
 >
 
 It looked solvable, It wasn’t.
 
-
 ### The Target
 
-
 From the `users` table:
-
 
 ```
 admin → 1791169e0c31824bfbe719a60bc779e0
 ```
 
-
 Other users were easy:
-
 
 - sarah.chen → `sarah123`
 
@@ -226,14 +172,11 @@ Other users were easy:
 
 - guest → `guest`
 
-
 But admin… was different.
 
 ### Phase 1: Standard Cracking Attempts (Failed)
 
-
 *I started with the usual:*
-
 
 - Wordlists
 
@@ -241,9 +184,7 @@ But admin… was different.
 
 - Hashcat brute force
 
-
 *Then moved deeper:*
-
 
 - Custom wordlists (Company codename + weather event + year + special char)
 
@@ -251,14 +192,11 @@ But admin… was different.
 
 - Hybrid attacks
 
-
 Nothing worked.
 
 ### Phase 2: Smarter Wordlist Generation (Still Failed)
 
-
 *I refined the logic based on the hint:*
-
 
 - Company codenames (top 100)
 
@@ -270,9 +208,7 @@ Nothing worked.
 
 - Partial leetspeak
 
-
 *Tried:*
-
 
 - `cewl` to generate context-based words
 
@@ -280,14 +216,11 @@ Nothing worked.
 
 - Pattern-based brute force
 
-
 Still nothing.
 
 ### Phase 3: Resource Exhaustion
 
-
 *At this point:*
-
 
 - Crunch-based brute force → lab crashed
 
@@ -295,23 +228,17 @@ Still nothing.
 
 - Optimization attempts → minimal improvement
 
-
 And honestly…
-
 
 I ran out of caffeine too.
 
 ### The Break
 
-
 I stepped away.
-
 
 Went out with a friend. Food. Coffee. Reset.
 
-
 We started talking about:
-
 
 - Work
 
@@ -319,22 +246,17 @@ We started talking about:
 
 - Then… prompt injection
 
-
 And suddenly a thought clicked:
 
 >
 
 *Why am I brute forcing this… ?*
 
-
 ### Phase 4: Thinking Differently
-
 
 Instead of treating it like a hash problem, I treated it like a human pattern prediction problem.
 
-
 I gave a very specific prompt to AI based on:
-
 
 - The hint
 
@@ -342,21 +264,17 @@ I gave a very specific prompt to AI based on:
 
 - Naming patterns used in VulnCorp
 
-
 And in literally 20 second…
 
 >
 
 It returned a password.
 
-
 No code.
 No brute force.
 Just the answer.
 
-
 ### The Moment
-
 
 >
 
@@ -366,23 +284,17 @@ Rushed back.
 Tested the password.
 It worked.
 
-
 ### Admin Credentials
-
 
 ```
 admin : N3xus$torm2025!
 ```
 
-
 ### What This Actually Means
-
 
 This wasn’t about cracking power.
 
-
 *This was about:*
-
 
 - Understanding patterns
 
@@ -391,7 +303,6 @@ This wasn’t about cracking power.
 - Breaking out of brute-force mindset
 
 ### Custom Python Script for Pattern-Based Password Generation
-
 
 ```
 import hashlib
@@ -491,9 +402,7 @@ print_progress(total_outer, total_outer, count, start_time)
 print(f"\n\n[-] Not found. Tried {count:,} combinations in {elapsed:.3f}s")
 ```
 
-
 ### Fixed Leetspeak Hashcat Rule for Password Cracking
-
 
 ```
 ## Minimal Leet Speak Rules for Hashcat
@@ -555,6 +464,3 @@ sa@se3si1so0sS$
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/vulncorp-ctf-by-ine-the-moment-i-wanted-to-quit-but-didnt-81772fe065c5). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

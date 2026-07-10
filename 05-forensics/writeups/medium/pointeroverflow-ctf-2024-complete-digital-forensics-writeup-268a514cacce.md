@@ -1,30 +1,26 @@
 # 🔍 PointerOverflow CTF 2024 — Complete Digital Forensics Writeup
 
-> **Original Source:** [PointerOverflow CTF 2024 — Complete Digital Forensics Writeup](https://medium.com/@nathanielpascuarijndorp/pointeroverflow-ctf-2024-complete-digital-forensics-writeup-268a514cacce)
-> **Platform:** medium.com | **Category:** `FORENSICS` | **Year:** 2024
-
 ---
 
 ## 📝 Full Writeup
 
-PointerOverflow CTF 2024 — Complete Digital Forensics Writeup[![Nathan](https://miro.medium.com/v2/resize:fill:88:88/1*l13ymFhDeLiDy0ud8GZ6bw.png)
+PointerOverflow CTF 2024 — Complete Digital Forensics Writeup![Nathan
 
-](/web/20250203085950/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--268a514cacce--------------------------------)
+](/web/20250203085950/)
 
-[Nathan](/web/20250203085950/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--268a514cacce--------------------------------)
+[Nathan](/web/20250203085950/)
 
 ·
-[Follow](/web/20250203085950/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fsubscribe%2Fuser%2Fcb3bcdb687c6&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40nathanielpascuarijndorp%2Fpointeroverflow-ctf-2024-complete-digital-forensics-writeup-268a514cacce&user=Nathan&userId=cb3bcdb687c6&source=post_page-cb3bcdb687c6--byline--268a514cacce---------------------post_header-----------)
+[Follow](/web/20250203085950/)
 
 ·
 Jan 25, 2025
 
 [
 
-](/web/20250203085950/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F268a514cacce&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40nathanielpascuarijndorp%2Fpointeroverflow-ctf-2024-complete-digital-forensics-writeup-268a514cacce&user=Nathan&userId=cb3bcdb687c6&source=---header_actions--268a514cacce---------------------clap_footer-----------)
+](/web/20250203085950/)
 
 --
-
 
 Credits to: Professor Chad. R Johnson.
 Hello, once again I am here to share my writeups! I hope that you’ll enjoy my writeup and please let me know if there is anything you’d like to share or critique!

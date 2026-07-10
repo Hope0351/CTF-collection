@@ -1,66 +1,46 @@
 # :game_die: Mastering Buffer Overflows with Vulnserver
 
-> **Original Source:** [Mastering Buffer Overflows with Vulnserver](https://infosecwriteups.com/mastering-buffer-overflows-with-vulnserver-ebf8ba78ff94)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## Find the Right Module
 
-
 Before we can identify the correct return address, we need to ensure that `vulnserver.exe` doesn't have any protections in place. To do this, use the following command to retrieve the base address:
-
 
 ```
 lm m vulnserver
 ```
 
-
 From the image above, we can see that the base address is `00400000`. Next, we dump the `IMAGE_DOS_HEADER` and find that the `e_lfanew` field contains the offset to the PE header, which is `0x80`.
-
 
 Next, dump the `IMAGE_NT_HEADERS` structure to gather further details.
 
-
 We also need to check the `DllCharacteristics` in the `_IMAGE_OPTIONAL_HEADER` to ensure there are no security protections in place.
-
 
 Finally, we found that the value is `0`, meaning the `vulnserver` doesn’t have any protections enabled, such as SafeSEH, ASLR, or DEP. However, the base address of the `vulnserver` lies between `00400000` and `00407000`. This range always starts with `00`, and unfortunately, `\x00` is a bad character.
 
-
 Since the `vulnserver` base address contains bad characters (`\x00`), we need to look for other DLLs that `vulnserver` calls, specifically those with addresses that don't contain bad characters.
-
 
 Here are some of the modules that `vulnserver` calls:
 
-
 We can use the command `!dh <module_name>` to dump all the data and check which module has `DllCharacteristics` set to `0`. For example, one of the modules we can check is `essfunc`.
-
 
 Next, we need to search for the address of `jmp esp` within the `essfunc` module. Since the `jmp esp` instruction is represented by `FFE4` in assembly, we’ll search for this value within the module.
 
-
 Using the start and end addresses of the `essfunc` module, we can now search for `FF E4`, which corresponds to the `jmp esp` instruction in assembly.:
-
 
 ```
 s -b 0x62500000 L?0x62508000 ff e4
 ```
 
-
 After searching, we found the address `625011af`, which does not contain any bad characters.
 
-
 When placing the address into the `EIP`, we must enter it in reverse order, like this:
-
 
 ```
 eip_overwrite = "\xaf\x11\x50\x62"
 ```
 
-
 This is the final python script:
-
 
 ```
 import socket, time, sys
@@ -119,6 +99,3 @@ sys.exit(0)
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/mastering-buffer-overflows-with-vulnserver-ebf8ba78ff94). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

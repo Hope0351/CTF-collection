@@ -1,25 +1,18 @@
 # :game_die: Solving Kioptrix Level 1 Capture the Flag (CTF)
 
-> **Original Source:** [Solving Kioptrix Level 1 Capture the Flag (CTF)](https://infosecwriteups.com/solving-kioptrix-level-1-capture-the-flag-ctf-5d8da2fb2ea5)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Solving Kioptrix Level 1 Capture the Flag (CTF)
-
 
 *Created by DALL-E*
 
 ## Introduction
 
-
 In this article, we will walk through the process of solving the Kioptrix Level 1 CTF challenge. Gaining root access to the target system by all means possible is the aim of the game. We’ll take the task step by step, breaking down each component into manageable chunks.
 
 ## Scanning the Local Host
 
-
 The first step is to perform an ARP scan of the local host. This scan helps us discover other devices on the network and their IP addresses. By running the command `arp-scan -l`, we can see the results of the scan.
-
 
 ```
 # arp-scan -l
@@ -34,12 +27,9 @@ Starting arp-scan 1.10.0 with 256 hosts (<https://github.com/royhills/arp-scan>)
 Ending arp-scan 1.10.0: 256 hosts scanned in 2.327 seconds (110.01 hosts/sec). 4 responded
 ```
 
-
 ## Scanning the Target IP
 
-
 Next, we perform a scan on the target IP address using the Nmap tool. This scan helps us identify the open ports and services running on the target system. By running the command `nmap 10.0.2.4 -T4 -A -p-`, we can gather information about the target.
-
 
 ```
 # nmap 10.0.2.4 -T4 -A -p-
@@ -102,25 +92,19 @@ OS and Service detection performed. Please report any incorrect results at <http
 Nmap done: 1 IP address (1 host up) scanned in 69.56 seconds
 ```
 
-
 ## Get Ahmet Talha Şen’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
 ## Conducting Web Vulnerability Assessment
 
-
 To further explore the target system, we can use the Nikto tool to perform a web vulnerability assessment. By running the commands `nikto -hhttps://10.0.2.4` and `nikto -h http://10.0.2.4`, we can identify potential vulnerabilities and misconfigurations on the web server.
-
 
 ```
 # nikto -h <https://10.0.2.4>
 - Nikto v2.5.0
-
 
 + 0 host(s) tested
 
@@ -169,12 +153,9 @@ To further explore the target system, we can use the Nikto tool to perform a web
 + 1 host(s) tested
 ```
 
-
 ## Exploiting Vulnerabilities with Metasploit
 
-
 Using the Metasploit Framework, we may try to exploit the vulnerabilities based on the information acquired. We launch the Metasploit console by typing the command `msfconsole` into the terminal.
-
 
 ```
 =[ metasploit v6.3.21-dev ]
@@ -231,9 +212,7 @@ msf6 auxiliary(scanner/smb/smb_version) > run
 msf6 auxiliary(scanner/smb/smb_version) >
 ```
 
-
 These commands load the SMB version scanner module, set the target IP address, and run the scan. The output provides information about the SMB version running on the target system.
-
 
 ```
 msf6 auxiliary(scanner/smb/smb_version) > search trans2open
@@ -359,6 +338,3 @@ Subject: LogWatch for kioptrix.level1
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/solving-kioptrix-level-1-capture-the-flag-ctf-5d8da2fb2ea5). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

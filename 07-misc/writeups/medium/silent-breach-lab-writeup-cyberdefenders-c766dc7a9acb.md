@@ -1,45 +1,31 @@
 # :game_die: Reverse it
 
-> **Original Source:** [Reverse it](https://infosecwriteups.com/silent-breach-lab-writeup-cyberdefenders-c766dc7a9acb)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 Q5: By examining the malicious executable, we found that it uses an obfuscated script to decrypt specific files.
 What predefined password does the script use for encryption?
 
-
 At this stage we need to download the malicious file and try to run static malware analysis on the malicious file (be aware to use safe environment)
 
-
 After downloading the malicious file, we need to run “[strings](https://download.sysinternals.com/files/Strings.zip)*” *on the file and redirect all strings inside a text file using something like this command:
-
 
 ```
 .\strings.exe "D:\CYBERDEFENDERS\Silent_Breach\Downloads\IMF-Info.pdf.exe" > file.txt
 ```
 
-
 open the output file on [Notepad++](https://notepad-plus-plus.org/downloads/)for a better view, and try to see anything catchy. Found Nothing at all TBH :(
-
 
 Now i got an idea to see the static analysis for the malicious file on [Virustotal](https://www.virustotal.com/gui/home/upload), upload the file, and see the yara rules that matched
 
-
 Any of the High Crowd sourced Sigma Rules can lead you, just see the “View matches” tab and see the full command line executed:
-
 
 this .ps1 file seems very malicious, so let’s take a look at the strings output file we exported using “[strings](https://download.sysinternals.com/files/Strings.zip)*” *tool. search for the “Gz3m6mG3j2TyAqF2Zx4v.ps1” file in [Notepad++](https://notepad-plus-plus.org/downloads/)
 
-
 which is make sense, as he said in the question it is a script so, “Gz3m6mG3j2TyAqF2Zx4v.ps1"is a powershell script, so we could've searched for any .ps1 script and we will get this powershell script also!!
-
 
 Found only 1 search hit. And also found a malicious obfuscated code right below the “Gz3m6mG3j2TyAqF2Zx4v.ps1" file
 
-
 So, using a simple python code to obfuscate that very loooong string starts with “K0QfK0QZjJ3bG1CIl”:
-
 
 ```
 import base64
@@ -55,14 +41,11 @@ except UnicodeDecodeError:
 print("[!] Could not decode fully. Might be binary or further obfuscated.")
 ```
 
-
 OR, using [cyberchef](https://gchq.github.io/CyberChef/), by reading the obfuscated code, we can see that it reverse the long string and decode it with base64 decoder
-
 
 do the same filter on [cyberchef](https://gchq.github.io/CyberChef/)with the same order just like this, then add that very long string that starts with “K0QfK0QZjJ3bG1CIl”:
 
 *Reverse the string then decode it From Base64*
-
 
 ```
 # ====================================
@@ -111,12 +94,8 @@ Remove-Item $inputFile -Force
 }
 ```
 
-
 >
 
 *Answer5 → Imf!nfo#2025Sec$*
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/silent-breach-lab-writeup-cyberdefenders-c766dc7a9acb). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

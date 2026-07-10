@@ -6,16 +6,6 @@
 
 Misconfiguration exploitation, IAM privilege escalation, container escapes, Kubernetes attacks, and S3-bucket enumeration across AWS, Azure, and GCP. An emerging category that has grown rapidly since 2022.
 
-This category contains **11 curated sources** from across the CTF ecosystem: 10 internal archives, 1 Medium article, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
-
-## ✍️ Curated Articles & Walkthroughs
-
-Beyond internal archives, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
-
-| # | Title | Difficulty |
-|---:|---|---|
-| 1 | [DEF CON 29 Cloud Village CTF Writeups](https://myugan.medium.com/def-con-29-cloud-village-ctf-writeups-4ebd2e2cd9c) | Elite |
-
 ## 🔬 Sub-Topic Deep Dive
 
 The Cloud Security category decomposes into the following sub-topics. For each, we list the foundational concepts you should master and the kinds of challenges you'll encounter.

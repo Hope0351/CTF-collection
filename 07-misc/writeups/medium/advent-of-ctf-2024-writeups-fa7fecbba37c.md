@@ -1,27 +1,21 @@
 # 📝 Advent of CTF 2024 Writeups
 
-> **Original Source:** [Advent of CTF 2024 Writeups](https://rustybladez.medium.com/advent-of-ctf-2024-writeups-fa7fecbba37c)
-> **Platform:** rustybladez.medium.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 ## 📝 Full Writeup
 
-Advent of CTF 2024 Writeups[![Rusty](https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
+Advent of CTF 2024 Writeups![Rusty
 
-](/web/20251127170506/https://rustybladez.medium.com/?source=post_page---byline--fa7fecbba37c---------------------------------------)
+](/web/20251127170506/)
 
-[Rusty](/web/20251127170506/https://rustybladez.medium.com/?source=post_page---byline--fa7fecbba37c---------------------------------------)
+[Rusty](/web/20251127170506/)
 
 ·
 Jan 1, 2025
 
-
-
 --
 
 2
-
 
 Hey everyone, It’s been a while since I’ve done CTF writeups. The [Cyberstudents](https://cyberstudents.net/) community decided to organize a month-long CTF in December. As a CTF nerd, I just had to participate (this is my second month-long CTF in 2024).
 

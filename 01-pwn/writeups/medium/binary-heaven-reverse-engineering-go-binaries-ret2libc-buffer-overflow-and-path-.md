@@ -1,15 +1,10 @@
 # :skull: Binary Heaven - Reverse Engineering Go Binaries, ret2libc Buffer Overflow, and PATH Hijack to Root | TryHackMe
 
-> **Original Source:** [Binary Heaven - Reverse Engineering Go Binaries, ret2libc Buffer Overflow, and PATH Hijack to Root | TryHackMe](https://infosecwriteups.com/binary-heaven-reverse-engineering-go-binaries-ret2libc-buffer-overflow-and-path-hijack-to-root-b503dc74f415)
-> **Platform:** infosecwriteups.com | **Category:** `PWN`
-
 ---
 
 ## 2.2 Reversing angel_A with radare2
 
-
 Loading `angel_A` In radare2, running a full analysis reveals the main function. The binary calls `ptrace(PTRACE_TRACEME)` on itself as an anti-debug trick — if a debugger is attached, the call fails and the binary exits early.
-
 
 ```
 $ r2 angel_A
@@ -17,7 +12,6 @@ $ r2 angel_A
 [0x00001090]> afl
 0x00001175 8 225 main
 ```
-
 
 ```
 [0x00001090]> pdf @ main
@@ -32,18 +26,14 @@ $ r2 angel_A
 0x00001215 xor eax, 4 ; key = 4
 ```
 
-
 Dumping the strings section shows the obfuscated username stored at the address `0x4060`:
-
 
 ```
 [0x00001090]> iz
 4 0x00004060 8 32 .data utf32le kym~humr
 ```
 
-
 The stored value `kym~humr` is XOR-encoded with the key `4`. A simple Python script decodes it:
-
 
 ```
 # de.py
@@ -52,20 +42,16 @@ decoded = "".join([chr((ord(c)-8) ^ 4) for c in stored])
 print(decoded)
 ```
 
-
 ```
 $ python de.py
 [REDACTED]
 ```
 
-
 >
 
 *🔑 Username: *`*[REDACTED]*`
 
-
 Confirming with the binary:
-
 
 ```
 $ ./angel_A
@@ -74,6 +60,3 @@ Correct! That is my name!
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/binary-heaven-reverse-engineering-go-binaries-ret2libc-buffer-overflow-and-path-hijack-to-root-b503dc74f415). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of pwn CTF writeups.*

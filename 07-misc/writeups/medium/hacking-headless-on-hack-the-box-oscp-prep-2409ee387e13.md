@@ -1,28 +1,20 @@
 # :game_die: Hacking Headless on Hack The Box: OSCP Prep
 
-> **Original Source:** [Hacking Headless on Hack The Box: OSCP Prep](https://infosecwriteups.com/hacking-headless-on-hack-the-box-oscp-prep-2409ee387e13)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Hacking Headless on Hack The Box: OSCP Prep
 
-
 Recon, exploitation, privilege escalation.
 
-
-🔥FREE VERSION — [Free Article](https://medium.com/@enigma_/hacking-headless-on-hack-the-box-oscp-prep-2409ee387e13?sk=b83598dc0f4ddb2ca7c53d311736c798) 🔥
+🔥FREE VERSION — Free Article 🔥
 
 *Headless*
-
 
 Welcome back. This time we’re going to take a shot at Headless. This is an Easy box on the hackthebox platform.
 
 ## 01. Recon
 
-
 As with most boxes, we usual want to start by adding the domain to our /etc/hosts file to avoid DNS problems and so that we won’t run into any problems visiting the web application (if there is one).
-
 
 ```
 sudo nano /etc/hosts
@@ -36,9 +28,7 @@ ff02::2 ip6-allrouters
 10.10.11.8 headless.htb
 ```
 
-
 Let’s begin by checking open ports with nmap as per usual:
-
 
 ```
 $ nmap -sC -sV -A 10.10.11.8 -p 22,5000
@@ -57,6 +47,3 @@ PORT STATE SERVICE VERSION
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hacking-headless-on-hack-the-box-oscp-prep-2409ee387e13). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

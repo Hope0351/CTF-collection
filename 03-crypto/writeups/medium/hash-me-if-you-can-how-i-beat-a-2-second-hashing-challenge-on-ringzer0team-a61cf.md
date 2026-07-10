@@ -1,31 +1,22 @@
 # :locked_with_key: Hash Me If You Can - How I Beat a 2-Second Hashing Challenge on RingZer0Team
 
-> **Original Source:** [Hash Me If You Can - How I Beat a 2-Second Hashing Challenge on RingZer0Team](https://infosecwriteups.com/hash-me-if-you-can-how-i-beat-a-2-second-hashing-challenge-on-ringzer0team-a61cf0a87291)
-> **Platform:** infosecwriteups.com | **Category:** `CRYPTO`
-
 ---
 
 # *Hash Me If You Can* — How I Beat a 2-Second Hashing Challenge on RingZer0Team
 
-
 ## You have 2 seconds to hash this message using the SHA512 algorithm.
-
 
 Two seconds?
 I leaned back in my chair, staring at the screen. The clock was ticking — literally.
-
 
 >
 
 Hash Me If You Can
 
-
 The name alone sounded like a dare.
 I clicked it — and instantly understood why.
 
-
 The challenge page displayed a wall of random characters between two neat banners:
-
 
 ```
 ----- BEGIN MESSAGE -----
@@ -33,13 +24,11 @@ wpIkf9n3I4NnnN9ZHGoCTOvLWL7ptuQwBaINST2avSi6uXtz0ZeEDG2tHnxNz0n15EZrUN9l0sgiWQKz
 ----- END MESSAGE -----
 ```
 
-
 Below it was a single line that set the tone for the next hour of my life:
 
 >
 
 *“You have 2 seconds to hash this message using the SHA512 algorithm and send the answer back.”*
-
 
 Two seconds. That wasn’t just a task — that was a challenge to my reaction time.
 
@@ -48,19 +37,14 @@ Two seconds. That wasn’t just a task — that was a challenge to my reaction t
 *At first, I laughed. “Easy,” I thought.
 Copy the message, run a quick *`*sha512sum*`*, paste the hash back, done.*
 
-
 Except… the moment I reloaded the page, the message changed.
 Every time — a new string.
 
-
 That’s when I realized what was really going on. This wasn’t about computing a hash. It was about automation and precision under pressure.
-
 
 Manual work was impossible. The only way to win this race was with a script.
 
-
 So, I opened VS Code and began typing. A simple Python script using `requests`, `re`, and `hashlib` — nothing fancy, just something to fetch the message, strip the tags, compute the SHA-512 digest, and send it back.
-
 
 ```
 import requests, re, hashlib
@@ -73,48 +57,35 @@ h = hashlib.sha512(msg.encode()).hexdigest()
 print(h)
 ```
 
-
 I ran it, expecting fireworks.
 Instead, I got an error that every programmer dreads:
-
 
 ```
 AttributeError: 'NoneType' object has no attribute 'group'
 ```
 
-
 My beautiful regex couldn’t even find the message. I checked the source HTML, and there it was — the culprit — hundreds of `<br />` tags and broken line spacing. The message wasn’t one solid block of text; it was a fragmented mess.
-
 
 ## Get SHENOBIE’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Fine. Regex could adapt. I rewrote the extraction to handle any combination of `<br>` and whitespace.
-
 
 ```
 pattern = r"----- BEGIN MESSAGE -----\s*<br\s*/?>\s*(.*?)\s*<br\s*/?>\s*----- END MESSAGE -----"
 ```
 
-
 Now the DNS resolver decided to join the challenge.
 
-
 The problem wasn’t just in the code anymore — it was in the network stack itself. The server couldn’t be reached, and I only had two seconds to respond once it did.
-
 
 I took a deep breath, sipped what was left of my coffee, and decided to go full-engineer mode.
 If the DNS wanted to play games, I’d play smarter.
 
-
 I built a resilient, no-nonsense Python script that could handle everything: messy HTML, DNS resolution, timeouts — even fallback to direct IP communication. It would retry intelligently and report exactly what was going on.
-
 
 Here’s the final form — the one that finally conquered the challenge:
 
@@ -122,9 +93,7 @@ Here’s the final form — the one that finally conquered the challenge:
 
 *The Final Script: *`*script_fixed.py*`
 
-
 Save this as `script_fixed.py`, make it executable (`chmod +x script_fixed.py`) and run `python3 script_fixed.py`
-
 
 ```
 #!/usr/bin/env python3
@@ -345,9 +314,7 @@ if __name__ == "__main__":
 main()
 ```
 
-
 It wasn’t pretty, but it was powerful. It could resolve hosts manually, retry connections, and hash the message instantly. I ran it with a sense of anticipation that only CTF players understand — the moment before code meets challenge.
-
 
 ```
 └─$ python3 script_fixed.py
@@ -357,10 +324,6 @@ SHA-512: a23dca1da70398ac723e4f1a73fe7f81478716b4dfe6969faf44a61dd655adcf8e4e549
 Submitting to: http://challenges.ringzer0team.com:10013/?r=a23dca1da70398ac723e4f1a73fe7f81478716b4dfe6969faf44a61dd655adcf8e4e549a089606e992d3b4618d624fcb83ac72c7f8171182315ae6a27e7d6a27
 ```
 
-
 The output paused for half a second. Then, on the screen, in the glow of my terminal:
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hash-me-if-you-can-how-i-beat-a-2-second-hashing-challenge-on-ringzer0team-a61cf0a87291). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

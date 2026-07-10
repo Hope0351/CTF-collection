@@ -1,18 +1,12 @@
 # :game_die: ITI x iSEC CTF Baby Writeup. Hey there, been a while. Today, I’m…
 
-> **Original Source:** [ITI x iSEC CTF Baby Writeup. Hey there, been a while. Today, I’m…](https://lynguist0.medium.com/iti-x-isec-ctf-baby-writeup-30ecc583e653)
-> **Platform:** lynguist0.medium.com | **Category:** `MISC`
-
 ---
 
 After a few trials and errors, getting the image concatenated completely horizontally which was basically a very long horizontal line, I tried to fix it which led to an equally long but vertical line that was not intelligible.
 
-
 Finally, I fixed my prompt and asked GPT to write a script that would concatenate the image parts in equal distribution over length and width, basically meaning it would divide the number of pixels to get the correct dimensions for the original image.
 
-
 Here’s the script:
-
 
 ```
 from PIL import Image
@@ -62,31 +56,20 @@ concatenated_image.save('/path/to/save_directory/concatenated_image.png')
 print("Images have been concatenated into a grid and saved.")
 ```
 
-
 Finally, I got the image! I was very excited to open it and get my flag when-
-
 
 *Y DO ME LIKE THAT BRO?*
 
-
 Who said it was going to be easy? After running into this, I tried lots of tools. Strings, cat, exiftool, etc. But to no avail. Now, given that this is a forensics challenge, and we have a .png on our hands, I decided to start testing out the standard steganography tools just to be safe. I downloaded and ran Stegsolve using the command I will never remember and will always google -> [*java -jar stegsolve.jar*]. Once it’s open, I opened the image in there and started swiping filters.
-
 
 Quick question, how long would you take seeing shit like this before giving up and deciding to go back to your ancestor’s green-fields to plant, live under the sun, and never touch an electronic device again?
 
-
 *When you leave the microwave on for more than 3 minutes.*
-
 
 Honestly, not too many, I’d say. So, after two or three minutes of clicking next, I was thinking maybe this is a dead end, maybe I should try another challenge… and before I finished that thought, I was finally greeted with this.
 
-
 *1_Th0ught_1'd_KMS :D*
-
 
 Voila! By the time I did succeeded in cracking this one, and because the electricity support wasn’t the best and I had to sit in another room with stable electric flow, I was texting my team members letting them know that I got this when they told me they’d gotten more than 4–5 challenges. I was thrilled, proud, and mostly just in awe of how amazing these guys are.
 
 ---
-
-*Originally published on [Medium](https://lynguist0.medium.com/iti-x-isec-ctf-baby-writeup-30ecc583e653). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

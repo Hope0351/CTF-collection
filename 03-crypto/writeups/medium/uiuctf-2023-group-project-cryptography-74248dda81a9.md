@@ -1,15 +1,10 @@
 # :locked_with_key: UIUCTF 2023 - Group Project [Cryptography]
 
-> **Original Source:** [UIUCTF 2023 - Group Project [Cryptography]](https://banua.medium.com/uiuctf-2023-group-project-cryptography-74248dda81a9)
-> **Platform:** banua.medium.com | **Category:** `CRYPTO` | **Year:** 2023
-
 ---
 
 # UIUCTF 2023 — Group Project [Cryptography]
 
-
 Last week, i participated in UIUCTF 2023 with the TCP1P team and managed to solve several challenges. One of the challenges that I solved was the Group Project (Cryptography).
-
 
 Challenge Description:
 
@@ -17,12 +12,9 @@ Challenge Description:
 
 In any good project, you split the work into smaller tasks…
 
-
 nc group.chal.uiuc.tf 1337
 
-
 Attachment (chal.py):
-
 
 ```
 from Crypto.Util.number import getPrime, long_to_bytes
@@ -30,7 +22,6 @@ from random import randint
 import hashlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
-
 
 with open("/flag", "rb") as f:
 flag = f.read().strip()
@@ -67,14 +58,11 @@ c = int.from_bytes(cipher.encrypt(pad(flag, 16)), "big")
 print("[$] Ciphertext using shared 'secret' ;)")
 print(f"[$] {c = }")
 
-
 if __name__ == "__main__":
 main()
 ```
 
-
 Analysis:
-
 
 ```
 .....snip....
@@ -87,24 +75,17 @@ print(f"[$] {c = }")
 ....snip....
 ```
 
-
 It is known that the key is the MD5 hash of the “S”, which is then returned in a byte format. This key is used to encrypt the flag using AES ECB mode.
-
 
 To decrypt the AES ECB mode, this key is required.
 
-
 How to get the key?
-
 
 As we can see in the source code above, the script require user input for the value of “k”. There is if condition specifically checking for the weak values of “1”, “p-1”, and “(p-1) // 2”. So, we cannot use that values as the input for “k”.
 
-
 Because its only checking for the specific weak values, i used the sympy.totient python library to count the positive integers less than “p” and coprime with “p”. It does not necessarily yield the same values as “1”, “p-1”, or “(p-1) // 2”.
 
-
 When we choose the “k” to be the totient of “p”, a fascinating property arises. The property is that for any positive integer “a” and prime number “p”, “a ^ phi(p) = 1 (mod p)” holds if “a” is coprime with “p”.
-
 
 ```
 ....snip....
@@ -124,15 +105,11 @@ S = pow(Bk, a, p)
 ....snip...
 ```
 
-
 In the given code, after computing Ak = pow(A, k, p), “Ak” will become 1 (mod p) due to the property mentioned above. Consequently, when “Bk” is computed as pow(B, k, p), it will also be equal to 1 (mod p). As a result, when computing S = pow(Bk, a, p), “S” will still be 1 (mod p) since 1 raised to any power is still 1.
-
 
 Since the shared secret “S” is always equal to 1 (mod p) when “k” is the totient of “p”, the derived encryption key “key” will be the MD5 hash of the same value every time. This results in a predictable encryption key.
 
-
 Solver:
-
 
 ```
 from Crypto.Util.number import *
@@ -174,13 +151,8 @@ flag = cipher.decrypt(long_to_bytes(c)).decode("utf-8")
 print(f"[+] Flag = {flag}")
 ```
 
-
 We got the flag:
-
 
 Thank you for reading this article, i hope it was helpful :-D
 
 ---
-
-*Originally published on [Medium](https://banua.medium.com/uiuctf-2023-group-project-cryptography-74248dda81a9). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

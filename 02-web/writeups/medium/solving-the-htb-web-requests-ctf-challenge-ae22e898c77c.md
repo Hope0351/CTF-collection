@@ -1,41 +1,30 @@
 # :globe_with_meridians: Solving the HTB Web Requests CTF Challenge
 
-> **Original Source:** [Solving the HTB Web Requests CTF Challenge](https://infosecwriteups.com/solving-the-htb-web-requests-ctf-challenge-ae22e898c77c)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # Solving the HTB Web Requests CTF Challenge
 
-
 *Created by Lexia.art*
-
 
 The stages to completing the HTB Web Requests Capture The Flag (CTF) challenge will be discussed in this article. To make sure you comprehend the answer, we’ll dissect every facet of the problem in great depth.
 
 ## Challenge Overview
 
-
 The HTB Web Requests CTF challenge consists of several tasks that involve interacting with a web server using cURL and browser devtools. Let’s dive into each task and explore how to solve them.
 
 ## Task 1: Downloading a File
 
-
 The first task requires us to download a file returned by the `/download.php` endpoint on the server. We can achieve this using the cURL command:
-
 
 ```
 curl 165.22.127.181:30029/download.php
 ```
 
-
 The command will retrieve the file, and the flag can be found within the downloaded content: `HTB{64$!c_cURL_u$3r}`.
 
 ## Task 2: Identifying the HTTP Method
 
-
 The second task involves intercepting a request and determining the HTTP method used. By executing the following cURL command, we can inspect the request and its response headers:
-
 
 ```
 curl 165.22.127.181:30029 -v
@@ -73,14 +62,11 @@ Using cURL should be enough.
 </html>
 ```
 
-
 From the response headers, we can observe that the HTTP method used for the request is `GET`.
 
 ## Task 3: Extracting Server Information
 
-
 In order to complete the third assignment, we must determine the server’s Apache version by looking at the response headers. By making a GET call to the server and looking at the return headers, we can do this. The cURL command below retrieves the headers:
-
 
 ```
 curl 144.126.206.249:31621 -I
@@ -95,23 +81,17 @@ Vary: Accept-Encoding
 Content-Type: text/html
 ```
 
-
 Among the response headers, we find the server information: `Server: Apache/2.4.41 (Ubuntu)`. The Apache version is `2.4.41`.
 
 ## Task 4: Analyzing Network Requests
 
-
 The fourth task involves analyzing network requests made by a web page to find the request that retrieves the flag. By inspecting the network tab in the browser’s developer tools, we can identify the request we are interested in. The cURL command below retrieves the relevant information:
-
 
 ```
 
-
 ## Get Ahmet Talha Şen’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 curl 144.126.206.249:31621 -v
@@ -226,14 +206,11 @@ curl 144.126.206.249:31621 -v
 </html>
 ```
 
-
 Among the response headers, we find the URL of the flag request: `http://144.126.206.249:31621/flag_327a6c4304ad5938eaf0efb6cc3e53dc.txt`. The flag can be found within the file: `HTB{p493_r3qu3$t$_m0n!t0r}`.
 
 ## Task 5: Troubleshooting Broken Functionality
 
-
 The fifth task involves troubleshooting broken functionality to obtain the flag. By observing the search request made by the broken feature, we can mimic the request using cURL to search for the flag. The following cURL command performs the search:
-
 
 ```
 curl 'http://134.209.179.69:30190/search.php?search=flag' -H 'Authorization: Basic YWRtaW46YWRtaW4=' -v
@@ -256,12 +233,9 @@ flag: HTB{curl_g3773r}
 * Connection #0 to host 134.209.179.69 left intactThe response contains the flag: flag: HTB{curl_g3773r}.
 ```
 
-
 ## Task 6: Leveraging Session Cookies
 
-
 The sixth task requires obtaining a session cookie through a valid login and then using that cookie to search for the flag through a JSON POST request to `/search.php`. First, we need to retrieve the session cookie by visiting the login page. The following cURL command retrieves the cookie:
-
 
 ```
 curl http://138.68.155.223:32576/ -v
@@ -315,22 +289,17 @@ curl http://138.68.155.223:32576/ -v
 </html>
 ```
 
-
 Once we have the cookie, we can use it in the subsequent request to search for the flag. The following cURL command performs the search using the session cookie:
-
 
 ```
 curl -X POST -d '{"search":"flag"}' -b 'PHPSESSID=euvqgluu4mtasdeiachd0dufui' -H 'Content-Type: application/json' <http://138.68.155.223:32576/search.php>
 ```
 
-
 The response returns the flag: `["flag: HTB{p0$t_r3p34t3r}"]`.
 
 ## Task 7: Manipulating Data through API Requests
 
-
 The final task involves manipulating data through API requests to retrieve the flag. We need to update a city’s name to “flag,” delete another city, and then search for the city named “flag” to obtain the flag. The following cURL commands perform the required operations:
-
 
 ```
 curl -X PUT <http://165.22.127.181:31910/api.php/city/Boston> -d '{"city_name":"flag"}' -H 'Content-Type: application/json'
@@ -338,15 +307,10 @@ curl -X DELETE '<http://165.22.127.181:31910/api.php/city/london>'
 curl -X GET <http://165.22.127.181:31910/api.php/city/flag>
 ```
 
-
 The response of the last request provides the flag: `HTB{crud_4p!_m4n!pul4t0r}`.
 
 ## Conclusion
 
-
 In this article, we explored the HTB Web Requests CTF challenge and provided a comprehensive solution for each task. You should to be able to complete this challenge successfully by according to the guidelines mentioned above. Keep practicing and having fun as CTFs are an excellent method to improve your online security and penetration testing abilities.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/solving-the-htb-web-requests-ctf-challenge-ae22e898c77c). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

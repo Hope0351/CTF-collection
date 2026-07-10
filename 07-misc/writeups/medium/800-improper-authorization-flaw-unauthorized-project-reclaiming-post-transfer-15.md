@@ -1,43 +1,30 @@
 # :game_die: $800 Improper Authorization Flaw: Unauthorized Project Reclaiming Post Transfer
 
-> **Original Source:** [$800 Improper Authorization Flaw: Unauthorized Project Reclaiming Post Transfer](https://infosecwriteups.com/800-improper-authorization-flaw-unauthorized-project-reclaiming-post-transfer-15fe36976604)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## Steps to Reproduce
 
-
 Initial Setup:
-
 
 - Have two accounts: a victim account (Account A) and an attacker account (Account B)
 
-
 Transfer Project to Attacker:
-
 
 - As the victim (Account A), initiate a project transfer to the attacker (Account B).
 
 - The attacker (Account B) accepts the project transfer and captures the `POST /api/0/accept-transfer/` request. Save this request for later use.
 
-
 Transfer Project Back to Victim:
-
 
 - After completing the work, the attacker (Account B) transfers the project back to the victim (Account A).
 
 - The victim (Account A) accepts the project transfer, regaining control of the project.
 
-
 Exploit the Vulnerability:
-
 
 - The attacker (Account B) reuses the previously captured `POST /api/0/accept-transfer/` request to reclaim the project, despite the project being transferred back to the victim (Account A).
 
-
 Captured Request Details:
-
 
 ```
 POST /api/0/accept-transfer/ HTTP/2
@@ -66,6 +53,3 @@ Priority: u=1, i
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/800-improper-authorization-flaw-unauthorized-project-reclaiming-post-transfer-15fe36976604). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,23 +1,16 @@
 # :globe_with_meridians: THM - Anonforce. boot2root machine for FIT and bsides…
 
-> **Original Source:** [THM - Anonforce. boot2root machine for FIT and bsides…](https://infosecwriteups.com/thm-anonforce-874016c34a0f)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # THM — Anonforce
 
-
 ## boot2root machine for FIT and bsides guatemala CTF
-
 
 *Photo by [Matt Walsh](https://unsplash.com/@two_tees?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
 ## Enumeration
 
-
 ## Nmap
-
 
 ```
 # nmap -T5 -p 21,22 -A 10.10.24.206
@@ -41,6 +34,3 @@ PORT STATE SERVICE VERSION
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/thm-anonforce-874016c34a0f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

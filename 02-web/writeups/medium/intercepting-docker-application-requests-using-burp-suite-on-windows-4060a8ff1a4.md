@@ -1,15 +1,10 @@
 # :globe_with_meridians: Test Burp is reachable from the host
 
-> **Original Source:** [Test Burp is reachable from the host](https://infosecwriteups.com/intercepting-docker-application-requests-using-burp-suite-on-windows-4060a8ff1a4d)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## 11. Troubleshooting Matrix — Windows-Specific Issues
 
-
 ## Diagnostic Commands
-
 
 ```
 # Test Burp is reachable from the host
@@ -32,19 +27,15 @@ netsh interface portproxy show all
 # Reset Docker Desktop proxy UI to "No proxy"
 ```
 
-
 ## 12. Complete PoC Walkthrough — Step-by-Step Lab
-
 
 Here’s a full end-to-end lab you can run on a clean Windows machine with Docker Desktop.
 
 ## Lab Goal
 
-
 Intercept all outbound HTTPS traffic from an `ubuntu:22.04` container making API calls.
 
 ## Step 1: Export Burp CA
-
 
 - Open Burp Suite → Proxy → Options → Import/Export CA Certificate
 
@@ -54,18 +45,14 @@ Intercept all outbound HTTPS traffic from an `ubuntu:22.04` container making API
 
 ## Step 2: Convert to PEM
 
-
 ```
 # Using OpenSSL for Windows
 openssl x509 -inform DER -in C:\burp-lab\burp.der -out C:\burp-lab\burp.pem -outform PEM
 ```
 
-
 ## Step 3: Configure Burp Listener
 
-
 Burp → Proxy → Options → Proxy Listeners:
-
 
 - Default listener: Edit → change to All interfaces
 
@@ -73,14 +60,11 @@ Burp → Proxy → Options → Proxy Listeners:
 
 ## Step 4: Configure Windows Firewall
 
-
 ```
 New-NetFireWallRule -DisplayName "Burp Lab" -Direction Inbound -LocalPort 8080 -Action Allow -Protocol TCP
 ```
 
-
 ## Step 5: Create a PoC Container with a Custom Dockerfile
-
 
 ```
 # C:\burp-lab\Dockerfile
@@ -106,7 +90,6 @@ RUN chmod +x /test.sh
 CMD ["/test.sh"]
 ```
 
-
 ```
 # C:\burp-lab\test.sh
 #!/bin/bash
@@ -120,9 +103,7 @@ echo "=== Testing API call ==="
 curl -s https://jsonplaceholder.typicode.com/posts/1 | head -100
 ```
 
-
 ## Step 6: Build and Run
-
 
 ```
 cd C:\burp-lab
@@ -130,9 +111,7 @@ docker build -t burp-lab .
 docker run --rm burp-lab
 ```
 
-
 ## Step 7: Observe in Burp
-
 
 - Set Burp’s Intercept to ON
 
@@ -144,11 +123,9 @@ docker run --rm burp-lab
 
 ## Step 8: Modify a Request in Flight (The “Killer Feature”)
 
-
 - With Intercept ON, run the container again
 
 - When the `jsonplaceholder.typicode.com` request appears:
-
 
 - Modify the URL from `/posts/1` to `/posts/2`
 
@@ -156,20 +133,15 @@ docker run --rm burp-lab
 
 - Or change `GET` to `POST` and inject a body
 
-
 3. Click Forward to send the modified request
-
 
 4. The container receives the modified response
 
 ## 13. Appendix: PowerShell Automation Scripts
 
-
 ## Script 1: One-Click Burp + Docker Intercept Setup
 
-
 Save as `C:\Scripts\setup-burp-docker.ps1`:
-
 
 ```
 # setup-burp-docker.ps1
@@ -255,9 +227,7 @@ Verification:
 "@ -ForegroundColor Green
 ```
 
-
 ## Script 2: WSL2 Port Forward on Boot (Scheduled Task)
-
 
 ```
 # Create a Scheduled Task that runs on logon
@@ -276,14 +246,11 @@ Register-ScheduledTask -TaskName "WSL2-Burp-PortForward" `
 -Description "Forwards WSL2 port 8080 to Windows host for Burp Suite interception"
 ```
 
-
 ## Quick Reference Card
-
 
 *Docker + Burp Simple FAQ*
 
 ### ❓ If I open a Docker web app in browser, is browser proxy enough to capture traffic?
-
 
 >
 
@@ -291,57 +258,40 @@ Yes ✅
 Browser → Burp Suite → Docker app
 This is enough for basic testing.
 
-
 ### ❓ Then why do blogs use complex Docker + Burp setup?
-
 
 >
 
 Because not all traffic comes from the browser. Some requests are made directly by the container.
 
-
 ### ❓ When is browser proxy enough?
-
 
 >
 
 When you manually use the website in a browser (manual testing like login, forms, XSS, etc.).
 
-
 ### ❓ When do you need Docker proxy setup?
-
 
 >
 
 When the container itself sends requests, such as:
 
-
 backend API calls
-
 
 microservices communication
 
-
 CLI tools inside container
-
 
 external HTTP requests (`curl`, `requests`, etc.)
 
-
 ### ❓ Simple difference?
-
 
 >
 
 Browser proxy = captures what *you click in browser*
 
-
-Docker proxy = captures what *container sends automaticallyGitHub: *[SecurityTalent](https://github.com/SecurityTalent)* | Medium: *[Security Talent](http://medium.com/@securitytalent)* | Twitter: *[Securi3yTalent](https://twitter.com/Securi3yTalent)
-
+Docker proxy = captures what *container sends automaticallyGitHub: *[SecurityTalent](https://github.com/SecurityTalent)* | Medium: *Security Talent* | Twitter: *[Securi3yTalent](https://twitter.com/Securi3yTalent)
 
 *#BugBounty #WebSecurity #EthicalHacking #Hinglish #InfoSec #securityTalent *#CyberSecurity #BurpSuite #Docker #WindowsSecurity #PenetrationTesting #MITM #ProxyInterception #DockerDesktop #WSL2 #Infosec #WebApplicationSecurity #AppSec #RedTeam #EthicalHacking #APIsecurity #PowerShell
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/intercepting-docker-application-requests-using-burp-suite-on-windows-4060a8ff1a4d). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

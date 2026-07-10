@@ -1,12 +1,8 @@
 # :electric_plug: Deadface CTF 2023 - SQL. Write-ups for Deadface 2023 CTF SQL…
 
-> **Original Source:** [Deadface CTF 2023 - SQL. Write-ups for Deadface 2023 CTF SQL…](https://cybersecmaverick.medium.com/deadface-ctf-2023-sql-a4831169457c)
-> **Platform:** cybersecmaverick.medium.com | **Category:** `HARDWARE / IoT` | **Year:** 2023
-
 ---
 
 ## SHAttered Dreams
-
 
 *SHAttered Dreams challenge*Task
 
@@ -14,21 +10,15 @@
 
 DEADFACE is on the brink of selling a patient’s credit card details from the Aurora database to a dark web buyer. Investigate Ghost Town for potential leads on the victim’s identity.
 
-
 Submit the flag as `flag{Firstname Lastname}`. Example: `flag{John Smith}`.
-
 
 Use the database dump from *Aurora Compromise*.
 
-
 Solution
-
 
 I skipped some SQL challenges near the end of the CTF as my strategy shifted to “get the biggest points you can now”!
 
-
 This one was fun and I have learned neat functions in MySQL that I have not used before.
-
 
 The hint in the challenge description suggests that we must crawl the Ghot Town forums and find potential leads to identify our victim.
 
@@ -37,25 +27,18 @@ The hint in the challenge description suggests that we must crawl the Ghot Town 
 We got a potential buyer
 [https://ghosttown.deadface.io/t/we-got-a-potential-buyer/107](https://ghosttown.deadface.io/t/we-got-a-potential-buyer/107)
 
-
 *Ghost Town forum chatter*
-
 
 *Ghost Town forum thread*
 
-
 *Ghost Town thread (cont)*
 
-
 So what we know so far is that there is a patient that had his details concatenated then a SHA1 sum function was applied to his details.
-
 
 The following pieces of data were collected from the database.
 Take note as we will be hunting for the patient using those details.
 
-
 Billing table:Patients table:
-
 
 - patient_id
 
@@ -73,10 +56,8 @@ Billing table:Patients table:
 
 - patient dob
 
-
 The leaked hash to search for and match against:
 *911d1fc5930fa5025dbc2d3953c94de9e4773584*To identify him we have to do a series of steps
-
 
 - Structure a query involving at least two tables (billing and patients)
 
@@ -90,9 +71,7 @@ The leaked hash to search for and match against:
 
 - Select the *first_name* and *last_name* of the patient that matches
 
-
 Here is what the query looks like now
-
 
 ```
 sSELECT
@@ -120,9 +99,7 @@ patients.dob
 ) = '911d1fc5930fa5025dbc2d3953c94de9e4773584';
 ```
 
-
 This returns the answer of:
-
 
 ```
 +------------+-----------+
@@ -133,10 +110,6 @@ This returns the answer of:
 1 row in set (0.037 sec)
 ```
 
-
 flag{Berton Luchetti}
 
 ---
-
-*Originally published on [Medium](https://cybersecmaverick.medium.com/deadface-ctf-2023-sql-a4831169457c). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of hardware / iot CTF writeups.*

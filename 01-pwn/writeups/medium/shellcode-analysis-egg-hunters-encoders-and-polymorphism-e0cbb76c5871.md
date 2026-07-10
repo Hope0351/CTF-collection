@@ -1,26 +1,18 @@
 # :skull: Shellcode Analysis: Egg Hunters, Encoders, and Polymorphism
 
-> **Original Source:** [Shellcode Analysis: Egg Hunters, Encoders, and Polymorphism](https://infosecwriteups.com/shellcode-analysis-egg-hunters-encoders-and-polymorphism-e0cbb76c5871)
-> **Platform:** infosecwriteups.com | **Category:** `PWN`
-
 ---
 
 # Shellcode Analysis: Egg Hunters, Encoders, and Polymorphism
 
-
 ## *Or, how to read malware’s secret love letters to your CPU.*
-
 
 *Photo by [Patrick Martin](https://unsplash.com/@patrickmmartin?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
 ### Why Shellcode Even Exists
 
-
 Think of shellcode as the hacker’s version of a portable camping stove — small, lightweight, and able to cook up something dangerous anywhere you drop it.
 
-
 Originally, shellcode literally spawned a shell (like `/bin/sh`), but nowadays it can:
-
 
 - Download payloads
 
@@ -30,15 +22,12 @@ Originally, shellcode literally spawned a shell (like `/bin/sh`), but nowadays i
 
 - Manipulate memory structures
 
-
 It’s designed to run directly in memory, no fancy file needed.
 And because defenders like us keep getting better, attackers have gotten creative with egg hunters, encoders, and polymorphic tricks.
 
 ### Step 1: The Usual Shellcode Workflow
 
-
 Here’s the recipe:
-
 
 - Get the shellcode into memory — exploit a vulnerability, spray it somewhere.
 
@@ -49,6 +38,3 @@ Here’s the recipe:
 - Run it — and then… bad things happen.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/shellcode-analysis-egg-hunters-encoders-and-polymorphism-e0cbb76c5871). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of pwn CTF writeups.*

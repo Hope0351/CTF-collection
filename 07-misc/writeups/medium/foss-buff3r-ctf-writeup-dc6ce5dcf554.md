@@ -1,15 +1,10 @@
 # :game_die: Foss Buff3R Ctf Writeup Dc6Ce5Dcf554
 
-> **Original Source:** [Foss Buff3R Ctf Writeup Dc6Ce5Dcf554](https://infosecwriteups.com/foss-buff3r-ctf-writeup-dc6ce5dcf554)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 Solution:
 
-
 - Open request in burpsuite
-
 
 ```
 GET / HTTP/2
@@ -28,12 +23,9 @@ Sec-Fetch-Dest: document
 Accept-Encoding: gzip, deflate
 Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
 
-
 ```
 
-
 2. Change the request method from “GET” to “POST”
-
 
 ```
 POST / HTTP/2
@@ -52,13 +44,8 @@ Sec-Fetch-Dest: document
 Accept-Encoding: gzip, deflate
 Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
 
-
 ```
-
 
 Flag: BUFF3RCTF{4bf5fcf7–80ad-4421–98c0–687b67662486}
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/foss-buff3r-ctf-writeup-dc6ce5dcf554). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

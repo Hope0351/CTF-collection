@@ -1,15 +1,10 @@
 # :game_die: [HTB] Falafel - Writeup (OSWE-Prep)
 
-> **Original Source:** [[HTB] Falafel - Writeup (OSWE-Prep)](https://infosecwriteups.com/htb-falafel-writeup-oswe-prep-3b8b56b64076)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # [HTB] Falafel — Writeup (OSWE-Prep)
 
-
 Falafel is a hard difficulty Linux box. Really good learning path for:
-
 
 - SQLi (Boolean-based Blind)
 
@@ -23,9 +18,7 @@ Falafel is a hard difficulty Linux box. Really good learning path for:
 
 ## Initial Recon
 
-
 ### Nmap
-
 
 ```
 # nmap -Pn --open -T4 -sV -sC -p- 10.10.10.73Starting Nmap 7.80 ( [https://nmap.org](https://nmap.org) ) at 2021-04-10 20:40 EDT
@@ -46,10 +39,6 @@ PORT STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-
 - HTTP (80/TCP) — A FalafeLovers web page.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-falafel-writeup-oswe-prep-3b8b56b64076). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

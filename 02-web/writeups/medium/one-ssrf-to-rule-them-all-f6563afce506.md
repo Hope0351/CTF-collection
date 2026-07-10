@@ -1,117 +1,82 @@
 # :globe_with_meridians: One SSRF to Rule Them All.
 
-> **Original Source:** [One SSRF to Rule Them All.](https://infosecwriteups.com/one-ssrf-to-rule-them-all-f6563afce506)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # One SSRF to Rule Them All
 
-
 *From one single callback, to full control of the server.*
-
 
 I was at a coffee shop, laptop open, just starting my day. Nothing special — until I found something more energizing than caffeine.
 
-
 One of the SaaS platforms I was exploring had a built-in file editor and its own scripting language. I’d seen setups like this before — great for data analysts, but even better for bug hunters.
-
 
 ## Initial Recon & The First Clue
 
-
 At first, it didn’t look like much. The environment was heavily sandboxed, with strict limits on every function. Most inputs were locked down, and direct system access was off the table.
-
 
 After trying for some obvious low hanging fruits like OS Command injection, my next question was: *“How about data interaction? If it’s meant for data analysts, there must be data imports in place.”*.
 
-
 But one thing stood out — a function that could fetch external data via URL. Finding it previously would’ve taken ages of digging through dry documentation pages. But luckily my AI companion helped me a lot, as I have asked the right question like this: *“Can this custom language fetch data from external URLs?”*
-
 
 And just like that, I had my answer - *func http*:
 
-
 ## Initial Struggles
-
 
 Of course, it wasn’t instant success. It almost never is! To get there, you go through a painful process of trial and error — trying different options, failed payloads, dead ends. But with enough persistence, I believed I could make it happen.
 
-
 At first, I tried sending basic requests to the same server (localhost), even experimenting with weird schemes like `file:///` and `gopher:///`. Looking back, that was too many steps too fast. So I stepped back.
-
 
 I realized I first needed to check something much simpler: *“Can it reach external hosts at all?”*
 
-
 I pointed a request to `[http://google.com](http://google.com)`. Not to exfiltrate anything – just to see if the call worked. If I could confirm any kind of callback, even blind, it would mean I had a foot in the door. That would be SSRF confirmed, but slim to none impact YET.
-
 
 I was so focused, I didn’t even notice my coffee had gone cold.
 
 ## Breakthrough
 
-
 Then I spotted something important — it supported custom headers. If this environment was running in the cloud, and if that request handler respected headers, I had a shot at the biggest impact: cloud metadata access. Which cloud though?
 
-
 I cycled through different metadata endpoint formats — AWS, GCP, Azure — until finally, one of them answered. This payload returned data:
-
 
 ```
 http://169.254.169.254/metadata/instance?api-version=2021-02-01
 ```
 
-
 And it only worked with the header:
-
 
 ```
 Metadata: true
 ```
-
 
 Bingo. Azure confirmed.
 
 ## Some Juicy Stuff. Finally.
 
-
 Now that I had confirmed Azure as the cloud provider, it was time to push the SSRF further. Reading instance metadata was one thing. But could I extract credentials?
-
 
 ## Get Ott3rly’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Azure exposes Managed Identity tokens through the same internal IP — you just need to hit the right endpoint and include the correct headers. So I built the next payload:
-
 
 ```
 http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://management.azure.com/
 ```
 
-
 Headers:
-
 
 ```
 Metadata: true
 ```
 
-
 I ran the request and waited. No errors. Just a clean, well-formatted JSON response with an access token. A valid, signed OAuth2 Bearer token tied to the server’s own identity.
-
 
 At this point, I wasn’t just poking around anymore. I had a live token that could talk to Azure’s Management API — with whatever permissions that identity had. Even if it was just read-only, that alone could expose resource names, storage accounts, internal architecture, and more.
 
-
 But if the role had write access? The impact could escalate fast:
-
 
 - Create new resources
 
@@ -119,37 +84,27 @@ But if the role had write access? The impact could escalate fast:
 
 - Or even pivot into lateral movement via chained cloud APIs
 
-
 This wasn’t just proof of concept — this was success.
 
 ## The Aftermath
 
-
 I put everything together — the metadata access, the token extraction, and the security risks tied to Managed Identity abuse and submitted the report. A few days later, I got a response. At first, it looked like bad news:
-
 
 But then came the twist — the original finding had been marked as resolved… but never actually fixed:
 
-
 They acknowledged that my report proved the issue still existed. Not only that — I had provided clearer reproduction steps and showed greater impact through token theft. So they moved it into triaged.
-
 
 $1,500.
 
-
 A rare gesture of goodwill — and one that honestly meant more than just the money.
 
-
 Some programs don’t even reply to duplicates. This one admitted fault, owned it, and rewarded the effort.
-
 
 I really love hunting on programs like this when they treat researchers very well!
 
 ## Final Thoughts
 
-
 This wasn’t my first SSRF — and it definitely won’t be the last. What stood out to me most in this case wasn’t the payload, or even the token. It was the process.
-
 
 - Start small.
 
@@ -159,16 +114,10 @@ This wasn’t my first SSRF — and it definitely won’t be the last. What stoo
 
 - Never give up.
 
-
 At first glance, the bug looked like nothing. A sandboxed scripting language, a hidden function, and some confusing responses. But with enough persistence, asking the right questions, testing small steps, and digging layer by layer — it led to a critical cloud compromise path.
 
-
 That’s the thing with SSRFs: They often start as “low/none impact.” But given time, context, and creativity — they escalate.
-
 
 And finally: don’t ignore the boring stuff. The hidden script console. The obscure doc. The function nobody clicks. That’s often where the gold lives. Thank you for reading! If you find this information useful, please share this article on your social media, I will greatly appreciate it! I am active on [Twitter](https://ott3rly.com/twitter), check out some content I post there daily! If you are interested in video content, check my [YouTube](https://ott3rly.com/youtube). Also, if you want to reach me personally, you can visit my [Discord](https://ott3rly.com/discord) server. Cheers!
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/one-ssrf-to-rule-them-all-f6563afce506). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

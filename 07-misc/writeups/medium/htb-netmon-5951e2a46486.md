@@ -1,21 +1,14 @@
 # :game_die: HTB - Netmon. Default creds for the win!
 
-> **Original Source:** [HTB - Netmon. Default creds for the win!](https://infosecwriteups.com/htb-netmon-5951e2a46486)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB — Netmon
 
-
 ## Default creds for the win!
-
 
 *Photo by [Morthy Jameson](https://unsplash.com/@theothermorthy?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
-
 Starting with an Nmap scan we see which ports are open for us to inspect
-
 
 ```
 ┌─[us-dedivip-1]─[10.10.14.8]─[dfaultssec@htb-ssnmgik0rc]─[~]
@@ -47,6 +40,3 @@ PORT STATE SERVICE VERSION
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-netmon-5951e2a46486). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

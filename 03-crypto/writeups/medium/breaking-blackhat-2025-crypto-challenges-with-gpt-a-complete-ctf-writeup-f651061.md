@@ -1,20 +1,14 @@
 # :locked_with_key: Breaking BlackHat 2025 Qualifiers Crypto Challenges with GPT: A Complete CTF Writeup
 
-> **Original Source:** [Breaking BlackHat 2025 Qualifiers Crypto Challenges with GPT: A Complete CTF Writeup]()
-> **Platform:** medium.com | **Category:** `CRYPTO`
-
 ---
 
 # Breaking BlackHat 2025 Qualifiers Crypto Challenges with GPT: A Complete CTF Writeup
 
-
 This blog contains the solutions to all the crypto challenges from BlackHat 2025. I had no prior background in cryptography, and working on these challenges was not part of my original plan. My initial focus was on web challenges, but since our team already had a skilled web specialist, four0four, handling them independently, I turned my attention to crypto.
-
 
 I began exploring the challenges using GPT and applied prompt engineering to tackle them. Step by step, I was able to solve all three with the help of ChatGPT.
 
 ## Table of Contents
-
 
 - Hatagawa
 
@@ -23,7 +17,6 @@ I began exploring the challenges using GPT and applied prompt engineering to tac
 - Whack A Scratch
 
 ## Hatagawa
-
 
 ```
 # Let's solve the user's instance from the 4 ciphertexts they pasted.
@@ -171,12 +164,9 @@ else:
 print("No candidates found (unexpected).")
 ```
 
-
 ## Hatagawa-II
 
-
 This exploit will give four possible flags in the output, and only one of them will be correct.
-
 
 ```
 # Compute all candidate flags for Hatagawa II instance using 5 ciphertext lines.
@@ -270,20 +260,15 @@ for f in uniq:
 print(f)
 ```
 
-
 ## Whack A Scratch
-
 
 This was one of the harder challenges, and solving it was tough even with GPT. It required careful prompt engineering and well-structured commands. After about five hours of intense prompting, the solution finally worked on the third code attempt.
 
-
 Run scripts with these arguments:
-
 
 ```
 python3 <filename> <ip> <port> - start-batch 256 - max-batch 16192 - timeout 120
 ```
-
 
 ```
 #!/usr/bin/env python3
@@ -638,6 +623,3 @@ main()
 ```
 
 ---
-
-*Originally published on [Medium](https://theeomega.medium.com/breaking-blackhat-2025-crypto-challenges-with-gpt-a-complete-ctf-writeup-f65106193fd2). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

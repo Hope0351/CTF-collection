@@ -1,15 +1,10 @@
 # :game_die: OSCP Proving Grounds - Cockpit. Aight folks, here’s another write-up…
 
-> **Original Source:** [OSCP Proving Grounds - Cockpit. Aight folks, here’s another write-up…](https://anoetic.medium.com/oscp-proving-grounds-cockpit-e3affc7d5a49)
-> **Platform:** anoetic.medium.com | **Category:** `MISC`
-
 ---
 
 ## Enumeration
 
-
 Starting off with a nmap scan like always, we see there are three ports open; 22 (ssh), 80 (http), and 9090 (zeus-admin).
-
 
 ```
 Nmap scan report for 192.168.178.10
@@ -43,15 +38,11 @@ PORT STATE SERVICE REASON VERSION
 ...<SNIP>...
 ```
 
-
 I won’t even bother with port 22 yet, I’ll start at port 80 and have a poke around to get a feel for what I’m working with.
-
 
 Its a static webpage with no working links, you know what that means, oh yeah, its directory busting time.
 
-
 From the results of the scan, there’s only really a couple of things that stand out to me, `login.php` and `db_config.php` the latter of which is empty.
-
 
 ```
 200 GET 278l 506w 5366c http://192.168.178.10/css/index.css
@@ -69,27 +60,18 @@ From the results of the scan, there’s only really a couple of things that stan
 200 GET 0l 0w 0c http://192.168.178.10/db_config.php
 ```
 
-
 Navigating to the login page, wouldn’t you expect it, we see a login page. There appears to be a hostname in the bottom left corner of the page so I added that to my hosts file before continuing just in case I would need it later. I tried the usual default credentials like admin:admin but to no avail so decided to try some SQLi login bypasses. The page, however, appears to be doing some form of regex filtering as the usual `'or 1=1-- -` payload redirects the user to the blocked.html page. The payload `'and 2=2-- -` worked just fine though.
-
 
 If you get blocked here just keep trying as I find the blocking is very inconsistent, the ‘or 1=1’ payload worked just fine while I was writing this.
 
-
 Anyway, once we bypass the login screen we see two usernames and two respective base64 encoded passwords. We can simply base64 decode the passwords with a tool such as [cyberchef](https://gchq.github.io/CyberChef/)or by using the command:
-
 
 ```
 echo Y2FudHRvdWNoaGh0aGlzc0A0NTUxNTI= | base64 -d
 ```
 
-
 From here we have a couple of credentials, they don’t work on ssh so lets see if they might work on the zeus-admin interface on port 9090 we found earlier. Using the credentials `james:canttouchhthiss@455152` we can enter the web interface. From here there are a number of options, but since this is a CTF the thing that catches my eye is the ‘Terminal’ button which gives us direct access to a shell on the system.
-
 
 From here we have a bash shell through the web interface, and although you can absolutely do the rest of the box from here, I highly recommend using this opportunity to practice ways to get reverse shells because you never know if in the future you may need some obscure way to get a proper shell. What if this one was highly restricted for example?
 
 ---
-
-*Originally published on [Medium](https://anoetic.medium.com/oscp-proving-grounds-cockpit-e3affc7d5a49). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

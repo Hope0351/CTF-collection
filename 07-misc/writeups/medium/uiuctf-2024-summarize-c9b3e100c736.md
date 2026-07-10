@@ -1,48 +1,35 @@
 # :game_die: UIUCTF 2024 - Summarize. Summarize
 
-> **Original Source:** [UIUCTF 2024 - Summarize. Summarize](https://infosecwriteups.com/uiuctf-2024-summarize-c9b3e100c736)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 # UIUCTF 2024 — **Summarize**
-
 
 Category: Reverse Engineering
 Tags: reversing, ghidra, z3-solver
 
 ## Description
 
-
 >
 
 All you have to do is find six numbers. How hard can that be?
 
-
 Author: Nikhil
-
 
 *It will be EZ.*
 
 ## Disassembly (BinaryNinja/ghidra)
 
-
 [https://dogbolt.org/?id=8d09d83e-8514-464b-8722-515ca0f11d91](https://dogbolt.org/?id=8d09d83e-8514-464b-8722-515ca0f11d91)
-
 
 ## Get Szigecsán Dávid’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 Based on the `entry()`, we know the program starts with the `FUN_004011d6()/sub_4011d6()`, which asks for six numbers, each is 9-digit long.
 After that, there is a check method called `FUN_0040137b()/sub_40137b()`, which gets the numbers and does a bunch of examinations on them.
 First, it checks if they are in the correct range.
-
 
 ```
 if (
@@ -54,9 +41,7 @@ uVar1 = 0;
 }
 ```
 
-
 *Note: 0x5f5e101 = 100000001*
-
 
 ```
 if (
@@ -93,11 +78,9 @@ uVar1 = 1;
 }
 ```
 
-
 After that, there are lots of (5*) functions we have to analyze, what they do.
 Let's see them one by one.
 The second one is called `FUN_0040163d()/sub_40163d()`, where BinaryNinja works a bit better, so I changed to that.
-
 
 ```
 int64_t sub_40163d(uint32_t arg1, uint32_t arg2) __pure
@@ -121,9 +104,7 @@ return (var_10 + (var_20 << var_1c));
 }
 ```
 
-
 My first thought was “Holly Cow, what am I looking at?“. I admit, I couldn’t figure it out, so I rewrote it in a small python script and tested it with different inputs.
-
 
 ```
 def sub_40163d(arg1, arg2):
@@ -152,63 +133,49 @@ for j in range(0, 10):
 print("sub_40163d(", i, ", ", j, ") => ", sub_40163d(i, j))
 ```
 
-
 It turned out it is just an overcomplicated add method, so I continued with the first method called `FUN_004016d8()/sub_4016d8()`, where basically just calling the second one with a negative second parameter. So it is a negative add alias subtraction.
 I checked the other methods and rewrote them if needed. The methods are `addition()`, `subtraction()`, `multiplication()`, `xor()` and `and()`.
 For better performance, I rewrite them in a simple way in python.
-
 
 ```
 def add(param_1, param_2):
 return param_1 + param_2
 
-
 def sub(param_1, param_2):
 return param_1 - param_2
-
 
 def mul(param_1, param_2):
 return param_1 * param_2
 
-
 def xor(param_1, param_2):
 return param_1 ^ param_2
-
 
 def and_(param_1, param_2):
 return param_1 & param_2
 ```
-
 
 Finally, I needed to solve the system of equations with 6 unknowns. Fortunately, there is a python tool called [z3](https://pypi.org/project/z3-solver/), which can solve difficult problems based on simple statements.
 Luckily, we have simple statements, so put them into a python script.
 
 ## Solution
 
-
 ```
 from z3 import *
-
 
 def add(param_1, param_2):
 return param_1 + param_2
 
-
 def sub(param_1, param_2):
 return param_1 - param_2
-
 
 def mul(param_1, param_2):
 return param_1 * param_2
 
-
 def xor(param_1, param_2):
 return param_1 ^ param_2
 
-
 def and_(param_1, param_2):
 return param_1 & param_2
-
 
 a, b, c, d, e, f = BitVecs('a b c d e f', 32)
 
@@ -259,9 +226,7 @@ else:
 print("No solution found")
 ```
 
-
 This script solves our problem and prints the following result.
-
 
 ```
 a = 705965527
@@ -272,20 +237,14 @@ e = 966221407
 f = 217433792
 ```
 
-
 We just need to run the application and put the values there.
-
 
 *Solution*
 
 ## Skills Learned
-
 
 - reversing and rewriting overcomplicated algorithms
 
 - z3-solver
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/uiuctf-2024-summarize-c9b3e100c736). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

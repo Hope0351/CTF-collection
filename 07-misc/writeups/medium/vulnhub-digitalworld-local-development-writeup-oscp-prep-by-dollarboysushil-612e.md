@@ -1,15 +1,10 @@
 # :game_die: Vulnhub: DIGITALWORLD.LOCAL DEVELOPMENT Writeup (OSCP PREP) [by dollarboysushil]
 
-> **Original Source:** [Vulnhub: DIGITALWORLD.LOCAL DEVELOPMENT Writeup (OSCP PREP) [by dollarboysushil]](https://infosecwriteups.com/vulnhub-digitalworld-local-development-writeup-oscp-prep-by-dollarboysushil-612e473200d0)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ## Enumeration
 
-
 `nmap -sC -sV -p- 192.168.217.134`
-
 
 ```
 nmap -sC -sV -p- 192.168.217.134
@@ -122,7 +117,6 @@ SF:ort\x208080</address>\n</body></html>\n");
 Service Info: Host: DEVELOPMENT; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-
 ```
 Host script results:
 | smb2-time:
@@ -147,98 +141,69 @@ Host script results:
 |_clock-skew: mean: 0s, deviation: 1s, median: -1s
 ```
 
-
 `nmap -sC -sV -p- 192.168.217.134 `
 `-sC` for default scripts,`-sV` for version enumeration and `-p-` to scan all ports .
 
-
 Visiting the ip in port 8080.
 
-
 ## Gobuster
-
 
 Running gobuster locks us out for 10 minutes.
 Before being locked out, we have some hidden directory.
 
-
 Viewing page source of `/development.html` reveals directory `/developmentsecretpage`
-
 
 Clicking on `Patrick’s` hyperlink .
 
-
 Lets click on `Click here to log out`
-
 
 We have a login page. In this login panel, I tried entering credentials like, admin:admin , admin:password etc.
 
-
 When entering credentials we get error.
-
 
 ## Get dollarboysushil’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 `Deprecated: Function ereg_replace() is deprecated in /var/www/html/developmentsecretpage/slogin_lib.inc.php on line 335`
-
 
 Searching for the error, we can see there is an exploit.
 
-
 Looking at `/slog_users.txt` we can see some credentials.
-
 
 intern:12345678900987654321
 qiu:qiu
 patrick:P@ssw0rd25
 
-
 Then I used crackstation.net to crack `intern` and `qui` users password.
 for `patrick` crackstation didnt work. So i used [https://md5decrypt.net/en/](https://md5decrypt.net/en/#answer)
 
-
 With this credentials, lets try to ssh login.
-
 
 I was unable to ssh login with user `qui` and `patrick` . But `intern` worked.
 
-
 There is some kind of filter which is preventing us form entering commands like cat , more etc. WE can use commands like cd , clear , echo, exit , help etc.
-
 
 lets bypass this filter.
 
-
 `echo os.system(‘/bin/bash’)`
-
 
 WE have credentials for other users, so i tried to change user to `patrick` and it worked
 
-
 Running sudo -l shows we can run vim and nano as root.
-
 
 With this info lets look at [https://gtfobins.github.io/](https://gtfobins.github.io/)
 
-
 In gtfobins we can see commands to get root shell.
-
 
 First open nano as sudo.
 Then `Ctrl +R` to enter insert mode
 Then `Ctrl + X` , not `reset; sh 1>&0 2>&0`
 
-
 We have a root shell.
 And we can read the proof.txt
-
 
 Thus completes the lab.
 
@@ -250,6 +215,3 @@ Twitter (X) *[dollarboysushil](https://twitter.com/dollarboysushil)*
 Youtube *[dollarboysushil](https://youtube.com/dollarboysushil)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/vulnhub-digitalworld-local-development-writeup-oscp-prep-by-dollarboysushil-612e473200d0). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,51 +1,46 @@
 # :globe_with_meridians: Hacking Indian Government, Finding XSS & SQL Injection
 
-> **Original Source:** [Hacking Indian Government, Finding XSS & SQL Injection](https://infosecwriteups.com/hacking-indian-government-finding-xss-sql-injection-9f83e5e60c6f)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # Hacking Indian Government, Finding XSS & SQL Injection
 
-
 it’s Yash Gurav from Pune, India! I’m a B.Com student with a 2-year passion for cybersecurity and bug bounties. While I jumped into bug bounties early, I confess I underestimated the power of Google dorking. But let me tell you, once I harnessed its potential, the game changed!
 
-
 i am able to find xss & sqli using following google dork in indian government website
-
 
 ```
 site:*.*.gov.in inurl:?id
 ```
 
-
 >
 
 we can also use ext:php or aspx & keep in mind change the id to most common parameters that are vulnereble to xss
 
-
 This experience opened my eyes to the immense power of Google dorking. It’s not just about finding vulnerabilities, it’s about being resourceful, creative, and using the tools at your disposal to make a real impact.
+
+![img_1.png](images/hacking-indian-government-finding-xss-sql-injection-9f83e5e60c6f/img_1.png)
+
+
 
 
 Bug Bounty Tip for Everyone : always check all possibilities
 
-
 ## Get ʏᴀꜱʜʜ’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
 
-
 i also found sqli in same parameter After reporting both issues They send me this mail
+
+![img_2.png](images/hacking-indian-government-finding-xss-sql-injection-9f83e5e60c6f/img_2.png)
+
+
 
 
 >
 
 You can use all the google dorking queries listed below Enjoy :D
-
 
 ```
 1 /2wayvideochat/index.php?r=
@@ -116,6 +111,3 @@ You can use all the google dorking queries listed below Enjoy :D
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hacking-indian-government-finding-xss-sql-injection-9f83e5e60c6f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

@@ -44,7 +44,6 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/
 - Zero lowercase "## internal archives" headings.
 - All category READMEs have consistent section structure: Overview, Curated Articles, Sub-Topic Deep Dive, Suggested Learning Order, See Also.
 
-
 ## [2026-07-10] — Remove Recommended/Featured Repository Sections
 
 ### Removed

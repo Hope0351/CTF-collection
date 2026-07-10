@@ -1,28 +1,19 @@
 # :game_die: CRASH COURSE FOR FINDING SQL INJECTION IN WEB APPS: PART 1
 
-> **Original Source:** [CRASH COURSE FOR FINDING SQL INJECTION IN WEB APPS: PART 1](https://infosecwriteups.com/crash-course-for-finding-sql-injection-in-webapps-part-1-99ede5c15a05)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # CRASH COURSE FOR FINDING SQL INJECTION IN WEB APPS: PART 1
 
-
 I agree manually finding SQL injection in web applications is difficult stuff and not easy to find. It often considered a P1 bug in bug bounty if the impact is high and also tops the OWASP top 10 as it comes in injection.
-
 
 This blog post will help anybody to completely comprehend how to find SQLi bugs in web applications as the topic is far wide so the blog is going to contain a plethora of information.
 
-
 A SQL injection attack consists of the insertion or “injection” of a SQL query via the input data from the client to the application. A successful SQL injection exploits can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to affect the execution of predefined SQL commands.
-
 
 Nearly all applications rely on a data store to manage data that is processed
 within the application. In many cases this data drives the core application logic, holding user accounts, permissions, application configuration settings, and more.Datastores have evolved to become significantly more than passive containers for data. Most hold data in a structured format, accessed using a predefined query format or language, and contain internal logic to help manage that data. Typically, applications use a common privilege level for all types of access to the data store and when processing data belonging to different application users. If an attacker can interfere with the application’s interaction with the data store, to make it retrieve or modify different data, he can usually bypass any controls over data access that are imposed at the application layer.
 
-
 A successful SQL Injection attack can have very serious consequences.
-
 
 - Attackers can use SQL Injections to find the credentials of other users in the database. They can then impersonate these users. The impersonated user may be a database administrator with all database privileges.
 
@@ -34,19 +25,15 @@ A successful SQL Injection attack can have very serious consequences.
 
 - In some database servers, you can access the operating system using the database server. This may be intentional or accidental. In such a case, an attacker could use an SQL Injection as the initial vector and then attack the internal network behind a firewall.
 
-
 There are several types of SQL Injection attacks: in-band SQLi (using database errors or UNION commands), blind SQLi, and out-of-band SQLi.
 
 ## Types of SQL Injections
-
 
 SQL injections typically fall under three categories: In-band SQLi (Classic), Inferential SQLi (Blind), and Out-of-band SQLi. You can classify SQL injection types based on the methods they use to access backend data and their damage potential.
 
 ## In-band SQLi
 
-
 The attacker uses the same channel of communication to launch their attacks and to gather their results. In-band SQLi’s simplicity and efficiency make it one of the most common types of SQLi attack. There are two sub-variations of this method:
-
 
 - Error-based SQLi — the attacker performs actions that cause the database to produce error messages. The attacker can potentially use the data provided by these error messages to gather information about the structure of the database.
 
@@ -54,12 +41,9 @@ The attacker uses the same channel of communication to launch their attacks and 
 
 ## Inferential (Blind) SQLi
 
-
 The attacker sends data payloads to the server and observes the response and behavior of the server to learn more about its structure. This method is called blind SQLi because the data is not transferred from the website database to the attacker, thus the attacker cannot see information about the attack in-band.
 
-
 Blind SQL injections rely on the response and behavioral patterns of the server so they are typically slower to execute but maybe just as harmful. Blind SQL injections can be classified as follows:
-
 
 - Boolean — that attacker sends a SQL query to the database prompting the application to return a result. The result will vary depending on whether the query is true or false. Based on the result, the information within the HTTP response will modify or stay unchanged. The attacker can then work out if the message generated a true or false result.
 
@@ -67,12 +51,9 @@ Blind SQL injections rely on the response and behavioral patterns of the server 
 
 ## Out-of-band SQLi
 
-
 The attacker can only carry out this form of attack when certain features are enabled on the database server used by the web application. This form of attack is primarily used as an alternative to the in-band and inferential SQLi techniques.
 
-
 Out-of-band SQLi is performed when the attacker can’t use the same channel to launch the attack and gather information, or when a server is too slow or unstable for these actions to be performed. These techniques count on the capacity of the server to create DNS or HTTP requests to transfer data to an attacker.
-
 
 Now we will demonstrate the methodology of finding SQL injection by examplesWe will use portswigger’s web security academyBypassing a Login
 The process by which an application accesses a data store usually is the same,
@@ -82,7 +63,6 @@ discretionary access control to the data store, constructing queries to retrieve
 add, or modify data in the data store based on the user’s account and type.
 A successful injection attack that modifies a query (and not merely the data within the query) can bypass the application’s discretionary access controls
 and gain unauthorized access.
-
 
 If security-sensitive application logic is controlled by the results of a query, an
 an attacker can potentially modify the query to alter the application’s logic. Let’s
@@ -94,118 +74,84 @@ This query causes the database to check every row within the users table
 and extract each record where the username column has the value marcus and the password column has the value secret. If a user’s details are returned to the application, the login attempt is successful, and the application creates an authenticated session for that user. In this situation, an attacker can inject into either the username or the password field to modify the query performed by the application and thereby subvert its logic. For example, if an attacker knows that the username of the application administrator is admin , he can log in as that user by supplying any password
 and the following username:
 
-
 `admin'--`
 
-
 This causes the application to perform the following query:
-
 
 Note that the comment sequence `-- `causes the remainder of the query to
 be ignored, and so the query executed is equivalent to:
 SELECT * FROM users WHERE username = ‘admin’
 so the password check is bypassed.
 
-
 Now here our web app
-
 
 Lets go to the ‘account login’ page
 
-
 Now we need to login to ‘administrator’ account by bypassing the login page.
-
 
 Here in this grey box pentest scenario, we are given the username of the admin account that is ‘administrator’
 
-
 now we try to bypass the login page by entering
-
 
 `administrator'-- `in the username field and we will type anything random in the password field.
 
-
 and we bypassed the login functionality.
-
 
 Suppose that the attacker does not know the administrator’s username. In
 most applications, the first account in the database is an administrative user,
 because this account normally is created manually and then is used to generate all other accounts via the application. Furthermore, if the query returns the details for more than one user, most applications will simply process the first user whose details are returned. An attacker can often exploit this behavior to log in as the first user in the database by supplying the username:
 
-
 `' or 1=1--`
-
 
 This causes the application to perform the query:
 
-
 `select * from users where username='' or 1=1--'AND PASSWORD='random value'`
-
 
 ## Get Cyber Defecers’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Because of the comment symbol, this is equivalent to
 
-
 `select * from users where username='' or 1=1`
-
 
 In some situations, an alternative way to handle the trailing quotation
 mark without using the comment symbol is to “balance the quotes.” You finish the injected input with an item of string data that requires a trailing quote
 to encapsulate it. For example, entering the search term:
 username’ OR ‘a’ = ‘a
 
-
 For example, using this we can retrieve the hidden data in an application
-
 
 Check this website out
 
-
 we can see we have category wise selection lets check out the functionality by filtering the ‘Gifts’ only
-
 
 See when I clicked on ‘Gifts’ in Refine you search panel url changes from
 
-
 to
-
 
 we can see the get parameter category added to the URL now as a tip whenever you see something like this happens in a filter functionality whether the parameter is a GET or POST do test it for SQL injections later in blog automatic processes will also be shown to do the same with using tools.
 
-
 now let's try to append
-
 
 `' or 1=1--` to see what happens
 
-
 it is showing both released an unreleased products.
 
-
 The UNION Operator
-
 
 The UNION operator is used in SQL to combine the results of two or more SELECT
 statements into a single result set. When a web application contains a SQL injection vulnerability that occurs in a SELECT statement, you can often employ the UNION operator to perform a second, entirely separate query, and combine its results with those of the first. If the results of the query are returned to your browser, this technique can be used to easily extract arbitrary data from within the database. UNION is supported by all major DBMS products. It is the quickest way to retrieve arbitrary information from the database in situations where query results are returned directly.
 Recall the application that enabled users to search for books based on author,
 title, publisher, and other criteria. Searching for books published by Wiley causes the application to perform the following query:
 
-
 `select author,title,year from books where publisher='sql-flaws'`
-
 
 This simple example demonstrates the potentially huge power of the UNION
 operator when employed in a SQL injection attack. However, before it can be
 exploited in this way, two important provisos need to be considered:
-
 
 - When the results of two queries are combined using the UNION operator,
 the two result sets must have the same structure. In other words, they must contain the same number of columns, which have the same or compatible data types, appearing in the same order.
@@ -214,10 +160,8 @@ the two result sets must have the same structure. In other words, they must cont
 needs to know the name of the database table that he wants to target, and
 the names of its relevant columns.
 
-
 In many real-world cases, the database error messages shown are trapped
 by the application and are not be returned to the user’s browser. It may appear, therefore, that in attempting to discover the structure of the fi rst query, you are restricted to pure guesswork. However, this is not the case. Three important points mean that your task usually is easy:
-
 
 - For the injected query to be capable of being combined with the fi rst, it is
 not strictly necessary that it contain the same data types. Rather, they must be compatible. In other words, each data type in the second query must either be identical to the corresponding type in the first or be implicitly convertible to it. You have already seen that databases implicitly convert a numeric value to a string value. In fact, the value NULL can be converted to any data type. Hence, if you do not know the data type of a particular field, you can simply SELECT NULL for that field.
@@ -234,57 +178,38 @@ sufficient for you to inject arbitrary queries that return string-based data
 and retrieve the results, enabling you to systematically extract any desired
 data from the database.
 
-
 Now here I’m attaching hack steps from web application hackers handbook
-
 
 When you have identified the number of columns required in your injected
 query, and have found a column that has a string data type, you are in a position to extract arbitrary data. A simple proof-of-concept test is to extract the version string of the database, which can be done on any DBMS.Different DBMS have different in built functions to get version string of database
 
-
 Here is a cheatsheet
-
 
 ORACLE: `
 SELECT banner FROM v$version`
 
-
 `SELECT version FROM v$instance`
-
 
 MSSQL:
 
-
 `SELECT @@version`
-
 
 PostgreSQL:
 
-
 `SELECT version()`
-
 
 MYSQL:
 
-
 `SELECT @@version`
-
 
 cheatsheet:
 
-
 [https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/)
-
 
 Lets continue our journey in the next part of the series
 
-
 Written by
-
 
 [https://twitter.com/infosec_boy](https://twitter.com/infosec_boy)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/crash-course-for-finding-sql-injection-in-webapps-part-1-99ede5c15a05). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

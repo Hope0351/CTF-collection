@@ -1,27 +1,23 @@
 # 🌐 CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations
 
-> **Original Source:** [CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations](https://medium.com/@ankushprasadsah47/ctf-writeup-breaking-the-cave-lab-through-lfi-and-suid-misconfigurations-54fb132050c5)
-> **Platform:** medium.com | **Category:** `WEB`
-
 ---
 
 ## 📝 Full Writeup
 
-CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations[![Ankush Prasad Sah](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*fMPZ_g-BSr7CrDq2)
+CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations![Ankush Prasad Sah
 
-](/web/20260110070303/https://medium.com/@ankushprasadsah47?source=post_page---byline--54fb132050c5---------------------------------------)
+](/web/20260110070303/)
 
-[Ankush Prasad Sah](/web/20260110070303/https://medium.com/@ankushprasadsah47?source=post_page---byline--54fb132050c5---------------------------------------)
+[Ankush Prasad Sah](/web/20260110070303/)
 
 ·
 Just now
 
 [
 
-](/web/20260110070303/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F54fb132050c5&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40ankushprasadsah47%2Fctf-writeup-breaking-the-cave-lab-through-lfi-and-suid-misconfigurations-54fb132050c5&user=Ankush+Prasad+Sah&userId=0edc41fe88a3&source=---header_actions--54fb132050c5---------------------clap_footer------------------)
+](/web/20260110070303/)
 
 --
-
 
 ## Hacking the “Cave”: A Web-Application Penetration Testing Writeup
 This report details the successful compromise of the **Cave** lab environment. The attack chain progressed from initial reconnaissance to full administrative (root) access through a series of web-based vulnerabilities and misconfigurations.

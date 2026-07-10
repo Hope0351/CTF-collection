@@ -1,15 +1,10 @@
 # :globe_with_meridians: Finding SSRF BY Full Automation
 
-> **Original Source:** [Finding SSRF BY Full Automation](https://infosecwriteups.com/finding-ssrf-by-full-automation-7d2680091d68)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # Finding SSRF BY Full Automation
 
-
 Hi, everyone
-
 
 My name is Santosh Kumar Sha, I’m a security researcher from India(Assam). In this article, I will be describing how I was able to Find SSRF vulnerability by by automating it and leak private information amazon metadata, ec2 and cloud services.
 
@@ -17,12 +12,9 @@ My name is Santosh Kumar Sha, I’m a security researcher from India(Assam). In 
 
 I am now offering 1:1 sessions to share my knowledge and expertise:[topmate.io/santosh_kumar_sha](https://topmate.io/santosh_kumar_sha)
 
-
 ## TIP For looking for SSRF bug with automation:
 
-
 Tools Requried:
-
 
 - gf (tomnomnom) — [https://github.com/tomnomnom/gf](https://github.com/tomnomnom/gf)
 
@@ -36,22 +28,14 @@ Tools Requried:
 
 ## Case#1 — — Accessing SSRF metadata with automation by just using curl and bash
 
-
 Here get access to internal metadata by ssrf we will collect all URL from way-back machine and look for access the internal data by ssrf
-
 
 Suppose the the target is targetme.com
 
-
 Now here process the process for find the ssrf to access internal metadata
 
-
 Command for getting the URL:
-
 
 waybackurl targetme.com >> blindssrftesturl.txt
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/finding-ssrf-by-full-automation-7d2680091d68). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

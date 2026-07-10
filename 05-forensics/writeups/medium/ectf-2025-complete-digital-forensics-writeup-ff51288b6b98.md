@@ -1,30 +1,25 @@
 # 🔍 ECTF 2025 — Complete Digital Forensics Writeup
 
-> **Original Source:** [ECTF 2025 — Complete Digital Forensics Writeup](https://medium.com/@nathanielpascuarijndorp/ectf-2025-complete-digital-forensics-writeup-ff51288b6b98)
-> **Platform:** medium.com | **Category:** `FORENSICS` | **Year:** 2025
-
-
 ---
 
 ## 📝 Full Writeup
 
-ECTF 2025 — Complete Digital Forensics Writeup[![Nathan](https://miro.medium.com/v2/resize:fill:64:64/1*l13ymFhDeLiDy0ud8GZ6bw.png)
+ECTF 2025 — Complete Digital Forensics Writeup![Nathan
 
-](/web/20250626055232/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--ff51288b6b98---------------------------------------)
+](/web/20250626055232/)
 
-[Nathan](/web/20250626055232/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--ff51288b6b98---------------------------------------)
+[Nathan](/web/20250626055232/)
 
 ·
 Feb 3, 2025
 
 [
 
-](/web/20250626055232/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2Fff51288b6b98&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40nathanielpascuarijndorp%2Fectf-2025-complete-digital-forensics-writeup-ff51288b6b98&user=Nathan&userId=cb3bcdb687c6&source=---header_actions--ff51288b6b98---------------------clap_footer------------------)
+](/web/20250626055232/)
 
 --
 
 1
-
 
 So I participated in another CTF event, this one was quite fun and again it tested the limits of my knowledge, the first few challenges were fun and I could understand them easily as I’ve encountered similar problems before, but I just didn’t know how to get the data in some, so I had to delve into the world of scapy, photorec, and other registry keys that I wasn’t familiar with. Let’s get started, shall we?
 **Challenge 1: **MY DEAREST

@@ -1,26 +1,18 @@
 # :game_die: Hacking Legacy on Hack the Box: A Step by Step OSCP Journey
 
-> **Original Source:** [Hacking Legacy on Hack the Box: A Step by Step OSCP Journey](https://infosecwriteups.com/hacking-legacy-on-hack-the-box-a-step-by-step-oscp-journey-2b58dc78fe67)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Hacking Legacy on Hack the Box: A Step by Step OSCP Journey
 
-
 A Windows box with 2 direct exploit paths.
 
-
-🔥 FREE VERSION: [Free Article](https://medium.com/@enigma_/hacking-legacy-on-hack-the-box-a-step-by-step-oscp-journey-2b58dc78fe67?sk=13785e819372d26d734180465178f96e)🔥
+🔥 FREE VERSION: Free Article🔥
 
 *Legacy*
 
-
 We’re going through Legacy this time. A windows box with 2 exploit paths and 2 famous and critical CVEs.. Let’s get to work.
 
-
 I’ll begin with an nmap scan to see what ports we’re working with:
-
 
 ```
 sudo nmap -sC -sV -A -T4 10.10.10.4 -p135,139,445
@@ -41,6 +33,3 @@ Aggressive OS guesses: Microsoft Windows XP SP2 or SP3 (96%), Microsoft Windows 
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hacking-legacy-on-hack-the-box-a-step-by-step-oscp-journey-2b58dc78fe67). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

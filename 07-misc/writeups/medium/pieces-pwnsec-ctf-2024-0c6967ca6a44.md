@@ -1,15 +1,10 @@
 # :game_die: Load hashes from the file
 
-> **Original Source:** [Load hashes from the file]()
-> **Platform:** medium.com | **Category:** `MISC`
-
 ---
 
 Category: Misc
 
-
 You’re provided with a ZIP file, which contains a text file. The text file contains 37 hashes.
-
 
 ```
 5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2
@@ -51,21 +46,15 @@ ac87341549192bba1b341cbbc98b94f2e15a32bfdee9b182f7744c8ae7797654
 5b0a8dfc3701878ba517924de1264281b7b8f3a4b7ee554db2f247974ca45f2c
 ```
 
-
 From [hash identifier](https://hashes.com/en/tools/hash_identifier), we learn that all of these are SHA256 hashes.
-
 
 I went to [Crackstation](https://crackstation.net/) to decrypt them. However, only the first 4 lines were successfully decrypted.
 
-
 But this did reveal the pattern of the hashes. Each line of hash is the hashed value of a beginning substring of the flag. To test my assumption, I added E, C, and { to the strings values ( PWNSE, PWNSEC, PWNSEC{ ) and generated their hash values. As expected, the values matched with the next 3 lines.
-
 
 This means the flag is built character by character and the last line is the hash value of the full flag. Knowing this, we can brute force to “assemble” our flag letter by letter.
 
-
 Here’s what I did. I added every single printable character to the known flag part one by one, hashed it, and then compared it to the hash values in the file. If it matches, we have a matching character. We add that to the current flag part. Here’s the Python script:
-
 
 ```
 import hashlib
@@ -105,13 +94,8 @@ break
 print(f"Full flag: {current_flag}")
 ```
 
-
 This revealed the flag.
-
 
 Flag: PWNSEC{L34V3_My_C0mpu73R_Y0u_5t4lk3R}
 
 ---
-
-*Originally published on [Medium](https://rustybladez.medium.com/pieces-pwnsec-ctf-2024-0c6967ca6a44). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

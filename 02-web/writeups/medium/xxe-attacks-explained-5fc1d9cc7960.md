@@ -1,18 +1,12 @@
 # :globe_with_meridians: XXE Attacks Explained. Out of the many attacks that threaten…
 
-> **Original Source:** [XXE Attacks Explained. Out of the many attacks that threaten…](https://infosecwriteups.com/xxe-attacks-explained-5fc1d9cc7960)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 ## Introduction to XML
 
-
 XML ( eXtensible Markup Language) is a tag-based language that applications use for transferring data. Contrary to other tag-based languages (like HTML), XML does not have pre-defined tags. Instead, these are defined by the user.
 
-
 Here is an example of an XML code:
-
 
 ```
 <email>
@@ -23,25 +17,19 @@ Here is an example of an XML code:
 </email>
 ```
 
-
 In the above code, the *email* tag contains 4 child tags: *sender*, *recipient*, *subject*, and *message*. Each of these tags encloses a string of characters, referred to in XML as parsed character data (or PCDATA).
 
 ### XML File Declaration
 
-
 An XML file should start with an XML declaration. This should include at least the *version* of XML that the file uses. It can also include the *encoding* and *standalone* as options. These two are optional, but the *version* attribute is mandatory.
 
-
 Here is how an XML file declaration should look like:
-
 
 ```
 <?xml version="1.1" encoding="UTF-8" standalone"yes"?>
 ```
 
-
 As you can see, there are three different attributes:
-
 
 - version : This can either be 1.0 or 1.1. If you do not write an XML declaration, then the version defaults to XML 1.0.
 
@@ -51,21 +39,15 @@ As you can see, there are three different attributes:
 
 ### Document Type Definition (DTD)
 
-
 DTD ( Document Type Definition) defines the structure of an XML document so that different people can agree on the same elements and attributes to use.
-
 
 There are two different types of DTDs:
 
-
 1- Internal DTD
-
 
 When an XML document includes the definition of its own structure, that definition is what we refer to as an internal DTD. It is contained in the tag `<!DOCTYPE>` that is written at the beginning of the file, just after the XML declaration.
 
-
 Here is an example of an internal DTD:
-
 
 ```
 <!DOCTYPE email [
@@ -77,35 +59,25 @@ Here is an example of an internal DTD:
 ]>
 ```
 
-
 With `!DOCTYPE email`, we define *email* as the root element of the XML document.
-
 
 The second line specifies that the *email* element should contain four child elements: *sender*, *recipient*, *subject*, and *message*.
 
-
 After that, we specify that each of these child elements should contain parsed character data (PCDATA).
-
 
 You have probably noticed that this DTD defines the same structure that we’ve seen in the previous XML code example.
 
-
 2- External DTD
-
 
 Now for this second type, we define the XML structure in an external file. In this case, the `<!DOCTYPE>` tag should contain the URL to the DTD file using the SYSTEM keyword.
 
-
 We need to add the following line to the beginning of our XML document, just after the XML declaration line.
-
 
 ```
 <!DOCTYPE email SYSTEM "email.dtd">
 ```
 
-
 And here is what the external DTD file “email.dtd” contains:
-
 
 ```
 <!ELEMENT email (sender,recipient,subject,message)>
@@ -115,61 +87,42 @@ And here is what the external DTD file “email.dtd” contains:
 <!ELEMENT message (#PCDATA)>
 ```
 
-
 Here again, DTD defines the same structure as in the examples we’ve seen before.
 
 ### XML Entity
 
-
 An XML entity is a string of characters that the XML parser replaces with another value when encountered in the document. This is similar to what variables are in programming languages.
-
 
 An entity is written in the form: Ampersand (&) + name of entity + semi-colon (;).
 
-
 In addition to user-defined entities, there are many built-in entities. Such examples are `&lt;` and `&gt;`, which get replaced with the lower than (<) and greater than (>) characters respectively.
-
 
 Similar to DTDs, there are two types of entities: Internal and external.
 
-
 ## Get A. Boukar’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 1- Internal Entities
 
-
 An internal entity is defined in the following form :
-
 
 ```
 <!ENTITY name "value">
 ```
 
-
 Whenever there is a `&name;` in the file, the XML parser replaces it with *value*.
-
 
 2- External Entities
 
-
 On the other hand, instead of providing a value, an external entity refers to a URL using the SYSTEM keyword.
-
 
 ```
 <!ENTITY name SYSTEM "URL">
 ```
 
-
 Similar to an internal entity, whenever a parser encounters a `&name;` in the XML file, it replaces it with the content of the URL that the external entity declaration refers to.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/xxe-attacks-explained-5fc1d9cc7960). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

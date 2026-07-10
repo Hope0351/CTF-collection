@@ -1,25 +1,18 @@
 # :game_die: Sense: ParrotCTF. Writeup of a new machine, where we…
 
-> **Original Source:** [Sense: ParrotCTF. Writeup of a new machine, where we…](https://infosecwriteups.com/sense-parrotctf-ba1b0634c63a)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 Hello everyone, hope you are doing well, breaking the systems and figuring out how the system was broken. Any hoops, I have brought you another new write-up on a machine that I recently solved. This machine was shared by the parrotCTF team. So, without wasting much time, let us go.
 
-
 ## Scanning
 
-
 We have our machine’s IP address, and simply let us do two things quickly. First, set up the nmap and visit the website.
-
 
 The nmap command I mainly use is;
 
 >
 
 sudo nmap -sC -sV -vvv -A <IP_Address>
-
 
 ```
 PORT STATE SERVICE REASON VERSION
@@ -82,12 +75,9 @@ PORT STATE SERVICE REASON VERSION
 |_-----END CERTIFICATE-----
 ```
 
-
 And by visiting the website, we have;
 
-
 Pfsense, sounds fishy. After observing the nmap result, it is clear that we need to focus on the website now. Pfsense was looking like a login panel for a framework, decided to search for pfsense.
-
 
 Upon googling it, I saw that pfSense is an open-source firewall. Well technically,
 
@@ -95,12 +85,9 @@ Upon googling it, I saw that pfSense is an open-source firewall. Well technicall
 
 *“PfSense is a firewall/router computer software distribution based on FreeBSD. The open source pfSense Community Edition and pfSense Plus are installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.”*
 
-
 So, being a framework, it might have a default login password that we can try. Searching for it on Google, we got.
 
-
 Great, everything is going easily. The credentials are admin:pfsense. Let us try to log in to the framework.
-
 
 And we are successful. This is the point where we should note down the insights we have gained till now.
 
@@ -108,63 +95,45 @@ And we are successful. This is the point where we should note down the insights 
 
 Insights till now
 
-
 We have the framework of pfSense, which is an open-source firewall.
 We have its default `ID:pass, and it is working.
 The version of the platform is 2.5.2-RELEASE.
 
-
 ## Enemueration
-
 
 We have the version of the platform, so let us check if it has any previous CVEs present. For searching for 5 mins on the internet, we got that CVE-2024-46538 is present for 2.5.2, and there is a PoC for that.
 
-
 Now the real fun begins.
 
-
 Now, when I was solving this machine, I was very happy that a machine would be solved in an hour; however, it wasn’t the case. The room is built such that it would depict the real world, so the creator of the machine set it for manual exploit, thus we have to push our limits and not be a script kiddie.
-
 
 I tried for at least an hour with the repo, but it wasn’t working as it had been shown in the repo. So, I had to read more about this vulnerability. At this point, I read the entire article and got to know about the XSS present in the interface_group_edit.php
 
 ### Vulnerability
 
-
 The vulnerability is: In this framework, we have an option to edit the group’s name, description, and members. So, if we capture the request before sending the changes to the server and manipulate the member’s parameter, we will be able to execute the script/HTML payload.
-
 
 To exploit, we need to be here, and our Burp Suite should be started, and our Foxy Proxy should be on. We need to select the group members, WAN and hit save. The packet will be intercepted in the burp.
 
-
 In this request, we have to modify the member’s parameter. I have used a simple XSS script.
-
 
 ## Get Sidharth Panda’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 <script>alert(“hacked”)</script>
 
-
 And simply hit forward and check the website. We will see a beautiful XSS message saying hacked.
-
 
 Hence, the vulnerability is approved. But the question now arises is how do we get the RCE?
 
 ## XSS to RCE
 
-
 To be very honest, this is one of the most difficult tasks for me. Because I haven’t found a good article on it and I have to like bounce or understand the system thoroughly to figure out how I can get a RCE.
 
-
 Upon studying the GitHub repo (the same repo), I figured that he is using a mal.js to get the RCE. So, let us study that file.
-
 
 ```
 (function() {
@@ -201,12 +170,9 @@ alert("Request failed");
 })();
 ```
 
-
 ### Understanding the Code
 
-
 Let us understand the code line by line.
-
 
 - The first 10 lines indicate that we are just giving the commands that need to be sent to the server. For example, csrf token, text command, text recall buffer, execution command.
 
@@ -218,36 +184,24 @@ Let us understand the code line by line.
 
 - Finally, we have a conditional statement that will work as a printer of the result that came from the endpoint.
 
-
 Now I worked with this JS file for almost two hours, tweaking every single line and writing my own. But none of them worked. Being frustrated, I thought to visit that endpoint by myself.
-
 
 And here I had the Ohhhh! moment. We have the execute shell command. So, does that mean we will be able to execute the commands from here?
 
-
 Let us test.
-
 
 Damn! It works. Here we can try to get the RCE, but it becomes highly unstable and crashes after a few moments. After solving it, I asked the creator of this machine about the shell, and he mentioned that he would check about the stability. I think it is stable now.
 
-
 However, I had solved it completely in a manual way, so I will share that way.
 
-
 I tried a bunch of options, such as checking the /home directory, main file system directory, and even the /opt directory, but didn’t get any leads. Then I thought, why don’t we try the root directory?
-
 
 Amazing, we got r00t.txt and user.txt in the same place. Now, we just have to use the cat command to get them.
 
 ## Conclusion
 
-
 My final thoughts on this machine. It is an amazing machine, like it played with me on different levels. It gave me a bit of real-world experience as most of I face these kinds of issues (CVE will be correct, but it won’t be able to penetrate into the system). I had a major learning from playing this, and that is to learn the vulnerability and the CVE, up to the core level, on how they are working.
-
 
 With that said, I will stop my write-up here. I hope you learned something, will meet you in the new write-up/blog. Till then, keep learning and keep hacking.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/sense-parrotctf-ba1b0634c63a). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

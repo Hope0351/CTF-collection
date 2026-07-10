@@ -1,38 +1,28 @@
 # :globe_with_meridians: Hunting a Zero-Click Reflected XSS: Breaking Out of Attributes in WordPress Search
 
-> **Original Source:** [Hunting a Zero-Click Reflected XSS: Breaking Out of Attributes in WordPress Search](https://infosecwriteups.com/hunting-a-zero-click-reflected-xss-breaking-out-of-attributes-in-wordpress-search-70071a099dd3)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # Hunting a Zero-Click Reflected XSS: Breaking Out of Attributes in WordPress Search
-
 
 *Source : GoogleAs a security researcher, one of the most satisfying finds is a zero-click vulnerability something that executes malicious code the moment a victim loads the page, with no interaction required. Recently, I discovered exactly that: a reflected Cross-Site Scripting (XSS) vulnerability in the search functionality of a public-facing WordPress site.This wasn’t a stored XSS that persists forever, but a reflected one delivered via a crafted URL. What made it dangerous? The proof-of-concept (PoC) triggered JavaScript execution instantly on page load, turning a simple shared link into a potential phishing or session hijacking vector.In this write-up, I’ll break down the vulnerability, the payload, why it worked, the impact, and most importantly how developers can prevent it. (The issue was reported responsibly, deemed out-of-scope for the program’s bounty due to it being on the marketing site, but appears to have been fixed shortly after.)*
 
 ## The Vulnerability: Attribute Breakout in the Search Input
 
-
 *WordPress sites commonly use the ?s= parameter for search queries (e.g., / ?s=keyword). Themes often repopulate the search box on the results page like this:*
-
 
 ```
 <input type="search" name="s" value="<?php echo $_GET['s']; ?>">
 ```
 
-
 *If the input isn’t properly escaped for HTML attributes (using something like esc_attr() in PHP), an attacker can break out of the value attribute and inject new ones.Many sinks escape text content (like the <h1>Results for “…` heading), but forget the input field itself a classic oversight.*
 
 ## The Payload: Zero-Click Execution with autofocus + onfocus
-
 
 ```
 ?s=" autofocus onfocus=alert(1) x="
 ```
 
-
 *Pwned !!!Here’s how it breaks down:*
-
 
 - *The “ closes the value attribute prematurely.*
 
@@ -42,28 +32,21 @@
 
 - *x=” — a dummy attribute to balance the syntax and prevent rendering errors.Resulting injected HTML:*
 
-
 ```
 <input type="search" value="" autofocus onfocus="alert(1)" x="">
 ```
 
-
 *Boom: Page loads → input auto-focuses → onfocus triggers → alert(1) pops instantly.*
-
 
 ## Get Maverick’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 *No clicks, no hovers pure zero-click.*
 
 ## Impact: Why This Matters
-
 
 - *Arbitrary JS execution in the site’s origin.*
 
@@ -83,7 +66,6 @@ Remember me for faster sign in
 
 ## Timeline & Responsible Disclosure
 
-
 - *Discovered and PoC’d with screenshot evidence.*
 
 - *Reported via the company’s bug bounty platform.*
@@ -94,10 +76,6 @@ Remember me for faster sign in
 
 ## Final Thoughts
 
-
 *Finding executable XSS never gets old especially zero-click ones that feel like magic. Shoutout to the team for the quick (implicit) fix and running a program.If you’re hunting WordPress sites, check those search fields! Happy hunting ! 🚀*
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/hunting-a-zero-click-reflected-xss-breaking-out-of-attributes-in-wordpress-search-70071a099dd3). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

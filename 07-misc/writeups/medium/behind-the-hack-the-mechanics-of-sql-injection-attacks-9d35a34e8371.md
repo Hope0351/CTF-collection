@@ -1,17 +1,12 @@
 # :game_die: Behind The Hack The Mechanics Of Sql Injection Attacks 9D35A34E8371
 
-> **Original Source:** [Behind The Hack The Mechanics Of Sql Injection Attacks 9D35A34E8371](https://infosecwriteups.com/behind-the-hack-the-mechanics-of-sql-injection-attacks-9d35a34e8371)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 SQL injection arises when user input isn’t properly sanitized before being incorporated into database queries. This allows us to insert our harmful commands.
 
-
 By exploiting SQL injection flaws, hackers can extract confidential data, alter data, or save files to the host server, potentially gaining full control over it.
 
 ## Let’s learn some syntax of SQL
-
 
 ```
 -- SELECT statement to retrieve data from a table
@@ -54,12 +49,9 @@ ON table1.column = table2.column
 WHERE condition;
 ```
 
-
 ## Database Enumeration
 
-
 - Enumerating MySQL Databases
-
 
 ```
 select version();
@@ -69,9 +61,7 @@ select table_name from information_schema.tables where table_schema = 'app';
 select column_name, data_type from information_schema.columns where table_schema = 'app' and table_name = 'menu';
 ```
 
-
 - Microsoft SQL Server-Specific Functions and Tables
-
 
 ```
 select @@version;
@@ -83,9 +73,7 @@ select COLUMN_NAME, DATA_TYPE from app.information_schema.columns where TABLE_NA
 GO
 ```
 
-
 - PostgreSQL Specific Functions and Tables
-
 
 ```
 select version();
@@ -96,6 +84,3 @@ select column_name, data_type from app.information_schema.columns where table_na
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/behind-the-hack-the-mechanics-of-sql-injection-attacks-9d35a34e8371). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,43 +1,30 @@
 # :game_die: Define the dictionary mapping scenarios to actions
 
-> **Original Source:** [Define the dictionary mapping scenarios to actions](https://infosecwriteups.com/htb-cyber-apocalypse-ctf-2024-misc-9d3d512900b4)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 ## Stop Drop and Roll
-
 
 >
 
 The Fray: The Video Game is one of the greatest hits of the last… well, we don’t remember quite how long. Our “computers” these days can’t run much more than that, and it has a tendency to get repetitive…
 
-
 ### 💡Solution
 
-
 When you connect to this service, you’ll be presented with a console-based game. It’s a challenge-and-response setup where you’ll be shown randomlt one or more words, and your task is to provide a matching response for each one.
-
 
 Check out the instructions below along with a demo of how the game is played manually.
 
 *Playing the game manually*
 
-
 It seems like the challenge isn’t intended to be solved manually, and the goal is to automate the interaction using code. The author mentioned that the game consists of 500rounds.
-
 
 ## Get Abdul Issa’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Below is a Python script I used to automate the process. Although it’s a bit lengthy, it did the job. However, I encountered a bug where the script exits at the end in an ungraceful manner and fails to display the flag on the console.
-
 
 ```
 from pwn import *
@@ -68,15 +55,11 @@ response = "-".join([scenario_actions[action.decode()] for action in actions])
 io.sendline(response)
 ```
 
-
 The only way I could confirm that the interaction occurred as expected was by using Wireshark packet sniffer. I found all the challenge and response requests, as well as the flag, in the packet capture.
-
 
 *Wireshark packet capture of the interaction*
 
-
 The JavaScript code below was provided by a colleague as an alternative to the Python solution. It’s worth exploring different approaches to solving the same problem.
-
 
 ```
 const net = require('net');
@@ -131,7 +114,6 @@ console.error('Connection closed');
 });
 ```
 
-
 It would indeed be helpful if HackTheBox provided a Docker image or the source code for challenges like this. Having access to the source code would allow participants to continue experimenting and refining their solutions even after the CTF ends.
 
 >
@@ -139,6 +121,3 @@ It would indeed be helpful if HackTheBox provided a Docker image or the source c
 Flag: HTB{1_wiLl_sT0p_dR0p_4nD_r0Ll_mY_w4Y_oUt!}
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-ctf-2024-misc-9d3d512900b4). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

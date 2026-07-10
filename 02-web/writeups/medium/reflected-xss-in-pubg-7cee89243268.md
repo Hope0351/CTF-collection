@@ -1,28 +1,20 @@
 # :globe_with_meridians: Reflected XSS in PUBG
 
-> **Original Source:** [Reflected XSS in PUBG](https://infosecwriteups.com/reflected-xss-in-pubg-7cee89243268)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # Reflected XSS in PUBG
 
-
 ## A single unsanitized parameter is all an attacker needs
 
-
 A security researcher reported a reflected cross-site scripting (XSS) issue on PUBG’s main site. At first glance it was the classic “reflected XSS” story([751870](https://hackerone.com/reports/751870)): a URL parameter was echoed into a page without proper escaping, and a crafted link could make a victim’s browser execute attacker-supplied JavaScript. But that simple description understates two important facts every web engineer and bug hunter should remember:
-
 
 - Reflected XSS bugs are low-friction for attackers a single crafted link sent via chat, social media, or email is enough.
 
 - The impact depends on the surrounding application: authentication, available actions, and what JavaScript can access.
 
-
 Below I’ll walk through the vulnerability in plain language, explain why it matters, show safe verification practices (no exploit code), and give concrete mitigation and detection guidance for engineers and bug hunters.
 
 ### Summary
-
 
 - Target: [https://www.pubg.com](https://www.pubg.com)
 
@@ -30,20 +22,15 @@ Below I’ll walk through the vulnerability in plain language, explain why it ma
 
 - Root cause: A GET parameter (p) was echoed into a page without adequate sanitization/escaping.
 
-
 - Exploitation vector: An attacker can craft a URL containing JavaScript in the p parameter; when a victim clicks that link, the injected script executes in the victim’s browser within the pubg.com origin.
 
 - Potential impact: Arbitrary JavaScript execution in a victim’s browser enabling session token access, forged requests, UI manipulation, or social engineering depending on the site’s state and protections.
 
-
 ### How reflected XSS works
-
 
 Reflected XSS happens when an application takes input from the request commonly query parameters inserts it into an HTML response, and the input is interpreted as executable code by the browser because it wasn’t escaped properly.
 
-
 A secure flow looks like this:
-
 
 - Server receives ?p=<user-supplied-value>.
 
@@ -51,14 +38,11 @@ A secure flow looks like this:
 
 - The response renders the escaped text; the browser shows it as text, not executable code.
 
-
 When escaping fails, an attacker-controlled value containing scriptable constructs can be reflected back and executed by any user who loads the crafted URL which is exactly what the PUBG report described.
 
 ### Why this matters beyond “it pops an alert”
 
-
 A vanilla PoC that triggers alert(…) is useful to prove the issue, but the real risk depends on context:
-
 
 - Session theft or account takeover: If the site stores auth tokens in cookies accessible to JavaScript (i.e., not HttpOnly), a malicious script could read them and send them to an attacker-controlled server.
 
@@ -68,26 +52,19 @@ A vanilla PoC that triggers alert(…) is useful to prove the issue, but the rea
 
 - Chaining to other bugs: XSS combined with a poorly-protected admin interface, or with open redirect and CSRF bugs, can dramatically raise impact.
 
-
 The PUBG report called out the presence of unsanitized output in a GET parameter a textbook example with real-world consequences depending on cookie and session configurations.
 
 ### Responsible verification how to confirm safely
 
-
 If you’re testing a target in-scope for bug bounty or permissioned testing, follow a minimal, non-destructive approach:
-
 
 ## Get Monika sharma’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Do:
-
 
 - Use non-destructive proofs such as alert(1) or other inert markers in a private test environment, or record response differences (headers, content-length) rather than extracting data.
 
@@ -97,9 +74,7 @@ Do:
 
 - Document exact reproduction steps for triage teams, but sanitize outputs so no secrets are included.
 
-
 Don’t:
-
 
 - Attempt to exfiltrate other users’ data or tokens.
 
@@ -107,52 +82,37 @@ Don’t:
 
 - Publish working exploit pages that automatically steal data.
 
-
 The PUBG report contained demonstration artifacts (screenshots and a short screencast) to help triage reproduce the issue while keeping the PoC focused on behavior rather than on stolen data.
 
 ### How to fix it
 
-
 Reflected XSS is a well-known class with straightforward mitigations. Apply defense-in-depth:
-
 
 - Escape all untrusted output.
 
-
 - For HTML contexts, HTML-encode characters like <, >, &, and “. Use framework-provided encoders instead of hand-rolled string replacements.
-
 
 2. Use proper content security policies (CSP).
 
-
 - CSP can significantly reduce the impact of XSS by restricting inline scripts and limiting which external scripts can run. However, CSP is a mitigation, not a substitute for proper escaping.
-
 
 3. Mark cookies HttpOnly and SameSite where appropriate.
 
-
 - HttpOnly prevents JavaScript from reading cookie values; SameSite mitigates some CSRF vectors.
-
 
 4. Avoid reflecting raw user input into executable contexts.
 
-
 - If you must render user-supplied content, sanitize it for the intended output context (HTML, JavaScript, attribute, URL, CSS) and use context-aware encoders.
-
 
 5. Harden forms & state-changing endpoints with anti-CSRF.
 
-
 - If XSS is present, CSRF becomes much more dangerous; combine protections to reduce overall risk.
 
-
 6. Audit legacy endpoints and client-side templates.
-
 
 - Old templates, localized strings, or early-stage debug pages are common sources of reflected input.
 
 ### Detection & monitoring recommendations
-
 
 - Static analysis: Include templating engine rules and linting in CI to catch unescaped output during development.
 
@@ -164,17 +124,13 @@ Reflected XSS is a well-known class with straightforward mitigations. Apply defe
 
 ### Takeaways for bug hunters and engineers
 
-
 For bug hunters:
-
 
 - Don’t discount reflected XSS — it’s simple to find and can still yield serious impact when composed with other issues.
 
 - When reporting, include clear reproduction steps, sanitized evidence (headers, screenshots), and an impact statement that explains how the bug could be used in the wild. That clarity helps triage and increases the chance of a meaningful reward.
 
-
 For engineers:
-
 
 - Treat any user-supplied data as hostile. Use context-aware escaping and review templates that render query parameters.
 
@@ -184,7 +140,6 @@ For engineers:
 
 ### Closing
 
-
 Reflected XSS is one of the oldest web vulnerabilities, but it remains relevant because it’s easy to introduce and can be devastating when combined with weak session protections or other logic bugs. The PUBG report is a useful reminder: even mature public sites need continuous attention to output encoding, template hygiene, and layered defenses.
 
 >
@@ -192,6 +147,3 @@ Reflected XSS is one of the oldest web vulnerabilities, but it remains relevant 
 If you found this write-up helpful or learned something new, consider supporting my next caffeine-powered research:
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/reflected-xss-in-pubg-7cee89243268). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

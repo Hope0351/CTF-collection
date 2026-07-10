@@ -1,12 +1,8 @@
 # :game_die: Htb Academy Writeup Bdbd39D2F364
 
-> **Original Source:** [Htb Academy Writeup Bdbd39D2F364](https://infosecwriteups.com/htb-academy-writeup-bdbd39d2f364)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 This was an easy difficulty box, and it involved multiple steps to fully gain root access on the box. Good learning path for:
-
 
 - Access Control Bypass on Register Function on Webapp
 
@@ -18,9 +14,7 @@ This was an easy difficulty box, and it involved multiple steps to fully gain ro
 
 ## Initial Recon
 
-
 ### Nmap
-
 
 ```
 $ nmap -Pn --open -p- -T4 -sV -sC 10.10.10.215PORT STATE SERVICE VERSION
@@ -35,13 +29,8 @@ $ nmap -Pn --open -p- -T4 -sV -sC 10.10.10.215PORT STATE SERVICE VERSION
 |_ HY000
 ```
 
-
 - HTTP (80/TCP) — From the Nmap result, port 80 will be redirected to [http://academy.htb/](http://academy.htb/) . Once I updated my /etc/hosts file, I could hit the following HTB Academy website:
-
 
 ### Web Directory Enumeration (Dirsearch)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-academy-writeup-bdbd39d2f364). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

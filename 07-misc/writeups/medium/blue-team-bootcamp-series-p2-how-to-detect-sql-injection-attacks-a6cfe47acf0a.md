@@ -1,24 +1,16 @@
 # :game_die: Blue Team Bootcamp Series (P2): How to Detect SQL Injection Attacks
 
-> **Original Source:** [Blue Team Bootcamp Series (P2): How to Detect SQL Injection Attacks](https://infosecwriteups.com/blue-team-bootcamp-series-p2-how-to-detect-sql-injection-attacks-a6cfe47acf0a)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Blue Team Bootcamp Series (P2): How to Detect SQL Injection Attacks
 
-
 Hello Friend :)
-
 
 ## Get Ali AK’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 Welcome again to the second part of the “Blue Team Bootcamp Series”. In this part, we are going to cover the common WEB Attacks such as XSS, IDOR, Command Injection & RFI/LFI Attacks that all Blue Teamers face in their journey.
 
@@ -26,13 +18,11 @@ Welcome again to the second part of the “Blue Team Bootcamp Series”. In this
 
 *Note: There’s no sequence in all of the parts of this series so it’s up to you to decide which topic to learn first & so on.*
 
-
 The most common & old but deadly attack in the WEB World is SQL injection
 
 >
 
 Prerequisite: Basic knowledge about How Attackers Find & Exploit SQLi injection vulnerability is preferred
-
 
 But first, let’s understand:
 Why Blue Teamer Should Know about WEB Attacks?
@@ -43,17 +33,14 @@ It is no surprise that attackers choose web applications as a gateway for their 
 *A study conducted by Acunetix reimburses this idea.
 ”Recent research shows that 75% of cyber attacks are done at the web application level.“*
 
-
 Hope my stats convince you to learn about WEB Attacks. Now let’s dive.
 
 ## What is SQL Injection (SQLi)?
-
 
 SQL Injections are critical attacks where a web application directly includes unsanitized data/input provided by the user in SQL queries & executes them.
 When a web application communicates with a database using input from a user that hasn’t been properly validated, there runs the potential of an attacker being able to steal, delete or alter private and company data.
 
 ## SQL Injection Types
-
 
 - In-band SQLi: If a SQL query is sent and replied to over the same channel, we call these In-band SQLi.
 
@@ -62,7 +49,6 @@ When a web application communicates with a database using input from a user that
 - Out-of-band SQLi: If the reply to a SQL query is communicated over a different channel then this type of SQLi is called Out-of-band SQLi. For example, if the attacker is receiving replies to his SQL queries over the DNS this is called an out-of-band SQLi.
 
 ## Detecting SQL Injection Attacks
-
 
 - When examining a web request check all areas that come from the user: SQLi attacks are not limited to the form areas, you should also check the HTTP Request Headers like User-Agent.
 
@@ -74,10 +60,8 @@ When a web application communicates with a database using input from a user that
 
 ## Detecting Automated SQL Injection Tools
 
-
 Attackers use many automated devices to detect SQL Injection. One of the most well-known is Sqlmap.
 You may use the methods listed below to detect SQL Injection Automated tools:
-
 
 - Look at the User-Agent: Automated browser devices generally have their names and versions recorded. You can look at the User-Agent to detect these automated tools.
 
@@ -87,9 +71,7 @@ You may use the methods listed below to detect SQL Injection Automated tools:
 
 ## SQL Injection (In-Band) Detection Example
 
-
 We have the web server’s access logs of a web application that was victim to an SQL Injection attack.
-
 
 - First, we perform URL decoding using Cyberchef to understand properly
 
@@ -97,16 +79,13 @@ We have the web server’s access logs of a web application that was victim to a
 
 *Browsers perform a URL encoding of the special characters and replace each special character with a character string that begins with % and has 2 hexadecimal characters in it.*
 
-
 - We can see on 1 March at 8:35:14 the attacker with IP (192.168.31.167) first sends an SQLi payload to test if SQLi vulnerability exists.
 
 - The attacker found out that it was vulnerable. The id parameter is passing without any sanitization. We can confirm this by looking at the response size 607 returned from the first payload. Look closely the normal size of data returned from the server is usually 4200–4900 here but when the attacker sends the first payload the response size drops to the lowest which means the server returns an error (which can be an SQL syntax error).
 
-
 - Now we’ve confirmed that the SQLi attack occurred & it was successful as payloads such as ‘OR 1=1 -- -, UNION select null, version() & other return normal response size which means the server’s executing the payload & showing the result such as database version from version() payload & user database from user() payload to the attacker.
 
 ## Investigation Report
-
 
 - What date did the exploitation phase of the SQL Injection Attack start?
 01/Mar/2022:08:35:14
@@ -128,12 +107,8 @@ In-Band or Classic
 
 ## How to Prevent/Mitigate SQL Injections (SQLi)
 
-
 - Check the OWASP [Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 
 - Check out this [article](https://logz.io/blog/defend-against-sql-injections/)
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/blue-team-bootcamp-series-p2-how-to-detect-sql-injection-attacks-a6cfe47acf0a). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

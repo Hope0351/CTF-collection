@@ -1,34 +1,21 @@
 # :globe_with_meridians: 🌍 SSRF Symphony: How I Turned a PDF Generator Into an Internal Network Spy
 
-> **Original Source:** [🌍 SSRF Symphony: How I Turned a PDF Generator Into an Internal Network Spy](https://infosecwriteups.com/ssrf-symphony-how-i-turned-a-pdf-generator-into-an-internal-network-spy-0d085a9c1c9e)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 # 🌍 SSRF Symphony: How I Turned a PDF Generator Into an Internal Network Spy
 
-
-Free [Link](https://medium.com/@iski/ssrf-symphony-how-i-turned-a-pdf-generator-into-an-internal-network-spy-0d085a9c1c9e?sk=45a8864e57be864d6289f5d7aff6b81b)🎈
-
+Free Link🎈
 
 Hey there!😁
 
-
 *Image by AI*
-
 
 From exporting reports to accessing AWS metadata, internal APIs, and cloud secrets. Join my deep dive into exploiting a blind SSRF in a PDF service, chaining vulnerabilities into a critical infrastructure breach. Full PoC included. 🎻
 
-
 You know that feeling when you’re trying to print a document and the printer jams, but then you accidentally discover the secret admin menu that lets you print free copies for life? 🖨️ That was me — but instead of a printer, it was a multi-million dollar company’s PDF export service, and instead of free copies, I got full access to their internal cloud. My roommate thought I was having too much coffee when I started laughing maniacally at a loading bar.
 
-
 It all started on a lazy Wednesday. Coffee in hand ☕, I was testing a fancy financial web application — let’s call them `wealthsecure.com`. They had this sleek "Export to PDF" feature on every report page. I'd click it, and a few seconds later, a beautiful PDF would download. Pretty normal, right?
-
 
 But then I noticed something odd in the network tab…
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/ssrf-symphony-how-i-turned-a-pdf-generator-into-an-internal-network-spy-0d085a9c1c9e). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

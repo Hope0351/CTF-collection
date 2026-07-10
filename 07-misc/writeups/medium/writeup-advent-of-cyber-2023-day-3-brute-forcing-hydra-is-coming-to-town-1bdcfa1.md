@@ -1,27 +1,18 @@
 # :game_die: Writeup Advent Of Cyber 2023 Day 3 Brute Forcing Hydra Is Coming To Town 1Bdcfa1
 
-> **Original Source:** [Writeup Advent Of Cyber 2023 Day 3 Brute Forcing Hydra Is Coming To Town 1Bdcfa1](https://infosecwriteups.com/writeup-advent-of-cyber-2023-day-3-brute-forcing-hydra-is-coming-to-town-1bdcfa15db63)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2023
-
 ---
 
 ### Answer the questions below
 
-
 Q1) Using `crunch` and `hydra`, find the PIN code to access the control system and unlock the door. What is the flag?
-
 
 we have a simple pin login form at port 8000
 
-
 key thing to note is The numeric keypad shows 16 characters, 0 to 9 and A to F, i.e., the hexadecimal digits. We need to prepare a list of all the PIN codes that match this criteria.
-
 
 We will use Crunch, a tool that generates a list of all possible password combinations based on given criteria. We need to issue the following command:
 
-
 `crunch 3 3 0123456789ABCDEF -o wordlist.txt`
-
 
 - `3` the first number is the minimum length of the generated password
 
@@ -31,10 +22,8 @@ We will use Crunch, a tool that generates a list of all possible password combin
 
 - `-o wordlist.txt` saves the output to the `wordlist.txt` file
 
-
 Now we will use hydra to bruteforce.
 Before that lets look at the page source
-
 
 - The method is `post`
 
@@ -42,27 +31,19 @@ Before that lets look at the page source
 
 - The PIN code value is sent with the name `pin`
 
-
 And another thing is , incase of wrong attempt
-
 
 It redirects to page with text `Access denied`
 
-
 ## Get dollarboysushil’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 With all this info lets start hydra
 
-
 `hydra -l '' -P wordlist.txt -f -v -s 8000 MACHINE_IP http-post-form "/login.php:pin=^PASS^:Access denied"`
-
 
 - `-l ''` indicates that the login name is blank as the security lock only requires a password
 
@@ -86,21 +67,14 @@ With all this info lets start hydra
 
 - `Access denied` indicates that invalid passwords will lead to a page that contains the text “Access denied”
 
-
 And we got the password
 
-
 Lets login
-
 
 >
 
 ANS: THM{pin-code-brute-force}
 
-
 ### Watch video walkthrough
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/writeup-advent-of-cyber-2023-day-3-brute-forcing-hydra-is-coming-to-town-1bdcfa15db63). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

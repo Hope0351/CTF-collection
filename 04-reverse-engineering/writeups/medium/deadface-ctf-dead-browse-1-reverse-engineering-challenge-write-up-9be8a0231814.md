@@ -1,34 +1,24 @@
 # :arrows_counterclockwise: DEADFACE CTF - Dead_Browse 1 Reverse Engineering Challenge Write-Up
 
-> **Original Source:** [DEADFACE CTF - Dead_Browse 1 Reverse Engineering Challenge Write-Up](https://micro1010.medium.com/deadface-ctf-dead-browse-1-reverse-engineering-challenge-write-up-9be8a0231814)
-> **Platform:** micro1010.medium.com | **Category:** `REVERSE ENGINEERING`
-
 ---
 
 # DEADFACE CTF — Dead_Browse 1 Reverse Engineering Challenge Write-Up
 
-
 Challenge Description:
 
-
 DEADFACE has created a custom browser called `dead_browse` that interacts with a specific website:
-
 
 Our goal is to reverse engineer the `dead_browse` binary to discover how it communicates with the server and retrieve the hidden flag.
 
 ## Step 1: Initial Reconnaissance
 
-
 First after downloading the zip and extracting it, I ran file command to check the type of the binary. As we can see, it’s a 64 bit linux executable.
-
 
 Then i check specifically for any strings with auth to see if the auth key is hard coded in the binary. That wasnt the case as we can see.
 
 ## Step 2: Dynamic Analysis
 
-
 Running the binary directly results in an error due to my kali linux not being able to install libwebkit2gtk.
-
 
 ```
 FROM ubuntu:22.04
@@ -42,11 +32,9 @@ COPY dead_browse /usr/local/bin/
 CMD ["/usr/local/bin/dead_browse", "--url=http://deadbrowse.deadface.io:3000", "--auth-key=;XImq]gny9m}#OT#O*o#v#"]
 ```
 
-
 There fore i created a dockerfile with the code above to try and run it. But it shows Error {Bad_auth_key} and that’s when i figured out that i need to get the auth_key from the binary by reverse engineering it.
 
 ## Step 3: Reverse Engineering with Ghidra
-
 
 ```
 
@@ -91,12 +79,9 @@ __stack_chk_fail();
 return;
 }
 
-
 ```
 
-
 Analyzing the binary in Ghidra for diassembly and decompilation gave us an interesting function that is handling the auth_key processing.
-
 
 - The function receives `param_1`, which is the user-provided `auth-key`.
 
@@ -110,15 +95,11 @@ Analyzing the binary in Ghidra for diassembly and decompilation gave us an inter
 
 - Finally, it compares the transformed `auth-key` with the `encrypted_data` using `strcmp` .
 
-
 XOR Function FUN_00102aal performs an XOR operation between the user input and the key.
-
 
 From the code, we can deduce:
 
-
 Parameters:
-
 
 - `param_1`: Pointer to the user-provided `auth-key`.
 
@@ -128,38 +109,29 @@ Parameters:
 
 - `param_4`: Length of the `key_data`.
 
-
 Operation:
-
 
 - The function `FUN_00102aa1` modifies the user-provided `auth-key` in place by XORing each byte with the corresponding byte from the `key_data`.
 
 - The key is applied cyclically if the `auth-key` is longer than the `key_data`.
 
-
 Comparison:
-
 
 - The transformed `auth-key` is then compared to the `encrypted_data` using `strcmp`.
 
 - If they match, the program outputs “good key”.
 
-
 Objective:
-
 
 Our goal is to reverse this process to find the original `auth-key` that, when XORed with the `key_data`, results in the `encrypted_data`.
 
 ## Extracting the Hardcoded Data
 
-
 To reverse engineer the `auth-key`, we need to extract both the `encrypted_data` and the `key_data` from the binary.
 
 ### Encrypted Data (`encrypted_data`)
 
-
 The `encrypted_data` consists of several variables:
-
 
 - `local_48`: `0x5621161e143e150b`
 
@@ -171,9 +143,7 @@ The `encrypted_data` consists of several variables:
 
 - `local_2c`: `0x00`
 
-
 Combined Encrypted Data:
-
 
 - We need to extract the bytes from these variables and concatenate them to form the complete `encrypted_data`.
 
@@ -181,9 +151,7 @@ Combined Encrypted Data:
 
 ### Key Data (`key_data`)
 
-
 The `key_data` is formed by:
-
 
 - `local_56`: `0x65726365735f796d`
 
@@ -191,9 +159,7 @@ The `key_data` is formed by:
 
 - `local_4a`: `0x79`
 
-
 Combined Key Data:
-
 
 - Similarly, we extract the bytes from these variables and concatenate them to form the full key.
 
@@ -201,9 +167,7 @@ Combined Key Data:
 
 ## Converting Hexadecimal Values to Bytes
 
-
 To work with the data in our script, we need to:
-
 
 - Convert the hexadecimal values to bytes.
 
@@ -213,7 +177,6 @@ To work with the data in our script, we need to:
 
 ### Endianness Consideration
 
-
 - The values in the code are stored in little-endian format.
 
 - For example, the value `0x65726365735f796d` in little-endian corresponds to the bytes `[6d,79,5f,73,65,63,72,65]`.
@@ -222,12 +185,9 @@ To work with the data in our script, we need to:
 
 ### Extracting Encrypted Data Bytes
 
-
 Let’s extract the bytes from the `encrypted_data` variables:
 
-
 `local_48` (`0x5621161e143e150b`):
-
 
 - Hexadecimal string: `0x5621161e143e150b`
 
@@ -237,17 +197,13 @@ Let’s extract the bytes from the `encrypted_data` variables:
 
 - Reverse bytes for little-endian: `[0x0b, 0x15, 0x3e, 0x14, 0x1e, 0x16, 0x21, 0x56]`
 
-
 Repeat for other variables (`local_40`, `local_38`, `local_30`, `local_2c`).
 
 ### Extracting Key Data Bytes
 
-
 Similarly, extract bytes from the `key_data` variables:
 
-
 `local_56` (`0x65726365735f796d`):
-
 
 - Hexadecimal string: `0x65726365735f796d`
 
@@ -259,9 +215,7 @@ Similarly, extract bytes from the `key_data` variables:
 
 - This corresponds to ASCII characters: `my_secret`
 
-
 `local_4e` (`0x656b5f74`):
-
 
 - Hexadecimal string: `0x656b5f74`
 
@@ -273,9 +227,7 @@ Similarly, extract bytes from the `key_data` variables:
 
 - ASCII: `t_ke`
 
-
 `local_4a` (`0x79`):
-
 
 - Hexadecimal string: `0x79`
 
@@ -285,53 +237,39 @@ Similarly, extract bytes from the `key_data` variables:
 
 - ASCII: `y`
 
-
 Combined Key Data Bytes:
-
 
 - Concatenate the bytes: `my_secret` + `t_ke` + `y` => `my_secrett_key`
 
 ## Understanding the XOR Reversal
 
-
 Since the XOR operation is its own inverse, we can reverse the transformation by applying the same XOR operation between the `encrypted_data` and the `key_data`.
-
 
 Formula:
 
-
 - Original Byte = Encrypted Byte XOR Key Byte
 
-
 Implementation Steps:Prepare the Data:
-
 
 - Ensure that both the `encrypted_data` and `key_data` are in byte arrays.
 
 - The `key_data` may be shorter than the `encrypted_data`; we use modulo operation to cycle through the key.
 
-
 Perform XOR Operation:
-
 
 - For each index `i` in the range of the length of the `encrypted_data`:
 
 - `original_byte[i] = encrypted_byte[i] ^ key_byte[i % key_length]`
 
-
 Collect the Result:
-
 
 - Store the `original_byte` values in a byte array.
 
 ## Reconstructing the Original `auth-key`
 
-
 After performing the reversed XOR operation, the resulting byte array should represent the original `auth-key`.
 
-
 Interpreting the Result:
-
 
 - Convert the byte array to a string using UTF-8 decoding.
 
@@ -339,17 +277,13 @@ Interpreting the Result:
 
 ## Validating the Result
 
-
 To ensure the correctness of our reverse-engineered `auth-key`, we can:
-
 
 - Compare the length of the recovered `auth-key` with the length of the `encrypted_data`.
 
 - Verify that the XOR of the recovered `auth-key` and the `key_data` matches the `encrypted_data`.
 
-
 The final python script:
-
 
 ```
 # Given hexadecimal values
@@ -411,14 +345,11 @@ print("Recovered param_1 bytes:", param_1_bytes)
 print("Recovered param_1 in hex:", param_1_bytes.hex())
 ```
 
-
 ## Conclusion
-
 
 By reverse engineering the `dead_browse` binary and analyzing the XOR operation, we successfully recovered the `auth-key` needed to interact with the server and retrieve the flag.
 
 ## Lessons Learned
-
 
 - Reverse Engineering Skills: Understanding how to analyze binaries and interpret assembly code is crucial.
 
@@ -430,13 +361,8 @@ By reverse engineering the `dead_browse` binary and analyzing the XOR operation,
 
 ## Final Notes
 
-
 This challenge was an excellent exercise in reverse engineering and problem-solving. By methodically analyzing the binary and applying our knowledge of encryption techniques, we were able to uncover the necessary information to retrieve the flag without needing to execute the binary.
-
 
 Feel free to use this write-up as a guide for similar challenges or to understand the steps involved in reversing a simple XOR-based encryption scheme.
 
 ---
-
-*Originally published on [Medium](https://micro1010.medium.com/deadface-ctf-dead-browse-1-reverse-engineering-challenge-write-up-9be8a0231814). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of reverse engineering CTF writeups.*

@@ -1,57 +1,40 @@
 # :game_die: Alibaba Cloud WAF Command Injection Bypass via Wildcard Payload in All 1,462 Built-in Rule Set
 
-> **Original Source:** [Alibaba Cloud WAF Command Injection Bypass via Wildcard Payload in All 1,462 Built-in Rule Set](https://infosecwriteups.com/alibaba-cloud-waf-command-injection-bypass-via-wildcard-payload-in-all-1-462-built-in-rule-set-989b75db6e2f)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # Alibaba Cloud WAF Command Injection Bypass via Wildcard Payload in All 1,462 Built-in Rule Set
-
 
 >
 
 Alibaba WAF version 3.0 was tested and very common payload was found bypassing command injection.
 
-
 While testing the capabilities of the firewall itself it was found that it was possible to bypass the rules. Due to the testing scope limitations, not all rules were tested, but bypass have been highlighted below.
 
 ### Description
 
-
 A web application firewall (WAF) is an HTTP application firewall that applies a set of rules to an HTTP conversation.
-
 
 In this case, Alibaba WAF 3.0 was tested against the Damn Vulnerable Web Application (DVWA), a known vulnerable application, with all 1,462 built-in rules enabled. These rules generally cover common attacks such as RCE, XSS, LFI, and SQL injection.
 
-
 The WAF is designed to protect against attacks; however, it was found that some payloads were not protected by the WAF, and command injection was possible even when the WAF rule to protect against RCE was enabled.
-
 
 The payload used to bypass command injection was through a wildcard, `“?”, i.e. /???/??t%20/???/??ss?? `~ /bin/cat /etc/passwd.
 
-
 `Payload: cat /etc/pa??wd or any wild card which works on linux using ?.`
-
 
 WAF Endpoint: yikddcuvffqc4pf6bnvwrkct2p3extri.aliyunwaf4.com.
 
-
 ## Get Divyanshu’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
 
-
 Load Balancer: alb-4mtl8i5bgretjudf2j.ap-southeast-1.alb.aliyuncs.com
-
 
 *DNS Settings*
 
 ## Steps To Reproduce:
-
 
 - Set up vulnerable DVWA on the ec2 instance along with ALB and Alibaba WAF 3.0 enabled with 1,462 built-in rules enabled
 
@@ -63,12 +46,9 @@ Load Balancer: alb-4mtl8i5bgretjudf2j.ap-southeast-1.alb.aliyuncs.com
 
 - Check for the bypass
 
-
 Note: In case of other payload it will show blocked which shows WAF has been implemented Successfully.
 
-
 ## Impact
-
 
 - The impact of the vulnerability is significant and can lead to financial loss for companies that heavily rely on Alibaba WAF 3.0. This is due to the fact that they may switch to other, better-paid services such as Cloudflare.
 
@@ -78,10 +58,6 @@ Note: In case of other payload it will show blocked which shows WAF has been imp
 
 ### Status: Closed — Informative
 
-
-Credit: [https://medium.com/secjuice/waf-evasion-techniques-718026d693d8](https://medium.com/secjuice/waf-evasion-techniques-718026d693d8)
+Credit: 
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/alibaba-cloud-waf-command-injection-bypass-via-wildcard-payload-in-all-1-462-built-in-rule-set-989b75db6e2f). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

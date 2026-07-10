@@ -1,23 +1,16 @@
 # :game_die: HackTheBox Base Walkthrough
 
-> **Original Source:** [HackTheBox Base Walkthrough](https://infosecwriteups.com/htb-base-d19c43f25362)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HackTheBox Base Walkthrough
 
-
 ## Exploiting strcmp() for Root
-
 
 *Photo by [Jeswin Thomas](https://unsplash.com/@jeswinthomas?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
 ## Enumeration
 
-
 ## Nmap
-
 
 ```
 └──╼ [★]$ nmap -T5 -p- -sCV --script exploit base.htb
@@ -62,6 +55,3 @@ Service Info: OS…
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-base-d19c43f25362). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

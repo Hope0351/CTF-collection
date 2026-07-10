@@ -1,27 +1,23 @@
 # 🔍 BrunnerCTF 2025 Forensics writeup
 
-> **Original Source:** [BrunnerCTF 2025 Forensics writeup](https://medium.com/@manageesh11/brunnerctf-2025-forensics-writeup-08338b04865c)
-> **Platform:** medium.com | **Category:** `FORENSICS` | **Year:** 2025
-
 ---
 
 ## 📝 Full Writeup
 
-BrunnerCTF 2025 Forensics writeup[![Mohammad Alzamil](https://miro.medium.com/v2/resize:fill:64:64/1*nTKh0qgDpJ82WB5CqTfpOw.jpeg)
+BrunnerCTF 2025 Forensics writeup![Mohammad Alzamil
 
-](/web/20250915013441/https://medium.com/@manageesh11?source=post_page---byline--08338b04865c---------------------------------------)
+](/web/20250915013441/)
 
-[Mohammad Alzamil](/web/20250915013441/https://medium.com/@manageesh11?source=post_page---byline--08338b04865c---------------------------------------)
+[Mohammad Alzamil](/web/20250915013441/)
 
 ·
 Aug 24, 2025
 
 [
 
-](/web/20250915013441/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F08338b04865c&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40manageesh11%2Fbrunnerctf-2025-forensics-writeup-08338b04865c&user=Mohammad+Alzamil&userId=a7a265bc8e43&source=---header_actions--08338b04865c---------------------clap_footer------------------)
+](/web/20250915013441/)
 
 --
-
 
 During this CTF, I had the chance to dive into a Hard-categorized forensics challenge, and it turned out to be one of the most fun and memorable challenges I’ve worked on.
 

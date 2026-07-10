@@ -1,23 +1,16 @@
 # :game_die: HTB — Included
 
-> **Original Source:** [HTB — Included](https://infosecwriteups.com/htb-included-cba3eb482413)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB — Included
 
-
 ## Can you enumerate your way to the top?
-
 
 *Photo by [Conor Sheridan](https://unsplash.com/@mrconorsheridan?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
 ## Recon
 
-
 ## Nmap scan
-
 
 ```
 ➜ ~ sudo nmap -sC -sV -T4 -p- 10.129.95.185
@@ -35,9 +28,7 @@ Service detection performed. Please report any incorrect results at <https://nma
 Nmap done: 1 IP address (1 host up) scanned in 208.96 seconds
 ```
 
-
 Running a UDP scan with Nmap shows an open port that wasn’t revealed in the initial scan
-
 
 ```
 ➜ ~ sudo nmap -sV -sU -T4 included.htb -vv
@@ -54,6 +45,3 @@ Not shown: 982 closed udp…
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-included-cba3eb482413). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

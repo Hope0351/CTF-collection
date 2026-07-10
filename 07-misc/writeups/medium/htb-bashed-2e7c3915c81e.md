@@ -1,18 +1,12 @@
 # :game_die: HTB — Bashed
 
-> **Original Source:** [HTB — Bashed](https://infosecwriteups.com/htb-bashed-2e7c3915c81e)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB — Bashed
 
-
 *Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
-
 Once the initial Nmap scan completes we see that we only have one open port on the machine
-
 
 ```
 ┌─[eu-dedivip-2]─[10.10.14.75]─[dfaultssec@htb-lfdv1ngaec]─[~]
@@ -31,12 +25,9 @@ Nmap done: 1 IP address (1 host up) scanned in 701.95 seconds
 
 ```
 
-
 Going into the web app on port 80 we see a site referencing `phpbash`
 
-
 Checking with `ffuf` we get a few directories we can try out for vulnerabilities
-
 
 ```
 ┌─[eu-dedivip-2]─[10.10.14.75]─[dfaultssec@htb-lfdv1ngaec]─[~]
@@ -44,6 +35,3 @@ Checking with `ffuf` we get a few directories we can try out for vulnerabilities
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-bashed-2e7c3915c81e). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

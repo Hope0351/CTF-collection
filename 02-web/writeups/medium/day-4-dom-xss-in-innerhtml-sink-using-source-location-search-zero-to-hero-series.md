@@ -1,8 +1,5 @@
 # :globe_with_meridians: Day 4 Dom Xss In Innerhtml Sink Using Source Location Search Zero To Hero Series
 
-> **Original Source:** [Day 4 Dom Xss In Innerhtml Sink Using Source Location Search Zero To Hero Series](https://infosecwriteups.com/day-4-dom-xss-in-innerhtml-sink-using-source-location-search-zero-to-hero-series-portswigger-32c993b86584)
-> **Platform:** infosecwriteups.com | **Category:** `WEB`
-
 ---
 
 Let's understand in this way:
@@ -11,6 +8,3 @@ Let's understand in this way:
 *To prevent this, use *`*textContent*`* instead, which treats the input as plain text and avoids executing any embedded HTML or scripts (document.getElementById(‘searchMessage’).textContent = query)*
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/day-4-dom-xss-in-innerhtml-sink-using-source-location-search-zero-to-hero-series-portswigger-32c993b86584). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

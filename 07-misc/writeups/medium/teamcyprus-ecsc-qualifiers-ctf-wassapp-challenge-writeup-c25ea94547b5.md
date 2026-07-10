@@ -1,12 +1,8 @@
 # :game_die: TeamCyprus ECSC Qualifiers CTF - WassApp Challenge Writeup
 
-> **Original Source:** [TeamCyprus ECSC Qualifiers CTF - WassApp Challenge Writeup](https://apogiatzis.medium.com/teamcyprus-ecsc-qualifiers-ctf-wassapp-challenge-writeup-c25ea94547b5)
-> **Platform:** apogiatzis.medium.com | **Category:** `MISC`
-
 ---
 
 As expected I received an encrypted response which most likely included the flag. Observing the requests in dev tools more closely I noticed two interesting ones.
-
 
 ```
 POST /api/handshake HTTP/1.1Request:{
@@ -36,9 +32,7 @@ POST /api/handshake HTTP/1.1Request:{
 }
 ```
 
-
 Obviously the *reply *endpoint was for communicating the encrypted messages with the server but the *handshake *seemed to contain information that will be useful for decryption.
-
 
 Examining further, I noticed they had a “We are hiring” link at the bottom of the page. This redirected me to a page listing the requirements of potential applicants.
 
@@ -46,12 +40,9 @@ Examining further, I noticed they had a “We are hiring” link at the bottom o
 
 Random pages like this always serve some purpose in these competitions.
 
-
 In this case, a specific line caught my attention: “Experienced with Web Crypto API.”. Looking this up quickly, it turns out that it is an interface for using cryptographic primitives in scripts. It was very likely that this is the technology used for encrypting and potentially decrypting the message.
 
-
 Keeping this in mind, the next step was to take a look in the source code. The most important part was a javascript file which was minified and obfuscated so it was rather difficult to read. I used the dev tools debugger to step in some of the code while sending and receiving a message and I found some interesting code snippets.
-
 
 ```
 return new Promise(function(e, t) {
@@ -104,26 +95,19 @@ n(e)
 }
 ```
 
-
 This snippet covered the whole procedure from key-generation to encryption. Checked in with the Web Crypto API saved from earlier and bingo! This is exactly what was used.
-
 
 After browsing through the Web Crypto API documentation I realized that I had everything that I needed to decrypt the messages.
 
-
 There were two options from here. Try to import the public key using the information from the handshake network request and use it with the appropriate private key which was somewhere in the codebase, OR get directly the secret key required for decryption from the function generating it!
-
 
 Of course, I went with the quick and dirty way. Why bother re-deriving the keys, let’s just snag it from that function *deriveKey.* It returns a promise resolved with the key we need.
 
 ### Getting the Key
 
-
 For that task, I used a handy chrome plugin called [Resource Override](https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii?hl=en)*. *This allows to setup regular expression patterns and replace any resources ( css, js, images etc..) that match, with the ones that you specify — even locally! Using that I was able to create a local version of the main javascript file that was used for crpyptography and apply persistent changes to it.
 
-
 In order to access the Crypto Key I just made it to a global variable by adding the following line into the code.
-
 
 ```
 i = function(e, t) {
@@ -145,10 +129,6 @@ r(e)
 },
 ```
 
-
 I reloaded the page, made sure that the resource was replaced, crossed my fingers and hoped for the best!
 
 ---
-
-*Originally published on [Medium](https://apogiatzis.medium.com/teamcyprus-ecsc-qualifiers-ctf-wassapp-challenge-writeup-c25ea94547b5). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

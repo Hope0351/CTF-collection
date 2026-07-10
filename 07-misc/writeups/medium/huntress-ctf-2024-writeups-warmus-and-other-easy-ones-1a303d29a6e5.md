@@ -1,25 +1,19 @@
 # 🎲 Huntress CTF 2024 Writeups (Warmups and other easy ones)
 
-> **Original Source:** [Huntress CTF 2024 Writeups (Warmups and other easy ones)](https://rustybladez.medium.com/huntress-ctf-2024-writeups-warmus-and-other-easy-ones-1a303d29a6e5)
-> **Platform:** rustybladez.medium.com | **Category:** `MISC` | **Year:** 2024
-
 ---
 
 ## 📝 Full Writeup
 
-Huntress CTF 2024 Writeups (Warmups and other easy ones)[![Rusty](https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
+Huntress CTF 2024 Writeups (Warmups and other easy ones)![Rusty
 
-](/web/20250825065534/https://rustybladez.medium.com/?source=post_page---byline--1a303d29a6e5---------------------------------------)
+](/web/20250825065534/)
 
-[Rusty](/web/20250825065534/https://rustybladez.medium.com/?source=post_page---byline--1a303d29a6e5---------------------------------------)
+[Rusty](/web/20250825065534/)
 
 ·
 Nov 1, 2024
 
-
-
 --
-
 
 Hey hackers. This is my first time doing a writeup. So I’m kinda excited about it. I’m more of a writer than a hacker. So you may not find the solutions here to be like other writeups.
 
@@ -575,7 +569,7 @@ This was totally new to me. The only thing I could think of was using the text f
 
 I checked the website stack. It was made in Flask. Moving forward, I started searching for YAML to JSON conversion vulnerabilities and found something interesting.
 
-There’s a vulnerability in PyYAML that lets you run system commands and potentially read the flag. So I started searching for payloads and found [this](https://trevorsaudi.medium.com/yaml-2-json-hackpack-ctf-7de28ef0ecff):
+There’s a vulnerability in PyYAML that lets you run system commands and potentially read the flag. So I started searching for payloads and found this:
 
 ```
 user_input: !!python/object/apply:subprocess.check_output
@@ -1183,7 +1177,7 @@ The password is dynamic and changes every connection session.
 
 Author: @aenygma
 
-As described, you need to do a [side-channel time-based attack](https://medium.com/spidernitt/introduction-to-timing-attacks-4e1e8c84b32b). I’ve never done one before. So, I quickly ran a search to read the basics. Hmm, really cool concept.
+As described, you need to do a side-channel time-based attack. I’ve never done one before. So, I quickly ran a search to read the basics. Hmm, really cool concept.
 
 I quickly crafted a Python script to automate it.
 

@@ -1,45 +1,31 @@
 # :game_die: Writeup Advent Of Cyber 2023 Day 4 Baby Its Cewld Outside 837B905E9039
 
-> **Original Source:** [Writeup Advent Of Cyber 2023 Day 4 Baby Its Cewld Outside 837B905E9039](https://infosecwriteups.com/writeup-advent-of-cyber-2023-day-4-baby-its-cewld-outside-837b905e9039)
-> **Platform:** infosecwriteups.com | **Category:** `MISC` | **Year:** 2023
-
 ---
 
 ## Answer the questions below
 
-
 Q1) What is the correct username and password combination? Format username:password
-
 
 We can see the team member under `/team.php` .
 
-
 Lets save this name into `username.txt`
 
-
 lets create password wordlist
-
 
 `-d` option allows you to set how deep CeWL should spider. For example, to spider two links deep.
 Use the `-m` options to set minimum word length
 `-w`: Write the output to the file.
 ` — with-numbers`: Accept words with numbers in as well as just letters
 
-
 ## Get dollarboysushil’s stories in your inbox
-
 
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 Then lets run wfuzz to bruteforce login page
 
-
 In the command above:
-
 
 - `-z file,username.txt` loads the usernames list.
 
@@ -55,9 +41,7 @@ In the command above:
 
 ANS: isaias:Happiness
 
-
 Q2) What is the flag?
-
 
 After login , checking the mail gives us the required flag.
 
@@ -66,6 +50,3 @@ After login , checking the mail gives us the required flag.
 ANS: THM{m3rrY4nt4rct1crAft$}
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/writeup-advent-of-cyber-2023-day-4-baby-its-cewld-outside-837b905e9039). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

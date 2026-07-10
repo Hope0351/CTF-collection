@@ -1,12 +1,8 @@
 # :arrows_counterclockwise: Vault 101 Samsung Ctf Android Reverse Engineering Challenge Write Up D5A2B16A921
 
-> **Original Source:** [Vault 101 Samsung Ctf Android Reverse Engineering Challenge Write Up D5A2B16A921](https://infosecwriteups.com/vault-101-samsung-ctf-android-reverse-engineering-challenge-write-up-d5a2b16a9212)
-> **Platform:** infosecwriteups.com | **Category:** `REVERSE ENGINEERING`
-
 ---
 
 ## Background
-
 
 Without wasting much of your time and rushing towards *good stuff,* here’s some basic info. about Samsung’s virtual CTF event “Hacker’s Playground 2020”.
 
@@ -14,37 +10,27 @@ Without wasting much of your time and rushing towards *good stuff,* here’s som
 
 Challenge : Find the password.
 
-
 File given : Vault101–1.1-release.apk
-
 
 Obfuscation Level = High
 
-
 Number of Solves = 15
-
 
 Now the good stuff.
 
 ## Application Analysis
 
-
 In the challenge we get one apk file which you can download from [HERE](https://github.com/FrigidSec/CTFWriteups/blob/master/SCTF/Vault101/_docs/challengeApp/Vault101-1.1-release.apk).
 
-
 As the first step of our static analysis process we will de-compile the application using JADX. you can do this via tool on your computer or you can use any of the [web-based services](http://www.javadecompilers.com/apk) available.
-
 
 After we get the Decompiled version of the application let’s start.
 
 ### Finding Main class
 
-
 You might generally see something like this when the application is de-compiled, so we will follow the most common location for main activity.
 
-
 And we have something promising here. Let’s open MainActivity.java and check.
-
 
 In the above code we can see that this prominent part of code is responsible for showing GOOD or BAD message:
 
@@ -52,24 +38,17 @@ In the above code we can see that this prominent part of code is responsible for
 
 boolean a2 = *this*.s.a(*this*.p.getText().toString());
 
-
 Toast toast = new Toast(*this*);
-
 
 toast.setView(getLayoutInflater().inflate(a2 ? R.layout.toast_success_layout : R.layout.toast_fail_layout, (ViewGroup) findViewById(R.id.custom_toast_container)));
 
-
 So now we know that we need to get “true” Boolean from “s.a()” function to get GOOD toast.
-
 
 Also notice that “s.a” is actually “public volatile b.c.a.b” so we need to navigate to this class which will be available in respective folders , so let’s go there :
 
-
 Let’s have a look at a.java in the same package:
 
-
 Now this class is highly obfuscated and we just see that this is sending some gibberish data to `c.java's d() function`
-
 
 Tracing all the classes in similar manner we get the following information
 
@@ -77,24 +56,17 @@ Tracing all the classes in similar manner we get the following information
 
 `1. c.java is performing some kind of string manipulation`
 
-
 `2. a.java is sending encoded function names to call and getting result from c.java`
-
 
 `3. we need to reconstruct function names by reversing the gibberish names via c.d()`
 
-
 ## Understanding Encryption and De-Obfuscation
-
 
 Let’s have a look at c.java
 
-
 We don’t need to reverse it as this is the function used to normalise the function calls.
 
-
 So check this I implemented the same function in my java program :
-
 
 ```
 public static int *INTGET*=1;
@@ -151,25 +123,16 @@ return sb.toString();
 }
 ```
 
-
 Now if we will pass the arguments to the function we will see that they are being converted into android keywords.
-
 
 ## Get Saket Upadhyay’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 For example :
-
 
 This is in a.java :
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/vault-101-samsung-ctf-android-reverse-engineering-challenge-write-up-d5a2b16a9212). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of reverse engineering CTF writeups.*

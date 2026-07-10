@@ -1,27 +1,18 @@
 # :game_die: HTB Remote [Writeup]. NFS Check, CMS exploitation, UsoSvc…
 
-> **Original Source:** [HTB Remote [Writeup]. NFS Check, CMS exploitation, UsoSvc…](https://infosecwriteups.com/htb-remote-writeup-eb18b1e09234)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB Remote [Writeup]
 
-
 ## NFS Check, CMS exploitation, UsoSvc service permission exploit
-
 
 ### Summary
 
-
 Looking at the nmap result, there were too many ports that is overwhelming to look at, for the beginners. After some enumeration and checks, NFS share was found to be publicly available to anyone on the network. Further digging into this revealed the credentials and an exploit was easily found from checking the web application version which the site was running. Using that exploit the user machine was pwned. For the Root, again a quick check using the powershell’s program, we find the service vulnerability and abusing which led to becoming the ROOT!
-
 
 Platform: Windows
 
-
 Tools Used:
-
 
 - `nmap`
 
@@ -40,6 +31,3 @@ Tools Used:
 ### Enumeration
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-remote-writeup-eb18b1e09234). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

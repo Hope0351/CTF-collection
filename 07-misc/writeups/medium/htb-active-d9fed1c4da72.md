@@ -1,18 +1,12 @@
 # :game_die: HTB — Active
 
-> **Original Source:** [HTB — Active](https://infosecwriteups.com/htb-active-d9fed1c4da72)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 # HTB — Active
 
-
 *Photo by [K E](https://unsplash.com/@kerwinelias?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
 
-
 Once the Nmap scan is done we can all the open ports on the machine
-
 
 ```
 ┌─[dfaults@parrot]─[~/HackTheBox] [34/34]
@@ -25,6 +19,3 @@ Nmap scan report for 10.129.38.102…
 ```
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/htb-active-d9fed1c4da72). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

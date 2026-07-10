@@ -1,18 +1,12 @@
 # :locked_with_key: Reverse Engineering A Native Desktop Application Tauri App 5A2D92772Da5
 
-> **Original Source:** [Reverse Engineering A Native Desktop Application Tauri App 5A2D92772Da5](https://infosecwriteups.com/reverse-engineering-a-native-desktop-application-tauri-app-5a2d92772da5)
-> **Platform:** infosecwriteups.com | **Category:** `CRYPTO`
-
 ---
 
 ## “From Dev to Rev” Perspectives
 
-
 The backend binding of Tauri is using a Rust language. The bundled application itself always has a core process and it serves an OEP (Original Entry Point) or a `_start` of the user/developer’s app. Interesting fact to be stated is that this native app doesn’t require Chromium so that it has to render the designated app, yet it takes an advantage from a WebView Libraries which derived from [WRY](https://docs.rs/wry/latest/wry/#:~:text=Wry%20is%20a%20Cross%2Dplatform,re%2Dexports%20APIs%20from%20tao.). This means that all the HTML,CSS and JS later will be loaded in a WebView, just like how Android uses WebView to load a web-based content since it contains a browser engine.
 
-
 In order to build the basic app for the first time, Tauri needs to know the user/developer’s JSON-like configuration files and that’s why there’s a thing called [tauri.conf.json](https://tauri.app/v1/api/config/). The general structure looks probably like this, taken from the Tauri Github examples and what we’ll be focusing at is in the build objects since it holds the source code location. What we’re interpreting later is that not only a HTML file that will be loaded to the Tauri context but also some of the files, and suppose there’s also a JS. Thus, the distDir or the devPath might points out to the specific src-tauri directory.
-
 
 ```
 {
@@ -71,9 +65,7 @@ In order to build the basic app for the first time, Tauri needs to know the user
 }
 ```
 
-
 Finally, this JSON configuration file will be loaded and built since from the main.rs of the application will handle and passed it to the context generator and Codegen later as a structure. Below is the sample of main Rust code from the same link [here](https://github.com/tauri-apps/tauri/blob/dev/examples/helloworld/main.rs).
-
 
 ```
 #![cfg_attr(
@@ -90,9 +82,7 @@ tauri::Builder::default()
 }
 ```
 
-
 If we take a look at the snippet from [https://github.com/tauri-apps/tauri/blob/dev/core/tauri-codegen/src/context.rs](https://github.com/tauri-apps/tauri/blob/dev/core/tauri-codegen/src/context.rs), our assets will also be handled from this code. Each of our defined asset is carefully parsed from its extension and later on through the array of configuration objects.
-
 
 ```
 use tauri_utils::assets::AssetKey;
@@ -217,16 +207,13 @@ _ => unimplemented!(),
 // ..... [SNIP] ......
 ```
 
-
 Later on, here comes the questions.
 
 >
 
 We are interested in how Tauri App protects our assets. Are they encrypted? Are they stored in a different format from a transformation process? Are they stored in a Tauri special Cloud Storage? Or are they stored in a plain text thus left unprotected?
 
-
 After looking at those snippets, we know that there’s a reference to `tauri_utils` that handle our main assets and this is where things are getting interesting. Let’s take a look at the snippet below which was taken from the official Tauri Github at [https://github.com/tauri-apps/tauri/blob/dev/core/tauri-utils/src/assets.rs](https://github.com/tauri-apps/tauri/blob/dev/core/tauri-utils/src/assets.rs)
-
 
 ```
 /// Represents a container of file assets that are retrievable during runtime.
@@ -289,22 +276,14 @@ self
 }
 ```
 
-
 What’s your first thoughts when reading those snippet? Although specific assets are “marked” with some hashes validation, randomized ID and stuff, our assets are not encrypted, yet our assets are only compressed using [Brotli](https://github.com/google/brotli), a lossless data compressor system. According to the reference from this official Taori docs -> [https://tauri.app/v1/guides/building/app-size/](https://tauri.app/v1/guides/building/app-size/), we need to pay attention on this part:
-
 
 *Tauri Asset Compression Features*
 
-
 It turns out Brotli Compression is actually enabled by default, but somehow user also have a capability to disable this feature as they like since this is considered as a preferential options. Another things that we need to take note is stated from the security docs itself ([https://tauri.app/v1/references/architecture/security/](https://tauri.app/v1/references/architecture/security/)).
 
-
 There are some CSP Injection as a initial setup and handling from the context generator and Codegen, and the last point makes the challenge to become harder since we can’t decompile the native desktop apps binary easily.
-
 
 Some quick notes about the ASAR file reference that is stated from the docs actually just a simple tar-archive file format and the unpacker is already existed, refers to this [answer](https://stackoverflow.com/questions/38523617/how-to-unpack-an-asar-file). ASAR file itself can also be retrieved from static analysis, even using a famous file carver tool which used for a forensic purpose such as [binwalk](https://www.kali.org/tools/binwalk/), yet in Tauri App case, it doesn’t work that easily since all of the assets are entirely loaded in runtime. This means the compression and the decompression mechanism also will be done at runtime. What could be our finale solution for this problem? Since the assets handling is done at runtime, we’ll debug the application at runtime as well so we’ll be using a combination of static and dynamic analysis.
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/reverse-engineering-a-native-desktop-application-tauri-app-5a2d92772da5). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

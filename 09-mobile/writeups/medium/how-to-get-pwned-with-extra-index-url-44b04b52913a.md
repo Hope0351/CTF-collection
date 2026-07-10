@@ -1,56 +1,40 @@
 # :mobile_phone: How to get pwned with — extra-index-url
 
-> **Original Source:** [How to get pwned with — extra-index-url](https://infosecwriteups.com/how-to-get-pwned-with-extra-index-url-44b04b52913a)
-> **Platform:** infosecwriteups.com | **Category:** `MOBILE`
-
 ---
 
 # How to get pwned with — extra-index-url
 
-
 Python’s built-in pip package manager is unsafe when used with the `--extra-index-url` flag (there are other dangerous variants too). An attacker can publish a malicious package with the same name and a higher version to PyPI, and their package will be installed.
 
-
 This post confirms that the vulnerability ( [CVE-2018–20225](https://nvd.nist.gov/vuln/detail/cve-2018-20225)) is still a problem today. [Despite the CVSS 7.8 (High) CVSS score, the maintainers have refused to change the behaviour](https://github.com/pypa/pip/issues/12874).
-
 
 I also introduce [a test suite and publicly-available test packages](https://github.com/brabster/cve-2018-20225) that you can use to more easily confirm the safety — or not — of your own setup.
 
 ## Two variants of package `example-package-cve-2018-20225`
 
-
 I’ve written two variants of a new package that I’ll use to demonstrate the problem. The package is essentially a single `__init__.py` file that prints a message to show which package has been installed when it's imported, along with minimal metadata required to publish the package to a registry.
 
 ## The “safe” variant
 
-
 The “safe” variant of the package is at version `0.0.1`. It prints `this is the safe, private package` when imported.
-
 
 This package stands in for your intended, usually private, package. I’ve [published it to GitLab](https://gitlab.com/api/v4/projects/76907979/packages/pypi/simple) and made the registry public for the convenience of testing.
 
 ## The “malicious” variant
 
-
 The “malicious” variant of the package is at version `1.0.0`. There's nothing special about `1.0.0`, it's just "higher" than `0.0.1`.
-
 
 ## Get Paul Brabban’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
 
-
 Remember me for faster sign in
-
 
 This package prints `oops, this is the malicious package` when imported. It's [published to PyPI](https://pypi.org/project/example-package-cve-2018-20225/).
 
 ## Getting pwned
 
-
 This is the kind of thing I’ve seen in the wild, thankfully without a malicious package hiding on PyPI waiting to pounce. This is supposed to install the safe package at version `0.0.1` from the private GitLab index.
-
 
 ```
 $ pip install example_package_cve_2018_20225 --extra-index-url $GITLAB_INDEX
@@ -67,11 +51,9 @@ oops, this is the malicious package
 $
 ```
 
-
 Oops. Hope that malicious package isn’t stealing your credentials, installing a backdoor, or some other nefarious activity…
 
 ## Testing approach
-
 
 I’ve created a [GitHub actions workflow to test a variety of install and update scenarios](https://github.com/brabster/cve-2018-20225/blob/main/.github/workflows/test_cases.yml). There are far too many potential tools and combinations to test them all, which is why I’ve made these packages available publicly. You can use them to test whatever specific scenario you want.
 
@@ -79,16 +61,13 @@ I’ve created a [GitHub actions workflow to test a variety of install and updat
 
 The usual disclaimers apply. My intentions are good, but that could change or I could be compromised in the future. Take whatever precautions you can to establish trustworthiness — I’ve kept the packages simple to aid manual audit.
 
-
 All the tests are run against the latest versions (at time of writing) of the package management software. The tests report failure if the malicious package is installed. [You can see the current latest test run in the repo’s GitHub actions tab](https://github.com/brabster/cve-2018-20225/actions). You can also see the packages and how I published them to PyPI and GitLab in the repo.
 
 ## Test scenarios
 
-
 I’m trying out a few scenarios I’m interested in. What happens when you specify various combinations of flags (including forgetting the flags) with pip?
 
 ## pip with and without flags
-
 
 - `pip install ${PACKAGE}`: 🚨 Malicious (Default behaviour if the flags are forgotten)
 
@@ -106,17 +85,13 @@ I’m trying out a few scenarios I’m interested in. What happens when you spec
 
 ## GitLab’s PyPI pass-through behaviour
 
-
 [A GitLab registry will pass through requests for packages that it doesn’t hold to PyPI. This is flagged as a security risk](https://docs.gitlab.com/user/packages/pypi_repository/#package-request-forwarding-security-notice). If you’re exposed to this vulnerability, it seems like a solid step forward to me. It resolves the dependency confusion problem, works with different package managers and is easy for users.
-
 
 - `pip install ${PACKAGE} requests --index-url ${GITLAB_INDEX_URL}`: ✅ Safe (Installs target package + public lib (`requests`) from GitLab index only, succeeds and installs the right package)
 
 ## Is `uv` vulnerable?
 
-
 There are many Python package managers. `uv` is the current darling of the community and has [different behaviour when this flag is used in a pip-like manner](https://docs.astral.sh/uv/reference/cli/#uv-pip-install--extra-index-url). I've added a couple of tests to confirm the behaviour.
-
 
 - `uv pip install ${PACKAGE} --extra-index-url ${GITLAB_INDEX_URL}`: ✅ Safe (Uses `uv` with the risky flag)
 
@@ -124,11 +99,9 @@ There are many Python package managers. `uv` is the current darling of the commu
 
 ## What about lockfiles?
 
-
 Assuming you didn’t already lock the malicious package, lockfiles only offer temporary protection. When you update, if you update unsafely, you get the malicious package.
 
 ## Summary
-
 
 - There are many ways to put yourself at risk of CVE-2018–20225; if you get it wrong, an attacker has a trivially easy route onto your computer or infrastructure.
 
@@ -136,23 +109,16 @@ Assuming you didn’t already lock the malicious package, lockfiles only offer t
 
 ## Avoid
 
-
 - Using `--extra-index-url` with `pip` 🚨
 
 - Using `--index-strategy` with `uv` 🚨
 
 ## Consider
 
-
 - Using a private registry with a PyPI pass-through as the only index, which I demonstrated with GitLab.
 
-
 I doubt I would have known about this problem had it not been for a [vulnerability scanner alerting me to it last year](https://tempered.works/posts/2024/05/18/handling-cve-2018-20225/). If you’re currently exposed to this problem, you’re certainly not alone. When I asked ChatGPT how to safely use a private package registry, the response it generated (based, of course on the content it’s been trained on) included using `--extra-index-url` with no mention of this risk.
-
 
 ChatGPT recommending the vulnerable — extra-index-url approach
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/how-to-get-pwned-with-extra-index-url-44b04b52913a). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of mobile CTF writeups.*

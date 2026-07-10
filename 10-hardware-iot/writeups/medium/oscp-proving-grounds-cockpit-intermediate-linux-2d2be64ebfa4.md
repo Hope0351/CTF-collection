@@ -1,28 +1,23 @@
 # 🔌 OSCP Proving Grounds
 
-> **Original Source:** [OSCP Proving Grounds](https://medium.com/@carlosbudiman/oscp-proving-grounds-cockpit-intermediate-linux-2d2be64ebfa4)
-> **Platform:** medium.com | **Category:** `HARDWARE / IoT`
-
-
 ---
 
 ## 📝 Full Writeup
 
-OSCP Proving Grounds | Cockpit | Intermediate | Linux[![apple of my eye](https://miro.medium.com/v2/resize:fill:64:64/1*X1ZDp8AqtVXycioDvPTK-Q.jpeg)
+OSCP Proving Grounds | Cockpit | Intermediate | Linux![apple of my eye
 
-](/web/20251127225540/https://medium.com/@carlosbudiman?source=post_page---byline--2d2be64ebfa4---------------------------------------)
+](/web/20251127225540/)
 
-[apple of my eye](/web/20251127225540/https://medium.com/@carlosbudiman?source=post_page---byline--2d2be64ebfa4---------------------------------------)
+[apple of my eye](/web/20251127225540/)
 
 ·
 Jan 17, 2025
 
 [
 
-](/web/20251127225540/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F2d2be64ebfa4&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40carlosbudiman%2Foscp-proving-grounds-cockpit-intermediate-linux-2d2be64ebfa4&user=apple+of+my+eye&userId=cf690dc9fc87&source=---header_actions--2d2be64ebfa4---------------------clap_footer------------------)
+](/web/20251127225540/)
 
 --
-
 
 Just an normal guy preparing for the OSCP+ Exam :). Just a quick writeup about the Cockpit machine, which I found pretty easy.
 
@@ -119,7 +114,7 @@ Then after searching “exploiting tar sudo privilege escalation”, the top res
 
 medium.com
 
-](/web/20251127225540/https://medium.com/@polygonben/linux-privilege-escalation-wildcards-with-tar-f79ab9e407fa?source=post_page-----2d2be64ebfa4---------------------------------------)
+](/web/20251127225540/)
 
 It highlights creating two files that would manipulate the — checkpoint flag in order to execute our final ‘privilege escalator’ script.
 

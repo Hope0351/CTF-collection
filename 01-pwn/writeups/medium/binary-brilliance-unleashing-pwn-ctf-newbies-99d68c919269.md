@@ -1,21 +1,14 @@
 # :skull: Binary Brilliance: Unleashing Pwn | CTF Newbies
 
-> **Original Source:** [Binary Brilliance: Unleashing Pwn | CTF Newbies](https://infosecwriteups.com/binary-brilliance-unleashing-pwn-ctf-newbies-99d68c919269)
-> **Platform:** infosecwriteups.com | **Category:** `PWN`
-
 ---
 
 # Binary Brilliance: Unleashing Pwn | CTF Newbies
 
-
 ## Introduction
-
 
 In the intricate world of cybersecurity, understanding vulnerabilities and exploiting them is both an art and a science. From the humble beginnings of early hackers tinkering with systems to today’s sophisticated penetration testing, the exploration of vulnerabilities remains a critical aspect of securing digital infrastructures. This introduction serves as a gateway into this realm, shedding light on the fundamentals of exploiting vulnerable machines.
 
-
 ## Prerequisites
-
 
 - Basic Computer Skills: A fundamental understanding of operating systems (e.g., Windows, Linux) and basic command-line usage is essential. This includes familiarity with file systems, processes, and basic system administration tasks.
 
@@ -29,23 +22,17 @@ In the intricate world of cybersecurity, understanding vulnerabilities and explo
 
 - Security Tools: Familiarity with common security tools such as Wireshark (for network analysis), Nmap (for network scanning), Metasploit (for exploitation), and Burp Suite (for web application testing) is beneficial. Understanding how to use these tools effectively enhances your ability to identify and exploit vulnerabilities.
 
-
 ## Binary Exploitation
 
-
 Binaries, or executables, are machine code for a computer to execute. For the most part, the binaries that you will face in CTFs are Linux ELF files or the occasional windows executable.
-
 
 We can solve these type of challenges by identifying these vulnerabilities in the file :-
 
 ### 1. Buffer Overflow —
 
-
 A Buffer Overflow is a vulnerability in which data can be written which exceeds the allocated space, allowing an attacker to overwrite other data.
 
-
 The simplest and most common buffer overflow is one where the buffer is on the stack.
-
 
 ```
 #include <stdio.h>
@@ -66,41 +53,30 @@ return 0;
 }
 ```
 
-
 In this example, `vulnerable_function` is the vulnerable function. It takes a string `input` as a parameter and copies it into a fixed-size buffer `buffer` using the `strcpy` function. The buffer size is 10 bytes, but there is no check on the length of the input string. If the input string is longer than 10 characters, a buffer overflow will occur, overwriting adjacent memory locations on the stack.
 
-
 Run this program, and provide an input string longer than 10 characters.
-
 
 ```
 $ ./buffer_overflow
 Enter a string: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ```
 
-
 This will likely cause a segmentation fault or undefined behavior, as the program tries to write beyond the bounds of the buffer array.
-
 
 We can use a debugger to see the offsets and the assembly of the program. As you will get this program in a.out only so you can debug and decompile this and can understand the assembly of the program.
 
 ### 2. Heap Exploits —
 
-
 Much like stack buffer overflow, a heap overflow is a vulnerability where more data than can fit in the allocate buffer is read in.
-
 
 ## Get HackTheBox SRMIST’s stories in your inbox
 
-
 Join Medium for free to get updates from this writer.
-
 
 Remember me for faster sign in
 
-
 Example —
-
 
 ```
 #include <stdio.h>
@@ -138,11 +114,9 @@ return 0;
 }
 ```
 
-
 in this we have a string structure with a length and a pointer to the actual string data. We properly allocate, fill, and then free an instance of this structure. Then we make another allocation,fill it , and then improperly reference the freed string. Due to how glibc’s allocator works, s2 will actually get the same memory as the original s allocation, which in turn gives us the ability to control the s->data pointer. This could be used to leak program data.
 
 ## Useful Tools
-
 
 - PWNTools: This is a Python library that provides a set of utilities and APIs for crafting exploits, interacting with binary programs, and automating various tasks involved in exploitation.
 
@@ -160,68 +134,48 @@ in this we have a string structure with a length and a pointer to the actual str
 
 ## PWN Example
 
-
 Over here we will be taking a basic example for the PWN Challenge. The example we will be taking is the Stonks question from the picoctf.
-
 
 Question:
 
-
 I decided to try something no one else had before. I made a bot to automatically trade stocks for me using AI and machine learning. I wouldn’t believe you if you told me it’s unsecure!
 
-
 [vuln.c](https://mercury.picoctf.net/static/e4d297ce964e4f54225786fe7b153b4b/vuln.c)
-
 
 ```
 nc mercury.picoctf.net 20195
 ```
 
-
 Now we see a netcat command over here and we run it to see the following
-
 
 Now if we have a look at the vuln.c file we see that it scans the API key using a string so using %x it can generate something of interest.
 
-
 So we select option 1 and we see that it asks for the API Key so we bombard the input with many %x’s.
 
-
 Now we add this hexadecimal string to decode to find the flag: picoCTF{l_I4_t5m_ll0m_y_y3n5406d06d}
-
 
 NOTE: You have to remove some elements to get the perfect flag.
 
 ## Tools Used In Example
 
-
 Cyberchef- To decode Hex to String
-
 
 Any Code Editor- To have a look at the code
 
 ## Resources
 
-
 ## Conclusion
-
 
 In the above article, we have seen how a PWN challenge works and how can we approach a challenge in the PWN or Binary Exploitation. Hope you have understood and will feel at ease in solving the questions.
 
 ## Contribution
 
+Devansh Gupta
 
-[Devansh Gupta](https://medium.com/@devansh6061)
-
-
-[Dhruv Pridhnani](https://medium.com/@dhruvpridhnani)
-
+Dhruv Pridhnani
 
 Abihimanyu V
 
 ## Happy Hacking!!
 
 ---
-
-*Originally published on [Medium](https://infosecwriteups.com/binary-brilliance-unleashing-pwn-ctf-newbies-99d68c919269). All credit goes to the original author.*
-*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of pwn CTF writeups.*
