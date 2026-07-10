@@ -15,7 +15,6 @@
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
 | 3 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
 | 4 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
 | 5 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |

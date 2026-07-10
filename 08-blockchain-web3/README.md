@@ -22,7 +22,6 @@ The following the collection repositories are the highest-value resources for th
 | 6 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Varied | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
 | 7 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
 | 8 | [AshiqAhamed17/web3-ctf-writeups](../08-blockchain-web3/archives/web3-ctf-writeups) | 11 ⭐ | Varied | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for various Web3 security … |
-| 9 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
 | 10 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
 | 11 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
 | 12 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Varied | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and hardware tools, boo… |
@@ -39,7 +38,6 @@ The following the collection repositories are the highest-value resources for th
 | 23 | [BarakBinyamin/ctf](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) | 1  | Varied | 2023–2023 | The IOT-light uses hardcoded credentials to connect to WiFi, check for updates and communications by connecting to a cu… |
 | 24 | [ybieri/phantom_processing_platform](../40-tooling/archives/misc-tools/phantom_processing_platform) | 1  | Elite | 2024–2024 | PlaidCTF 2024 Phantom Processing Platform. Contribute to ybieri/phantom_processing_platform development by creating an … |
 | 25 | [shellboxes/blockchain-ctf-challenges-writeups](../08-blockchain-web3/archives/blockchain-ctf-challenges-writeups) | 0  | Varied | n/a | Capture The Flag (CTF) challenges have emerged as an invaluable tool in the realm of smart contract security. Smart con… |
-| 26 | [DanielVF/2020_paradigm_ctf_writeup](../08-blockchain-web3/archives/2020-paradigm-ctf-writeup) | 0  | Elite | 2020–2020 | The Paradigm CTF was 48 hours of smart contract breaking fun. It makes smart contract development and exploration much … |
 
 
 ## ✍️ Curated Articles & Walkthroughs
@@ -89,7 +87,6 @@ manipulating oracles via borrowed capital.
 
 Top resources for this sub-topic:
 
-- [tl2cents/CTF-Writeups - the collection](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) — 📚 Repository
 
 ### Oracle manipulation
 

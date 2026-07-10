@@ -19,7 +19,6 @@
 | 3 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
 | 4 | [ShubhamJagtap2000/TryHackMe-THM](../20-events/archives/tryhackme/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs o… |
 | 5 | [The-Debarghya/TryHackMe-Writeups](../20-events/archives/tryhackme/TryHackMe-Writeups) | 11 ⭐ | — | n/a | A repository contains writeups for TryHackMe PwnBoxes and Rooms that have been solved. PS- Please t… |
-| 6 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
 
 
 ### Articles, Videos & Blog Posts (17)

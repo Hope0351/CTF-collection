@@ -20,7 +20,6 @@
 | 4 | justcatthefish/ctf-writeups | 100 ⭐⭐ | — | 2022–2022 | [2022-11-25-HITCON] Secret: Fix typo. |
 | 5 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
 | 6 | justcatthefish/justctf-2023 | 21 ⭐ | Crypto, Reverse Engineering, Cloud | 2023–2023 | This repo contains sources for justCTF 2023 challenges hosted by justCatTheFish as well as summary … |
-| 7 | [SECCON/SECCON13_online_CTF](../20-events/archives/seccon-ctf/SECCON13-online-CTF) | 12 ⭐ | — | 2024–2024 | Contribute to SECCON/SECCON13_online_CTF development by creating an account. |
 | 8 | justcatthefish/justctf-2025 | 9 ⭐ | Crypto, Reverse Engineering, Pwn | 2025–2025 | This repo contains sources for justCTF 2025 challenges hosted by justCatTheFish as well as summary … |
 | 9 | [cHo0s3N/JustCTF](../20-events/archives/justctf/JustCTF) | 6 ⭐ | Stego, Forensics, Crypto | 2019–2019 | writeups! #JUSTCTF. Contribute to cHo0s3N/JustCTF development by creating an account. |
 | 10 | justcatthefish/justctf-2024 | 2  | — | 2024–2024 | This repo contains sources for justCTF 2024 teaser and justCTF 2024 onsite finals competitions host… |

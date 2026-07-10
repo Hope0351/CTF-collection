@@ -34,7 +34,6 @@ This is a structured, opinionated learning path. It assumes you have basic progr
 - **What it is:** Carnegie Mellon University's beginner-friendly CTF, always-on, with hundreds of challenges organized by category and difficulty.
 - **How to use it:** Work through picoCTF 2019, 2020, 2021, 2022, 2023, 2024, and 2025 editions. Aim to solve 30+ challenges per edition.
 - **Time:** 4 weeks of evenings.
-- **Companion writeups:** [`Cajac/picoCTF-Writeups`](../20-events/archives/picoctf/picoCTF-Writeups-Cajac) (250+ writeups), [`noamgariani11/picoCTF-2024-Writeup`](../20-events/archives/picoctf/picoCTF-2024-Writeup).
 
 ### 2.2 TryHackMe (beginner learning path)
 - **What it is:** A structured learning platform with rooms that walk you through specific topics with hands-on exercises.
@@ -72,7 +71,6 @@ Pick **one** of the following tracks based on your background and interests:
   1. [CryptoHack](https://cryptohack.org/) — free, comprehensive crypto CTF learning platform.
   2. [ashutosh1206/Crypto-CTF-Writeups](../03-crypto/archives/Crypto-CTF-Writeups) — read 10+ writeups.
   3. Solve RSA challenges using SageMath.
-- **Companion repos:** [`rkm0959/CTFWriteups`](../30-archetypes/archives/personal-collections/CTFWriteups-rkm0959), [`ashutosh1206/Crypto-CTF-Writeups`](../03-crypto/archives/Crypto-CTF-Writeups).
 - **Time:** 6–8 weeks.
 
 ### Track D: Reverse Engineering

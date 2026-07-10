@@ -20,7 +20,6 @@
 | 4 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 5 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
 | 6 | google/google-ctf | 4,976 ⭐⭐⭐⭐ | — | 2017–2017 | This repository lists most of the challenges used in the Google CTF since 2017, as well as most of … |
-| 7 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
 | 8 | MartinPetkov/GCTF2021BeginnersQuestWriteups | 5 ⭐ | Programming, Stego, Reverse Engineering | 2021–2021 | This repository contains my writeups for all the challenges in the Google CTF 2021 Beginners Quest.… |
 | 9 | [FarhadAlimohammadi-dir/Google-CTF-2022-Writeups](../20-events/archives/google-ctf/Google-CTF-2022-Writeups) | 5 ⭐ | Web | 2022–2022 | These are my solutions for Google CTF 2022. This is my first official CTF (Capture The Flag) that w… |
 | 10 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |

@@ -18,7 +18,6 @@
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 3 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
 | 4 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 5 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
 | 6 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Programming, Crypto, Reverse Engineering | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and… |
 | 7 | osirislab/CSAW-CTF-2023-Quals | 31 ⭐ | — | 2023–2023 | Challenge repository for the 2023 CSAW CTF Qualifiers - osirislab/CSAW-CTF-2023-Quals. |
 | 8 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |

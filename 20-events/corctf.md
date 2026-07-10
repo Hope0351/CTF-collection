@@ -20,7 +20,6 @@
 | 4 | Crusaders-of-Rust/corctf-2024-public-challenge-repo | 16 ⭐ | — | 2024–2024 | Here is the complete set of challenges used in corCTF 2024. This repo hopes to provide you with the… |
 | 5 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
 | 6 | Crusaders-of-Rust/corctf-2025-public-challenge-repo | 7 ⭐ | — | 2025–2025 | Here is the complete set of challenges used in corCTF 2025. This repo hopes to provide you with the… |
-| 7 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Forensics, Crypto, Mobile | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity w… |
 | 8 | [rstacks/corCTF2024-writeup](../20-events/archives/corctf/corCTF2024-writeup) | 0  | Web, Forensics, Misc | 2024–2024 | corCTF 2024 was a 48 hour competition that ran from 7/26/2024 through 7/28/2024. Below are my write… |
 | 9 | [nh4ttruong/ctf-write-up](../30-archetypes/archives/personal-collections/ctf-write-up-nh4ttruong) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
 

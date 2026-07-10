@@ -39,7 +39,6 @@ The following the collection repositories are the highest-value resources for th
 | 23 | [pwncollege/linux-luminarium](../20-events/archives/pwn-college/linux-luminarium) | 52 ⭐⭐ | Beginner | n/a | This is a pwn.college dojo built around teaching basic Linux knowledge, through hands-on challenges, from absolutely no… |
 | 24 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
 | 25 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Varied | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of our development repo… |
-| 26 | [JohnHammond/misfortune-ctf-challenge](../07-misc/archives/misfortune-ctf-challenge) | 34 ⭐ | Varied | 2023–2023 | A small binary exploitation challenge to demonstrate a typical return2libc attack - JohnHammond/misfortune-ctf-challeng… |
 | 27 | [pwncollege/challenges](../20-events/archives/pwn-college/challenges) | 33 ⭐ | Beginner | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challenges are just direct… |
 | 28 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Varied | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussion about where I mad… |
 | 29 | justcatthefish/justctf-2023 | 21 ⭐ | Elite | 2023–2023 | This repo contains sources for justCTF 2023 challenges hosted by justCatTheFish as well as summary of winners and spons… |
@@ -93,7 +92,6 @@ Top resources for this sub-topic:
 - [Pwn Challenges writeup — RVCExIITB CTF | by Febin - Medium](https://febinj.medium.com/pwn-challenges-writeup-rvcexiitb-ctf-b62ccc2c68c7) — ✍️ Medium
 - [Name Server [Tamil CTF] - Binary Exploitation (Pwn) Walkthrough](https://www.youtube.com/watch?v=Q5Xx3aM0cUE) — ▶️ YouTube
 - [PwnLand - the collection](../01-pwn/archives/PwnLand) — 📚 Repository
-- [JohnHammond/misfortune-ctf](../07-misc/archives/misfortune-ctf-challenge) — 📚 Repository
 
 ### Heap exploitation
 
@@ -105,7 +103,6 @@ Top resources for this sub-topic:
 - [Pwn Challenges writeup — RVCExIITB CTF | by Febin - Medium](https://febinj.medium.com/pwn-challenges-writeup-rvcexiitb-ctf-b62ccc2c68c7) — ✍️ Medium
 - [Name Server [Tamil CTF] - Binary Exploitation (Pwn) Walkthrough](https://www.youtube.com/watch?v=Q5Xx3aM0cUE) — ▶️ YouTube
 - [PwnLand - the collection](../01-pwn/archives/PwnLand) — 📚 Repository
-- [JohnHammond/misfortune-ctf](../07-misc/archives/misfortune-ctf-challenge) — 📚 Repository
 
 ### Format string attacks
 

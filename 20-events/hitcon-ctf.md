@@ -19,8 +19,6 @@
 | 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 4 | [orangetw/My-CTF-Web-Challenges](../02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
 | 5 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 6 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
-| 7 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
 | 8 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an… |
 | 9 | justcatthefish/ctf-writeups | 100 ⭐⭐ | — | 2022–2022 | [2022-11-25-HITCON] Secret: Fix typo. |
 | 10 | mephi42/ctf | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |

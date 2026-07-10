@@ -168,7 +168,6 @@ The following internal archives are the structural backbone of the open-source C
 | 10 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 11 | [xtiankisutsa/awesome-mobile-ctf](30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
 | 12 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 13 | [sajjadium/ctf-writeups](30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
 | 14 | DownUnderCTF/Challenges_2025_Public | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - DownUnderCTF/Challenges_2025_Public: … |
 | 15 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
 | 16 | [tim-barc/ctf_writeups](30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
@@ -226,15 +225,15 @@ Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions.
 
 ## 📦 Included Resources
 
-This is a **fully self-contained** CTF knowledge base. **114 resources** have been integrated directly into the collection under each category's `archives/` subdirectory, with clean names and no external dependencies. All links throughout the collection point to internal paths — there are no external repository references.
+This is a **fully self-contained** CTF knowledge base. **102 resources** have been integrated directly into the collection under each category's `archives/` subdirectory, with clean names and no external dependencies. All links throughout the collection point to internal paths — there are no external repository references.
 
 ### What's included
 
 | Metric | Count |
 |---|---:|
 | Total resources referenced | 156 |
-| Successfully integrated into this collection | **114** |
-| Not integrated (size / access constraints) | 42 |
+| Successfully integrated into this collection | **102** |
+| Not integrated (size / access / quality constraints) | 54 |
 | Total collection size on disk | ~2.5 GB (after `.gitignore` filters) |
 
 ### Collection structure
@@ -246,15 +245,12 @@ CTF-collection/
 ├── 01-pwn/
 │   └── archives/
 │       ├── PwnLand/
-│       ├── Pwn-College/
-│       ├── Pwnbooks-BinaryExploitation/
 │       ├── binary_exploitation/
 │       └── pwn_docker_example/
 ├── 02-web/
 │   └── archives/
 │       ├── My-CTF-Web-Challenges/
 │       ├── portswigger-websec-writeups/
-│       ├── owasp-ctf-2025/
 │       └── ctf-cryptowaf/
 ├── 03-crypto/
 │   └── archives/
@@ -266,25 +262,23 @@ CTF-collection/
 │       └── cybar-osint-ctf-2020/
 ├── 07-misc/
 │   └── archives/
-│       ├── miscellaneous/
-│       └── misfortune-ctf-challenge/
+│       └── miscellaneous/
 ├── 08-blockchain-web3/
 │   └── archives/
 │       ├── web3-ctf-writeups/
 │       ├── ctf-blockchain/
 │       ├── blockchain-ctf-challenges-writeups/
-│       ├── 2020-paradigm-ctf-writeup/
 │       └── hitcon-ctf-2024-writeup/
 ├── 10-hardware-iot/
 │   └── archives/
 │       └── rhme2-writeups/
 ├── 20-events/
 │   └── archives/
-│       ├── picoctf/          (6 resources)
+│       ├── picoctf/          (5 resources)
 │       ├── hackthebox/       (5 resources)
 │       ├── def-con-ctf/      (3 resources)
-│       ├── realworldctf/     (3 resources)
-│       ├── seccon-ctf/       (2 resources)
+│       ├── realworldctf/     (2 resources)
+│       ├── seccon-ctf/       (1 resource)
 │       ├── tryhackme/        (2 resources)
 │       ├── pwn-college/      (2 resources)
 │       ├── hacker101/        (2 resources)
@@ -296,7 +290,7 @@ CTF-collection/
 ├── 30-archetypes/
 │   └── archives/
 │       ├── awesome-lists/             (10 resources)
-│       ├── personal-collections/      (19 resources)
+│       ├── personal-collections/      (15 resources)
 │       ├── team-archives/             (5 resources)
 │       ├── practice-platforms/        (4 resources)
 │       └── event-organizer-sources/   (1 resource)
@@ -323,6 +317,10 @@ All links throughout this collection point to internal paths. For example:
 
 The link text retains the original `owner/repo` format for attribution and searchability, but the URL points to the resource within this collection. There are no external repository links anywhere in the collection.
 
+### Quality filter
+
+Writeup repos were filtered to keep only **professional writeups** — those that include screenshots or videos showing the challenge being solved. Text-only answer repos (12 total) were removed from the collection as they do not meet the professional writeup standard. Tools, awesome-lists, challenge source releases, and practice platforms are not writeups and were retained regardless of visual content.
+
 ### What's NOT committed (`.gitignore` policy)
 
 To keep the collection within size limits, the following categories of files are excluded from commits via `.gitignore`:
@@ -336,7 +334,7 @@ To keep the collection within size limits, the following categories of files are
 
 ### Resources not integrated (42)
 
-The following 42 resources could not be integrated into the collection due to size or access constraints. They are referenced by name only (no links):
+The following 54 resources could not be integrated (42 due to size/access constraints, 12 due to being text-only writeups without screenshots or videos) into the collection due to size or access constraints. They are referenced by name only (no links):
 
 **Failed to download (16)** — too large, rate-limited, or access-restricted:
 

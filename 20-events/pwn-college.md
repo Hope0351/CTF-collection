@@ -21,7 +21,6 @@
 | 5 | [pwncollege/challenges](../20-events/archives/pwn-college/challenges) | 33 ⭐ | Pwn, Web, Reverse Engineering | n/a | This repository will one day contain all core pwn.college challenges. The basic idea is that challe… |
 | 6 | [kyndrawynne/pwnscripts](../40-tooling/archives/pwn-tools/pwnscripts) | 4  | Pwn, Web, Reverse Engineering | n/a | This repository contains my solutions to the challenges I completed in the Pwn College program. Pwn… |
 | 7 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
-| 8 | [HerculesRD/Pwn.College](../01-pwn/archives/Pwn-College) | 0  | Pwn | n/a | Small and medium teams · Startups ... |
 
 
 ### Articles, Videos & Blog Posts (2)

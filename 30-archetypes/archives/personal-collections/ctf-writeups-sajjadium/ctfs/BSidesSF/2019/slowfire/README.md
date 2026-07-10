@@ -1,1 +1,0 @@
-This challenge has a `stack overflow` vulnerability. Basically, you can overwrite the return address with the address of your `shellcode`, by which you can send the content of flag over the socket.

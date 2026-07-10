@@ -1,7 +1,0 @@
-services:
-  server:
-    build: .
-    working_dir: /app
-    ports:
-      - "13337:13337"
-    restart: always

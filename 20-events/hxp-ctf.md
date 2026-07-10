@@ -16,7 +16,6 @@
 |---:|---|---:|---|---|---|
 | 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 3 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can… |
 
 
 ### Articles, Videos & Blog Posts (3)

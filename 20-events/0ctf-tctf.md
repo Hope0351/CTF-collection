@@ -19,7 +19,6 @@
 | 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
 | 4 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 | 5 | [xtiankisutsa/awesome-mobile-ctf](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 6 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 227 ⭐⭐ | Web | 2017–2019 | CTF Writeups: Collection of CTF "technical" writeups by PersianCats. - sajjadium/ctf-writeups. |
 | 7 | david942j/ctf-writeups | 322 ⭐⭐⭐ | Crypto, Mobile, Stego | 2016–2021 | Collection of scripts and writeups. Contribute to david942j/ctf-writeups development by creating an… |
 | 8 | mephi42/ctf | 76 ⭐⭐ | Pwn, Reverse Engineering, Misc | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 20… |
 | 9 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |

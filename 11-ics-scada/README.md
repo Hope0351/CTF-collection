@@ -14,7 +14,6 @@ The following the collection repositories are the highest-value resources for th
 
 | # | Repository | Stars | Difficulty | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
-| 1 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
 | 2 | [neutrinoguy/awesome-ics-writeups](../30-archetypes/archives/awesome-lists/awesome-ics-writeups) | 201 ⭐⭐ | Varied | 2013–2025 | A collection of writeups related to ICS/SCADA hacking. This covers areas like OT, IoT and IIoT. It includes exploitatio… |
 | 3 | [hackthebox/business-ctf-2025](../20-events/archives/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Intermediate | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Startups Nonprofits. Add… |
 | 4 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |

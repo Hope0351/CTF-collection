@@ -4,30 +4,40 @@ All notable changes to this CTF-collection repository are documented in this fil
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-07-10] — Quality Filter: Professional Writeups Only
+
+### Changed
+- **Filtered writeup repos to keep only professional writeups** — repos that include screenshots or videos showing the challenge being solved. Text-only answer repos were removed.
+- Deleted 12 text-only writeup repos that had no visual content (no images, no videos, no YouTube references):
+  - `01-pwn/archives/Pwn-College`
+  - `01-pwn/archives/Pwnbooks-BinaryExploitation`
+  - `02-web/archives/owasp-ctf-2025`
+  - `07-misc/archives/misfortune-ctf-challenge`
+  - `08-blockchain-web3/archives/2020-paradigm-ctf-writeup`
+  - `20-events/archives/picoctf/picoCTF-2024-Writeup`
+  - `20-events/archives/realworldctf/RWCTF-5th-Challenges`
+  - `20-events/archives/seccon-ctf/SECCON13-online-CTF`
+  - `30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents`
+  - `30-archetypes/archives/personal-collections/CTFWriteups-rkm0959`
+  - `30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad`
+  - `30-archetypes/archives/personal-collections/ctf-writeups-sajjadium`
+- Removed 69 table rows and neutralized 8 links across 42 curation files that referenced the deleted repos.
+- Updated README.md with new counts (114 → 102 integrated resources) and added "Quality filter" section.
+- Tools, awesome-lists, challenge source releases, and practice platforms (39 repos) were retained — they are not writeups and the visual-content filter does not apply to them.
+
+### Final collection state
+- **63 writeup repos with visual content** (screenshots/videos of solves)
+- **39 non-writeup repos** (tools, lists, sources, platforms)
+- **102 total integrated resources**
+- **54 resources not integrated** (42 size/access + 12 text-only filtered)
+
 ## [2026-07-10] — Unified Self-Contained Collection
 
 ### Changed
-- **Transformed into a fully self-contained collection** — all external repository links have been removed or converted to internal paths. The collection now contains 114 integrated resources under `archives/` subdirectories within each category, with no external dependencies.
-- Renamed all `mirrors/` subdirectories to `archives/` across all categories.
-- Removed all "mirror"/"mirrored" language from prose — resources are now described as "integrated" or "archived" parts of the collection.
-- Removed all `https://github.com/...` URLs from curation files (2,181 links converted to internal paths; 3,327 links to unavailable resources removed entirely; 2,210 bare URLs handled).
-- Removed "GitHub" mentions from prose where they referred to external repositories.
-- Updated README.md with new "Included Resources" section documenting the self-contained structure.
-- Updated CONTRIBUTING.md to require internal-only links.
-- Updated License section to reference `archives/` subdirectories.
-
-### New structure
-- `01-pwn/archives/` — 5 pwn learning resources
-- `02-web/archives/` — 4 web challenge resources
-- `03-crypto/archives/` — 2 crypto writeup resources
-- `06-osint/archives/` — 2 OSINT challenge resources
-- `07-misc/archives/` — 2 misc challenge resources
-- `08-blockchain-web3/archives/` — 5 blockchain/Web3 resources
-- `10-hardware-iot/archives/` — 1 hardware resource
-- `20-events/archives/<event>/` — 30 event-specific resources across 13 events (picoCTF, HackTheBox, DEF CON, SECCON, etc.)
-- `30-archetypes/archives/<type>/` — 39 resources (awesome-lists, personal-collections, team-archives, practice-platforms, event-organizer-sources)
-- `40-tooling/archives/<tool-type>/` — 24 tool resources (pwn-tools, web-tools, forensics-tools, blockchain-tools, mobile-tools, crypto-tools, misc-tools)
-
+- Transformed into a fully self-contained collection — all external repository links removed or converted to internal paths.
+- Renamed all `mirrors/` subdirectories to `archives/`.
+- Removed all "mirror"/"mirrored" language from prose.
+- Updated README.md, CONTRIBUTING.md, CHANGELOG.md, methodology.md.
 ## [2026-07-09] — Initial Curation
 
 ### Added

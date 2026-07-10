@@ -28,7 +28,6 @@ The following the collection repositories are the highest-value resources for th
 | 12 | [ashutosh1206/Crypto-CTF-Writeups](../03-crypto/archives/Crypto-CTF-Writeups) | 42 ⭐ | Varied | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development by creating an accoun… |
 | 13 | [merrychap/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Varied | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and others. I'm not spe… |
 | 14 | Tan-JunWei/CTF-Writeups | 15 ⭐ | Varied | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and solutions to variou… |
-| 15 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
 | 16 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
 | 17 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
 | 18 | dicegang/dicectf-quals-2024-challenges | 30 ⭐ | Elite | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges development by creating an… |
@@ -42,7 +41,6 @@ The following the collection repositories are the highest-value resources for th
 | 26 | [cryptohack/ctf_archive](../03-crypto/archives/cryptohack-archive) | 147 ⭐⭐ | Varied | n/a | This repo contains past CTF cryptography challenges that are so good we want to host them permanently. You can play the… |
 | 27 | [project-sekai-ctf/sekaictf-2025](../20-events/archives/sekaictf/sekaictf-2025) | 135 ⭐⭐ | Advanced | 2024–2025 | This repository contains official source code and writeups for challenges from SekaiCTF 2025. CTFTime • Website • Disco… |
 | 28 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
-| 29 | [rkm0959/CTFWriteups](../30-archetypes/archives/personal-collections/CTFWriteups-rkm0959) | 83 ⭐⭐ | Varied | n/a | This repository contains. Links to the writeups I have done on cryptography challenges; Solution codes (very rough) of … |
 | 30 | project-sekai-ctf/sekaictf-2024 | 83 ⭐⭐ | Advanced | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTime Event • Website •… |
 
 
@@ -88,7 +86,6 @@ Top resources for this sub-topic:
 - [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Cracked](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) — ✍️ Medium
 - [hackthebox/cyber-apocalypse-2025: Official writeups for  - the collection](../20-events/archives/hackthebox/cyber-apocalypse-2025) — 📚 Repository
 - [CryptoHack CTF Archive - the collection](../03-crypto/archives/cryptohack-archive) — 📚 Repository
-- [rkm0959/CTFWriteups: Cryptography & CTF Writeups - the collection](../30-archetypes/archives/personal-collections/CTFWriteups-rkm0959) — 📚 Repository
 
 ### Lattice-based cryptography
 
@@ -98,7 +95,6 @@ Top resources for this sub-topic:
 
 - [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Cracked](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) — ✍️ Medium
 - [CryptoHack CTF Archive - the collection](../03-crypto/archives/cryptohack-archive) — 📚 Repository
-- [rkm0959/CTFWriteups: Cryptography & CTF Writeups - the collection](../30-archetypes/archives/personal-collections/CTFWriteups-rkm0959) — 📚 Repository
 
 ### Block cipher modes
 
@@ -108,7 +104,6 @@ Top resources for this sub-topic:
 
 - [blockthreat/blocksec-ctfs - the collection](../30-archetypes/archives/awesome-lists/blocksec-ctfs) — 📚 Repository
 - [A summary and solutions for 200+ CTF blockchain challenges - the collection](../08-blockchain-web3/archives/ctf-blockchain) — 📚 Repository
-- [tl2cents/CTF-Writeups - the collection](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) — 📚 Repository
 - [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Cracked](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) — ✍️ Medium
 
 ### Hash functions

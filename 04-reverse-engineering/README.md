@@ -25,7 +25,6 @@ The following the collection repositories are the highest-value resources for th
 | 9 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Varied | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to solve various Capture T… |
 | 10 | [merrychap/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Varied | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and others. I'm not spe… |
 | 11 | SandWithCheese/ctf-writeups | 14 ⭐ | Beginner | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for various CTF challenges… |
-| 12 | [tl2cents/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 5 ⭐ | Varied | 2024–2025 | Archive writeups or exploits of ctf challenges, mainly crypto and blockchain. Detailed writeups can be found in my blog… |
 | 13 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
 | 14 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
 | 15 | dicegang/dicectf-quals-2024-challenges | 30 ⭐ | Elite | 2024–2024 | All challenges from DiceCTF Quals 2024. Contribute to dicegang/dicectf-quals-2024-challenges development by creating an… |
@@ -42,7 +41,6 @@ The following the collection repositories are the highest-value resources for th
 | 26 | project-sekai-ctf/sekaictf-2024 | 83 ⭐⭐ | Advanced | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTime Event • Website •… |
 | 27 | mephi42/ctf | 76 ⭐⭐ | Varied | 2019–2024 | My writeups and solutions from various CTFs. Capturing flags with More Smoked Leet Chicken since 2019. |
 | 28 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Varied | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development by creating an accou… |
-| 29 | [noamgariani11/picoCTF-2024-Writeup](../20-events/archives/picoctf/picoCTF-2024-Writeup) | 57 ⭐⭐ | Beginner | 2024–2024 | picoCTF 2024 solutions are all searchable and easy to explore step-by-step writeups and use the built-in tools develope… |
 | 30 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
 
 

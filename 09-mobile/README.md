@@ -28,7 +28,6 @@ The following the collection repositories are the highest-value resources for th
 | 12 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 84 ⭐⭐ | Varied | 2013–2016 | The purpose of this repository is to archive any extraneous documents, or anything else that really has no specific cat… |
 | 13 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
 | 14 | 1GN1tE/CTF_Writeups | 35 ⭐ | Varied | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
-| 15 | [mbiesiad/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 6 ⭐ | Varied | 2021–2025 | Personal Collection of CTF Writeups and Security Research. A personal collection of cybersecurity writeups - from CTF c… |
 | 16 | [0xETX/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-0xETX) | 4  | Varied | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories such as Programming, … |
 | 17 | silly-lily/CTF-Writeups | 0  | Varied | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account. |
 

@@ -35,7 +35,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 14 | CTF writeups from P4 Team - the collection | 📚 Repository | 1844 | — | 2015–2023 | Elite |
 | 15 | [xtiankisutsa/awesome-mobile-CTF](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 📚 Repository | 1157 | Forensics, Crypto, Mobile | 2013–2022 | Varied |
 | 16 | Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Fil… | 📚 Repository | 840 | Programming, Forensics, Crypto | 2018–2024 | Varied |
-| 17 | [sajjadium/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-sajjadium) | 📚 Repository | 227 | Web | 2017–2019 | Varied |
 | 18 | Files + Solutions for DownUnderCTF 2025 Challenges - the collection | 📚 Repository | 110 | — | 2025–2025 | Varied |
 | 19 | Kasimir123/CTFWriteUps: Collection of CTF Writeups for - Gi… | 📚 Repository | 61 | Forensics, Crypto, Stego | 2021–2021 | Varied |
 | 20 | [CTF Writeups - the collection](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 📚 Repository | 43 | Forensics, Mobile, Reverse Engineering | 2019–2025 | Varied |
@@ -44,7 +43,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 23 | Tan-JunWei/CTF-Writeups - the collection | 📚 Repository | 15 | Web, OSINT, Forensics | n/a | Varied |
 | 24 | SandWithCheese/ctf-writeups - the collection | 📚 Repository | 14 | Reverse Engineering | n/a | Beginner |
 | 25 | [Web3 CTF Write-ups ‍☠️ - Smart Contract Security Challenges…](../08-blockchain-web3/archives/web3-ctf-writeups) | 📚 Repository | 11 | Blockchain | n/a | Varied |
-| 26 | [tl2cents/CTF-Writeups - the collection](../30-archetypes/archives/personal-collections/CTF-Writeups-tl2cents) | 📚 Repository | 5 | Crypto, ICS/SCADA, Blockchain | 2024–2025 | Varied |
 | 27 | [DownUnderCTF 2025 Write-up. My first write-up on a CTF chal…](https://kushagr17.medium.com/downunderctf-2025-write-up-a648335f5a58) | ✍️ Medium | — | Misc | 2025–2025 | Varied |
 | 28 | [0xdf hacks stuff | CTF solutions, malware analysis, home lab](https://0xdf.gitlab.io) | 📝 Blog | — | — | 2024–2024 | Intermediate |
 | 29 | [picoCTF Cryptography Track Write-up: Cheese, Ciphers & Crac…](https://medium.com/@akumar54/picoctf-cryptography-track-write-up-cheese-ciphers-cracked-keys-c6908c2dca75) | ✍️ Medium | — | Crypto | n/a | Beginner |
@@ -96,7 +94,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 75 | [chaitin/Real-World-CTF-3rd](../20-events/archives/realworldctf/RWCTF-3rd-Challenges) | 📚 Repository | 90 | — | n/a | Elite |
 | 76 | [JohnHammond/miscellaneous](../07-misc/archives/miscellaneous) | 📚 Repository | 84 | Programming, Forensics, Crypto | 2013–2016 | Varied |
 | 77 | [arkark/my-ctf-challenges - the collection](../30-archetypes/archives/event-organizer-sources/my-ctf-challenges-arkark) | 📚 Repository | 84 | Web, Misc | 2021–2025 | Varied |
-| 78 | [rkm0959/CTFWriteups: Cryptography & CTF Writeups - the collection](../30-archetypes/archives/personal-collections/CTFWriteups-rkm0959) | 📚 Repository | 83 | Crypto | n/a | Varied |
 | 79 | project-sekai-ctf/sekaictf-2024: Official source code and w… | 📚 Repository | 83 | Crypto, Reverse Engineering, Pwn | 2024–2024 | Advanced |
 | 80 | [meta repository for ctftime.org issues, feature-requests et…](../30-archetypes/archives/practice-platforms/ctftime.org) | 📚 Repository | 78 | — | n/a | Varied |
 | 81 | Nautilus-Institute/quals-2024: Source code for the DEF CON … | 📚 Repository | 76 | — | 2024–2024 | Elite |
@@ -104,8 +101,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 83 | [Official Writeups for HackTheBox Business CTF 2025 - the collection](../20-events/archives/hackthebox/business-ctf-2025) | 📚 Repository | 69 | Blockchain, ICS/SCADA | 2025–2025 | Intermediate |
 | 84 | [A curated list of hardware-oriented CTF challenges. · the collection](../30-archetypes/archives/awesome-lists/awesome-hardware-ctf) | 📚 Repository | 65 | Web, Misc, Hardware | n/a | Varied |
 | 85 | [PwnLand - the collection](../01-pwn/archives/PwnLand) | 📚 Repository | 62 | Pwn, Reverse Engineering, Programming | 2020–2025 | Varied |
-| 86 | [chaitin/Real-World-CTF-5th](../20-events/archives/realworldctf/RWCTF-5th-Challenges) | 📚 Repository | 59 | — | n/a | Elite |
-| 87 | [picoCTF-2024-Writeup - the collection](../20-events/archives/picoctf/picoCTF-2024-Writeup) | 📚 Repository | 57 | Web, Reverse Engineering, Crypto | 2024–2024 | Beginner |
 | 88 | [pwncollege/linux-luminarium - the collection](../20-events/archives/pwn-college/linux-luminarium) | 📚 Repository | 52 | Pwn | n/a | Beginner |
 | 89 | [kayranfatih/awesome-iot-and-hardware-security - the collection](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 📚 Repository | 46 | Forensics, Crypto, ICS/SCADA | 2015–2026 | Varied |
 | 90 | sigpwny/UIUCTF-2023-Public: Challenge source code | 📚 Repository | 39 | Pwn, Web, Cloud | 2023–2023 | Varied |
@@ -113,7 +108,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 92 | [m3ssap0/CTF-Writeups - the collection](../30-archetypes/archives/personal-collections/CTF-Writeups-m3ssap0) | 📚 Repository | 35 | — | 2018–2021 | Elite |
 | 93 | 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering | 📚 Repository | 35 | Reverse Engineering, Crypto, Mobile | 2017–2021 | Varied |
 | 94 | [LiveOverflow/ctf-cryptowaf - the collection](../02-web/archives/ctf-cryptowaf) | 📚 Repository | 34 | Web | n/a | Varied |
-| 95 | [JohnHammond/misfortune-ctf](../07-misc/archives/misfortune-ctf-challenge) | 📚 Repository | 34 | Pwn | 2023–2023 | Varied |
 | 96 | [pwncollege/challenges: pwn.college challenges - the collection](../20-events/archives/pwn-college/challenges) | 📚 Repository | 33 | Pwn, Web, Reverse Engineering | n/a | Beginner |
 | 97 | [Nautilus-Institute/finals-2025: Source code for the DEF CON…](../20-events/archives/def-con-ctf/DEFCON-finals-2025) | 📚 Repository | 32 | — | 2025–2025 | Elite |
 | 98 | osirislab/CSAW-CTF-2023-Quals - the collection | 📚 Repository | 31 | — | 2023–2023 | Elite |
@@ -129,7 +123,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 108 | Crusaders-of-Rust/corctf-2024-public - the collection | 📚 Repository | 16 | — | 2024–2024 | Advanced |
 | 109 | [TryHackMe Journey - Notes, Challenges & Writeups from the P…](../20-events/archives/tryhackme/TryHackMe-THM) | 📚 Repository | 15 | Web | n/a | Beginner |
 | 110 | [gijsh/rhme2_writeups: Writeups for the RHME2 CTF - the collection](../10-hardware-iot/archives/rhme2-writeups) | 📚 Repository | 14 | Reverse Engineering, Misc, Crypto | 2016–2017 | Varied |
-| 111 | [SECCON/SECCON13_online_CTF - the collection](../20-events/archives/seccon-ctf/SECCON13-online-CTF) | 📚 Repository | 12 | — | 2024–2024 | Advanced |
 | 112 | [The-Debarghya/TryHackMe-Writeups - the collection](../20-events/archives/tryhackme/TryHackMe-Writeups) | 📚 Repository | 11 | — | n/a | Beginner |
 | 113 | osirislab/CSAW-CTF-2024-Quals - the collection | 📚 Repository | 11 | — | 2024–2024 | Elite |
 | 114 | RasyidMF/ctf-writeup - the collection | 📚 Repository | 10 | — | n/a | Varied |
@@ -142,7 +135,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 121 | [docfate111/binary_exploitation: CTF/hacking challenge - Git…](../01-pwn/archives/binary_exploitation) | 📚 Repository | 7 | Pwn, Reverse Engineering, Hardware | n/a | Varied |
 | 122 | [SECCON/SECCON_Beginners_CTF_2024 - the collection](../20-events/archives/seccon-ctf/SECCON-Beginners-CTF-2024) | 📚 Repository | 7 | — | 2024–2024 | Beginner |
 | 123 | [hagronnestad/ctf-htb-cyber-apocalypse-2024: CTF Writeups - …](../20-events/archives/hackthebox/cyber-apocalypse-2024) | 📚 Repository | 6 | Forensics, Crypto, Reverse Engineering | 2024–2024 | Intermediate |
-| 124 | [mbiesiad/ctf-writeups - the collection](../30-archetypes/archives/personal-collections/ctf-writeups-mbiesiad) | 📚 Repository | 6 | Forensics, Crypto, Mobile | 2021–2025 | Varied |
 | 125 | SECCON/SECCON13_final_CTF - the collection | 📚 Repository | 6 | — | n/a | Advanced |
 | 126 | CSAW-CTF-2022-Final-WriteUps - the collection | 📚 Repository | 6 | Pwn, Reverse Engineering | 2022–2022 | Advanced |
 | 127 | [cHo0s3N/JustCTF - the collection](../20-events/archives/justctf/JustCTF) | 📚 Repository | 6 | Stego, Forensics, Crypto | 2019–2019 | Elite |
@@ -160,10 +152,8 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 139 | justcatthefish/justctf-2024 - the collection | 📚 Repository | 2 | — | 2024–2024 | Elite |
 | 140 | [shankmsd/CTF_Writeups: CTF Writeup Repository - the collection](../30-archetypes/archives/personal-collections/CTF_Writeups-shankmsd) | 📚 Repository | 2 | — | n/a | Varied |
 | 141 | [ftiannisa/write-up: writeup for ctf challenges solved by me…](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 📚 Repository | 2 | Pwn, Web, Crypto | 2021–2023 | Beginner |
-| 142 | [A Collection of Writeups for Binary Exploitation CTF Proble…](../01-pwn/archives/Pwnbooks-BinaryExploitation) | 📚 Repository | 2 | Pwn | 2025–2025 | Varied |
 | 143 | 2023-2024-: cyber apocalypse ctf 2024 Ferdi Birgül - the collection | 📚 Repository | 1 | — | 2023–2024 | Intermediate |
 | 144 | [tsids/picoCTF-Writeups: A repo containing solution…](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 📚 Repository | 1 | Programming, Forensics, Crypto | 2019–2026 | Beginner |
-| 145 | [allaboutapps/owasp-ctf-2025 - the collection](../02-web/archives/owasp-ctf-2025) | 📚 Repository | 1 | Web | 2025–2025 | Varied |
 | 146 | [BarakBinyamin/ctf: Some embedded network attacks - the collection](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) | 📚 Repository | 1 | Reverse Engineering, Blockchain, Network/Pcap | 2023–2023 | Varied |
 | 147 | [Writeup for the Tiberian Order - Contract: Road to Nowhere …](../06-osint/archives/Tiberian_Order_Writeup) | 📚 Repository | 1 | Stego, OSINT | n/a | Varied |
 | 148 | [PlaidCTF 2024 Phantom Processing Platform · the collection](../40-tooling/archives/misc-tools/phantom_processing_platform) | 📚 Repository | 1 | Pwn, Blockchain | 2024–2024 | Elite |
@@ -274,7 +264,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 253 | [Irench1k/PicoCTF: PicoGym solutions for Medium and…](../20-events/archives/picoctf/PicoCTF-Irench1k) | 📚 Repository | 0 | — | n/a | Beginner |
 | 254 | [The Ethernaut - Medium](https://medium.com/@binnaryninjax/the-ethernaut-ecd7d1f7ee13) | ✍️ Medium | — | Blockchain | n/a | Intermediate |
 | 255 | [HackTheBox - Usage - YouTube](https://www.youtube.com/watch?v=cx9Da-PoXG4) | ▶️ YouTube | — | Web | n/a | Intermediate |
-| 256 | [DanielVF/2020_paradigm_ctf_writeup - the collection](../08-blockchain-web3/archives/2020-paradigm-ctf-writeup) | 📚 Repository | 0 | Reverse Engineering, Blockchain | 2020–2020 | Elite |
 | 257 | [idek CTF 2022* Forensics - HiddenGem Mixtape Writeup](https://crazymanarmy.github.io/2023/01/16/idek-CTF-2022-Forensics-HiddenGem-Mixtape-Writeup/index.html) | 📝 Blog | — | Forensics | 2022–2022 | Varied |
 | 258 | [Teaser Dragon CTF 2019 | nytr0gen's Writeups](https://nytr0gen.github.io/writeups/ctf/2019/09/22/teaser-dragon-ctf-2019.html) | 📝 Blog | — | — | 2019–2019 | Varied |
 | 259 | [CAT CTF 25 Web challenges writeups | by 0xNayel - Medium](https://medium.com/@0xNayelx/cat-ctf-25-web-challenges-writeups-2655e02b6485) | ✍️ Medium | — | Web | n/a | Intermediate |
@@ -390,7 +379,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 369 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | ▶️ YouTube | — | Pwn, Web, Crypto | 2024–2024 | Advanced |
 | 370 | [CTFtime.org / WHY2025 CTF tasks and writeups](https://ctftime.org/event/2680/tasks) | 🏆 CTFtime | — | — | n/a | Varied |
 | 371 | [CTFtime.org / Remedy CTF 2025 tasks and writeups](https://ctftime.org/event/2618/tasks) | 🏆 CTFtime | — | — | 2025–2025 | Varied |
-| 372 | [Just some things that I did for pwn college challenges - Gi…](../01-pwn/archives/Pwn-College) | 📚 Repository | 0 | Pwn | n/a | Intermediate |
 | 373 | [bamboofox official blog](https://bamboofox.github.io) | 📝 Blog | — | — | 2018–2018 | Varied |
 | 374 | [Writeups - STT](https://sectt.github.io/writeups) | 📝 Blog | — | — | n/a | Varied |
 | 375 | [CTFtime.org / Cyber Apocalypse 2021 / BlitzProp / Writeup](https://ctftime.org/writeup/27697) | 🏆 CTFtime | — | — | 2021–2021 | Intermediate |
