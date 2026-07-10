@@ -1,17 +1,54 @@
-# 🌐 
+# :globe_with_meridians: Day 1: Reflected XSS into HTML context with nothing encoded: Zero to Hero Series- Portswigger
 
-> **Original Source:** [](https://infosecwriteups.com/day-1-reflected-xss-into-html-context-with-nothing-encoded-zero-to-hero-series-portswigger-8cb15403ba29)
+> **Original Source:** [Day 1: Reflected XSS into HTML context with nothing encoded: Zero to Hero Series- Portswigger](https://infosecwriteups.com/day-1-reflected-xss-into-html-context-with-nothing-encoded-zero-to-hero-series-portswigger-8cb15403ba29)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+What is Reflected XSS?
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/day-1-reflected-xss-into-html-context-with-nothing-encoded-zero-to-hero-series-portswigger-8cb15403ba29)**
+## Get RayofHope’s stories in your inbox
+
+
+Join Medium for free to get updates from this writer.
+
+
+Remember me for faster sign in
+
+
+*Reflected XSS arises when an application receives data from an untrusted source and includes that data within immediate responses in an unsafe way.*
+
+
+Impact of Reflected XSS:
+
+>
+
+Reflected XSS can have serious consequences, including but not limited to Data Theft, Account Hijacking or Malware Installation.Data Theft: Attackers can steal sensitive user information, such as login credentials, credit card details, or personal data.
+
+
+Account Hijacking: By compromising a user’s account, attackers can perform unauthorised actions or steal valuable assets.
+
+
+Malware Installation: Attackers can use XSS to install malicious software, such as viruses, spyware, or ransomware, on the user’s device.
+
+
+Mitigating Reflected XSS Attacks:
+
+>
+
+Input Validation: Validate all user inputs by ensuring that they are of the correct type, length, and format.
+
+
+Output Encoding: Encode user-supplied data before it is displayed on the website, preventing it from being interpreted as HTML.
+
+
+Content Security Policy (CSP): Use CSP to control the resources that are allowed to be loaded on the website, restricting the execution of malicious scripts.
+
+
+## Let's solve the lab:
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/day-1-reflected-xss-into-html-context-with-nothing-encoded-zero-to-hero-series-portswigger-8cb15403ba29). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/day-1-reflected-xss-into-html-context-with-nothing-encoded-zero-to-hero-series-portswigger-8cb15403ba29). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

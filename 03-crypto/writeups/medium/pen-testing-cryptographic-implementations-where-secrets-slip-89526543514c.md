@@ -1,17 +1,38 @@
-# 🔐 
+# :locked_with_key: Pen Testing Cryptographic Implementations: Where Secrets Slip
 
-> **Original Source:** [](https://infosecwriteups.com/pen-testing-cryptographic-implementations-where-secrets-slip-89526543514c)
+> **Original Source:** [Pen Testing Cryptographic Implementations: Where Secrets Slip](https://infosecwriteups.com/pen-testing-cryptographic-implementations-where-secrets-slip-89526543514c)
 > **Platform:** infosecwriteups.com | **Category:** `CRYPTO`
 
 ---
 
-## 🔗 Read Full Writeup
+# Pen Testing Cryptographic Implementations: Where Secrets Slip
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/pen-testing-cryptographic-implementations-where-secrets-slip-89526543514c)**
+### Complimentary access to the Article:
+
+
+If you’ve ever heard a dev say, “Don’t worry, we use encryption,” and your eyebrows twitched involuntarily… welcome. You know that crypto done wrong is worse than no crypto at all.
+
+>
+
+Penetration testing cryptographic implementations isn’t about breaking AES like you’re in a spy movie. It’s about finding how developers misused good crypto and exploiting those mistakes like a polite (but curious) burglar.
+
+
+Let’s dive into how pen testers assess crypto in the wild — and why it matters more than ever.
+
+## What Are We Really Testing?
+
+
+When we say “cryptographic implementations,” we’re not testing the math (spoiler: you won’t crack AES-256 on your laptop), we’re testing the usage:
+
+
+- Is the crypto being used securely?
+
+- Is it implemented correctly?
+
+- Is it protecting what it’s supposed to?
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/pen-testing-cryptographic-implementations-where-secrets-slip-89526543514c). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/pen-testing-cryptographic-implementations-where-secrets-slip-89526543514c). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

@@ -1,23 +1,59 @@
-# 🔐 CipherCombat2.0 CTF write-up : Locked
+# :locked_with_key: CipherCombat2.0 CTF write-up : Locked
 
-> **Original Source:** [CipherCombat2.0 CTF write-up : Locked](https://saketupadhyay.medium.com/ciphercombat2-0-ctf-write-up-locked-e19fae85a602)
-> **Platform:** saketupadhyay.medium.com | **Category:** `CRYPTO`
-
----
-
-## 📋 Overview
-
-After unzipping the file, we can start looking at the binary. Press enter or click to view image in full size. Important stuff : it's Linux ...
+> **Original Source:** [CipherCombat2.0 CTF write-up : Locked]()
+> **Platform:** medium.com | **Category:** `CRYPTO`
 
 ---
 
-## 🔗 Read Full Writeup
+# CipherCombat2.0 CTF write-up : Locked
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://saketupadhyay.medium.com/ciphercombat2-0-ctf-write-up-locked-e19fae85a602)**
+Reverse Engineering Challenge of Hacker Earth CipherCombat2.0
+
+
+## What we get ?
+
+
+We get a zip file with our binary in it with password hackerearth.
+
+
+After unzipping the file, we can start looking at the binary.
+
+
+Important stuff : it’s Linux Executable and not stripped… This makes task easier.
+
+## Solving the challenge
+
+
+Let’s make the file executable by chmod.
+
+
+now let’s run it once and see what it actually does…
+
+
+So seems like some type password check, and the name of challenge checks out !
+
+
+Let’s Disassemble it and try to understand the checking mechanism.
+
+
+doing Strings on the file we get something interesting…
+
+
+Looks like good password? Also if we see the disassembly we see main calls the fun2() function before test eax,eax at 0x000012d7 which controls the flow of program… and see what it compares! the same string !
+
+
+Let’s just try this as password…
+
+
+And that works ! submit the flag and get them points…
+
+## About CTF
+
+
+Hacker Earth’s CipherCombat2.0 was great CTF for beginners in the security field. Overall great experience
 
 ---
 
-*📖 Originally published on [Medium](https://saketupadhyay.medium.com/ciphercombat2-0-ctf-write-up-locked-e19fae85a602). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*
+*Originally published on [Medium](https://saketupadhyay.medium.com/ciphercombat2-0-ctf-write-up-locked-e19fae85a602). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

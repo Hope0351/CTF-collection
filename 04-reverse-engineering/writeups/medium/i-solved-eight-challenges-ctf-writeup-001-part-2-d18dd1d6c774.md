@@ -1,13 +1,13 @@
 # 🔄 I solved EIGHT challenges — CTF Writeup 001 (Part 2)
 
 > **Original Source:** [I solved EIGHT challenges — CTF Writeup 001 (Part 2)](https://medium.com/@byharryzhu/i-solved-eight-challenges-ctf-writeup-001-part-2-d18dd1d6c774)
-> **Platform:** medium.com | **Category:** `REV`
+> **Platform:** medium.com | **Category:** `REVERSE ENGINEERING`
 
 ---
 
 ## 📝 Full Writeup
 
-I solved EIGHT challenges — CTF Writeup 001 (Part 2)[![Harry Zhu](https://web.archive.org/web/20251008203809im_/https://miro.medium.com/v2/resize:fill:64:64/1*TtjB2h_rML7anVF-IeAO7Q.jpeg)
+I solved EIGHT challenges — CTF Writeup 001 (Part 2)[![Harry Zhu](https://miro.medium.com/v2/resize:fill:64:64/1*TtjB2h_rML7anVF-IeAO7Q.jpeg)
 
 ](/web/20251008203809/https://medium.com/@byharryzhu?source=post_page---byline--d18dd1d6c774---------------------------------------)
 
@@ -23,17 +23,14 @@ May 22, 2024
 --
 
 
-
 IDA Pro and Ghildra
 Where were we? Let’s check back on the [first part](/web/20251008203809/https://medium.com/@byharryzhu/i-solved-eight-challenges-in-one-work-shift-ctf-writeup-001-part-1-94357898755f) before we move on.
 
-Right… the Packer’s Paradox. **thinking**
-
-**processing thought**
+Right… the Packer’s Paradox. **thinkingprocessing thought**
 
 Alright, let’s do it!
 
-Quick reminder: Be sure to have [Kali](https://web.archive.org/web/20251008203809/https://kali.org/) installed for this challenge!
+Quick reminder: Be sure to have [Kali](https://kali.org/) installed for this challenge!
 
 ### Challenge #4: Packer’s Paradox
 We were first provided a Microsoft Executable (EXE) file. I first did some elementary Linux commands to explore the file’s metadata and content.
@@ -52,7 +49,7 @@ PackerParadox.exe: PE32 executable (GUI) Intel 80386, for MS Windows, UPX compre
 
 Perfect! This confirms my initial suspicion. It’s packed with UPX compression. Let’s put it through an Unpacker tool before we look through the assembly, or do we even need to?
 
-Let’s use this unpacker UPX tool: [https://www.kali.org/tools/upx-ucl/](https://web.archive.org/web/20251008203809/https://www.kali.org/tools/upx-ucl/)
+Let’s use this unpacker UPX tool: [https://www.kali.org/tools/upx-ucl/](https://www.kali.org/tools/upx-ucl/)
 
 I was then able to move the file to Kali using another command. Remember, for CTF competitions, you should be very comfortable with Linux and its commands.
 
@@ -72,7 +69,7 @@ Perfect! Now that it’s decompressed. I can copy the file back over from Kali t
 
 Time to pull out the big guns! `IDA Free` Because, duh, you think I got `IDA PRO` money for a CTF competition?
 
-Graph view of x86 assembly code / [IDA Free](https://web.archive.org/web/20251008203809/https://hex-rays.com/ida-free/)
+Graph view of x86 assembly code / [IDA Free](https://hex-rays.com/ida-free/)
 Not a big fan of this view, so let’s explore the `Hex View` right next to the graph view that we’re currently looking at.
 
 OK.. found it!
@@ -132,7 +129,7 @@ I was given a TAR file, which was a saved Docker instance. Initially, I went thr
 
 OK.. wow, too easy!
 
-Decoding this with [Cyberchef](https://web.archive.org/web/20251008203809/https://cyberchef.io/) gives us this
+Decoding this with [Cyberchef](https://cyberchef.io/) gives us this
 
 ```
 C1{am@z1ng_wh@t_u_c@n_h1d3_1n_h3@d3rs}
@@ -141,11 +138,8 @@ C1{am@z1ng_wh@t_u_c@n_h1d3_1n_h3@d3rs}
 ### Challenge #7: Important Document
 This is all about code obfuscation! But we’ve gone way too long with this one. Feel free to [follow me](/web/20251008203809/https://medium.com/@byharryzhu) for Part 3 this week!
 
-Follow me for more content about tech, post-grad life, and security writeups. If you’re also in the world of helping others, connect with me on [LinkedIn](https://web.archive.org/web/20251008203809/https://www.linkedin.com/in/harryjzhu/)!
+Follow me for more content about tech, post-grad life, and security writeups. If you’re also in the world of helping others, connect with me on [LinkedIn](https://www.linkedin.com/in/harryjzhu/)!
 
 I am a software developer with a passion for engineering secure, performant, and creative software and a heart for telling my stories and digital manifestations as I go through life and beyond.
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@byharryzhu/i-solved-eight-challenges-ctf-writeup-001-part-2-d18dd1d6c774). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of reverse CTF writeups.*

@@ -1,23 +1,117 @@
-# 🎲 Pieces — PwnSec CTF 2024. Category: Misc
+# :game_die: Load hashes from the file
 
-> **Original Source:** [Pieces — PwnSec CTF 2024. Category: Misc](https://rustybladez.medium.com/pieces-pwnsec-ctf-2024-0c6967ca6a44)
-> **Platform:** rustybladez.medium.com | **Category:** `MISC` | **Year:** 2024
-
----
-
-## 📋 Overview
-
-Freelance Writer, Tech-Geek, interested in Cyber Security. You'll find my CTF writeups here and other ramblings. Follow ...
+> **Original Source:** [Load hashes from the file]()
+> **Platform:** medium.com | **Category:** `MISC`
 
 ---
 
-## 🔗 Read Full Writeup
+Category: Misc
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://rustybladez.medium.com/pieces-pwnsec-ctf-2024-0c6967ca6a44)**
+You’re provided with a ZIP file, which contains a text file. The text file contains 37 hashes.
+
+
+```
+5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2
+bc8478052e3ca9de6522b003c9297f7a5319cc5e8477991b48a2402c8c5ced61
+6a2a781c47a940d740f7f0e9872c9683088baa559e69a8da81fcad9ad650b990
+481dc61a1bb7b3746b48abc1c76b109cecc88315b684317477e26bd9d023b0fd
+7c162e1660c7cbb4297479da406a5104eb5824765aadd97ad3dd58c93553264e
+4918f93c20b97051fed2fe5472610cda83e5fc5735d2407bd69f322bfe4ed79f
+f553d31e321f86488de78fb54fd142482ce66758f4758ab8578598740d9e5588
+2027b791c448468af66614f8233b0a305a25e7e1486400a9738395c912958575
+330f599093d06de98b4d6e2c91bfb56da7cc2f30cf5005d4b733df4557998f30
+863653956b3fa7d93708fb54441d829468982b29f8486eb830c3cc3744e770cb
+9400d84df94d54e6acbb9efe8b94ddb51c9cf473a13866dc7b0130adda702f38
+3c66b522ebc151a54dcb2b66e72e5d8c31e55b05efaaa4969a2a9b86d970702e
+224afb3889c0b052839ca7126c42ddaf50772a6a708a0eb957444b8a680c5fd4
+f4361aedcdc453c0da96276471cdae94467cab2ebd88b02c9086bf21530d6edc
+8da67b2a949ffc2b197b08d481a68cb1cde0851c30496ecf5666f3d13ebab8c6
+cdc070f0c79f59ee69f1a046977c0f40e9cba794c4889e0c6a4a1495e6283b15
+58699633392cc29ca2941cba7ba3fe0bdabde1ea44ba810ce055b9910ff1824c
+914909dbc1681ffc109d8f3985f4bb22c7b008443b51680a06ab87801c70dfeb
+07993332ddd72d8b68bea706ac9692573f7ac9dd361ca30a55fcb7fcbfcda458
+649aae446ebceb3b637826f92802ce08fcd9fbfb74b49fe708b4e4ec6d285205
+5d900e9175b9ff80ba0b8760f9931382111fa63707c5c37a1c736ec92c651b3d
+f53df578cdacacbe5c87fe848d4735c39234edd606ec6dadb4bfebc5bb8756fc
+f538ec98530de67114a560d05130b1c96f81d98ce1e84df0a85124968e9a08ef
+d6d9c244a6175c1cb2d754fc522c6ae3cefd5f1513d20a16eef81c9616e809e7
+1d0cf15bc0cf4bdd1ce1f01b09348373b265b740a70660b7b88709f506d4c4ab
+81dae1d1e874c1ced2df47bac30a679a2aada7b80f3d52e36335a6325975c549
+bef61ae0d2056b0170b3f49b6ab8e166b371463b0cbacfbb31c9a24d36b1cb28
+b3f99d08684f1ad1bc72c6013d865f9fb966fb9fedc2f49b26ebe36b6a5a3259
+0528794f6bf8fbeea45c5e9247ec6d1a5d4b1f982af413e936c8907453ade4f0
+d03d8771f1434b9207a0dcacc213fa9ae69c98eebe4fa3ed81bd3ebc34b70f98
+7a6e768bec9812024059ef88677d98a5a853f78451f9018cd289ed21c116908f
+51763613a0f887799e005bfbba34b0e51fbd50efbcdf0709fdb4555e5d3c1fd1
+70b891a390d76f7330b82f0f3e9eeed2fbe9c667afb38bd75cafb3093b2de23a
+593b0232c991f8eb7fdfe4e92a71226e40f20330e55c0602b8635f93dd5ca8e4
+a0ce8dfa972be9ea81e6355c0fc72cb05d1ee2bc03915c6942c82b9f7ddadf3a
+ac87341549192bba1b341cbbc98b94f2e15a32bfdee9b182f7744c8ae7797654
+5b0a8dfc3701878ba517924de1264281b7b8f3a4b7ee554db2f247974ca45f2c
+```
+
+
+From [hash identifier](https://hashes.com/en/tools/hash_identifier), we learn that all of these are SHA256 hashes.
+
+
+I went to [Crackstation](https://crackstation.net/) to decrypt them. However, only the first 4 lines were successfully decrypted.
+
+
+But this did reveal the pattern of the hashes. Each line of hash is the hashed value of a beginning substring of the flag. To test my assumption, I added E, C, and { to the strings values ( PWNSE, PWNSEC, PWNSEC{ ) and generated their hash values. As expected, the values matched with the next 3 lines.
+
+
+This means the flag is built character by character and the last line is the hash value of the full flag. Knowing this, we can brute force to “assemble” our flag letter by letter.
+
+
+Here’s what I did. I added every single printable character to the known flag part one by one, hashed it, and then compared it to the hash values in the file. If it matches, we have a matching character. We add that to the current flag part. Here’s the Python script:
+
+
+```
+import hashlib
+import string
+
+# Load hashes from the file
+with open('pieces.txt', 'r') as f:
+hashes = [line.strip() for line in f]
+
+# Starting flag from known decrypted values
+# You can also start with "PWNSEC{"
+current_flag = ""
+
+# Printable characters to test (letters, numbers, and symbols)
+characters = string.printable.strip() # Removes the newline character from the printable set
+
+# Iterate through the hashes
+for i, target_hash in enumerate(hashes[len(current_flag):], start=len(current_flag) + 1):
+found = False
+for char in characters:
+# Add the character to the current flag and hash it
+candidate = current_flag + char
+candidate_hash = hashlib.sha256(candidate.encode()).hexdigest()
+
+# Compare with the target hash
+if candidate_hash == target_hash:
+current_flag += char
+print(f"Found character {i}: {char}")
+found = True
+break
+
+if not found:
+print(f"Could not find a matching character for line {i}")
+break
+
+# Print the full flag
+print(f"Full flag: {current_flag}")
+```
+
+
+This revealed the flag.
+
+
+Flag: PWNSEC{L34V3_My_C0mpu73R_Y0u_5t4lk3R}
 
 ---
 
-*📖 Originally published on [Medium](https://rustybladez.medium.com/pieces-pwnsec-ctf-2024-0c6967ca6a44). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*
+*Originally published on [Medium](https://rustybladez.medium.com/pieces-pwnsec-ctf-2024-0c6967ca6a44). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

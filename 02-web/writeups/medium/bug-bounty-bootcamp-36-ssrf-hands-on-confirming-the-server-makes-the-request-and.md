@@ -1,17 +1,30 @@
-# 🌐 
+# :globe_with_meridians: “Bug Bounty Bootcamp #36: SSRF Hands-On - Confirming the Server Makes the Request and Reading Local Files”
 
-> **Original Source:** [](https://infosecwriteups.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049)
+> **Original Source:** [“Bug Bounty Bootcamp #36: SSRF Hands-On - Confirming the Server Makes the Request and Reading Local Files”](https://infosecwriteups.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+# “Bug Bounty Bootcamp #36: SSRF Hands-On — Confirming the Server Makes the Request and Reading Local Files”
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049)**
+## You think you found an SSRF. But how do you prove the request came from the server and not your browser? And once confirmed, how do you turn that into a critical finding? This hands-on guide walks you through the exact steps.
+
+
+[Free Link](https://amannsharmaa.medium.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049?sk=bf6e64037f1036f3b10f53363e92a7f4)
+
+
+Welcome back to the Bug Bounty Bootcamp. You’ve learned the theory of Server-Side Request Forgery. Now, we get practical. SSRF can be one of the most impactful vulnerabilities, but also one of the hardest to demonstrate impact for. This lesson will show you the exact methodology to confirm an SSRF, differentiate server-side requests from client-side, and then pivot to reading local files or port-scanning internal networks. By the end, you’ll have a repeatable process to turn a potential SSRF into a critical bug bounty report.
+
+## The Two Golden Rules of SSRF
+
+
+Before exploiting any SSRF, you must answer two questions:
+
+
+- Is the request coming from the server or my browser? If it’s from your browser, it’s not SSRF — it’s just a normal external request. True SSRF means the *server*…
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/bug-bounty-bootcamp-36-ssrf-hands-on-confirming-the-server-makes-the-request-and-reading-local-7229cff03049). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

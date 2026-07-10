@@ -1,17 +1,50 @@
-# 🌐 
+# :globe_with_meridians: Write Up Jwt Authentication Bypass Via Weak Signing Key Portswigger Academy F212
 
-> **Original Source:** [](https://infosecwriteups.com/write-up-jwt-authentication-bypass-via-weak-signing-key-portswigger-academy-f212ee600ddd)
+> **Original Source:** [Write Up Jwt Authentication Bypass Via Weak Signing Key Portswigger Academy F212](https://infosecwriteups.com/write-up-jwt-authentication-bypass-via-weak-signing-key-portswigger-academy-f212ee600ddd)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+## The malicious payload
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/write-up-jwt-authentication-bypass-via-weak-signing-key-portswigger-academy-f212ee600ddd)**
+With the signature key known, I can create my own arbitrary tokens. I store the key in the key store of the `JWT Editor`. It needs to be base64-encoded which can be done in Burp decoder or on the command line with `echo -n 'secret1' | base64`:
+
+
+*Storing the secret key for further use*
+
+
+I request the `/admin` page with my normal user account and receive the expected `Admin interface only available if logged in as an administrator` message. This request I send to Burp Repeater.
+
+
+## Get Frank Leitner’s stories in your inbox
+
+
+Join Medium for free to get updates from this writer.
+
+
+Remember me for faster sign in
+
+
+The payload only contains the username and no privileges or roles. So as a first attempt I try to use `administrator` as my username. In the payload, I change the `sub` value to `administrator` and re-sign the token with the signing key that I stored above.
+
+
+The result looks promising as it references me as `administrator`:
+
+
+*Manipulation of JWT in the request*
+
+
+Now that I know that the JWT is correct for `administrator`, I replace my session cookie with this manipulated token. That way, I do not need to modify the requests but can work directly in the browser:
+
+
+I reload the `/admin` page in the browser. Instead of the error message I received earlier, I am greeted with the user management:
+
+
+After clicking on the `Delete` link for user `carlos`, the lab updates to
+
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/write-up-jwt-authentication-bypass-via-weak-signing-key-portswigger-academy-f212ee600ddd). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/write-up-jwt-authentication-bypass-via-weak-signing-key-portswigger-academy-f212ee600ddd). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

@@ -7,7 +7,7 @@
 
 ## 📝 Full Writeup
 
-BrunnerCTF 2025 Forensics writeup[![Mohammad Alzamil](https://web.archive.org/web/20250915013441im_/https://miro.medium.com/v2/resize:fill:64:64/1*nTKh0qgDpJ82WB5CqTfpOw.jpeg)
+BrunnerCTF 2025 Forensics writeup[![Mohammad Alzamil](https://miro.medium.com/v2/resize:fill:64:64/1*nTKh0qgDpJ82WB5CqTfpOw.jpeg)
 
 ](/web/20250915013441/https://medium.com/@manageesh11?source=post_page---byline--08338b04865c---------------------------------------)
 
@@ -21,7 +21,6 @@ Aug 24, 2025
 ](/web/20250915013441/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F08338b04865c&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40manageesh11%2Fbrunnerctf-2025-forensics-writeup-08338b04865c&user=Mohammad+Alzamil&userId=a7a265bc8e43&source=---header_actions--08338b04865c---------------------clap_footer------------------)
 
 --
-
 
 
 During this CTF, I had the chance to dive into a Hard-categorized forensics challenge, and it turned out to be one of the most fun and memorable challenges I’ve worked on.
@@ -90,6 +89,3 @@ This was clearly the password for the hidden volume.
 Finally, with the hidden volume password in hand, I was able to unlock the real container. Inside, I found an Excel file — and that’s where the real flag was hidden.
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@manageesh11/brunnerctf-2025-forensics-writeup-08338b04865c). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of forensics CTF writeups.*

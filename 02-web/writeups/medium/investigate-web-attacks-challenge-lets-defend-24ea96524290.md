@@ -1,17 +1,32 @@
-# 🌐 
+# :globe_with_meridians: Investigate Web Attacks Challenge (Let’s Defend)
 
-> **Original Source:** [](https://infosecwriteups.com/investigate-web-attacks-challenge-lets-defend-24ea96524290)
+> **Original Source:** [Investigate Web Attacks Challenge (Let’s Defend)](https://infosecwriteups.com/investigate-web-attacks-challenge-lets-defend-24ea96524290)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+*Web Attack Investigated — Earned Badge*
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
+## 1. Which automated scan tool did the attacker use for web reconnaissance?
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/investigate-web-attacks-challenge-lets-defend-24ea96524290)**
+
+During the first phase of the attack, I needed to identify which scanning tool the attacker used. To do this, I reviewed the web server logs, paying attention to unusual **User-Agent** strings, which often provide clues about automated tools used.
+
+
+I scrolled through the logs searching for odd patterns and used the following `grep` command from a Linux console to speed up the search:
+
+
+```
+grep 'Mozilla/5.0' access.log | sort | uniq -c | sort -nr
+```
+
+
+Upon reviewing the logs, at line 30 I found **Nikto** in the User-Agent string, indicating that the attacker used **Nikto**, a popular web vulnerability scanning tool.
+
+
+**Answer**: Nikto
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/investigate-web-attacks-challenge-lets-defend-24ea96524290). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/investigate-web-attacks-challenge-lets-defend-24ea96524290). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

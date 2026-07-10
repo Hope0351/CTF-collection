@@ -1,14 +1,14 @@
 # 🔌 OSCP Proving Grounds
 
 > **Original Source:** [OSCP Proving Grounds](https://medium.com/@carlosbudiman/oscp-proving-grounds-cockpit-intermediate-linux-2d2be64ebfa4)
-> **Platform:** medium.com | **Category:** `HARDWARE`
+> **Platform:** medium.com | **Category:** `HARDWARE / IoT`
 
 
 ---
 
 ## 📝 Full Writeup
 
-OSCP Proving Grounds | Cockpit | Intermediate | Linux[![apple of my eye](https://web.archive.org/web/20251127225540im_/https://miro.medium.com/v2/resize:fill:64:64/1*X1ZDp8AqtVXycioDvPTK-Q.jpeg)
+OSCP Proving Grounds | Cockpit | Intermediate | Linux[![apple of my eye](https://miro.medium.com/v2/resize:fill:64:64/1*X1ZDp8AqtVXycioDvPTK-Q.jpeg)
 
 ](/web/20251127225540/https://medium.com/@carlosbudiman?source=post_page---byline--2d2be64ebfa4---------------------------------------)
 
@@ -22,7 +22,6 @@ Jan 17, 2025
 ](/web/20251127225540/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F2d2be64ebfa4&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40carlosbudiman%2Foscp-proving-grounds-cockpit-intermediate-linux-2d2be64ebfa4&user=apple+of+my+eye&userId=cf690dc9fc87&source=---header_actions--2d2be64ebfa4---------------------clap_footer------------------)
 
 --
-
 
 
 Just an normal guy preparing for the OSCP+ Exam :). Just a quick writeup about the Cockpit machine, which I found pretty easy.
@@ -49,14 +48,14 @@ Tried searching any exploits regarding ‘blaze by JDgodd’, and found a couple
 
 www.exploit-db.com
 
-](https://web.archive.org/web/20251127225540/https://www.exploit-db.com/exploits/33995?source=post_page-----2d2be64ebfa4---------------------------------------)
+](https://www.exploit-db.com/exploits/33995?source=post_page-----2d2be64ebfa4---------------------------------------)
 [
 ## OffSec's Exploit Database Archive
 ### Blaze Apps - Multiple Vulnerabilities.. webapps exploit for ASP platform
 
 www.exploit-db.com
 
-](https://web.archive.org/web/20251127225540/https://www.exploit-db.com/exploits/12734?source=post_page-----2d2be64ebfa4---------------------------------------)
+](https://www.exploit-db.com/exploits/12734?source=post_page-----2d2be64ebfa4---------------------------------------)
 
 So I tried entering SQL payloads, to authenticate, when doing the blind sql injections I got this output :
 
@@ -70,7 +69,7 @@ When entering any thing with a single quotation it shows the error, and reveals 
 
 github.com
 
-](https://web.archive.org/web/20251127225540/https://github.com/fuzzdb-project/fuzzdb/blob/master/attack/sql-injection/exploit/mysql-injection-login-bypass.txt?source=post_page-----2d2be64ebfa4---------------------------------------)
+](https://github.com/fuzzdb-project/fuzzdb/blob/master/attack/sql-injection/exploit/mysql-injection-login-bypass.txt?source=post_page-----2d2be64ebfa4---------------------------------------)
 
 Payload :
 
@@ -156,6 +155,3 @@ We not have access to root without the need of passwords via SUDO.
 Learnt a lot from this box, from SQL injection vector for authentication bypass then privilege escalating by manipulating the flags, thought me to research and enumerate more and more!
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@carlosbudiman/oscp-proving-grounds-cockpit-intermediate-linux-2d2be64ebfa4). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of hardware CTF writeups.*

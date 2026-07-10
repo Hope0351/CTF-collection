@@ -1,17 +1,49 @@
-# 📝 
+# :game_die: HTB — Bashed
 
-> **Original Source:** [](https://infosecwriteups.com/htb-bashed-2e7c3915c81e)
-> **Platform:** infosecwriteups.com | **Category:** `GENERAL`
-
----
-
-## 🔗 Read Full Writeup
-
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
-
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/htb-bashed-2e7c3915c81e)**
+> **Original Source:** [HTB — Bashed](https://infosecwriteups.com/htb-bashed-2e7c3915c81e)
+> **Platform:** infosecwriteups.com | **Category:** `MISC`
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/htb-bashed-2e7c3915c81e). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of general CTF writeups.*
+# HTB — Bashed
+
+
+*Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
+
+
+Once the initial Nmap scan completes we see that we only have one open port on the machine
+
+
+```
+┌─[eu-dedivip-2]─[10.10.14.75]─[dfaultssec@htb-lfdv1ngaec]─[~]
+└──╼ [★]$ nmap -sT -sC -sV -T 4 -p- 10.129.29.122
+Starting Nmap 7.93 ( <https://nmap.org> ) at 2024-03-31 14:18 BST
+Warning: 10.129.29.122 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.129.29.122
+Host is up (0.16s latency).
+Not shown: 65483 closed tcp ports (conn-refused), 51 filtered tcp ports (no-response)
+PORT STATE SERVICE VERSION
+80/tcp open http Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: Arrexel's Development Site
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+Service detection performed. Please report any incorrect results at <https://nmap.org/submit/> .
+Nmap done: 1 IP address (1 host up) scanned in 701.95 seconds
+
+```
+
+
+Going into the web app on port 80 we see a site referencing `phpbash`
+
+
+Checking with `ffuf` we get a few directories we can try out for vulnerabilities
+
+
+```
+┌─[eu-dedivip-2]─[10.10.14.75]─[dfaultssec@htb-lfdv1ngaec]─[~]
+└──╼ [★]$ ffuf -u <http://10.129.29.122/FUZZ> -w…
+```
+
+---
+
+*Originally published on [Medium](https://infosecwriteups.com/htb-bashed-2e7c3915c81e). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

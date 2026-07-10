@@ -1,17 +1,36 @@
-# 🌐 
+# :globe_with_meridians: Understanding JSON Web Token (JWT) Security
 
-> **Original Source:** [](https://infosecwriteups.com/understanding-json-web-token-jwt-security-48c3a9cc96f2)
+> **Original Source:** [Understanding JSON Web Token (JWT) Security](https://infosecwriteups.com/understanding-json-web-token-jwt-security-48c3a9cc96f2)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+# Understanding JSON Web Token (JWT) Security
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/understanding-json-web-token-jwt-security-48c3a9cc96f2)**
+From Basics to Breaking Authentication
+
+
+JSON Web Tokens (JWTs) have become the backbone of modern authentication systems. If you’re a penetration tester or bug bounty hunter, understanding JWT vulnerabilities isn’t just useful; it’s essential. This blog will walk you through the very basics that you need to know about JWT security testing.
+
+
+*JWT Security*
+
+## What is JWT? A quick refresherJWT is a standard as specified in RFC 7519, which can be implemented in either of three ways: JSON Web Signature (JWS) or JSON Web Encryption (JWE), or Unsecured JWT. JWS is widely and majorly used where it preserves the integrity of the claims made by using the signature, while in JWE, it ensures confidentiality by encrypting the entire content, which is only accessible to parties with the decryption keys. In an unsecured JWT implementation, ‘alg’ is set to none.
+
+
+JSON Web Token (JWT) consists of 3 parts: JOSE (JSON Object Signing and Encryption) header, Payload, and Signature.
+
+
+A JWT = `HEADER.PAYLOAD.SIGNATURE` (base64url parts).
+
+
+> Header: tells alg (HS256, RS256), typ, kid.
+
+
+> Payload: claims (sub, iss, aud, exp, role…). Not encrypted-anyone can read it. The payload of a JSON Web Token (JWT) contains claims, which store information…
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/understanding-json-web-token-jwt-security-48c3a9cc96f2). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/understanding-json-web-token-jwt-security-48c3a9cc96f2). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

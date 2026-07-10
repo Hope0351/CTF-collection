@@ -1,13 +1,13 @@
 # 📝 Advent of CTF 2024 Writeups
 
 > **Original Source:** [Advent of CTF 2024 Writeups](https://rustybladez.medium.com/advent-of-ctf-2024-writeups-fa7fecbba37c)
-> **Platform:** rustybladez.medium.com | **Category:** `CTF` | **Year:** 2024
+> **Platform:** rustybladez.medium.com | **Category:** `MISC` | **Year:** 2024
 
 ---
 
 ## 📝 Full Writeup
 
-Advent of CTF 2024 Writeups[![Rusty](https://web.archive.org/web/20251127170506im_/https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
+Advent of CTF 2024 Writeups[![Rusty](https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
 
 ](/web/20251127170506/https://rustybladez.medium.com/?source=post_page---byline--fa7fecbba37c---------------------------------------)
 
@@ -16,17 +16,14 @@ Advent of CTF 2024 Writeups[![Rusty](https://web.archive.org/web/20251127170506i
 ·
 Jan 1, 2025
 
-[
 
-](https://web.archive.org/web/20251127170506/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2Ffa7fecbba37c&operation=register&redirect=https%3A%2F%2Frustybladez.medium.com%2Fadvent-of-ctf-2024-writeups-fa7fecbba37c&user=Rusty&userId=4ef3f2c82d8&source=---header_actions--fa7fecbba37c---------------------clap_footer------------------)
 
 --
 
 2
 
 
-
-Hey everyone, It’s been a while since I’ve done CTF writeups. The [Cyberstudents](https://web.archive.org/web/20251127170506/https://cyberstudents.net/) community decided to organize a month-long CTF in December. As a CTF nerd, I just had to participate (this is my second month-long CTF in 2024).
+Hey everyone, It’s been a while since I’ve done CTF writeups. The [Cyberstudents](https://cyberstudents.net/) community decided to organize a month-long CTF in December. As a CTF nerd, I just had to participate (this is my second month-long CTF in 2024).
 
 I solved quite a few challenges and decided to do writeups for them. So here we go.
 
@@ -64,8 +61,7 @@ Flag: csd{hUm8l3_8391Nn1N95_858D48}
 ### Day 2: screaming
 > 
 **Category: **Reverse engineering
-**Points: 40**
-**Author: **qvipin
+**Points: 40Author: **qvipin
 
 AAAAA- I’m not screaming, I’m just buffer overflowing my emotions!
 
@@ -184,8 +180,7 @@ Flag: csd{d4y_2_H0w_r_u?}
 ### Day 3: **ElfTV**
 > 
 **Category: **Reverse engineering
-**Points: 55**
-**Author: **qvipin
+**Points: 55Author: **qvipin
 
 Santa’s ElfTV license key checker got leaked! Finally, a break for a broke elf like you, starving for that sweet, sweet elf dopamine. The catch? You’ve got to reverse-engineer Santa’s “state-of-the-art” security to unlock it. Think you’re smarter than the guy who still uses reindeer for transportation? Prove it and claim your ElfTV fix!!!!
 
@@ -429,16 +424,15 @@ Flag: csd{d3F0_M4d3_8y_4N_3lf}
 ### Day 8: **Apple Fanatic**
 > 
 **Category: **Web exploitation
-**Points: 60**
-**Author: **thee2d
+**Points: 60Author: **thee2d
 
 <REDACTED FOR BREVITY>
 
-A member of the secret society dropped a note in Santa’s presents sack overnight. Somehow, they got past our sleeping elf watching the security cameras. Thankfully, the person didn’t seem to know [OPSEC](https://web.archive.org/web/20251127170506/https://en.wikipedia.org/wiki/Operations_security) and included their personal website on the note. The note read:
+A member of the secret society dropped a note in Santa’s presents sack overnight. Somehow, they got past our sleeping elf watching the security cameras. Thankfully, the person didn’t seem to know [OPSEC](https://en.wikipedia.org/wiki/Operations_security) and included their personal website on the note. The note read:
 
 We will be watching you.
 - The Secret Society of K.U.N.A.L
-[https://apple-fanatic.csd.lol/](https://web.archive.org/web/20251127170506/https://apple-fanatic.csd.lol/)
+[https://apple-fanatic.csd.lol/](https://apple-fanatic.csd.lol/)
 
 The only thing they’ve taken with them is an apple from the sack of presents. Weird.
 
@@ -451,7 +445,7 @@ Our top SOC elves gathered two pieces of information from their initial observat
 **Hint 1:** This person probably made their website on macOS. Do you know anything special macOS has but Windows or Linux doesn’t? Could it be something that could be accessed through the website unbeknownst to the website’s author? Check out your browser’s DevTools, if you haven’t already. See if there’s anything weird in the “Elements” or “Sources” tab (for Chrome DevTools).
 **Hint 2:** Try creating a folder on macOS. Sometimes, a special *hidden* file appears.
 
-From the description and hints, it’s safe to assume that the hidden folder being talked about here is `[.DS_Store](https://web.archive.org/web/20251127170506/https://en.wikipedia.org/wiki/.DS_Store)`. It’s a macOS-exclusive folder you won’t find in other operating systems.
+From the description and hints, it’s safe to assume that the hidden folder being talked about here is `[.DS_Store](https://en.wikipedia.org/wiki/.DS_Store)`. It’s a macOS-exclusive folder you won’t find in other operating systems.
 
 Checking the source code, I noticed that there’s a secret directory on the site: /my-secret-vault-of-scripts-n-files.
 
@@ -461,7 +455,7 @@ But you can’t visit it. With my assumption though, I tried to download the `.D
 wget https://apple-fanatic.csd.lol/my-secret-vault-of-scripts-n-files/.DS_Store
 ```
 
-Nice, as expected, we got a hold of the `.DS_Store` file. But now what? I started searching for tools that could deal with this file. Soon enough, I [found a tool](https://web.archive.org/web/20251127170506/https://github.com/lijiejie/ds_store_exp) that extracts the contents from these files directly from the web.
+Nice, as expected, we got a hold of the `.DS_Store` file. But now what? I started searching for tools that could deal with this file. Soon enough, I [found a tool](https://github.com/lijiejie/ds_store_exp) that extracts the contents from these files directly from the web.
 
 First, set up the tool.
 
@@ -477,15 +471,14 @@ python ds_store_exp.py https://apple-fanatic.csd.lol/my-secret-vault-of-scripts-
 
 This downloaded a folder on my system. It had a file named `the-birth-date-of-my-beloved-apple-tree.txt`. Interesting. Inside that file was the flag.
 
-You can learn more about `.DS_Store` file in [this blog post](https://web.archive.org/web/20251127170506/https://0day.work/parsing-the-ds_store-file-format/).
+You can learn more about `.DS_Store` file in [this blog post](https://0day.work/parsing-the-ds_store-file-format/).
 
 Flag: csd{5H3_w45_80RN_0N_7H3_d4y_0f_Chr157M4Z}
 
 ### Day 8: vuln research
 > 
 **Category: **OSINT
-**Points: 45**
-**Author: **qvipin
+**Points: 45Author: **qvipin
 
 Santa needs your help to investigate the Downdate vulnerability! He has a few urgent questions about it that he needs answered ASAP. Can you provide the answers to help keep the North Pole safe from these threats?
 
@@ -508,17 +501,17 @@ Answer the questions with a single word @ `nc ctf.csd.lol 5000`
 
 With a bit of Googling different sites, you can get your hands on all the answers (Ctrl+F is useful if you don’t like reading, and yes, some of them were a bit guessy).
 
-- [Leviev](https://web.archive.org/web/20251127170506/https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
+- [Leviev](https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
 
-- [Microsoft](https://web.archive.org/web/20251127170506/https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
+- [Microsoft](https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
 
-- [CVE-2024–21302](https://web.archive.org/web/20251127170506/https://www.kaspersky.com/blog/windows-downgrade-downdate-protection/52005/)
+- [CVE-2024–21302](https://www.kaspersky.com/blog/windows-downgrade-downdate-protection/52005/)
 
-- [EnableVirtualizationBasedSecurity](https://web.archive.org/web/20251127170506/https://www.safebreach.com/blog/update-on-windows-downdate-downgrade-attacks/)
+- [EnableVirtualizationBasedSecurity](https://www.safebreach.com/blog/update-on-windows-downdate-downgrade-attacks/)
 
-- [pending.xml](https://web.archive.org/web/20251127170506/https://www.kaspersky.com/blog/windows-downgrade-downdate-protection/52005/)
+- [pending.xml](https://www.kaspersky.com/blog/windows-downgrade-downdate-protection/52005/)
 
-- [ci.dll](https://web.archive.org/web/20251127170506/https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
+- [ci.dll](https://www.safebreach.com/blog/downgrade-attacks-using-windows-updates/)
 
 If you’re like me and want to automate things, you can also create a Python script:
 
@@ -549,8 +542,7 @@ Flag: csd{d0wNda73_15_W31RD}
 ### Day 9: **resa?**
 > 
 **Category: **Cryptography
-**Points: 80**
-**Author: **qvipin
+**Points: 80Author: **qvipin
 
 Elf Theodred: Hey, I’m testing out a new… *<yap yap yap>*
 
@@ -599,15 +591,14 @@ flag = long_to_bytes(M).decode()
 print(flag)
 ```
 
-You can also use online tools like [dcode.fr](https://web.archive.org/web/20251127170506/https://www.dcode.fr/rsa-cipher).
+You can also use online tools like [dcode.fr](https://www.dcode.fr/rsa-cipher).
 
 Flag: csd{V3sA_R3sa_RSa?_1D3k}
 
 ### Day 10: **flag from wish**
 > 
 **Category: **Binary exploitation
-**Points: 90**
-**Author: **kolmus
+**Points: 90Author: **kolmus
 
 What is on your wish list this year? Be sure to tell Santa in great detail. He might have an early present or two in store for you!
 
@@ -859,8 +850,7 @@ Flag: csd{Br0uGH7_t0_YOU_8y_W15H_D0t_CoM}
 ### **Day 11: Festive Encoding**
 > 
 **Category: **Cryptography
-**Points: 55**
-**Author: **thee2d
+**Points: 55Author: **thee2d
 
 “Agent! There you are. I got to take today off, sorry,” said your elf mentor, “it’s fine if I leave you at the office, right? It’s a slow day anyways…”
 
@@ -1032,8 +1022,7 @@ Flag: csd{BAG_BIG_JAW_BOX_WEB_VOW_WAX_BAGGY_WAVY_WOVEN_GLOW}
 ### Day 13: **Disoriented Santa**
 > 
 **Category: **OSINT
-**Points: 100**
-**Author: **thee2d
+**Points: 100Author: **thee2d
 
 Sorry that we woke you up at this hour, but Santa is missing. We suspect the K.U.N.A.L Secret Society kidnapped Santa when he was flying over Europe while scoping out for some children.
 
@@ -1047,8 +1036,8 @@ Can you find the coordinates of the museum? The flag is in the format `csd{latit
 
 For example, a flag could be `csd{11.533,-125.396}`.
 
-**Hint 1:** Open-source maps like OpenStreetMap contain useful information related to businesses and other places. You can query these maps using tools like [Overpass Turbo](https://web.archive.org/web/20251127170506/https://overpass-turbo.eu/) to analyze these data given a filter you define.
-**Hint 2:** [Overpass Turbo](https://web.archive.org/web/20251127170506/https://overpass-turbo.eu/) supports filtering by [OpenStreetMap tags](https://web.archive.org/web/20251127170506/https://wiki.openstreetmap.org/wiki/Tags). Some tags may be useful to this challenge, such as `tourism` and `charge`.
+**Hint 1:** Open-source maps like OpenStreetMap contain useful information related to businesses and other places. You can query these maps using tools like [Overpass Turbo](https://overpass-turbo.eu/) to analyze these data given a filter you define.
+**Hint 2:** [Overpass Turbo](https://overpass-turbo.eu/) supports filtering by [OpenStreetMap tags](https://wiki.openstreetmap.org/wiki/Tags). Some tags may be useful to this challenge, such as `tourism` and `charge`.
 
 Consider this query:
 
@@ -1085,8 +1074,7 @@ Flag: csd{48.204,7.364}
 ### Day 14: **angry elf**
 > 
 **Category: **Reverse engineering
-**Points: 50**
-**Author: **qvipin
+**Points: 50Author: **qvipin
 
 Elf Glaki went rouge! At 2:56 PM EST, he locked up all our flags! Luckily you’re not an idiot and you can fix this in 3 minutes. Stop this Angry Elf ASAP!
 
@@ -1136,8 +1124,7 @@ Flag: csd{4N9ry_3lf5_5h0uLdNT_83_M3553D_w1tH}
 ### Day 15: JETS
 > 
 **Category: **Web exploitation
-**Points: 70**
-**Author: **thee2d
+**Points: 70Author: **thee2d
 
 It seems like the Secret Society of K.U.N.A.L has invested in another business…Oh no.
 
@@ -1145,12 +1132,12 @@ If those planes come anywhere close to Santa — after his “adventure” in Fr
 
 Agent, we need you to infiltrate their system and gather some information for our engineers at Elves Intelligence. We believe the plane they’re using is a bit special…it may have been custom-built for K.U.N.A.L himself!
 
-Here’s their website, agent: [https://jets.csd.lol/](https://web.archive.org/web/20251127170506/https://jets.csd.lol/). Best of luck.
+Here’s their website, agent: [https://jets.csd.lol/](https://jets.csd.lol/). Best of luck.
 
 *You are only allowed to test in the scope *`*https://jets.csd.lol/**`*. Blind brute-force request sending (e.g. using tools like DirBuster) can trigger Cloudflare rate limits. Do not attempt to bypass Cloudflare limits. Therefore, if you wish to brute-force, please limit your wordlists or attack scope.*
 
 Hint 1: Try looking at `/script.js`; there's a special username in there! Is it possible to login as that special user? Your browser’s DevTools will help solve this challenge.
-Hint 2: What’s a [JSON Web Token](https://web.archive.org/web/20251127170506/https://en.wikipedia.org/wiki/JSON_Web_Token)? Look closely at `/script.js`; the developer might've left something in there by accident!
+Hint 2: What’s a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token)? Look closely at `/script.js`; the developer might've left something in there by accident!
 
 This challenge involved forging a JWT token using the sub and secret revealed in the script.js file:
 
@@ -1227,7 +1214,7 @@ form.addEventListener("submit", async (e) => {
 
 First, you need to sign up with any username and password. Then, open the devtools using F12 on your keyboard. Copy the cookie value.
 
-Now go to [jwt.io](https://web.archive.org/web/20251127170506/http://jwt.io/) and paste the token. On the sub, input KUn4L (we found this in script.js by decoding `S1VuNEw=` from Base64. In the signature tab, enter the decoded signature (decode `MWRkMjJiYjQyNzBjYjE0NTcyMzIyZTAzNDI1YzAwNTgzZTAyYmY2M2Y1YzdhZjdkMmYzODdlMjRlN2Q1YjkzMQ==`).
+Now go to [jwt.io](http://jwt.io/) and paste the token. On the sub, input KUn4L (we found this in script.js by decoding `S1VuNEw=` from Base64. In the signature tab, enter the decoded signature (decode `MWRkMjJiYjQyNzBjYjE0NTcyMzIyZTAzNDI1YzAwNTgzZTAyYmY2M2Y1YzdhZjdkMmYzODdlMjRlN2Q1YjkzMQ==`).
 
 Copy the generated token value and paste it into your browser’s dev tools (from where you copied the previous token). Now, reload the browser. You should now be logged in as KUn4L. The flag is written in the image.
 
@@ -1236,8 +1223,7 @@ Flag: csd{Wh47_D1D_KUN4l_do_7h1S_71M3}
 ### Day 17: **Santa’s Plane**
 > 
 **Category: **OSINT
-**Points: 80**
-**Author: **ladderlogic
+**Points: 80Author: **ladderlogic
 
 Santa cargo plane is running into issues can mechanical problems. Can you figure out his plane model. Please include the variant in the answer.
 
@@ -1256,9 +1242,9 @@ I first made a summary of the challenge and shared it with ChatGPT. From the des
 
 - **C-5 Galaxy** (largest transport plane, multi-deck)
 
-I then searched ‘us planes cargo transit’ on Google and found this [Wiki page](https://web.archive.org/web/20251127170506/https://en.wikipedia.org/wiki/List_of_active_United_States_military_aircraft). It had some vital information regarding the challenge. I started with ChatGPT’s suggestions and found them all in that list.
+I then searched ‘us planes cargo transit’ on Google and found this [Wiki page](https://en.wikipedia.org/wiki/List_of_active_United_States_military_aircraft). It had some vital information regarding the challenge. I started with ChatGPT’s suggestions and found them all in that list.
 
-I started brute forcing for different plane models and finally [C-130J Hercules](https://web.archive.org/web/20251127170506/https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules) worked.
+I started brute forcing for different plane models and finally [C-130J Hercules](https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules) worked.
 
 I still haven’t found any decisive evidence or methodology to find the correct answer. But hey, if it’s correct, it’s correct.
 
@@ -1267,8 +1253,7 @@ Flag: csd{c130j}
 ### Day 20: **Lost Santa**
 > 
 **Category: **OSINT
-**Points: 80**
-**Author: **ladderlogic
+**Points: 80Author: **ladderlogic
 
 Santa got lost on his way to the largest hacking conference. He was out cycling and got lost and all we have is this picture of him can you help us find him?
 
@@ -1300,12 +1285,11 @@ Flag: csd{36.117,-115.444}
 ### Day 22: **K.U.N.A.L Consulting (partial)**
 > 
 **Category: **Web exploitation
-**Points: 115**
-**Author: **thee2d
+**Points: 115Author: **thee2d
 
 <REDACTED FOR BREVITY>
 
-It seems like the society has been running a consulting firm…targeted at children. We can’t change the past for Aspen, but you can prevent this for the thousands of other elves. Good luck, agent: [https://kunal-consulting.csd.lol/](https://web.archive.org/web/20251127170506/https://kunal-consulting.csd.lol/).
+It seems like the society has been running a consulting firm…targeted at children. We can’t change the past for Aspen, but you can prevent this for the thousands of other elves. Good luck, agent: [https://kunal-consulting.csd.lol/](https://kunal-consulting.csd.lol/).
 
 **Hint 1:** User input should never be trusted, especially not for authentication! As always, check out your browser’s DevTools (particularly the Elements, Sources, and Network tabs).
 **Hint 2:** JSON is all powerful; there’s more to it than strings. There’s also an “employee login” page. Humans don’t always have the best memory and might re-use stuff.
@@ -1422,6 +1406,3 @@ Okay, we’re almost there.
 **NOTE:** I couldn’t solve it after this.
 
 ---
-
-*📖 Originally published on [Medium](https://rustybladez.medium.com/advent-of-ctf-2024-writeups-fa7fecbba37c). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of general-ctf CTF writeups.*

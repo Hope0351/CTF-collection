@@ -1,17 +1,63 @@
-# 📝 
+# :game_die: REQUIRED vs REQUIRES_NEW in Spring Boot: Transaction Propagation Demystified
 
-> **Original Source:** [](https://infosecwriteups.com/required-vs-requires-new-in-spring-boot-transaction-propagation-demystified-032fe9c47793)
-> **Platform:** infosecwriteups.com | **Category:** `GENERAL`
-
----
-
-## 🔗 Read Full Writeup
-
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
-
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/required-vs-requires-new-in-spring-boot-transaction-propagation-demystified-032fe9c47793)**
+> **Original Source:** [REQUIRED vs REQUIRES_NEW in Spring Boot: Transaction Propagation Demystified](https://infosecwriteups.com/required-vs-requires-new-in-spring-boot-transaction-propagation-demystified-032fe9c47793)
+> **Platform:** infosecwriteups.com | **Category:** `MISC`
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/required-vs-requires-new-in-spring-boot-transaction-propagation-demystified-032fe9c47793). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of general CTF writeups.*
+*REQUIRED vs REQUIRES_NEW in Spring Boot: Transaction Propagation Demystified*
+
+
+# REQUIRED vs REQUIRES_NEW in Spring Boot: Transaction Propagation Demystified
+
+
+Spring Boot makes transaction management dead simple with `@Transactional`, but things get interesting when multiple methods, nested calls, or services interact with the same transaction.
+
+
+Two of the most commonly misunderstood propagation modes are:
+
+
+- `Propagation.REQUIRED`
+
+- `Propagation.REQUIRES_NEW`
+
+
+This post breaks down what they mean, how they behave, and when to use each — with real-world examples and code.
+
+## ⚙️ What is Transaction Propagation?
+
+
+In Spring, transaction propagation defines how a method should behave if a transaction already exists.
+
+
+- Should it join the existing one?
+
+- Should it start a new one?
+
+- Or should it run without any transaction?
+
+
+That’s what propagation modes decide.
+
+## 🧩 Propagation.REQUIRED (default)
+
+
+- Joins the existing transaction if one exists.
+
+- If no transaction is active, starts a new one.
+
+- Rollbacks affect the entire chain.
+
+
+Code Example:
+
+
+```
+@Service
+public class PaymentService {…
+```
+
+---
+
+*Originally published on [Medium](https://infosecwriteups.com/required-vs-requires-new-in-spring-boot-transaction-propagation-demystified-032fe9c47793). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

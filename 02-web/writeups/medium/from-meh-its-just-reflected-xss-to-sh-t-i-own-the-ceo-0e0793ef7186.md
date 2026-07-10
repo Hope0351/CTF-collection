@@ -1,17 +1,86 @@
-# 🌐 
+# :globe_with_meridians: From “Meh, It’s Just Reflected XSS” to “Sh*t, I Own the CEO” 🎭
 
-> **Original Source:** [](https://infosecwriteups.com/from-meh-its-just-reflected-xss-to-sh-t-i-own-the-ceo-0e0793ef7186)
+> **Original Source:** [From “Meh, It’s Just Reflected XSS” to “Sh*t, I Own the CEO” 🎭](https://infosecwriteups.com/from-meh-its-just-reflected-xss-to-sh-t-i-own-the-ceo-0e0793ef7186)
 > **Platform:** infosecwriteups.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+## The “Wait a Minute…” Moment 🤔
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/from-meh-its-just-reflected-xss-to-sh-t-i-own-the-ceo-0e0793ef7186)**
+Here’s what went through my mind:
+
+>
+
+*Me: *“Okay, I have XSS. But RXSS is boring. How do I make this… spicier?”
+*Also Me: *“What if this is actually Stored XSS and triggers when employees view it?”
+*My Brain: *“Even if it is, you need something valuable to steal…”
+
+
+Then it hit me like a truck full of security textbooks: Authentication tokens!
+
+## The Investigation Begins
+
+
+I opened the browser DevTools and started hunting. I know from experience that most modern web apps use:
+
+
+- Bearer tokens for API authentication
+
+- Session tokens stored somewhere in the browser
+
+- Usually in `localStorage`, `sessionStorage`, or cookies
+
+
+I checked the Network tab. Sure enough, every request had this beautiful header:
+
+
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+
+*“Okay, so they use Bearer tokens. But where do they store them?”*
+
+
+I opened the DevTools => Application [Chromium]:
+
+
+```
+localStorage
+```
+
+
+And there it was, sitting pretty like a treasure chest with no lock:
+
+
+```
+localStorage.getItem('sb-jlmhsrfinffrgxcfkycl-auth-token')
+```
+
+
+## The “OH SH*T” Realization 😱
+
+
+My jaw literally dropped. They were storing the session authentication token in `localStorage`?!
+
+
+For those who don’t know, storing auth tokens in localStorage is like:
+
+
+- Keeping your house keys in your mailbox
+
+- Writing your PIN on your credit card
+
+- Posting your password on your Instagram story
+
+
+IT’S A TERRIBLE IDEA.
+
+
+Why? Because any JavaScript can access it. Including malicious JavaScript. Including *my* JavaScript.
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/from-meh-its-just-reflected-xss-to-sh-t-i-own-the-ceo-0e0793ef7186). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/from-meh-its-just-reflected-xss-to-sh-t-i-own-the-ceo-0e0793ef7186). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

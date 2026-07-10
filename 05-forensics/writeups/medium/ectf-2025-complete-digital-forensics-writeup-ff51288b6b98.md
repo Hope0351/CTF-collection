@@ -8,7 +8,7 @@
 
 ## 📝 Full Writeup
 
-ECTF 2025 — Complete Digital Forensics Writeup[![Nathan](https://web.archive.org/web/20250626055232im_/https://miro.medium.com/v2/resize:fill:64:64/1*l13ymFhDeLiDy0ud8GZ6bw.png)
+ECTF 2025 — Complete Digital Forensics Writeup[![Nathan](https://miro.medium.com/v2/resize:fill:64:64/1*l13ymFhDeLiDy0ud8GZ6bw.png)
 
 ](/web/20250626055232/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--ff51288b6b98---------------------------------------)
 
@@ -26,7 +26,6 @@ Feb 3, 2025
 1
 
 
-
 So I participated in another CTF event, this one was quite fun and again it tested the limits of my knowledge, the first few challenges were fun and I could understand them easily as I’ve encountered similar problems before, but I just didn’t know how to get the data in some, so I had to delve into the world of scapy, photorec, and other registry keys that I wasn’t familiar with. Let’s get started, shall we?
 **Challenge 1: **MY DEAREST
 
@@ -39,7 +38,7 @@ Challenge 2: JUST A PCAP
 
 This challenge was very interesting, it took me a bit to realize how to solve it but I immediately knew what funny stuff was going on in this challenge, anyway, let’s get to solving.
 
-We’re first tossed into this challenge with some clues already, we can see the “exfil” so we can assume it’s some sort of exfiltration, which it is some [DNS exfiltration](https://web.archive.org/web/20250626055232/https://www.akamai.com/glossary/what-is-dns-data-exfiltration) which was easy to understand, we can see that there is some data there, so I was curious and did a little bit of experimenting.
+We’re first tossed into this challenge with some clues already, we can see the “exfil” so we can assume it’s some sort of exfiltration, which it is some [DNS exfiltration](https://www.akamai.com/glossary/what-is-dns-data-exfiltration) which was easy to understand, we can see that there is some data there, so I was curious and did a little bit of experimenting.
 
 Okay, we can see that the query name looks similar to a common file header that we see in CTFs, the sequence 8950 just rang some bells and then I went immediately into HxD, had to remove the last part though cause it won’t copy+paste successfully if I kept the .000.exfil.attacker.com.
 
@@ -47,7 +46,7 @@ Bingo, we know how to solve this now, it’s just a bunch of PNG data being sent
 
 I went into their documentation and saw this, I tried googling for ways to extract only the data in the dns field name section but nothing came up, I went to youtube and found a very useful video from Sir Jadi, I’ve watched some of his reverse engineering writeups from old CTFs so it was nice to see his videos helping me out in an active CTF.
 
-[https://www.youtube.com/watch?v=BePREXX1Lik&ab_channel=Jadi](https://web.archive.org/web/20250626055232/https://www.youtube.com/watch?v=BePREXX1Lik&ab_channel=Jadi)
+[https://www.youtube.com/watch?v=BePREXX1Lik&ab_channel=Jadi](https://www.youtube.com/watch?v=BePREXX1Lik&ab_channel=Jadi)
 
 Well, skipping forward and trying to find the bits needed for our challenge, I found this, so I copied it and adjusted it a little bit so that the queried data would be stored inside of an array to make stuff a little bit easier for me, I did some cleaning at the end cause there would be some invalid inputs.
 
@@ -144,6 +143,3 @@ Now we have our flag, ectf{Kozlany} — THANK GOD!!
 I have to say, this CTF was one of the most fun ones that I’ve played, I also had a lot of new lessons in this CTF, I thank the staff at ECTF for making this CTF experience amazing and for the staff member Greg to basically not tell me to give up! I hope to play this event again next year, stay tuned for more future writeups!
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@nathanielpascuarijndorp/ectf-2025-complete-digital-forensics-writeup-ff51288b6b98). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of forensics CTF writeups.*

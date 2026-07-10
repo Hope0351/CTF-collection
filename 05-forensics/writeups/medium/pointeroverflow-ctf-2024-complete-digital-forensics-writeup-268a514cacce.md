@@ -7,7 +7,7 @@
 
 ## 📝 Full Writeup
 
-PointerOverflow CTF 2024 — Complete Digital Forensics Writeup[![Nathan](https://web.archive.org/web/20250203085950im_/https://miro.medium.com/v2/resize:fill:88:88/1*l13ymFhDeLiDy0ud8GZ6bw.png)
+PointerOverflow CTF 2024 — Complete Digital Forensics Writeup[![Nathan](https://miro.medium.com/v2/resize:fill:88:88/1*l13ymFhDeLiDy0ud8GZ6bw.png)
 
 ](/web/20250203085950/https://medium.com/@nathanielpascuarijndorp?source=post_page---byline--268a514cacce--------------------------------)
 
@@ -24,7 +24,6 @@ Jan 25, 2025
 ](/web/20250203085950/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F268a514cacce&operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40nathanielpascuarijndorp%2Fpointeroverflow-ctf-2024-complete-digital-forensics-writeup-268a514cacce&user=Nathan&userId=cb3bcdb687c6&source=---header_actions--268a514cacce---------------------clap_footer-----------)
 
 --
-
 
 
 Credits to: Professor Chad. R Johnson.
@@ -137,6 +136,3 @@ Now that I’ve solved all of the challenges, the grind continues with more acad
 GGs. Onto the next CTF!!
 
 ---
-
-*📖 Originally published on [Medium](https://medium.com/@nathanielpascuarijndorp/pointeroverflow-ctf-2024-complete-digital-forensics-writeup-268a514cacce). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of forensics CTF writeups.*

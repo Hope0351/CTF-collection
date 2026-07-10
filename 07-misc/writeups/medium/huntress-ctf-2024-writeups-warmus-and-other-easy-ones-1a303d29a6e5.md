@@ -7,7 +7,7 @@
 
 ## 📝 Full Writeup
 
-Huntress CTF 2024 Writeups (Warmups and other easy ones)[![Rusty](https://web.archive.org/web/20250825065534im_/https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
+Huntress CTF 2024 Writeups (Warmups and other easy ones)[![Rusty](https://miro.medium.com/v2/resize:fill:64:64/1*_Uy4apu3AGFzgOA2XWMTkQ.jpeg)
 
 ](/web/20250825065534/https://rustybladez.medium.com/?source=post_page---byline--1a303d29a6e5---------------------------------------)
 
@@ -16,12 +16,9 @@ Huntress CTF 2024 Writeups (Warmups and other easy ones)[![Rusty](https://web.ar
 ·
 Nov 1, 2024
 
-[
 
-](https://web.archive.org/web/20250825065534/https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fp%2F1a303d29a6e5&operation=register&redirect=https%3A%2F%2Frustybladez.medium.com%2Fhuntress-ctf-2024-writeups-warmus-and-other-easy-ones-1a303d29a6e5&user=Rusty&userId=4ef3f2c82d8&source=---header_actions--1a303d29a6e5---------------------clap_footer------------------)
 
 --
-
 
 
 Hey hackers. This is my first time doing a writeup. So I’m kinda excited about it. I’m more of a writer than a hacker. So you may not find the solutions here to be like other writeups.
@@ -56,7 +53,7 @@ I’ve wasted so much time on this challenge doing everything possible in my lit
 
 All you had to do was use the `find` command 🤦
 
-I already used the `find` command a few times but that was only to look for SUID binaries. Silly me. When I finally understood the secret behind the challenge’s name, I went to learn about the command details and stumbled upon [Red Hat’s documentation](https://web.archive.org/web/20250825065534/https://www.redhat.com/sysadmin/linux-find-command).
+I already used the `find` command a few times but that was only to look for SUID binaries. Silly me. When I finally understood the secret behind the challenge’s name, I went to learn about the command details and stumbled upon [Red Hat’s documentation](https://www.redhat.com/sysadmin/linux-find-command).
 
 In the 4th example, there’s a way to find content. I tweaked the command to this:
 
@@ -72,7 +69,7 @@ Flag: flag{5da1de289823cfc200adf91d6536d914}
 > 
 Did you know that zulu is part of the phonetic alphabet?
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 You’re given a file named `zulu`. Running the `file` command on it returns this:
 
@@ -86,7 +83,7 @@ Running the `cat` command returns some gibberish. There are 2 ways to solve this
 zcat zulu
 ```
 
-This immediately gives the flag. There’s another way. The above message about 16 bits implies that it’s a file compressed using the `compress` utility. This format is from an older Unix compression tool, commonly referred to as `compress`** **or `LZW` (Lempel-Ziv-Welch). The `.Z` extension is usually associated with this kind of compressed file.
+This immediately gives the flag. There’s another way. The above message about 16 bits implies that it’s a file compressed using the `compress` utility. This format is from an older Unix compression tool, commonly referred to as `compress`or `LZW` (Lempel-Ziv-Welch). The `.Z` extension is usually associated with this kind of compressed file.
 
 So you can rename the file to `zulu.z` and run this command to uncompress it:
 
@@ -123,7 +120,7 @@ Author: Michael
 
 Initially, it looks darn easy. But believe me, this one took quite a lot of brain cells out of me.
 
-Anyways, a quick search will reveal that this is an enigma machine cipher. So I started looking for a decoder and [Cryptii](https://web.archive.org/web/20250825065534/https://cryptii.com/pipes/enigma-machine) has it. Cool. Should give me the flag right away, right? Right?…Right?
+Anyways, a quick search will reveal that this is an enigma machine cipher. So I started looking for a decoder and [Cryptii](https://cryptii.com/pipes/enigma-machine) has it. Cool. Should give me the flag right away, right? Right?…Right?
 
 WRONG!
 
@@ -153,7 +150,7 @@ Kudos to ChatGPT because without his analysis, I wouldn’t have noticed the out
 > 
 Gosh darnit, I keep entering a typo in my Linux command prompt!
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 In this challenge, you need to start a server and connect to it via ssh. The moment you do so, you can see a train animation in the terminal. And then the connection is disrupted. The train animation is the result of the `sl` command (that’s what the typo was referring to in the description).
 
@@ -173,7 +170,7 @@ Flag: flag{36a0354fbf59df454596660742bf09eb}
 > 
 I’ve got this private key… but why can’t I SSH?
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 You’re given the private key in an `id_rsa` file. Then you start a container instance of the challenge to get the server address to connect to. However, if you try to connect right away with:
 
@@ -183,7 +180,7 @@ You’re given the private key in an `id_rsa` file. Then you start a container i
 
 You get the error: **Load key “id_rsa”: error in libcrypto**
 
-Doing some research brought up this [forum discussion](https://web.archive.org/web/20250825065534/https://unix.stackexchange.com/questions/577402/ssh-error-while-logging-in-using-private-key-loaded-pubkey-invalid-format-and). Apparently, it’s a problem with the file format. I tried the first solution:
+Doing some research brought up this [forum discussion](https://unix.stackexchange.com/questions/577402/ssh-error-while-logging-in-using-private-key-loaded-pubkey-invalid-format-and). Apparently, it’s a problem with the file format. I tried the first solution:
 
 ```
 dos2unix id_rsa
@@ -222,11 +219,11 @@ Flag: flag{a85466991f0a8dc3d9837a5c32fa0c91}
 
 ## TXT Message
 > 
-Hmmm, have you seen some of the strange DNS records for the `ctf.games` domain? One of them sure is [od](https://web.archive.org/web/20250825065534/https://en.wikipedia.org/wiki/Od_(Unix))d...
+Hmmm, have you seen some of the strange DNS records for the `ctf.games` domain? One of them sure is [od](https://en.wikipedia.org/wiki/Od_(Unix))d...
 
 Author: @JohnHammond
 
-You can use any good DNS tools for this. I used the [DNS Checker](https://web.archive.org/web/20250825065534/https://dnschecker.org/all-dns-records-of-domain.php) online tool. After plugging in the domain, it gave some details about different record types.
+You can use any good DNS tools for this. I used the [DNS Checker](https://dnschecker.org/all-dns-records-of-domain.php) online tool. After plugging in the domain, it gave some details about different record types.
 
 Hmm. The TXT record looks a bit interesting. Moreover, the challenge name also suggests that the TXT record has to do something. I copied the text and did Hex to ASCII. That didn’t give the flag.
 
@@ -245,7 +242,7 @@ Wham! Bam! Amazon is entering the hacking business! Can you buy a flag?
 
 Press the Start button on the top-right to begin this challenge.
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 After connecting to a server, you’re welcomed to a program. You have 3 options: to buy, check inventory, or close the program.
 
@@ -287,10 +284,8 @@ Flag: flag{d01471702a10134cdad1ddde06678f2f}
 > 
 Want to join the party of GIFs, memes and emoji shenanigans? Or just want to ask a question for technical support regarding any challenges in the CTF?
 
-**This CTF uses support tickets to help handle requests. If you need assistance, please create a ticket with the **`**#ctf-open-ticket**`** channel. You do not need to direct message any CTF organizers or facilitators, they will just tell you to open a ticket. You might find a flag in the ticket channel, though!**
-
-**Connect here:
-**[**Join the Discord!**](https://web.archive.org/web/20250825065534/https://huntress.ctf.games/discord)
+**This CTF uses support tickets to help handle requests. If you need assistance, please create a ticket with the **`**#ctf-open-ticket**`** channel. You do not need to direct message any CTF organizers or facilitators, they will just tell you to open a ticket. You might find a flag in the ticket channel, though!Connect here:
+**[**Join the Discord!**](https://huntress.ctf.games/discord)
 
 Author: @JohnHammond
 
@@ -302,7 +297,7 @@ Flag: flag{a98373a74abb8c5ebb8f5192e034a91c}
 > 
 I know it’s an esoteric challenge for a Capture the Flag, but could you herd these cows for me?
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 You’re given a file named `cattle` that contains this text:
 
@@ -448,7 +443,7 @@ Flag: flag{6cd6392eb609c6ae4c332ef6a321d9dd}
 > 
 Wow! This is a big QR code! I wonder what it says…?
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 You’re given a `qrcode.png` file containing a QR code. Scanning the code gives this:
 
@@ -482,7 +477,7 @@ Flag: flag{01c6e24c48f48856ee3adcca00f86e9b}
 Please follow the rules for this CTF!
 
 **Connect here:**
-[Read The Rules](https://web.archive.org/web/20250825065534/https://huntress.ctf.games/rules)
+[Read The Rules](https://huntress.ctf.games/rules)
 
 Author: @JohnHammond
 
@@ -580,7 +575,7 @@ This was totally new to me. The only thing I could think of was using the text f
 
 I checked the website stack. It was made in Flask. Moving forward, I started searching for YAML to JSON conversion vulnerabilities and found something interesting.
 
-There’s a vulnerability in PyYAML that lets you run system commands and potentially read the flag. So I started searching for payloads and found [this](https://web.archive.org/web/20250825065534/https://trevorsaudi.medium.com/yaml-2-json-hackpack-ctf-7de28ef0ecff):
+There’s a vulnerability in PyYAML that lets you run system commands and potentially read the flag. So I started searching for payloads and found [this](https://trevorsaudi.medium.com/yaml-2-json-hackpack-ctf-7de28ef0ecff):
 
 ```
 user_input: !!python/object/apply:subprocess.check_output
@@ -612,9 +607,9 @@ Author: @aenygma
 
 This is a classic buffer overflow problem where you need to redirect the program’s execution to a function that’s never called. This type of challenge is called ret2win (return to win(), which is a typical function name for such challenges).
 
-You’re given a `babybufov.c` and a `babbufov` binary file. There’s a target() function that you need to redirect the program to. I won’t go into too much detail here because you can find [many resources](https://web.archive.org/web/20250825065534/https://youtu.be/E4ZWJsGySoY?si=ujx4OBT--37XCDuo) for this. What I’m going to share though are the nitty gritty detail that made this challenge a bit harder.
+You’re given a `babybufov.c` and a `babbufov` binary file. There’s a target() function that you need to redirect the program to. I won’t go into too much detail here because you can find [many resources](https://youtu.be/E4ZWJsGySoY?si=ujx4OBT--37XCDuo) for this. What I’m going to share though are the nitty gritty detail that made this challenge a bit harder.
 
-First of all, after downloading the binary, giving it execution permission, and trying to run it failed. Huh? This has happened before. It was throwing a “[No such file or directory](https://web.archive.org/web/20250825065534/https://www.baeldung.com/linux/no-such-file-or-directory-error)” error.
+First of all, after downloading the binary, giving it execution permission, and trying to run it failed. Huh? This has happened before. It was throwing a “[No such file or directory](https://www.baeldung.com/linux/no-such-file-or-directory-error)” error.
 
 I checked the code and found that there was a command for compiling the binary. But that gave another error. Oof! Now I was missing a `bits/libc-header-start.h` or whatever file. Doing a bit of research showed me that I had to install `gcc-multilib` so I did that.
 
@@ -834,7 +829,7 @@ Flag: flag{bb59566e21f55e5680d589f3dbbec0f8}
 Cryptography
 ## Strive Marish Leadman TypeCDR
 > 
-Looks like [primo hex garbage.](https://web.archive.org/web/20250825065534/https://www.ntietz.com/blog/rsa-deceptively-simple/)
+Looks like [primo hex garbage.](https://www.ntietz.com/blog/rsa-deceptively-simple/)
 Maybe something went wrong?
 Can you make sense of it?
 
@@ -858,7 +853,7 @@ Submit the original plaintext hashed with MD5, wrapped between the usual flag fo
 
 Author: @aenygma
 
-Looks like a Caesar cipher (*cough* *cough* Brutus *cough* *cough*). So I went to [Cryptii](https://web.archive.org/web/20250825065534/https://cryptii.com/). Chose Caesar cipher from the options and kept changing the shift. Shift 16 gave this output:
+Looks like a Caesar cipher (*cough* *cough* Brutus *cough* *cough*). So I went to [Cryptii](https://cryptii.com/). Chose Caesar cipher from the options and kept changing the shift. Shift 16 gave this output:
 
 ```
 caesarissimplenoneedforbrutus
@@ -880,7 +875,7 @@ You’re given an ancient.fossil file. I first though it would just be some kind
 ancient.fossil: SQLite 3.x database (Fossil repository), last written using SQLite version 3046000, file counter 417, database pages 154, cookie 0x28, schema 4, UTF-8, version-valid-for 417
 ```
 
-Hmm. So, it’s an SQLite database file but that “Fossil repository” part seems more interesting. After a bit of searching, I came to know about [Fossil SCM](https://web.archive.org/web/20250825065534/https://fossil-scm.org/home/doc/trunk/www/index.wiki), a version-controlling system. I then installed the [fossil tool](https://web.archive.org/web/20250825065534/https://fossil-scm.org/home/doc/2010-01-01/www/reference.wiki) to interact with the file.
+Hmm. So, it’s an SQLite database file but that “Fossil repository” part seems more interesting. After a bit of searching, I came to know about [Fossil SCM](https://fossil-scm.org/home/doc/trunk/www/index.wiki), a version-controlling system. I then installed the [fossil tool](https://fossil-scm.org/home/doc/2010-01-01/www/reference.wiki) to interact with the file.
 
 However, that didn’t lead to anywhere. Everything I saw was in Base64. I tried to decode a few but didn’t lead to the flag. I also tried to upload and view the file in an SQLite viewer. But I couldn’t find anything interesting.
 
@@ -908,7 +903,7 @@ I can feel your friend. Even I wouldn’t stop talking about my new key —
 
 Anyway, we’re given a `keyboard_junkie` file which turns out to be a `pcap` file. Inspecting it on Wireshark revealed that it was a USB packet file. I’ve never done a USB packet analysis before so doing some quick research brought some good resources.
 
-I started with this [CTF writeup](https://web.archive.org/web/20250825065534/https://steemit.com/reverseengineering/@nileshevrywhr/auth0-ctf-reverse-engineering-usb-keystrokes-from-pcaps) which gave me a good idea of what to do. The first thing I did was filter the packets based on keyboard strokes. I used this filter:
+I started with this [CTF writeup](https://steemit.com/reverseengineering/@nileshevrywhr/auth0-ctf-reverse-engineering-usb-keystrokes-from-pcaps) which gave me a good idea of what to do. The first thing I did was filter the packets based on keyboard strokes. I used this filter:
 
 ```
 usb.transfer_type == 0x01 && frame.len == 72 && !(usb.capdata == 00:00:00:00:00:00:00:00)
@@ -922,7 +917,7 @@ This filtered out the keyboard stroke packets. I exported those as a CSV file an
 cat filtered_keyboard.csv | cut -d ',' -f 8 > leftover_data.txt
 ```
 
-The last thing I need to do is convert these keyboard stroke hex values into actual keyboard keys. For that, you can refer to [this guide](https://web.archive.org/web/20250825065534/https://usb.org/sites/default/files/hut1_21.pdf). I first used the Python script (I modified it a little) provided in that writeup and got this as an output:
+The last thing I need to do is convert these keyboard stroke hex values into actual keyboard keys. For that, you can refer to [this guide](https://usb.org/sites/default/files/hut1_21.pdf). I first used the Python script (I modified it a little) provided in that writeup and got this as an output:
 
 ```
 m m m m m m m m m m m m m s o space space space space t h e space space space space a n s w w w w e r space i i i i s space space space space space space space f l a a a a g del [ del del del del f f f f 7 7 7 7 7 3 3 3 3 3 e e e e e e e 0 0 9 9 9 9 9 9 9 3 b b b b b b b 7 d d d d d d d d d d 2 8 8 8 8 1 1 1 1 1 1 1 d d d d d 0 0 0 0 a a a a 3 3 3 3 0 f f f f c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c f f f f 3 3 3 3 4 a a a a 9 9 9 9 6 3 4 4 4 4 4 4 4 del ] del del del del del del del space space space space h a h a h a a a a h space l o l l l l
@@ -938,7 +933,7 @@ However, it was incorrect. The reason is that the hash-like part of the flag nee
 
 This was an easy challenge, but this is where I got totally stuck and couldn’t find any solution. Just when I was on the verge of giving up, I thought I should check for alternate solutions.
 
-Digging through YouTube, I found [John Hammond’s video](https://web.archive.org/web/20250825065534/https://www.youtube.com/watch?v=0HXL4RGmExo) on a similar challenge. Noice! I used his Python script instead:
+Digging through YouTube, I found [John Hammond’s video](https://www.youtube.com/watch?v=0HXL4RGmExo) on a similar challenge. Noice! I used his Python script instead:
 
 ```
 from scapy.all import *
@@ -972,7 +967,7 @@ Are they hiding any secrets?
 
 Author: @sudo_Rem
 
-You’re given an `NTUSER.DAT` file, which contains Windows user profile settings. The problem name immediately reminded me of Eric Zimmerman, the person behind the [Registry Explorer](https://web.archive.org/web/20250825065534/https://www.sans.org/tools/registry-explorer/) software. So I turned it on and loaded the hive file.
+You’re given an `NTUSER.DAT` file, which contains Windows user profile settings. The problem name immediately reminded me of Eric Zimmerman, the person behind the [Registry Explorer](https://www.sans.org/tools/registry-explorer/) software. So I turned it on and loaded the hive file.
 
 Since we needed to deal with a suspicious file, I figured I should check out the files with which the user interacted. So I went down this path:
 
@@ -1026,7 +1021,7 @@ Author: Adam Rice (@adam.huntress)
 
 We’re given a Windows events log file. I opened it on my Windows machine and started skimming through the logs. The first thing to notice in such logs is event IDs. If you know which event ID is for which event, it becomes much easier to find what you’re looking for.
 
-Anyways, the problem description talks about streams. Out of all event IDs, ID 15 is about [FileCreateStreamHash](https://web.archive.org/web/20250825065534/https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90015). Hmm. Upon scrolling, I saw that there was only 1 event with that ID. Going through the details revealed a hash in the Contents section.
+Anyways, the problem description talks about streams. Out of all event IDs, ID 15 is about [FileCreateStreamHash](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90015). Hmm. Upon scrolling, I saw that there was only 1 event with that ID. Going through the details revealed a hash in the Contents section.
 
 Decoding the hash from Base64 gave the flag.
 
@@ -1059,7 +1054,7 @@ Q2. **What lateral movement technique did the threat actor use to move to the ot
 
 Sol. Pass the Hash
 
-From question 1, we can assume that the attacker is trying to steal the password hashes of the users, which leads to a [Pass the Hash](https://web.archive.org/web/20250825065534/https://en.wikipedia.org/wiki/Pass_the_hash) attack.
+From question 1, we can assume that the attacker is trying to steal the password hashes of the users, which leads to a [Pass the Hash](https://en.wikipedia.org/wiki/Pass_the_hash) attack.
 
 > 
 Q3. **What is the full path of the binary that the threat actor used to access the privileges of a different user with explicit credentials?**
@@ -1096,7 +1091,7 @@ You’re given a Python file named `oops.py`. Here’s the content:
 _ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'==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'))
 ```
 
-So seems like they used an online tool to obfuscate the code. Oh well, I’ll just find one to deobfuscate it. Searching online brought up [this Pyobfuscate website](https://web.archive.org/web/20250825065534/https://pyobfuscate.com/deobf). I pasted the code and it gave me the deobfuscated code back. Running that code revealed the flag.
+So seems like they used an online tool to obfuscate the code. Oh well, I’ll just find one to deobfuscate it. Searching online brought up [this Pyobfuscate website](https://pyobfuscate.com/deobf). I pasted the code and it gave me the deobfuscated code back. Running that code revealed the flag.
 
 Flag: flag{2543ff1e714bC2eb9ff78128232785ad}
 
@@ -1106,9 +1101,7 @@ Uh oh! Mimi forgot her password for her Windows laptop!
 
 Luckily, she dumped one of the crucial processes running on her computer (don’t ask me why, okay)… can you help her recover her password?
 
-**NOTE: This file on its own is not malware per say, but it is likely to raise antivirus alerts. Would recommend examining this inside of a virtual environment.**
-
-**NOTE: Archive password is **`**mimi**`
+**NOTE: This file on its own is not malware per say, but it is likely to raise antivirus alerts. Would recommend examining this inside of a virtual environment.NOTE: Archive password is **`**mimi**`
 
 Author: @JohnHammond
 
@@ -1156,7 +1149,7 @@ Okay, we can work with that. Looks like some kind of BaseX encoding. I went to C
 
 Pressing that button added 3 conversions: From Base64, Gunzip, and Render Image. The output was a serial block of 13 colors.
 
-First, I tried to find if there was some kind of color cipher. But didn’t find any that look similar to the given colors. Then I thought about hex codes. I went to a [color-picker tool](https://web.archive.org/web/20250825065534/https://imagecolorpicker.com/) and got the hex codes for all 13 colors.
+First, I tried to find if there was some kind of color cipher. But didn’t find any that look similar to the given colors. Then I thought about hex codes. I went to a [color-picker tool](https://imagecolorpicker.com/) and got the hex codes for all 13 colors.
 
 ```
 #666c61
@@ -1190,7 +1183,7 @@ The password is dynamic and changes every connection session.
 
 Author: @aenygma
 
-As described, you need to do a [side-channel time-based attack](https://web.archive.org/web/20250825065534/https://medium.com/spidernitt/introduction-to-timing-attacks-4e1e8c84b32b). I’ve never done one before. So, I quickly ran a search to read the basics. Hmm, really cool concept.
+As described, you need to do a [side-channel time-based attack](https://medium.com/spidernitt/introduction-to-timing-attacks-4e1e8c84b32b). I’ve never done one before. So, I quickly ran a search to read the basics. Hmm, really cool concept.
 
 I quickly crafted a Python script to automate it.
 
@@ -1499,9 +1492,7 @@ We’ve identified the Marketing Director, Sarah Williams (swilliams@pyrchdata.c
 
 Are you able to successfully phish her? Remember your OSINT ;)
 
-**NOTE: The port that becomes accessible upon challenge deployment is an SMTP server. Please use this for sending any phishing emails.**
-
-**You will not receive an email/human response as the mail infrastructure for this challenge is emulated.**
+**NOTE: The port that becomes accessible upon challenge deployment is an SMTP server. Please use this for sending any phishing emails.You will not receive an email/human response as the mail infrastructure for this challenge is emulated.**
 
 Author: Truman Kain (@truman.huntress), Adam Rice (@adam.huntress)
 
@@ -1556,7 +1547,7 @@ To view the questions, and answer them, you’ll use the answer tool.
 Display questions: answer
 Answer a question: answer x where x is question number.
 
-Author: [@aenygma](https://web.archive.org/web/20250825065534/http://twitter.com/aenygma)
+Author: [@aenygma](http://twitter.com/aenygma)
 
 You need to connect to a remote server. If you run the `answer` command, you’ll see 11 questions to answer, covering different Linux commands.
 
@@ -1622,7 +1613,7 @@ Flag: flag{6b38aa917a754d8bf384dc73fde633ad}
 > 
 This is a dumb challenge. I’m sorry.
 
-Author: [@JohnHammond](https://web.archive.org/web/20250825065534/http://twitter.com/JohnHammond)
+Author: [@JohnHammond](http://twitter.com/JohnHammond)
 
 You’re given a `base64by32.zip` file. Unzipping it gave a text file containing a humongous Base64 encoded text (It was almost 9000 lines). The problem description hints that you need to decode the Base64 multiple times. So I input the string in Cyberchef and kept adding **From Base64** to the recipe until I got the flag.
 
@@ -1710,7 +1701,7 @@ I am attaching those files so you can fix them.
 
 President
 
-[Check out our new website!](https://web.archive.org/web/20250825065534/https://sites.google.com/view/id-10-t/home)
+[Check out our new website!](https://sites.google.com/view/id-10-t/home)
 
 The given images are below:
 
@@ -1756,6 +1747,3 @@ I started the competition thinking of solving all the Warmpus and Misc challenge
 I’m looking forward to next year’s Huntress CTF. Till then, keep hacking.
 
 ---
-
-*📖 Originally published on [Medium](https://rustybladez.medium.com/huntress-ctf-2024-writeups-warmus-and-other-easy-ones-1a303d29a6e5). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of misc CTF writeups.*

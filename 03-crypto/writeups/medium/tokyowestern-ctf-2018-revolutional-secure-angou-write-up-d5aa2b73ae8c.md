@@ -1,23 +1,113 @@
-# 🔐 TokyoWesterns CTF 2018 — Revolutional Secure Angou Write Up
+# :locked_with_key: TokyoWesterns CTF 2018 — Revolutional Secure Angou Write Up
 
-> **Original Source:** [TokyoWesterns CTF 2018 — Revolutional Secure Angou Write Up](https://apogiatzis.medium.com/tokyowestern-ctf-2018-revolutional-secure-angou-write-up-d5aa2b73ae8c)
-> **Platform:** apogiatzis.medium.com | **Category:** `CRYPTO` | **Year:** 2018
-
----
-
-## 📋 Overview
-
-The publickey.pem is the public key used for encryption and the flag.encrypted is the encrypted flag. As it seems the challenge is pretty ...
+> **Original Source:** [TokyoWesterns CTF 2018 — Revolutional Secure Angou Write Up]()
+> **Platform:** medium.com | **Category:** `CRYPTO`
 
 ---
 
-## 🔗 Read Full Writeup
+# TokyoWesterns CTF 2018 — Revolutional Secure Angou Write Up
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://apogiatzis.medium.com/tokyowestern-ctf-2018-revolutional-secure-angou-write-up-d5aa2b73ae8c)**
+What’s up folks? Apologies for being really quiet lately but I was extremely busy the last two months. (plus I tried to enjoy the time back in my country as much as I could). Leaving these aside, I am back on track now with some preparation for the upcoming European Cyber Security Competition and as such, the following post is a write up for a crypto challenge that I encountered recently.
+
+## The Challenge:
+
+
+In this challenge we have been provided with a zip archive containing the following files:
+
+
+```
+- flag.encrypted
+- generator.rb
+- publickey.pem
+```
+
+
+The `generator.rb` is simply the code for encrypting the flag:
+
+
+The `publickey.pem` is the public key used for encryption and the flag.encrypted is the encrypted flag.
+
+
+As it seems the challenge is pretty straightforward. Given the public key we must factorize `n` to get the private key and therefore decrypting the flag.
+
+
+Firstly, I used `openssl` to reveal `n` and `e` from the public key:
+
+
+*I used a bash script that I made which utilizes openssl*
+
+
+Converting `n` from hex to decimal we have:
+
+
+```
+n = 16809924442712290290403972268146404729136337398387543585587922385691232205208904952456166894756423463681417301476531768597525526095592145907599331332888256802856883222089636138597763209373618772218321592840374842334044137335907260797472710869521753591357268215122104298868917562185292900513866206744431640042086483729385911318269030906569639399362889194207326479627835332258695805485714124959985930862377523511276514446771151440627624648692470758438999548140726103882523526460632932758848850419784646449190855119546581907152400013892131830430363417922752725911748860326944837167427691071306540321213837143845664837111e = 65537
+```
+
+
+I quickly checked FactorDB ([https://factordb.com/](https://factordb.com/)) if there are any known prime factors but as expected it came up with nothing.
+
+
+By analysing the generator file we can see that `q` is not chosen randomly as it should but rather it is directly related to `p` . More particularly it satisfies the following equation:
+
+
+Working out the maths we get:
+
+
+The last step comes from the fact the `qe — 1 mod p = 0` so there is an unknown integer `k` that is a multiplier of p ( in order to get 0 ).
+
+
+Then we need to solve for `q` :
+
+
+On second step we multiply both sides by `q` in order to get `p*q` and thus replacing it with `n` which is known (third step).
+
+
+Finally, we ended up with a quadratic equation that has two unknowns: `k` and `q` . `q` is what we are looking for and `k` can be brute forced.
+
+
+Using Sage I executed the following script to get the root of the equation. Then `p` is calculated as by evaluating `n/q` .
+
+
+```
+n = 16809924442712290290403972268146404729136337398387543585587922385691232205208904952456166894756423463681417301476531768597525526095592145907599331332888256802856883222089636138597763209373618772218321592840374842334044137335907260797472710869521753591357268215122104298868917562185292900513866206744431640042086483729385911318269030906569639399362889194207326479627835332258695805485714124959985930862377523511276514446771151440627624648692470758438999548140726103882523526460632932758848850419784646449190855119546581907152400013892131830430363417922752725911748860326944837167427691071306540321213837143845664837111
+e = 65537q = var('q')
+root = 0
+k = 2while not root:
+eq = e*q^2 - q - k*n
+root = eq.roots(q, ring=ZZ)
+k += 1q = root[0][0]p = n/qq
+p
+```
+
+
+This prints `p` and `q `which in that case is:
+
+
+```
+q = 117776309990537864360810812340917258096636219871129327152749744175094693075913995854147376703562090249517854407162616412941789644355136574651545193852293544566513866746012759544621873312628262933928953504305148673201262843795559879423287920215664535429854303448257904097546288383796049755601625835244054479553
+p = 142727552290123521017279182847387099553980176436653156686571005621360593567236973858972940588412513104338972342496604878974964273707518226570604980944855067127507753049804700855693115963197456876865788199179854448882972688495369967044453040443306336140280352904742571391288666823388345281672776486027914172087
+```
+
+
+Given `p` and `q` I used this handy tool ( [rsatool](https://github.com/ius/rsatool/) ) to generate the private key:
+
+
+Lastly we can use `openssl` we can decrypt the file with the private key we just generated by running:
+
+
+```
+openssl rsautl -decrypt -inkey key.pem -in flag.encrypted -out flag.txt
+```
+
+
+Voila!
+
+
+That’s all fellas! Hope you enjoyed it. Happy hacking!
 
 ---
 
-*📖 Originally published on [Medium](https://apogiatzis.medium.com/tokyowestern-ctf-2018-revolutional-secure-angou-write-up-d5aa2b73ae8c). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*
+*Originally published on [Medium](https://apogiatzis.medium.com/tokyowestern-ctf-2018-revolutional-secure-angou-write-up-d5aa2b73ae8c). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of crypto CTF writeups.*

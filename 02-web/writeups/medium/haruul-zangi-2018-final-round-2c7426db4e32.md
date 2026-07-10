@@ -1,23 +1,33 @@
-# 🌐 HZ Final round —Shao Kahn [write up]
+# :globe_with_meridians: HZ Final round —Shao Kahn [write up]
 
-> **Original Source:** [HZ Final round —Shao Kahn [write up]](https://fgod.medium.com/haruul-zangi-2018-final-round-2c7426db4e32)
-> **Platform:** fgod.medium.com | **Category:** `WEB` | **Year:** 2018
-
----
-
-## 📋 Overview
-
-Харуул Занги 2018 тэмцээний эцсийн шатны Web exploitation төрлийн эхний даалгавар болох “Shao Kahn” даалгаврын writeup — ыг хүргэж байна.
+> **Original Source:** [HZ Final round —Shao Kahn [write up]]()
+> **Platform:** medium.com | **Category:** `WEB`
 
 ---
 
-## 🔗 Read Full Writeup
+# HZ Final round —Shao Kahn [write up]
 
-This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
 
-**[📖 Read Full Article on Medium](https://fgod.medium.com/haruul-zangi-2018-final-round-2c7426db4e32)**
+[ 944 points]
+
+*Харуул Занги 2018 тэмцээний эцсийн шатны Web exploitation төрлийн эхний даалгавар болох “Shao Kahn” даалгаврын writeup — ыг хүргэж байна.Даалгаврыг нээхэд бидэнд /tmp/shaokahnflag.php гэсэн path өгөгдсөн байсан. Бидэнд өгөгдсөн Url → [http://218.100.84.106:8060/](http://218.100.84.106:8060/) нэвтрээд харахад*
+
+
+*Online compiler шиг interface -тэй дотор нь echo буюу хэвлэх коммандаар ShaoKahn гэсэн үгийг хэвлэсэн байлаа.Яг энэ үед надад төрсөн санаа байгаагүй бөгөөд эхний өгөгдөлрүүгээ буцаад сэжигтэй зүйл байгаа эсэхийг лавлаж харлаа. [ Их удаан харсан xD ] За ерөнхийдөө эхлээд уламжлалт вэбийн шалгах процесуудаа шалгаад үзье гэж бодсон.218.100.84.106 гэсэн бидэнд өгөгдсөн Url — д robots.txt -г оруулж үзэхэд shao.gif зураг гарч ирсэн. Сүүлийн үед вэбийн даалгаврууд forensics ялангуяа steganography — тай хосолсон маягаар их орж ирдэг болсныг санаад зурган доторх зүйлсийг нилээдгүй хайж үзсэн. Даан ч юу ч олдоогүй учир дан вэб бровсер дээрээ шалгалтуудаа хийнэ гэж ойлгосон. :PҮүний дараагаар PHP дээрх compiler байсан мөн бидэнд path , link өгөгдсөн тул эхлээд PHP link-г google-ээс хайлт хийсэн.За хайлтын үр дүнд маш их PHP source code -нуудаас хамгийн байж болох хувилбарыг оллоо.($target , $link) Гэхдээ уг code -нд link ээс утгаа аваад хэвлэх үйлдэл гэх мэт зарим функцүүд байгаагүй учир доошлуулаад хартал.symlink() , readlink() , linkinfo() гэсэн 3 ойлголт байлаа symlink буюу symbolic -ыг үүсгэх боломжтой гэдгийг хараад судлахаар шийдэв.symlink() -ээс readlink-н $link -г унших болох кодыг оллоо.Үүний дараа өмнөх хэсэгт уламжлалт шалгалт хийх үедээ нэг зүйлийг мартсан байснаа санаад хурдан туршихаар болов.*
+
+
+*Url дотор байгаа файлуудыг шалгаж үзтэл. 218.100.84.106:8060/flag буюу уг url дотор flag гэсэн файл байгаа эсэхийг шалгахад үр дүнд нь “flag” файл байж таарсан. x))))flag.php файлаа татаж авлаа.*
+
+
+*php файлыг терминал орчноос php flag коммандаар ажиллуулах үед флаг маань гараад ирэх нь тэр xD*
+
+
+HZ{fastcg1pack3t.Really!!}
+
+
+Эндээс дүгнэхэд CTF -н даалгаврыг уншиж байх үед энэ их хэцүү даалгавар , хэцүү байх болно гэх мэт тайлбартай байхад шууд хүлээж аваад за би чадахгүй юм байна гэж бодоод хэрэггүй шүү xD Ямар ч даалгавар байсан жижиг зүйлсийг нэг бүрчлэн шалгаж үзэх хэрэгтэй юм шиг санагдсан. За тэгээд бүгдэнд нь амжилт хүсье!~ { 4katsuk1 } ~ fg0d
 
 ---
 
-*📖 Originally published on [Medium](https://fgod.medium.com/haruul-zangi-2018-final-round-2c7426db4e32). All credit goes to the original author.*
-*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
+*Originally published on [Medium](https://fgod.medium.com/haruul-zangi-2018-final-round-2c7426db4e32). All credit goes to the original author.*
+*Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of web CTF writeups.*
