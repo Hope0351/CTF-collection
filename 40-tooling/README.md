@@ -16,7 +16,6 @@ This directory holds curated tool reference pages for each major CTF category. E
 | 6 | Blockchain Tooling | — | [`blockchain-tools.md`](blockchain-tools.md) |
 | 7 | Mobile Tooling | — | [`mobile-tools.md`](mobile-tools.md) |
 
-
 ## Quick Reference
 
 For a condensed cheat sheet of one-liners across all categories, see [`00-start-here/tools-cheatsheet.md`](../00-start-here/tools-cheatsheet.md). The pages in this directory provide deeper treatment per category.

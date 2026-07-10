@@ -22,7 +22,6 @@
 | 7 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
 | 9 | [nh4ttruong/ctf-write-up](../30-archetypes/archives/personal-collections/ctf-write-up-nh4ttruong) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
 
-
 ### Articles, Videos & Blog Posts (9)
 
 | # | Title | Source | Year | Summary |
@@ -36,7 +35,6 @@
 | 7 | [DownUnderCTF : write-up - Raj Upadhyay - Medium](https://upadhyayraj.medium.com/downunderctf-write-up-c5cd9f187a25) | ✍️ Medium | n/a | DownUnderCTF : write-up Recently I participated in DownUnderCTF. I really enjoyed this CTF. So here is how I solved som… |
 | 8 | [DownUnderCTF 2024. CTF Challenges Walkthrough - Abdul Wassay](https://hotplugin.medium.com/downunderctf-2024-2551bfdee912) | ✍️ Medium | 2024–2024 | A group of students who don't like to do things the “conventional” way decided to come up with a CyberSecurity Blog pos… |
 | 9 | [DownUnderCTF writeups - 0awawa0 - Medium](https://0awawa0.medium.com/downunderctf-writeups-8bd773f1d04c) | ✍️ Medium | n/a | There are writeups of some tasks from DownUnderCTF that took place on the weekend. List of tasks I've managed to solve. |
-
 
 ## About DownUnderCTF
 

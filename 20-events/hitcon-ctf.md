@@ -25,13 +25,11 @@
 | 11 | [DeFiHackLabs/hitcon-ctf-2024-writeup](../08-blockchain-web3/archives/hitcon-ctf-2024-writeup) | 17 ⭐ | Blockchain | 2024–2024 | DeFiHackLabs engaged in the HITCON CTF this year and designed 2 Web3 challenges, also offering a fi… |
 | 12 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
-
 ### Articles, Videos & Blog Posts (1)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [Recap: HITCON ctf 2024 Rank: 108/1699 | by hhhkb | Medium](https://medium.com/@harryfyx/recap-hitcon-ctf-2024-rank-108-1699-2e2af0b10f4f) | ✍️ Medium | 2024–2024 | Took me about 5 hours reading ClamAV documentations, reading another ClamAV CTF writeup and source code, and reading th… |
-
 
 ## About HitCon CTF
 

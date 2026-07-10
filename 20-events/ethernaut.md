@@ -20,13 +20,11 @@
 | 4 | [AshiqAhamed17/web3-ctf-writeups](../08-blockchain-web3/archives/web3-ctf-writeups) | 11 ⭐ | Blockchain | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for va… |
 | 5 | [PumpkingWok/CTFGym](../30-archetypes/archives/practice-platforms/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
 
-
 ### Articles, Videos & Blog Posts (1)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [The Ethernaut - Medium](https://medium.com/@binnaryninjax/the-ethernaut-ecd7d1f7ee13) | ✍️ Medium | n/a | To solve this CTF you need to set up few things. Like setting up .env and foundary.toml files to link our wallet in sep… |
-
 
 ## About Ethernaut
 

@@ -29,13 +29,11 @@
 | 13 | [CUCTF/ctf-writeups](../30-archetypes/archives/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
 | 14 | [tsids/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
 
-
 ### Articles, Videos & Blog Posts (1)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [CTFtime.org / DEF CON CTF Qualifier 2024 / libprce3 / Writeup](https://ctftime.org/writeup/39151) | 🏆 CTFtime | 2024–2024 | Original writeup (https://mwlik.github.io/2024-05-10-defcon-quals-libprce3-challenge/). Comments. x. Sign in with. Ente… |
-
 
 ## About DEF CON CTF Quals
 

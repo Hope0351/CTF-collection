@@ -33,7 +33,6 @@
 | 18 | [tsids/picoCTF-Writeups](../20-events/archives/picoctf/picoCTF-Writeups-tsids) | 1  | Programming, Forensics, Crypto | 2019–2026 | Navigate to the folder of the challenge you are looking for, and the solution can be found in <Chal… |
 | 19 | [Irench1k/PicoCTF](../20-events/archives/picoctf/PicoCTF-Irench1k) | 0  | — | n/a | Welcome to my collection of PicoCTF solutions! This repository contains detailed writeups and code … |
 
-
 ### Articles, Videos & Blog Posts (14)
 
 | # | Title | Source | Year | Summary |
@@ -52,7 +51,6 @@
 | 12 | [PicoCTF Writeups: Client-side-again | by SoBatista | Medium](https://medium.com/@sobatistacyber/picoctf-writeups-client-side-again-7e39aa25207d) | ✍️ Medium | n/a | This challenge is all about inspecting client-side JavaScript, understanding obfuscation, and breaking into a “secure” … |
 | 13 | [picoCTF Web Exploitation: Local Authority | by Kamal S - Medium](https://medium.com/@Kamal_S/picoctf-web-exploitation-local-authority-21064e2d718e) | ✍️ Medium | n/a | This blog post provides a solution to the Local Authority picoCTF Web Exploitation challenge having easy difficulty. |
 | 14 | [CTF Day(11). picoCTF Web Exploitation: n0s4n1ty 1 - Medium](https://medium.com/@ahmednarmer1/ctf-day-11-0e8420294f32) | ✍️ Medium | n/a | This lab serves as a simple introduction to Remote Code Execution (RCE) through unrestricted file uploads. |
-
 
 ## About picoCTF
 

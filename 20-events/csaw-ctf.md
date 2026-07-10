@@ -27,7 +27,6 @@
 | 12 | [Nambers/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Nambers) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
 | 13 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
-
 ### Articles, Videos & Blog Posts (3)
 
 | # | Title | Source | Year | Summary |
@@ -35,7 +34,6 @@
 | 1 | [csawctf{CSAW-CTF-24} - Medium](https://medium.com/@iabdullah_215/csawctf-csaw-ctf-24-a8fd8082f944) | ✍️ Medium | n/a | This blog has the write-up for a PWN challenge that I solved in the CSAW CTF'24. So without any further a do. Let's get… |
 | 2 | [CTFtime.org / CSAW CTF Final Round](https://ctftime.org/ctf/19) | 🏆 CTFtime | 2025–2025 | I don't remember · Follow @CTFtime. © 2012 — 2025 CTFtime team. All tasks and writeups are copyrighted by their respect… |
 | 3 | [CSAW CTF 2023 Writeup - tripoloski blog](https://tripoloski1337.github.io/ctf/pwn/uaf/heap/2023/09/18/csawctf2023-writeup.html) | 📝 Blog | 2023–2023 | I competed on CSAW CTF 2023, and I solved multiple challenges e.g. from pwn, incident response and reverse engineering. |
-
 
 ## About CSAW CTF
 

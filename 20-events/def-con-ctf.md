@@ -31,7 +31,6 @@
 | 15 | [ory/defcon-30-ctf](../20-events/archives/def-con-ctf/defcon-30-ctf) | 19 ⭐ | — | n/a | Welcome to the the ory organization CTF at DEF CON 30! Explore a vulnerable, open-source digital election… |
 | 16 | [CUCTF/ctf-writeups](../30-archetypes/archives/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
 
-
 ### Articles, Videos & Blog Posts (4)
 
 | # | Title | Source | Year | Summary |
@@ -40,7 +39,6 @@
 | 2 | [CTFtime.org / DEF CON CTF Qualifier 2024 / libprce3 / Writeup](https://ctftime.org/writeup/39151) | 🏆 CTFtime | 2024–2024 | Original writeup (https://mwlik.github.io/2024-05-10-defcon-quals-libprce3-challenge/). Comments. x. Sign in with. Ente… |
 | 3 | [DEF CON 29 Cloud Village CTF Writeups | by Muhammad Yuga N.](https://myugan.medium.com/def-con-29-cloud-village-ctf-writeups-4ebd2e2cd9c) | ✍️ Medium | n/a | The CTF begins at 02.15 AM (Indonesia Time), we've started our first day by exploring some challenges by understanding … |
 | 4 | [AI CTF Solution Stream! - DEFCon31 - YouTube](https://www.youtube.com/watch?v=WWPfo-ZLLFg) | ▶️ YouTube | n/a | ... my stuff: * Youtube: https://youtube.com/@robmulla?sub_confirmation=1 * Discord: https://discord.gg/HZszek7DQc * Tw… |
-
 
 ## About DEF CON
 

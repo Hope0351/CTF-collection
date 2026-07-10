@@ -23,14 +23,12 @@
 | 8 | [rstacks/corCTF2024-writeup](../20-events/archives/corctf/corCTF2024-writeup) | 0  | Web, Forensics, Misc | 2024–2024 | corCTF 2024 was a 48 hour competition that ran from 7/26/2024 through 7/28/2024. Below are my write… |
 | 9 | [nh4ttruong/ctf-write-up](../30-archetypes/archives/personal-collections/ctf-write-up-nh4ttruong) | 0  | — | 2021–2021 | Write-up CTF - Some CTF competitions which I joined to practice myself - nh4ttruong/ctf-write-up. |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [corCTF 2025 - corphone - Blog](https://u1f383.github.io/android/2025/09/08/corCTF-2025-corphone.html) | 📝 Blog | 2025–2025 | This post is not only a write-up for the challenge but also includes some notes on Android exploitation. ... By the way… |
 | 2 | [CTFtime.org / corCTF](https://ctftime.org/ctf/627) | 🏆 CTFtime | n/a | Offical URL: https://ctf.cor.team/ Organized by the Crusaders of Rust (aka Starrust Crusaders), an American and Europea… |
-
 
 ## About corCTF
 

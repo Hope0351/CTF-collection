@@ -14,7 +14,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | CTFtime | 35 |
 | YouTube | 30 |
 
-
 ## Full Ranked Source Index
 
 | # | Source | Type | Stars | Categories | Year Range | Difficulty |
@@ -383,7 +382,6 @@ This is the complete ranked list of all 376 sources in the CTF-collection corpus
 | 374 | [Writeups - STT](https://sectt.github.io/writeups) | 📝 Blog | — | — | n/a | Varied |
 | 375 | [CTFtime.org / Cyber Apocalypse 2021 / BlitzProp / Writeup](https://ctftime.org/writeup/27697) | 🏆 CTFtime | — | — | 2021–2021 | Intermediate |
 | 376 | [https://training.hacktricks.xyz/certificates/26c95](https://training.hacktricks.xyz/certificates/26c95697-4e54-4f81-a30c-c44b475ab9ff) | 📝 Blog | — | — | n/a | Varied |
-
 
 ## Methodology
 

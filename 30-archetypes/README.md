@@ -16,7 +16,6 @@ This directory cross-indexes the corpus by repository archetype. The 376 sources
 | 6 | Practice Platforms / Wargames | Repositories (or the backends for web platforms) that host always-on challenges designed for self-p… | [`practice-platforms.md`](practice-platforms.md) |
 | 7 | Toolkits | Reusable infrastructure for solving CTF challenges — typically Docker images pre-loaded with the st… | [`toolkits.md`](toolkits.md) |
 
-
 ## Why Archetype Matters
 
 A practitioner's use-case determines which archetype they should consult first:

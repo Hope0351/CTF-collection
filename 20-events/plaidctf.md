@@ -20,7 +20,6 @@
 | 6 | [ybieri/phantom_processing_platform](../40-tooling/archives/misc-tools/phantom_processing_platform) | 1  | Pwn, Blockchain | 2024–2024 | PlaidCTF 2024 Phantom Processing Platform. Contribute to ybieri/phantom_processing_platform develop… |
 | 7 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
-
 ### Articles, Videos & Blog Posts (3)
 
 | # | Title | Source | Year | Summary |
@@ -28,7 +27,6 @@
 | 1 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
 | 2 | [CTFtime.org / PlaidCTF 2024 / DHCPPP / Writeup](https://ctftime.org/writeup/39060) | 🏆 CTFtime | 2024–2024 | PlaidCTF 2024 /; Tasks; /; DHCPPP /; Writeup. DHCPPP. by L0rdComm4nd3r / STT. Rating: Original writeup (https://sectt.g… |
 | 3 | [CTFtime.org / Dragon Sector](https://ctftime.org/team/3329) | 🏆 CTFtime | 2020–2020 | CRC Recursive Challenge (warmup) [333] · read writeup ; CONFidence CTF 2020 Finals · HAHA Jail [226] · read writeup ; P… |
-
 
 ## About PlaidCTF
 

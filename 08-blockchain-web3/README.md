@@ -8,38 +8,6 @@ Smart-contract exploitation on Ethereum-compatible chains and increasingly on So
 
 This category contains **36 curated sources** from across the CTF ecosystem: 26 the collection repositories, 6 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 3 blog posts.
 
-## 🏆 Recommended Repositories (the collection)
-
-The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
-
-| # | Repository | Stars | Difficulty | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
-| 1 | [r3kapig/writeup](../30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Varied | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
-| 2 | [blockthreat/blocksec-ctfs](../30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Varied | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions and solution writeu… |
-| 3 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
-| 4 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 5 | [orangetw/My-CTF-Web-Challenges](../02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Varied | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source code, write-up and ide… |
-| 6 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Varied | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
-| 7 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
-| 8 | [AshiqAhamed17/web3-ctf-writeups](../08-blockchain-web3/archives/web3-ctf-writeups) | 11 ⭐ | Varied | n/a | Web3-CTF-Writeups is a collection of detailed solutions, explanations, and exploit write-ups for various Web3 security … |
-| 10 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
-| 11 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
-| 12 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Varied | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and hardware tools, boo… |
-| 13 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Intermediate | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups development by creating an … |
-| 14 | [project-sekai-ctf/sekaictf-2025](../20-events/archives/sekaictf/sekaictf-2025) | 135 ⭐⭐ | Advanced | 2024–2025 | This repository contains official source code and writeups for challenges from SekaiCTF 2025. CTFTime • Website • Disco… |
-| 15 | [PumpkingWok/CTFGym](../30-archetypes/archives/practice-platforms/CTFGym) | 121 ⭐⭐ | Varied | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) You have to install … |
-| 16 | project-sekai-ctf/sekaictf-2024 | 83 ⭐⭐ | Advanced | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTime Event • Website •… |
-| 17 | [hackthebox/business-ctf-2025](../20-events/archives/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Intermediate | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Startups Nonprofits. Add… |
-| 18 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
-| 19 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Varied | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussion about where I mad… |
-| 20 | SecurityInnovation/Smart-Contract-CTF | 17 ⭐ | Varied | 2022–2022 | A series of vulnerable smart contracts and DApps with real-life use cases, ranging from decentralized trust funds and o… |
-| 21 | [DeFiHackLabs/hitcon-ctf-2024-writeup](../08-blockchain-web3/archives/hitcon-ctf-2024-writeup) | 17 ⭐ | Advanced | 2024–2024 | DeFiHackLabs engaged in the HITCON CTF this year and designed 2 Web3 challenges, also offering a first blood bonus. |
-| 22 | justcatthefish/justctf-2025 | 9 ⭐ | Elite | 2025–2025 | This repo contains sources for justCTF 2025 challenges hosted by justCatTheFish as well as summary of winners and spons… |
-| 23 | [BarakBinyamin/ctf](../30-archetypes/archives/personal-collections/ctf-BarakBinyamin) | 1  | Varied | 2023–2023 | The IOT-light uses hardcoded credentials to connect to WiFi, check for updates and communications by connecting to a cu… |
-| 24 | [ybieri/phantom_processing_platform](../40-tooling/archives/misc-tools/phantom_processing_platform) | 1  | Elite | 2024–2024 | PlaidCTF 2024 Phantom Processing Platform. Contribute to ybieri/phantom_processing_platform development by creating an … |
-| 25 | [shellboxes/blockchain-ctf-challenges-writeups](../08-blockchain-web3/archives/blockchain-ctf-challenges-writeups) | 0  | Varied | n/a | Capture The Flag (CTF) challenges have emerged as an invaluable tool in the realm of smart contract security. Smart con… |
-
-
 ## ✍️ Curated Articles & Walkthroughs
 
 Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
@@ -87,7 +55,6 @@ manipulating oracles via borrowed capital.
 
 Top resources for this sub-topic:
 
-
 ### Oracle manipulation
 
 price-feed manipulation, single-block TWAP.
@@ -111,7 +78,6 @@ Top resources for this sub-topic:
 - [blockthreat/blocksec-ctfs - the collection](../30-archetypes/archives/awesome-lists/blocksec-ctfs) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - [orangetw/My-CTF-Web-Challenges - the collection](../02-web/archives/My-CTF-Web-Challenges) — 📚 Repository
-
 
 ## 🎯 Suggested Learning Order
 

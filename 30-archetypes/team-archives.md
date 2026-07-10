@@ -16,7 +16,6 @@ Team archives are the strongest single source for elite-tier learning. The three
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/489 teams) · 2021.12.… |
 | 3 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account. |
 
-
 ## How to Use These Repositories
 
 Team archives are best used for **elite-tier learning**. After each major CTF, read the top-placing teams' writeups within 1 week — this is the single highest-leverage learning habit you can build.

@@ -13,7 +13,6 @@ These repositories function as professional portfolios for security researchers.
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 
-
 ## How to Use These Repositories
 
 Personal writeup collections are best used as **portfolio models** and as **reference material for specific challenges**. When you encounter a challenge you can't solve, search for the challenge name across the top personal collections — chances are good that one of them has a writeup.

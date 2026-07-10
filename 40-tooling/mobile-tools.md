@@ -20,7 +20,6 @@ Frida dominates dynamic instrumentation. jadx and apktool handle APK reverse eng
 | 8 | [dex2jar](../40-tooling/archives/mobile-tools/dex2jar) | Java | Converts DEX to JAR for analysis in JD-GUI or similar. |
 | 9 | [Magisk](../40-tooling/archives/mobile-tools/Magisk) | C++ | Android rooting solution. Required for many Frida use-cases on physical devices. |
 
-
 ## Quick Installation
 
 ```bash

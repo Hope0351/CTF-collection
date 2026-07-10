@@ -21,12 +21,10 @@
 | 6 | [CUCTF/ctf-writeups](../30-archetypes/archives/team-archives/ctf-writeups-CUCTF) | 8 ⭐ | Pwn, Reverse Engineering, Crypto | 2022–2022 | Collection of CTF challenge solutions and write-ups. - CUCTF/ctf-writeups. |
 | 7 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
 
-
 ### Articles, Videos & Blog Posts (0)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
-
 
 ## About UTCTF
 

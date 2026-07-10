@@ -34,7 +34,6 @@
 | 19 | [iash8090/Hack-The-Box](../20-events/archives/hackthebox/Hack-The-Box) | 4  | — | n/a | Great Writeups for HTB and some articals · All the HTB machines, challenges writeups with passwd pr… |
 | 20 | Ferdibrgl/cyber-apocalypse-ctf--2023-2024- | 1  | — | 2023–2024 | HTB-Cyber-Apocalypse-2023. My writeups for the 2023 Hackthebox Cyber Apocalypse CTF! logo. About. c… |
 
-
 ### Articles, Videos & Blog Posts (39)
 
 | # | Title | Source | Year | Summary |
@@ -59,7 +58,6 @@
 | 18 | [HackTheBox — Holmes CTF 2025 - Medium](https://medium.com/@fathijem1510/hackthebox-holmes-ctf-2025-a8e0b8e9a8ea) | ✍️ Medium | 2025–2025 | Holmes CTF 2025 was a Blue Team challenge on HackTheBox conducted from 22nd September to 26th September, focused on DFI… |
 | 19 | [Capture The Flag Cheatsheet - Sai Kiran Uppu](https://uppusaikiran.github.io/hacking/Capture-the-Flag-CheatSheet) | 📝 Blog | n/a | Single source of truth for CTF players: cheatsheets, tools, methodology, platforms, and one-liners for HackTheBox, Vuln… |
 | 20 | [HTB CTF TryOut: A Journey. Introduction | by Rohit - Medium](https://medium.com/@pandarohit05/htb-ctf-tryout-a-journey-62faf8e60394) | ✍️ Medium | n/a | The Hack The Box (HTB) CTF TryOut is an excellent training ground for aspiring cybersecurity professionals and CTF enth… |
-
 
 ## About HackTheBox
 

@@ -16,13 +16,11 @@
 |---:|---|---:|---|---|---|
 | 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 
-
 ### Articles, Videos & Blog Posts (1)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [idek CTF 2022* Forensics - HiddenGem Mixtape Writeup](https://crazymanarmy.github.io/2023/01/16/idek-CTF-2022-Forensics-HiddenGem-Mixtape-Writeup/index.html) | 📝 Blog | 2022–2022 | Note 1: All flags are wrapped in idek{} format, you don't need to do it yourself. Note 2: The zip file is the same for … |
-
 
 ## About idekCTF
 

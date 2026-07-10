@@ -20,7 +20,6 @@ Binary exploitation requires a deep tooling stack. The dominant tools are pwntoo
 | 8 | LibcSearcher | Python | Identifies libc version from leaked function addresses. Essential for ret2libc attacks. |
 | 9 | [Pwntools-README](../40-tooling/archives/pwn-tools/pwntools) | Python | Pwntools the collection repository — install via `pip install pwntools`. |
 
-
 ## Quick Installation
 
 ```bash

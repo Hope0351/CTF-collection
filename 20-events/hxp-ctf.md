@@ -17,7 +17,6 @@
 | 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
 
-
 ### Articles, Videos & Blog Posts (3)
 
 | # | Title | Source | Year | Summary |
@@ -25,7 +24,6 @@
 | 1 | [HXP CTF Writeups | Henry Wang | Personal Website](https://thekidofarcrania.gitlab.io/2018/12/09/hxpctf) | 📝 Blog | n/a | I guess there really is only one solution to each of these creative problems. Since I think LordIdiot already has a pre… |
 | 2 | [CTFtime.org / hxp CTF](https://ctftime.org/ctf/120) | 🏆 CTFtime | n/a | Offical URL: https://ctf.hxp.io/ A yearly(?) CTF organized by hxp. See CTF archive: https://ctf.hxp.io/ CTF events |
 | 3 | [Shreyansh Singh | hxp 36C3 CTF Writeups](https://shreyansh26.github.io/post/2019-12-30_hxp-36c3-ctf) | 📝 Blog | n/a | The writeups for the challenges I solved in the first MAJOR CTF that I participated in after a long time. |
-
 
 ## About hxp CTF
 

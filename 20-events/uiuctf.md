@@ -19,7 +19,6 @@
 | 4 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Pwn, Web, Cloud | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of … |
 | 6 | silly-lily/CTF-Writeups | 0  | Forensics, Crypto, Mobile | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account on GitH… |
 
-
 ### Articles, Videos & Blog Posts (3)
 
 | # | Title | Source | Year | Summary |
@@ -27,7 +26,6 @@
 | 1 | [Stepping down into the Ocaml Mines — UIUCTF 2025 Writeup](https://medium.com/@nikhilc2209/stepping-down-into-the-ocaml-mines-uiuctf-2025-writeup-303a2eb5551a) | ✍️ Medium | 2025–2025 | Solution. For our solve script we'll use Z3 as our constraint solver, but first we need to set variables and build cons… |
 | 2 | [UIUCTF 2024 Writeup - Berlian Gabriel](https://berliangabriel.github.io/post/uiuctf-2024) | 📝 Blog | 2024–2024 | Solution. Pollard's p-1 implementation in Sagemath to retrieve the 40-bit key, using 13-bit B. from sage.all import gcd… |
 | 3 | [CTFtime.org / UIUCTF](https://ctftime.org/ctf/95) | 🏆 CTFtime | n/a | CTF hosted by the Special interest Group for Information Security (SIGPwny) at the University of Illinois Urbana-Champa… |
-
 
 ## About UIUCTF
 

@@ -24,14 +24,12 @@
 | 9 | [cHo0s3N/JustCTF](../20-events/archives/justctf/JustCTF) | 6 ⭐ | Stego, Forensics, Crypto | 2019–2019 | writeups! #JUSTCTF. Contribute to cHo0s3N/JustCTF development by creating an account. |
 | 10 | justcatthefish/justctf-2024 | 2  | — | 2024–2024 | This repo contains sources for justCTF 2024 teaser and justCTF 2024 onsite finals competitions host… |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [justCTF 2024 teaser Writeup | siunam's Website](https://siunam321.github.io/ctf/justCTF-2024-teaser) | 📝 Blog | 2024–2024 | justCTF 2024 [teaser] is an online jeopardy-style capture the flag competition organized as a teaser for the open justC… |
 | 2 | [CTFtime.org / justCTF](https://ctftime.org/ctf/399) | 🏆 CTFtime | 2025–2025 | We are organizing justCTF 2025 this year, an online jeopardy competition that will be hosted on Saturday, 2nd of August… |
-
 
 ## About justCTF
 

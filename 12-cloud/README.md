@@ -8,24 +8,6 @@ Misconfiguration exploitation, IAM privilege escalation, container escapes, Kube
 
 This category contains **11 curated sources** from across the CTF ecosystem: 10 the collection repositories, 1 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
-## 🏆 Recommended Repositories (the collection)
-
-The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
-
-| # | Repository | Stars | Difficulty | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
-| 1 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 2 | [orangetw/My-CTF-Web-Challenges](../02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Varied | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source code, write-up and ide… |
-| 3 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Varied | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and discord server. A c… |
-| 4 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
-| 5 | [JohnHammond/ctf-katana](../30-archetypes/archives/awesome-lists/ctf-katana) | 2,920 ⭐⭐⭐⭐ | Varied | 2015–2020 | This repository aims to hold suggestions (and hopefully/eventually code) for CTF challenges. The "project" is nicknamed… |
-| 6 | [fkie-cad/awesome-embedded-and-iot-security](../30-archetypes/archives/awesome-lists/awesome-embedded-and-iot-security) | 2,349 ⭐⭐⭐⭐ | Varied | 2013–2020 | A curated list of awesome resources about embedded and IoT security. The list contains software and hardware tools, boo… |
-| 7 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
-| 8 | [neutrinoguy/awesome-ics-writeups](../30-archetypes/archives/awesome-lists/awesome-ics-writeups) | 201 ⭐⭐ | Varied | 2013–2025 | A collection of writeups related to ICS/SCADA hacking. This covers areas like OT, IoT and IIoT. It includes exploitatio… |
-| 9 | sigpwny/UIUCTF-2023-Public | 39 ⭐ | Varied | 2023–2023 | This is the repository for all UIUCTF 2023 challenges and infrastructure. This is an exact copy of our development repo… |
-| 10 | justcatthefish/justctf-2023 | 21 ⭐ | Elite | 2023–2023 | This repo contains sources for justCTF 2023 challenges hosted by justCatTheFish as well as summary of winners and spons… |
-
-
 ## ✍️ Curated Articles & Walkthroughs
 
 Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
@@ -67,7 +49,6 @@ RBAC abuses, container escapes, etcd access.
 privileged containers, capabilities, cgroup escapes.
 
 *No directly-matching resources in this collection — consult the broader category list above.*
-
 
 ## 🎯 Suggested Learning Order
 

@@ -20,7 +20,6 @@ The RE tooling stack is dominated by Ghidra (free, NSA), IDA Pro (commercial, in
 | 8 | [Cutter](https://cutter.re/) | C++ | GUI frontend for radare2. Easier onboarding than raw r2. |
 | 9 | [binwalk](../40-tooling/archives/forensics-tools/binwalk) | Python | Firmware analysis tool. Identifies and extracts embedded files. |
 
-
 ## Quick Installation
 
 ```bash

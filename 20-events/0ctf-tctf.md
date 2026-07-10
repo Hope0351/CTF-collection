@@ -24,7 +24,6 @@
 | 9 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
 | 10 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
-
 ### Articles, Videos & Blog Posts (3)
 
 | # | Title | Source | Year | Summary |
@@ -32,7 +31,6 @@
 | 1 | [CTFtime.org / 0CTF](https://ctftime.org/ctf/99) | 🏆 CTFtime | 2021–2022 | Capture The Flag, CTF teams, CTF ratings, CTF archive, CTF writeups. ... 0CTF/TCTF 2022, 100.00. 0CTF/TCTF 2021 Finals,… |
 | 2 | [CTFtime.org / 0CTF 2025 tasks and writeups](https://ctftime.org/event/2997/tasks) | 🏆 CTFtime | 2025–2026 | I don't remember · Follow @CTFtime. © 2012 — 2026 CTFtime team. All tasks and writeups are copyrighted by their respect… |
 | 3 | [Chovid99's Blog](https://chovid99.github.io) | 📝 Blog | 2024–2024 | 28 minutes. Writeup, GreyCTF, Blockchain, Evm, Uniswap · 0CTF 2024. Writeup for 0CTF 2024. Dec 23, 2024 · ... |
-
 
 ## About 0CTF/TCTF
 

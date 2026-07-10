@@ -22,14 +22,12 @@
 | 6 | [kyndrawynne/pwnscripts](../40-tooling/archives/pwn-tools/pwnscripts) | 4  | Pwn, Web, Reverse Engineering | n/a | This repository contains my solutions to the challenges I completed in the Pwn College program. Pwn… |
 | 7 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. … |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [pwn.college](https://pwn.college) | 📝 Blog | n/a | Some of the modules are closed-source, because they include source code and solution scripts, but others can be found o… |
 | 2 | [pwncollege: Dealing with Data. pwn college dealing with data room | by Sourav B…](https://medium.com/@souravbose361/pwn-college-dealing-with-data-1d7bac04c1a4) | ✍️ Medium | n/a | Let's start your journey through encodings with something simple. This program takes a password, but you have no way to… |
-
 
 ## About pwn.college
 

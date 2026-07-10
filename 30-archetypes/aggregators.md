@@ -18,7 +18,6 @@ Aggregators provide a stable long-term archive even if original event websites d
 | 4 | [PumpkingWok/CTFGym](../30-archetypes/archives/practice-platforms/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) You have to install … |
 | 5 | [iamABH/awesome-hardware-ctf](../30-archetypes/archives/awesome-lists/awesome-hardware-ctf) | 65 ⭐⭐ | Web, Misc, Hardware | n/a | Awesome Hardware CTF is a curated list of hardware-oriented CTF challenges. We did not create these challenges but only… |
 
-
 ## How to Use These Repositories
 
 Aggregators are best used for **corpus-scale research**. If you need to study many CTF challenges at once (e.g., for vulnerability-classification research, or for training an automated CTF-solving agent), the aggregators are the natural starting point.

@@ -4,6 +4,21 @@ All notable changes to this CTF-collection repository are documented in this fil
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-07-10] — Remove Recommended/Featured Repository Sections
+
+### Removed
+- **"Top Featured Repositories" section** from `README.md` — the curated list of 20 top repos with star counts and descriptions.
+- **"Recommended Repositories (the collection)" sections** from all 13 category READMEs (`01-pwn/` through `13-network-pcap/`) — each contained 20-30 repo entries with stars, difficulty, year range, and annotations.
+- **`00-start-here/recommended-repos.md`** — the standalone "Top 10 Recommended Repositories" page, including its table and "How to use these" guidance.
+- **References to `recommended-repos.md`** from `README.md` (directory tree and "How to Use" section) and `00-start-here/README.md` (file listing table).
+
+### Impact
+- 14 sections removed across 14 markdown files.
+- 64 files had references to `recommended-repos.md` cleaned up.
+- The collection's curation files now focus on curated articles, walkthroughs, sub-topic deep dives, and event/archetype indexes — no standalone repo recommendation tables remain.
+- All archived resources remain accessible via their `archives/` subdirectories within each category.
+
+
 ## [2026-07-10] — Quality Filter: Professional Writeups Only
 
 ### Changed

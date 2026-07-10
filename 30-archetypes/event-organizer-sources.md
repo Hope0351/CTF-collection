@@ -19,7 +19,6 @@ These are the gold standard for studying CTF challenges because they reveal the 
 | 5 | [Live-CTF/LiveCTF-DEFCON32](../20-events/archives/def-con-ctf/LiveCTF-DEFCON32) | 23 ⭐ | — | 2024–2024 | This repository contains infrastructure, challenges and solutions for the DEFCON32 LiveCTF. Qualifier Streams Finals Re… |
 | 6 | dicegang/dicectf-quals-2025-challenges | 9 ⭐ | Crypto, Reverse Engineering, Pwn | 2025–2025 | All challenges from DiceCTF Quals 2025. Contribute to dicegang/dicectf-quals-2025-challenges development by creating an… |
 
-
 ## How to Use These Repositories
 
 Event-organizer source releases are best used as **ground truth**. When studying a past CTF, always check whether the organizers have published the challenge source — if they have, that source is the authoritative reference for the intended solve path.

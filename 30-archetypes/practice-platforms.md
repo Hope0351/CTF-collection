@@ -21,7 +21,6 @@ Practice platforms are the primary on-ramp for new CTF players. picoCTF, pwn.col
 | 7 | [ShubhamJagtap2000/TryHackMe-THM](../20-events/archives/tryhackme/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs on the browser! |
 | 8 | [ftiannisa/write-up](../30-archetypes/archives/personal-collections/write-up-ftiannisa) | 2  | Pwn, Web, Crypto | 2021–2023 | Write-up for CTF challenges solved by me, a total noob. Language: English and (mostly) Indonesian. This is for archival… |
 
-
 ## How to Use These Repositories
 
 Practice platforms are best used as **structured learning environments**. They are the primary on-ramp for new CTF players and the most common source of beginner-tier writeups.

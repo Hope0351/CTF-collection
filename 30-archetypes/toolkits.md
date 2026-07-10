@@ -13,7 +13,6 @@ Toolkit repositories are the tooling layer of the ecosystem and are commonly ref
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 
-
 ## How to Use These Repositories
 
 Toolkits are best used as **environment setup shortcuts**. Rather than installing each tool individually on your system, you can pull a toolkit Docker image and have a complete, isolated CTF environment ready in seconds.

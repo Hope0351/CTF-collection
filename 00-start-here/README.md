@@ -8,8 +8,6 @@ Welcome! If you're new to Capture The Flag competitions, this is the right place
 |---|---|
 | [`learning-path.md`](learning-path.md) | A linear, ordered learning path from absolute beginner to elite-competition-ready. |
 | [`tools-cheatsheet.md`](tools-cheatsheet.md) | A condensed cheat sheet of the tools and one-liners you'll need most often. |
-| [`recommended-repos.md`](recommended-repos.md) | The top-10 highest-value repositories to bookmark — your "starter pack." |
-
 ## The 30-second version
 
 If you have 30 seconds and want the absolute minimum:

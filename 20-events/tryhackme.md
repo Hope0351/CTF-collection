@@ -20,7 +20,6 @@
 | 4 | [ShubhamJagtap2000/TryHackMe-THM](../20-events/archives/tryhackme/TryHackMe-THM) | 15 ⭐ | Web | n/a | TryHackMe is a free online platform for learning cybersecurity, using hands-on exercises and labs o… |
 | 5 | [The-Debarghya/TryHackMe-Writeups](../20-events/archives/tryhackme/TryHackMe-Writeups) | 11 ⭐ | — | n/a | A repository contains writeups for TryHackMe PwnBoxes and Rooms that have been solved. PS- Please t… |
 
-
 ### Articles, Videos & Blog Posts (17)
 
 | # | Title | Source | Year | Summary |
@@ -42,7 +41,6 @@
 | 15 | [TryHackMe — Blue WriteUp with Answers | by Ahmedkhaled - Medium](https://medium.com/@ahmedkhaled1305/tryhackme-blue-writeup-with-answers-f102d5587db2) | ✍️ Medium | n/a | TryHackMe — Blue WriteUp with Answers Hey everyone! In this writeup, I'll be walking you through the Blue room on TryHa… |
 | 16 | [TryHackMe — Light Writeup/Walkthrough | by Timnik](https://medium.com/@timnik/tryhackme-light-writeup-walkthrough-ae1b549045f9) | ✍️ Medium | n/a | This room simulates a database application. Our goal is to find the admin's credentials (username and password) and a f… |
 | 17 | [TryHackMe 0day Writeup - by Ria Banerjee - Medium](https://medium.com/@ria.banerjee005/tryhackme-0day-writeup-ffd8e98b4675) | ✍️ Medium | n/a | TryHackMe 0day Writeup This is room is a Medium level CTF challenge on TryHackMe which requires exploiting Ubuntu. |
-
 
 ## About TryHackMe
 

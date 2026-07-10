@@ -20,7 +20,6 @@
 | 4 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
 | 5 | [D4mianWayne/PwnLand](../01-pwn/archives/PwnLand) | 62 ⭐⭐ | Pwn, Reverse Engineering, Programming | 2020–2025 | Knowledge Base of Exploitation Techniques. Contribute to pwnfuzz/exploitation-grimoire development … |
 
-
 ### Articles, Videos & Blog Posts (6)
 
 | # | Title | Source | Year | Summary |
@@ -31,7 +30,6 @@
 | 4 | [Space Heroes CTF - CTFtime](https://ctftime.org/ctf/728) | 🏆 CTFtime | n/a | Space Heroes CTF is an online jeopardy style Capture the Flag competition hosted by the FITSEC Team From Florida Tech. … |
 | 5 | [NahamCon CTF 2023: Web Challenge Walkthroughs - YouTube](https://www.youtube.com/watch?v=XHg_sBD0-es) | ▶️ YouTube | 2023–2023 | ... blog/ctf/2023/#nahamcon ↢NahamConCTF↣ https ... Web Challenges [Space Heroes CTF 2023]. CryptoCat•13K views · 25:35… |
 | 6 | [CyberSpace CTF 2024 Reverse Engineering Challenges - Medium](https://medium.com/@ELJoOker/cyberspace-ctf-2024-reverse-engineering-challenges-4226b9055547) | ✍️ Medium | 2024–2024 | This write-up is for some of the Reverse Engineering and Forensics challenges that I've solved in the NahamCon CTF… A c… |
-
 
 ## About NahamCon CTF
 

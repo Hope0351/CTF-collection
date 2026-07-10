@@ -18,12 +18,10 @@
 | 2 | [Sudoite/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Sudoite) | 27 ⭐ | Programming, Forensics, Crypto | 2016–2019 | This is a repository of writeups for various CTF challenges. I am intentionally leaving in discussi… |
 | 3 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
 
-
 ### Articles, Videos & Blog Posts (0)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
-
 
 ## About AngstromCTF
 

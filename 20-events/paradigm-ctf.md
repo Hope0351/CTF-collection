@@ -20,14 +20,12 @@
 | 4 | [theori-io/ctf](../30-archetypes/archives/team-archives/ctf-theori-io) | 133 ⭐⭐ | — | 2020–2025 | LINE CTF 2024 Write Up. 2023. SSTF Hackers' playground (1st). SSTF CTF 2023 Write Up - The Duck.pdf… |
 | 5 | [PumpkingWok/CTFGym](../30-archetypes/archives/practice-platforms/CTFGym) | 121 ⭐⭐ | Blockchain | 2018–2022 | I'd like to maintain a list of ctf related to solidity smart contracts. (both testnet and mainnet) … |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [Web3 Hacking: Paradigm CTF 2022 Writeup | by Amber Group](https://medium.com/amber-group/web3-hacking-paradigm-ctf-2022-writeup-3102944fd6f5) | ✍️ Medium | 2022–2022 | Paradigm CTF is one of the most challenging Web3-focused security competitions — amazing for blockchain security folks,… |
 | 2 | [Paradigm CTF 2022: Write-Up Collection | Philogy's blog](https://philogy.github.io/posts/paradigm-ctf-2022-write-up-collection) | 📝 Blog | 2022–2022 | This post contains technical write-ups of the Hint Finance and Just In Time “Earn rewards without risk by depositing to… |
-
 
 ## About Paradigm CTF
 

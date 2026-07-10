@@ -45,7 +45,6 @@ This directory cross-indexes the corpus by CTF event. Each event has its own pag
 | UTCTF | B-tier | — | Annual — variable. | [`utctf.md`](utctf.md) |
 | IRISCTF | B-tier | — | Annual — January. | [`irisctf.md`](irisctf.md) |
 
-
 ## How to Use This Index
 
 1. **Find an event you want to study.** Use the table above to navigate to its dedicated page.

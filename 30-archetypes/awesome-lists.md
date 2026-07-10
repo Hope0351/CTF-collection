@@ -21,7 +21,6 @@ Awesome-lists are the discovery layer of the ecosystem. `apsdehal/awesome-ctf` i
 | 7 | [iamABH/awesome-hardware-ctf](../30-archetypes/archives/awesome-lists/awesome-hardware-ctf) | 65 ⭐⭐ | Web, Misc, Hardware | n/a | Awesome Hardware CTF is a curated list of hardware-oriented CTF challenges. We did not create these challenges but only… |
 | 8 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Forensics, Crypto, ICS/SCADA | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
 
-
 ## How to Use These Repositories
 
 Awesome-lists are best used as **discovery tools**. When you're not sure where to start in a new category or sub-topic, consult the relevant awesome-list — they are explicitly designed for browsing.

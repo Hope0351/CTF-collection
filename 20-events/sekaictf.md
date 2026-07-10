@@ -21,7 +21,6 @@
 | 5 | project-sekai-ctf/sekaictf-2024 | 83 ⭐⭐ | Crypto, Reverse Engineering, Pwn | 2024–2024 | This repository contains official source code and writeups for challenges from SekaiCTF 2024. CTFTi… |
 | 6 | [Ayoub-2/CTF-Writeup](../30-archetypes/archives/personal-collections/CTF-Writeup-Ayoub) | 10 ⭐ | Web, Misc | 2022–2022 | ctf writeups, especially web and misc. Contribute to Ayoub-2/CTF-Writeup development by creating an… |
 
-
 ### Articles, Videos & Blog Posts (4)
 
 | # | Title | Source | Year | Summary |
@@ -30,7 +29,6 @@
 | 2 | [CTFtime.org / SekaiCTF 2025 tasks and writeups](https://ctftime.org/event/2683/tasks) | 🏆 CTFtime | 2025–2025 | SekaiCTF 2025 /; Tasks. Tasks. Name, Points, Tags, Writeups ... Sign in with. Enter using Google Enter using Twitter En… |
 | 3 | [Writeup :: teddyctf - teddy / TheSavageTeddy](https://thesavageteddy.github.io/tags/writeup) | 📝 Blog | 2025–2025 | I managed to get the first blood prizes for both Solidity / EVM Blockchain challenges from Sekai CTF 2025, here are the… |
 | 4 | [SekaiCTF 2022 Writeups - Alan's Blog](https://lebr0nli.github.io/blog/security/SekaiCTF-2022) | 📝 Blog | 2022–2022 | 而這部分Github Copilot幫了我大忙，我們只需要把java的function code當成註解，並稍微引導一下，. 有時只需要改個一兩行，甚至完全不用 ... |
-
 
 ## About SekaiCTF
 

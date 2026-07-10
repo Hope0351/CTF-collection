@@ -39,8 +39,7 @@ CTF-collection/
 ├── 00-start-here/                     ← onboarding track for newcomers
 │   ├── README.md
 │   ├── learning-path.md
-│   ├── tools-cheatsheet.md
-│   └── recommended-repos.md
+│   └── tools-cheatsheet.md
 │
 ├── 01-pwn/                            ← binary exploitation
 ├── 02-web/                            ← web exploitation
@@ -131,8 +130,7 @@ Each category directory follows the same internal structure: a `README.md` (orie
 ### If you're new to CTFs
 1. Start with [`00-start-here/`](00-start-here/README.md) for a structured learning path.
 2. Read [`00-start-here/tools-cheatsheet.md`](00-start-here/tools-cheatsheet.md) to set up your environment.
-3. Bookmark the top-10 recommended repositories in [`00-start-here/recommended-repos.md`](00-start-here/recommended-repos.md).
-4. Pick a category that matches your background (web developers → `02-web/`, mathematicians → `03-crypto/`, systems programmers → `01-pwn/`).
+3. Pick a category that matches your background (web developers → `02-web/`, mathematicians → `03-crypto/`, systems programmers → `01-pwn/`).
 
 ### If you're an intermediate player preparing for elite competitions
 1. Go directly to [`20-events/`](20-events/README.md) and pick the event you're preparing for.
@@ -147,34 +145,6 @@ Each category directory follows the same internal structure: a `README.md` (orie
 ### If you're a security researcher
 1. The full corpus is in [`99-appendix/full-repo-index.md`](99-appendix/full-repo-index.md).
 2. The methodology used to compile it is in [`99-appendix/methodology.md`](99-appendix/methodology.md).
-
----
-
-## ⭐ Top Featured Repositories
-
-The following internal archives are the structural backbone of the open-source CTF writeup ecosystem. Each has been cross-referenced by multiple independent search angles and verified to have substantial community adoption.
-
-| # | Repository | Stars | Categories | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
-| 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
-| 2 | daffainfo/ctf-writeup | 188 ⭐⭐ | — | 2021–2024 | Stars Archive. This repository shall comprise writeups concerning Capture The Flag (… |
-| 3 | [r3kapig/writeup](30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here.… |
-| 4 | [apsdehal/awesome-ctf](30-archetypes/archives/awesome-lists/awesome-ctf) | 11,656 ⭐⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2016–2016 | A curated list of Capture The Flag (CTF) frameworks, libraries, resources, softwares and tutorials.… |
-| 5 | [blockthreat/blocksec-ctfs](30-archetypes/archives/awesome-lists/blocksec-ctfs) | 1,632 ⭐⭐⭐⭐ | Programming, Reverse Engineering, Crypto | 2017–2023 | A curated list of blockchain security Wargames, Challenges, and Capture the Flag (CTF) competitions… |
-| 6 | [minaminao/ctf-blockchain](08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Programming, Crypto, OSINT | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal … |
-| 7 | [momenbasel/htb-writeups](20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Forensics, Crypto, Mobile | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactiv… |
-| 8 | [orangetw/My-CTF-Web-Challenges](02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Crypto, Cloud, Pwn | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source co… |
-| 9 | [Crypto-Cat/CTF](30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2026–2026 | CTF challenge write-ups, files, scripts etc to go with my video walkthroughs. Check out my blog and… |
-| 10 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/4… |
-| 11 | [xtiankisutsa/awesome-mobile-ctf](30-archetypes/archives/awesome-lists/awesome-mobile-ctf) | 1,157 ⭐⭐⭐⭐ | Forensics, Crypto, Mobile | 2013–2022 | This is a curated list of mobile based CTFs, write-ups and vulnerable mobile apps. Most of them are… |
-| 12 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Programming, Forensics, Crypto | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types o… |
-| 14 | DownUnderCTF/Challenges_2025_Public | 110 ⭐⭐ | — | 2025–2025 | Files + Solutions for DownUnderCTF 2025 Challenges - DownUnderCTF/Challenges_2025_Public: … |
-| 15 | Kasimir123/CTFWriteUps | 61 ⭐⭐ | Forensics, Crypto, Stego | 2021–2021 | Collection of CTF Writeups for various ctfs. Mostly focused on reverse engineering, and contains al… |
-| 16 | [tim-barc/ctf_writeups](30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 ⭐ | Forensics, Mobile, Reverse Engineering | 2019–2025 | Welcome to my CTF Writeups repository! Here, I document the solutions and methodologies used to sol… |
-| 17 | [ashutosh1206/Crypto-CTF-Writeups](03-crypto/archives/Crypto-CTF-Writeups) | 42 ⭐ | Crypto | n/a | Writeups to Crypto Challenges in CTFs. Contribute to ashutosh1206/Crypto-CTF-Writeups development b… |
-| 18 | [merrychap/ctf-writeups](30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 ⭐ | Pwn, Reverse Engineering, Forensics | n/a | All writeups are about Reverse Engineering and Binary Exploitation tasks. No crypto, forensics, and… |
-| 19 | Tan-JunWei/CTF-Writeups | 15 ⭐ | Web, OSINT, Forensics | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and… |
-| 20 | SandWithCheese/ctf-writeups | 14 ⭐ | Reverse Engineering | n/a | Welcome to my CTF (Capture The Flag) writeups repository! This repository contains solutions for va… |
 
 ---
 

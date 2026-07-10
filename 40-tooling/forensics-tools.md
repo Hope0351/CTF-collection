@@ -23,7 +23,6 @@ Volatility dominates memory forensics. Autopsy and The Sleuth Kit handle disk fo
 | 11 | [exiftool](https://exiftool.org/) | Perl | Metadata reader/writer. Essential for image forensics. |
 | 12 | [steghide](https://steghide.sourceforge.net/) | C++ | Embeds/extracts data in JPEG, BMP, WAV, AU. Password-protected. |
 
-
 ## Quick Installation
 
 ```bash

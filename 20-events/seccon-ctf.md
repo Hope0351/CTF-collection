@@ -24,13 +24,11 @@
 | 11 | SECCON/SECCON13_final_CTF | 6 ⭐ | — | n/a | SECCON 13 Final CTF. Detail. DAY 1 (3/1). Registration: 10:00 ~ 10:30; Preparation: 10:30 ~ 11:00; … |
 | 12 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team. Contribute to shekkbuilder/ctf-2 development by creating an account on … |
 
-
 ### Articles, Videos & Blog Posts (1)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [CTFtime.org / SECCON CTF](https://ctftime.org/ctf/92) | 🏆 CTFtime | n/a | Capture The Flag, CTF teams, CTF ratings, CTF archive, CTF writeups. ... github jit nc logs udp tcp apps golang spi i2c… |
-
 
 ## About SECCON CTF
 

@@ -17,14 +17,12 @@
 | 1 | sajjadium/ctf-archives | 1,509 ⭐⭐⭐⭐ | Crypto, Hardware | 2013–2026 | CTF Archives: Collection of CTF Challenges. Contribute to sajjadium/ctf-archives development by cre… |
 | 2 | [juliancasaburi/irisctf-2025](../20-events/archives/irisctf/irisctf-2025) | 0  | — | 2024–2025 | The writeups in this repository correspond to the Iris CTF 2025 event, organized by IrisSec, held f… |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [IrisSec](https://irisc.tf) | 📝 Blog | n/a | IrisSec is a group of nerds who love breaking computers and making stuff. We host IrisCTF, an annual 48-hour CTF that t… |
 | 2 | [CTFtime.org / IrisCTF 2025](https://ctftime.org/event/2503) | 🏆 CTFtime | 2025–2025 | IrisCTF is a 48-hour Capture the Flag competition organized by IrisSec. IrisCTF takes place the first full weekend of e… |
-
 
 ## About IRISCTF
 

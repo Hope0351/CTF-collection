@@ -20,14 +20,12 @@
 | 4 | 1GN1tE/CTF_Writeups | 35 ⭐ | Reverse Engineering, Crypto, Mobile | 2017–2021 | Writeups of some Reverse Engineering challenges in CTFs I played - 1GN1tE/CTF_Writeups. |
 | 5 | [MacacaHub/CTF-writeups](../30-archetypes/archives/personal-collections/CTF-writeups-MacacaHub) | 4  | Forensics, Crypto, Stego | 2019–2021 | 2021. BambooFox CTF 2021; HTCF Mid CTF 2021 (only for NSYSU course) · 2020. TCat CTF 2020; TJCTF 20… |
 
-
 ### Articles, Videos & Blog Posts (2)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
 | 1 | [CTFtime.org / BambooFox CTF 2021 / The Vault / Writeup](https://ctftime.org/writeup/25744) | 🏆 CTFtime | 2021–2021 | The Vault. The challenge is a simple HTML file with a keypad that allows you to input 4 digit pin. The file loads main.… |
 | 2 | [bamboofox official blog](https://bamboofox.github.io) | 📝 Blog | 2018–2018 | 2018 club courses · 106 club course. |
-
 
 ## About BambooFox CTF
 

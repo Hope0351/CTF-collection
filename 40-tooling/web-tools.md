@@ -20,7 +20,6 @@ Burp Suite is the dominant web-proxy tool. sqlmap automates SQL injection. ffuf 
 | 8 | [Postman](https://www.postman.com/) | Electron | API testing tool. Useful for non-HTTP APIs (gRPC, GraphQL, WebSocket). |
 | 9 | [CyberChef](https://gchq.github.io/CyberChef/) | JavaScript | Encoding/decoding Swiss Army knife. Useful for JWT, base64 variants, encoding chains. |
 
-
 ## Quick Installation
 
 ```bash

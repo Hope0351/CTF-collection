@@ -23,7 +23,6 @@ This directory cross-indexes the corpus by year. Each year-page lists the resour
 | 2025 | 48 | DEF CON 33, SekaiCTF 2025, multiple event source releases |
 | 2026 | 9 | Current year writeups (active competition) |
 
-
 ## Why a Temporal Index?
 
 The CTF ecosystem evolves rapidly — challenges that were cutting-edge in 2017 are now beginner-tier. The temporal index lets you:

@@ -19,7 +19,6 @@ SageMath is the dominant computational algebra system for crypto CTFs — it pro
 | 7 | [John the Ripper](https://www.openwall.com/john/) | C | CPU hash cracker. More flexible than Hashcat for unusual hash formats. |
 | 8 | [CyberChef](https://gchq.github.io/CyberChef/) | JavaScript | Web-based 'Swiss Army knife' for encoding/decoding operations. Indispensable for rapid prototyping. |
 
-
 ## Quick Installation
 
 ```bash

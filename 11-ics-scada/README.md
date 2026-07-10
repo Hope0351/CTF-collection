@@ -8,17 +8,6 @@ Industrial Control System challenges — Modbus exploitation, PLC logic analysis
 
 This category contains **4 curated sources** from across the CTF ecosystem: 4 the collection repositories, 0 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
-## 🏆 Recommended Repositories (the collection)
-
-The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
-
-| # | Repository | Stars | Difficulty | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
-| 2 | [neutrinoguy/awesome-ics-writeups](../30-archetypes/archives/awesome-lists/awesome-ics-writeups) | 201 ⭐⭐ | Varied | 2013–2025 | A collection of writeups related to ICS/SCADA hacking. This covers areas like OT, IoT and IIoT. It includes exploitatio… |
-| 3 | [hackthebox/business-ctf-2025](../20-events/archives/hackthebox/business-ctf-2025) | 69 ⭐⭐ | Intermediate | 2025–2025 | Official Writeups for HackTheBox Business CTF 2025: Operation Blackout. Small and medium teams Startups Nonprofits. Add… |
-| 4 | [kayranfatih/awesome-iot-and-hardware-security](../30-archetypes/archives/awesome-lists/awesome-iot-and-hardware-security) | 46 ⭐ | Varied | 2015–2026 | A collection of awesome tools, books, resources, software, documents and cool stuff about Internet of Things (IoT) and … |
-
-
 ## ✍️ Curated Articles & Walkthroughs
 
 Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
@@ -55,7 +44,6 @@ human-machine interface vulnerabilities.
 water hammer, pipeline rupture, grid destabilization.
 
 *No directly-matching resources in this collection — consult the broader category list above.*
-
 
 ## 🎯 Suggested Learning Order
 

@@ -20,7 +20,6 @@ Foundry (Rust) has displaced Hardhat (TypeScript) as the dominant exploit-develo
 | 8 | [web3.js](https://web3js.readthedocs.io/) | JavaScript | Older JavaScript Ethereum library. Still used but Ethers.js is preferred in modern code. |
 | 9 | [cast](https://book.getfoundry.sh/cast/) | Rust | Foundry's CLI tool for RPC interaction. `cast call`, `cast send`, `cast 4byte-decode` are the most-used subcommands. |
 
-
 ## Quick Installation
 
 ```bash

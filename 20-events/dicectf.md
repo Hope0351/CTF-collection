@@ -22,7 +22,6 @@
 | 7 | dicegang/dicectf-quals-2025-challenges | 9 ⭐ | Crypto, Reverse Engineering, Pwn | 2025–2025 | All challenges from DiceCTF Quals 2025. Contribute to dicegang/dicectf-quals-2025-challenges develo… |
 | 8 | [Nambers/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Nambers) | 5 ⭐ | Pwn, Reverse Engineering, OSINT | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-202… |
 
-
 ### Articles, Videos & Blog Posts (4)
 
 | # | Title | Source | Year | Summary |
@@ -31,7 +30,6 @@
 | 2 | [DiceCTF 2024 Quals - Chovid99's Blog](https://chovid99.github.io/posts/dicectf-2024-quals) | 📝 Blog | 2024–2024 | Below is the writeup for the pwn challenges that I managed to solve. Pwn. hop. Description. Using 32 bits to encode a s… |
 | 3 | [CTFtime.org / DiceGang](https://ctftime.org/team/109452) | 🏆 CTFtime | 2023–2023 | Mystery of Scattered Key · read writeup ; DiceCTF 2023 · vinaigrette [436] · read writeup ; DiceCTF 2023 · seaside [310… |
 | 4 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | ▶️ YouTube | 2024–2024 | DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn) · Comments. |
-
 
 ## About DiceCTF
 

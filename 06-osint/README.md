@@ -8,28 +8,6 @@ Investigation of public sources (social media, geolocation, satellite imagery, b
 
 This category contains **19 curated sources** from across the CTF ecosystem: 14 the collection repositories, 4 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 1 blog posts.
 
-## 🏆 Recommended Repositories (the collection)
-
-The following the collection repositories are the highest-value resources for this category. They are ranked by cross-search relevance, mention count, and star count.
-
-| # | Repository | Stars | Difficulty | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
-| 1 | [r3kapig/writeup](../30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Varied | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
-| 2 | [minaminao/ctf-blockchain](../08-blockchain-web3/archives/ctf-blockchain) | 1,084 ⭐⭐⭐⭐ | Elite | 2018–2025 | This repository collects blockchain challenges in CTFs and wargames. Some of them include personal writeups and solutio… |
-| 3 | [momenbasel/htb-writeups](../20-events/archives/hackthebox/htb-writeups) | 152 ⭐⭐ | Varied | 2017–2026 | The most comprehensive Hack The Box writeup collection - 500+ machines, 400+ challenges, interactive knowledge graph, s… |
-| 4 | [orangetw/My-CTF-Web-Challenges](../02-web/archives/My-CTF-Web-Challenges) | 2,853 ⭐⭐⭐⭐ | Varied | 2013–2025 | My CTF Web Challenges. This is the repository of all CTF challenges I made, including the source code, write-up and ide… |
-| 5 | Adamkadaban/CTFs | 840 ⭐⭐⭐ | Varied | 2018–2024 | CTF Cheat Sheet + Writeups / Files ... Really good resource from John Hammond for different types of challenges: https:… |
-| 6 | Tan-JunWei/CTF-Writeups | 15 ⭐ | Varied | n/a | Welcome to my Capture The Flag (CTF) writeup repository! Here you'll find detailed explanations and solutions to variou… |
-| 7 | [hackthebox/cyber-apocalypse-2025](../20-events/archives/hackthebox/cyber-apocalypse-2025) | 200 ⭐⭐ | Intermediate | 2025–2025 | Official writeups for Cyber Apocalypse CTF 2025: Tales from Eldoria. Questionnaire about finite fields and elliptic cur… |
-| 8 | hackplayers/hackthebox-writeups | 2,044 ⭐⭐⭐⭐ | Intermediate | 2017–2023 | Writeups for HacktheBox 'boot2root' machines. Contribute to Hackplayers/hackthebox-writeups development by creating an … |
-| 9 | [devploit/awesome-ctf-resources](../30-archetypes/archives/awesome-lists/awesome-ctf-resources) | 777 ⭐⭐⭐ | Varied | 2015–2015 | A list of Capture The Flag (CTF) frameworks, libraries, resources and software for started/experienced CTF players - de… |
-| 10 | [cybar-party/cybar-osint-ctf-2020](../06-osint/archives/cybar-osint-ctf-2020) | 24 ⭐ | Varied | 2020–2020 | Official challenge writeups · Community writeups · CTF Structure · Hosting Instructions · Credits · About · Releases · … |
-| 11 | [Nambers/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-Nambers) | 5 ⭐ | Advanced | 2022–2025 | BxMCTF-23 ; CSAW-Qual-2022 · CSAW-Qual-2022 ; DiceCTF-Final-2025 · DiceCTF-Final-2025 ; WolvCTF-2023 · WolvCTF-2023. |
-| 12 | [0xETX/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-0xETX) | 4  | Varied | 2021–2023 | Writeups for CTF challenges I have completed in the past. Contains different challenge categories such as Programming, … |
-| 13 | [C3n7ral051nt4g3ncy/Tiberian_Order_Writeup](../06-osint/archives/Tiberian_Order_Writeup) | 1  | Varied | n/a | How I solved this in less than 10 minutes My Go To Tool for image analysis is Aperi'Solve, it's a gem of a tool, and al… |
-| 14 | silly-lily/CTF-Writeups | 0  | Varied | 2022–2026 | Writeups for CTFs. Contribute to silly-lily/CTF-Writeups development by creating an account. |
-
-
 ## ✍️ Curated Articles & Walkthroughs
 
 Beyond the collection repositories, the following articles, videos, and blog posts from Medium, YouTube, and personal blogs provide additional depth on this category.
@@ -83,7 +61,6 @@ Top resources for this sub-topic:
 Dehashed, Intelligence X, breach compilation torrents.
 
 *No directly-matching resources in this collection — consult the broader category list above.*
-
 
 ## 🎯 Suggested Learning Order
 

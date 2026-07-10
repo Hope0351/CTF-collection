@@ -21,12 +21,10 @@
 | 5 | [phith0n/realworldctf](../20-events/archives/realworldctf/realworldctf-phith0n) | 115 ⭐⭐ | — | 2018–2019 | This is my Real World CTF Challenges source code: Just walk into the directory and docker-compose u… |
 | 6 | [chaitin/Real-World-CTF-3rd-Challenge-Attachments](../20-events/archives/realworldctf/RWCTF-3rd-Challenges) | 90 ⭐⭐ | — | n/a | Challenge attachments for RWCTF 3rd. Contribute to chaitin/Real-World-CTF-3rd-Challenge-Attachments… |
 
-
 ### Articles, Videos & Blog Posts (0)
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
-
 
 ## About RealWorldCTF
 
