@@ -35,9 +35,12 @@ Arizona State University's structured pwn learning platform. From absolute basic
 
 ## Suggested Approach for Studying pwn.college
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+pwn.college by ASU is THE structured pwn learning path, taking students from absolute basics to kernel exploitation through hands-on modules. To prepare:
+
+1. **Work through all modules in order** — pwn.college is designed as a progressive curriculum. Start with environment setup and shellcoding, then advance through stack exploitation, heap exploitation, and ultimately kernel exploitation.
+2. **Use the official `pwncollege/challenges` and `pwncollege/linux-luminarium` repositories** — these contain the challenge source code that underpins the platform, enabling deeper study beyond the web interface.
+3. **Practice in the provided VM environment** — pwn.college offers a dedicated environment that eliminates setup complexity. Use it to develop muscle memory with debugging tools (gdb, strace, ltrace).
+4. **Watch John Hammond's pwn.college walkthroughs** — his video coverage of pwn.college modules provides excellent supplementary explanations for each concept.
 
 ## See Also
 

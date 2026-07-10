@@ -39,8 +39,8 @@ Top resources for this sub-topic:
 
 - [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
-- Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
-- Kasimir123/CTFWriteUps: Collection of CTF Writeups for
+- [Adamkadaban/CTFs](../30-archetypes/archives/personal-collections/CTFs-Adamkadaban) - CTF Cheat Sheet + Writeups - 📚 Repository
+- [Kasimir123/CTFWriteUps](../30-archetypes/archives/personal-collections/CTFWriteUps-Kasimir123) - Collection of CTF Writeups - 📚 Repository
 - [JohnHammond/ctf-katana: This repository aims to hold  - the collection](../30-archetypes/archives/awesome-lists/ctf-katana) — 📚 Repository
 
 ### Custom protocol analysis

@@ -37,9 +37,12 @@ Organized by NahamSec. Beginner-friendly. This event is referenced **11 times** 
 
 ## Suggested Approach for Studying NahamCon CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+NahamCon by NahamSec features accessible challenges with excellent video walkthroughs, making it one of the best events for learning-friendly CTF practice. To prepare:
+
+1. **Watch John Hammond's YouTube coverage** — John Hammond provides detailed video walkthroughs of NahamCon challenges that are among the most beginner-friendly explanations in the CTF ecosystem.
+2. **Study past NahamCon challenge archives** — the official repositories include complete challenge sources, and NahamCon's consistent difficulty makes cross-year comparison highly productive.
+3. **Focus on web and reverse engineering** — NahamCon consistently produces strong, approachable challenges in these categories that teach practical skills transferable to real-world security work.
+4. **Participate live for the best experience** — NahamCon's community-driven atmosphere during the live event, including Discord interaction and streaming, creates an engaging learning environment.
 
 ## See Also
 

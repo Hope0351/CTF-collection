@@ -31,9 +31,12 @@ DeFi-specific challenges. Foundry-based; the canonical entry point for DeFi expl
 
 ## Suggested Approach for Studying Damn Vulnerable DeFi
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+Damn Vulnerable DeFi is a DeFi-specific CTF that teaches the critical exploitation techniques used against real decentralized finance protocols. To prepare:
+
+1. **Complete all challenges in order** — the challenges are designed to progressively teach DeFi attack vectors. Each one builds on concepts from previous levels.
+2. **Master flash loan mechanics** — flash loans are the foundational tool for most DeFi exploits. Ensure you thoroughly understand how they work before attempting the harder challenges.
+3. **Study oracle manipulation techniques** — price oracle manipulation is a recurring theme. Learn how spot prices, TWAPs, and chainlink oracles can be manipulated in different contexts.
+4. **Understand governance attacks** — several challenges involve exploiting governance mechanisms (token voting, proposal execution delays). Study how real DeFi governance systems work and their common vulnerabilities.
 
 ## See Also
 

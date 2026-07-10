@@ -41,9 +41,12 @@ The qualifier for DEF CON CTF Finals. Highly technical; serves as the gatekeeper
 
 ## Suggested Approach for Studying DEF CON CTF Quals
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+The qualifier is your gateway to DEF CON Finals. To prepare:
+
+1. **Solve past Nautilus Institute qualifier releases** chronologically — the difficulty and style evolve year over year, revealing patterns.
+2. **Focus on the categories that appear most consistently**: pwn (especially kernel and browser), web (complex chain exploits), and reverse engineering (obfuscated binaries).
+3. **Time-box your practice** — quals are time-limited. Practice solving challenges under a 48-hour deadline to build speed.
+4. **Study the scoring distribution** — DEF CON typically has a few very hard challenges worth many points. Don't neglect the easier ones for points.
 
 ## See Also
 

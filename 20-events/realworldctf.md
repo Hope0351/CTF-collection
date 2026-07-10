@@ -32,9 +32,12 @@ Organized by Chaitin Tech (China). Challenges are based on real-world vulnerabil
 
 ## Suggested Approach for Studying RealWorldCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+RealWorldCTF by Chaitin Tech features challenges based on real-world software vulnerabilities rather than synthetic puzzles. To prepare:
+
+1. **Focus on real-world targets** — RealWorldCTF challenges are based on actual software like browsers, PDF readers, office suites, and network services. Study CVEs and real vulnerability disclosures.
+2. **Study phith0n's published challenges** — the challenge author's GitHub repositories include full source and solutions for past editions, providing direct insight into the intended solve paths.
+3. **Practice with the RealWorldCTF official archives** — Chaitin publishes complete challenge releases. Work through the RWCTF 3rd and later editions to understand their approach to real-vuln-based challenges.
+4. **Read r3kapig writeups for RealWorldCTF** — they consistently provide thorough explanations of the real-world vulnerability chains exploited in each challenge.
 
 ## See Also
 

@@ -29,9 +29,12 @@ Organized by AngstromCTF team at CMU West. Beginner-friendly. This event is refe
 
 ## Suggested Approach for Studying AngstromCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+AngstromCTF is a beginner-friendly student-run CTF organized at CMU West, making it an excellent entry point for competitive CTF play. To prepare:
+
+1. **Start with web and crypto fundamentals** — AngstromCTF consistently produces well-designed challenges in these categories that progressively build from basic to intermediate concepts.
+2. **Work through the sajjadium/ctf-archives for AngstromCTF** — the comprehensive archive includes multiple years of AngstromCTF challenges, making it easy to study the event's difficulty progression.
+3. **Use AngstromCTF as your first competitive event** — the beginner-friendly difficulty and student-organized nature create a welcoming environment for players transitioning from practice platforms to live competition.
+4. **Read community writeups** — while AngstromCTF has fewer published writeups than larger events, the available ones on CTFtime and personal blogs provide good insight into the challenge design philosophy.
 
 ## See Also
 

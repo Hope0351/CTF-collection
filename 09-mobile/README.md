@@ -26,7 +26,7 @@ apktool, jadx, dex2jar.
 
 Top resources for this sub-topic:
 
-- 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering — 📚 Repository
+- [1GN1tE/CTF_Writeups](../30-archetypes/archives/personal-collections/CTF_Writeups-1GN1tE) - Writeups including mobile RE - 📚 Repository
 
 ### IPA reverse engineering
 
@@ -34,7 +34,7 @@ class-dump, Hopper, Ghidra.
 
 Top resources for this sub-topic:
 
-- 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering — 📚 Repository
+- [1GN1tE/CTF_Writeups](../30-archetypes/archives/personal-collections/CTF_Writeups-1GN1tE) - Writeups including mobile RE - 📚 Repository
 
 ### Frida dynamic instrumentation
 

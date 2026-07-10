@@ -8,13 +8,15 @@ Aggregated writeups from competitive CTF teams. Among the highest-signal sources
 
 Team archives are the strongest single source for elite-tier learning. The three identified here — `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` — collectively cover DEF CON, hxp, 0CTF, DiceCTF, HitCon, RealWorldCTF, and Paradigm CTF at competition depth.
 
-## Curated Repositories (3)
+## Curated Repositories (5)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
 | 1 | [r3kapig/writeup](../30-archetypes/archives/team-archives/writeup-r3kapig) | 188 ⭐⭐ | Forensics, Crypto, Pwn | 2018–2022 | CTF challenges writeup. r3kapig is a united CTF Team. We are publishing our official writeups here. The writeup page is… |
 | 2 | p4-team/ctf | 1,844 ⭐⭐⭐⭐ | — | 2015–2023 | 2023.04.01 Hack-a-Sat 4 Quals(4th place/381 teams) · 2022.01.29 InsomniHack Teaser 2022(1st place/489 teams) · 2021.12.… |
 | 3 | shekkbuilder/ctf-2 | 0  | — | 2015–2017 | Ctf solutions from p4 team.…|
+| 4 | [theori-io/ctf](../30-archetypes/archives/team-archives/ctf-theori-io) | 133 ⭐⭐ | Pwn, Crypto, Web | 2020–2025 | High-quality writeups from Theori team members covering elite-tier competitions. |
+| 5 | ByteBandits/writeups | 104 ⭐⭐ | — | Varied | Wiki-format writeups from the ByteBandits team. |
 
 ## How to Use These Repositories
 

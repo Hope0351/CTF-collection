@@ -42,9 +42,12 @@ Australia's premier CTF. Beginner-friendly; well-documented. This event is refer
 
 ## Suggested Approach for Studying DownUnderCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+DownUnderCTF is Australia's largest CTF, known for approachable challenges with excellent learning value for beginner and intermediate players. To prepare:
+
+1. **Study the official DownUnderCTF challenge releases** — the `DownUnderCTF/Challenges_2025_Public`, `Challenges_2022_Public`, and `Challenges_2021_public` repositories include files and official solutions.
+2. **Work through challenges by difficulty tier** — DownUnderCTF uses clear difficulty labels. Start with the easy challenges in each category to build confidence before attempting medium and hard.
+3. **Read the extensive Medium writeup collection** — DownUnderCTF has one of the richest writeup ecosystems on Medium, with many players publishing detailed walkthroughs each year.
+4. **Focus on web and forensics categories** — DownUnderCTF is particularly known for well-designed challenges in these areas that teach practical, real-world applicable skills.
 
 ## See Also
 

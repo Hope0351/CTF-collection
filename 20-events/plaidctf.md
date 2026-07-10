@@ -34,9 +34,12 @@ Organized by Plaid Parliament of Pwning (PPP), the historically dominant Carnegi
 
 ## Suggested Approach for Studying PlaidCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+PlaidCTF by PPP (Plaid Parliament of Pwning) favors elegant, math-heavy challenges that reward deep theoretical understanding. To prepare:
+
+1. **Study the pwning/public-writeup archive** — PPP's historical writeup repository contains solutions spanning many years, revealing their preference for mathematically beautiful exploits.
+2. **Focus on crypto and pwn with mathematical foundations** — PlaidCTF challenges often require understanding the mathematical properties of algorithms, not just applying known techniques.
+3. **Read p4-team writeups for PlaidCTF** — as one of the few teams that consistently solves the hardest PlaidCTF challenges, their writeups provide invaluable insight into the intended mathematical approaches.
+4. **Strengthen your number theory and algebra** — PlaidCTF's crypto challenges consistently go beyond standard CTF crypto into deeper mathematical territory that rewards formal study.
 
 ## See Also
 

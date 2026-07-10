@@ -38,9 +38,12 @@ Organized by Shanghai Jiao Tong University teams (0ops and Tencent). One of the 
 
 ## Suggested Approach for Studying 0CTF/TCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+0CTF/TCTF is one of the most technically demanding CTFs in the world, organized by Shanghai Jiao Tong University. To prepare:
+
+1. **Study the 0CTF and TCTF official writeups** — both events publish intended solutions that reveal the exact solve paths, which is invaluable for understanding their challenge design philosophy.
+2. **Focus on their excellent pwn and crypto challenges** — these are consistently the hardest and most innovative categories, often involving novel exploitation techniques.
+3. **Read r3kapig writeups for 0CTF/TCTF** — as a top Chinese team, their writeups provide context and techniques that align closely with the challenge style.
+4. **Practice with SJTU's past challenge archives** — the 0ops team publishes challenges that test deep systems knowledge, especially in kernel and userspace pwn.
 
 ## See Also
 

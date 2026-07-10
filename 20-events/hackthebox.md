@@ -10,7 +10,7 @@
 
 ## Curated Resources for HackTheBox
 
-### Internal Archives (21)
+### Internal Archives (19)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
@@ -65,9 +65,12 @@ Both an event organizer (Cyber Apocalypse, Business CTF, University CTF) and a y
 
 ## Suggested Approach for Studying HackTheBox
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+HackTheBox is a year-round platform with both individual machines and seasonal CTF events. To prepare:
+
+1. **Follow the recommended learning path** — HTB provides a structured progression from easy to hard machines. Follow it rather than jumping to hard boxes.
+2. **Watch IppSec's video walkthroughs** — the IppSec YouTube channel has walkthroughs for nearly every HTB machine and is one of the best learning resources in the ecosystem.
+3. **Practice HTB-specific skills** — privilege escalation on Linux and Windows, active directory exploitation, and web application attacks are the core HTB skill set.
+4. **Participate in seasonal events** — Cyber Apocalypse, University CTF, and HTB Business CTF provide competitive practice with fresh challenges.
 
 ## See Also
 

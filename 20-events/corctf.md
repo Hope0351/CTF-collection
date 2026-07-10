@@ -36,9 +36,12 @@ Organized by Crusaders-of-Rust. Notable for creative challenge design. Source re
 
 ## Suggested Approach for Studying corCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+corCTF by Crusaders-of-Rust is known for high-quality pwn challenges that push the boundaries of modern exploitation. To prepare:
+
+1. **Study the official corCTF releases** — Crusaders-of-Rust publishes complete challenge archives for 2022, 2024, and 2025 with full solutions, making them ideal study material.
+2. **Focus on heap exploitation and modern mitigation bypasses** — corCTF's pwn challenges consistently target cutting-edge glibc features, allocator internals, and kernel mitigations.
+3. **Practice with their C++ and Rust challenge targets** — corCTF frequently uses modern languages that introduce unique exploitation paradigms not found in traditional C-based CTFs.
+4. **Read the p4-team and community writeups** — corCTF's challenging pwn category often requires multiple approaches, and community writeups reveal alternative solve paths.
 
 ## See Also
 

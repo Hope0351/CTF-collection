@@ -28,9 +28,12 @@ Beginner-to-intermediate CTF, well-regarded for creative challenge design. This 
 
 ## Suggested Approach for Studying idekCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+idekCTF is a beginner-to-intermediate CTF well-regarded for its creative challenge design and unique concepts that stand out from typical CTF templates. To prepare:
+
+1. **Study past idekCTF releases** — the event publishes challenge source code, and the sajjadium/ctf-archives includes all idekCTF editions for comprehensive study.
+2. **Focus on forensics and misc categories** — idekCTF is known for creative challenges in these areas that require lateral thinking and unconventional tooling.
+3. **Read community writeups** — while idekCTF has a smaller writeup ecosystem, the available writeups (like the HiddenGem Mixtape forensics writeup) reveal the creative approach the organizers take.
+4. **Use idekCTF to broaden your category coverage** — the event's unique challenge concepts often span multiple categories, making it excellent practice for developing versatile problem-solving skills.
 
 ## See Also
 

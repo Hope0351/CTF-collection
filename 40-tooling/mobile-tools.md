@@ -23,18 +23,20 @@ Frida dominates dynamic instrumentation. jadx and apktool handle APK reverse eng
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
-
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
-
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
-
-# Frida (mobile)
+# Frida (dynamic instrumentation toolkit)
 pip install frida-tools
+
+# jadx (DEX to Java decompiler)
+# Download from https://github.com/skylot/jadx/releases
+
+# apktool (APK reverse engineering)
+# Download from https://ibotpeaches.github.io/apktool/
+
+# objection (runtime exploration using Frida)
+pip install objection
+
+# ADB (Android Debug Bridge)
+sudo apt install adb
 ```
 
 ## See Also

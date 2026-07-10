@@ -8,7 +8,7 @@ Repositories that collect and organize CTF challenges and/or writeups from many 
 
 Aggregators provide a stable long-term archive even if original event websites disappear. `sajjadium/ctf-archives` is the closest thing to a comprehensive CTF challenge corpus and is the natural starting point for large-scale analysis.
 
-## Curated Repositories (6)
+## Curated Repositories (5)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|

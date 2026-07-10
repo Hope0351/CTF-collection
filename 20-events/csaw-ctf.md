@@ -41,9 +41,12 @@ Cyber Security Awareness Week CTF, organized by osirislab at NYU. Long-running, 
 
 ## Suggested Approach for Studying CSAW CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+CSAW is a student-run CTF organized by osirislab at NYU with beginner-to-intermediate difficulty, making it a great first competitive experience. To prepare:
+
+1. **Study osirislab's official challenge releases** — NYU publishes complete source code for CSAW Quals (2022-2025) and Finals, providing comprehensive study material from beginner to advanced.
+2. **Read osirislab and community writeups** — the official Finals writeup repositories and community blogs cover the full range of challenge difficulties and reveal intended approaches.
+3. **Use CSAW as a competitive stepping stone** — the difficulty curve from easy to hard is well-calibrated. Aim to solve all beginner and intermediate challenges before attempting the harder ones.
+4. **Focus on the categories most relevant to your growth** — CSAW covers all standard CTF categories with particularly strong rev and pwn tracks that prepare players for higher-tier events.
 
 ## See Also
 

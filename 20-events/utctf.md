@@ -32,9 +32,12 @@ Organized by ISSS at UT Austin. This event is referenced **7 times** across the 
 
 ## Suggested Approach for Studying UTCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+UTCTF is a student-run CTF from the University of Texas at Austin, known for beginner-friendly challenges that provide a welcoming introduction to competitive CTF play. To prepare:
+
+1. **Study the official UTCTF releases** — the sajjadium/ctf-archives includes all UTCTF editions, and the CUCTF team writeup repository covers UTCTF challenges from a player's perspective.
+2. **Work through challenges by category** — UTCTF covers all standard categories with approachable difficulty. Focus on building breadth across web, crypto, forensics, and reverse engineering.
+3. **Use UTCTF as a practice ground for team coordination** — as a student-run event with beginner-friendly difficulty, it's ideal for practicing team communication and task distribution strategies.
+4. **Read the CUCTF and community writeups** — multiple writeup collections cover UTCTF challenges, providing diverse solution approaches that help develop flexible problem-solving skills.
 
 ## See Also
 

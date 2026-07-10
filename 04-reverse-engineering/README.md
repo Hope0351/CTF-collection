@@ -86,9 +86,9 @@ anti-debug, anti-VM, anti-disassembly tricks.
 
 Top resources for this sub-topic:
 
-- Kasimir123/CTFWriteUps: Collection of CTF Writeups for
+- [Kasimir123/CTFWriteUps](../30-archetypes/archives/personal-collections/CTFWriteUps-Kasimir123) - Collection of CTF Writeups - 📚 Repository
 - [Yet another CTF writeups repository. PWN and RE tasks - the collection](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) — 📚 Repository
-- 1GN1tE/CTF_Writeups: Writeups of some Reverse Engineering — 📚 Repository
+- [1GN1tE/CTF_Writeups](../30-archetypes/archives/personal-collections/CTF_Writeups-1GN1tE) - Writeups of some Reverse Engineering - 📚 Repository
 - [docfate111/binary_exploitation: CTF/hacking challenge  - the collection](../01-pwn/archives/binary_exploitation) — 📚 Repository
 
 ## 🎯 Suggested Learning Order

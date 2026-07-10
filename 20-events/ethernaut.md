@@ -32,9 +32,12 @@ OpenZeppelin's progressively harder smart-contract CTF. Always-on; the canonical
 
 ## Suggested Approach for Studying Ethernaut
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+Ethernaut by OpenZeppelin is an always-on Solidity CTF that serves as the canonical entry point for smart contract exploitation. To prepare:
+
+1. **Work through all levels in order** — Ethernaut is progressively structured, with each level teaching a specific smart contract vulnerability. Don't skip ahead; the later levels build on concepts from earlier ones.
+2. **Understand each vulnerability class deeply** — each level targets a specific Solidity pitfall (reentrancy, access control, integer overflow, delegatecall, etc.). Study the underlying EVM mechanics, not just the exploit.
+3. **Read the PumpkingWok/CTFGym Solidity challenge list** — this curated list of Solidity CTFs complements Ethernaut with additional practice targets for each vulnerability class.
+4. **Practice writing exploits in Foundry or Hardhat** — Ethernaut teaches concepts, but building automated exploit scripts solidifies understanding and prepares you for Paradigm CTF-level challenges.
 
 ## See Also
 

@@ -6,7 +6,7 @@
 
 A catch-all category for challenges that don't fit elsewhere: programming challenges, esoteric languages, game exploitation, physics puzzles, and creative thinking challenges. Frequently the largest category by challenge count in any given CTF.
 
-This category contains **37 curated sources** from across the CTF ecosystem: 34 internal archives, 1 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 1 blog posts.
+This category contains **37 curated sources** from across the CTF ecosystem: 34 internal archives, 1 Medium article, 0 YouTube video walkthroughs, 1 CTFtime event entry, and 1 blog post.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -32,7 +32,7 @@ Top resources for this sub-topic:
 - [A summary and solutions for 200+ CTF blockchain challenges - the collection](../08-blockchain-web3/archives/ctf-blockchain) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - [orangetw/My-CTF-Web-Challenges - the collection](../02-web/archives/My-CTF-Web-Challenges) — 📚 Repository
-- Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
+- [Adamkadaban/CTFs](../30-archetypes/archives/personal-collections/CTFs-Adamkadaban) - CTF Cheat Sheet + Writeups - 📚 Repository
 
 ### Game exploitation
 

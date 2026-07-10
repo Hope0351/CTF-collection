@@ -6,7 +6,7 @@
 
 From classical ciphers (Caesar, Vigenère) to modern attacks on RSA (Bleichenbacher, Coppersmith, Hastad), ECC (invalid curve, Pohlig-Hellman), lattice-based schemes (LLL, Coppersmith), and bespoke cryptographic constructions. The most mathematically demanding category; SageMath is the dominant solution tool.
 
-This category contains **66 curated sources** from across the CTF ecosystem: 50 internal archives, 11 Medium articles, 1 YouTube video walkthroughs, 1 CTFtime event entries, and 3 blog posts.
+This category contains **66 curated sources** from across the CTF ecosystem: 50 internal archives, 11 Medium articles, 1 YouTube video walkthrough, 1 CTFtime event entries, and 3 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -18,7 +18,6 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 | 2 | [Crypto CTF 2020: Classic Writeup - CTFtime](https://ctftime.org/writeup/23014) | 🏆 CTFtime | 2020–2020 | This is my first time joining a CTF that is purely focused on cryptography. As I saw the challenges, I was discouraged … |
 | 3 | [PlaidCTF 2023 Writeups - siunam's Website](https://siunam321.github.io/ctf/PlaidCTF-2023) | 📝 Blog | 2023–2023 | The Plaid Flag is the 2023 edition of PlaidCTF, an annual capture the flag competition run by PPP. Categories: web; rev… |
 | 4 | [CTF-Writeups - crypto](https://saurav3199.github.io/CTF-writeups/DragonSectorCTF) | 📝 Blog | 2020–2020 | CTF-Writeups. Writeups for the past CTF challenges. View. Writeup for solved challenge in DragonSectorCTF 202… |
-| 5 | [Forensics & Steganography Challenges — CTF Writeups](https://medium.com/@santhoshr3512/forensics-steganography-challenges-ctf-writeups-0f71112ddf4a) | ✍️ Medium | n/a | This challenge shows how visual cryptography can hide data across multiple images. Individually the images appear as ra… |
 | 6 | [CTF Challenges: Cryptography-101 - ROHIT CHOUHAN - Medium](https://rohit170590.medium.com/ctf-challenges-cryptography-101-cc56156662ca) | ✍️ Medium | n/a | The Caesar Cipher is a very simple and common encryption method which does not appear often in full-fledged CTFs but fo… |
 | 7 | [Midnight Flag CTF Writeups (Forensics, Web3, Crypto, Reverse)](https://medium.com/@shoaibbinrashid11/midnight-flag-ctf-writeups-forensics-web3-crypto-reverse-9e8e49e36153) | ✍️ Medium | n/a | The solver uses an Overbeck-style method to remove the “distortion” and decode. · The decoded message becomes an AES ke… |
 | 8 | [LA CTF WriteUp - Medium](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | ✍️ Medium | n/a | LA CTF is an exciting cybersecurity competition that tests participants in various challenges, including web exploitati… |
@@ -26,7 +25,6 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 | 10 | [ICMTC CTF — Cryptography Challenge Writeup “Simple Cipher”](https://medium.com/@motarekk/icmtc-ctf-cryptography-challenge-writeup-simple-cipher-b3047b0837a3) | ✍️ Medium | n/a | ICMTC CTF — Cryptography Challenge Writeup “Simple Cipher” Introduction Challenge's name indicates that it should be a … |
 | 11 | [Houseplant CTF Write Up Part 2 - Medium](https://medium.com/zh3r0/houseplant-ctf-write-up-part-2-2abc1621510a) | ✍️ Medium | n/a | This part will covers some of the Cryptography challenges I did with our Team ZH3R0 for Houseplant CTF organized by Ric… |
 | 12 | [UrchinSec Aware CTF 2024 Cryptography — All Challs Writeups](https://medium.com/@shikhargupta435/urchinsec-aware-ctf-2024-cryptography-all-challs-writeups-bba9430e94d3) | ✍️ Medium | 2024–2024 | From this post onwards I will try to cover challenges of each category in each post. This post is about the Cryptograph… |
-| 13 | [How I Became the “Reverse Guy” in My CTF Team | by Rusty - Medium](https://rustybladez.medium.com/how-i-became-the-reverse-guy-in-my-ctf-team-c6fc2cef1512) | ✍️ Medium | n/a | I thought I'd become an all-rounder. Binary Exploitation, Cryptography, Forensics, OSINT, Reverse Engineering, you call… |
 | 14 | [ICMTC CTF Finals — Cryptography Challenge Writeup “Broken RSA”](https://medium.com/@motarekk/icmtc-ctf-finals-cryptography-challenge-writeup-broken-rsa-3d6c1715027a) | ✍️ Medium | n/a | Challenge's name indicates a weakly-implemented RSA encryption that will lead to a vulnerability that could be exploite… |
 | 15 | [CryptoHack Blog | Updates about the CryptoHack platform](https://blog.cryptohack.org) | 📝 Blog | n/a | Updates about the CryptoHack platform, cryptography news, and CTF writeups. |
 | 16 | [DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn)](https://www.youtube.com/watch?v=CGbPWSVm99k) | ▶️ YouTube | 2024–2024 | DiceCTF 2024 Challenge Writeups (3x web, 1x crypto, 1x pwn) · Comments. |

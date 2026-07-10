@@ -36,9 +36,12 @@ Japan's premier CTF. Organizers publish per-year source at the SECCON organizers
 
 ## Suggested Approach for Studying SECCON CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+SECCON is Japan's premier CTF, with a two-stage format (November quals, January finals) and consistently high-quality challenge design. To prepare:
+
+1. **Study SECCON's official releases** — the SECCON organization publishes per-year challenge repositories including the SECCON13 Finals and SECCON Beginners CTF 2024, covering the full difficulty spectrum.
+2. **Read Japanese team writeups** — teams like mephi42 and the SECCON community itself publish detailed writeups that reflect the Japanese CTF scene's methodical approach.
+3. **Focus on pwn and web categories** — SECCON consistently produces strong challenges in these areas, often involving novel exploitation techniques and web framework-specific vulnerabilities.
+4. **Don't skip the SECCON Beginners CTF** — it provides an accessible entry point to SECCON's challenge style and is excellent practice for intermediate players.
 
 ## See Also
 

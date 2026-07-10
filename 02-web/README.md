@@ -6,7 +6,7 @@
 
 Server-side (SQLi, SSRF, SSTI, RCE, deserialization, file inclusion) and client-side (XSS, CSRF, prototype pollution) vulnerabilities, plus modern web3 integrations and bespoke web app exploitation. The broadest category, requiring fluency in HTTP, web frameworks, browser security model, and modern web tooling (Burp, semgrep, ffuf).
 
-This category contains **95 curated sources** from across the CTF ecosystem: 53 internal archives, 19 Medium articles, 7 YouTube video walkthroughs, 1 CTFtime event entries, and 15 blog posts.
+This category contains **82 curated sources** from across the CTF ecosystem: 53 internal archives, 12 Medium articles, 3 YouTube video walkthroughs, 0 CTFtime event entries, and 14 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -38,7 +38,6 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 | 22 | [LA CTF WriteUp - Medium](https://medium.com/@rizkidsaputra9/la-ctf-writeup-d3a5b065d7dd) | ✍️ Medium | n/a | LA CTF is an exciting cybersecurity competition that tests participants in various challenges, including web exploitati… |
 | 23 | [HackTheBox - Usage - YouTube](https://www.youtube.com/watch?v=cx9Da-PoXG4) | ▶️ YouTube | n/a | 00:00 - Introduction 00:50 - Start of nmap 02:00 - Discovering the page is Laravel based upon cookies 05:30 - Discoveri… |
 | 24 | [CAT CTF 25 Web challenges writeups | by 0xNayel - Medium](https://medium.com/@0xNayelx/cat-ctf-25-web-challenges-writeups-2655e02b6485) | ✍️ Medium | n/a | This CTF was packed with creative web challenges — from simple logic bugs to advanced attacks like JWT header injection… |
-| 25 | [squ1rrel CTF 2024 writeup for Cryptography Challenges - Medium](https://medium.com/@jooelsaka/squ1rrel-ctf-2024-writeup-for-cryptography-challenges-16d7cb77e8ce) | ✍️ Medium | 2024–2024 | Hello It's me youssef a Web/Cryptography CTF player from 0xL4ugh Team I'll be sharing my solutions for the crypto chall… |
 | 26 | [Top 10 web hacking techniques of 2025 | PortSwigger Research](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) | 📝 Blog | 2025–2025 | In this writeup of a critical vulnerability in the heart of next.js, Rachid Allam shows how to use source-code analysis… |
 | 27 | [Web Security Blog - PortSwigger](https://portswigger.net/blog) | 📝 Blog | n/a | Articles and product insights from the PortSwigger team. Keep up to date with Burp Suite and the world of web security … |
 | 28 | [CTF Day(13). picoCTF Web Exploitation: GET aHEAD - Medium](https://medium.com/@ahmednarmer1/ctf-day-13-2ad289797f14) | ✍️ Medium | n/a | Introduction. What Are HTTP Request Methods? HTTP request methods define how a client (like a browser or tool) communic… |

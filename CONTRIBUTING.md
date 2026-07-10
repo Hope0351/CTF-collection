@@ -18,7 +18,7 @@ Each entry in a list should follow this format:
 ```markdown
 | # | Resource | Type | Difficulty | Year | Why It Matters |
 |---|----------|------|-----------|------|----------------|
-| 1 | [Resource Name](internal-path) | Internal / Medium / YouTube / Blog | Beginner / Intermediate / Advanced / Elite / Varied | 2024 | 1–2 sentence reason |
+| 1 | [Resource Name](../00-start-here/README.md) | Internal / Medium / YouTube / Blog | Beginner / Intermediate / Advanced / Elite / Varied | 2024 | 1–2 sentence reason |
 ```
 
 For featured entries (top 3–5 in a category), add a dedicated subsection with:

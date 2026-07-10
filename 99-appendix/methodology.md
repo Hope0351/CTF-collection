@@ -83,7 +83,7 @@ Difficulty was assessed heuristically based on the presence of tier-indicating k
 
 ## Limitations
 
-1. **Search-result cap.** Each of the 86 queries returned at most 20 results, yielding a theoretical ceiling of 1,720 raw mentions. After de-duplication, 376 unique sources were identified. The long tail of smaller personal archives (likely numbering in the tens of thousands) is not enumerated here; a more exhaustive enumeration would require direct use of the GitHub Search API.
+1. **Search-result cap.** Each of the 86 queries returned at most 20 results, yielding a theoretical ceiling of 1,720 raw mentions. After de-duplication, 364 unique sources were identified. The long tail of smaller personal archives (likely numbering in the tens of thousands) is not enumerated here; a more exhaustive enumeration would require direct use of the GitHub Search API.
 
 2. **GitHub README fetch.** Initial attempts to use a generic page-reader CLI hit rate limits after ~3 successful fetches. The fallback approach — fetching raw README files via curl from `raw.githubusercontent.com` — succeeded for 114 of 120 GitHub repos (95%).
 

@@ -15,7 +15,7 @@ pip install pwntools angr requests beautifulsoup4 ropper pyelftools
 
 ### Essential system tools
 ```bash
-sudo apt install gdb gdb-gef ghidra wireshark tshark burpsuite sqlite3                  radare2 binwalk foremost volatilty exiftool steghide                  jq ripgrep fd-find
+sudo apt install gdb gdb-gef ghidra wireshark tshark burpsuite sqlite3                  radare2 binwalk foremost volatility exiftool steghide                  jq ripgrep fd-find
 ```
 
 ---

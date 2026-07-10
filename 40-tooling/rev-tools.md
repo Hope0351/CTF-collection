@@ -23,18 +23,18 @@ The RE tooling stack is dominated by Ghidra (free, NSA), IDA Pro (commercial, in
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
+# Ghidra (free reverse engineering suite by NSA)
+# Download from https://ghidra-sre.org/
+# Requires Java 17+: sudo apt install openjdk-17-jdk
 
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
+# angr (symbolic execution engine)
+pip install angr
 
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# radare2 (CLI reverse engineering framework)
+sudo apt install radare2
 
-# Frida (mobile)
-pip install frida-tools
+# Binary Ninja (commercial alternative, free API)
+# Download from https://binary.ninja/
 ```
 
 ## See Also

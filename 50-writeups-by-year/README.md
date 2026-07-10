@@ -6,22 +6,22 @@ This directory cross-indexes the corpus by year. Each year-page lists the resour
 
 ## Year Pages
 
-| Year | Resources | Notable Events |
-|---:|---:|---|
-| 1 | 7 | PlaidCTF 2013, DEF CON 21, early HITCON CTF |
-| 2 | 6 | CSAW CTF 2014, HITCON CTF 2014 |
-| 3 | 12 | DEF CON 23, Google CTF inaugural discussions |
-| 4 | 15 | PlaidCTF, CSAW CTF growth, apsdehal/awesome-ctf launched |
-| 5 | 18 | Google CTF launch, picoCTF 2017, CryptoHack predecessor |
-| 6 | 21 | hxp CTF, 0CTF/TCTF, pwn.college discussions |
-| 7 | 25 | RealWorldCTF 2nd, DiceCTF predecessor events |
-| 8 | 27 | picoCTF 2020, COVID-era virtual CTFs, HackTheBox growth |
-| 9 | 38 | Paradigm CTF, corCTF launch, DiceCTF first edition |
-| 10 | 33 | DiceCTF, SekaiCTF launch, Paradigm CTF 2022, Nautilus Institute takes over DEF CON CTF |
-| 11 | 36 | DEF CON 31, hxp CTF 2023, major event source releases begin |
-| 12 | 60 | DEF CON 32 (Nautilus Institute), Google CTF 2024, DiceCTF 2024 |
-| 13 | 48 | DEF CON 33, SekaiCTF 2025, multiple event source releases |
-| 14 | 9 | Current year writeups (active competition) |
+| Year | Page | Internal Archives | Articles & Writeups | Total |
+|---|---|---:|---:|---:|
+| 2013 | [2013.md](2013.md) | 7 | 0 | 7 |
+| 2014 | [2014.md](2014.md) | 6 | 0 | 6 |
+| 2015 | [2015.md](2015.md) | 12 | 0 | 12 |
+| 2016 | [2016.md](2016.md) | 15 | 0 | 15 |
+| 2017 | [2017.md](2017.md) | 18 | 0 | 18 |
+| 2018 | [2018.md](2018.md) | 19 | 2 | 21 |
+| 2019 | [2019.md](2019.md) | 23 | 2 | 25 |
+| 2020 | [2020.md](2020.md) | 23 | 4 | 27 |
+| 2021 | [2021.md](2021.md) | 30 | 8 | 38 |
+| 2022 | [2022.md](2022.md) | 26 | 7 | 33 |
+| 2023 | [2023.md](2023.md) | 26 | 10 | 36 |
+| 2024 | [2024.md](2024.md) | 34 | 26 | 60 |
+| 2025 | [2025.md](2025.md) | 27 | 21 | 48 |
+| 2026 | [2026.md](2026.md) | 7 | 2 | 9 |
 
 ## Why a Temporal Index?
 

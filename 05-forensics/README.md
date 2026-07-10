@@ -6,7 +6,7 @@
 
 Disk-image forensics, memory-dump analysis (Volatility), packet-capture analysis (Wireshark/tshark), and steganography (Aperi'Solve, zsteg, stegsolve). The category with the highest variance in challenge design — challenges range from trivial 'find the hidden flag in metadata' to sophisticated memory-malware-investigation scenarios.
 
-This category contains **42 curated sources** from across the CTF ecosystem: 30 internal archives, 7 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 4 blog posts.
+This category contains **42 curated sources** from across the CTF ecosystem: 30 internal archives, 7 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entry, and 4 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -23,9 +23,7 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 | 7 | [CTFtime.org / ImaginaryCTF 2024 / Crash / Writeup](https://ctftime.org/writeup/39341) | 🏆 CTFtime | 2024–2024 | CTF writeups, Crash. ... Original writeup (https://medium.com/@zeroair41/solving-the-crash-forensics-challenge-on-imagi… |
 | 8 | [Midnight Flag CTF Writeups (Forensics, Web3, Crypto, Reverse)](https://medium.com/@shoaibbinrashid11/midnight-flag-ctf-writeups-forensics-web3-crypto-reverse-9e8e49e36153) | ✍️ Medium | n/a | The solver uses an Overbeck-style method to remove the “distortion” and decode. · The decoded message becomes an AES ke… |
 | 9 | [idek CTF 2022* Forensics - HiddenGem Mixtape Writeup](https://crazymanarmy.github.io/2023/01/16/idek-CTF-2022-Forensics-HiddenGem-Mixtape-Writeup/index.html) | 📝 Blog | 2022–2022 | Note 1: All flags are wrapped in idek{} format, you don't need to do it yourself. Note 2: The zip file is the same for … |
-| 10 | [CyberSpace CTF 2024 Reverse Engineering Challenges - Medium](https://medium.com/@ELJoOker/cyberspace-ctf-2024-reverse-engineering-challenges-4226b9055547) | ✍️ Medium | 2024–2024 | This write-up is for some of the Reverse Engineering and Forensics challenges that I've solved in the NahamCon CTF… A c… |
 | 11 | [Writeup for PicoCTF 2022 | by Archit Vats - Medium](https://medium.com/@architvats96/writeup-for-picoctf-2022-ctftime-336a6cce9f38) | ✍️ Medium | 2022–2022 | This writeup has the solutions for the following challenges: Forensics (Enhance, Lookey Here, Packets Primer, Redaction… |
-| 12 | [How I Became the “Reverse Guy” in My CTF Team | by Rusty - Medium](https://rustybladez.medium.com/how-i-became-the-reverse-guy-in-my-ctf-team-c6fc2cef1512) | ✍️ Medium | n/a | I thought I'd become an all-rounder. Binary Exploitation, Cryptography, Forensics, OSINT, Reverse Engineering, you call… |
 
 ## 🔬 Sub-Topic Deep Dive
 

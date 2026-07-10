@@ -10,7 +10,7 @@
 
 ## Curated Resources for DiceCTF
 
-### Internal Archives (8)
+### Internal Archives (7)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
@@ -37,9 +37,12 @@ Organized by dicegang. Strong web and pwn challenges. Source released publicly a
 
 ## Suggested Approach for Studying DiceCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+DiceCTF by dicegang features creative, often mathematically elegant challenges with clean, well-documented solutions. To prepare:
+
+1. **Study the dicegang challenge repositories** — dicegang publishes complete source code for all challenges immediately after each event. The `dicectf-quals-2024-challenges` and `dicectf-quals-2025-challenges` repos are excellent starting points.
+2. **Focus on their distinctive writeup style** — dicegang emphasizes clean, minimal exploits. Study their solutions to learn elegant approaches to pwn and crypto.
+3. **Pay special attention to their pwn challenges** — DiceCTF is known for creative heap exploitation and modern mitigation bypasses that test cutting-edge techniques.
+4. **Practice with the DiceCTF Finals format** — the invitation-only finals use a different structure than the open quals, so study both to understand the full range of dicegang's challenge design.
 
 ## See Also
 

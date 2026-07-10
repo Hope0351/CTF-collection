@@ -8,10 +8,15 @@ Individual players' writeup archives. The bulk of the ecosystem by count; qualit
 
 These repositories function as professional portfolios for security researchers. The strongest — like `orangetw/My-CTF-Web-Challenges` (Orange Tsai, 2013–2025) — are also historical records of the evolution of CTF challenge design.
 
-## Curated Repositories (0)
+## Curated Repositories (5)
 
-| # | Repository | Stars | Categories | Year Range | Why It Matters |
-|---:|---|---:|---|---|---|
+| # | Source | Stars | Categories | Year Range | Difficulty | Annotation |
+|---:|---|---:|---|---|---|---|
+| 1 | [Crypto-Cat/CTF](../30-archetypes/archives/personal-collections/CTF-CryptoCat) | 2,512 | Pwn, Crypto, Forensics | 2026 | Varied | Large personal archive focused on binary exploitation challenges with detailed solve scripts and exploit development examples. |
+| 2 | [LazyTitan33/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-LazyTitan33) | 100 | Various | 2022–2024 | Varied | Personal writeup collection covering multiple CTF events and categories over two years. |
+| 3 | [j00ru/ctf-tasks](../30-archetypes/archives/personal-collections/ctf-tasks-j00ru) | 656 | Programming, Reverse Engineering, Crypto | 2013–2021 | Varied | Archive of low-level CTF tasks from a highly skilled individual player, spanning eight years. |
+| 4 | [merrychap/ctf-writeups](../30-archetypes/archives/personal-collections/ctf-writeups-merrychap) | 36 | Pwn, Reverse Engineering, Forensics | n/a | Varied | Yet another CTF writeups repository focused on PWN and RE tasks with detailed explanations. |
+| 5 | [tim-barc/ctf_writeups](../30-archetypes/archives/personal-collections/ctf_writeups-tim-barc) | 43 | Forensics, Mobile, Reverse Engineering | 2019–2025 | Varied | Personal writeup archive with coverage of forensics and mobile security challenges. |
 
 ## How to Use These Repositories
 

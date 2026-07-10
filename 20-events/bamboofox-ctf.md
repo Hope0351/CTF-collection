@@ -33,9 +33,12 @@ Organized by Taiwanese team BambooFox. Bilingual (English/Chinese). This event i
 
 ## Suggested Approach for Studying BambooFox CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+BambooFox is a Taiwanese CTF team that publishes bilingual (English/Chinese) writeups and challenges, providing a unique cross-language CTF learning resource. To prepare:
+
+1. **Study the BambooFox official blog** — bamboofox.github.io contains course materials and challenge writeups in both Chinese and English, making it an excellent resource for bilingual CTF study.
+2. **Read the BambooFox challenge archives** — as a prominent Taiwanese team, their CTF challenges reflect the strong Taiwanese security community's approach to challenge design.
+3. **Use BambooFox writeups to study alongside HitCon CTF** — BambooFox's connection to the Taiwanese CTF scene means their writeups provide valuable context for understanding HitCon challenges as well.
+4. **Take advantage of the bilingual content** — if you read Chinese, the BambooFox materials provide access to a broader range of CTF knowledge and community perspectives not available in English-only resources.
 
 ## See Also
 

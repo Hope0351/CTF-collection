@@ -31,9 +31,12 @@ Organized by team hxp (TU Munich). Known for extremely high difficulty and elega
 
 ## Suggested Approach for Studying hxp CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+hxp CTF is notorious for its extremely high difficulty and clean, elegant challenge design. To prepare:
+
+1. **Study past hxp releases chronologically** — hxp publishes full source and solutions. The 38C3, 37C3, and 36C3 editions are all available and reveal the team's distinctive minimalistic style.
+2. **Master exploit techniques for custom architectures and minimal binaries** — hxp frequently uses stripped-down, custom-architecture binaries that require deep low-level understanding.
+3. **Focus on pwn and crypto** — these are hxp's strongest categories, often featuring novel heap exploitation primitives and creative cryptographic constructions.
+4. **Read writeups from p4-team** — they consistently solve the hardest hxp challenges and their writeups provide the most thorough explanations of the intended techniques.
 
 ## See Also
 

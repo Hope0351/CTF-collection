@@ -48,9 +48,12 @@ Structured learning platform with browser-based labs. Best on-ramp for absolute 
 
 ## Suggested Approach for Studying TryHackMe
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+TryHackMe is a structured learning platform with guided rooms and browser-based labs, serving as the best on-ramp for absolute beginners. To prepare:
+
+1. **Complete learning paths in order** — TryHackMe provides structured paths (Complete Beginner, Web Fundamentals, Jr Penetration Tester). Follow them sequentially rather than jumping between rooms.
+2. **Focus on the "Complete Beginner" and "Web Fundamentals" paths first** — these establish the core knowledge needed for all subsequent paths and real-world security work.
+3. **Use the browser-based labs to avoid setup friction** — TryHackMe's biggest advantage is the zero-setup environment. Take full advantage by experimenting freely without worrying about breaking your own system.
+4. **Supplement with the extensive Medium writeup community** — TryHackMe has one of the largest collections of community walkthroughs, providing multiple approaches to each room.
 
 ## See Also
 

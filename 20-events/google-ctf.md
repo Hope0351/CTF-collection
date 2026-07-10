@@ -37,9 +37,12 @@ Google's annual CTF, run since 2017. Beginner-friendly 'Beginners Quest' alongsi
 
 ## Suggested Approach for Studying Google CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+Google CTF is known for clean, well-engineered challenges with elegant solutions. To prepare:
+
+1. **Work through the official google/google-ctf repository** — Google publishes source code and solutions for all challenges. Start with beginner-friendly tasks before attempting the harder ones.
+2. **Study past writeups from top teams** — the solutions often reveal creative techniques not found in standard CTF tutorials.
+3. **Focus on crypto and web categories** — Google CTF consistently produces high-quality challenges in these areas with mathematically interesting constructions.
+4. **Practice with Google's own tools** — familiarity with Google Cloud Platform, Protocol Buffers, and Go (common in Google CTF challenges) provides an edge.
 
 ## See Also
 

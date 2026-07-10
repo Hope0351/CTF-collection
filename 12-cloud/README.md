@@ -6,7 +6,7 @@
 
 Misconfiguration exploitation, IAM privilege escalation, container escapes, Kubernetes attacks, and S3-bucket enumeration across AWS, Azure, and GCP. An emerging category that has grown rapidly since 2022.
 
-This category contains **11 curated sources** from across the CTF ecosystem: 10 internal archives, 1 Medium articles, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
+This category contains **11 curated sources** from across the CTF ecosystem: 10 internal archives, 1 Medium article, 0 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -50,15 +50,14 @@ privileged containers, capabilities, cgroup escapes.
 
 *No directly-matching resources in this collection — consult the broader category list above.*
 
-## 🎯 Suggested Learning Order
+### Suggested Learning Order
 
-If you're new to cloud security, work through the resources in this order:
+Cloud security CTFs are a growing category. The resources in this collection are limited, so supplement with these external starting points:
 
-1. **Start with a structured learning platform.** Begin with the top-rated resources in the table above; pick a beginner-tier (picoCTF-style) challenge as your first solve.
-
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
-3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
-4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
+1. **Start with cloud provider documentation** — AWS Security Best Practices, GCP Security Command Center, and Azure Security Center guides provide the foundational knowledge.
+2. **Practice on CloudGoat** (AWS) and **Thimble** (GCP) — both are deliberately vulnerable cloud environments designed for learning.
+3. **Study IAM misconfiguration patterns** — these are the most common cloud CTF challenge type.
+4. **Review the awesome-cloud-sec and awesome-aws-security** GitHub lists for additional resources beyond this collection.
 
 ## 🔗 See Also
 

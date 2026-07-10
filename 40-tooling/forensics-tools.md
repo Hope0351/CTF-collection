@@ -26,18 +26,26 @@ Volatility dominates memory forensics. Autopsy and The Sleuth Kit handle disk fo
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
+# Volatility (memory forensics)
+pip install volatility3
 
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
+# binwalk (firmware/file analysis)
+pip install binwalk
 
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# foremost (file carving)
+sudo apt install foremost
 
-# Frida (mobile)
-pip install frida-tools
+# exiftool (metadata extraction)
+sudo apt install libimage-exiftool-perl
+
+# zsteg (PNG steganography)
+gem install zsteg
+
+# steghide (JPEG steganography)
+sudo apt install steghide
+
+# Wireshark/tshark (network analysis)
+sudo apt install wireshark tshark
 ```
 
 ## See Also

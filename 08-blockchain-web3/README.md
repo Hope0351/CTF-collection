@@ -6,7 +6,7 @@
 
 Smart-contract exploitation on Ethereum-compatible chains and increasingly on Solana, Move, and zero-knowledge VMs. Sub-vulnerabilities include reentrancy, integer overflow/underflow, access-control flaws, flash-loan exploits, oracle manipulation, and signature-replay attacks. Foundry has displaced Hardhat as the dominant exploit-development framework.
 
-This category contains **36 curated sources** from across the CTF ecosystem: 26 internal archives, 6 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entries, and 3 blog posts.
+This category contains **36 curated sources** from across the CTF ecosystem: 26 internal archives, 6 Medium articles, 0 YouTube video walkthroughs, 1 CTFtime event entry, and 3 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 

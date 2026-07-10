@@ -31,9 +31,12 @@ Older Ethereum CTF; still useful for foundational concepts. This event is refere
 
 ## Suggested Approach for Studying Capture The Ether
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+Capture The Ether is a progressive Ethereum CTF that provides a solid foundation in blockchain security concepts, even though it is an older resource. To prepare:
+
+1. **Start with the beginner challenges and work through each category in order** — Capture The Ether is organized into clear categories (Warmup, Math, Accounts, Blockchain, Gatekeeper). Follow this progression to build skills systematically.
+2. **Focus on understanding EVM mechanics** — the challenges teach fundamental concepts like transaction origination, contract creation, and gas mechanics that remain relevant regardless of the CTF's age.
+3. **Supplement with modern resources** — after completing Capture The Ether, move on to Ethernaut and Damn Vulnerable DeFi for more current Solidity exploitation practice.
+4. **Use John Hammond's video walkthroughs** — his coverage of Capture The Ether provides clear explanations of each challenge's underlying concepts.
 
 ## See Also
 

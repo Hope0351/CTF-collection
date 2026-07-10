@@ -46,6 +46,7 @@ A reference for common CTF jargon. Organized alphabetically.
 ## F
 
 - **Flag** — The target string in a CTF challenge, typically of the form `flag{...}` or `picoCTF{...}`.
+- **Format String Vulnerability** — A class of bug arising from improper use of printf-family functions (printf, sprintf, fprintf) with user-controlled format strings. Exploitable for arbitrary memory read/write, often leading to code execution.
 - **Forensics** — CTF category involving disk images, memory dumps, packet captures, and steganography.
 - **Foundry** — A Rust-based exploit development framework for blockchain CTFs; has displaced Hardhat since 2022.
 - **Frida** — A dynamic instrumentation framework; dominant for mobile RE.
@@ -60,7 +61,7 @@ A reference for common CTF jargon. Organized alphabetically.
 
 - **Hardhat** — A TypeScript-based exploit development framework for blockchain CTFs. Older than Foundry.
 - **Hardware CTF** — CTF category involving firmware extraction, JTAG/SWD debugging, side-channel analysis, and radio analysis.
-- **Heap exploitation** — A sub-category of pwn focused on heap allocator abuses (use-after-free, double-free, fastbin/tcache attacks, House of Force/Spirit/Einherjar/etc.).
+- **Heap Exploitation** — A class of binary exploitation attacks targeting dynamic memory allocators (e.g., glibc's ptmalloc). Common techniques include use-after-free, double-free, fastbin attacks, tcache poisoning, and House of Force/Spirit/Einherjar.
 - **HitCon CTF** — A top-tier CTF co-organized by the HITCON community and Taiwanese teams.
 - **House of Force / Spirit / Einherjar** — Named heap exploitation techniques for older glibc versions.
 
@@ -121,6 +122,7 @@ A reference for common CTF jargon. Organized alphabetically.
 - **RELRO (Relocation Read-Only)** — A binary mitigation that marks the GOT as read-only after relocation. Full RELRO prevents GOT overwrite attacks.
 - **Reverse Engineering (RE)** — CTF category focused on analyzing binaries, obfuscated scripts, custom VMs, and exotic architectures.
 - **RingZer0CTF** — A training-focused CTF platform.
+- **ROP (Return-Oriented Programming)** — An exploitation technique that chains small code fragments (gadgets) already present in the executable's memory to bypass DEP/NX protections. Each gadget ends in a ret instruction, allowing sequential execution of unintended behavior.
 
 ## S
 

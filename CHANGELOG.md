@@ -85,5 +85,5 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/
 - `30-archetypes/` cross-index: 7 archetype pages (personal collections, team archives, event-organizer sources, aggregators, awesome-lists, practice platforms, toolkits).
 - `40-tooling/` reference: 7 tool pages covering pwn, reverse engineering, crypto, web, forensics, blockchain, and mobile tooling.
 - `50-writeups-by-year/` temporal index: per-year pages from 2013 to 2026.
-- `99-appendix/` reference material: full 376-source index, methodology, glossary, and FAQ.
-- Total curated sources: 376 across 5 platforms (Internal, Medium, YouTube, CTFtime, blogs).
+- `99-appendix/` reference material: full 364-source index, methodology, glossary, and FAQ.
+- Total curated sources: 364 across 5 platforms (Internal, Medium, YouTube, CTFtime, blogs).

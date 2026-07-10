@@ -6,7 +6,7 @@
 
 Firmware extraction, JTAG/SWD debugging, side-channel analysis (power, EM, timing), radio analysis (SDR, RTL-SDR), and hardware-CTF-specific challenges (e.g., the RHme series by Riscure). The most equipment-intensive category.
 
-This category contains **22 curated sources** from across the CTF ecosystem: 21 internal archives, 0 Medium articles, 1 YouTube video walkthroughs, 0 CTFtime event entries, and 0 blog posts.
+This category contains **22 curated sources** from across the CTF ecosystem: 21 internal archives, 0 Medium articles, 1 YouTube video walkthrough, 0 CTFtime event entries, and 0 blog posts.
 
 ## ✍️ Curated Articles & Walkthroughs
 
@@ -14,7 +14,6 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 
 | # | Title | Source | Year | Summary |
 |---:|---|---|---|---|
-| 1 | [Creating a CTF Writeup Video - YouTube](https://www.youtube.com/watch?v=Yr8KtFK1p7g) | ▶️ YouTube | n/a | A guide on making your first ctf writeup video! 00:00 Intro 00:27 Why Video 03:25 Hardware 06:53 Software 15:23 Content. |
 
 ## 🔬 Sub-Topic Deep Dive
 
@@ -32,11 +31,11 @@ hardware debugging interfaces; UART, JTAGenum.
 
 Top resources for this sub-topic:
 
-- sajjadium/ctf-archives — 📚 Repository
+- [sajjadium/ctf-archives](https://github.com/sajjadium/ctf-archives) - Large multi-category CTF archive (not integrated) - 📚 Repository
 - [apsdehal/awesome-ctf: A curated list of CTF frameworks  - the collection](../30-archetypes/archives/awesome-lists/awesome-ctf) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - [xtiankisutsa/awesome-mobile-CTF](../30-archetypes/archives/awesome-lists/awesome-mobile-ctf) — 📚 Repository
-- Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
+- [Adamkadaban/CTFs](../30-archetypes/archives/personal-collections/CTFs-Adamkadaban) - CTF Cheat Sheet + Writeups - 📚 Repository
 
 ### Side-channel analysis
 

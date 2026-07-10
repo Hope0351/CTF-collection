@@ -36,9 +36,12 @@ Organized by Project Sekai. Known for high-quality challenges and excellent infr
 
 ## Suggested Approach for Studying SekaiCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+SekaiCTF by project-sekai is a newer event that has quickly earned a reputation for creative challenges and excellent infrastructure. To prepare:
+
+1. **Study the official project-sekai-ctf releases** — the `sekaictf-2024` and `sekaictf-2025` repositories include full source code and official writeups, providing the most direct path to understanding their challenge design.
+2. **Focus on their unique challenge archetypes** — SekaiCTF is known for challenges that don't fit standard CTF templates, often combining multiple categories or requiring unconventional approaches.
+3. **Pay attention to their blockchain category** — SekaiCTF consistently produces Web3 challenges that attract first-blood prizes, indicating high quality and novelty.
+4. **Read community writeups on CTFtime** — the event page collects diverse writeup perspectives that reveal alternative approaches to the creative challenge designs.
 
 ## See Also
 

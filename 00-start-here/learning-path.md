@@ -91,6 +91,26 @@ Pick **one** of the following tracks based on your background and interests:
 - **Companion repos:** [`minaminao/ctf-blockchain`](../08-blockchain-web3/archives/ctf-blockchain), [`AshiqAhamed17/web3-ctf-writeups`](../08-blockchain-web3/archives/web3-ctf-writeups).
 - **Time:** 4–6 weeks.
 
+### Track F: Forensics &amp; Steganography
+- **Prerequisites:** Basic file analysis, Linux command line, understanding of common file formats (PNG, JPEG, PDF, WAV).
+- **Curriculum:**
+  1. Work through picoCTF Forensics challenges (beginner to intermediate).
+  2. [stego-toolkit](../40-tooling/archives/forensics-tools/stego-toolkit) — practice with the collection of steganography tools archived in this collection.
+  3. Study Volatility for memory forensics and Wireshark for network forensics.
+  4. Work through Autopsy for disk forensics.
+- **Companion repos:** The forensics category ([05-forensics/](../05-forensics/README.md)) has curated resources covering all sub-topics.
+- **Time:** 4–6 weeks.
+
+### Track G: OSINT (Open-Source Intelligence)
+- **Prerequisites:** Comfortable with web search, social media platforms, and basic analysis skills.
+- **Curriculum:**
+  1. Start with [Sherlock](https://github.com/sherlock-project/sherlock) for username enumeration across platforms.
+  2. Practice with [TryHackMe OSINT rooms](https://tryhackme.com) for structured challenges.
+  3. Learn geolocation with Google Earth, SunCalc, and reverse image search (TinEye, Yandex).
+  4. Study breach database search with HaveIBeenPwned and dehashed.
+- **Companion repos:** The OSINT category ([06-osint/](../06-osint/README.md)) has curated resources.
+- **Time:** 3–4 weeks.
+
 ## Phase 4: Live competitions (Weeks 17+)
 
 **Goal:** Apply your specialty in real-time, competitive conditions.

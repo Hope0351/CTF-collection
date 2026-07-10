@@ -23,18 +23,23 @@ Binary exploitation requires a deep tooling stack. The dominant tools are pwntoo
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
+# Core pwn toolkit
+pip install pwntools
 
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
+# ROP gadget finders
+pip install ROPgadget ropper
 
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# GDB plugins (pick one)
+# pwndbg (recommended for beginners)
+git clone https://github.com/pwndbg/pwndbg && cd pwndbg && ./setup.sh
+# GEF (alternative)
+bash -c "$(curl -fsSL https://gef.blaze.sh_now)"
 
-# Frida (mobile)
-pip install frida-tools
+# one_gadget (for libc RCE)
+gem install one_gadget
+
+# checksec (binary security check)
+git clone https://github.com/slimm609/checksec.sh && cd checksec.sh && make
 ```
 
 ## See Also

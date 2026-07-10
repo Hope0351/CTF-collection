@@ -33,9 +33,12 @@ Organized by SIGPwny at UIUC. Strong technical depth; source released. This even
 
 ## Suggested Approach for Studying UIUCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+UIUCTF by SIGPwny is a beginner-friendly CTF organized at the University of Illinois, known for its educational challenge design. To prepare:
+
+1. **Study the SIGPwny official releases** — the `sigpwny/UIUCTF-2023-Public` repository and subsequent releases include full challenge source, making them ideal self-study material.
+2. **Start with UIUCTF as your first competitive CTF** — the difficulty is well-calibrated for first-time competitive players, bridging the gap between practice platforms and elite-tier events.
+3. **Focus on web and crypto challenges** — UIUCTF consistently produces approachable yet educational challenges in these categories that teach core concepts progressively.
+4. **Read community writeups on CTFtime** — the UIUCTF page on CTFtime collects writeups from many teams, providing multiple perspectives on each challenge's solution.
 
 ## See Also
 

@@ -10,7 +10,7 @@
 
 ## Curated Resources for picoCTF
 
-### Internal Archives (19)
+### Internal Archives (18)
 
 | # | Repository | Stars | Categories | Year Range | Why It Matters |
 |---:|---|---:|---|---|---|
@@ -58,9 +58,12 @@ Carnegie Mellon University's beginner CTF. The canonical entry point for new CTF
 
 ## Suggested Approach for Studying picoCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+picoCTF is the best starting point for CTF newcomers. To prepare:
+
+1. **Work through picoGym in order** — start with General Skills, then progress through Web Exploitation, Cryptography, Forensics, and Reverse Engineering.
+2. **Solve 30+ challenges per edition** — the 2019-2025 archives provide hundreds of challenges. Aim for breadth across all categories.
+3. **Read the picoCTF official hints before giving up** — they teach the methodology of approaching each challenge type.
+4. **Don't skip the fundamentals** — picoCTF's General Skills category covers Linux, Python, and networking basics that every CTF player needs.
 
 ## See Also
 

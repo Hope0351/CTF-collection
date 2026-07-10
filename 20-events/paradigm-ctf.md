@@ -33,9 +33,12 @@ The premier blockchain/Web3 CTF, organized by Paradigm. Foundry-based; challenge
 
 ## Suggested Approach for Studying Paradigm CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+Paradigm CTF focuses on blockchain and smart contract security, setting the standard for Foundry-based DeFi exploitation challenges. To prepare:
+
+1. **Practice on Ethernaut and Damn Vulnerable DeFi first** — these always-on platforms teach the foundational Solidity and DeFi concepts that Paradigm CTF builds upon.
+2. **Study the Paradigm and theori-io CTF writeup archives** — both provide detailed explanations of the complex DeFi exploitation techniques used in Paradigm CTF challenges.
+3. **Master Foundry's testing and exploitation framework** — Paradigm CTF challenges are Foundry-based. Proficiency with `forge test`, `forge script`, and Foundry's cheating functions is essential.
+4. **Study DeFi protocol mechanics** — Paradigm CTF challenges often involve complex interactions between multiple DeFi primitives (AMMs, lending pools, governance). Understanding how these protocols work in production is key to finding exploits.
 
 ## See Also
 

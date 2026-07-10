@@ -44,11 +44,14 @@
 
 The world's longest-running and most-prestigious CTF. Attack-defense format at finals; qualifier is jeopardy-style. Organized by Nautilus Institute since 2024 (DEF CON 32). This event is referenced **20 times** across the curated corpus, indicating the level of community attention it commands.
 
-## Suggested Approach for Studying DEF CON
+## Suggested Approach for Studying DEF CON CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+DEF CON CTF is the pinnacle of CTF competition. To prepare:
+
+1. **Study the official Nautilus Institute challenge releases** — they publish complete source code, infrastructure, and intended solutions post-event. Start with the most recent quals release and work backwards.
+2. **Read team writeups from past finalists** — teams like Dragon Sector, PPP, and Super Guesser consistently place highly and publish detailed writeups.
+3. **Master kernel exploitation and real-world software targets** — DEF CON favors challenges based on real software (browsers, kernels, hypervisors) over toy binaries.
+4. **Practice attack-defense format** — DEF CON Finals uses attack-defense. Set up local services and practice both attacking and patching simultaneously.
 
 ## See Also
 

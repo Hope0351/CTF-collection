@@ -22,18 +22,18 @@ SageMath is the dominant computational algebra system for crypto CTFs — it pro
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
+# SageMath (primary crypto CTF tool)
+# Install via conda: conda install -c conda-forge sage
+# Or on Ubuntu: sudo apt install sagemath
 
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
+# RSA CTF Tool
+pip install RsaCtfTool
 
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# PyCryptoDome (common crypto library)
+pip install pycryptodome
 
-# Frida (mobile)
-pip install frida-tools
+# gmpy2 (fast modular arithmetic, required by many crypto tools)
+pip install gmpy2
 ```
 
 ## See Also

@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Categories](https://img.shields.io/badge/Categories-13-blue)](#-repository-structure)
-[![Sources](https://img.shields.io/badge/Sources-376-green)](#-corpus-statistics)
+[![Sources](https://img.shields.io/badge/Sources-364-green)](#-corpus-statistics)
 [![Platforms](https://img.shields.io/badge/Platforms-Internal%20Archive%20%7C%20Medium%20%7C%20YouTube%20%7C%20CTFtime%20%7C%20Blogs-orange)](#-corpus-statistics)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success)](CHANGELOG.md)
 
@@ -14,7 +14,7 @@
 
 This is a **curated knowledge base** for the global Capture The Flag community. Rather than being yet another list of links, this collection is:
 
-- **Multi-source** — 376 curated entries drawn from 5 distinct content platforms: internal archives, Medium articles, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
+- **Multi-source** — 364 curated entries drawn from 5 distinct content platforms: internal archives, Medium articles, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
 - **Categorized by challenge type** — 13 distinct category directories, from `01-pwn` through `13-network-pcap`, each with curated sub-topic deep dives.
 - **Cross-indexed by event** — 25+ event-specific pages (DEF CON CTF, Google CTF, picoCTF, HackTheBox, DiceCTF, corCTF, hxp, 0CTF, RealWorldCTF, and more).
 - **Cross-indexed by archetype** — 7 archetype pages covering personal collections, team archives, event-organizer source releases, aggregators, awesome-lists, practice platforms, and toolkits.
@@ -22,7 +22,7 @@ This is a **curated knowledge base** for the global Capture The Flag community. 
 - **Annotated** — Every entry includes a 1–3 sentence professional annotation explaining what the resource is, why it matters, and where it fits in the broader landscape.
 - **Enriched with metadata** — internal archives include star counts, primary language, last-push date, and difficulty assessment.
 
-This is **not** a archive of other people's content. Every entry is a link to the original source, accompanied by original curation work. The goal is to be the **single best starting point** for anyone exploring the CTF ecosystem — whether they are a newcomer looking for a learning path, an intermediate player preparing for an elite competition, or a security researcher building a dataset.
+This is **not** an archive of other people's content. Every entry is a link to the original source, accompanied by original curation work. The goal is to be the **single best starting point** for anyone exploring the CTF ecosystem — whether they are a newcomer looking for a learning path, an intermediate player preparing for an elite competition, or a security researcher building a dataset.
 
 ---
 
@@ -60,7 +60,7 @@ CTF-collection/
 ├── 40-tooling/                        ← curated tool references
 ├── 50-writeups-by-year/               ← temporal index
 └── 99-appendix/                       ← reference material
-    ├── full-repo-index.md             ← master table: all 376 sources
+    ├── full-repo-index.md             ← master table: all 364 sources
     ├── methodology.md
     ├── glossary.md
     └── faq.md
@@ -74,8 +74,8 @@ Each category directory follows the same internal structure: a `README.md` (orie
 
 | Metric | Count |
 |---|---:|
-| **Total curated sources** | 376 |
-| **internal archives** | 136 |
+| **Total curated sources** | 364 |
+| **internal archives** | 124 |
 | **Medium articles** | 107 |
 | **YouTube video walkthroughs** | 30 |
 | **CTFtime event entries** | 35 |
@@ -203,7 +203,7 @@ This is a **fully self-contained** CTF knowledge base. **102 resources** have be
 |---|---:|
 | Total resources referenced | 156 |
 | Successfully integrated into this collection | **102** |
-| Not integrated (size / access / quality constraints) | 54 |
+| Not integrated (size / access / quality constraints) | 42 |
 | Total collection size on disk | ~2.5 GB (after `.gitignore` filters) |
 
 ### Collection structure
@@ -302,17 +302,21 @@ To keep the collection within size limits, the following categories of files are
 - **Database / memory dumps**: `*.db`, `*.sqlite`, `*.sqlite3`, `*.memdump`, `*.heapdump`, `*.hprof`
 - **ML model files**: `*.dat`, `*.pkl`, `*.pickle`, `*.h5`, `*.pb`, `*.onnx`, `*.pt`, `*.pth`, `*.ckpt`, `*.safetensors`
 
-### Resources not integrated (54)
+### Resources not integrated (42)
 
-The following 54 resources could not be integrated due to size, access, or quality constraints. They are referenced by name only (no links):
+The following 42 resources could not be integrated due to size, access, or quality constraints. They are referenced by name only (no links):
 
 **Failed to download (16)** — too large, rate-limited, or access-restricted:
 
 `sajjadium/ctf-archives`, `p4-team/ctf`, `hackplayers/hackthebox-writeups`, `google/google-ctf`, `justcatthefish/justctf-2023`, `project-sekai-ctf/sekaictf-2024`, `daffainfo/ctf-writeup`, `MartinPetkov/GCTF2021BeginnersQuestWriteups`, `SECCON/SECCON13_final_CTF`, `SandWithCheese/ctf-writeups`, `Tan-JunWei/CTF-Writeups`, `mephi42/ctf`, `shekkbuilder/ctf-2`, `sigpwny/UIUCTF-2023-Public`, `silly-lily/CTF-Writeups`, `siunam321/CTF-Writeups`
 
-**Downloaded but dropped (26)** — excluded to fit within disk/push size constraints:
+**Downloaded but dropped (14)** — excluded to fit within disk/push size constraints:
 
-`Adamkadaban/CTFs`, `Crusaders-of-Rust/corCTF-2022-public-challenge-archive`, `Crusaders-of-Rust/corctf-2024-public-challenge-repo`, `Crusaders-of-Rust/corctf-2025-public-challenge-repo`, `DownUnderCTF/Challenges_2022_Public`, `DownUnderCTF/Challenges_2025_Public`, `DownUnderCTF/Challenges_2021_public`, `dicegang/dicectf-quals-2024-challenges`, `dicegang/dicectf-quals-2025-challenges`, `justcatthefish/ctf-writeups`, `justcatthefish/justctf-2024`, `justcatthefish/justctf-2025`, `SecurityInnovation/Smart-Contract-CTF`, `osirislab/CSAW-CTF-2022-Final-WriteUps`, `osirislab/CSAW-CTF-2023-Quals`, `osirislab/CSAW-CTF-2024-Quals`, `osirislab/CSAW-CTF-2025-Finals-Public`, `lieanu/LibcSearcher`, `Kasimir123/CTFWriteUps`, `1GN1tE/CTF_Writeups`, `Nautilus-Institute/quals-2024`, `RasyidMF/ctf-writeup`, `HackTricks-wiki/hacktricks`, `Ferdibrgl/cyber-apocalypse-ctf--2023-2024-`, `david942j/ctf-writeups`, `david942j/one_gadget`
+`justcatthefish/justctf-2025`, `SecurityInnovation/Smart-Contract-CTF`, `osirislab/CSAW-CTF-2022-Final-WriteUps`, `osirislab/CSAW-CTF-2023-Quals`, `osirislab/CSAW-CTF-2024-Quals`, `osirislab/CSAW-CTF-2025-Finals-Public`, `lieanu/LibcSearcher`, `Kasimir123/CTFWriteUps`, `1GN1tE/CTF_Writeups`, `Nautilus-Institute/quals-2024`, `RasyidMF/ctf-writeup`, `HackTricks-wiki/hacktricks`, `Ferdibrgl/cyber-apocalypse-ctf--2023-2024-`, `david942j/ctf-writeups`, `david942j/one_gadget`
+
+**Quality-filtered (12)** — excluded as text-only writeups without visual content:
+
+`sajjadium/ctf-writeups`, `Adamkadaban/CTFs`, `Crusaders-of-Rust/corCTF-2022-public-challenge-archive`, `Crusaders-of-Rust/corctf-2024-public-challenge-repo`, `Crusaders-of-Rust/corctf-2025-public-challenge-repo`, `DownUnderCTF/Challenges_2022_Public`, `DownUnderCTF/Challenges_2025_Public`, `DownUnderCTF/Challenges_2021_public`, `dicegang/dicectf-quals-2024-challenges`, `dicegang/dicectf-quals-2025-challenges`, `justcatthefish/ctf-writeups`, `justcatthefish/justctf-2024`
 
 To add these to the collection, re-run the generation pipeline on a machine with ≥ 25 GB free disk.
 

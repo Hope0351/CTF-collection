@@ -23,18 +23,22 @@ Burp Suite is the dominant web-proxy tool. sqlmap automates SQL injection. ffuf 
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
+# Burp Suite Community Edition (download from https://portswigger.net/burp)
+# Or via apt on some systems:
+sudo apt install burpsuite
 
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
+# SQLmap
+pip install sqlmap
 
-# Foundry (blockchain)
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# feroxbuster (directory/file brute forcer)
+sudo apt install feroxbuster
+# Or: cargo install feroxbuster
 
-# Frida (mobile)
-pip install frida-tools
+# nuclei (vulnerability scanner)
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+
+# ffuf (fast web fuzzer)
+go install github.com/ffuf/ffuf/v2@latest
 ```
 
 ## See Also

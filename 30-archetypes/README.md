@@ -2,7 +2,7 @@
 
 > Part of **CTF-collection** — see [master README](../README.md) for context.
 
-This directory cross-indexes the corpus by repository archetype. The 376 sources in this collection classify into seven structural archetypes (a single repository may belong to multiple).
+This directory cross-indexes the corpus by repository archetype. The 364 sources in this collection classify into seven structural archetypes (a single repository may belong to multiple).
 
 ## Archetype Overview
 

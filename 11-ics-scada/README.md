@@ -45,15 +45,14 @@ water hammer, pipeline rupture, grid destabilization.
 
 *No directly-matching resources in this collection — consult the broader category list above.*
 
-## 🎯 Suggested Learning Order
+### Suggested Learning Order
 
-If you're new to ics / scada, work through the resources in this order:
+ICS/SCADA security is a niche but critically important domain. The resources in this collection are limited, so supplement with these external starting points:
 
-1. **Start with a structured learning platform.** Begin with the top-rated resources in the table above; pick a beginner-tier (picoCTF-style) challenge as your first solve.
-
-2. **Build a personal writeup habit.** Every time you solve a challenge, write a 2-paragraph summary. Commit these to a personal archive — over time, this becomes your portfolio.
-3. **Study elite writeups.** After each major CTF, read the top-placing teams' writeups within 1 week. The team archives at `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf` are the strongest references.
-4. **Play live.** Join [CTFtime](https://ctftime.org/) and play at least one CTF per month. There is no substitute for live competition.
+1. **Read the awesome-ics-writeups** archive in this collection for the most comprehensive curated list of ICS CTF resources.
+2. **Study the ICS protocols** — Modbus, DNP3, S7comm, and CIP are the four protocols most commonly featured in ICS CTF challenges.
+3. **Practice with real equipment** if possible — PLC simulation environments like plc4x (open-source) provide hands-on experience.
+4. **Follow ICS-focused conferences** — S4x Events, Black Hat ICS tracks, and the ICS Cyber Security Conference publish research directly applicable to CTF challenges.
 
 ## 🔗 See Also
 

@@ -37,9 +37,12 @@ Organized by justcatthefish (Poland). Source released publicly per-year. This ev
 
 ## Suggested Approach for Studying justCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+justCTF by justCatTheFish (Poland) features well-crafted challenges across all categories with a distinctive Eastern European challenge style. To prepare:
+
+1. **Study the official justcatthefish releases** — the team publishes complete challenge repositories for 2023, 2024, and 2025 including both teaser and finals competitions.
+2. **Read the justcatthefish/ctf-writeups repository** — the organizing team's own writeup archive covers their challenges and others, providing direct insight into their design philosophy.
+3. **Focus on their reverse engineering and crypto challenges** — justCTF consistently produces strong challenges in these categories that test analytical thinking and mathematical maturity.
+4. **Practice with the teaser format** — justCTF's teaser events provide shorter, focused practice sessions that are ideal for building speed before the main competition.
 
 ## See Also
 

@@ -30,9 +30,12 @@ Organized by IrisSec. Growing in prominence. This event is referenced **4 times*
 
 ## Suggested Approach for Studying IRISCTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+IRISCTF is a growing annual CTF organized by IrisSec, known for its approachable challenge design and increasing prominence in the CTF community. To prepare:
+
+1. **Study the official IRISCTF releases** — the event publishes challenge source code, and the `juliancasaburi/irisctf-2025` repository provides detailed writeups for the most recent edition.
+2. **Work through the sajjadium/ctf-archives for IRISCTF** — the comprehensive archive includes all past IRISCTF challenges, making it easy to study the event's evolution and recurring themes.
+3. **Follow IrisSec's official site** — irisc.tf provides information about the event's philosophy, past results, and challenge design approach.
+4. **Use IRISCTF as a mid-season warmup** — scheduled for January, IRISCTF falls at the start of the CTF calendar and is excellent for shaking off rust and building momentum for the year's competitions.
 
 ## See Also
 

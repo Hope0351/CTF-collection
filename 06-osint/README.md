@@ -18,7 +18,6 @@ Beyond internal archives, the following articles, videos, and blog posts from Me
 | 2 | [OSINT Challenge— Writeup - Medium](https://medium.com/@alwingt.edu/osint-challenge-writeup-0cc8690d6d73) | ✍️ Medium | n/a | Here's my first ever writeup for a bunch of OSINT challenges I tried from various CTF's, successfully completed all OSI… |
 | 3 | [OSINT | CTF Writeups - noob-atbash](https://noob-atbash.github.io/CTF-writeups/csictf-20/osint/osint.html) | 📝 Blog | n/a | We wish to provide good and detailed writeups for all challenges which we solve.Feel free to suggest some changes . Sta… |
 | 4 | [CTFZone Quals | OSINT | Hamsters are taking over the World](https://hamzaharooon.medium.com/ctfzone-quals-osint-hamsters-are-taking-over-the-world-709556d666fe) | ✍️ Medium | n/a | CTFZone Quals \| OSINT \| Hamsters are taking over the World This was the OSINT challenge with the least solves in CTFZon… |
-| 5 | [How I Became the “Reverse Guy” in My CTF Team | by Rusty - Medium](https://rustybladez.medium.com/how-i-became-the-reverse-guy-in-my-ctf-team-c6fc2cef1512) | ✍️ Medium | n/a | I thought I'd become an all-rounder. Binary Exploitation, Cryptography, Forensics, OSINT, Reverse Engineering, you call… |
 
 ## 🔬 Sub-Topic Deep Dive
 
@@ -45,8 +44,8 @@ Top resources for this sub-topic:
 - [r3kapig/writeup: CTF challenges writeup - the collection](../30-archetypes/archives/team-archives/writeup-r3kapig) — 📚 Repository
 - [Hack The Box Writeups - The Ultimate HTB Resource - the collection](../20-events/archives/hackthebox/htb-writeups) — 📚 Repository
 - [orangetw/My-CTF-Web-Challenges - the collection](../02-web/archives/My-CTF-Web-Challenges) — 📚 Repository
-- Adamkadaban/CTFs: CTF Cheat Sheet + Writeups / Files for — 📚 Repository
-- Tan-JunWei/CTF-Writeups
+- [Adamkadaban/CTFs](../30-archetypes/archives/personal-collections/CTFs-Adamkadaban) - CTF Cheat Sheet + Writeups / Files for various CTFs - 📚 Repository
+- [Tan-JunWei/CTF-Writeups](../30-archetypes/archives/personal-collections/CTF-Writeups-Tan-JunWei) - Multi-category CTF writeups - 📚 Repository
 ### Archived web content
 
 Wayback Machine, archive.today.

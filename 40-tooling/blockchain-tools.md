@@ -23,18 +23,19 @@ Foundry (Rust) has displaced Hardhat (TypeScript) as the dominant exploit-develo
 ## Quick Installation
 
 ```bash
-# Most tools are pip-installable
-pip install pwntools angr ropper pyelftools
-
-# Or apt-installable on Debian/Ubuntu
-sudo apt install gdb gdb-gef ghidra wireshark tshark binwalk foremost exiftool steghide
-
-# Foundry (blockchain)
+# Foundry (Solidity development toolkit — requires Rust)
 curl -L https://foundry.paradigm.xyz | bash
-foundryup
+# Then run: foundryup
 
-# Frida (mobile)
-pip install frida-tools
+# Slither (Solidity static analyzer)
+pip install slither-analyzer
+
+# Echidna (fuzz testing for Solidity)
+# Install via cabal or see https://github.com/crytic/echidna
+cabal update && cabal install echidna
+
+# mythril (Symbolic execution for Solidity)
+pip install mythril
 ```
 
 ## See Also

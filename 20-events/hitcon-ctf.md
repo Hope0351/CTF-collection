@@ -37,9 +37,12 @@ Co-organized by HITCON community and Taiwanese teams. Attack-defense at finals; 
 
 ## Suggested Approach for Studying HitCon CTF
 
-1. **Start with the most recent official source release** (if available). For events organized by Nautilus Institute (DEF CON), dicegang (DiceCTF), Crusaders-of-Rust (corCTF), justcatthefish (justCTF), project-sekai-ctf (SekaiCTF), osirislab (CSAW), SECCON, or chaitin (RealWorldCTF), the challenge source is published immediately after the event.
-2. **Cross-reference with team writeup archives.** The strongest team archives for elite-tier events are `p4-team/ctf`, `r3kapig/writeup`, and `theori-io/ctf`.
-3. **Look for personal writeup collections** that cover multiple years of the same event — these reveal the event's "house style" and recurring patterns.
+HitCon is Taiwan's premier CTF, known for innovative web and pwn challenges with an attack-defense finals format. To prepare:
+
+1. **Study past HitCon releases and BambooFox team writeups** — BambooFox is deeply connected to the Taiwanese CTF scene and their bilingual writeups provide excellent context for HitCon challenges.
+2. **Focus on web exploitation** — HitCon's web challenges, often authored by orange, are among the most creative in the world, featuring novel PHP deserialization, prototype pollution, and language-specific tricks.
+3. **Practice attack-defense format** — HitCon Finals uses attack-defense. Build skills in both exploiting and patching services simultaneously.
+4. **Read the HITCON community blog posts** — the Taiwanese security community publishes detailed technical content that often foreshadows challenge types seen in HitCon CTF.
 
 ## See Also
 
