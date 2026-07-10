@@ -1,0 +1,17 @@
+# 🔌 
+
+> **Original Source:** [](https://infosecwriteups.com/uart-shell-privilege-escalation-kpmg-ctf-2025-writeup-8ce322de8d63)
+> **Platform:** infosecwriteups.com | **Category:** `HARDWARE` | **Year:** 2025
+
+---
+
+## 🔗 Read Full Writeup
+
+This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
+
+**[📖 Read Full Article on Medium](https://infosecwriteups.com/uart-shell-privilege-escalation-kpmg-ctf-2025-writeup-8ce322de8d63)**
+
+---
+
+*📖 Originally published on [Medium](https://infosecwriteups.com/uart-shell-privilege-escalation-kpmg-ctf-2025-writeup-8ce322de8d63). All credit goes to the original author.*
+*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of hardware CTF writeups.*

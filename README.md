@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Categories](https://img.shields.io/badge/Categories-13-blue)](#-repository-structure)
-[![Sources](https://img.shields.io/badge/Sources-364-green)](#-corpus-statistics)
+[![Sources](https://img.shields.io/badge/Sources-3%2C499+-green)](#-corpus-statistics)
 [![Platforms](https://img.shields.io/badge/Platforms-Internal%20Archive%20%7C%20Medium%20%7C%20YouTube%20%7C%20CTFtime%20%7C%20Blogs-orange)](#-corpus-statistics)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success)](CHANGELOG.md)
 
@@ -14,9 +14,9 @@
 
 This is a **curated knowledge base** for the global Capture The Flag community. Rather than being yet another list of links, this collection is:
 
-- **Multi-source** — 364 curated entries drawn from 5 distinct content platforms: internal archives, Medium articles, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
-- **Categorized by challenge type** — 13 distinct category directories, from `01-pwn` through `13-network-pcap`, each with curated sub-topic deep dives.
-- **Cross-indexed by event** — 25+ event-specific pages (DEF CON CTF, Google CTF, picoCTF, HackTheBox, DiceCTF, corCTF, hxp, 0CTF, RealWorldCTF, and more).
+- **Multi-source** — 3,499+ curated entries drawn from 5 distinct content platforms: internal archives, 3,135+ Medium article writeups, YouTube video walkthroughs, CTFtime event entries, and personal security blogs.
+- **Categorized by challenge type** — 13 distinct category directories, from `01-pwn` through `13-network-pcap`, each with curated sub-topic deep dives and hundreds of Medium writeups.
+- **Cross-indexed by event** — 41+ event-specific pages (DEF CON CTF, Google CTF, picoCTF, HackTheBox, TryHackMe, DiceCTF, corCTF, hxp, 0CTF, RealWorldCTF, and more), each with dedicated writeup subdirectories.
 - **Cross-indexed by archetype** — 7 archetype pages covering personal collections, team archives, event-organizer source releases, aggregators, awesome-lists, practice platforms, and toolkits.
 - **Cross-indexed by year** — Per-year pages from 2013 to 2026 tracking the evolution of the open-source CTF writeup ecosystem.
 - **Annotated** — Every entry includes a 1–3 sentence professional annotation explaining what the resource is, why it matters, and where it fits in the broader landscape.
@@ -41,21 +41,21 @@ CTF-collection/
 │   ├── learning-path.md
 │   └── tools-cheatsheet.md
 │
-├── 01-pwn/                            ← binary exploitation
-├── 02-web/                            ← web exploitation
-├── 03-crypto/                         ← cryptography
-├── 04-reverse-engineering/
-├── 05-forensics/                      ← forensics + steganography
-├── 06-osint/
-├── 07-misc/                           ← misc + programming
-├── 08-blockchain-web3/
-├── 09-mobile/
-├── 10-hardware-iot/
+├── 01-pwn/                            ← binary exploitation + 50 Medium writeups
+├── 02-web/                            ← web exploitation + 841 Medium writeups
+├── 03-crypto/                         ← cryptography + 107 Medium writeups
+├── 04-reverse-engineering/            ← + 52 Medium writeups
+├── 05-forensics/                      ← forensics + steganography + 87 Medium writeups
+├── 06-osint/                          ← + 71 Medium writeups
+├── 07-misc/                           ← misc + programming + 971 Medium writeups
+├── 08-blockchain-web3/               ← + 70 Medium writeups
+├── 09-mobile/                         ← + 34 Medium writeups
+├── 10-hardware-iot/                   ← + 44 Medium writeups
 ├── 11-ics-scada/
 ├── 12-cloud/
-├── 13-network-pcap/
+├── 13-network-pcap/                   ← + 3 Medium writeups
 │
-├── 20-events/                         ← cross-index by CTF event
+├── 20-events/                         ← 41 CTF events with 799 dedicated writeups
 ├── 30-archetypes/                     ← cross-index by repo type
 ├── 40-tooling/                        ← curated tool references
 ├── 50-writeups-by-year/               ← temporal index
@@ -74,54 +74,47 @@ Each category directory follows the same internal structure: a `README.md` (orie
 
 | Metric | Count |
 |---|---:|
-| **Total curated sources** | 364 |
-| **internal archives** | 124 |
-| **Medium articles** | 107 |
+| **Total curated sources** | 3,499+ |
+| **Medium writeup files** | 3,135 |
+| **Internal archives** | 124 |
 | **YouTube video walkthroughs** | 30 |
 | **CTFtime event entries** | 35 |
 | **Personal blog posts** | 68 |
 | **Distinct categories covered** | 13 |
-| **Distinct CTF events indexed** | 25+ |
+| **Distinct CTF events indexed** | 41+ |
 | **Distinct archetypes covered** | 7 |
 | **Year range covered** | 2013 – 2026 |
 
 ### Category Distribution
 
-| # | Category | Sources Covering |
+| # | Category | Writeups |
 |---:|---|---:|
-| 1 | Web Exploitation | 95 |
-| 2 | Binary Exploitation | 73 |
-| 3 | Cryptography | 66 |
-| 4 | Reverse Engineering | 64 |
-| 5 | Forensics & Steganography | 42 |
-| 6 | Miscellaneous & Programming | 37 |
-| 7 | Blockchain & Web3 | 36 |
-| 8 | Hardware & IoT | 22 |
-| 9 | OSINT — Open-Source Intelligence | 19 |
-| 10 | Mobile Security | 18 |
-| 11 | Network & Pcap Analysis | 13 |
-| 12 | Cloud Security | 11 |
-| 13 | ICS / SCADA | 4 |
+| 1 | Web Exploitation | 841 |
+| 2 | Miscellaneous & Programming | 971 |
+| 3 | Cryptography | 107 |
+| 4 | Forensics & Steganography | 87 |
+| 5 | Reverse Engineering | 52 |
+| 6 | Binary Exploitation | 50 |
+| 7 | Blockchain & Web3 | 70 |
+| 8 | OSINT — Open-Source Intelligence | 71 |
+| 9 | Hardware & IoT | 44 |
+| 10 | Mobile Security | 34 |
+| 11 | Network & Pcap Analysis | 3 |
 
-### Top Events Referenced
+### Top Events with Writeups
 
-| # | CTF Event | Mentions |
+| # | CTF Event | Writeups |
 |---:|---|---:|
-| 1 | CTFtime | 63 |
-| 2 | HackTheBox | 60 |
-| 3 | picoCTF | 33 |
-| 4 | TryHackMe | 23 |
-| 5 | DEF CON | 20 |
-| 6 | DownUnderCTF | 18 |
-| 7 | CSAW CTF | 16 |
-| 8 | DEF CON CTF Quals | 15 |
-| 9 | 0CTF/TCTF | 13 |
-| 10 | SECCON CTF | 13 |
-| 11 | HitCon CTF | 13 |
-| 12 | justCTF | 12 |
-| 13 | DiceCTF | 12 |
-| 14 | Google CTF | 12 |
-| 15 | NahamCon CTF | 11 |
+| 1 | TryHackMe | 261 |
+| 2 | HackTheBox | 148 |
+| 3 | picoCTF | 86 |
+| 4 | CVE-based | 64 |
+| 5 | NahamCon CTF | 20 |
+| 6 | ImaginaryCTF | 20 |
+| 7 | DownUnderCTF | 20 |
+| 8 | DEF CON CTF | 15 |
+| 9 | IceCTF | 14 |
+| 10 | INTIGRITI CTF | 13 |
 
 ---
 

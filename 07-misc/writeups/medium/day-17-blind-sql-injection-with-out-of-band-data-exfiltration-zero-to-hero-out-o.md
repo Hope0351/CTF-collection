@@ -1,0 +1,17 @@
+# 📝 
+
+> **Original Source:** [](https://infosecwriteups.com/day-17-blind-sql-injection-with-out-of-band-data-exfiltration-zero-to-hero-out-of-band-a7f770ab30a0)
+> **Platform:** infosecwriteups.com | **Category:** `GENERAL`
+
+---
+
+## 🔗 Read Full Writeup
+
+This writeup is available on Medium. Click below to read the complete article with all details, code snippets, and screenshots.
+
+**[📖 Read Full Article on Medium](https://infosecwriteups.com/day-17-blind-sql-injection-with-out-of-band-data-exfiltration-zero-to-hero-out-of-band-a7f770ab30a0)**
+
+---
+
+*📖 Originally published on [Medium](https://infosecwriteups.com/day-17-blind-sql-injection-with-out-of-band-data-exfiltration-zero-to-hero-out-of-band-a7f770ab30a0). All credit goes to the original author.*
+*📂 Part of [CTF Collection](https://github.com/Hope0351/CTF-collection) — a curated archive of general CTF writeups.*

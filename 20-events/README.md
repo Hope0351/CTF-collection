@@ -1,53 +1,51 @@
-# 🏆 CTF Events — Cross-Index
+# 🏆 CTF Events
 
 > Part of **CTF-collection** — see [master README](../README.md) for context.
 
-This directory cross-indexes the corpus by CTF event. Each event has its own page with curated resources, official source releases (where available), and team writeup archives.
+This directory contains **799 writeups** across **41 CTF events**, organized by event name.
 
-## Event Tier Reference
+| # | Event | Writeups | Directory |
+|---:|---|---:|---|
+| 1 | [Tryhackme](tryhackme/README.md) | 261 | `tryhackme/` |
+| 2 | [Hackthebox](hackthebox/README.md) | 148 | `hackthebox/` |
+| 3 | [Picoctf](picoctf/README.md) | 86 | `picoctf/` |
+| 4 | [Cve Based](cve-based/README.md) | 64 | `cve-based/` |
+| 5 | [Downunderctf](downunderctf/README.md) | 20 | `downunderctf/` |
+| 6 | [Imaginaryctf](imaginaryctf/README.md) | 20 | `imaginaryctf/` |
+| 7 | [Nahamcon CTF](nahamcon-ctf/README.md) | 20 | `nahamcon-ctf/` |
+| 8 | [Def Con CTF](def-con-ctf/README.md) | 15 | `def-con-ctf/` |
+| 9 | [Icectf](icectf/README.md) | 14 | `icectf/` |
+| 10 | [Intigriti](intigriti/README.md) | 13 | `intigriti/` |
+| 11 | [Google CTF](google-ctf/README.md) | 11 | `google-ctf/` |
+| 12 | [Hsctf](hsctf/README.md) | 11 | `hsctf/` |
+| 13 | [Seccon CTF](seccon-ctf/README.md) | 11 | `seccon-ctf/` |
+| 14 | [Amateurs CTF](amateurs-ctf/README.md) | 10 | `amateurs-ctf/` |
+| 15 | [Sekaictf](sekaictf/README.md) | 9 | `sekaictf/` |
+| 16 | [Corctf](corctf/README.md) | 8 | `corctf/` |
+| 17 | [Angstromctf](angstromctf/README.md) | 7 | `angstromctf/` |
+| 18 | [Htb Cyber Apocalypse](htb-cyber-apocalypse/README.md) | 7 | `htb-cyber-apocalypse/` |
+| 19 | [Plaidctf](plaidctf/README.md) | 7 | `plaidctf/` |
+| 20 | [Csaw CTF](csaw-ctf/README.md) | 5 | `csaw-ctf/` |
+| 21 | [Hitcon CTF](hitcon-ctf/README.md) | 5 | `hitcon-ctf/` |
+| 22 | [Justctf](justctf/README.md) | 5 | `justctf/` |
+| 23 | [N1CTF](n1ctf/README.md) | 5 | `n1ctf/` |
+| 24 | [Balsn CTF](balsn-ctf/README.md) | 4 | `balsn-ctf/` |
+| 25 | [Cryptoctf](cryptoctf/README.md) | 4 | `cryptoctf/` |
+| 26 | [Hackerone CTF](hackerone-ctf/README.md) | 4 | `hackerone-ctf/` |
+| 27 | [Irisctf](irisctf/README.md) | 4 | `irisctf/` |
+| 28 | [Hxp CTF](hxp-ctf/README.md) | 3 | `hxp-ctf/` |
+| 29 | [Icmtc CTF](icmtc-ctf/README.md) | 3 | `icmtc-ctf/` |
+| 30 | [Redpwn CTF](redpwn-ctf/README.md) | 3 | `redpwn-ctf/` |
+| 31 | [Cat CTF](cat-ctf/README.md) | 2 | `cat-ctf/` |
+| 32 | [0CTF Tctf](0ctf-tctf/README.md) | 1 | `0ctf-tctf/` |
+| 33 | [Bamboofox CTF](bamboofox-ctf/README.md) | 1 | `bamboofox-ctf/` |
+| 34 | [Bearcat CTF](bearcat-ctf/README.md) | 1 | `bearcat-ctf/` |
+| 35 | [Cit CTF](cit-ctf/README.md) | 1 | `cit-ctf/` |
+| 36 | [Fcsc](fcsc/README.md) | 1 | `fcsc/` |
+| 37 | [Glacierctf](glacierctf/README.md) | 1 | `glacierctf/` |
+| 38 | [M0Lecon](m0lecon/README.md) | 1 | `m0lecon/` |
+| 39 | [Ritsec CTF](ritsec-ctf/README.md) | 1 | `ritsec-ctf/` |
+| 40 | [Rvcexiitb CTF](rvcexiitb-ctf/README.md) | 1 | `rvcexiitb-ctf/` |
+| 41 | [Wargames My CTF](wargames-my-ctf/README.md) | 1 | `wargames-my-ctf/` |
 
-- **S-tier (elite):** DEF CON CTF, hxp CTF, 0CTF/TCTF, HitCon CTF, RealWorldCTF — the most technically demanding CTFs in the world. Qualifying for these is itself a credential.
-- **A-tier (top):** Google CTF, picoCTF (beginner-focused), HackTheBox, TryHackMe, pwn.college, CSAW, PlaidCTF, DiceCTF, corCTF, UIUCTF, SekaiCTF, SECCON, justCTF, Paradigm CTF (blockchain), Ethernaut (blockchain), Damn Vulnerable DeFi (blockchain).
-- **B-tier (well-established):** idekCTF, BambooFox, AngstromCTF, DownUnderCTF, NahamCon, UTCTF, IRISCTF, Capture The Ether, and many regional CTFs.
-
-## Event Index
-
-| Event | Tier | Format | Schedule | Page |
-|---|---|---|---|---|
-| DEF CON | S-tier | — | Annual — qualifier in May/June, finals in August at DEF CON. | [`def-con-ctf.md`](def-con-ctf.md) |
-| DEF CON CTF Quals | S-tier | — | Annual — May/June. | [`def-con-ctf-quals.md`](def-con-ctf-quals.md) |
-| Google CTF | S-tier | — | Annual — June. | [`google-ctf.md`](google-ctf.md) |
-| picoCTF | A-tier (beginner-focused) | — | Annual — February/March, plus always-on archives. | [`picoctf.md`](picoctf.md) |
-| HackTheBox | A-tier (platform) | — | Year-round platform + seasonal events. | [`hackthebox.md`](hackthebox.md) |
-| TryHackMe | A-tier (platform) | — | Year-round. | [`tryhackme.md`](tryhackme.md) |
-| pwn.college | A-tier (educational) | — | Year-round. | [`pwn-college.md`](pwn-college.md) |
-| CSAW CTF | A-tier | — | Annual — September. | [`csaw-ctf.md`](csaw-ctf.md) |
-| PlaidCTF | A-tier | — | Annual — May. | [`plaidctf.md`](plaidctf.md) |
-| hxp CTF | S-tier (elite) | — | Annual — December. | [`hxp-ctf.md`](hxp-ctf.md) |
-| 0CTF/TCTF | S-tier (elite) | — | Annual — March/April. | [`0ctf-tctf.md`](0ctf-tctf.md) |
-| DiceCTF | A-tier | — | Annual — February. | [`dicectf.md`](dicectf.md) |
-| corCTF | A-tier | — | Annual — July/August. | [`corctf.md`](corctf.md) |
-| UIUCTF | A-tier | — | Annual — June/July. | [`uiuctf.md`](uiuctf.md) |
-| SekaiCTF | A-tier | — | Annual — October. | [`sekaictf.md`](sekaictf.md) |
-| HitCon CTF | S-tier (elite) | — | Annual — August. | [`hitcon-ctf.md`](hitcon-ctf.md) |
-| SECCON CTF | A-tier | — | Annual — November (quals), January (finals). | [`seccon-ctf.md`](seccon-ctf.md) |
-| RealWorldCTF | S-tier (elite) | — | Annual — January. | [`realworldctf.md`](realworldctf.md) |
-| idekCTF | B-tier | — | Annual — December. | [`idekctf.md`](idekctf.md) |
-| justCTF | A-tier | — | Annual — January/February. | [`justctf.md`](justctf.md) |
-| BambooFox CTF | B-tier | — | Annual — variable. | [`bamboofox-ctf.md`](bamboofox-ctf.md) |
-| Paradigm CTF | A-tier (blockchain) | — | Annual — variable. | [`paradigm-ctf.md`](paradigm-ctf.md) |
-| Ethernaut | A-tier (blockchain, always-on) | — | Always-on. | [`ethernaut.md`](ethernaut.md) |
-| Damn Vulnerable DeFi | A-tier (blockchain, always-on) | — | Always-on. | [`damn-vulnerable-defi.md`](damn-vulnerable-defi.md) |
-| Capture The Ether | B-tier (blockchain, always-on) | — | Always-on. | [`capture-the-ether.md`](capture-the-ether.md) |
-| AngstromCTF | B-tier | — | Annual — April/May. | [`angstromctf.md`](angstromctf.md) |
-| DownUnderCTF | B-tier | — | Annual — September/October. | [`downunderctf.md`](downunderctf.md) |
-| NahamCon CTF | B-tier | — | Annual — variable. | [`nahamcon-ctf.md`](nahamcon-ctf.md) |
-| UTCTF | B-tier | — | Annual — variable. | [`utctf.md`](utctf.md) |
-| IRISCTF | B-tier | — | Annual — January. | [`irisctf.md`](irisctf.md) |
-
-## How to Use This Index
-
-1. **Find an event you want to study.** Use the table above to navigate to its dedicated page.
-2. **Start with official source releases.** If the event organizers publish challenge source (most A-tier and S-tier events do, post-2022), study that first — it reveals the intended solve path.
-3. **Cross-reference with team writeups.** The strongest team archives (p4-team/ctf, r3kapig/writeup, theori-io/ctf) cover multiple elite events at competition-level depth.
-4. **Watch for year-over-year patterns.** Each event has a "house style" — PlaidCTF favors elegant math-heavy challenges, hxp favors brutal but clean challenges, RealWorldCTF favors real-software exploitation.
+**Total: 799 writeups across 41 events**

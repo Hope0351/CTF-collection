@@ -4,6 +4,25 @@ All notable changes to this CTF-collection repository are documented in this fil
 
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-07-10] — Major: 3,135 Medium CTF Writeups Added
+
+### Added
+- **3,135 individual CTF writeup markdown files** sourced from Medium and InfoSecWriteups, organized across 11 category directories and 41 event directories.
+- **41 CTF event pages** with dedicated writeup subdirectories (TryHackMe: 261, HackTheBox: 148, picoCTF: 86, and 38 more).
+- **Updated all 11 category READMEs** with new Medium writeup tables linking to individual writeup files.
+- **New writeup file format** with consistent metadata header (source, platform, category, event, year) and direct link to original Medium article.
+- Categories now contain: Web (841), Misc (971), Crypto (107), Forensics (87), OSINT (71), Blockchain (70), Reverse (52), Pwn (50), Hardware (44), Mobile (34), Network (3).
+
+### Changed
+- **README.md** updated: total sources badge from 364 to 3,499+, category distribution table now reflects Medium writeup counts, event section updated.
+- **Repository structure** annotations updated to show writeup counts per category.
+- **20-events/README.md** rebuilt as a comprehensive index of all 41 events with writeup counts.
+
+### Stats
+- Total writeup files: 3,135 (2,330 in category directories, 799 in event directories)
+- Total curated sources: 3,499+ (was 364)
+- Events with dedicated writeups: 41 (was 25+)
+
 ## [2026-07-10] — Markdown Cleanup and Polish
 
 ### Changed
