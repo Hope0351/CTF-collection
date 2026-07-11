@@ -6,7 +6,7 @@
 
 This Challenge is based on PWN or Binary Exploitation.
 
-*Image Source : Hero CTF*
+**Image Source : Hero CTF**
 
 This is a fairly easy challenge if we know the concept of Stack buffer overflow. We get 2 files for this challenge. One is the binary itself and the other is a C file. Below is the code which was given.
 
@@ -21,7 +21,7 @@ To do this we need to know the address for the following function, which GDB wil
 
 Now we can manually insert these functions after filling up the buffer, which is 32 characters. The function has to be inserted in a little-endian format.
 
-*Image Source : Google*
+**Image Source : Google**
 
 The exploit is as follows
 

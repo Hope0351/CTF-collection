@@ -1,6 +1,5 @@
 # Format String: Overwrite GOT Address
 
-
 This technique is used to overwrite a GOT address(the address which points a dynamically linked function to the linked library) to that of other function. This is very useful techniques when you have a format string vulnerability and you want to change the control flow a function to something that it was not *supposed* to do. Here, we will take a binary which has a format string vulnerability and how we can use it overwrite GOT address sto that of other address. 
 
 # Practical
@@ -12,7 +11,6 @@ Binary : [here](/Attachments/images/overwrite-got-fmt/other/pingme)
 Exploit: [here](/Attachments/images/overwrite-got-fmt/other/pingme.py)
 
 ***
-
 
 First off, we need to check the binary protections, let's use `checksec`:-
 
@@ -26,7 +24,7 @@ d4mianwayne@oracle:~/Pwning/fmt$ checksec pingme
     PIE:      No PIE (0x8048000)
 ```
 
-NX is enabled other than everything is disabled. One security mechanism is of interest is `RELRO` which is an abbreviation of `Relocation Read Only` which means the relocations entry is read-only i.e. the Global Offset address. To be more specific, this mechanism do not allow you to overwrite a GOT entry and prevents you from changing the control flow. You can found more information about `RELRO` [here](https://medium.com/@HockeyInJune/relro-relocation-read-only-c8d0933faef3). 
+NX is enabled other than everything is disabled. One security mechanism is of interest is `RELRO` which is an abbreviation of `Relocation Read Only` which means the relocations entry is read-only i.e. the Global Offset address. To be more specific, this mechanism do not allow you to overwrite a GOT entry and prevents you from changing the control flow. You can found more information about `RELRO` here. 
 
 Since, here it is disabled which means we can overwrite the GOT entry. But before that let's reverse engineer the binary and see the workflow. Using IDA, `main` is:-
 
@@ -135,7 +133,6 @@ Now, continuing the process:-
 
 ![continue](/Attachments/images/overwrite-got-fmt/images/continue.png)
 
-
 ---
 
 Let's check the `puts` address in `gdb` with `p puts` and see if it equals to what we recieved:-
@@ -149,7 +146,6 @@ Let's check the `puts` address in `gdb` with `p puts` and see if it equals to wh
 Great, we have leaked a libc address, now we need to calculate the lhe base address, we know the drill so we will use pwntools' `ELF` to update the address by subtracting the leak address from it's offset from libc.
 
 `libc.address = puts_leak - libc.symbols['puts']`
-
 
 ### Pwning Time
 
@@ -188,7 +184,6 @@ Attaching it to `gdb` and then checking the `GOT` address of `printf` we can see
 ---
 
 ![shell](/Attachments/images/overwrite-got-fmt/images/shell.png)
-
 
 ---
 

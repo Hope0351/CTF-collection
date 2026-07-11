@@ -36,6 +36,6 @@ Hurrah….!!! Solved …
 
 I love ctf. And I know you also. I love to have you my friend.
 
-In [Github](https://github.com/livepwn) , [Facebook](https://facebook.com/livepwn) , [Instagram](https://instagram.com/livepwn)
+In Github , Facebook , Instagram
 
 ---

@@ -14,7 +14,7 @@ In this write-up I will mention challenges from two category, first will start w
 
 Challenge Name: Poof
 Challenge Description: Yet another pcap, no usb traffic in this one so I’m lost. Can you help me out? :)
-Challenge File: [https://mega.nz/file/sk4TjJoA#EKaleZqsxyihM6clzcsvp04zfhdUGBu9ckVZ4HU7fWg](https://mega.nz/file/sk4TjJoA#EKaleZqsxyihM6clzcsvp04zfhdUGBu9ckVZ4HU7fWg)
+Challenge File: 
 
 At first I thought it will be the challenge that I have to solve the USB traffic however, when I opened it I saw many different protocols.
 
@@ -40,7 +40,7 @@ This is a powershell script which is highly obfuscated, the way we de-obfuscate 
 
 Now that obfuscated script is de-obfuscated is actually humanly readable. We need to do that for the entire script given and at the end we will get our de-obfuscated script.
 
-Once it is humanly readable we will get the key and the iv to decrypt that bin file, let us do that with our beloved [chef](https://gchq.github.io/CyberChef/)
+Once it is humanly readable we will get the key and the iv to decrypt that bin file, let us do that with our beloved chef
 
 So it is a window’s executable file, great let us download it. So, till this moment I thought that this file is not a harmful file and it is good go for run on my system, guess what? It is a malware and defender flagged it. But my main concern was where is the flag. I thought to look up to the file at VT, and there I got some information about this file, that is a trojan it’s score is 30/74 and more, but there were no information regarding flag.
 
@@ -92,7 +92,7 @@ Yup, apart from my field I tried to solve a pwn challenge. It is also one of the
 
 Challenge Name: Baby pwn
 Challenge Description: Here’s a baby pwn challenge for you to try out. Can you get the flag? nc 34.162.142.123 5000
-Challenge File: [https://mega.nz/file/Z4Q2XLSD#tw7mA2WHTemYE5SxfEOtjE_rigECxTeom3MKBhxtgC8](https://mega.nz/file/Z4Q2XLSD#tw7mA2WHTemYE5SxfEOtjE_rigECxTeom3MKBhxtgC8)
+Challenge File: 
 
 On seeing the file, I understood that it is basic buffer overflow challenge
 

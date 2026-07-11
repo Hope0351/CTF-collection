@@ -24,8 +24,6 @@ For this, I will use the Online Linux man page
 
 >
 
-[https://pubs.opengroup.org/onlinepubs/009695399/functions/mprotect.html](https://pubs.opengroup.org/onlinepubs/009695399/functions/mprotect.html)
-
 “The *mprotect*() function shall change the access protections to be that specified by *prot* for those whole pages containing any part of the address space of the process starting at address *addr* and continuing for *len* bytes.”
 
 Well understood ??
@@ -181,16 +179,16 @@ Next, we can put the address of the stack to the r0 register.To find this addres
 pi@raspberrypi:~/asm/bof $ gdb ./bof-rop
 GNU gdb (Raspbian 7.7.1+dfsg-5+rpi1) 7.7.1
 Copyright © 2014 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <[http://gnu.org/licenses/gpl.html](http://gnu.org/licenses/gpl.html)>
+License GPLv3+: GNU GPL version 3 or later <>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law. Type “show copying”
 and “show warranty” for details.
 This GDB was configured as “arm-linux-gnueabihf”.
 Type “show configuration” for configuration details.
 For bug reporting instructions, please see:
-<[http://www.gnu.org/software/gdb/bugs/](http://www.gnu.org/software/gdb/bugs/)>.
+<>.
 Find the GDB manual and other documentation resources online at:
-<[http://www.gnu.org/software/gdb/documentation/](http://www.gnu.org/software/gdb/documentation/)>.
+<>.
 For help, type “help”.
 Type “apropos word” to search for commands related to “word”…
 [*] No debugging session active

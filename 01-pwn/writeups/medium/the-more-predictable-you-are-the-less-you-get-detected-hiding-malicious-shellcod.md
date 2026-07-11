@@ -6,13 +6,13 @@
 
 ## The more predictable you are, the less you get detected
 
-Recently I publish a small [PoC](https://github.com/kleiton0x00/Shelltropy) on Github about a way of hiding malicious shellcode in PE by lowering its entropy.
+Recently I publish a small PoC on Github about a way of hiding malicious shellcode in PE by lowering its entropy.
 
 Entropy is the measure of the randomness in a set of data (here: shellcode). The higher the entropy, the more random the data is. Shannon Entropy is an algorithm that will produce a result between 0 and 8, where 8 means there is no pattern in the data, thereby it’s very random and 0 means data follows a pattern.
 
 ## The problem with high entropy shellcode
 
-The entropy of malicious code grows as it is packed or obfuscated. Indeed, studies have shown that entropy may be utilized to successfully distinguish between non-malicious and malicious code based on its entropy. According to [Cisco](https://umbrella.cisco.com/blog/using-entropy-to-spot-the-malware-hiding-in-plain-sight): *Developing a database of the normal range of entropy values for image files would help threat researchers and incident response teams in more quickly identifying those files where suspicious data transfer was occurring.* Malicious samples have an entropy of over 7.2, whereas normal software has an entropy of 4.8 to 7.2. In 30% of malicious samples, the entropy will be close to 8, whereas only 1% of harmless code will have this value. More than half of malicious samples will have an entropy of more than 7.2, but only one out of every ten normal programs will have this level of entropy. To summarize, not all malicious samples (though the most majority will) have high entropy, and not all valid programs will have low entropy (but the majority will). The fact that packing is a genuine strategy for reducing the size of executables and protecting resources, and many programs take advantage of it, explains why legal samples can have high entropy.
+The entropy of malicious code grows as it is packed or obfuscated. Indeed, studies have shown that entropy may be utilized to successfully distinguish between non-malicious and malicious code based on its entropy. According to Cisco: *Developing a database of the normal range of entropy values for image files would help threat researchers and incident response teams in more quickly identifying those files where suspicious data transfer was occurring.* Malicious samples have an entropy of over 7.2, whereas normal software has an entropy of 4.8 to 7.2. In 30% of malicious samples, the entropy will be close to 8, whereas only 1% of harmless code will have this value. More than half of malicious samples will have an entropy of more than 7.2, but only one out of every ten normal programs will have this level of entropy. To summarize, not all malicious samples (though the most majority will) have high entropy, and not all valid programs will have low entropy (but the majority will). The fact that packing is a genuine strategy for reducing the size of executables and protecting resources, and many programs take advantage of it, explains why legal samples can have high entropy.
 
 ## Avoiding high entropy algorithms
 
@@ -96,7 +96,7 @@ So lets explain this graphically. Suppose a byte belonging to a high entropy chu
 
 ## Simple Shellcode Injection PoC
 
-In order to inject the Shellcode in the process, it is important to bring this low-entroy shellcode back to it’s original state (high-entropy shellcode), by using the [decoder script](https://github.com/kleiton0x00/Shelltropy/blob/main/shannonDecoder.cpp). After the decode, inject it using WinAPI or Syscalls into the desired process. A simple [Syscall PoC](https://github.com/kleiton0x00/Shelltropy/blob/main/Shelltropy/SyscallsExample/SyscallsExample/SyscallsExample.cpp) is already published on my github repo and it is what I usually recommend to use, but if you find it confusing to understand/use, the below PoC is a Vanilla Shellcode Injection technique with WinAPI, which is easier to get familiar with:
+In order to inject the Shellcode in the process, it is important to bring this low-entroy shellcode back to it’s original state (high-entropy shellcode), by using the decoder script. After the decode, inject it using WinAPI or Syscalls into the desired process. A simple Syscall PoC is already published on my github repo and it is what I usually recommend to use, but if you find it confusing to understand/use, the below PoC is a Vanilla Shellcode Injection technique with WinAPI, which is easier to get familiar with:
 
 ```
 #include <windows.h>
@@ -184,6 +184,6 @@ While encoding, the size of the shellcode will be 2 times larger, making it easi
 
 ## Summary
 
-It is straightforward to reduce the entropy of obfuscated malware code; it may be used to elude detection and, on top of that, it may provide some extra protection against signature formation. As [Cyberbit](https://www.cyberbit.com/blog/endpoint-security/malware-terms-code-entropy/) states: *The lower the code entropy, the lower the chances are that the code has been obfuscated in any way.* The code described here can be modified to build solutions that assist avoid the use of entropy as a malware detection method. Using alternative mathematical equations and different sized low entropy chunks of code to create better low entropy byte patterns may improve the method’s reliability.
+It is straightforward to reduce the entropy of obfuscated malware code; it may be used to elude detection and, on top of that, it may provide some extra protection against signature formation. As Cyberbit states: *The lower the code entropy, the lower the chances are that the code has been obfuscated in any way.* The code described here can be modified to build solutions that assist avoid the use of entropy as a malware detection method. Using alternative mathematical equations and different sized low entropy chunks of code to create better low entropy byte patterns may improve the method’s reliability.
 
 ---

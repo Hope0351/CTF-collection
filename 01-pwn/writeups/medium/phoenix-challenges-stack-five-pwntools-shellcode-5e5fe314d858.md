@@ -6,7 +6,7 @@
 
 ## The Challenge
 
-The challenge’s description and source code are located [here](https://exploit.education/phoenix/stack-five/). It and all other Phoenix binaries are located in the /opt/phoenix/amd64 directory. A previous post describes how to set up the Virtual Machine for these challenges, if that hasn’t been done already.
+The challenge’s description and source code are located here. It and all other Phoenix binaries are located in the /opt/phoenix/amd64 directory. A previous post describes how to set up the Virtual Machine for these challenges, if that hasn’t been done already.
 
 ## The File
 
@@ -14,7 +14,7 @@ As in the previous challenges, the *Stack Five* file is an ELF 64-bit LSB execut
 
 ## Objective
 
-The goal is to have the program pop a shell with an `[execve(“/bin/sh”)](https://www.man7.org/linux/man-pages/man2/execve.2.html)` system call. This will be done by providing carefully crafted input into the `start_level()`’s buffer.
+The goal is to have the program pop a shell with an `execve(“/bin/sh”)` system call. This will be done by providing carefully crafted input into the `start_level()`’s buffer.
 
 Popping a shell on a compromised machine is very important for attackers. A shell grants them the ability to traverse the file system to read and update files. They can also potentially escalate privileges one to get full control of the machine’s system and configurations.
 
@@ -24,11 +24,11 @@ Understanding the Stack and ASLR is key.
 
 We now introduce the notion of shellcode. As most know, computers operate in binary, where predefined sequences of 0’s and 1’s in binary code have specific meaning. However, such extended sequences are a challenge for humans to parse and understand.
 
-That is why [Assembly languages](https://en.wikipedia.org/wiki/Assembly_language) have been developed. They are human-readable, with each line being a relatively simple instruction and mapping nearly directly to a processors’ binary code and hardware. It should be noted that while there are multiple, the most common ones are x86, x86_64, and [the more recent ARM architecture family.](https://en.wikipedia.org/wiki/ARM_architecture_family)
+That is why Assembly languages have been developed. They are human-readable, with each line being a relatively simple instruction and mapping nearly directly to a processors’ binary code and hardware. It should be noted that while there are multiple, the most common ones are x86, x86_64, and the more recent ARM architecture family.
 
 Those used to programming in higher-level languages such as C, Python, Java, etc may be surprised to learn that their code isn’t compiled or interpreted directly into binary for execution. Instead, they are compiled into the version of Assembly that the computer’s processor uses. That Assembly in turn is converted by an *Assembler* program into the binary a processor will execute.
 
-*Source: *Information Technology Fundamentals Blog¹
+**Source: *Information Technology Fundamentals Blog¹*
 
 When exploiting vulnerabilities, attackers usually want to have the compiled binary execute a command. This can be done either by redirecting control flow to an already-included function (as illustrated in the Stack Threeand Stack Fourchallenges) or to attacker-injected lines of compiled Assembly. The latter is commonly referred to as *Shellcode.*
 
@@ -104,7 +104,7 @@ nathan@nathan-VirtualBox:~/Desktop/Exploit-Education-CTFs/Phoenix/stack-five$ tm
 
 Launching the code, halting at the start of the beginning of the start_level() function per the attached, and stepping through to the very end, we get
 
-Looks like our cyclical input. Let’s check. Per the RapidTables [hex-to-binary converter](https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html), we see that `0x6261616b6261616a` in hex corresponds to the cyclical `baakbaaj` ASCII text. Exactly what is needed!
+Looks like our cyclical input. Let’s check. Per the RapidTables hex-to-binary converter, we see that `0x6261616b6261616a` in hex corresponds to the cyclical `baakbaaj` ASCII text. Exactly what is needed!
 
 ## Get Nathan Pavlovsky’s stories in your inbox
 
@@ -177,13 +177,13 @@ $ whoami
 nathan
 ```
 
-The code can be found in the [Github repository](https://github.com/secnate/Exploit-Education-CTFs) for Phoenix challenge solutions.
+The code can be found in the Github repository for Phoenix challenge solutions.
 
 ## Remediation
 
 The risk of such a bug would be drastically reduced with the abandonment of memory-insecure languages such as C and C++.
 
-If there is no choice but to them, the [gets()](https://www.tutorialspoint.com/c_standard_library/c_function_gets.htm) function needs to be replaced with [fgets()](https://cplusplus.com/reference/cstdio/fgets/). Previous *Phoenix Stack* challenges explain it is preferable.
+If there is no choice but to them, the gets() function needs to be replaced with fgets(). Previous *Phoenix Stack* challenges explain it is preferable.
 
 The source code’s `gets(buffer);` line should thus be
 

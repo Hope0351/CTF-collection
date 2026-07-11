@@ -22,8 +22,6 @@ When we access the page indicated in the challenge description:
 
 >
 
-[http://173.212.221.197:34024/overflow.html](http://173.212.221.197:34024/overflow.html)
-
 We see a typical stack overflow page, full of info.
 
 ## Get Antonio Lara’s stories in your inbox
@@ -43,7 +41,5 @@ we see that something else is pasted (we can copy as many or as few characters a
 Use the source, Luke. What you are looking for is here: Th3F74g1$H3rE.fL4G
 
 And, unsurprisingly, the flag is here:
-
-[http://173.212.221.197:34024/Th3F74g1$H3rE.fL4G](http://173.212.221.197:34024/Th3F74g1$H3rE.fL4G)
 
 ---

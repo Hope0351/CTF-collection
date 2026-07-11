@@ -229,7 +229,6 @@ The functionality of the above can be defined as:-
 * Tcache House of Spirit
 * Tcache dup
 
-
 ### Tcache Dup Mitigation
 
 In the GLIBC-2.27ubuntu1.4, the double free mitigation towards the tcache chunks were introduced, the `tcache` structure became like:-
@@ -248,7 +247,7 @@ tcache_put (mchunkptr chunk, size_t tc_idx)
 }
 ```
 
-Reference: <https://code.woboq.org/userspace/glibc/malloc/malloc.c.html#tcache_perthread_struct>
+Reference: <>
 
 In the `tcache_put` which is used to put the `free`'d chunks into the tcache bins, added a `key` member in the `tcache_entry` struct solely for the purpose of detecting the double free of the `tcache` chunks, when a chunk is `free`'d, `key` is initialized to the value of the `tcache`.
 

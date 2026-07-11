@@ -4,8 +4,6 @@
 
 # Craft Your Own Windows x86/64 Shellcode
 
-*Photo by [Markus Spiske](https://unsplash.com/@markusspiske?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
-
 Imagine trying to sneak past high-tech security systems using tools everyone recognizes. That’s the problem with popular frameworks like Metasploit’s msfvenom — their digital fingerprints are well-known. By creating custom shellcode in C++, we can create unique patterns that slip under the radar while gaining fine-grained control over our payload’s behavior.
 
 ## Windows Memory Fundamentals: The Process Diary
@@ -91,7 +89,7 @@ We can walk through the linked list inside `InMemoryOrderModuleList` to find and
 
 We need two key functions from Kernel32.dll:
 
-[GetProcAddress](https://learn.microsoft.com/fr-fr/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) to find procedure addresses and [LoadLibraryA](https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) to load modules. These functions are sufficient to build our payload.
+GetProcAddress to find procedure addresses and LoadLibraryA to load modules. These functions are sufficient to build our payload.
 
 This is where the LDR structure comes into play. It will allow us to find the address of Kernel32.dll and exploit its internal structures as a PE (Portable Executable) format object.
 

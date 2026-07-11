@@ -9,11 +9,9 @@ tag:      pwn, roppy, ret2dlresolve
 category: CTF writeup
 ---
 
-
 I played this CTF mainly because I was chilling out and wanted to try out some challenges from the CTF. I managed to do the every pwn challenge except space one which was heap and the exploitation mechanism of it belongs to GLIBC 2.27 and I am only familiar with GLIBC 2.24 at the moment, but I know what to do this week,
 
 # Pancake
-
 
 Pancake challenge was very simple as the buffer overflow was very suspectible as the binary used the `gets` function which is a vulnerable function as it'll keep taking the input a new line `\n` is encountered. To our luck, the binary has a function named `secret` which spawns a shell for us. This was basically a **ret2win** technique.
 
@@ -169,7 +167,6 @@ $
 
 This was a statically linked binary and it had a stack overflow vulnerability and since it was statically linked no ret2libc could be done, I chose the ROP way to do a `read` syscall to store `/bin/sh` in BSS address and then did a `execve`syscall. As it was statically linked binary, we had every needed gadget this made it simple to exploit:-
 
-
 Exploit:-
 
 ```py
@@ -239,10 +236,9 @@ $
 [*] Closed connection to jh2i.com port 50002
 ```
 
-> Reference: <https://pwning.tech/2020/03/09/zer0pts-hipwn/>
+> Reference: <>
 
 # Bullseye
-
 
 This challenge was quite good and I liked it, it provided us a write-what-where primitive as a service and since the binary has Partial RELRO which means GOT entry was writeable, such a handy information. It was also leaking the alarm libc address which made it simple for us to get LIBC address by searching it ftro libc database.
 
@@ -381,6 +377,6 @@ flag{don't_forget_to_take_out_the_grease}
 $ 
 [*] Interrupted
 ```
-> Reference: <https://gist.github.com/ricardo2197/8c7f6f5b8950ed6771c1cd3a116f7e62>
+> Reference: <>
 
 That was it, I wish I did space too. But I couldn't, so I am gonna do it later today as I took some help from someone who did the challenge. In case, you need help just message me on twitter.

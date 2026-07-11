@@ -4,24 +4,24 @@
 
 # Shellcodes are dead, long live Fileless Shellcodes
 
-The demonstrated PoC of this article can be found [here](https://github.com/kleiton0x00/RemoteShellcodeExec/).
+The demonstrated PoC of this article can be found here.
 
-Recently I was developing a simple Shellcode Loader which uses Callbacks as an alternative of Shellcode execution. While it bypasses every runtime scanning, it failed to bypass the signature detection. So I fired up [ThreatCheck](https://github.com/rasta-mouse/ThreatCheck) to identify the bad bytes:
+Recently I was developing a simple Shellcode Loader which uses Callbacks as an alternative of Shellcode execution. While it bypasses every runtime scanning, it failed to bypass the signature detection. So I fired up ThreatCheck to identify the bad bytes:
 
 *Detected bad bytes*
 
-At a first glance, it is impossible to understand what exactly is getting detected so I fired up [GHidra](https://ghidra-sre.org/) to manually identify these bad bytes.
+At a first glance, it is impossible to understand what exactly is getting detected so I fired up GHidra to manually identify these bad bytes.
 I simply copied a random pattern from the ThreadCheck (00 1F CC 07 00 15 CC 07) and tried searching in the memory of the compiled EXE of the malware.
 
 This is clearly the XORed Shellcode I implemented to my Shellcode Loader and it’s getting detected as a Cobalt Strike agent by Defender. Seems like the XOR encryption routine is not strong enough against static detection and that got me thinking: are stored shellcodes really dead (especially the ones generated from Cobalt Strike)?
 
-I wouldn’t be suprised, as currently Cobalt Strike is [the most popular C2 framework](https://twitter.com/teamcymru_S2/status/1604091964386705409?s=20) among threat actors, but something must be done to make the Shellcode great and undetectable again.
+I wouldn’t be suprised, as currently Cobalt Strike is the most popular C2 framework among threat actors, but something must be done to make the Shellcode great and undetectable again.
 
 ## RAW Shellcodes: What’s wrong with them?
 
-Cobalt Strike’s payloads are based on Meterpreter shellcodes and include many similarities (sometimes identical) API hashing ([x86](https://github.com/rapid7/metasploit-framework/blob/04e8752b9b74cbaad7cb0ea6129c90e3172580a2/external/source/shellcode/windows/x86/src/block/block_api.asm) and [x64](https://github.com/rapid7/metasploit-framework/blob/04e8752b9b74cbaad7cb0ea6129c90e3172580a2/external/source/shellcode/windows/x64/src/block/block_api.asm) versions).
+Cobalt Strike’s payloads are based on Meterpreter shellcodes and include many similarities (sometimes identical) API hashing (x86 and x64 versions).
 
-The default Hashes that Cobalt Strike uses are highly signatured; we can get a workaround to such hashes by performing a [dynamic Hash encoding](https://www.huntress.com/blog/hackers-no-hashing-randomizing-api-hashes-to-evade-cobalt-strike-shellcode-detection). If you look at the image below, the hash value *0xa779563a* is the default hash of InternetOpenA. If you simply google the hash, everything related to Metaploit will show up, so this hash is known to be mostly used by Cobalt Strike beacons and Meterpreter agents. Applying ror13 hashing to such hashes will drastically reduce the detection by AV vendors (to almost 0). As this is already nicely explain on [this article](https://www.huntress.com/blog/hackers-no-hashing-randomizing-api-hashes-to-evade-cobalt-strike-shellcode-detection), I’m not going to explain it much further, but the photo below gives the idea of the final result after encoding the hashes.
+The default Hashes that Cobalt Strike uses are highly signatured; we can get a workaround to such hashes by performing a dynamic Hash encoding. If you look at the image below, the hash value *0xa779563a* is the default hash of InternetOpenA. If you simply google the hash, everything related to Metaploit will show up, so this hash is known to be mostly used by Cobalt Strike beacons and Meterpreter agents. Applying ror13 hashing to such hashes will drastically reduce the detection by AV vendors (to almost 0). As this is already nicely explain on this article, I’m not going to explain it much further, but the photo below gives the idea of the final result after encoding the hashes.
 
 ## Fileless Shellcode to the rescue
 
@@ -29,7 +29,7 @@ Although it is not a new thing, fileless shellcodes are a good way of avoiding s
 
 On the photo below, there is a comparison between a traditional XORed encrypted shellcode and our fileless shellcode loader. Since the shellcode doesn’t have to be stored on .text section, the entropy will decrease drastically (remember that):
 
-The full source code can be found [here](https://github.com/kleiton0x00/RemoteShellcodeExec/), but on this article I will try to break down the code for the sake of understanding.
+The full source code can be found here, but on this article I will try to break down the code for the sake of understanding.
 
 ## Get kleiton0x7e’s stories in your inbox
 
@@ -172,7 +172,5 @@ The HeapWalk() function is used to iterate through each heap entry in the proces
 - No detection (Profit!)
 
 ## Demo
-
-[https://i.imgur.com/U8LjkcA.mp4](https://i.imgur.com/U8LjkcA.mp4)
 
 ---

@@ -140,7 +140,7 @@ Question:
 
 I decided to try something no one else had before. I made a bot to automatically trade stocks for me using AI and machine learning. I wouldn’t believe you if you told me it’s unsecure!
 
-[vuln.c](https://mercury.picoctf.net/static/e4d297ce964e4f54225786fe7b153b4b/vuln.c)
+vuln.c
 
 ```
 nc mercury.picoctf.net 20195

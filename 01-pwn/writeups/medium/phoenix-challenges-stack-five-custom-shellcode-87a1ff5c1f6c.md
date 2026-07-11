@@ -24,11 +24,11 @@ Excellent. However, such a separation of duties introduces a challenge. How will
 
 The solution? System calls. These are an interface for user-mode applications to request the execution of operating system capabilities. User-mode applications make a request and the operating system service them and return any generated outputs.
 
-*Source: [System Calls in OS (Operating System)](https://www.scaler.com/topics/operating-system/system-calls-in-operating-system/)*
+**Source: System Calls in OS (Operating System)**
 
 ## The Shellcode
 
-Each computer architecture has specific conventions for preparing a system call command. [The system call table for x86_64](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/) indicates how the registers are to be initialized before launching sys_execve:
+Each computer architecture has specific conventions for preparing a system call command. The system call table for x86_64 indicates how the registers are to be initialized before launching sys_execve:
 
 The RAX register is the numerical identifier of the system call function to be invoked and the RDI, RSI, and RDX registers are pointers to parameter values. It should be noted that if RSI or the RDX are initialized to 0 (i.e. NULL), that means that the parameter is an empty array.
 
@@ -49,7 +49,7 @@ Join Medium for free to get updates from this writer.
 
 Remember me for faster sign in
 
-There are two other function parameters that need to be specified in the [execve()](https://www.man7.org/linux/man-pages/man2/execve.2.html) system call: argv and envp. These are an array of command-line arguments passed into the invoked program and an array of environment variables passed into the new program’s execution respectively. Because a successful execution of `/bin/sh` does not require any additional command-line arguments or environment variables, the argv and envp will be empty arrays.
+There are two other function parameters that need to be specified in the execve() system call: argv and envp. These are an array of command-line arguments passed into the invoked program and an array of environment variables passed into the new program’s execution respectively. Because a successful execution of `/bin/sh` does not require any additional command-line arguments or environment variables, the argv and envp will be empty arrays.
 
 We now have all the necessary information. The x86_64 shellcode is displayed below — with explanatory comments
 
@@ -166,6 +166,6 @@ $ whoami
 nathan
 ```
 
-The code can be found in the [Github repository](https://github.com/secnate/Exploit-Education-CTFs) for Phoenix challenge solutions.
+The code can be found in the Github repository for Phoenix challenge solutions.
 
 ---

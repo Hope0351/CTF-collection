@@ -124,7 +124,7 @@ This challenge is a perfect example of how automated static analysis can bypass 
 
 Happy Hacking!
 
-Github: [https://github.com/Die-Another-Day](https://github.com/Die-Another-Day)
-Linkedin: [https://www.linkedin.com/in/eeshangarg888](https://www.linkedin.com/in/eeshangarg888)
+Github: 
+Linkedin: 
 
 ---

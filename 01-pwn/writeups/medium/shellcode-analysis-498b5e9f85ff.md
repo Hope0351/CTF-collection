@@ -10,9 +10,6 @@ A sandbox environment, typically a virtual machine or an isolated system, is use
 
 ![img_1.png](images/shellcode-analysis-498b5e9f85ff/img_1.png)
 
-
-
-
 *malware analysis*
 
 ## Shellcode Analysis

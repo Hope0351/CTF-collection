@@ -8,7 +8,7 @@
 
 The term “libc” is commonly used as a shorthand for the “standard C library”, a library of standard functions that can be used by all C programs (and sometimes by programs in other languages).
 
-For more on [LIBC](https://man7.org/linux/man-pages/man7/libc.7.html)
+For more on LIBC
 
 ## METHODOLOGY
 
@@ -50,7 +50,7 @@ When it comes to LIBC, each function inside this library is present at fixed off
 
 If library version and library base value address is known,we can calculate address of any function from it easily
 
-To calculate the function address in LIBC , [Click Here](https://libc.blukat.me/)
+To calculate the function address in LIBC , Click Here
 
 ## SPAWNING SHELL USING RET2LIBC
 

@@ -6,8 +6,6 @@
 
 ## *Or, how to read malware’s secret love letters to your CPU.*
 
-*Photo by [Patrick Martin](https://unsplash.com/@patrickmmartin?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)*
-
 ### Why Shellcode Even Exists
 
 Think of shellcode as the hacker’s version of a portable camping stove — small, lightweight, and able to cook up something dangerous anywhere you drop it.

