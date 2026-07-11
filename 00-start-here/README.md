@@ -1,34 +1,57 @@
-# 🚀 Start Here — Your CTF Learning Onboarding Track
+# 🚀 Start Here — My CTF Collection
 
-Welcome! If you're new to Capture The Flag competitions, this is the right place to start. This directory is a structured onboarding track that takes you from zero to competitive in a measurable way.
+Welcome to my personal Capture The Flag (CTF) writeup collection. This is where I document every challenge I solve — the intended path, my actual solve (including the dead ends), and the takeaways I want to remember for next time.
 
 ## What's in this directory
 
 | File | Purpose |
 |---|---|
-| [`learning-path.md`](learning-path.md) | A linear, ordered learning path from absolute beginner to elite-competition-ready. |
-| [`tools-cheatsheet.md`](tools-cheatsheet.md) | A condensed cheat sheet of the tools and one-liners you'll need most often. |
-## The 30-second version
+| [`learning-path.md`](learning-path.md) | The learning path I'm working through, from foundations up to elite-tier competitions. |
+| [`tools-cheatsheet.md`](tools-cheatsheet.md) | My personal cheat sheet of the tools and one-liners I actually use. |
 
-If you have 30 seconds and want the absolute minimum:
+## How this collection is organized
 
-1. **Sign up at [picoCTF](https://picoctf.org/)** and work through 20 beginner challenges.
-2. **Install [pwntools](https://docs.pwntools.com/)** (`pip install pwntools`) and **[Ghidra](https://ghidra-sre.org/)** — these are the two tools you'll use most.
-3. **Read [`learning-path.md`](learning-path.md)** for the full structured path.
+My writeups live in the category folders at the top of the repo, one Markdown file per challenge. Each category folder has its own README explaining the sub-topics I'm tracking.
 
-## What is a CTF?
+| Folder | Category |
+|---|---|
+| [`01-pwn/`](../01-pwn/) | Binary exploitation — stack, heap, kernel, format strings, ROP |
+| [`02-web/`](../02-web/) | Web exploitation — SQLi, XSS, SSRF, SSTI, deserialization, prototype pollution |
+| [`03-crypto/`](../03-crypto/) | Cryptography — RSA, ECC, lattices, block cipher modes, custom schemes |
+| [`04-reverse-engineering/`](../04-reverse-engineering/) | Static/dynamic analysis of native binaries, custom VMs, obfuscation |
+| [`05-forensics/`](../05-forensics/) | Disk, memory, network forensics, steganography |
+| [`06-osint/`](../06-osint/) | Open-source intelligence — geolocation, social media, breach data |
+| [`07-misc/`](../07-misc/) | Programming, game exploitation, esoteric challenges |
+| [`08-blockchain-web3/`](../08-blockchain-web3/) | Smart-contract exploitation — reentrancy, oracles, flash loans |
+| [`09-mobile/`](../09-mobile/) | Android/iOS reverse engineering and Frida instrumentation |
+| [`10-hardware-iot/`](../10-hardware-iot/) | Firmware extraction, JTAG/SWD, side-channel, SDR |
+| [`11-ics-scada/`](../11-ics-scada/) | Industrial control systems — Modbus, PLCs, HMI |
+| [`12-cloud/`](../12-cloud/) | AWS/Azure/GCP misconfigurations, K8s, container escapes |
+| [`13-network-pcap/`](../13-network-pcap/) | Packet capture analysis and protocol reconstruction |
 
-A Capture The Flag (CTF) competition is a security contest in which participants solve challenges to find hidden "flags" — typically a string of the form `flag{...}` or `picoCTF{...}`. Challenges are organized into categories like pwn (binary exploitation), web, crypto, reverse engineering, forensics, OSINT, and more. CTFs range in difficulty from beginner-friendly (picoCTF) to elite (DEF CON CTF, 0CTF, hxp CTF).
+The [`20-events/`](../20-events/) folder holds my writeups grouped by CTF event (picoCTF, HackTheBox, DEF CON, etc.) instead of by category. Use it when I want to review everything I solved at a specific competition.
 
-The two main formats are **jeopardy-style** (solve standalone challenges in any order, scored by difficulty) and **attack-defense** (each team runs identical services, scores points by attacking other teams' services and defending your own). Most practice platforms and online qualifiers are jeopardy-style; DEF CON CTF Finals is the canonical attack-defense event.
+## My writeup format
 
-## Why play CTFs?
+Every writeup I publish here follows the same shape:
 
-- **Learn real security skills** — CTF challenges are distilled, gamified versions of real-world vulnerabilities. The skills you build transfer directly to bug-bounty hunting, penetration testing, and security research.
-- **Build a portfolio** — a well-maintained writeup repository is the single most credible credential for an aspiring offensive-security professional. Many CTF players have been hired on the strength of their writeup archives alone.
-- **Join a community** — the global CTF community is large, welcoming, and geographically distributed. Most major cities have a local CTF team or meetup.
-- **Compete at the highest level** — top CTF players are recruited by national-security agencies, intelligence services, and top-tier security firms. DEF CON CTF winners are essentially world-champion-level security researchers.
+1. **Challenge metadata** — event, year, category, points, solve count.
+2. **The challenge** — what we were given and what the goal was.
+3. **Reconnaissance** — what I looked at first and why.
+4. **Solve path** — the actual steps, including wrong turns. Wrong turns are the most valuable part because they show what didn't work and why.
+5. **Flag** — the flag string, in a code block.
+6. **Takeaways** — two or three bullet points I want to remember next time I see a similar challenge.
 
-## What next?
+If a writeup is missing any of these sections, it's a stub I haven't finished yet.
 
-Go read [`learning-path.md`](learning-path.md). It will give you a clear, ordered sequence of what to learn and where to practice each skill.
+## Why I keep this collection
+
+Writing up a solve forces me to explain the exploit in plain language, which is the fastest way to find the gaps in my own understanding. A challenge I solve but don't write up is a challenge I'll have to re-solve from scratch six months later. This repo is my externalized memory — if I'm stuck on something, the first thing I do is `git grep` my own writeups to see if I've solved something similar before.
+
+The secondary purpose is portfolio: a well-maintained writeup archive is the single most credible credential for an aspiring offensive-security professional. Many CTF players have been hired on the strength of their writeup repositories alone, and I want this repo to be that kind of archive for me.
+
+## Where to start reading
+
+If you're me, six months from now, looking for a specific technique: use `git grep` from the repo root. I tag every writeup with the technique name in the front matter, so `git grep "format string"` or `git grep "tcache poisoning"` will pull up everything I've written on that topic.
+
+If you're someone else browsing this: start with [`learning-path.md`](learning-path.md) to see where I am in the journey, then jump to whichever category folder interests you. The [`tools-cheatsheet.md`](tools-cheatsheet.md) is a condensed reference of the commands and one-liners I use most often.

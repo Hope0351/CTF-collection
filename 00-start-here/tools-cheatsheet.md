@@ -1,6 +1,6 @@
-# 🛠 CTF Tools Cheat Sheet
+# 🛠 My CTF Tools Cheat Sheet
 
-A condensed reference of the tools and one-liners you'll need most often. For full tool pages, see [`40-tooling/`](../40-tooling/README.md).
+A condensed reference of the tools and one-liners I use most often. This is a living document — I add to it whenever I look up the same command twice.
 
 ## Environment setup
 
@@ -292,4 +292,4 @@ Wireshark → File → Export Objects → HTTP
 - **Twitter:** Follow `@ctftime`, `@Hacker0x01`, `@portswigger`
 - **Newsletters:** PortSwigger weekly, HackerOne weekly
 
-For full tool pages with deeper examples, see [`40-tooling/`](../40-tooling/README.md).
+For deeper examples, see the per-category tool reference pages (when available) or the official docs of each tool.
