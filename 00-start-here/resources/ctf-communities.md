@@ -2,11 +2,14 @@
 
 This file consolidates the community and event-listing references from my
 learning path. Instead of linking out, I keep the descriptions here so
-the collection stays self-contained.
+the collection stays self-contained. Each entry includes a screenshot of
+the community's landing page so I can recognise it at a glance.
 
 ---
 
 ## CTFtime
+
+![CTFtime event listing homepage](screenshots/ctftime.png)
 
 **What it is.** The central hub of the CTF community. It lists upcoming
 CTF events, archives past events with writeup links, ranks teams
@@ -33,6 +36,10 @@ season.
 
 ## LiveOverflow Discord
 
+The LiveOverflow Discord doesn't have a public-facing landing page to
+screenshot — it lives entirely inside Discord. To join, I check the
+invite link in the description of LiveOverflow's latest YouTube video.
+
 **What it is.** The official Discord server of LiveOverflow, a
 popular security education YouTuber. The server is one of the more
 active CTF-focused communities on Discord and is a good place to ask
@@ -54,11 +61,13 @@ questions, find teammates, and hear about upcoming events.
 
 ## OWASP Top 10
 
+![OWASP Top 10 landing page](screenshots/owasp-top10.png)
+
 **What it is.** The Open Worldwide Application Security Project's
 standard awareness document for developers and web-application security.
 It lists the ten most critical web-application security risks, updated
 every few years based on industry data. The current version is OWASP
-Top 10:2021.
+Top 10:2021 (with 2025 in draft at time of writing).
 
 **The 2021 list (in order).**
 1. **Broken Access Control**
@@ -92,6 +101,9 @@ Top 10:2021.
 ## Source attribution
 
 The descriptions above were written in my own words based on the
-official landing pages of each community/resource, downloaded on
-2026-07-11 for reference. The communities themselves are not reproduced
-here — only my notes about them.
+official landing pages of each community/resource. The screenshots were
+captured on 2026-07-11 directly from each community's public landing
+page and are stored locally in the [`screenshots/`](screenshots/)
+subfolder so the collection stays self-contained. Community names are
+trademarks of their respective owners; the screenshots are included here
+for identification and educational commentary only.

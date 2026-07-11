@@ -3,11 +3,14 @@
 This file consolidates the learning platforms referenced in my CTF learning
 path. Instead of linking out to each platform every time, I keep the
 descriptions and getting-started notes here so the collection stays
-self-contained.
+self-contained. Each entry includes a screenshot of the platform's landing
+page so I can recognise it at a glance.
 
 ---
 
 ## OverTheWire — Bandit
+
+![OverTheWire Bandit landing page](screenshots/overthewire-bandit.png)
 
 **What it is.** A wargame aimed at absolute beginners, hosted by the
 OverTheWire community. It teaches the Linux command-line basics needed
@@ -42,6 +45,8 @@ enough on the Linux command line to start any other wargame.
 ---
 
 ## pwn.college
+
+![pwn.college dojo landing page](screenshots/pwncollege.png)
 
 **What it is.** An education platform for developing and practicing core
 cybersecurity skills in a hands-on fashion, hosted by Arizona State
@@ -78,6 +83,8 @@ platform's infrastructure.
 
 ## pwnable.kr
 
+![pwnable.kr wargame listing](screenshots/pwnable-kr.png)
+
 **What it is.** A classic wargame site for binary exploitation, with
 challenges organised into four difficulty tiers: Toddler, Rookiss, Grotesque,
 and Hacker's Secret. It has been a staple of the pwn community for years.
@@ -104,6 +111,8 @@ Higher tiers may give you only a binary to download and analyse locally.
 ---
 
 ## pwnable.tw
+
+![pwnable.tw challenge listing](screenshots/pwnable-tw.png)
 
 **What it is.** A harder sibling of pwnable.kr, with less hand-holding and
 more realistic challenge difficulty. Good preparation for live CTF pwn
@@ -132,6 +141,8 @@ binary and a libc — you do the rest locally.
 ---
 
 ## CryptoHack
+
+![CryptoHack landing page showing categories and leaderboard](screenshots/cryptohack.png)
 
 **What it is.** A free, fun platform for learning modern cryptography by
 solving interactive puzzles and challenges. You learn by breaking the
@@ -165,6 +176,8 @@ trophy.
 
 ## HackTheBox Academy
 
+![HackTheBox Academy landing page](screenshots/hackthebox-academy.png)
+
 **What it is.** HackTheBox's structured learning platform, with
 self-paced "paths" and individual "modules" covering everything from
 networking fundamentals to advanced red-team operations. A free tier gives
@@ -190,6 +203,8 @@ cubes (currency) which unlock more modules.
 ---
 
 ## PortSwigger Web Security Academy
+
+![PortSwigger Web Security Academy landing page](screenshots/portswigger-academy.png)
 
 **What it is.** A free, comprehensive web-security training platform built
 by the makers of Burp Suite. It is the single best free resource for
@@ -219,6 +234,8 @@ vulnerability, then the lab marks itself as solved.
 
 ## crackmes.one
 
+![crackmes.one challenge listing](screenshots/crackmes-one.png)
+
 **What it is.** A community repository of "CrackMe" challenges — small
 binaries specifically designed to be reverse-engineered. Each challenge
 has a stated difficulty and a stated language/platform.
@@ -239,6 +256,8 @@ good writeups.
 ---
 
 ## Ethernaut
+
+![Ethernaut smart-contract CTF landing page](screenshots/ethernaut.png)
 
 **What it is.** OpenZeppelin's progressively harder smart-contract CTF,
 played directly in the browser against a testnet. Each level is a
@@ -264,6 +283,8 @@ contract exposes. I exploit the contract to trigger the `level`'s
 
 ## Damn Vulnerable DeFi
 
+![Damn Vulnerable DeFi challenge listing](screenshots/damn-vulnerable-defi.png)
+
 **What it is.** A set of DeFi-specific smart-contract challenges, harder
 and more realistic than Ethernaut. Each challenge simulates a real DeFi
 attack scenario: flash loans, price oracles, governance takeovers, etc.
@@ -281,6 +302,8 @@ exploit contract.
 ---
 
 ## Capture The Ether
+
+![Capture The Ether challenge listing](screenshots/capture-the-ether.png)
 
 **What it is.** A broader Ethereum CTF covering both Solidity smart
 contracts and Ethereum-ecosystem challenges (e.g., predicting the
@@ -300,6 +323,8 @@ challenges in a testnet console. The challenges are split into "Deploy"
 ---
 
 ## TryHackMe
+
+![TryHackMe platform dashboard](screenshots/tryhackme.png)
 
 **What it is.** A structured learning platform with "rooms" — self-paced
 lessons that walk through a specific topic with hands-on exercises. Good
@@ -325,7 +350,9 @@ machine that I connect to via OpenVPN or the in-browser attack box.
 ## Source attribution
 
 The descriptions above were written in my own words based on the
-official landing pages of each platform, downloaded on
-2026-07-11 for reference. The platforms themselves are not reproduced
-here — only my notes about them. Platform names are trademarks of their
-respective owners.
+official landing pages of each platform. The screenshots were captured
+on 2026-07-11 directly from each platform's public landing page and are
+stored locally in the [`screenshots/`](screenshots/) subfolder so the
+collection stays self-contained. Platform names are trademarks of their
+respective owners; the screenshots are included here for identification
+and educational commentary only.

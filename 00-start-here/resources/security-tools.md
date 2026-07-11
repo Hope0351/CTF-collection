@@ -3,11 +3,14 @@
 This file consolidates the security tools referenced in my CTF learning
 path and cheat sheet. Instead of linking out to each tool's site every
 time, I keep installation and usage notes here so the collection stays
-self-contained.
+self-contained. Each entry includes a screenshot of the tool's official
+documentation or homepage so I can recognise it at a glance.
 
 ---
 
 ## pwntools
+
+![pwntools documentation homepage](screenshots/pwntools-docs.png)
 
 **What it is.** A CTF framework and exploit-development library for
 Python, designed for rapid prototyping. It is the single most-used tool
@@ -41,6 +44,8 @@ local cheatsheet in `tools-cheatsheet.md` for the patterns I use most.
 ---
 
 ## Ghidra
+
+![Ghidra reverse-engineering suite homepage](screenshots/ghidra.png)
 
 **What it is.** A software reverse-engineering suite developed by the
 NSA and open-sourced in 2019. It includes a disassembler, a decompiler
@@ -76,6 +81,8 @@ cd ghidra-X.Y.Z_PUBLIC
 
 ## Burp Suite Community Edition
 
+![Burp Suite product page](screenshots/burpsuite.png)
+
 **What it is.** A web-application security testing proxy by PortSwigger.
 The Community Edition is free and includes the core proxy, Repeater, and
 Intruder (rate-limited). It is the de-facto standard tool for web CTF
@@ -110,6 +117,8 @@ sudo apt install burpsuite
 ---
 
 ## Wireshark
+
+![Wireshark homepage](screenshots/wireshark.png)
 
 **What it is.** The world's most widely used network protocol analyzer.
 It lets me capture and interactively browse packet traffic, with
@@ -148,6 +157,8 @@ tshark -r capture.pcap -Y "ftp" -T fields -e ftp.request.command -e ftp.request.
 ---
 
 ## Volatility
+
+![Volatility Foundation homepage](screenshots/volatility.png)
 
 **What it is.** A memory-forensics framework. Given a RAM dump, it can
 extract processes, network connections, registry hives, cached files,
@@ -195,6 +206,8 @@ vol3 -f memory.dmp windows.cmdscan
 
 ## angr
 
+![angr symbolic execution framework homepage](screenshots/angr.png)
+
 **What it is.** A Python framework for symbolic execution and binary
 analysis. It is invaluable for solving "find the input that reaches this
 address" challenges, which come up constantly in reverse engineering
@@ -229,6 +242,8 @@ if simgr.found:
 ---
 
 ## SageMath
+
+![SageMath homepage](screenshots/sagemath.png)
 
 **What it is.** A free open-source mathematics software system, bundling
 hundreds of specialised libraries under a unified Python interface. For
@@ -274,7 +289,9 @@ print(bytes.fromhex(hex(m)[2:]))
 ## Source attribution
 
 The descriptions above were written in my own words based on the
-official documentation and landing pages of each tool, downloaded on
-2026-07-11 for reference. The tools themselves are not reproduced here —
-only my notes about them. Tool names are trademarks of their respective
-owners.
+official documentation and landing pages of each tool. The screenshots
+were captured on 2026-07-11 directly from each tool's official site and
+are stored locally in the [`screenshots/`](screenshots/) subfolder so
+the collection stays self-contained. Tool names are trademarks of their
+respective owners; the screenshots are included here for identification
+and educational commentary only.

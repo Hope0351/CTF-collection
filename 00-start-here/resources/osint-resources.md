@@ -3,11 +3,14 @@
 This file consolidates the OSINT (Open-Source Intelligence) tools and
 services referenced in my tools cheat sheet. Instead of linking out to
 each service every time, I keep descriptions and usage notes here so the
-collection stays self-contained.
+collection stays self-contained. Each entry includes a screenshot of the
+service's landing page so I can recognise it at a glance.
 
 ---
 
 ## whatsmyname.app
+
+![WhatsMyName project repository on GitHub](screenshots/whatsmyname.png)
 
 **What it is.** A web-based username enumeration tool that checks
 hundreds of social-media and web platforms for the existence of a given
@@ -24,9 +27,15 @@ on other platforms.
 useful when the web version is rate-limited or when I want to script
 the search.
 
+> Note: the live `whatsmyname.app` web frontend blocks automated
+> browsers with a 403, so the screenshot above is of the project's
+> GitHub repository — the dataset that powers the web app.
+
 ---
 
 ## Sherlock (command-line)
+
+![Sherlock project on GitHub](screenshots/sherlock-github.png)
 
 **What it is.** A Python command-line tool that enumerates usernames
 across 300+ websites. Given a username, it produces a list of URLs where
@@ -66,6 +75,8 @@ python3 sherlock username1 --output results.txt
 
 ## Have I Been Pwned
 
+![Have I Been Pwned homepage](screenshots/haveibeenpwned.png)
+
 **What it is.** A free breach-notification service run by Troy Hunt. It
 indexes data from major data breaches and lets you check whether an
 email address or username has appeared in any known breach.
@@ -86,6 +97,8 @@ patterns.
 ---
 
 ## Shodan
+
+![Shodan search engine homepage](screenshots/shodan.png)
 
 **What it is.** A search engine for internet-connected devices. Where
 Google indexes web pages, Shodan indexes the banner responses of every
@@ -109,6 +122,8 @@ systems, and more.
 
 ## Censys
 
+![Censys search engine homepage](screenshots/censys.png)
+
 **What it is.** A search engine similar to Shodan, but with a stronger
 focus on TLS/SSL certificates and a slightly different data-collection
 approach. For some CTF OSINT challenges, Censys finds things Shodan
@@ -130,6 +145,8 @@ doesn't, and vice versa.
 
 ## TinEye
 
+![TinEye reverse image search homepage](screenshots/tineye.png)
+
 **What it is.** A reverse image search engine. Given an image, TinEye
 finds other instances of the same image (or modified versions) across
 the web. Useful for identifying where an image came from, finding
@@ -148,6 +165,8 @@ a list of pages hosting that image.
 ---
 
 ## SunCalc
+
+![SunCalc sun-position visualiser](screenshots/suncalc.png)
 
 **What it is.** A web app that visualises the sun's position at any
 location on Earth, at any time and date. For OSINT geolocation
@@ -168,6 +187,8 @@ estimate of where the photo was taken.
 ---
 
 ## Wayback Machine (web.archive.org)
+
+![Wayback Machine Internet Archive homepage](screenshots/wayback-machine.png)
 
 **What it is.** The Internet Archive's historical web cache. It has
 been archiving web pages since 1996 and has snapshots of billions of
@@ -192,7 +213,11 @@ snapshot to view the page as it was on that date.
 ## Source attribution
 
 The descriptions above were written in my own words based on the
-official landing pages of each service, downloaded on 2026-07-11 for
-reference. The services themselves are not reproduced here — only my
-notes about them. Service names are trademarks of their respective
-owners.
+official landing pages of each service. The screenshots were captured
+on 2026-07-11 directly from each service's public landing page (or, in
+the case of whatsmyname.app which blocks automated browsers, from the
+project's GitHub repository) and are stored locally in the
+[`screenshots/`](screenshots/) subfolder so the collection stays
+self-contained. Service names are trademarks of their respective owners;
+the screenshots are included here for identification and educational
+commentary only.
