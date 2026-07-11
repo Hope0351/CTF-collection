@@ -276,20 +276,23 @@ Wireshark → File → Export Objects → HTTP
 ## OSINT
 
 ### Quick-reference tools
-- **Username search:** [whatsmyname.app](https://whatsmyname.app/)
-- **Email breach check:** [haveibeenpwned.com](https://haveibeenpwned.com/)
-- **Domain/IP:** [shodan.io](https://www.shodan.io/), [censys.io](https://search.censys.io/)
-- **Reverse image search:** [tineye.com](https://tineye.com/), Google Images, Yandex
-- **Geolocation:** [suncalc.org](https://www.suncalc.org/) (shadow analysis), Google Earth
-- **Archived web:** [web.archive.org](https://web.archive.org/)
+Full notes, usage examples, and free-tier caveats for every tool below live in [`resources/osint-resources.md`](resources/osint-resources.md). This list is just a quick index.
+
+- **Username search:** whatsmyname.app (web), Sherlock (CLI) — see [local notes](resources/osint-resources.md#whatsmynameapp).
+- **Email breach check:** Have I Been Pwned — see [local notes](resources/osint-resources.md#have-i-been-pwned).
+- **Domain/IP:** Shodan, Censys — see [Shodan notes](resources/osint-resources.md#shodan) and [Censys notes](resources/osint-resources.md#censys).
+- **Reverse image search:** TinEye, Google Images, Yandex — see [TinEye notes](resources/osint-resources.md#tineye).
+- **Geolocation:** SunCalc (shadow analysis), Google Earth — see [SunCalc notes](resources/osint-resources.md#suncalc).
+- **Archived web:** Wayback Machine — see [local notes](resources/osint-resources.md#wayback-machine-webarchiveorg).
 
 ---
 
 ## Keeping current
 
 - **Subreddits:** r/securityCTF, r/netsec, r/HowToHack
-- **Discord:** LiveOverflow, John Hammond, IppSec
-- **Twitter:** Follow `@ctftime`, `@Hacker0x01`, `@portswigger`
+- **Discord:** LiveOverflow, John Hammond, IppSec — see [local notes](resources/ctf-communities.md#liveoverflow-discord) for the LiveOverflow community.
+- **Twitter/X:** Follow `@ctftime`, `@Hacker0x01`, `@portswigger`
 - **Newsletters:** PortSwigger weekly, HackerOne weekly
+- **Event calendar:** [CTFtime](resources/ctf-communities.md#ctftime) — see local notes for how I use it.
 
-For deeper examples, see the per-category tool reference pages (when available) or the official docs of each tool.
+For deeper tool examples, see [`resources/security-tools.md`](resources/security-tools.md) — installation steps and full usage notes for every tool in this cheat sheet.

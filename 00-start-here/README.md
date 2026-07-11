@@ -8,6 +8,7 @@ Welcome to my personal Capture The Flag (CTF) writeup collection. This is where 
 |---|---|
 | [`learning-path.md`](learning-path.md) | The learning path I'm working through, from foundations up to elite-tier competitions. |
 | [`tools-cheatsheet.md`](tools-cheatsheet.md) | My personal cheat sheet of the tools and one-liners I actually use. |
+| [`resources/`](resources/) | Local reference notes on every learning platform, tool, and OSINT service mentioned in the path and cheat sheet. I keep these so the collection is self-contained — no links out to third parties. |
 
 ## How this collection is organized
 
