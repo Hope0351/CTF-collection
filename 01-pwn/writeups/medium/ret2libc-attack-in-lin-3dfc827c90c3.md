@@ -2,6 +2,12 @@
 
 ---
 
+
+![Stack-based buffer overflow — the basis of ret2libc](../../resources/diagrams/stack-overflow.png)
+
+*Stack-based buffer overflow — the basis of ret2libc.*
+
+
 ## Ret2Libc — -> Return To LIBC
 
 ## LIBC

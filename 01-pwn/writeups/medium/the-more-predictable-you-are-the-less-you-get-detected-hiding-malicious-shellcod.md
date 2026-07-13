@@ -2,6 +2,12 @@
 
 ---
 
+
+![Shellcode detection evasion pipeline](diagrams/egg-hunter-pipeline.png)
+
+*Shellcode detection evasion pipeline.*
+
+
 # The more predictable you are, the less you get detected — hiding malicious shellcodes via Shannon encoding
 
 ## The more predictable you are, the less you get detected

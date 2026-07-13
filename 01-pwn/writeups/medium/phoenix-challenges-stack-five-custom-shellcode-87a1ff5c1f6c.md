@@ -4,6 +4,10 @@
 
 # Phoenix Challenges — Stack Five (Custom Shellcode)
 
+![Anatomy of x86-64 execve shellcode](diagrams/shellcode-structure.png)
+
+*The four blocks of a shellcode: setup (clear args), string (push "/bin/sh"), syscall number, and the trap instruction. Custom shellcode requires understanding each block's purpose.*
+
 This blog post is a bit different. Instead of a new challenge, it is an extension of the previous Phoenix Stack Five writeup. Those unfamiliar would need to review it before continuing.
 
 In the previous challenge, we used Pwntools’ *shellcraft* module to generate the shell-opening shellcode with one line of Python. While this may satisfy script kiddies, *real* hackers need to understand, build, and use exploits on a technically deeper level.

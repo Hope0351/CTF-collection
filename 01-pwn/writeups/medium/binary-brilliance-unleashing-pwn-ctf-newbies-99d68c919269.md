@@ -2,6 +2,12 @@
 
 ---
 
+
+![Stack overflow concept for CTF newbies](../../resources/diagrams/stack-overflow.png)
+
+*Stack overflow concept for CTF newbies.*
+
+
 # Binary Brilliance: Unleashing Pwn | CTF Newbies
 
 ## Introduction

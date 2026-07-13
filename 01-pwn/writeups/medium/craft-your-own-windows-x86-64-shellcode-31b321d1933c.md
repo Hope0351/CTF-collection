@@ -2,6 +2,12 @@
 
 ---
 
+
+![Shellcode structure on x86-64](diagrams/shellcode-structure.png)
+
+*Shellcode structure on x86-64.*
+
+
 # Craft Your Own Windows x86/64 Shellcode
 
 Imagine trying to sneak past high-tech security systems using tools everyone recognizes. That’s the problem with popular frameworks like Metasploit’s msfvenom — their digital fingerprints are well-known. By creating custom shellcode in C++, we can create unique patterns that slip under the radar while gaining fine-grained control over our payload’s behavior.

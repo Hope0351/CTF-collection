@@ -2,6 +2,12 @@
 
 ---
 
+
+![Shellcode obfuscation operates on the raw bytes](diagrams/shellcode-structure.png)
+
+*Shellcode obfuscation operates on the raw bytes.*
+
+
 # Alphabet Soup: LOTL Shellcode Obfuscation
 
 ## A Living Off The Land Recipe for Shellcode Obfuscation

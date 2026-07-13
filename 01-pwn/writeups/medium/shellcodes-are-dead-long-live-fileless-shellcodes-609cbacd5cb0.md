@@ -2,6 +2,12 @@
 
 ---
 
+
+![Fileless shellcode execution pipeline](../../resources/diagrams/pwntools-flow.png)
+
+*Fileless shellcode execution pipeline.*
+
+
 # Shellcodes are dead, long live Fileless Shellcodes
 
 The demonstrated PoC of this article can be found here.

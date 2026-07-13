@@ -2,6 +2,12 @@
 
 ---
 
+
+![Stack Five shellcode structure](diagrams/shellcode-structure.png)
+
+*Stack Five shellcode structure.*
+
+
 # Phoenix Challenges — Stack Five (Pwntools Shellcode)
 
 ## The Challenge

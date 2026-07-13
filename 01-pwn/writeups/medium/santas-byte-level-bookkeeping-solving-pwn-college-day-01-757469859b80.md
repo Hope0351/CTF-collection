@@ -2,6 +2,12 @@
 
 ---
 
+
+![glibc heap bin structure overview](../../resources/diagrams/heap-bins.png)
+
+*glibc heap bin structure overview.*
+
+
 # Santa’s Byte-Level Bookkeeping: Solving pwn.college Day 01
 
 The Synopsis of the Challenge

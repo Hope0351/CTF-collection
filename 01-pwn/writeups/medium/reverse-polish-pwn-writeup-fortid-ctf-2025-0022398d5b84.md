@@ -2,6 +2,12 @@
 
 ---
 
+
+![ROP chain construction at FortiD CTF 2025](../../resources/diagrams/rop-chain.png)
+
+*ROP chain construction at FortiD CTF 2025.*
+
+
 # Reverse Polish Pwn Writeup | FortID CTF 2025
 
 — Keywords: pwn, limited buffer overflow, stack pivot, ROP

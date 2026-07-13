@@ -2,6 +2,12 @@
 
 ---
 
+
+![Shellcode analysis methodology](diagrams/shellcode-analysis-methodology.png)
+
+*Shellcode analysis methodology.*
+
+
 Let’s see what shellcodes are and how we can Identify and Analyze them.
 
 *Shellcode illustration*

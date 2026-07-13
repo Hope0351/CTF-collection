@@ -2,6 +2,12 @@
 
 ---
 
+
+![ARM ROP chain calling mprotect to defeat NX](../../resources/diagrams/rop-chain.png)
+
+*ARM ROP chain calling mprotect to defeat NX.*
+
+
 # Invoking mprotect() using ROP Chains in ARM
 
 Hello and Welcome Back,

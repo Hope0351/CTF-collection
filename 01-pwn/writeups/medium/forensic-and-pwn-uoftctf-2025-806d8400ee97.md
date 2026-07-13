@@ -2,6 +2,12 @@
 
 ---
 
+
+![Exploit mitigations encountered at UofTCTF 2025](../../resources/diagrams/mitigations.png)
+
+*Exploit mitigations encountered at UofTCTF 2025.*
+
+
 # Forensic and Pwn: UofTCTF 2025
 
 Hello Fellas, how are you guys doing, hope you all are doing good. Well I had a bit of set back, was learning some new things like reverse engineering, polishing some web pen-testing skills and more so I was bit behind from doing CTFs, if I remember properly than last ctf I played was WaniCTF. Anyways let us start with this new ctf, UofTCTF. A ctf competition made by the students of university of Toronto. As per my opinion, all the challenges had same amount of difficulty. With that said, let us jump to the solution.

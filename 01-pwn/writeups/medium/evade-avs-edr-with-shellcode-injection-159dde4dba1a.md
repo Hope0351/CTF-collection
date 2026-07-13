@@ -2,6 +2,12 @@
 
 ---
 
+
+![AV/EDR evasion via shellcode injection](diagrams/maldev-evasion-flow.png)
+
+*AV/EDR evasion via shellcode injection.*
+
+
 # Evade EDR with Shellcode Injection and gain persistence using Registry Run Keys
 
 Gaining a foothold in an internal network can be challenging, as AV and Defender make this a little tougher. Modern Windows versions have put in place some mitigation that prevents the shellcode to run properly. The issue is caused by the fact that the shellcode needs RWX memory which is flagged when the shellcode is executed.

@@ -2,6 +2,12 @@
 
 ---
 
+
+![Shellcode loader development workflow](../../resources/diagrams/pwntools-flow.png)
+
+*Shellcode loader development workflow.*
+
+
 ### Technical breakdown:
 
 The loader uses “Winsock2” library for implementing sockets. If you are not familiar with Winsock2 library then here’s Microsoft’s definition for you.
