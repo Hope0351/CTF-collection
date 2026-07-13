@@ -6,7 +6,7 @@
 
 Binary exploitation — "pwn" — is the art of making a program do something its author never intended by corrupting its memory. This is the most technically dense category in CTF: it demands fluency in assembly, ABI calling conventions, linker internals, and a toolbox of exploit-development tools (pwntools, ROPgadget, one_gadget, gdb-gef/pwndbg). Every other CTF category rewards breadth; pwn rewards depth. The skills here transfer directly to vulnerability research and exploit development in industry.
 
-This folder holds my personal pwn writeups and reference material. Every challenge I solve gets a writeup here — the intended path, my actual solve (including the dead ends), and the takeaways I want to remember for next time. The [`writeups/`](writeups/) subfolder holds my challenge writeups; [`archives/`](archives/) holds reference collections I've cloned locally for offline study; [`resources/`](resources/) holds my personal notes, concept diagrams, and tool screenshots.
+This folder holds my personal pwn writeups and reference material. Every challenge I solve gets a writeup here — the intended path, my actual solve (including the dead ends), and the takeaways I want to remember for next time. The [`writeups/external/`](writeups/external/) subfolder holds full CTF writeups sourced from personal blogs and CTF team archives (not Medium); [`archives/`](archives/) holds reference collections I've cloned locally for offline study; [`resources/`](resources/) holds my personal notes, concept diagrams, and tool screenshots.
 
 ---
 
@@ -28,10 +28,10 @@ The foundation of all binary exploitation. A buffer on the stack overflows into 
 *The three-phase life of a stack overflow: normal call, overflow in progress, and the hijacked return. The buffer, canary, saved RBP, and return address are all contiguous on the stack — overflow one and you overflow them all.*
 
 **My writeups in this sub-topic:**
-- [`writeups/medium/ret2libc-attack-in-lin-3dfc827c90c3.md`](writeups/medium/ret2libc-attack-in-lin-3dfc827c90c3.md) — ret2libc on a 64-bit binary.
-- [`writeups/medium/binary-heaven-reverse-engineering-go-binaries-ret2libc-buffer-overflow-and-path-.md`](writeups/medium/binary-heaven-reverse-engineering-go-binaries-ret2libc-buffer-overflow-and-path-.md) — ret2libc against a Go binary.
-- [`writeups/medium/ctf-write-up-stackoverflow-e7146b8221c2.md`](writeups/medium/ctf-write-up-stackoverflow-e7146b8221c2.md) — stack overflow CTF writeup.
-- [`writeups/medium/buckeyectf-2025-pwn-write-up-71f7243de9c6.md`](writeups/medium/buckeyectf-2025-pwn-write-up-71f7243de9c6.md) — BuckeyeCTF 2025 pwn challenges.
+- [`writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md`](writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md) — Cyber Apocalypse 2023: multiple stack-based pwn challenges with ret2libc and ROP.
+- [`writeups/external/posts-cyber-apocalypse-2024-pwn/writeup.md`](writeups/external/posts-cyber-apocalypse-2024-pwn/writeup.md) — Cyber Apocalypse 2024: stack overflow challenges across difficulty tiers.
+- [`writeups/external/posts-google-ctf-2025/writeup.md`](writeups/external/posts-google-ctf-2025/writeup.md) — Google CTF 2025: elite-tier pwn including stack exploitation.
+- [`writeups/external/posts-maplectf-2022/writeup.md`](writeups/external/posts-maplectf-2022/writeup.md) — MapleCTF 2022: multiple pwn challenges with detailed analysis.
 
 **Reference collections I keep locally:**
 - [`archives/PwnLand/BufferOverflows/`](archives/PwnLand/BufferOverflows/) — PwnLand's buffer-overflow tutorials, covering basic overflow, ret2libc, and ROP.
@@ -56,8 +56,9 @@ When NX (non-executable stack) is enabled, injected shellcode can't run. ROP is 
 *A ROP chain calling `execve("/bin/sh", NULL, NULL)`. Each `pop rdi; ret` / `pop rsi; ret` / `pop rdx; ret` gadget loads one argument from the stack, then falls through to the next gadget. The final address points at `execve` in libc.*
 
 **My writeups in this sub-topic:**
-- [`writeups/medium/arm-exploitation-defeating-nx-by-invoking-mprotect-using-rop-1450b6667c16.md`](writeups/medium/arm-exploitation-defeating-nx-by-invoking-mprotect-using-rop-1450b6667c16.md) — ARM ROP to call `mprotect` and defeat NX.
-- [`writeups/medium/invoking-mprotect-using-rop-chains-in-arm-d737bea2a9bb.md`](writeups/medium/invoking-mprotect-using-rop-chains-in-arm-d737bea2a9bb.md) — another ARM `mprotect` ROP chain.
+- [`writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md`](writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md) — Cyber Apocalypse 2023: ROP chain challenges including ret2libc and multi-gadget chains.
+- [`writeups/external/posts-google-ctf-2025/writeup.md`](writeups/external/posts-google-ctf-2025/writeup.md) — Google CTF 2025: advanced ROP techniques at elite tier.
+- [`writeups/external/angstrom-ctf-art-of-the-shell-writeup/writeup.md`](writeups/external/angstrom-ctf-art-of-the-shell-writeup/writeup.md) — AngstromCTF: shellcode and ROP combination challenges.
 
 **Tool screenshot — ROPgadget in action:**
 
@@ -84,9 +85,10 @@ The heap is where dynamically-allocated memory lives. glibc's `malloc`/`free` im
 *glibc's free-chunk management. tcache (per-thread, singly-linked) is the fastest path and the first to check for exploits. Fastbins are global and LIFO. The unsorted bin is the staging area for chunks not yet sorted into small/large bins. Each bin type has its own attack class.*
 
 **My writeups in this sub-topic:**
-- [`writeups/medium/heap-exploitation-journey-1-tcache-attack-5b38fb0c19b0.md`](writeups/medium/heap-exploitation-journey-1-tcache-attack-5b38fb0c19b0.md) — tcache attack walkthrough.
-- [`writeups/medium/the-toddlers-introduction-to-heap-exploitation-fastbin-dup-consolidate-part-4-2-.md`](writeups/medium/the-toddlers-introduction-to-heap-exploitation-fastbin-dup-consolidate-part-4-2-.md) — fastbin dup with consolidation.
-- [`writeups/medium/the-toddlers-introduction-to-heap-exploitation-fastbin-dup-to-stack-part-4-1-425.md`](writeups/medium/the-toddlers-introduction-to-heap-exploitation-fastbin-dup-to-stack-part-4-1-425.md) — fastbin dup targeting the stack.
+- [`writeups/external/blog-hacktivityctf2021-pawn-shop/writeup.md`](writeups/external/blog-hacktivityctf2021-pawn-shop/writeup.md) — HacktivityCTF 2021: Pawn Shop — tcache poisoning and heap UAF.
+- [`writeups/external/heap-exploitation-glibc-internals-and-nifty-tricks/writeup.md`](writeups/external/heap-exploitation-glibc-internals-and-nifty-tricks/writeup.md) — Deep dive into glibc heap internals and exploitation tricks.
+- [`writeups/external/blog-llama-rpc-rce/writeup.md`](writeups/external/blog-llama-rpc-rce/writeup.md) — Real-world heap exploitation in Llama.cpp (RCE via heap corruption).
+- [`writeups/external/ctf-pwn-uaf-heap-2023-09-18-csawctf2023-writeup/writeup.md`](writeups/external/ctf-pwn-uaf-heap-2023-09-18-csawctf2023-writeup/writeup.md) — CSAW CTF 2023: use-after-free on a heap-based challenge.
 
 **Reference collections I keep locally:**
 - [`archives/PwnLand/Heap/`](archives/PwnLand/Heap/) — PwnLand's heap exploitation tutorials, organised by glibc version (2.23, 2.27, 2.29, 2.31, 2.33, 2.35). Each version has different mitigations and requires different techniques.
@@ -150,22 +152,10 @@ Shellcode is hand-crafted machine code injected into a process to spawn a shell,
 - Shellcode for non-x86 architectures — ARM, MIPS, RISC-V. Each has different syscall conventions and register names.
 
 **My writeups in this sub-topic:**
-- [`writeups/medium/expdev-bind-tcp-shellcode-cebb5657a997.md`](writeups/medium/expdev-bind-tcp-shellcode-cebb5657a997.md) — bind TCP shellcode.
-- [`writeups/medium/craft-your-own-windows-x86-64-shellcode-31b321d1933c.md`](writeups/medium/craft-your-own-windows-x86-64-shellcode-31b321d1933c.md) — Windows x64 shellcode.
-- [`writeups/medium/shellcode-analysis-313bf4ca4dec.md`](writeups/medium/shellcode-analysis-313bf4ca4dec.md) — analyzing shellcode from a sample.
-- [`writeups/medium/shellcode-analysis-498b5e9f85ff.md`](writeups/medium/shellcode-analysis-498b5e9f85ff.md) — another shellcode analysis.
-- [`writeups/medium/shellcode-analysis-egg-hunters-encoders-and-polymorphism-e0cbb76c5871.md`](writeups/medium/shellcode-analysis-egg-hunters-encoders-and-polymorphism-e0cbb76c5871.md) — egg hunters, encoders, and polymorphism.
-- [`writeups/medium/alphabet-soup-lotl-shellcode-obfuscation-891667a6ee46.md`](writeups/medium/alphabet-soup-lotl-shellcode-obfuscation-891667a6ee46.md) — shellcode obfuscation.
-- [`writeups/medium/the-more-predictable-you-are-the-less-you-get-detected-hiding-malicious-shellcod.md`](writeups/medium/the-more-predictable-you-are-the-less-you-get-detected-hiding-malicious-shellcod.md) — hiding malicious shellcode.
-- [`writeups/medium/working-with-shellcode-from-malware-bb879385cd95.md`](writeups/medium/working-with-shellcode-from-malware-bb879385cd95.md) — extracting shellcode from malware samples.
-- [`writeups/medium/tutorial-understanding-shellcode-crafting-like-an-artist-b3279465dcbf.md`](writeups/medium/tutorial-understanding-shellcode-crafting-like-an-artist-b3279465dcbf.md) — shellcode crafting tutorial.
-- [`writeups/medium/tutorial-shellcode-injection-when-the-buffer-is-small-ee3a29dcb955.md`](writeups/medium/tutorial-shellcode-injection-when-the-buffer-is-small-ee3a29dcb955.md) — shellcode injection in small buffers.
-- [`writeups/medium/exploitation-with-shellcode-23470cd2aa55.md`](writeups/medium/exploitation-with-shellcode-23470cd2aa55.md) — exploitation with shellcode.
-- [`writeups/medium/shellcodes-are-dead-long-live-fileless-shellcodes-609cbacd5cb0.md`](writeups/medium/shellcodes-are-dead-long-live-fileless-shellcodes-609cbacd5cb0.md) — fileless shellcode techniques.
-- [`writeups/medium/crafting-chaos-a-deep-dive-into-developing-shellcode-loaders-a965a80903f2.md`](writeups/medium/crafting-chaos-a-deep-dive-into-developing-shellcode-loaders-a965a80903f2.md) — shellcode loader development.
-- [`writeups/medium/maldev-evasion-shellcode-injection-and-fileless-execution-b7fd5e120d50.md`](writeups/medium/maldev-evasion-shellcode-injection-and-fileless-execution-b7fd5e120d50.md) — malware development evasion.
-- [`writeups/medium/evade-avs-edr-with-shellcode-injection-159dde4dba1a.md`](writeups/medium/evade-avs-edr-with-shellcode-injection-159dde4dba1a.md) — AV/EDR evasion.
-- [`writeups/medium/shellforge-building-a-constraint-aware-shellcode-generator-from-scratch-f57eaea1.md`](writeups/medium/shellforge-building-a-constraint-aware-shellcode-generator-from-scratch-f57eaea1.md) — building a shellcode generator.
+- [`writeups/external/angstrom-ctf-art-of-the-shell-writeup/writeup.md`](writeups/external/angstrom-ctf-art-of-the-shell-writeup/writeup.md) — AngstromCTF: Art of the Shell — shellcode crafting and injection.
+- [`writeups/external/posts-google-ctf-2025/writeup.md`](writeups/external/posts-google-ctf-2025/writeup.md) — Google CTF 2025: shellcode injection into RWX memory regions.
+- [`writeups/external/blog-llama-rpc-rce/writeup.md`](writeups/external/blog-llama-rpc-rce/writeup.md) — Real-world shellcode-style exploitation of Llama.cpp's RPC interface.
+- [`writeups/external/2022-07-03-guide-of-seccomp-in-ctf/writeup.md`](writeups/external/2022-07-03-guide-of-seccomp-in-ctf/writeup.md) — Seccomp sandbox bypass — relevant for shellcode that must work under syscall restrictions.
 
 **Reference material:**
 - [`archives/PwnLand/Assembly/`](archives/PwnLand/Assembly/) — assembly fundamentals for shellcode.
@@ -202,8 +192,8 @@ IoT devices and embedded systems run ARM, MIPS, or increasingly RISC-V. The expl
 - **RISC-V:** Similar to ARM in concept, different in detail. `a0`-`a7` hold arguments, `ra` is the return address, `ecall` to trap.
 
 **My writeups in this sub-topic:**
-- [`writeups/medium/arm-exploitation-defeating-nx-by-invoking-mprotect-using-rop-1450b6667c16.md`](writeups/medium/arm-exploitation-defeating-nx-by-invoking-mprotect-using-rop-1450b6667c16.md) — ARM ROP to call `mprotect`.
-- [`writeups/medium/invoking-mprotect-using-rop-chains-in-arm-d737bea2a9bb.md`](writeups/medium/invoking-mprotect-using-rop-chains-in-arm-d737bea2a9bb.md) — another ARM `mprotect` ROP chain.
+- [`writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md`](writeups/external/posts-cyber-apocalypse-2023-pwn/writeup.md) — Cyber Apocalypse 2023 includes ARM-based pwn challenges.
+- [`writeups/external/posts-cyber-apocalypse-2024-pwn/writeup.md`](writeups/external/posts-cyber-apocalypse-2024-pwn/writeup.md) — Cyber Apocalypse 2024 covers multiple architectures.
 
 ---
 
@@ -277,9 +267,12 @@ Every tool below is documented in [`00-start-here/resources/security-tools.md`](
 01-pwn/
 ├── README.md                          ← this file
 ├── writeups/
-│   └── medium/                        ← my CTF writeups (35 writeups)
-│       ├── *.md                       ← one file per challenge
-│       └── images/                    ← images embedded in writeups
+│   └── external/                      ← full CTF writeups from personal blogs (12 writeups)
+│       ├── README.md                  ← index of all writeups
+│       ├── blog-format-string-exploitation/
+│       │   ├── writeup.md             ← the full writeup
+│       │   └── images/                ← downloaded images
+│       └── ... (11 more writeup folders)
 ├── archives/                          ← reference collections (cloned locally)
 │   ├── PwnLand/                       ← PwnFuzz's exploitation tutorials
 │   │   ├── BufferOverflows/           ← stack, ROP, ret2libc examples
